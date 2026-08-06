@@ -1,0 +1,118 @@
+import Link from "next/link";
+import { FaWhatsapp, FaInstagram, FaFacebook, FaLinkedin, FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
+import Logo from "@/components/ui/Logo";
+
+export default function Footer() {
+  return (
+    <footer className="bg-bg-secondary border-t border-border-primary pt-20 pb-10">
+      <div className="container mx-auto px-6 md:px-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+          
+          {/* Brand & About */}
+          <div>
+            <Link href="/" className="mb-6 block w-max">
+              <Logo width={150} height={50} />
+            </Link>
+            <p className="text-text-secondary mb-6 leading-relaxed">
+              Pakistan's premium luxury car rental & tours platform. Experience world-class mobility, professional drivers, and a breathtaking fleet of vehicles.
+            </p>
+            <div className="flex items-center gap-4">
+              <a href="https://instagram.com" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-bg-card border border-border-primary flex items-center justify-center text-text-secondary hover:text-accent-primary hover:border-accent-primary transition-colors">
+                <FaInstagram size={18} />
+              </a>
+              <a href="https://facebook.com" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-bg-card border border-border-primary flex items-center justify-center text-text-secondary hover:text-accent-primary hover:border-accent-primary transition-colors">
+                <FaFacebook size={18} />
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-bg-card border border-border-primary flex items-center justify-center text-text-secondary hover:text-accent-primary hover:border-accent-primary transition-colors">
+                <FaLinkedin size={18} />
+              </a>
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h4 className="text-lg font-semibold text-text-primary mb-6 uppercase tracking-wider">Quick Links</h4>
+            <ul className="flex flex-col gap-4">
+              <li><Link href="/fleet" className="text-text-secondary hover:text-accent-primary transition-colors">Our Fleet</Link></li>
+              <li><Link href="/tours" className="text-text-secondary hover:text-accent-primary transition-colors">Northern Tours</Link></li>
+              <li><Link href="/services/airport-transfer" className="text-text-secondary hover:text-accent-primary transition-colors">Airport Transfers</Link></li>
+              <li><Link href="/services/wedding-cars" className="text-text-secondary hover:text-accent-primary transition-colors">Wedding Cars</Link></li>
+              <li><Link href="/services/corporate-rentals" className="text-text-secondary hover:text-accent-primary transition-colors">Corporate Rentals</Link></li>
+            </ul>
+          </div>
+
+          {/* Company */}
+          <div>
+            <h4 className="text-lg font-semibold text-text-primary mb-6 uppercase tracking-wider">Company</h4>
+            <ul className="flex flex-col gap-4">
+              <li><Link href="/about" className="text-text-secondary hover:text-accent-primary transition-colors">About Us</Link></li>
+              <li><Link href="/gallery" className="text-text-secondary hover:text-accent-primary transition-colors">Gallery</Link></li>
+              <li><Link href="/faq" className="text-text-secondary hover:text-accent-primary transition-colors">FAQs</Link></li>
+              <li><Link href="/contact" className="text-text-secondary hover:text-accent-primary transition-colors">Contact</Link></li>
+              <li><Link href="/privacy-policy" className="text-text-secondary hover:text-accent-primary transition-colors">Privacy Policy</Link></li>
+            </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div>
+            <h4 className="text-lg font-semibold text-text-primary mb-6 uppercase tracking-wider">Contact Us</h4>
+            <div className="flex flex-col gap-6">
+              
+              {/* Lahore Office */}
+              <div>
+                <h5 className="text-accent-primary font-medium mb-3 text-sm tracking-wide uppercase">Lahore Office</h5>
+                <ul className="flex flex-col gap-3">
+                  <li className="flex items-start gap-3">
+                    <FaMapMarkerAlt className="text-text-primary mt-1 flex-shrink-0" size={14} />
+                    <span className="text-text-secondary text-sm leading-relaxed">DHA Phase-1, Sector-H, 143 Street, 153, Lahore</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <FaPhone className="text-text-primary flex-shrink-0" size={14} />
+                    <a href="tel:+923154973906" className="text-text-secondary text-sm hover:text-accent-primary transition-colors">+92 3154 97 39 06</a>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Pakpattan Office */}
+              <div>
+                <h5 className="text-accent-primary font-medium mb-3 text-sm tracking-wide uppercase">Pakpattan Office</h5>
+                <ul className="flex flex-col gap-3">
+                  <li className="flex items-start gap-3">
+                    <FaMapMarkerAlt className="text-text-primary mt-1 flex-shrink-0" size={14} />
+                    <span className="text-text-secondary text-sm leading-relaxed">Malka Hans, Pakpattan, Punjab</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <FaPhone className="text-text-primary flex-shrink-0" size={14} />
+                    <a href="tel:+923066305875" className="text-text-secondary text-sm hover:text-accent-primary transition-colors">+92 3066 30 58 75</a>
+                  </li>
+                </ul>
+              </div>
+              
+              {/* Social / Digital */}
+              <ul className="flex flex-col gap-3 pt-3 border-t border-border-primary/50">
+                <li className="flex items-center gap-3">
+                  <FaWhatsapp className="text-text-primary flex-shrink-0" size={16} />
+                  <a href="https://wa.me/923066305875" target="_blank" rel="noreferrer" className="text-text-secondary text-sm hover:text-accent-primary transition-colors">WhatsApp Chat</a>
+                </li>
+                <li className="flex items-center gap-3">
+                  <FaEnvelope className="text-text-primary flex-shrink-0" size={14} />
+                  <a href="mailto:info@iristours.net" className="text-text-secondary text-sm hover:text-accent-primary transition-colors">info@iristours.net</a>
+                </li>
+              </ul>
+
+            </div>
+          </div>
+        </div>
+
+        <div className="pt-8 border-t border-border-primary flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-text-secondary text-sm">
+            &copy; {new Date().getFullYear()} Iris Tours. All rights reserved.
+          </p>
+          <p className="text-text-secondary text-sm">
+            Designed for Luxury.
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+}

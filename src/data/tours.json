@@ -1,0 +1,104 @@
+[
+  {
+    "id": "t-hunza",
+    "title": "Hunza Valley Premium Tour",
+    "slug": "hunza-valley",
+    "duration": "7 Days / 6 Nights",
+    "recommendedVehicle": "Toyota Prado TX / Fortuner",
+    "maxPassengers": 6,
+    "images": {
+      "thumbnail": "https://images.unsplash.com/photo-1596700676997-f56f4d80a133?q=80&w=800&auto=format&fit=crop",
+      "gallery": [
+        "https://images.unsplash.com/photo-1596700676997-f56f4d80a133?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1588667614138-028f096cf5d5?q=80&w=1200&auto=format&fit=crop"
+      ]
+    },
+    "description": "Experience the majestic beauty of the Hunza Valley in absolute luxury. Our premium tour package offers specialized mountain-trained drivers, luxury 4x4 vehicles, and a carefully curated itinerary covering all major attractions including Baltit Fort, Attabad Lake, and Khunjerab Pass.",
+    "highlights": [
+      "Baltit & Altit Forts",
+      "Attabad Lake Boating",
+      "Passu Cones View",
+      "Khunjerab Pass (China Border)",
+      "Rakaposhi View Point",
+      "Eagle's Nest Sunrise"
+    ],
+    "included": [
+      "Luxury 4x4 Vehicle",
+      "Professional Mountain Driver",
+      "Fuel & Toll Taxes",
+      "Driver's Accommodation & Food",
+      "24/7 Support"
+    ],
+    "seo": {
+      "title": "Hunza Valley Luxury Tour Package | Iris Tours",
+      "description": "Book a premium 7-day Hunza Valley tour with a luxury SUV and professional driver. Visit Attabad Lake, Passu Cones, and Khunjerab Pass."
+    }
+  },
+  {
+    "id": "t-skardu",
+    "title": "Skardu & Deosai Expedition",
+    "slug": "skardu-deosai",
+    "duration": "8 Days / 7 Nights",
+    "recommendedVehicle": "Toyota Land Cruiser V8",
+    "maxPassengers": 6,
+    "images": {
+      "thumbnail": "https://images.unsplash.com/photo-1627885444648-5231c5188f55?q=80&w=800&auto=format&fit=crop",
+      "gallery": [
+        "https://images.unsplash.com/photo-1627885444648-5231c5188f55?q=80&w=1200&auto=format&fit=crop"
+      ]
+    },
+    "description": "Discover the rugged beauty of Skardu and the breathtaking Deosai Plains. Our flagship expedition is designed for thrill-seekers who refuse to compromise on luxury. Traverse the second highest plateau in the world with our premium 4x4 fleet.",
+    "highlights": [
+      "Shangrila Resort (Lower Kachura Lake)",
+      "Upper Kachura Lake",
+      "Deosai National Park",
+      "Sheosar Lake",
+      "Shigar Fort",
+      "Manthoka Waterfall",
+      "Cold Desert Skardu"
+    ],
+    "included": [
+      "V8 Land Cruiser",
+      "Expert Off-road Driver",
+      "Fuel & Toll Taxes",
+      "Driver's Accommodation",
+      "Route Guidance"
+    ],
+    "seo": {
+      "title": "Skardu & Deosai Luxury Tour Package | Iris Tours",
+      "description": "Explore Skardu and Deosai Plains with our luxury V8 Land Cruiser packages. Professional drivers and premium service."
+    }
+  },
+  {
+    "id": "t-swat",
+    "title": "Swat & Kalam Valley Getaway",
+    "slug": "swat-kalam",
+    "duration": "5 Days / 4 Nights",
+    "recommendedVehicle": "Toyota Fortuner",
+    "maxPassengers": 6,
+    "images": {
+      "thumbnail": "https://images.unsplash.com/photo-1631526401089-9e7ec7884784?q=80&w=800&auto=format&fit=crop",
+      "gallery": [
+        "https://images.unsplash.com/photo-1631526401089-9e7ec7884784?q=80&w=1200&auto=format&fit=crop"
+      ]
+    },
+    "description": "Known as the Switzerland of the East, Swat Valley offers lush green landscapes, dense forests, and clear rivers. Travel in comfort to Kalam, Malam Jabba, and Mahodand Lake with our premium SUVs.",
+    "highlights": [
+      "Malam Jabba Ski Resort",
+      "Kalam Valley",
+      "Mahodand Lake",
+      "Bahrain",
+      "Fizagat Park"
+    ],
+    "included": [
+      "Luxury SUV",
+      "Professional Driver",
+      "Fuel & Toll Taxes",
+      "Driver's Expenses"
+    ],
+    "seo": {
+      "title": "Swat & Kalam Luxury Tour | Iris Tours",
+      "description": "Experience Swat and Kalam in luxury. Rent a Fortuner with driver for a premium 5-day getaway to the Switzerland of the East."
+    }
+  }
+]
