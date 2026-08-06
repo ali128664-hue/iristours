@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Users, Settings, Fuel, ShieldCheck } from "lucide-react";
+import { Users, Settings, Fuel, ShieldCheck, UserCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import WhatsAppBookingPopup from "@/components/shared/WhatsAppBookingPopup";
 
@@ -42,9 +42,9 @@ export default function VehicleCard({ vehicle, index = 0 }: VehicleProps) {
           </div>
           
           {vehicle.driverIncluded && (
-            <div className="absolute top-4 right-4 bg-accent-primary/20 backdrop-blur-md border border-accent-primary/30 rounded-full px-3 py-1 flex items-center gap-1">
-              <ShieldCheck size={14} className="text-accent-primary" />
-              <span className="text-xs font-semibold tracking-wide text-accent-primary uppercase">Driver</span>
+            <div className="absolute top-4 right-4 bg-accent-primary text-white backdrop-blur-md rounded-full px-3 py-1 flex items-center gap-1.5 shadow-md">
+              <UserCircle2 size={14} className="text-white" />
+              <span className="text-xs font-bold tracking-wide uppercase">Driver</span>
             </div>
           )}
         </div>
@@ -53,26 +53,37 @@ export default function VehicleCard({ vehicle, index = 0 }: VehicleProps) {
           <div className="flex justify-between items-start mb-4">
             <div>
               <h3 className="text-xl font-bold text-text-primary mb-1">{vehicle.name}</h3>
-              <p className="text-text-secondary text-sm">{vehicle.brand} • {vehicle.year}</p>
+              <p className="text-text-secondary text-sm">{vehicle.brand} • {vehicle.category}</p>
             </div>
             <div className="text-right">
-              <p className="text-xs text-text-secondary uppercase tracking-wider mb-1">Per Day</p>
-              <p className="text-lg font-bold text-accent-primary">Rs. {vehicle.rent.daily.toLocaleString()}</p>
+              <p className="text-xs text-text-secondary uppercase tracking-wider mb-1">City Rate</p>
+              <p className="text-lg font-bold text-accent-primary">Rs. {(vehicle.rent.local ?? vehicle.rent.daily ?? 0).toLocaleString()}</p>
+              {vehicle.rent.interCity && <p className="text-xs text-text-secondary">Inter-City: Rs. {vehicle.rent.interCity.toLocaleString()}</p>}
             </div>
           </div>
           
-          <div className="grid grid-cols-3 gap-2 mb-6">
+          <div className="grid grid-cols-4 gap-2 mb-6">
             <div className="flex flex-col items-center justify-center p-2 rounded-lg bg-bg-primary border border-border-primary">
-              <Settings size={16} className="text-text-secondary mb-1" />
-              <span className="text-xs text-text-primary">{vehicle.transmission}</span>
+              <Settings size={15} className="text-text-secondary mb-1" />
+              <span className="text-xs text-text-primary text-center leading-tight">{vehicle.transmission}</span>
             </div>
             <div className="flex flex-col items-center justify-center p-2 rounded-lg bg-bg-primary border border-border-primary">
-              <Users size={16} className="text-text-secondary mb-1" />
-              <span className="text-xs text-text-primary">{vehicle.seats} Seats</span>
+              <Users size={15} className="text-text-secondary mb-1" />
+              <span className="text-xs text-text-primary text-center leading-tight">{vehicle.seats} Seats</span>
             </div>
             <div className="flex flex-col items-center justify-center p-2 rounded-lg bg-bg-primary border border-border-primary">
-              <Fuel size={16} className="text-text-secondary mb-1" />
-              <span className="text-xs text-text-primary">{vehicle.fuel}</span>
+              <Fuel size={15} className="text-text-secondary mb-1" />
+              <span className="text-xs text-text-primary text-center leading-tight">{vehicle.fuel}</span>
+            </div>
+            <div className={`flex flex-col items-center justify-center p-2 rounded-lg border ${
+              vehicle.driverIncluded
+                ? "bg-accent-primary/10 border-accent-primary/40"
+                : "bg-bg-primary border-border-primary"
+            }`}>
+              <UserCircle2 size={15} className={vehicle.driverIncluded ? "text-accent-primary mb-1" : "text-text-secondary mb-1"} />
+              <span className={`text-xs text-center leading-tight font-semibold ${
+                vehicle.driverIncluded ? "text-accent-primary" : "text-text-secondary"
+              }`}>{vehicle.driverIncluded ? "Driver" : "Self Drive"}</span>
             </div>
           </div>
           

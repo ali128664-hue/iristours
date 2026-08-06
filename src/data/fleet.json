@@ -1,1655 +1,1887 @@
-[
-  {
-    "id": "v-suzuki-alto",
-    "name": "Suzuki Alto",
-    "slug": "suzuki-alto",
-    "category": "Economy",
-    "brand": "Suzuki",
-    "year": 2024,
-    "transmission": "Automatic",
-    "fuel": "Petrol",
-    "seats": 5,
-    "doors": 4,
-    "airConditioning": true,
-    "driverIncluded": true,
-    "color": "Premium Assorted",
-    "images": {
-      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/1994-1997_Suzuki_Alto.jpg/1280px-1994-1997_Suzuki_Alto.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "gallery": [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/1994-1997_Suzuki_Alto.jpg/1280px-1994-1997_Suzuki_Alto.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
-      ]
-    },
-    "rent": {
-      "daily": 3500,
-      "weekly": 22050,
-      "monthly": 84000,
-      "securityDeposit": 0
-    },
-    "availability": true,
-    "description": "Rent the Suzuki Alto for your travel needs in Pakistan. Premium quality and professional service guaranteed.",
-    "features": [
-      "Air Conditioning",
-      "Power Steering",
-      "Music System",
-      "Professional Driver"
-    ],
-    "specifications": {
-      "engine": "Standard",
-      "horsepower": "Varies",
-      "luggage": "Standard",
-      "bluetooth": true,
-      "usbCharging": true,
-      "premiumAudio": false
-    },
-    "whatsappCategory": "Economy",
-    "seo": {
-      "title": "Rent Suzuki Alto in Pakistan | Iris Tours",
-      "description": "Book Suzuki Alto with Iris Tours. Best rates and professional drivers across Pakistan."
-    },
-    "policies": {
-      "fuelPolicy": "Provided with full tank, return with full tank.",
-      "mileagePolicy": "Unlimited mileage within city limits.",
-      "outstationPolicy": "Allowed with prior approval.",
-      "airportPickup": true,
-      "weddingAvailable": false,
-      "corporateAvailable": true
-    },
-    "relatedVehicles": []
-  },
-  {
-    "id": "v-suzuki-wagon-r",
-    "name": "Suzuki Wagon R",
-    "slug": "suzuki-wagon-r",
-    "category": "Economy",
-    "brand": "Suzuki",
-    "year": 2024,
-    "transmission": "Automatic",
-    "fuel": "Petrol",
-    "seats": 5,
-    "doors": 4,
-    "airConditioning": true,
-    "driverIncluded": true,
-    "color": "Premium Assorted",
-    "images": {
-      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/1996_Suzuki_Wagon_R_RX_in_Radiant_Red_Mica%2C_front_left.jpg/1280px-1996_Suzuki_Wagon_R_RX_in_Radiant_Red_Mica%2C_front_left.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "gallery": [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/1996_Suzuki_Wagon_R_RX_in_Radiant_Red_Mica%2C_front_left.jpg/1280px-1996_Suzuki_Wagon_R_RX_in_Radiant_Red_Mica%2C_front_left.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
-      ]
-    },
-    "rent": {
-      "daily": 3500,
-      "weekly": 22050,
-      "monthly": 84000,
-      "securityDeposit": 0
-    },
-    "availability": true,
-    "description": "Rent the Suzuki Wagon R for your travel needs in Pakistan. Premium quality and professional service guaranteed.",
-    "features": [
-      "Air Conditioning",
-      "Power Steering",
-      "Music System",
-      "Professional Driver"
-    ],
-    "specifications": {
-      "engine": "Standard",
-      "horsepower": "Varies",
-      "luggage": "Standard",
-      "bluetooth": true,
-      "usbCharging": true,
-      "premiumAudio": false
-    },
-    "whatsappCategory": "Economy",
-    "seo": {
-      "title": "Rent Suzuki Wagon R in Pakistan | Iris Tours",
-      "description": "Book Suzuki Wagon R with Iris Tours. Best rates and professional drivers across Pakistan."
-    },
-    "policies": {
-      "fuelPolicy": "Provided with full tank, return with full tank.",
-      "mileagePolicy": "Unlimited mileage within city limits.",
-      "outstationPolicy": "Allowed with prior approval.",
-      "airportPickup": true,
-      "weddingAvailable": false,
-      "corporateAvailable": true
-    },
-    "relatedVehicles": []
-  },
-  {
-    "id": "v-suzuki-cultus",
-    "name": "Suzuki Cultus",
-    "slug": "suzuki-cultus",
-    "category": "Economy",
-    "brand": "Suzuki",
-    "year": 2024,
-    "transmission": "Automatic",
-    "fuel": "Petrol",
-    "seats": 5,
-    "doors": 4,
-    "airConditioning": true,
-    "driverIncluded": true,
-    "color": "Premium Assorted",
-    "images": {
-      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/2nd_generation_Suzuki_Cultus.jpg/1280px-2nd_generation_Suzuki_Cultus.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "gallery": [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/2nd_generation_Suzuki_Cultus.jpg/1280px-2nd_generation_Suzuki_Cultus.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
-      ]
-    },
-    "rent": {
-      "daily": 4000,
-      "weekly": 25200,
-      "monthly": 96000,
-      "securityDeposit": 0
-    },
-    "availability": true,
-    "description": "Rent the Suzuki Cultus for your travel needs in Pakistan. Premium quality and professional service guaranteed.",
-    "features": [
-      "Air Conditioning",
-      "Power Steering",
-      "Music System",
-      "Professional Driver"
-    ],
-    "specifications": {
-      "engine": "Standard",
-      "horsepower": "Varies",
-      "luggage": "Standard",
-      "bluetooth": true,
-      "usbCharging": true,
-      "premiumAudio": false
-    },
-    "whatsappCategory": "Economy",
-    "seo": {
-      "title": "Rent Suzuki Cultus in Pakistan | Iris Tours",
-      "description": "Book Suzuki Cultus with Iris Tours. Best rates and professional drivers across Pakistan."
-    },
-    "policies": {
-      "fuelPolicy": "Provided with full tank, return with full tank.",
-      "mileagePolicy": "Unlimited mileage within city limits.",
-      "outstationPolicy": "Allowed with prior approval.",
-      "airportPickup": true,
-      "weddingAvailable": false,
-      "corporateAvailable": true
-    },
-    "relatedVehicles": []
-  },
-  {
-    "id": "v-honda-city",
-    "name": "Honda City",
-    "slug": "honda-city",
-    "category": "Economy",
-    "brand": "Honda",
-    "year": 2024,
-    "transmission": "Automatic",
-    "fuel": "Petrol",
-    "seats": 5,
-    "doors": 4,
-    "airConditioning": true,
-    "driverIncluded": true,
-    "color": "Premium Assorted",
-    "images": {
-      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/2022_Honda_City_ZX_i-VTEC_%28India%29_front_view_%28cropped%29.jpg/1280px-2022_Honda_City_ZX_i-VTEC_%28India%29_front_view_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "gallery": [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/2022_Honda_City_ZX_i-VTEC_%28India%29_front_view_%28cropped%29.jpg/1280px-2022_Honda_City_ZX_i-VTEC_%28India%29_front_view_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
-      ]
-    },
-    "rent": {
-      "daily": 5000,
-      "weekly": 31500,
-      "monthly": 120000,
-      "securityDeposit": 0
-    },
-    "availability": true,
-    "description": "Rent the Honda City for your travel needs in Pakistan. Premium quality and professional service guaranteed.",
-    "features": [
-      "Air Conditioning",
-      "Power Steering",
-      "Music System",
-      "Professional Driver"
-    ],
-    "specifications": {
-      "engine": "Standard",
-      "horsepower": "Varies",
-      "luggage": "Standard",
-      "bluetooth": true,
-      "usbCharging": true,
-      "premiumAudio": false
-    },
-    "whatsappCategory": "Economy",
-    "seo": {
-      "title": "Rent Honda City in Pakistan | Iris Tours",
-      "description": "Book Honda City with Iris Tours. Best rates and professional drivers across Pakistan."
-    },
-    "policies": {
-      "fuelPolicy": "Provided with full tank, return with full tank.",
-      "mileagePolicy": "Unlimited mileage within city limits.",
-      "outstationPolicy": "Allowed with prior approval.",
-      "airportPickup": true,
-      "weddingAvailable": false,
-      "corporateAvailable": true
-    },
-    "relatedVehicles": []
-  },
-  {
-    "id": "v-toyota-yaris",
-    "name": "Toyota Yaris",
-    "slug": "toyota-yaris",
-    "category": "Economy",
-    "brand": "Toyota",
-    "year": 2024,
-    "transmission": "Automatic",
-    "fuel": "Petrol",
-    "seats": 5,
-    "doors": 4,
-    "airConditioning": true,
-    "driverIncluded": true,
-    "color": "Premium Assorted",
-    "images": {
-      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/2020_Toyota_Yaris_Design_HEV_CVT_1.5_Front.jpg/1280px-2020_Toyota_Yaris_Design_HEV_CVT_1.5_Front.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "gallery": [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/2020_Toyota_Yaris_Design_HEV_CVT_1.5_Front.jpg/1280px-2020_Toyota_Yaris_Design_HEV_CVT_1.5_Front.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
-      ]
-    },
-    "rent": {
-      "daily": 5000,
-      "weekly": 31500,
-      "monthly": 120000,
-      "securityDeposit": 0
-    },
-    "availability": true,
-    "description": "Rent the Toyota Yaris for your travel needs in Pakistan. Premium quality and professional service guaranteed.",
-    "features": [
-      "Air Conditioning",
-      "Power Steering",
-      "Music System",
-      "Professional Driver"
-    ],
-    "specifications": {
-      "engine": "Standard",
-      "horsepower": "Varies",
-      "luggage": "Standard",
-      "bluetooth": true,
-      "usbCharging": true,
-      "premiumAudio": false
-    },
-    "whatsappCategory": "Economy",
-    "seo": {
-      "title": "Rent Toyota Yaris in Pakistan | Iris Tours",
-      "description": "Book Toyota Yaris with Iris Tours. Best rates and professional drivers across Pakistan."
-    },
-    "policies": {
-      "fuelPolicy": "Provided with full tank, return with full tank.",
-      "mileagePolicy": "Unlimited mileage within city limits.",
-      "outstationPolicy": "Allowed with prior approval.",
-      "airportPickup": true,
-      "weddingAvailable": false,
-      "corporateAvailable": true
-    },
-    "relatedVehicles": []
-  },
-  {
-    "id": "v-toyota-corolla-gli-altis-grande",
-    "name": "Toyota Corolla (GLi / Altis / Grande)",
-    "slug": "toyota-corolla-gli-altis-grande",
-    "category": "Sedan",
-    "brand": "Toyota",
-    "year": 2024,
-    "transmission": "Automatic",
-    "fuel": "Petrol",
-    "seats": 5,
-    "doors": 4,
-    "airConditioning": true,
-    "driverIncluded": true,
-    "color": "Premium Assorted",
-    "images": {
-      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Toyota_Corolla_Hybrid_%28E210%29_IMG_4338.jpg/1280px-Toyota_Corolla_Hybrid_%28E210%29_IMG_4338.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "gallery": [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Toyota_Corolla_Hybrid_%28E210%29_IMG_4338.jpg/1280px-Toyota_Corolla_Hybrid_%28E210%29_IMG_4338.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
-      ]
-    },
-    "rent": {
-      "daily": 5500,
-      "weekly": 34650,
-      "monthly": 132000,
-      "securityDeposit": 0
-    },
-    "availability": true,
-    "description": "Rent the Toyota Corolla (GLi / Altis / Grande) for your travel needs in Pakistan. Premium quality and professional service guaranteed.",
-    "features": [
-      "Air Conditioning",
-      "Power Steering",
-      "Music System",
-      "Professional Driver"
-    ],
-    "specifications": {
-      "engine": "Standard",
-      "horsepower": "Varies",
-      "luggage": "Standard",
-      "bluetooth": true,
-      "usbCharging": true,
-      "premiumAudio": false
-    },
-    "whatsappCategory": "Sedan",
-    "seo": {
-      "title": "Rent Toyota Corolla (GLi / Altis / Grande) in Pakistan | Iris Tours",
-      "description": "Book Toyota Corolla (GLi / Altis / Grande) with Iris Tours. Best rates and professional drivers across Pakistan."
-    },
-    "policies": {
-      "fuelPolicy": "Provided with full tank, return with full tank.",
-      "mileagePolicy": "Unlimited mileage within city limits.",
-      "outstationPolicy": "Allowed with prior approval.",
-      "airportPickup": true,
-      "weddingAvailable": false,
-      "corporateAvailable": true
-    },
-    "relatedVehicles": []
-  },
-  {
-    "id": "v-honda-civic",
-    "name": "Honda Civic",
-    "slug": "honda-civic",
-    "category": "Sedan",
-    "brand": "Honda",
-    "year": 2024,
-    "transmission": "Automatic",
-    "fuel": "Petrol",
-    "seats": 5,
-    "doors": 4,
-    "airConditioning": true,
-    "driverIncluded": true,
-    "color": "Premium Assorted",
-    "images": {
-      "thumbnail": "https://images.unsplash.com/photo-1623815112351-34fa7df76fbf?q=80&w=800&auto=format&fit=crop",
-      "gallery": [
-        "https://images.unsplash.com/photo-1623815112351-34fa7df76fbf?q=80&w=800&auto=format&fit=crop"
-      ]
-    },
-    "rent": {
-      "daily": 7000,
-      "weekly": 44100,
-      "monthly": 168000,
-      "securityDeposit": 0
-    },
-    "availability": true,
-    "description": "Rent the Honda Civic for your travel needs in Pakistan. Premium quality and professional service guaranteed.",
-    "features": [
-      "Air Conditioning",
-      "Power Steering",
-      "Music System",
-      "Professional Driver"
-    ],
-    "specifications": {
-      "engine": "Standard",
-      "horsepower": "Varies",
-      "luggage": "Standard",
-      "bluetooth": true,
-      "usbCharging": true,
-      "premiumAudio": false
-    },
-    "whatsappCategory": "Sedan",
-    "seo": {
-      "title": "Rent Honda Civic in Pakistan | Iris Tours",
-      "description": "Book Honda Civic with Iris Tours. Best rates and professional drivers across Pakistan."
-    },
-    "policies": {
-      "fuelPolicy": "Provided with full tank, return with full tank.",
-      "mileagePolicy": "Unlimited mileage within city limits.",
-      "outstationPolicy": "Allowed with prior approval.",
-      "airportPickup": true,
-      "weddingAvailable": false,
-      "corporateAvailable": true
-    },
-    "relatedVehicles": []
-  },
-  {
-    "id": "v-hyundai-sonata",
-    "name": "Hyundai Sonata",
-    "slug": "hyundai-sonata",
-    "category": "Sedan",
-    "brand": "Hyundai",
-    "year": 2024,
-    "transmission": "Automatic",
-    "fuel": "Petrol",
-    "seats": 5,
-    "doors": 4,
-    "airConditioning": true,
-    "driverIncluded": true,
-    "color": "Premium Assorted",
-    "images": {
-      "thumbnail": "https://images.unsplash.com/photo-1623815112351-34fa7df76fbf?q=80&w=800&auto=format&fit=crop",
-      "gallery": [
-        "https://images.unsplash.com/photo-1623815112351-34fa7df76fbf?q=80&w=800&auto=format&fit=crop"
-      ]
-    },
-    "rent": {
-      "daily": 15000,
-      "weekly": 94500,
-      "monthly": 360000,
-      "securityDeposit": 0
-    },
-    "availability": true,
-    "description": "Rent the Hyundai Sonata for your travel needs in Pakistan. Premium quality and professional service guaranteed.",
-    "features": [
-      "Air Conditioning",
-      "Power Steering",
-      "Music System",
-      "Professional Driver"
-    ],
-    "specifications": {
-      "engine": "Standard",
-      "horsepower": "Varies",
-      "luggage": "Standard",
-      "bluetooth": true,
-      "usbCharging": true,
-      "premiumAudio": false
-    },
-    "whatsappCategory": "Sedan",
-    "seo": {
-      "title": "Rent Hyundai Sonata in Pakistan | Iris Tours",
-      "description": "Book Hyundai Sonata with Iris Tours. Best rates and professional drivers across Pakistan."
-    },
-    "policies": {
-      "fuelPolicy": "Provided with full tank, return with full tank.",
-      "mileagePolicy": "Unlimited mileage within city limits.",
-      "outstationPolicy": "Allowed with prior approval.",
-      "airportPickup": true,
-      "weddingAvailable": false,
-      "corporateAvailable": true
-    },
-    "relatedVehicles": []
-  },
-  {
-    "id": "v-honda-br-v",
-    "name": "Honda BR-V",
-    "slug": "honda-br-v",
-    "category": "SUV",
-    "brand": "Honda",
-    "year": 2024,
-    "transmission": "Automatic",
-    "fuel": "Petrol",
-    "seats": 7,
-    "doors": 4,
-    "airConditioning": true,
-    "driverIncluded": true,
-    "color": "Premium Assorted",
-    "images": {
-      "thumbnail": "https://images.unsplash.com/photo-1596568359550-93a9d3e8e2d4?q=80&w=800&auto=format&fit=crop",
-      "gallery": [
-        "https://images.unsplash.com/photo-1596568359550-93a9d3e8e2d4?q=80&w=800&auto=format&fit=crop"
-      ]
-    },
-    "rent": {
-      "daily": 7000,
-      "weekly": 44100,
-      "monthly": 168000,
-      "securityDeposit": 0
-    },
-    "availability": true,
-    "description": "Rent the Honda BR-V for your travel needs in Pakistan. Premium quality and professional service guaranteed.",
-    "features": [
-      "Air Conditioning",
-      "Power Steering",
-      "Music System",
-      "Professional Driver"
-    ],
-    "specifications": {
-      "engine": "Standard",
-      "horsepower": "Varies",
-      "luggage": "Standard",
-      "bluetooth": true,
-      "usbCharging": true,
-      "premiumAudio": false
-    },
-    "whatsappCategory": "SUV",
-    "seo": {
-      "title": "Rent Honda BR-V in Pakistan | Iris Tours",
-      "description": "Book Honda BR-V with Iris Tours. Best rates and professional drivers across Pakistan."
-    },
-    "policies": {
-      "fuelPolicy": "Provided with full tank, return with full tank.",
-      "mileagePolicy": "Unlimited mileage within city limits.",
-      "outstationPolicy": "Allowed with prior approval.",
-      "airportPickup": true,
-      "weddingAvailable": false,
-      "corporateAvailable": true
-    },
-    "relatedVehicles": []
-  },
-  {
-    "id": "v-hyundai-tucson",
-    "name": "Hyundai Tucson",
-    "slug": "hyundai-tucson",
-    "category": "SUV",
-    "brand": "Hyundai",
-    "year": 2024,
-    "transmission": "Automatic",
-    "fuel": "Petrol",
-    "seats": 7,
-    "doors": 4,
-    "airConditioning": true,
-    "driverIncluded": true,
-    "color": "Premium Assorted",
-    "images": {
-      "thumbnail": "https://images.unsplash.com/photo-1596568359550-93a9d3e8e2d4?q=80&w=800&auto=format&fit=crop",
-      "gallery": [
-        "https://images.unsplash.com/photo-1596568359550-93a9d3e8e2d4?q=80&w=800&auto=format&fit=crop"
-      ]
-    },
-    "rent": {
-      "daily": 12000,
-      "weekly": 75600,
-      "monthly": 288000,
-      "securityDeposit": 0
-    },
-    "availability": true,
-    "description": "Rent the Hyundai Tucson for your travel needs in Pakistan. Premium quality and professional service guaranteed.",
-    "features": [
-      "Air Conditioning",
-      "Power Steering",
-      "Music System",
-      "Professional Driver"
-    ],
-    "specifications": {
-      "engine": "Standard",
-      "horsepower": "Varies",
-      "luggage": "Standard",
-      "bluetooth": true,
-      "usbCharging": true,
-      "premiumAudio": false
-    },
-    "whatsappCategory": "SUV",
-    "seo": {
-      "title": "Rent Hyundai Tucson in Pakistan | Iris Tours",
-      "description": "Book Hyundai Tucson with Iris Tours. Best rates and professional drivers across Pakistan."
-    },
-    "policies": {
-      "fuelPolicy": "Provided with full tank, return with full tank.",
-      "mileagePolicy": "Unlimited mileage within city limits.",
-      "outstationPolicy": "Allowed with prior approval.",
-      "airportPickup": true,
-      "weddingAvailable": false,
-      "corporateAvailable": true
-    },
-    "relatedVehicles": []
-  },
-  {
-    "id": "v-mg-hs",
-    "name": "MG HS",
-    "slug": "mg-hs",
-    "category": "SUV",
-    "brand": "MG",
-    "year": 2024,
-    "transmission": "Automatic",
-    "fuel": "Petrol",
-    "seats": 7,
-    "doors": 4,
-    "airConditioning": true,
-    "driverIncluded": true,
-    "color": "Premium Assorted",
-    "images": {
-      "thumbnail": "https://images.unsplash.com/photo-1596568359550-93a9d3e8e2d4?q=80&w=800&auto=format&fit=crop",
-      "gallery": [
-        "https://images.unsplash.com/photo-1596568359550-93a9d3e8e2d4?q=80&w=800&auto=format&fit=crop"
-      ]
-    },
-    "rent": {
-      "daily": 12000,
-      "weekly": 75600,
-      "monthly": 288000,
-      "securityDeposit": 0
-    },
-    "availability": true,
-    "description": "Rent the MG HS for your travel needs in Pakistan. Premium quality and professional service guaranteed.",
-    "features": [
-      "Air Conditioning",
-      "Power Steering",
-      "Music System",
-      "Professional Driver"
-    ],
-    "specifications": {
-      "engine": "Standard",
-      "horsepower": "Varies",
-      "luggage": "Standard",
-      "bluetooth": true,
-      "usbCharging": true,
-      "premiumAudio": false
-    },
-    "whatsappCategory": "SUV",
-    "seo": {
-      "title": "Rent MG HS in Pakistan | Iris Tours",
-      "description": "Book MG HS with Iris Tours. Best rates and professional drivers across Pakistan."
-    },
-    "policies": {
-      "fuelPolicy": "Provided with full tank, return with full tank.",
-      "mileagePolicy": "Unlimited mileage within city limits.",
-      "outstationPolicy": "Allowed with prior approval.",
-      "airportPickup": true,
-      "weddingAvailable": false,
-      "corporateAvailable": true
-    },
-    "relatedVehicles": []
-  },
-  {
-    "id": "v-kia-sportage",
-    "name": "Kia Sportage",
-    "slug": "kia-sportage",
-    "category": "SUV",
-    "brand": "Kia",
-    "year": 2024,
-    "transmission": "Automatic",
-    "fuel": "Petrol",
-    "seats": 7,
-    "doors": 4,
-    "airConditioning": true,
-    "driverIncluded": true,
-    "color": "Premium Assorted",
-    "images": {
-      "thumbnail": "https://images.unsplash.com/photo-1596568359550-93a9d3e8e2d4?q=80&w=800&auto=format&fit=crop",
-      "gallery": [
-        "https://images.unsplash.com/photo-1596568359550-93a9d3e8e2d4?q=80&w=800&auto=format&fit=crop"
-      ]
-    },
-    "rent": {
-      "daily": 12000,
-      "weekly": 75600,
-      "monthly": 288000,
-      "securityDeposit": 0
-    },
-    "availability": true,
-    "description": "Rent the Kia Sportage for your travel needs in Pakistan. Premium quality and professional service guaranteed.",
-    "features": [
-      "Air Conditioning",
-      "Power Steering",
-      "Music System",
-      "Professional Driver"
-    ],
-    "specifications": {
-      "engine": "Standard",
-      "horsepower": "Varies",
-      "luggage": "Standard",
-      "bluetooth": true,
-      "usbCharging": true,
-      "premiumAudio": false
-    },
-    "whatsappCategory": "SUV",
-    "seo": {
-      "title": "Rent Kia Sportage in Pakistan | Iris Tours",
-      "description": "Book Kia Sportage with Iris Tours. Best rates and professional drivers across Pakistan."
-    },
-    "policies": {
-      "fuelPolicy": "Provided with full tank, return with full tank.",
-      "mileagePolicy": "Unlimited mileage within city limits.",
-      "outstationPolicy": "Allowed with prior approval.",
-      "airportPickup": true,
-      "weddingAvailable": false,
-      "corporateAvailable": true
-    },
-    "relatedVehicles": []
-  },
-  {
-    "id": "v-toyota-revo-hilux",
-    "name": "Toyota Revo (Hilux)",
-    "slug": "toyota-revo-hilux",
-    "category": "SUV",
-    "brand": "Toyota",
-    "year": 2024,
-    "transmission": "Automatic",
-    "fuel": "Petrol",
-    "seats": 7,
-    "doors": 4,
-    "airConditioning": true,
-    "driverIncluded": true,
-    "color": "Premium Assorted",
-    "images": {
-      "thumbnail": "https://images.unsplash.com/photo-1596568359550-93a9d3e8e2d4?q=80&w=800&auto=format&fit=crop",
-      "gallery": [
-        "https://images.unsplash.com/photo-1596568359550-93a9d3e8e2d4?q=80&w=800&auto=format&fit=crop"
-      ]
-    },
-    "rent": {
-      "daily": 12000,
-      "weekly": 75600,
-      "monthly": 288000,
-      "securityDeposit": 0
-    },
-    "availability": true,
-    "description": "Rent the Toyota Revo (Hilux) for your travel needs in Pakistan. Premium quality and professional service guaranteed.",
-    "features": [
-      "Air Conditioning",
-      "Power Steering",
-      "Music System",
-      "Professional Driver"
-    ],
-    "specifications": {
-      "engine": "Standard",
-      "horsepower": "Varies",
-      "luggage": "Standard",
-      "bluetooth": true,
-      "usbCharging": true,
-      "premiumAudio": false
-    },
-    "whatsappCategory": "SUV",
-    "seo": {
-      "title": "Rent Toyota Revo (Hilux) in Pakistan | Iris Tours",
-      "description": "Book Toyota Revo (Hilux) with Iris Tours. Best rates and professional drivers across Pakistan."
-    },
-    "policies": {
-      "fuelPolicy": "Provided with full tank, return with full tank.",
-      "mileagePolicy": "Unlimited mileage within city limits.",
-      "outstationPolicy": "Allowed with prior approval.",
-      "airportPickup": true,
-      "weddingAvailable": false,
-      "corporateAvailable": true
-    },
-    "relatedVehicles": []
-  },
-  {
-    "id": "v-toyota-fortuner",
-    "name": "Toyota Fortuner",
-    "slug": "toyota-fortuner",
-    "category": "SUV",
-    "brand": "Toyota",
-    "year": 2024,
-    "transmission": "Automatic",
-    "fuel": "Petrol",
-    "seats": 7,
-    "doors": 4,
-    "airConditioning": true,
-    "driverIncluded": true,
-    "color": "Premium Assorted",
-    "images": {
-      "thumbnail": "https://images.unsplash.com/photo-1596568359550-93a9d3e8e2d4?q=80&w=800&auto=format&fit=crop",
-      "gallery": [
-        "https://images.unsplash.com/photo-1596568359550-93a9d3e8e2d4?q=80&w=800&auto=format&fit=crop"
-      ]
-    },
-    "rent": {
-      "daily": 15000,
-      "weekly": 94500,
-      "monthly": 360000,
-      "securityDeposit": 0
-    },
-    "availability": true,
-    "description": "Rent the Toyota Fortuner for your travel needs in Pakistan. Premium quality and professional service guaranteed.",
-    "features": [
-      "Air Conditioning",
-      "Power Steering",
-      "Music System",
-      "Professional Driver"
-    ],
-    "specifications": {
-      "engine": "Standard",
-      "horsepower": "Varies",
-      "luggage": "Standard",
-      "bluetooth": true,
-      "usbCharging": true,
-      "premiumAudio": false
-    },
-    "whatsappCategory": "SUV",
-    "seo": {
-      "title": "Rent Toyota Fortuner in Pakistan | Iris Tours",
-      "description": "Book Toyota Fortuner with Iris Tours. Best rates and professional drivers across Pakistan."
-    },
-    "policies": {
-      "fuelPolicy": "Provided with full tank, return with full tank.",
-      "mileagePolicy": "Unlimited mileage within city limits.",
-      "outstationPolicy": "Allowed with prior approval.",
-      "airportPickup": true,
-      "weddingAvailable": false,
-      "corporateAvailable": true
-    },
-    "relatedVehicles": []
-  },
-  {
-    "id": "v-toyota-land-cruiser-prado",
-    "name": "Toyota Land Cruiser Prado",
-    "slug": "toyota-land-cruiser-prado",
-    "category": "SUV",
-    "brand": "Toyota",
-    "year": 2024,
-    "transmission": "Automatic",
-    "fuel": "Petrol",
-    "seats": 7,
-    "doors": 4,
-    "airConditioning": true,
-    "driverIncluded": true,
-    "color": "Premium Assorted",
-    "images": {
-      "thumbnail": "https://images.unsplash.com/photo-1596568359550-93a9d3e8e2d4?q=80&w=800&auto=format&fit=crop",
-      "gallery": [
-        "https://images.unsplash.com/photo-1596568359550-93a9d3e8e2d4?q=80&w=800&auto=format&fit=crop"
-      ]
-    },
-    "rent": {
-      "daily": 14000,
-      "weekly": 88200,
-      "monthly": 336000,
-      "securityDeposit": 0
-    },
-    "availability": true,
-    "description": "Rent the Toyota Land Cruiser Prado for your travel needs in Pakistan. Premium quality and professional service guaranteed.",
-    "features": [
-      "Air Conditioning",
-      "Power Steering",
-      "Music System",
-      "Professional Driver"
-    ],
-    "specifications": {
-      "engine": "Standard",
-      "horsepower": "Varies",
-      "luggage": "Standard",
-      "bluetooth": true,
-      "usbCharging": true,
-      "premiumAudio": false
-    },
-    "whatsappCategory": "SUV",
-    "seo": {
-      "title": "Rent Toyota Land Cruiser Prado in Pakistan | Iris Tours",
-      "description": "Book Toyota Land Cruiser Prado with Iris Tours. Best rates and professional drivers across Pakistan."
-    },
-    "policies": {
-      "fuelPolicy": "Provided with full tank, return with full tank.",
-      "mileagePolicy": "Unlimited mileage within city limits.",
-      "outstationPolicy": "Allowed with prior approval.",
-      "airportPickup": true,
-      "weddingAvailable": false,
-      "corporateAvailable": true
-    },
-    "relatedVehicles": []
-  },
-  {
-    "id": "v-toyota-land-cruiser-v8",
-    "name": "Toyota Land Cruiser V8",
-    "slug": "toyota-land-cruiser-v8",
-    "category": "SUV",
-    "brand": "Toyota",
-    "year": 2024,
-    "transmission": "Automatic",
-    "fuel": "Petrol",
-    "seats": 7,
-    "doors": 4,
-    "airConditioning": true,
-    "driverIncluded": true,
-    "color": "Premium Assorted",
-    "images": {
-      "thumbnail": "https://images.unsplash.com/photo-1596568359550-93a9d3e8e2d4?q=80&w=800&auto=format&fit=crop",
-      "gallery": [
-        "https://images.unsplash.com/photo-1596568359550-93a9d3e8e2d4?q=80&w=800&auto=format&fit=crop"
-      ]
-    },
-    "rent": {
-      "daily": 24000,
-      "weekly": 151200,
-      "monthly": 576000,
-      "securityDeposit": 0
-    },
-    "availability": true,
-    "description": "Rent the Toyota Land Cruiser V8 for your travel needs in Pakistan. Premium quality and professional service guaranteed.",
-    "features": [
-      "Air Conditioning",
-      "Power Steering",
-      "Music System",
-      "Professional Driver"
-    ],
-    "specifications": {
-      "engine": "Standard",
-      "horsepower": "Varies",
-      "luggage": "Standard",
-      "bluetooth": true,
-      "usbCharging": true,
-      "premiumAudio": false
-    },
-    "whatsappCategory": "SUV",
-    "seo": {
-      "title": "Rent Toyota Land Cruiser V8 in Pakistan | Iris Tours",
-      "description": "Book Toyota Land Cruiser V8 with Iris Tours. Best rates and professional drivers across Pakistan."
-    },
-    "policies": {
-      "fuelPolicy": "Provided with full tank, return with full tank.",
-      "mileagePolicy": "Unlimited mileage within city limits.",
-      "outstationPolicy": "Allowed with prior approval.",
-      "airportPickup": true,
-      "weddingAvailable": false,
-      "corporateAvailable": true
-    },
-    "relatedVehicles": []
-  },
-  {
-    "id": "v-suzuki-apv",
-    "name": "Suzuki APV",
-    "slug": "suzuki-apv",
-    "category": "Van",
-    "brand": "Suzuki",
-    "year": 2024,
-    "transmission": "Automatic",
-    "fuel": "Petrol",
-    "seats": 14,
-    "doors": 4,
-    "airConditioning": true,
-    "driverIncluded": true,
-    "color": "Premium Assorted",
-    "images": {
-      "thumbnail": "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=800&auto=format&fit=crop",
-      "gallery": [
-        "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=800&auto=format&fit=crop"
-      ]
-    },
-    "rent": {
-      "daily": 7000,
-      "weekly": 44100,
-      "monthly": 168000,
-      "securityDeposit": 0
-    },
-    "availability": true,
-    "description": "Rent the Suzuki APV for your travel needs in Pakistan. Premium quality and professional service guaranteed.",
-    "features": [
-      "Air Conditioning",
-      "Power Steering",
-      "Music System",
-      "Professional Driver"
-    ],
-    "specifications": {
-      "engine": "Standard",
-      "horsepower": "Varies",
-      "luggage": "Standard",
-      "bluetooth": true,
-      "usbCharging": true,
-      "premiumAudio": false
-    },
-    "whatsappCategory": "Van",
-    "seo": {
-      "title": "Rent Suzuki APV in Pakistan | Iris Tours",
-      "description": "Book Suzuki APV with Iris Tours. Best rates and professional drivers across Pakistan."
-    },
-    "policies": {
-      "fuelPolicy": "Provided with full tank, return with full tank.",
-      "mileagePolicy": "Unlimited mileage within city limits.",
-      "outstationPolicy": "Allowed with prior approval.",
-      "airportPickup": true,
-      "weddingAvailable": false,
-      "corporateAvailable": true
-    },
-    "relatedVehicles": []
-  },
-  {
-    "id": "v-toyota-hiace-grand-cabin",
-    "name": "Toyota Hiace Grand Cabin",
-    "slug": "toyota-hiace-grand-cabin",
-    "category": "Van",
-    "brand": "Toyota",
-    "year": 2024,
-    "transmission": "Automatic",
-    "fuel": "Petrol",
-    "seats": 14,
-    "doors": 4,
-    "airConditioning": true,
-    "driverIncluded": true,
-    "color": "Premium Assorted",
-    "images": {
-      "thumbnail": "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=800&auto=format&fit=crop",
-      "gallery": [
-        "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=800&auto=format&fit=crop"
-      ]
-    },
-    "rent": {
-      "daily": 12000,
-      "weekly": 75600,
-      "monthly": 288000,
-      "securityDeposit": 0
-    },
-    "availability": true,
-    "description": "Rent the Toyota Hiace Grand Cabin for your travel needs in Pakistan. Premium quality and professional service guaranteed.",
-    "features": [
-      "Air Conditioning",
-      "Power Steering",
-      "Music System",
-      "Professional Driver"
-    ],
-    "specifications": {
-      "engine": "Standard",
-      "horsepower": "Varies",
-      "luggage": "Standard",
-      "bluetooth": true,
-      "usbCharging": true,
-      "premiumAudio": false
-    },
-    "whatsappCategory": "Van",
-    "seo": {
-      "title": "Rent Toyota Hiace Grand Cabin in Pakistan | Iris Tours",
-      "description": "Book Toyota Hiace Grand Cabin with Iris Tours. Best rates and professional drivers across Pakistan."
-    },
-    "policies": {
-      "fuelPolicy": "Provided with full tank, return with full tank.",
-      "mileagePolicy": "Unlimited mileage within city limits.",
-      "outstationPolicy": "Allowed with prior approval.",
-      "airportPickup": true,
-      "weddingAvailable": false,
-      "corporateAvailable": true
-    },
-    "relatedVehicles": []
-  },
-  {
-    "id": "v-toyota-coaster-saloon",
-    "name": "Toyota Coaster Saloon",
-    "slug": "toyota-coaster-saloon",
-    "category": "Van",
-    "brand": "Toyota",
-    "year": 2024,
-    "transmission": "Automatic",
-    "fuel": "Petrol",
-    "seats": 14,
-    "doors": 4,
-    "airConditioning": true,
-    "driverIncluded": true,
-    "color": "Premium Assorted",
-    "images": {
-      "thumbnail": "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=800&auto=format&fit=crop",
-      "gallery": [
-        "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=800&auto=format&fit=crop"
-      ]
-    },
-    "rent": {
-      "daily": 15000,
-      "weekly": 94500,
-      "monthly": 360000,
-      "securityDeposit": 0
-    },
-    "availability": true,
-    "description": "Rent the Toyota Coaster Saloon for your travel needs in Pakistan. Premium quality and professional service guaranteed.",
-    "features": [
-      "Air Conditioning",
-      "Power Steering",
-      "Music System",
-      "Professional Driver"
-    ],
-    "specifications": {
-      "engine": "Standard",
-      "horsepower": "Varies",
-      "luggage": "Standard",
-      "bluetooth": true,
-      "usbCharging": true,
-      "premiumAudio": false
-    },
-    "whatsappCategory": "Van",
-    "seo": {
-      "title": "Rent Toyota Coaster Saloon in Pakistan | Iris Tours",
-      "description": "Book Toyota Coaster Saloon with Iris Tours. Best rates and professional drivers across Pakistan."
-    },
-    "policies": {
-      "fuelPolicy": "Provided with full tank, return with full tank.",
-      "mileagePolicy": "Unlimited mileage within city limits.",
-      "outstationPolicy": "Allowed with prior approval.",
-      "airportPickup": true,
-      "weddingAvailable": false,
-      "corporateAvailable": true
-    },
-    "relatedVehicles": []
-  },
-  {
-    "id": "v-yutong-bus",
-    "name": "Yutong Bus",
-    "slug": "yutong-bus",
-    "category": "Van",
-    "brand": "Yutong",
-    "year": 2024,
-    "transmission": "Automatic",
-    "fuel": "Petrol",
-    "seats": 14,
-    "doors": 4,
-    "airConditioning": true,
-    "driverIncluded": true,
-    "color": "Premium Assorted",
-    "images": {
-      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/0/03/Yutong_Logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-      "gallery": [
-        "https://upload.wikimedia.org/wikipedia/commons/0/03/Yutong_Logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
-      ]
-    },
-    "rent": {
-      "daily": 80000,
-      "weekly": 504000,
-      "monthly": 1920000,
-      "securityDeposit": 0
-    },
-    "availability": true,
-    "description": "Rent the Yutong Bus for your travel needs in Pakistan. Premium quality and professional service guaranteed.",
-    "features": [
-      "Air Conditioning",
-      "Power Steering",
-      "Music System",
-      "Professional Driver"
-    ],
-    "specifications": {
-      "engine": "Standard",
-      "horsepower": "Varies",
-      "luggage": "Standard",
-      "bluetooth": true,
-      "usbCharging": true,
-      "premiumAudio": false
-    },
-    "whatsappCategory": "Van",
-    "seo": {
-      "title": "Rent Yutong Bus in Pakistan | Iris Tours",
-      "description": "Book Yutong Bus with Iris Tours. Best rates and professional drivers across Pakistan."
-    },
-    "policies": {
-      "fuelPolicy": "Provided with full tank, return with full tank.",
-      "mileagePolicy": "Unlimited mileage within city limits.",
-      "outstationPolicy": "Allowed with prior approval.",
-      "airportPickup": true,
-      "weddingAvailable": false,
-      "corporateAvailable": true
-    },
-    "relatedVehicles": []
-  },
-  {
-    "id": "v-audi-a4",
-    "name": "Audi A4",
-    "slug": "audi-a4",
-    "category": "Luxury",
-    "brand": "Audi",
-    "year": 2024,
-    "transmission": "Automatic",
-    "fuel": "Petrol",
-    "seats": 5,
-    "doors": 4,
-    "airConditioning": true,
-    "driverIncluded": true,
-    "color": "Premium Assorted",
-    "images": {
-      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Audi_A4_B9_sedans_%28FL%29_1X7A2441.jpg/1280px-Audi_A4_B9_sedans_%28FL%29_1X7A2441.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "gallery": [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Audi_A4_B9_sedans_%28FL%29_1X7A2441.jpg/1280px-Audi_A4_B9_sedans_%28FL%29_1X7A2441.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
-      ]
-    },
-    "rent": {
-      "daily": 30000,
-      "weekly": 189000,
-      "monthly": 720000,
-      "securityDeposit": 0
-    },
-    "availability": true,
-    "description": "Rent the Audi A4 for your travel needs in Pakistan. Premium quality and professional service guaranteed.",
-    "features": [
-      "Air Conditioning",
-      "Power Steering",
-      "Music System",
-      "Professional Driver"
-    ],
-    "specifications": {
-      "engine": "Standard",
-      "horsepower": "Varies",
-      "luggage": "Standard",
-      "bluetooth": true,
-      "usbCharging": true,
-      "premiumAudio": false
-    },
-    "whatsappCategory": "Luxury",
-    "seo": {
-      "title": "Rent Audi A4 in Pakistan | Iris Tours",
-      "description": "Book Audi A4 with Iris Tours. Best rates and professional drivers across Pakistan."
-    },
-    "policies": {
-      "fuelPolicy": "Provided with full tank, return with full tank.",
-      "mileagePolicy": "Unlimited mileage within city limits.",
-      "outstationPolicy": "Allowed with prior approval.",
-      "airportPickup": true,
-      "weddingAvailable": true,
-      "corporateAvailable": true
-    },
-    "relatedVehicles": []
-  },
-  {
-    "id": "v-audi-a6",
-    "name": "Audi A6",
-    "slug": "audi-a6",
-    "category": "Luxury",
-    "brand": "Audi",
-    "year": 2024,
-    "transmission": "Automatic",
-    "fuel": "Petrol",
-    "seats": 5,
-    "doors": 4,
-    "airConditioning": true,
-    "driverIncluded": true,
-    "color": "Premium Assorted",
-    "images": {
-      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Audi_A6_C9_IAA_2025_DSC_1920.jpg/1280px-Audi_A6_C9_IAA_2025_DSC_1920.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "gallery": [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Audi_A6_C9_IAA_2025_DSC_1920.jpg/1280px-Audi_A6_C9_IAA_2025_DSC_1920.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
-      ]
-    },
-    "rent": {
-      "daily": 27000,
-      "weekly": 170100,
-      "monthly": 648000,
-      "securityDeposit": 0
-    },
-    "availability": true,
-    "description": "Rent the Audi A6 for your travel needs in Pakistan. Premium quality and professional service guaranteed.",
-    "features": [
-      "Air Conditioning",
-      "Power Steering",
-      "Music System",
-      "Professional Driver"
-    ],
-    "specifications": {
-      "engine": "Standard",
-      "horsepower": "Varies",
-      "luggage": "Standard",
-      "bluetooth": true,
-      "usbCharging": true,
-      "premiumAudio": false
-    },
-    "whatsappCategory": "Luxury",
-    "seo": {
-      "title": "Rent Audi A6 in Pakistan | Iris Tours",
-      "description": "Book Audi A6 with Iris Tours. Best rates and professional drivers across Pakistan."
-    },
-    "policies": {
-      "fuelPolicy": "Provided with full tank, return with full tank.",
-      "mileagePolicy": "Unlimited mileage within city limits.",
-      "outstationPolicy": "Allowed with prior approval.",
-      "airportPickup": true,
-      "weddingAvailable": true,
-      "corporateAvailable": true
-    },
-    "relatedVehicles": []
-  },
-  {
-    "id": "v-mercedes-benz-c-class-c180",
-    "name": "Mercedes Benz (C-Class / C180)",
-    "slug": "mercedes-benz-c-class-c180",
-    "category": "Luxury",
-    "brand": "Mercedes",
-    "year": 2024,
-    "transmission": "Automatic",
-    "fuel": "Petrol",
-    "seats": 5,
-    "doors": 4,
-    "airConditioning": true,
-    "driverIncluded": true,
-    "color": "Premium Assorted",
-    "images": {
-      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Mercedes-Benz_W206_IMG_6380.jpg/1280px-Mercedes-Benz_W206_IMG_6380.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "gallery": [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Mercedes-Benz_W206_IMG_6380.jpg/1280px-Mercedes-Benz_W206_IMG_6380.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
-      ]
-    },
-    "rent": {
-      "daily": 35000,
-      "weekly": 220500,
-      "monthly": 840000,
-      "securityDeposit": 0
-    },
-    "availability": true,
-    "description": "Rent the Mercedes Benz (C-Class / C180) for your travel needs in Pakistan. Premium quality and professional service guaranteed.",
-    "features": [
-      "Air Conditioning",
-      "Power Steering",
-      "Music System",
-      "Professional Driver"
-    ],
-    "specifications": {
-      "engine": "Standard",
-      "horsepower": "Varies",
-      "luggage": "Standard",
-      "bluetooth": true,
-      "usbCharging": true,
-      "premiumAudio": false
-    },
-    "whatsappCategory": "Luxury",
-    "seo": {
-      "title": "Rent Mercedes Benz (C-Class / C180) in Pakistan | Iris Tours",
-      "description": "Book Mercedes Benz (C-Class / C180) with Iris Tours. Best rates and professional drivers across Pakistan."
-    },
-    "policies": {
-      "fuelPolicy": "Provided with full tank, return with full tank.",
-      "mileagePolicy": "Unlimited mileage within city limits.",
-      "outstationPolicy": "Allowed with prior approval.",
-      "airportPickup": true,
-      "weddingAvailable": true,
-      "corporateAvailable": true
-    },
-    "relatedVehicles": []
-  },
-  {
-    "id": "v-mercedes-benz-s-class",
-    "name": "Mercedes Benz S-Class",
-    "slug": "mercedes-benz-s-class",
-    "category": "Luxury",
-    "brand": "Mercedes",
-    "year": 2024,
-    "transmission": "Automatic",
-    "fuel": "Petrol",
-    "seats": 5,
-    "doors": 4,
-    "airConditioning": true,
-    "driverIncluded": true,
-    "color": "Premium Assorted",
-    "images": {
-      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Mercedes-Benz_W223_IMG_6663.jpg/1280px-Mercedes-Benz_W223_IMG_6663.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "gallery": [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Mercedes-Benz_W223_IMG_6663.jpg/1280px-Mercedes-Benz_W223_IMG_6663.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
-      ]
-    },
-    "rent": {
-      "daily": 120000,
-      "weekly": 756000,
-      "monthly": 2880000,
-      "securityDeposit": 0
-    },
-    "availability": true,
-    "description": "Rent the Mercedes Benz S-Class for your travel needs in Pakistan. Premium quality and professional service guaranteed.",
-    "features": [
-      "Air Conditioning",
-      "Power Steering",
-      "Music System",
-      "Professional Driver"
-    ],
-    "specifications": {
-      "engine": "Standard",
-      "horsepower": "Varies",
-      "luggage": "Standard",
-      "bluetooth": true,
-      "usbCharging": true,
-      "premiumAudio": false
-    },
-    "whatsappCategory": "Luxury",
-    "seo": {
-      "title": "Rent Mercedes Benz S-Class in Pakistan | Iris Tours",
-      "description": "Book Mercedes Benz S-Class with Iris Tours. Best rates and professional drivers across Pakistan."
-    },
-    "policies": {
-      "fuelPolicy": "Provided with full tank, return with full tank.",
-      "mileagePolicy": "Unlimited mileage within city limits.",
-      "outstationPolicy": "Allowed with prior approval.",
-      "airportPickup": true,
-      "weddingAvailable": true,
-      "corporateAvailable": true
-    },
-    "relatedVehicles": []
-  },
-  {
-    "id": "v-range-rover",
-    "name": "Range Rover",
-    "slug": "range-rover",
-    "category": "Luxury",
-    "brand": "Range",
-    "year": 2024,
-    "transmission": "Automatic",
-    "fuel": "Petrol",
-    "seats": 5,
-    "doors": 4,
-    "airConditioning": true,
-    "driverIncluded": true,
-    "color": "Premium Assorted",
-    "images": {
-      "thumbnail": "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80&w=800&auto=format&fit=crop",
-      "gallery": [
-        "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80&w=800&auto=format&fit=crop"
-      ]
-    },
-    "rent": {
-      "daily": 100000,
-      "weekly": 630000,
-      "monthly": 2400000,
-      "securityDeposit": 0
-    },
-    "availability": true,
-    "description": "Rent the Range Rover for your travel needs in Pakistan. Premium quality and professional service guaranteed.",
-    "features": [
-      "Air Conditioning",
-      "Power Steering",
-      "Music System",
-      "Professional Driver"
-    ],
-    "specifications": {
-      "engine": "Standard",
-      "horsepower": "Varies",
-      "luggage": "Standard",
-      "bluetooth": true,
-      "usbCharging": true,
-      "premiumAudio": false
-    },
-    "whatsappCategory": "Luxury",
-    "seo": {
-      "title": "Rent Range Rover in Pakistan | Iris Tours",
-      "description": "Book Range Rover with Iris Tours. Best rates and professional drivers across Pakistan."
-    },
-    "policies": {
-      "fuelPolicy": "Provided with full tank, return with full tank.",
-      "mileagePolicy": "Unlimited mileage within city limits.",
-      "outstationPolicy": "Allowed with prior approval.",
-      "airportPickup": true,
-      "weddingAvailable": true,
-      "corporateAvailable": true
-    },
-    "relatedVehicles": []
-  },
-  {
-    "id": "v-chrysler-limousine",
-    "name": "Chrysler Limousine",
-    "slug": "chrysler-limousine",
-    "category": "Luxury",
-    "brand": "Chrysler",
-    "year": 2024,
-    "transmission": "Automatic",
-    "fuel": "Petrol",
-    "seats": 5,
-    "doors": 4,
-    "airConditioning": true,
-    "driverIncluded": true,
-    "color": "Premium Assorted",
-    "images": {
-      "thumbnail": "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80&w=800&auto=format&fit=crop",
-      "gallery": [
-        "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80&w=800&auto=format&fit=crop"
-      ]
-    },
-    "rent": {
-      "daily": 130000,
-      "weekly": 819000,
-      "monthly": 3120000,
-      "securityDeposit": 0
-    },
-    "availability": true,
-    "description": "Rent the Chrysler Limousine for your travel needs in Pakistan. Premium quality and professional service guaranteed.",
-    "features": [
-      "Air Conditioning",
-      "Power Steering",
-      "Music System",
-      "Professional Driver"
-    ],
-    "specifications": {
-      "engine": "Standard",
-      "horsepower": "Varies",
-      "luggage": "Standard",
-      "bluetooth": true,
-      "usbCharging": true,
-      "premiumAudio": false
-    },
-    "whatsappCategory": "Luxury",
-    "seo": {
-      "title": "Rent Chrysler Limousine in Pakistan | Iris Tours",
-      "description": "Book Chrysler Limousine with Iris Tours. Best rates and professional drivers across Pakistan."
-    },
-    "policies": {
-      "fuelPolicy": "Provided with full tank, return with full tank.",
-      "mileagePolicy": "Unlimited mileage within city limits.",
-      "outstationPolicy": "Allowed with prior approval.",
-      "airportPickup": true,
-      "weddingAvailable": true,
-      "corporateAvailable": true
-    },
-    "relatedVehicles": []
-  },
-  {
-    "id": "v-v8-limousine",
-    "name": "V8 Limousine",
-    "slug": "v8-limousine",
-    "category": "Luxury",
-    "brand": "V8",
-    "year": 2024,
-    "transmission": "Automatic",
-    "fuel": "Petrol",
-    "seats": 5,
-    "doors": 4,
-    "airConditioning": true,
-    "driverIncluded": true,
-    "color": "Premium Assorted",
-    "images": {
-      "thumbnail": "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80&w=800&auto=format&fit=crop",
-      "gallery": [
-        "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80&w=800&auto=format&fit=crop"
-      ]
-    },
-    "rent": {
-      "daily": 135000,
-      "weekly": 850500,
-      "monthly": 3240000,
-      "securityDeposit": 0
-    },
-    "availability": true,
-    "description": "Rent the V8 Limousine for your travel needs in Pakistan. Premium quality and professional service guaranteed.",
-    "features": [
-      "Air Conditioning",
-      "Power Steering",
-      "Music System",
-      "Professional Driver"
-    ],
-    "specifications": {
-      "engine": "Standard",
-      "horsepower": "Varies",
-      "luggage": "Standard",
-      "bluetooth": true,
-      "usbCharging": true,
-      "premiumAudio": false
-    },
-    "whatsappCategory": "Luxury",
-    "seo": {
-      "title": "Rent V8 Limousine in Pakistan | Iris Tours",
-      "description": "Book V8 Limousine with Iris Tours. Best rates and professional drivers across Pakistan."
-    },
-    "policies": {
-      "fuelPolicy": "Provided with full tank, return with full tank.",
-      "mileagePolicy": "Unlimited mileage within city limits.",
-      "outstationPolicy": "Allowed with prior approval.",
-      "airportPickup": true,
-      "weddingAvailable": true,
-      "corporateAvailable": true
-    },
-    "relatedVehicles": []
-  },
-  {
-    "id": "v-tundra-limousine",
-    "name": "Tundra Limousine",
-    "slug": "tundra-limousine",
-    "category": "Luxury",
-    "brand": "Tundra",
-    "year": 2024,
-    "transmission": "Automatic",
-    "fuel": "Petrol",
-    "seats": 5,
-    "doors": 4,
-    "airConditioning": true,
-    "driverIncluded": true,
-    "color": "Premium Assorted",
-    "images": {
-      "thumbnail": "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80&w=800&auto=format&fit=crop",
-      "gallery": [
-        "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80&w=800&auto=format&fit=crop"
-      ]
-    },
-    "rent": {
-      "daily": 140000,
-      "weekly": 882000,
-      "monthly": 3360000,
-      "securityDeposit": 0
-    },
-    "availability": true,
-    "description": "Rent the Tundra Limousine for your travel needs in Pakistan. Premium quality and professional service guaranteed.",
-    "features": [
-      "Air Conditioning",
-      "Power Steering",
-      "Music System",
-      "Professional Driver"
-    ],
-    "specifications": {
-      "engine": "Standard",
-      "horsepower": "Varies",
-      "luggage": "Standard",
-      "bluetooth": true,
-      "usbCharging": true,
-      "premiumAudio": false
-    },
-    "whatsappCategory": "Luxury",
-    "seo": {
-      "title": "Rent Tundra Limousine in Pakistan | Iris Tours",
-      "description": "Book Tundra Limousine with Iris Tours. Best rates and professional drivers across Pakistan."
-    },
-    "policies": {
-      "fuelPolicy": "Provided with full tank, return with full tank.",
-      "mileagePolicy": "Unlimited mileage within city limits.",
-      "outstationPolicy": "Allowed with prior approval.",
-      "airportPickup": true,
-      "weddingAvailable": true,
-      "corporateAvailable": true
-    },
-    "relatedVehicles": []
-  },
-  {
-    "id": "v-hummer-limousine",
-    "name": "Hummer Limousine",
-    "slug": "hummer-limousine",
-    "category": "Luxury",
-    "brand": "Hummer",
-    "year": 2024,
-    "transmission": "Automatic",
-    "fuel": "Petrol",
-    "seats": 5,
-    "doors": 4,
-    "airConditioning": true,
-    "driverIncluded": true,
-    "color": "Premium Assorted",
-    "images": {
-      "thumbnail": "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80&w=800&auto=format&fit=crop",
-      "gallery": [
-        "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80&w=800&auto=format&fit=crop"
-      ]
-    },
-    "rent": {
-      "daily": 145000,
-      "weekly": 913500,
-      "monthly": 3480000,
-      "securityDeposit": 0
-    },
-    "availability": true,
-    "description": "Rent the Hummer Limousine for your travel needs in Pakistan. Premium quality and professional service guaranteed.",
-    "features": [
-      "Air Conditioning",
-      "Power Steering",
-      "Music System",
-      "Professional Driver"
-    ],
-    "specifications": {
-      "engine": "Standard",
-      "horsepower": "Varies",
-      "luggage": "Standard",
-      "bluetooth": true,
-      "usbCharging": true,
-      "premiumAudio": false
-    },
-    "whatsappCategory": "Luxury",
-    "seo": {
-      "title": "Rent Hummer Limousine in Pakistan | Iris Tours",
-      "description": "Book Hummer Limousine with Iris Tours. Best rates and professional drivers across Pakistan."
-    },
-    "policies": {
-      "fuelPolicy": "Provided with full tank, return with full tank.",
-      "mileagePolicy": "Unlimited mileage within city limits.",
-      "outstationPolicy": "Allowed with prior approval.",
-      "airportPickup": true,
-      "weddingAvailable": true,
-      "corporateAvailable": true
-    },
-    "relatedVehicles": []
-  }
+﻿[
+    {
+        "id":  "v-suzuki-alto",
+        "name":  "Suzuki Alto",
+        "slug":  "suzuki-alto",
+        "category":  "Economy",
+        "brand":  "Suzuki",
+        "year":  2024,
+        "transmission":  "Manual",
+        "fuel":  "Petrol",
+        "seats":  5,
+        "doors":  4,
+        "airConditioning":  true,
+        "driverIncluded":  true,
+        "color":  "Premium Assorted",
+        "images":  {
+                       "thumbnail":  "https://www.paksuzuki.com.pk/cards/altoOut.jpg",
+                       "gallery":  [
+                                       "https://www.paksuzuki.com.pk/cards/altoOut.jpg"
+                                   ]
+                   },
+        "rent":  {
+                     "local":  3500,
+                     "interCity":  5500,
+                     "outstation":  7000,
+                     "weekly":  21000,
+                     "monthly":  75000,
+                     "securityDeposit":  15000,
+                     "note":  "Local = within city. Inter-city = Lahore to Islamabad/Multan etc. Outstation = Northern areas/long tours."
+                 },
+        "availability":  true,
+        "description":  "Suzuki Alto â€” Pakistan ka sab se popular aur fuel-efficient car. Sheher ke andar safar ke liye perfect, petrol ki bhi bachat. Ideal for daily commutes, grocery runs, and airport drops in Lahore.",
+        "features":  [
+                         "Air Conditioning",
+                         "Power Steering",
+                         "Music System",
+                         "Professional Driver",
+                         "CNG/Petrol Dual Fuel"
+                     ],
+        "specifications":  {
+                               "engine":  "660cc / 1000cc",
+                               "horsepower":  "50-67 hp",
+                               "luggage":  "1-2 bags",
+                               "bluetooth":  true,
+                               "usbCharging":  true,
+                               "premiumAudio":  false
+                           },
+        "whatsappCategory":  "Economy",
+        "seo":  {
+                    "title":  "Suzuki Alto Rent a Car Lahore | Starting PKR 3,500 | Iris Tours",
+                    "description":  "Suzuki Alto rent a car in Lahore DHA. Best fuel-efficient car rental starting from PKR 3,500/day. Book via WhatsApp with Iris Tours."
+                },
+        "policies":  {
+                         "fuelPolicy":  "Full tank diya jayega, full tank wapis karein.",
+                         "mileagePolicy":  "City mein unlimited, inter-city par per km charges apply.",
+                         "outstationPolicy":  "Inter-city aur northern tour ke liye available. Driver ka khana aur raat ka kiraya client dega.",
+                         "airportPickup":  true,
+                         "weddingAvailable":  false,
+                         "corporateAvailable":  true
+                     },
+        "relatedVehicles":  [
+                                "v-suzuki-wagon-r",
+                                "v-suzuki-cultus"
+                            ]
+    },
+    {
+        "id":  "v-suzuki-wagon-r",
+        "name":  "Suzuki Wagon R",
+        "slug":  "suzuki-wagon-r",
+        "category":  "Economy",
+        "brand":  "Suzuki",
+        "year":  2024,
+        "transmission":  "Automatic",
+        "fuel":  "Petrol",
+        "seats":  5,
+        "doors":  4,
+        "airConditioning":  true,
+        "driverIncluded":  true,
+        "color":  "Premium Assorted",
+        "images":  {
+                       "thumbnail":  "https://www.paksuzuki.com.pk/products/WagonR/WagonR%20Card%20with%20261x206%20(1).jpg",
+                       "gallery":  [
+                                       "https://www.paksuzuki.com.pk/products/WagonR/WagonR%20Card%20with%20261x206%20(1).jpg"
+                                   ]
+                   },
+        "rent":  {
+                     "local":  4000,
+                     "interCity":  6000,
+                     "outstation":  7500,
+                     "weekly":  24000,
+                     "monthly":  85000,
+                     "securityDeposit":  15000,
+                     "note":  "Local = within city. Inter-city = Lahore to Islamabad/Multan etc. Outstation = Northern areas/long tours."
+                 },
+        "availability":  true,
+        "description":  "Suzuki Wagon R â€” Lahore mein family aur office ke liye ideal hatchback. Spacious cabin, comfortable seats, aur reliable performance. Petrol aur CNG dono options available.",
+        "features":  [
+                         "Air Conditioning",
+                         "Power Steering",
+                         "Music System",
+                         "Professional Driver",
+                         "Spacious Cabin"
+                     ],
+        "specifications":  {
+                               "engine":  "998cc",
+                               "horsepower":  "67 hp",
+                               "luggage":  "2 bags",
+                               "bluetooth":  true,
+                               "usbCharging":  true,
+                               "premiumAudio":  false
+                           },
+        "whatsappCategory":  "Economy",
+        "seo":  {
+                    "title":  "Suzuki Wagon R Rent a Car Lahore | PKR 4,000/day | Iris Tours",
+                    "description":  "Rent Suzuki Wagon R in Lahore. Daily, weekly, monthly rates available. Professional driver included. Book via WhatsApp."
+                },
+        "policies":  {
+                         "fuelPolicy":  "Full tank diya jayega, full tank wapis karein.",
+                         "mileagePolicy":  "City mein unlimited, inter-city par per km charges apply.",
+                         "outstationPolicy":  "Inter-city aur outstation ke liye available. Driver ka khana aur accommodation client ki zimmedari.",
+                         "airportPickup":  true,
+                         "weddingAvailable":  false,
+                         "corporateAvailable":  true
+                     },
+        "relatedVehicles":  [
+                                "v-suzuki-alto",
+                                "v-suzuki-cultus"
+                            ]
+    },
+    {
+        "id":  "v-suzuki-cultus",
+        "name":  "Suzuki Cultus",
+        "slug":  "suzuki-cultus",
+        "category":  "Economy",
+        "brand":  "Suzuki",
+        "year":  2024,
+        "transmission":  "Automatic",
+        "fuel":  "Petrol",
+        "seats":  5,
+        "doors":  4,
+        "airConditioning":  true,
+        "driverIncluded":  true,
+        "color":  "Premium Assorted",
+        "images":  {
+                       "thumbnail":  "https://www.paksuzuki.com.pk/cards/cultusOut.jpg",
+                       "gallery":  [
+                                       "https://www.paksuzuki.com.pk/cards/cultusOut.jpg"
+                                   ]
+                   },
+        "rent":  {
+                     "local":  4500,
+                     "interCity":  6500,
+                     "outstation":  8000,
+                     "weekly":  27000,
+                     "monthly":  95000,
+                     "securityDeposit":  15000,
+                     "note":  "Local = within city. Inter-city = Lahore to Islamabad/Multan etc. Outstation = Northern areas/long tours."
+                 },
+        "availability":  true,
+        "description":  "Suzuki Cultus â€” Pakistan mein sabse trusted economy car. Lahore ke andar har jagah aaramdeh safar, aur inter-city trips ke liye bhi kaafi comfortable. Excellent fuel average.",
+        "features":  [
+                         "Air Conditioning",
+                         "Power Steering",
+                         "Music System",
+                         "Professional Driver",
+                         "Fuel Efficient"
+                     ],
+        "specifications":  {
+                               "engine":  "1000cc",
+                               "horsepower":  "67 hp",
+                               "luggage":  "2 bags",
+                               "bluetooth":  true,
+                               "usbCharging":  true,
+                               "premiumAudio":  false
+                           },
+        "whatsappCategory":  "Economy",
+        "seo":  {
+                    "title":  "Suzuki Cultus Rent a Car Lahore | PKR 4,500/day | Iris Tours",
+                    "description":  "Rent Suzuki Cultus in Lahore DHA. Best economy car rental rates. Professional chauffeur available. Book via WhatsApp with Iris Tours."
+                },
+        "policies":  {
+                         "fuelPolicy":  "Full tank diya jayega, full tank wapis karein.",
+                         "mileagePolicy":  "City mein unlimited mileage.",
+                         "outstationPolicy":  "Inter-city ke liye available. Driver expenses client ki zimmedari.",
+                         "airportPickup":  true,
+                         "weddingAvailable":  false,
+                         "corporateAvailable":  true
+                     },
+        "relatedVehicles":  [
+                                "v-suzuki-alto",
+                                "v-honda-city"
+                            ]
+    },
+    {
+        "id":  "v-honda-city",
+        "name":  "Honda City",
+        "slug":  "honda-city",
+        "category":  "Economy",
+        "brand":  "Honda",
+        "year":  2024,
+        "transmission":  "Automatic",
+        "fuel":  "Petrol",
+        "seats":  5,
+        "doors":  4,
+        "airConditioning":  true,
+        "driverIncluded":  true,
+        "color":  "Premium Assorted",
+        "images":  {
+                       "thumbnail":  "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/2022_Honda_City_ZX_i-VTEC_%28India%29_front_view_%28cropped%29.jpg/1280px-2022_Honda_City_ZX_i-VTEC_%28India%29_front_view_%28cropped%29.jpg",
+                       "gallery":  [
+                                       "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/2022_Honda_City_ZX_i-VTEC_%28India%29_front_view_%28cropped%29.jpg/1280px-2022_Honda_City_ZX_i-VTEC_%28India%29_front_view_%28cropped%29.jpg"
+                                   ]
+                   },
+        "rent":  {
+                     "local":  5000,
+                     "interCity":  7500,
+                     "outstation":  9500,
+                     "weekly":  30000,
+                     "monthly":  110000,
+                     "securityDeposit":  20000,
+                     "note":  "Local = within city. Inter-city = Lahore to Islamabad/Multan etc. Outstation = Northern areas/long tours."
+                 },
+        "availability":  true,
+        "description":  "Honda City â€” Pakistan mein sabse popular sedan. Comfortable, reliable, aur stylish. Business meetings, airport transfers, aur family trips ke liye perfect. Lahore DHA mein top choice.",
+        "features":  [
+                         "Air Conditioning",
+                         "Power Steering",
+                         "Touchscreen Infotainment",
+                         "Professional Driver",
+                         "Keyless Entry"
+                     ],
+        "specifications":  {
+                               "engine":  "1200cc / 1500cc",
+                               "horsepower":  "89-119 hp",
+                               "luggage":  "3 bags",
+                               "bluetooth":  true,
+                               "usbCharging":  true,
+                               "premiumAudio":  false
+                           },
+        "whatsappCategory":  "Economy",
+        "seo":  {
+                    "title":  "Honda City Rent a Car Lahore | PKR 5,000/day | Iris Tours",
+                    "description":  "Rent Honda City in Lahore. Comfortable sedan with professional driver. Daily, weekly \u0026 monthly rates. Book via WhatsApp."
+                },
+        "policies":  {
+                         "fuelPolicy":  "Full tank diya jayega, full tank wapis karein.",
+                         "mileagePolicy":  "City mein unlimited. Inter-city mein 300km/day included.",
+                         "outstationPolicy":  "Available for inter-city. Driver ka khana aur stay client dega.",
+                         "airportPickup":  true,
+                         "weddingAvailable":  false,
+                         "corporateAvailable":  true
+                     },
+        "relatedVehicles":  [
+                                "v-toyota-yaris",
+                                "v-toyota-corolla-gli-altis-grande"
+                            ]
+    },
+    {
+        "id":  "v-toyota-yaris",
+        "name":  "Toyota Yaris",
+        "slug":  "toyota-yaris",
+        "category":  "Economy",
+        "brand":  "Toyota",
+        "year":  2024,
+        "transmission":  "Automatic",
+        "fuel":  "Petrol",
+        "seats":  5,
+        "doors":  4,
+        "airConditioning":  true,
+        "driverIncluded":  true,
+        "color":  "Premium Assorted",
+        "images":  {
+                       "thumbnail":  "https://www.toyota-indus.com/wp-content/uploads/Yaris-KV-1.38---1920-x-450.jpg",
+                       "gallery":  [
+                                       "https://www.toyota-indus.com/wp-content/uploads/Yaris-KV-1.38---1920-x-450.jpg"
+                                   ]
+                   },
+        "rent":  {
+                     "local":  5000,
+                     "interCity":  7500,
+                     "outstation":  9500,
+                     "weekly":  30000,
+                     "monthly":  110000,
+                     "securityDeposit":  20000,
+                     "note":  "Local = within city. Inter-city = Lahore to Islamabad/Multan etc. Outstation = Northern areas/long tours."
+                 },
+        "availability":  true,
+        "description":  "Toyota Yaris â€” Reliable Toyota quality with modern features. Lahore mein daily commutes aur Islamabad trips ke liye equally perfect. Toyota ki trust ke sath comfort guarantee.",
+        "features":  [
+                         "Air Conditioning",
+                         "Power Steering",
+                         "7-inch Touchscreen",
+                         "Professional Driver",
+                         "Reverse Camera"
+                     ],
+        "specifications":  {
+                               "engine":  "1300cc / 1500cc",
+                               "horsepower":  "98-107 hp",
+                               "luggage":  "3 bags",
+                               "bluetooth":  true,
+                               "usbCharging":  true,
+                               "premiumAudio":  false
+                           },
+        "whatsappCategory":  "Economy",
+        "seo":  {
+                    "title":  "Toyota Yaris Rent a Car Lahore | PKR 5,000/day | Iris Tours",
+                    "description":  "Rent Toyota Yaris in Lahore. Reliable and comfortable sedan with professional driver. Book via WhatsApp with Iris Tours."
+                },
+        "policies":  {
+                         "fuelPolicy":  "Full tank diya jayega, full tank wapis karein.",
+                         "mileagePolicy":  "City unlimited. Inter-city mein 300km/day included.",
+                         "outstationPolicy":  "Available for outstation. Driver expenses client ki zimmedari.",
+                         "airportPickup":  true,
+                         "weddingAvailable":  false,
+                         "corporateAvailable":  true
+                     },
+        "relatedVehicles":  [
+                                "v-honda-city",
+                                "v-toyota-corolla-gli-altis-grande"
+                            ]
+    },
+    {
+        "id":  "v-toyota-corolla-gli-altis-grande",
+        "name":  "Toyota Corolla (GLi / Altis / Grande)",
+        "slug":  "toyota-corolla-gli-altis-grande",
+        "category":  "Sedan",
+        "brand":  "Toyota",
+        "year":  2024,
+        "transmission":  "Automatic",
+        "fuel":  "Petrol",
+        "seats":  5,
+        "doors":  4,
+        "airConditioning":  true,
+        "driverIncluded":  true,
+        "color":  "Premium Assorted",
+        "images":  {
+                       "thumbnail":  "https://www.toyota-indus.com/wp-content/uploads/Corolla-X-KV-1---1920-x-450.jpg",
+                       "gallery":  [
+                                       "https://www.toyota-indus.com/wp-content/uploads/Corolla-X-KV-1---1920-x-450.jpg"
+                                   ]
+                   },
+        "rent":  {
+                     "local":  6000,
+                     "interCity":  9000,
+                     "outstation":  12000,
+                     "weekly":  36000,
+                     "monthly":  130000,
+                     "securityDeposit":  20000,
+                     "note":  "Local = within Lahore. Inter-city = Lahore to Islamabad/Multan/Faisalabad. Outstation = Northern areas, northern tours."
+                 },
+        "availability":  true,
+        "description":  "Toyota Corolla â€” Pakistan ka No. 1 rental car. GLi, Altis, aur Grande variants available. Corporate executives, weddings, aur family tours â€” sab ke liye best choice. Lahore DHA mein sab se zyada demand.",
+        "features":  [
+                         "Air Conditioning",
+                         "Power Steering",
+                         "Alloy Wheels",
+                         "Professional Driver",
+                         "Leather Seats (Grande)",
+                         "Sunroof (Grande)"
+                     ],
+        "specifications":  {
+                               "engine":  "1600cc / 1800cc",
+                               "horsepower":  "120-140 hp",
+                               "luggage":  "3-4 bags",
+                               "bluetooth":  true,
+                               "usbCharging":  true,
+                               "premiumAudio":  true
+                           },
+        "whatsappCategory":  "Sedan",
+        "seo":  {
+                    "title":  "Toyota Corolla Rent a Car Lahore | PKR 6,000/day | Iris Tours",
+                    "description":  "Rent Toyota Corolla GLi, Altis, or Grande in Lahore DHA. Pakistan ka best sedan rental. Professional driver. Book via WhatsApp."
+                },
+        "policies":  {
+                         "fuelPolicy":  "Full tank diya jayega, full tank wapis karein.",
+                         "mileagePolicy":  "City mein unlimited. Inter-city 350km/day included.",
+                         "outstationPolicy":  "Northern tours ke liye available. Driver ka roz ka kharch (PKR 700-1000) client dega.",
+                         "airportPickup":  true,
+                         "weddingAvailable":  true,
+                         "corporateAvailable":  true
+                     },
+        "relatedVehicles":  [
+                                "v-honda-civic",
+                                "v-hyundai-sonata"
+                            ]
+    },
+    {
+        "id":  "v-honda-civic",
+        "name":  "Honda Civic",
+        "slug":  "honda-civic",
+        "category":  "Sedan",
+        "brand":  "Honda",
+        "year":  2024,
+        "transmission":  "Automatic",
+        "fuel":  "Petrol",
+        "seats":  5,
+        "doors":  4,
+        "airConditioning":  true,
+        "driverIncluded":  true,
+        "color":  "Premium Assorted",
+        "images":  {
+                       "thumbnail":  "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/2022_Honda_Civic_Sport%2C_front_8.15.22.jpg/1280px-2022_Honda_Civic_Sport%2C_front_8.15.22.jpg",
+                       "gallery":  [
+                                       "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/2022_Honda_Civic_Sport%2C_front_8.15.22.jpg/1280px-2022_Honda_Civic_Sport%2C_front_8.15.22.jpg"
+                                   ]
+                   },
+        "rent":  {
+                     "local":  7000,
+                     "interCity":  10500,
+                     "outstation":  14000,
+                     "weekly":  42000,
+                     "monthly":  155000,
+                     "securityDeposit":  25000,
+                     "note":  "Local = within Lahore. Inter-city = Lahore to Islamabad/Multan/Faisalabad. Outstation = Northern areas, northern tours."
+                 },
+        "availability":  true,
+        "description":  "Honda Civic â€” Pakistan ka sabse stylish aur sporty sedan. 10th/11th gen Civic available. Business trips, wedding events, aur Lahore to Islamabad travel ke liye ideal. Premium feel at mid-range price.",
+        "features":  [
+                         "Air Conditioning",
+                         "Honda Sensing",
+                         "Digital Cockpit",
+                         "Professional Driver",
+                         "Turbocharged Engine",
+                         "Wireless Charging"
+                     ],
+        "specifications":  {
+                               "engine":  "1500cc Turbo",
+                               "horsepower":  "174 hp",
+                               "luggage":  "3 bags",
+                               "bluetooth":  true,
+                               "usbCharging":  true,
+                               "premiumAudio":  true
+                           },
+        "whatsappCategory":  "Sedan",
+        "seo":  {
+                    "title":  "Honda Civic Rent a Car Lahore | PKR 7,000/day | Iris Tours",
+                    "description":  "Rent Honda Civic in Lahore DHA. Sporty and premium sedan with professional chauffeur. Book via WhatsApp with Iris Tours."
+                },
+        "policies":  {
+                         "fuelPolicy":  "Full tank diya jayega, full tank wapis karein.",
+                         "mileagePolicy":  "City mein unlimited. Inter-city 350km/day included.",
+                         "outstationPolicy":  "Available for outstation trips. Driver ka khana aur stay client dega.",
+                         "airportPickup":  true,
+                         "weddingAvailable":  true,
+                         "corporateAvailable":  true
+                     },
+        "relatedVehicles":  [
+                                "v-toyota-corolla-gli-altis-grande",
+                                "v-hyundai-sonata"
+                            ]
+    },
+    {
+        "id":  "v-hyundai-sonata",
+        "name":  "Hyundai Sonata",
+        "slug":  "hyundai-sonata",
+        "category":  "Sedan",
+        "brand":  "Hyundai",
+        "year":  2024,
+        "transmission":  "Automatic",
+        "fuel":  "Petrol",
+        "seats":  5,
+        "doors":  4,
+        "airConditioning":  true,
+        "driverIncluded":  true,
+        "color":  "Premium Assorted",
+        "images":  {
+                       "thumbnail":  "https://hyundai-nishat.com/wp-content/themes/hyundainishat/images/sonata/banner-image-sonata.webp",
+                       "gallery":  [
+                                       "https://hyundai-nishat.com/wp-content/themes/hyundainishat/images/sonata/banner-image-sonata.webp"
+                                   ]
+                   },
+        "rent":  {
+                     "local":  12000,
+                     "interCity":  17000,
+                     "outstation":  22000,
+                     "weekly":  70000,
+                     "monthly":  250000,
+                     "securityDeposit":  30000,
+                     "note":  "Local = within Lahore. Inter-city = Lahore to Islamabad/Multan. Outstation = Northern Pakistan tours."
+                 },
+        "availability":  true,
+        "description":  "Hyundai Sonata â€” Executive-class sedan with premium interiors. Ideal for VIP clients, corporate executives, and high-profile events in Lahore. Panoramic sunroof aur leather interiors.",
+        "features":  [
+                         "Panoramic Sunroof",
+                         "Leather Seats",
+                         "12.3-inch Touchscreen",
+                         "Ventilated Seats",
+                         "Professional Chauffeur",
+                         "Premium Bose Audio"
+                     ],
+        "specifications":  {
+                               "engine":  "2000cc / 2500cc",
+                               "horsepower":  "180-191 hp",
+                               "luggage":  "4 bags",
+                               "bluetooth":  true,
+                               "usbCharging":  true,
+                               "premiumAudio":  true
+                           },
+        "whatsappCategory":  "Sedan",
+        "seo":  {
+                    "title":  "Hyundai Sonata Rent a Car Lahore | PKR 12,000/day | Iris Tours",
+                    "description":  "Rent Hyundai Sonata in Lahore for VIP travel. Executive sedan with chauffeur. Book via WhatsApp with Iris Tours."
+                },
+        "policies":  {
+                         "fuelPolicy":  "Full tank diya jayega, full tank wapis karein.",
+                         "mileagePolicy":  "City mein unlimited. Inter-city 300km/day included.",
+                         "outstationPolicy":  "VIP trips ke liye available. Driver per-day allowance client dega.",
+                         "airportPickup":  true,
+                         "weddingAvailable":  true,
+                         "corporateAvailable":  true
+                     },
+        "relatedVehicles":  [
+                                "v-honda-civic",
+                                "v-audi-a4"
+                            ]
+    },
+    {
+        "id":  "v-honda-br-v",
+        "name":  "Honda BR-V",
+        "slug":  "honda-br-v",
+        "category":  "SUV",
+        "brand":  "Honda",
+        "year":  2024,
+        "transmission":  "Automatic",
+        "fuel":  "Petrol",
+        "seats":  7,
+        "doors":  4,
+        "airConditioning":  true,
+        "driverIncluded":  true,
+        "color":  "Premium Assorted",
+        "images":  {
+                       "thumbnail":  "https://www.honda.co.th/content/dam/honda/en/brv/design/exterior/honda-brv-th-design-exterior-cta.png",
+                       "gallery":  [
+                                       "https://www.honda.co.th/content/dam/honda/en/brv/design/exterior/honda-brv-th-design-exterior-cta.png"
+                                   ]
+                   },
+        "rent":  {
+                     "local":  7500,
+                     "interCity":  11000,
+                     "outstation":  14000,
+                     "weekly":  45000,
+                     "monthly":  165000,
+                     "securityDeposit":  25000,
+                     "note":  "Local = within Lahore. Inter-city = Lahore to Islamabad/Multan/Faisalabad. Outstation = Northern areas."
+                 },
+        "availability":  true,
+        "description":  "Honda BR-V â€” 7-seater crossover, family trips ke liye perfect. Lahore se Islamabad ya northern areas ke liye bhi reliable. Comfortable third-row seating with good luggage space.",
+        "features":  [
+                         "7-Seater",
+                         "Air Conditioning",
+                         "Honda LaneWatch",
+                         "Professional Driver",
+                         "Spacious Boot",
+                         "Foldable Rear Seats"
+                     ],
+        "specifications":  {
+                               "engine":  "1500cc i-VTEC",
+                               "horsepower":  "119 hp",
+                               "luggage":  "4-5 bags",
+                               "bluetooth":  true,
+                               "usbCharging":  true,
+                               "premiumAudio":  false
+                           },
+        "whatsappCategory":  "SUV",
+        "seo":  {
+                    "title":  "Honda BR-V Rent a Car Lahore | 7 Seater | PKR 7,500/day | Iris Tours",
+                    "description":  "Rent Honda BR-V 7-seater in Lahore. Family SUV with professional driver. Inter-city and tour packages available."
+                },
+        "policies":  {
+                         "fuelPolicy":  "Full tank diya jayega, full tank wapis karein.",
+                         "mileagePolicy":  "City mein unlimited. Inter-city mein 300km/day.",
+                         "outstationPolicy":  "Family tours ke liye perfect. Driver ka per-day allowance PKR 800 client dega.",
+                         "airportPickup":  true,
+                         "weddingAvailable":  false,
+                         "corporateAvailable":  true
+                     },
+        "relatedVehicles":  [
+                                "v-hyundai-tucson",
+                                "v-kia-sportage"
+                            ]
+    },
+    {
+        "id":  "v-hyundai-tucson",
+        "name":  "Hyundai Tucson",
+        "slug":  "hyundai-tucson",
+        "category":  "SUV",
+        "brand":  "Hyundai",
+        "year":  2024,
+        "transmission":  "Automatic",
+        "fuel":  "Petrol",
+        "seats":  5,
+        "doors":  4,
+        "airConditioning":  true,
+        "driverIncluded":  true,
+        "color":  "Premium Assorted",
+        "images":  {
+                       "thumbnail":  "https://www.hyundai-nishat.com/wp-content/themes/hyundainishat/images/tucson/banner-tucson.jpg",
+                       "gallery":  [
+                                       "https://www.hyundai-nishat.com/wp-content/themes/hyundainishat/images/tucson/banner-tucson.jpg"
+                                   ]
+                   },
+        "rent":  {
+                     "local":  12000,
+                     "interCity":  17000,
+                     "outstation":  22000,
+                     "weekly":  72000,
+                     "monthly":  260000,
+                     "securityDeposit":  30000,
+                     "note":  "Local = within Lahore. Inter-city = Lahore to Islamabad/Multan. Outstation = Northern areas/tours."
+                 },
+        "availability":  true,
+        "description":  "Hyundai Tucson â€” Premium compact SUV with bold styling. Perfect for DHA parties, corporate trips, and northern Pakistan adventures. Available with panoramic sunroof and AWD.",
+        "features":  [
+                         "Panoramic Sunroof",
+                         "AWD Available",
+                         "10.25-inch Touchscreen",
+                         "Professional Chauffeur",
+                         "Ventilated Seats",
+                         "ADAS Safety"
+                     ],
+        "specifications":  {
+                               "engine":  "2000cc / 1600cc Turbo",
+                               "horsepower":  "150-178 hp",
+                               "luggage":  "4 bags",
+                               "bluetooth":  true,
+                               "usbCharging":  true,
+                               "premiumAudio":  true
+                           },
+        "whatsappCategory":  "SUV",
+        "seo":  {
+                    "title":  "Hyundai Tucson Rent a Car Lahore | PKR 12,000/day | Iris Tours",
+                    "description":  "Rent Hyundai Tucson in Lahore DHA. Premium SUV rental with professional driver. Inter-city and northern tours available."
+                },
+        "policies":  {
+                         "fuelPolicy":  "Full tank diya jayega, full tank wapis karein.",
+                         "mileagePolicy":  "City unlimited. Inter-city 300km/day included.",
+                         "outstationPolicy":  "Northern tours ke liye available. Driver ka per-day allowance aur accommodation client dega.",
+                         "airportPickup":  true,
+                         "weddingAvailable":  true,
+                         "corporateAvailable":  true
+                     },
+        "relatedVehicles":  [
+                                "v-kia-sportage",
+                                "v-mg-hs"
+                            ]
+    },
+    {
+        "id":  "v-mg-hs",
+        "name":  "MG HS",
+        "slug":  "mg-hs",
+        "category":  "SUV",
+        "brand":  "MG",
+        "year":  2024,
+        "transmission":  "Automatic",
+        "fuel":  "Petrol",
+        "seats":  5,
+        "doors":  4,
+        "airConditioning":  true,
+        "driverIncluded":  true,
+        "color":  "Premium Assorted",
+        "images":  {
+                       "thumbnail":  "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/MG_HS_facelift_%28China%29_front.jpg/1280px-MG_HS_facelift_%28China%29_front.jpg",
+                       "gallery":  [
+                                       "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/MG_HS_facelift_%28China%29_front.jpg/1280px-MG_HS_facelift_%28China%29_front.jpg"
+                                   ]
+                   },
+        "rent":  {
+                     "local":  13000,
+                     "interCity":  18000,
+                     "outstation":  23000,
+                     "weekly":  77000,
+                     "monthly":  275000,
+                     "securityDeposit":  30000,
+                     "note":  "Local = within Lahore. Inter-city = Lahore to Islamabad/Multan. Outstation = Northern areas."
+                 },
+        "availability":  true,
+        "description":  "MG HS â€” Pakistan mein naya premium SUV craze. Stylish design, powerful turbo engine, aur loaded features. DHA events aur corporate tours ke liye trending choice.",
+        "features":  [
+                         "Panoramic Sunroof",
+                         "Turbo Engine",
+                         "10-inch Touchscreen",
+                         "Professional Driver",
+                         "360 Camera",
+                         "Leather Seats"
+                     ],
+        "specifications":  {
+                               "engine":  "1500cc Turbo",
+                               "horsepower":  "162 hp",
+                               "luggage":  "4 bags",
+                               "bluetooth":  true,
+                               "usbCharging":  true,
+                               "premiumAudio":  true
+                           },
+        "whatsappCategory":  "SUV",
+        "seo":  {
+                    "title":  "MG HS Rent a Car Lahore | PKR 13,000/day | Iris Tours",
+                    "description":  "Rent MG HS SUV in Lahore. Stylish and powerful turbo SUV with professional driver. Book via WhatsApp with Iris Tours."
+                },
+        "policies":  {
+                         "fuelPolicy":  "Full tank diya jayega, full tank wapis karein.",
+                         "mileagePolicy":  "City unlimited. Inter-city 300km/day.",
+                         "outstationPolicy":  "Northern tours ke liye available. Driver per-day allowance PKR 1000.",
+                         "airportPickup":  true,
+                         "weddingAvailable":  true,
+                         "corporateAvailable":  true
+                     },
+        "relatedVehicles":  [
+                                "v-hyundai-tucson",
+                                "v-kia-sportage"
+                            ]
+    },
+    {
+        "id":  "v-kia-sportage",
+        "name":  "Kia Sportage",
+        "slug":  "kia-sportage",
+        "category":  "SUV",
+        "brand":  "Kia",
+        "year":  2024,
+        "transmission":  "Automatic",
+        "fuel":  "Petrol",
+        "seats":  5,
+        "doors":  4,
+        "airConditioning":  true,
+        "driverIncluded":  true,
+        "color":  "Premium Assorted",
+        "images":  {
+                       "thumbnail":  "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/2023_Kia_Sportage_X-Line_%28US%29%2C_front_6.26.22.jpg/1280px-2023_Kia_Sportage_X-Line_%28US%29%2C_front_6.26.22.jpg",
+                       "gallery":  [
+                                       "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/2023_Kia_Sportage_X-Line_%28US%29%2C_front_6.26.22.jpg/1280px-2023_Kia_Sportage_X-Line_%28US%29%2C_front_6.26.22.jpg"
+                                   ]
+                   },
+        "rent":  {
+                     "local":  13000,
+                     "interCity":  18000,
+                     "outstation":  23000,
+                     "weekly":  77000,
+                     "monthly":  275000,
+                     "securityDeposit":  30000,
+                     "note":  "Local = within Lahore. Inter-city = Lahore to Islamabad/Multan. Outstation = Northern areas/tours."
+                 },
+        "availability":  true,
+        "description":  "Kia Sportage â€” Pakistan ka sabse stylish compact SUV. Panoramic sunroof, dual-zone AC, aur turbocharged engine. Lahore DHA se northern areas tak confident safar.",
+        "features":  [
+                         "Panoramic Sunroof",
+                         "Dual-Zone Climate Control",
+                         "Turbo Engine",
+                         "Professional Driver",
+                         "Harman Kardon Audio",
+                         "4WD Available"
+                     ],
+        "specifications":  {
+                               "engine":  "2000cc / 1600cc Turbo",
+                               "horsepower":  "158-174 hp",
+                               "luggage":  "4 bags",
+                               "bluetooth":  true,
+                               "usbCharging":  true,
+                               "premiumAudio":  true
+                           },
+        "whatsappCategory":  "SUV",
+        "seo":  {
+                    "title":  "Kia Sportage Rent a Car Lahore | PKR 13,000/day | Iris Tours",
+                    "description":  "Rent Kia Sportage in Lahore. Pakistan\u0027s favorite SUV for hire with professional chauffeur. Book via WhatsApp."
+                },
+        "policies":  {
+                         "fuelPolicy":  "Full tank diya jayega, full tank wapis karein.",
+                         "mileagePolicy":  "City unlimited. Inter-city 300km/day included.",
+                         "outstationPolicy":  "Available for northern tours. Driver ka khana aur raat ka accommodation client dega.",
+                         "airportPickup":  true,
+                         "weddingAvailable":  true,
+                         "corporateAvailable":  true
+                     },
+        "relatedVehicles":  [
+                                "v-hyundai-tucson",
+                                "v-toyota-fortuner"
+                            ]
+    },
+    {
+        "id":  "v-toyota-revo-hilux",
+        "name":  "Toyota Revo (Hilux)",
+        "slug":  "toyota-revo-hilux",
+        "category":  "SUV",
+        "brand":  "Toyota",
+        "year":  2024,
+        "transmission":  "Automatic",
+        "fuel":  "Diesel",
+        "seats":  5,
+        "doors":  4,
+        "airConditioning":  true,
+        "driverIncluded":  true,
+        "color":  "Premium Assorted",
+        "images":  {
+                       "thumbnail":  "https://www.toyota-indus.com/wp-content/uploads/Revo-KV-1---1920-x-450.jpg",
+                       "gallery":  [
+                                       "https://www.toyota-indus.com/wp-content/uploads/Revo-KV-1---1920-x-450.jpg"
+                                   ]
+                   },
+        "rent":  {
+                     "local":  12000,
+                     "interCity":  18000,
+                     "outstation":  25000,
+                     "weekly":  72000,
+                     "monthly":  260000,
+                     "securityDeposit":  30000,
+                     "note":  "Local = within Lahore. Inter-city = Lahore to Islamabad/Multan. Outstation = Northern areas, off-road tours."
+                 },
+        "availability":  true,
+        "description":  "Toyota Hilux Revo â€” Pakistan mein sabse capable aur tough 4x4 pickup. Naran, Hunza, Skardu ke rocky roads ke liye first choice. Off-road capability ke sath premium cabin comfort.",
+        "features":  [
+                         "4x4 Drive",
+                         "Diesel Engine",
+                         "High Ground Clearance",
+                         "Professional Driver",
+                         "Tow Hook",
+                         "Bed Liner"
+                     ],
+        "specifications":  {
+                               "engine":  "2800cc Diesel",
+                               "horsepower":  "201 hp",
+                               "luggage":  "Large pickup bed",
+                               "bluetooth":  true,
+                               "usbCharging":  true,
+                               "premiumAudio":  false
+                           },
+        "whatsappCategory":  "SUV",
+        "seo":  {
+                    "title":  "Toyota Hilux Revo Rent a Car Lahore | PKR 12,000/day | Iris Tours",
+                    "description":  "Rent Toyota Hilux Revo (4x4) in Lahore. Best for northern tours, off-road trips. Book via WhatsApp with Iris Tours."
+                },
+        "policies":  {
+                         "fuelPolicy":  "Diesel full tank diya jayega, full tank wapis karein.",
+                         "mileagePolicy":  "City unlimited. Inter-city 350km/day included.",
+                         "outstationPolicy":  "Northern off-road tours ke liye perfect. Driver ka per-day allowance PKR 1200 client dega.",
+                         "airportPickup":  true,
+                         "weddingAvailable":  false,
+                         "corporateAvailable":  true
+                     },
+        "relatedVehicles":  [
+                                "v-toyota-fortuner",
+                                "v-toyota-land-cruiser-prado"
+                            ]
+    },
+    {
+        "id":  "v-toyota-fortuner",
+        "name":  "Toyota Fortuner",
+        "slug":  "toyota-fortuner",
+        "category":  "SUV",
+        "brand":  "Toyota",
+        "year":  2024,
+        "transmission":  "Automatic",
+        "fuel":  "Diesel",
+        "seats":  7,
+        "doors":  4,
+        "airConditioning":  true,
+        "driverIncluded":  true,
+        "color":  "Premium Assorted",
+        "images":  {
+                       "thumbnail":  "https://www.toyota-indus.com/wp-content/uploads/IMC-Fortuner-35years-KV-1---1920-x-450.jpg",
+                       "gallery":  [
+                                       "https://www.toyota-indus.com/wp-content/uploads/IMC-Fortuner-35years-KV-1---1920-x-450.jpg"
+                                   ]
+                   },
+        "rent":  {
+                     "local":  16000,
+                     "interCity":  23000,
+                     "outstation":  30000,
+                     "weekly":  96000,
+                     "monthly":  350000,
+                     "securityDeposit":  40000,
+                     "note":  "Local = within Lahore. Inter-city = Lahore to Islamabad/Multan. Outstation = Northern areas. Northern tour price on request."
+                 },
+        "availability":  true,
+        "description":  "Toyota Fortuner â€” Pakistan ka premium 7-seater SUV icon. Lahore DHA mein sabse popular choice for weddings, corporate events, aur northern tours. 4x4 power ke sath luxury interiors.",
+        "features":  [
+                         "7-Seater",
+                         "4x4 Drive",
+                         "Diesel Engine",
+                         "Professional Chauffeur",
+                         "Premium Leather Seats",
+                         "Rear AC",
+                         "Sunroof"
+                     ],
+        "specifications":  {
+                               "engine":  "2800cc Diesel / 2700cc Petrol",
+                               "horsepower":  "177-201 hp",
+                               "luggage":  "5+ bags",
+                               "bluetooth":  true,
+                               "usbCharging":  true,
+                               "premiumAudio":  true
+                           },
+        "whatsappCategory":  "SUV",
+        "seo":  {
+                    "title":  "Toyota Fortuner Rent a Car Lahore | PKR 16,000/day | Iris Tours",
+                    "description":  "Rent Toyota Fortuner 7-seater in Lahore. Premium SUV with professional driver for weddings, tours and corporate travel."
+                },
+        "policies":  {
+                         "fuelPolicy":  "Full tank diya jayega, full tank wapis karein.",
+                         "mileagePolicy":  "City unlimited. Inter-city 350km/day included.",
+                         "outstationPolicy":  "Northern tours ke liye available. Driver ka per-day allowance PKR 1500 client dega. Accommodation bhi client ki zimmedari.",
+                         "airportPickup":  true,
+                         "weddingAvailable":  true,
+                         "corporateAvailable":  true
+                     },
+        "relatedVehicles":  [
+                                "v-toyota-land-cruiser-prado",
+                                "v-toyota-land-cruiser-v8"
+                            ]
+    },
+    {
+        "id":  "v-toyota-land-cruiser-prado",
+        "name":  "Toyota Land Cruiser Prado",
+        "slug":  "toyota-land-cruiser-prado",
+        "category":  "SUV",
+        "brand":  "Toyota",
+        "year":  2024,
+        "transmission":  "Automatic",
+        "fuel":  "Diesel",
+        "seats":  7,
+        "doors":  4,
+        "airConditioning":  true,
+        "driverIncluded":  true,
+        "color":  "Premium Assorted",
+        "images":  {
+                       "thumbnail":  "https://www.toyota-indus.com/wp-content/uploads/Prado-KV-1---1920-x-450.jpg",
+                       "gallery":  [
+                                       "https://www.toyota-indus.com/wp-content/uploads/Prado-KV-1---1920-x-450.jpg"
+                                   ]
+                   },
+        "rent":  {
+                     "local":  20000,
+                     "interCity":  30000,
+                     "outstation":  40000,
+                     "weekly":  120000,
+                     "monthly":  430000,
+                     "securityDeposit":  50000,
+                     "note":  "Local = within Lahore. Inter-city = Lahore to Islamabad/Multan. Outstation = Northern areas tours."
+                 },
+        "availability":  true,
+        "description":  "Toyota Land Cruiser Prado â€” Pakistan ka No. 1 premium SUV rental. VIP weddings, government meetings, aur northern adventure tours ke liye first choice. 7 seats, full leather, sunroof.",
+        "features":  [
+                         "7-Seater VIP",
+                         "4x4 Terrain System",
+                         "Full Leather Interior",
+                         "Professional Chauffeur",
+                         "Sunroof",
+                         "Rear Entertainment",
+                         "Rear AC"
+                     ],
+        "specifications":  {
+                               "engine":  "2800cc Diesel / 4000cc V6",
+                               "horsepower":  "201-271 hp",
+                               "luggage":  "5+ bags",
+                               "bluetooth":  true,
+                               "usbCharging":  true,
+                               "premiumAudio":  true
+                           },
+        "whatsappCategory":  "SUV",
+        "seo":  {
+                    "title":  "Toyota Prado Rent a Car Lahore | PKR 20,000/day | Iris Tours",
+                    "description":  "Rent Toyota Land Cruiser Prado in Lahore. Pakistan\u0027s top VIP SUV rental. Wedding, corporate, and northern tours available."
+                },
+        "policies":  {
+                         "fuelPolicy":  "Full tank diya jayega, full tank wapis karein. Diesel fuel.",
+                         "mileagePolicy":  "City unlimited. Inter-city 300km/day included.",
+                         "outstationPolicy":  "Naran, Hunza, Skardu tours ke liye perfect. Driver per-day allowance PKR 1500-2000 client dega.",
+                         "airportPickup":  true,
+                         "weddingAvailable":  true,
+                         "corporateAvailable":  true
+                     },
+        "relatedVehicles":  [
+                                "v-toyota-land-cruiser-v8",
+                                "v-toyota-fortuner"
+                            ]
+    },
+    {
+        "id":  "v-toyota-land-cruiser-v8",
+        "name":  "Toyota Land Cruiser V8",
+        "slug":  "toyota-land-cruiser-v8",
+        "category":  "SUV",
+        "brand":  "Toyota",
+        "year":  2024,
+        "transmission":  "Automatic",
+        "fuel":  "Diesel",
+        "seats":  8,
+        "doors":  4,
+        "airConditioning":  true,
+        "driverIncluded":  true,
+        "color":  "Premium Assorted",
+        "images":  {
+                       "thumbnail":  "https://www.toyota-indus.com/wp-content/uploads/Land-Cruiser-300-KV-1---1920-x-450.jpg",
+                       "gallery":  [
+                                       "https://www.toyota-indus.com/wp-content/uploads/Land-Cruiser-300-KV-1---1920-x-450.jpg"
+                                   ]
+                   },
+        "rent":  {
+                     "local":  30000,
+                     "interCity":  45000,
+                     "outstation":  60000,
+                     "weekly":  180000,
+                     "monthly":  650000,
+                     "securityDeposit":  100000,
+                     "note":  "Local = within Lahore. Inter-city = Lahore to Islamabad. Outstation = Northern tours. Price on request for multi-day."
+                 },
+        "availability":  true,
+        "description":  "Toyota Land Cruiser V8 â€” Pakistan ka ultimate luxury SUV. 5.7L V8 engine ke sath unmatched power aur prestige. Ministers, CEOs, aur VIP events ke liye preferred vehicle.",
+        "features":  [
+                         "8-Seater VIP",
+                         "5.7L V8 Engine",
+                         "Multi-Terrain Select",
+                         "Professional Chauffeur",
+                         "Luxury Leather",
+                         "Rear Entertainment System",
+                         "Mark Levinson Audio"
+                     ],
+        "specifications":  {
+                               "engine":  "4500cc / 5700cc V8 Diesel/Petrol",
+                               "horsepower":  "271-381 hp",
+                               "luggage":  "6+ bags",
+                               "bluetooth":  true,
+                               "usbCharging":  true,
+                               "premiumAudio":  true
+                           },
+        "whatsappCategory":  "SUV",
+        "seo":  {
+                    "title":  "Toyota Land Cruiser V8 Rent a Car Lahore | PKR 30,000/day | Iris Tours",
+                    "description":  "Rent Toyota Land Cruiser V8 in Lahore. Pakistan\u0027s ultimate VIP SUV for high-profile events, weddings, and tours."
+                },
+        "policies":  {
+                         "fuelPolicy":  "Full tank diya jayega, full tank wapis karein. Diesel/Petrol.",
+                         "mileagePolicy":  "City unlimited. Inter-city charges extra.",
+                         "outstationPolicy":  "VIP tours ke liye. Driver per-day allowance PKR 2000+ client dega.",
+                         "airportPickup":  true,
+                         "weddingAvailable":  true,
+                         "corporateAvailable":  true
+                     },
+        "relatedVehicles":  [
+                                "v-toyota-land-cruiser-prado",
+                                "v-range-rover"
+                            ]
+    },
+    {
+        "id":  "v-suzuki-apv",
+        "name":  "Suzuki APV",
+        "slug":  "suzuki-apv",
+        "category":  "Van",
+        "brand":  "Suzuki",
+        "year":  2024,
+        "transmission":  "Manual",
+        "fuel":  "Petrol",
+        "seats":  8,
+        "doors":  4,
+        "airConditioning":  true,
+        "driverIncluded":  true,
+        "color":  "Premium Assorted",
+        "images":  {
+                       "thumbnail":  "https://www.globalsuzuki.com/automobile/lineup/apv/img/apv_01.jpg",
+                       "gallery":  [
+                                       "https://www.globalsuzuki.com/automobile/lineup/apv/img/apv_01.jpg"
+                                   ]
+                   },
+        "rent":  {
+                     "local":  7000,
+                     "interCity":  10000,
+                     "outstation":  14000,
+                     "weekly":  42000,
+                     "monthly":  150000,
+                     "securityDeposit":  20000,
+                     "note":  "Local = within Lahore. Inter-city = Lahore to Islamabad/Multan etc. Outstation = Northern areas."
+                 },
+        "availability":  true,
+        "description":  "Suzuki APV â€” 8-seater van for group travel and family trips. Lahore mein airport groups, wedding mehman, aur office staff transport ke liye sab se budget-friendly option.",
+        "features":  [
+                         "8-Seater",
+                         "Air Conditioning",
+                         "Sliding Side Door",
+                         "Professional Driver",
+                         "Good Luggage Space"
+                     ],
+        "specifications":  {
+                               "engine":  "1500cc G15A",
+                               "horsepower":  "95 hp",
+                               "luggage":  "Medium luggage boot",
+                               "bluetooth":  false,
+                               "usbCharging":  false,
+                               "premiumAudio":  false
+                           },
+        "whatsappCategory":  "Van",
+        "seo":  {
+                    "title":  "Suzuki APV Rent a Car Lahore | 8-Seater Van | PKR 7,000/day",
+                    "description":  "Rent Suzuki APV 8-seater van in Lahore. Best group travel rates. Airport transfers and wedding transport available."
+                },
+        "policies":  {
+                         "fuelPolicy":  "Full tank diya jayega, full tank wapis karein.",
+                         "mileagePolicy":  "City unlimited. Inter-city extra charges.",
+                         "outstationPolicy":  "Group travel ke liye available. Driver ka per-day allowance client dega.",
+                         "airportPickup":  true,
+                         "weddingAvailable":  true,
+                         "corporateAvailable":  true
+                     },
+        "relatedVehicles":  [
+                                "v-toyota-hiace-grand-cabin"
+                            ]
+    },
+    {
+        "id":  "v-toyota-hiace-grand-cabin",
+        "name":  "Toyota Hiace Grand Cabin",
+        "slug":  "toyota-hiace-grand-cabin",
+        "category":  "Van",
+        "brand":  "Toyota",
+        "year":  2024,
+        "transmission":  "Manual",
+        "fuel":  "Diesel",
+        "seats":  15,
+        "doors":  4,
+        "airConditioning":  true,
+        "driverIncluded":  true,
+        "color":  "Premium Assorted",
+        "images":  {
+                       "thumbnail":  "https://www.toyota-indus.com/wp-content/uploads/Hiace-Grand-Cabin-KV-1---1920-x-450.jpg",
+                       "gallery":  [
+                                       "https://www.toyota-indus.com/wp-content/uploads/Hiace-Grand-Cabin-KV-1---1920-x-450.jpg"
+                                   ]
+                   },
+        "rent":  {
+                     "local":  12000,
+                     "interCity":  18000,
+                     "outstation":  25000,
+                     "weekly":  70000,
+                     "monthly":  250000,
+                     "securityDeposit":  30000,
+                     "note":  "Local = within Lahore. Inter-city = Lahore to Islamabad/Multan. Outstation = Northern areas groups."
+                 },
+        "availability":  true,
+        "description":  "Toyota Hiace Grand Cabin â€” 15-seater luxury van, Pakistan mein sabse popular group transport. Wedding groups, northern tours, corporate outings ke liye must-have. VIP interior with curtains.",
+        "features":  [
+                         "15-Seater Grand Cabin",
+                         "Air Conditioning (Dual)",
+                         "Curtains \u0026 Blinds",
+                         "Professional Driver",
+                         "Luggage Roof Carrier",
+                         "Reclining Seats"
+                     ],
+        "specifications":  {
+                               "engine":  "2700cc Diesel",
+                               "horsepower":  "144 hp",
+                               "luggage":  "Roof rack + boot",
+                               "bluetooth":  false,
+                               "usbCharging":  false,
+                               "premiumAudio":  false
+                           },
+        "whatsappCategory":  "Van",
+        "seo":  {
+                    "title":  "Toyota Hiace Grand Cabin Rent Lahore | 15-Seater | PKR 12,000",
+                    "description":  "Rent Toyota Hiace Grand Cabin in Lahore. Best 15-seater group van for weddings, northern tours, and corporate travel."
+                },
+        "policies":  {
+                         "fuelPolicy":  "Diesel full tank diya jayega, full tank wapis karein.",
+                         "mileagePolicy":  "City unlimited. Inter-city 350km/day included.",
+                         "outstationPolicy":  "Northern tours, Naran/Hunza groups ke liye ideal. Driver ka allowance PKR 1500 aur accommodation client dega.",
+                         "airportPickup":  true,
+                         "weddingAvailable":  true,
+                         "corporateAvailable":  true
+                     },
+        "relatedVehicles":  [
+                                "v-toyota-coaster-saloon",
+                                "v-suzuki-apv"
+                            ]
+    },
+    {
+        "id":  "v-toyota-coaster-saloon",
+        "name":  "Toyota Coaster Saloon",
+        "slug":  "toyota-coaster-saloon",
+        "category":  "Van",
+        "brand":  "Toyota",
+        "year":  2024,
+        "transmission":  "Manual",
+        "fuel":  "Diesel",
+        "seats":  30,
+        "doors":  4,
+        "airConditioning":  true,
+        "driverIncluded":  true,
+        "color":  "Premium Assorted",
+        "images":  {
+                       "thumbnail":  "https://www.toyota-indus.com/wp-content/uploads/Coaster-KV-1---1920-x-450.jpg",
+                       "gallery":  [
+                                       "https://www.toyota-indus.com/wp-content/uploads/Coaster-KV-1---1920-x-450.jpg"
+                                   ]
+                   },
+        "rent":  {
+                     "local":  18000,
+                     "interCity":  28000,
+                     "outstation":  40000,
+                     "weekly":  108000,
+                     "monthly":  380000,
+                     "securityDeposit":  40000,
+                     "note":  "Local = Lahore city. Inter-city = Lahore to Islamabad/Multan. Outstation = Northern group tours."
+                 },
+        "availability":  true,
+        "description":  "Toyota Coaster Saloon â€” 30-seater premium mini-bus. Corporate events, school trips, wedding baraat, aur northern group tours ke liye ideal. VIP saloon conversion with reclining seats.",
+        "features":  [
+                         "30-Seater Saloon",
+                         "Dual AC",
+                         "Reclining Seats",
+                         "Professional Driver",
+                         "PA System",
+                         "Large Luggage Space"
+                     ],
+        "specifications":  {
+                               "engine":  "4000cc Diesel",
+                               "horsepower":  "135 hp",
+                               "luggage":  "Roof + underfloor storage",
+                               "bluetooth":  false,
+                               "usbCharging":  false,
+                               "premiumAudio":  false
+                           },
+        "whatsappCategory":  "Van",
+        "seo":  {
+                    "title":  "Toyota Coaster Saloon Rent Lahore | 30-Seater | PKR 18,000",
+                    "description":  "Rent Toyota Coaster Saloon mini-bus in Lahore. 30 seats for group tours, corporate events, and wedding baraat."
+                },
+        "policies":  {
+                         "fuelPolicy":  "Full diesel tank. Return full tank.",
+                         "mileagePolicy":  "City unlimited. Inter-city negotiable.",
+                         "outstationPolicy":  "Group northern tours ke liye. Driver allowance PKR 2000/day client dega.",
+                         "airportPickup":  true,
+                         "weddingAvailable":  true,
+                         "corporateAvailable":  true
+                     },
+        "relatedVehicles":  [
+                                "v-yutong-bus",
+                                "v-toyota-hiace-grand-cabin"
+                            ]
+    },
+    {
+        "id":  "v-yutong-bus",
+        "name":  "Yutong Bus",
+        "slug":  "yutong-bus",
+        "category":  "Van",
+        "brand":  "Yutong",
+        "year":  2024,
+        "transmission":  "Automatic",
+        "fuel":  "Diesel",
+        "seats":  49,
+        "doors":  2,
+        "airConditioning":  true,
+        "driverIncluded":  true,
+        "color":  "White",
+        "images":  {
+                       "thumbnail":  "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Yutong_ZK6122H9_bus_%28China%29.jpg/1280px-Yutong_ZK6122H9_bus_%28China%29.jpg",
+                       "gallery":  [
+                                       "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Yutong_ZK6122H9_bus_%28China%29.jpg/1280px-Yutong_ZK6122H9_bus_%28China%29.jpg"
+                                   ]
+                   },
+        "rent":  {
+                     "local":  30000,
+                     "interCity":  55000,
+                     "outstation":  80000,
+                     "weekly":  200000,
+                     "monthly":  700000,
+                     "securityDeposit":  50000,
+                     "note":  "Local = Lahore city event. Inter-city = Lahore to Islamabad/Multan. Outstation = Long-distance tours. Price on request."
+                 },
+        "availability":  true,
+        "description":  "Yutong AC Bus â€” 49-seater fully air-conditioned luxury coach. Corporate events, university trips, religious pilgrimages, aur large group northern tours ke liye. Pakistan mein top rated bus rental.",
+        "features":  [
+                         "49-Seater Coach",
+                         "Full AC",
+                         "Reclining Seats",
+                         "Professional Driver",
+                         "PA System",
+                         "Large Baggage Hold",
+                         "Overhead Compartments"
+                     ],
+        "specifications":  {
+                               "engine":  "6700cc Diesel",
+                               "horsepower":  "245 hp",
+                               "luggage":  "Large underfloor hold",
+                               "bluetooth":  false,
+                               "usbCharging":  false,
+                               "premiumAudio":  true
+                           },
+        "whatsappCategory":  "Van",
+        "seo":  {
+                    "title":  "Yutong AC Bus Rent Lahore | 49-Seater Coach | Iris Tours",
+                    "description":  "Rent Yutong AC Bus in Lahore for large group travel. 49-seater luxury coach for corporate, university, and northern tours."
+                },
+        "policies":  {
+                         "fuelPolicy":  "Full diesel tank. Return full tank.",
+                         "mileagePolicy":  "Per-trip pricing. Contact for details.",
+                         "outstationPolicy":  "Long tours ke liye. Driver ka daily allowance + accommodation client zimmedari.",
+                         "airportPickup":  true,
+                         "weddingAvailable":  true,
+                         "corporateAvailable":  true
+                     },
+        "relatedVehicles":  [
+                                "v-toyota-coaster-saloon"
+                            ]
+    },
+    {
+        "id":  "v-audi-a4",
+        "name":  "Audi A4",
+        "slug":  "audi-a4",
+        "category":  "Luxury",
+        "brand":  "Audi",
+        "year":  2024,
+        "transmission":  "Automatic",
+        "fuel":  "Petrol",
+        "seats":  5,
+        "doors":  4,
+        "airConditioning":  true,
+        "driverIncluded":  true,
+        "color":  "Premium Assorted",
+        "images":  {
+                       "thumbnail":  "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Audi_A4_B9_sedans_%28FL%29_1X7A2441.jpg/1280px-Audi_A4_B9_sedans_%28FL%29_1X7A2441.jpg",
+                       "gallery":  [
+                                       "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Audi_A4_B9_sedans_%28FL%29_1X7A2441.jpg/1280px-Audi_A4_B9_sedans_%28FL%29_1X7A2441.jpg"
+                                   ]
+                   },
+        "rent":  {
+                     "local":  25000,
+                     "interCity":  40000,
+                     "outstation":  55000,
+                     "weekly":  150000,
+                     "monthly":  550000,
+                     "securityDeposit":  75000,
+                     "note":  "Local = within Lahore. Inter-city = Lahore to Islamabad. Outstation = on request."
+                 },
+        "availability":  true,
+        "description":  "Audi A4 â€” European luxury at its finest. DHA Lahore ke premium events, corporate boardroom arrivals, aur wedding baraat ke liye ideal. S-Line trim with quattro AWD available.",
+        "features":  [
+                         "S-Line Exterior",
+                         "Virtual Cockpit",
+                         "Quattro AWD",
+                         "Professional Chauffeur",
+                         "Bang \u0026 Olufsen Audio",
+                         "Matrix LED Headlights"
+                     ],
+        "specifications":  {
+                               "engine":  "2000cc TFSI Turbo",
+                               "horsepower":  "190-265 hp",
+                               "luggage":  "3-4 bags",
+                               "bluetooth":  true,
+                               "usbCharging":  true,
+                               "premiumAudio":  true
+                           },
+        "whatsappCategory":  "Luxury",
+        "seo":  {
+                    "title":  "Audi A4 Rent a Car Lahore | Luxury Sedan | PKR 25,000/day",
+                    "description":  "Rent Audi A4 in Lahore DHA. Premium European luxury sedan with professional chauffeur. Wedding and corporate available."
+                },
+        "policies":  {
+                         "fuelPolicy":  "Full tank diya jayega, full tank wapis karein.",
+                         "mileagePolicy":  "City 200km/day. Inter-city extra charges.",
+                         "outstationPolicy":  "On request. Driver allowance + premium accommodation client ka.",
+                         "airportPickup":  true,
+                         "weddingAvailable":  true,
+                         "corporateAvailable":  true
+                     },
+        "relatedVehicles":  [
+                                "v-audi-a6",
+                                "v-mercedes-benz-c-class-c180"
+                            ]
+    },
+    {
+        "id":  "v-audi-a6",
+        "name":  "Audi A6",
+        "slug":  "audi-a6",
+        "category":  "Luxury",
+        "brand":  "Audi",
+        "year":  2024,
+        "transmission":  "Automatic",
+        "fuel":  "Petrol",
+        "seats":  5,
+        "doors":  4,
+        "airConditioning":  true,
+        "driverIncluded":  true,
+        "color":  "Premium Assorted",
+        "images":  {
+                       "thumbnail":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Audi_A6_C9_IAA_2025_DSC_1920.jpg/1280px-Audi_A6_C9_IAA_2025_DSC_1920.jpg",
+                       "gallery":  [
+                                       "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Audi_A6_C9_IAA_2025_DSC_1920.jpg/1280px-Audi_A6_C9_IAA_2025_DSC_1920.jpg"
+                                   ]
+                   },
+        "rent":  {
+                     "local":  32000,
+                     "interCity":  50000,
+                     "outstation":  70000,
+                     "weekly":  190000,
+                     "monthly":  680000,
+                     "securityDeposit":  100000,
+                     "note":  "Local = within Lahore. Inter-city = Lahore to Islamabad. Outstation on request."
+                 },
+        "availability":  true,
+        "description":  "Audi A6 â€” Full-size luxury executive sedan. Pakistan mein VIP delegations, CEO travel, aur premium weddings ke liye top choice. Quattro AWD, air suspension, aur 3.0 TFSI power.",
+        "features":  [
+                         "Executive Luxury",
+                         "3.0 TFSI Engine",
+                         "Quattro AWD",
+                         "Air Suspension",
+                         "Professional Chauffeur",
+                         "Bose Surround Sound"
+                     ],
+        "specifications":  {
+                               "engine":  "2000cc / 3000cc TFSI",
+                               "horsepower":  "245-340 hp",
+                               "luggage":  "4 bags",
+                               "bluetooth":  true,
+                               "usbCharging":  true,
+                               "premiumAudio":  true
+                           },
+        "whatsappCategory":  "Luxury",
+        "seo":  {
+                    "title":  "Audi A6 Rent a Car Lahore | Executive Sedan | PKR 32,000/day",
+                    "description":  "Rent Audi A6 in Lahore. Pakistan\u0027s top executive luxury sedan with professional chauffeur. Book via WhatsApp."
+                },
+        "policies":  {
+                         "fuelPolicy":  "Premium fuel full tank. Return full tank.",
+                         "mileagePolicy":  "City 200km/day. Extra charged.",
+                         "outstationPolicy":  "On special request. Driver full allowance client dega.",
+                         "airportPickup":  true,
+                         "weddingAvailable":  true,
+                         "corporateAvailable":  true
+                     },
+        "relatedVehicles":  [
+                                "v-mercedes-benz-s-class",
+                                "v-audi-a4"
+                            ]
+    },
+    {
+        "id":  "v-mercedes-benz-c-class-c180",
+        "name":  "Mercedes Benz C-Class / C180",
+        "slug":  "mercedes-benz-c-class-c180",
+        "category":  "Luxury",
+        "brand":  "Mercedes",
+        "year":  2024,
+        "transmission":  "Automatic",
+        "fuel":  "Petrol",
+        "seats":  5,
+        "doors":  4,
+        "airConditioning":  true,
+        "driverIncluded":  true,
+        "color":  "Premium Assorted",
+        "images":  {
+                       "thumbnail":  "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Mercedes-Benz_W206_IMG_6380.jpg/1280px-Mercedes-Benz_W206_IMG_6380.jpg",
+                       "gallery":  [
+                                       "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Mercedes-Benz_W206_IMG_6380.jpg/1280px-Mercedes-Benz_W206_IMG_6380.jpg"
+                                   ]
+                   },
+        "rent":  {
+                     "local":  30000,
+                     "interCity":  48000,
+                     "outstation":  65000,
+                     "weekly":  180000,
+                     "monthly":  650000,
+                     "securityDeposit":  100000,
+                     "note":  "Local = within Lahore. Inter-city = Lahore to Islamabad. Outstation on special request only."
+                 },
+        "availability":  true,
+        "description":  "Mercedes Benz C-Class â€” The star of luxury weddings in Lahore. C180/C200 models available with iconic three-pointed star. AMG body kit, Burmester audio, aur premium Nappa leather.",
+        "features":  [
+                         "AMG Body Kit",
+                         "Burmester Audio",
+                         "Nappa Leather",
+                         "Professional Chauffeur",
+                         "MBUX Infotainment",
+                         "Ambient Lighting (64 colors)"
+                     ],
+        "specifications":  {
+                               "engine":  "1500cc / 2000cc",
+                               "horsepower":  "170-255 hp",
+                               "luggage":  "3-4 bags",
+                               "bluetooth":  true,
+                               "usbCharging":  true,
+                               "premiumAudio":  true
+                           },
+        "whatsappCategory":  "Luxury",
+        "seo":  {
+                    "title":  "Mercedes C-Class Rent a Car Lahore | PKR 30,000/day | Iris Tours",
+                    "description":  "Rent Mercedes Benz C-Class in Lahore. Best luxury wedding car in Pakistan. Professional chauffeur. Book via WhatsApp."
+                },
+        "policies":  {
+                         "fuelPolicy":  "Premium fuel full tank. Return full tank.",
+                         "mileagePolicy":  "City 150km/day. Extra charged.",
+                         "outstationPolicy":  "On special request. Full driver allowance client ka.",
+                         "airportPickup":  true,
+                         "weddingAvailable":  true,
+                         "corporateAvailable":  true
+                     },
+        "relatedVehicles":  [
+                                "v-mercedes-benz-s-class",
+                                "v-audi-a6"
+                            ]
+    },
+    {
+        "id":  "v-mercedes-benz-s-class",
+        "name":  "Mercedes Benz S-Class",
+        "slug":  "mercedes-benz-s-class",
+        "category":  "Luxury",
+        "brand":  "Mercedes",
+        "year":  2024,
+        "transmission":  "Automatic",
+        "fuel":  "Petrol",
+        "seats":  5,
+        "doors":  4,
+        "airConditioning":  true,
+        "driverIncluded":  true,
+        "color":  "Premium Assorted",
+        "images":  {
+                       "thumbnail":  "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Mercedes-Benz_W223_IMG_6663.jpg/1280px-Mercedes-Benz_W223_IMG_6663.jpg",
+                       "gallery":  [
+                                       "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Mercedes-Benz_W223_IMG_6663.jpg/1280px-Mercedes-Benz_W223_IMG_6663.jpg"
+                                   ]
+                   },
+        "rent":  {
+                     "local":  75000,
+                     "interCity":  110000,
+                     "outstation":  150000,
+                     "weekly":  450000,
+                     "monthly":  1500000,
+                     "securityDeposit":  200000,
+                     "note":  "Local = within Lahore. Inter-city = Lahore to Islamabad only. Outstation strictly on request. Minimum 12-hour booking."
+                 },
+        "availability":  true,
+        "description":  "Mercedes Benz S-Class â€” World\u0027s finest luxury sedan. Pakistan mein presidents, ambassadors, aur billionaire weddings ke liye. W223 model with first-class rear seats, massage seats, and OLED displays.",
+        "features":  [
+                         "First-Class Rear Suite",
+                         "Massage Seats",
+                         "OLED Rear Screens",
+                         "Professional Chauffeur",
+                         "Active Ambient Lighting",
+                         "Burmester 4D Audio",
+                         "Magic Body Control"
+                     ],
+        "specifications":  {
+                               "engine":  "3000cc / 4000cc V8",
+                               "horsepower":  "429-503 hp",
+                               "luggage":  "4 bags",
+                               "bluetooth":  true,
+                               "usbCharging":  true,
+                               "premiumAudio":  true
+                           },
+        "whatsappCategory":  "Luxury",
+        "seo":  {
+                    "title":  "Mercedes S-Class Rent a Car Lahore | PKR 75,000/day | Iris Tours",
+                    "description":  "Rent Mercedes S-Class in Lahore. Pakistan\u0027s most prestigious car for VIP events and weddings. Book via WhatsApp."
+                },
+        "policies":  {
+                         "fuelPolicy":  "Premium fuel full tank. Return full tank.",
+                         "mileagePolicy":  "City 100km/day. Each extra km charged.",
+                         "outstationPolicy":  "Strictly on special request only. All expenses client dega.",
+                         "airportPickup":  true,
+                         "weddingAvailable":  true,
+                         "corporateAvailable":  true
+                     },
+        "relatedVehicles":  [
+                                "v-range-rover",
+                                "v-audi-a6"
+                            ]
+    },
+    {
+        "id":  "v-range-rover",
+        "name":  "Range Rover",
+        "slug":  "range-rover",
+        "category":  "Luxury",
+        "brand":  "Land Rover",
+        "year":  2024,
+        "transmission":  "Automatic",
+        "fuel":  "Petrol",
+        "seats":  5,
+        "doors":  4,
+        "airConditioning":  true,
+        "driverIncluded":  true,
+        "color":  "Premium Assorted",
+        "images":  {
+                       "thumbnail":  "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Range_Rover_%28L460%29_First_Edition_DSC_0199.jpg/1280px-Range_Rover_%28L460%29_First_Edition_DSC_0199.jpg",
+                       "gallery":  [
+                                       "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Range_Rover_%28L460%29_First_Edition_DSC_0199.jpg/1280px-Range_Rover_%28L460%29_First_Edition_DSC_0199.jpg"
+                                   ]
+                   },
+        "rent":  {
+                     "local":  80000,
+                     "interCity":  120000,
+                     "outstation":  160000,
+                     "weekly":  480000,
+                     "monthly":  1700000,
+                     "securityDeposit":  250000,
+                     "note":  "Local = within Lahore. Inter-city on request. Minimum 12-hour booking. Price may vary by model year."
+                 },
+        "availability":  true,
+        "description":  "Range Rover â€” The British icon of luxury and capability. Pakistan ke top-tier weddings aur VIP movements ke liye. L460 2024 model with SV Autobiography interior, reclining rear seats.",
+        "features":  [
+                         "SV Autobiography Interior",
+                         "Reclining Rear Seats",
+                         "Terrain Response 2",
+                         "Professional Chauffeur",
+                         "Meridian Audio",
+                         "Pixel-LED Headlights"
+                     ],
+        "specifications":  {
+                               "engine":  "3000cc / 4400cc V8",
+                               "horsepower":  "350-530 hp",
+                               "luggage":  "5 bags",
+                               "bluetooth":  true,
+                               "usbCharging":  true,
+                               "premiumAudio":  true
+                           },
+        "whatsappCategory":  "Luxury",
+        "seo":  {
+                    "title":  "Range Rover Rent a Car Lahore | PKR 80,000/day | Iris Tours",
+                    "description":  "Rent Range Rover in Lahore. Pakistan\u0027s most prestigious luxury SUV for VIP weddings and events. Book via WhatsApp."
+                },
+        "policies":  {
+                         "fuelPolicy":  "Premium fuel. Return full tank.",
+                         "mileagePolicy":  "City 100km/day. Extra charged.",
+                         "outstationPolicy":  "On special request. All expenses client dega.",
+                         "airportPickup":  true,
+                         "weddingAvailable":  true,
+                         "corporateAvailable":  true
+                     },
+        "relatedVehicles":  [
+                                "v-mercedes-benz-s-class",
+                                "v-toyota-land-cruiser-v8"
+                            ]
+    },
+    {
+        "id":  "v-chrysler-limousine",
+        "name":  "Chrysler Limousine",
+        "slug":  "chrysler-limousine",
+        "category":  "Luxury",
+        "brand":  "Chrysler",
+        "year":  2024,
+        "transmission":  "Automatic",
+        "fuel":  "Petrol",
+        "seats":  10,
+        "doors":  4,
+        "airConditioning":  true,
+        "driverIncluded":  true,
+        "color":  "White / Black",
+        "images":  {
+                       "thumbnail":  "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Chrysler_300_limousine_%28cropped%29.jpg/1280px-Chrysler_300_limousine_%28cropped%29.jpg",
+                       "gallery":  [
+                                       "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Chrysler_300_limousine_%28cropped%29.jpg/1280px-Chrysler_300_limousine_%28cropped%29.jpg"
+                                   ]
+                   },
+        "rent":  {
+                     "local":  60000,
+                     "interCity":  90000,
+                     "outstation":  130000,
+                     "weekly":  360000,
+                     "monthly":  1300000,
+                     "securityDeposit":  150000,
+                     "note":  "Per-event pricing available. Minimum 4-hour booking for weddings. Inter-city strictly on request."
+                 },
+        "availability":  true,
+        "description":  "Chrysler Limousine â€” Pakistan mein wedding season ki jaan. Baraat ki shaan aur dulha ki arrival ke liye perfect. 10-seater stretch limo with party lighting, minibar, aur surround sound.",
+        "features":  [
+                         "10-Seater Stretch Limo",
+                         "LED Party Lighting",
+                         "Mini Bar",
+                         "Professional Chauffeur",
+                         "Surround Sound System",
+                         "Privacy Glass",
+                         "TV Screens"
+                     ],
+        "specifications":  {
+                               "engine":  "5700cc HEMI V8",
+                               "horsepower":  "375 hp",
+                               "luggage":  "Minimal",
+                               "bluetooth":  true,
+                               "usbCharging":  true,
+                               "premiumAudio":  true
+                           },
+        "whatsappCategory":  "Luxury",
+        "seo":  {
+                    "title":  "Chrysler Limousine for Wedding Lahore | PKR 60,000 | Iris Tours",
+                    "description":  "Rent Chrysler Limousine for wedding in Lahore. 10-seater stretch limo with party lighting for baraat and events."
+                },
+        "policies":  {
+                         "fuelPolicy":  "Fuel included in package rate.",
+                         "mileagePolicy":  "Per-event pricing. Contact for details.",
+                         "outstationPolicy":  "Within Punjab only.",
+                         "airportPickup":  false,
+                         "weddingAvailable":  true,
+                         "corporateAvailable":  false
+                     },
+        "relatedVehicles":  [
+                                "v-v8-limousine",
+                                "v-hummer-limousine"
+                            ]
+    },
+    {
+        "id":  "v-v8-limousine",
+        "name":  "V8 Limousine",
+        "slug":  "v8-limousine",
+        "category":  "Luxury",
+        "brand":  "Toyota",
+        "year":  2024,
+        "transmission":  "Automatic",
+        "fuel":  "Petrol",
+        "seats":  8,
+        "doors":  4,
+        "airConditioning":  true,
+        "driverIncluded":  true,
+        "color":  "Black / White",
+        "images":  {
+                       "thumbnail":  "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Toyota_Land_Cruiser_200_limousine_%28modified%2C_China%29_front.jpg/1280px-Toyota_Land_Cruiser_200_limousine_%28modified%2C_China%29_front.jpg",
+                       "gallery":  [
+                                       "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Toyota_Land_Cruiser_200_limousine_%28modified%2C_China%29_front.jpg/1280px-Toyota_Land_Cruiser_200_limousine_%28modified%2C_China%29_front.jpg"
+                                   ]
+                   },
+        "rent":  {
+                     "local":  70000,
+                     "interCity":  110000,
+                     "outstation":  150000,
+                     "weekly":  420000,
+                     "monthly":  1500000,
+                     "securityDeposit":  200000,
+                     "note":  "Per-event pricing. Minimum 6-hour booking. Lahore and Punjab only. Book 3 days in advance."
+                 },
+        "availability":  true,
+        "description":  "V8 Limousine (Land Cruiser stretch) â€” Pakistan mein sabse powerful aur grand wedding limo. SUV ka dil, limo ka style. Baraat processions, VIP arrivals, aur mehndi events ke liye best.",
+        "features":  [
+                         "8-Seater SUV Limo",
+                         "SUV Ground Clearance",
+                         "LED Party Lighting",
+                         "Professional Chauffeur",
+                         "Mini Bar",
+                         "360-degree sound",
+                         "Privacy Divider"
+                     ],
+        "specifications":  {
+                               "engine":  "4600cc V8",
+                               "horsepower":  "300+ hp",
+                               "luggage":  "Minimal",
+                               "bluetooth":  true,
+                               "usbCharging":  true,
+                               "premiumAudio":  true
+                           },
+        "whatsappCategory":  "Luxury",
+        "seo":  {
+                    "title":  "V8 Limousine for Wedding Lahore | PKR 70,000 | Iris Tours",
+                    "description":  "Rent V8 Limousine (Land Cruiser stretch) for wedding in Lahore. Pakistan\u0027s most powerful wedding limo."
+                },
+        "policies":  {
+                         "fuelPolicy":  "Fuel included in package.",
+                         "mileagePolicy":  "Per-event pricing.",
+                         "outstationPolicy":  "Punjab only.",
+                         "airportPickup":  false,
+                         "weddingAvailable":  true,
+                         "corporateAvailable":  false
+                     },
+        "relatedVehicles":  [
+                                "v-chrysler-limousine",
+                                "v-hummer-limousine"
+                            ]
+    },
+    {
+        "id":  "v-tundra-limousine",
+        "name":  "Tundra Limousine",
+        "slug":  "tundra-limousine",
+        "category":  "Luxury",
+        "brand":  "Toyota",
+        "year":  2024,
+        "transmission":  "Automatic",
+        "fuel":  "Petrol",
+        "seats":  12,
+        "doors":  4,
+        "airConditioning":  true,
+        "driverIncluded":  true,
+        "color":  "Black",
+        "images":  {
+                       "thumbnail":  "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Toyota_Tundra_pickup_truck_%28US%2C_2022%29.jpg/1280px-Toyota_Tundra_pickup_truck_%28US%2C_2022%29.jpg",
+                       "gallery":  [
+                                       "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Toyota_Tundra_pickup_truck_%28US%2C_2022%29.jpg/1280px-Toyota_Tundra_pickup_truck_%28US%2C_2022%29.jpg"
+                                   ]
+                   },
+        "rent":  {
+                     "local":  80000,
+                     "interCity":  120000,
+                     "outstation":  160000,
+                     "weekly":  480000,
+                     "monthly":  1700000,
+                     "securityDeposit":  250000,
+                     "note":  "Per-event pricing. Minimum 6-hour booking. Lahore and surrounding areas only."
+                 },
+        "availability":  true,
+        "description":  "Tundra Limousine â€” The most unique and head-turning limo in Pakistan. Toyota Tundra stretch conversion with 12-seater luxury cabin. Perfect for groom arrival and premium events.",
+        "features":  [
+                         "12-Seater Tundra Stretch",
+                         "Pickup Style Limo",
+                         "LED Lighting",
+                         "Professional Chauffeur",
+                         "Premium Sound System",
+                         "Open Sunroof Option"
+                     ],
+        "specifications":  {
+                               "engine":  "5700cc V8",
+                               "horsepower":  "381 hp",
+                               "luggage":  "Minimal",
+                               "bluetooth":  true,
+                               "usbCharging":  true,
+                               "premiumAudio":  true
+                           },
+        "whatsappCategory":  "Luxury",
+        "seo":  {
+                    "title":  "Tundra Limousine Wedding Car Lahore | PKR 80,000 | Iris Tours",
+                    "description":  "Rent Tundra Limousine for wedding in Lahore. Pakistan\u0027s most unique stretch limo. Book via WhatsApp with Iris Tours."
+                },
+        "policies":  {
+                         "fuelPolicy":  "Fuel included in package.",
+                         "mileagePolicy":  "Per-event pricing.",
+                         "outstationPolicy":  "Lahore and Punjab only.",
+                         "airportPickup":  false,
+                         "weddingAvailable":  true,
+                         "corporateAvailable":  false
+                     },
+        "relatedVehicles":  [
+                                "v-v8-limousine",
+                                "v-chrysler-limousine"
+                            ]
+    },
+    {
+        "id":  "v-hummer-limousine",
+        "name":  "Hummer Limousine",
+        "slug":  "hummer-limousine",
+        "category":  "Luxury",
+        "brand":  "Hummer",
+        "year":  2024,
+        "transmission":  "Automatic",
+        "fuel":  "Petrol",
+        "seats":  18,
+        "doors":  4,
+        "airConditioning":  true,
+        "driverIncluded":  true,
+        "color":  "White / Yellow",
+        "images":  {
+                       "thumbnail":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/H2_hummer_limo.jpg/1280px-H2_hummer_limo.jpg",
+                       "gallery":  [
+                                       "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/H2_hummer_limo.jpg/1280px-H2_hummer_limo.jpg"
+                                   ]
+                   },
+        "rent":  {
+                     "local":  100000,
+                     "interCity":  150000,
+                     "outstation":  200000,
+                     "weekly":  600000,
+                     "monthly":  2200000,
+                     "securityDeposit":  300000,
+                     "note":  "Per-event pricing. Minimum 8-hour booking. Book 5 days in advance. Lahore only."
+                 },
+        "availability":  true,
+        "description":  "Hummer Limousine â€” Pakistan mein sabse spectacular aur show-stopping wedding vehicle. 18-seater H2 Hummer stretch with dance floor, LED party lights, aur full entertainment system. Baraat ka king.",
+        "features":  [
+                         "18-Seater H2 Stretch",
+                         "Dance Floor",
+                         "LED Bar Lights",
+                         "Professional Chauffeur",
+                         "Disco Lighting",
+                         "Full Entertainment Console",
+                         "Intercom System"
+                     ],
+        "specifications":  {
+                               "engine":  "6000cc V8",
+                               "horsepower":  "325 hp",
+                               "luggage":  "Minimal",
+                               "bluetooth":  true,
+                               "usbCharging":  true,
+                               "premiumAudio":  true
+                           },
+        "whatsappCategory":  "Luxury",
+        "seo":  {
+                    "title":  "Hummer Limousine for Wedding Lahore | PKR 1 Lakh | Iris Tours",
+                    "description":  "Rent Hummer Limousine for wedding in Lahore. Pakistan\u0027s most spectacular baraat vehicle. Book via WhatsApp with Iris Tours."
+                },
+        "policies":  {
+                         "fuelPolicy":  "Fuel included in package.",
+                         "mileagePolicy":  "Per-event pricing.",
+                         "outstationPolicy":  "Lahore city only.",
+                         "airportPickup":  false,
+                         "weddingAvailable":  true,
+                         "corporateAvailable":  false
+                     },
+        "relatedVehicles":  [
+                                "v-v8-limousine",
+                                "v-tundra-limousine"
+                            ]
+    }
 ]
