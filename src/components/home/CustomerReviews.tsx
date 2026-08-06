@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Star, ExternalLink, ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
+import Logo from "@/components/ui/Logo";
 
 // ─── Iris Tours GMB Details ─────────────────────────────────────────────────
 const PLACE_CID   = "0x3919073fdd277da9:0x4ba135d7911e3f92";
@@ -158,13 +159,7 @@ export default function GoogleReviews() {
           {/* Iris Tours Logo */}
           <div className="flex justify-center mb-6">
             <div className="bg-white rounded-2xl shadow-md border border-border-primary px-8 py-4 inline-flex items-center justify-center">
-              <Image
-                src="/logo.png"
-                alt="Iris Tours - Rent a Car Lahore"
-                width={160}
-                height={55}
-                className="object-contain"
-              />
+              <Logo width={180} height={60} />
             </div>
           </div>
 
