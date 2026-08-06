@@ -157,18 +157,14 @@ export default function GoogleReviews() {
         >
           {/* Iris Tours Logo */}
           <div className="flex justify-center mb-6">
-            <div className="bg-white rounded-2xl shadow-md border border-border-primary px-8 py-4 inline-flex items-center gap-4">
+            <div className="bg-white rounded-2xl shadow-md border border-border-primary px-8 py-4 inline-flex items-center justify-center">
               <Image
                 src="/logo.png"
                 alt="Iris Tours - Rent a Car Lahore"
-                width={60}
-                height={60}
+                width={160}
+                height={55}
                 className="object-contain"
               />
-              <div className="text-left">
-                <p className="text-xl font-black text-text-primary leading-tight">Iris Tours</p>
-                <p className="text-xs text-text-secondary tracking-widest uppercase">Rental Car</p>
-              </div>
             </div>
           </div>
 
