@@ -1,5 +1,179 @@
 [
   {
+    "id": "v-toyota-hilux-single-cabin",
+    "name": "Toyota Hilux Single Cabin",
+    "slug": "toyota-hilux-single-cabin",
+    "category": "Van",
+    "brand": "Toyota",
+    "year": 2024,
+    "transmission": "Manual",
+    "fuelType": "Diesel",
+    "seats": 2,
+    "luggage": 10,
+    "driverIncluded": false,
+    "features": [
+      "Air Conditioning",
+      "Large Cargo Bed",
+      "Durable"
+    ],
+    "images": {
+      "thumbnail": "/fleet/hilux-single-cabin.png",
+      "gallery": [
+        "/fleet/hilux-single-cabin.png",
+        "/fleet/hilux-e.png"
+      ]
+    },
+    "rent": {
+      "daily": 8000,
+      "weekly": 50000,
+      "monthly": 200000,
+      "withDriver": {
+        "local": 9500,
+        "interCity": 10500,
+        "outstation": 12000
+      },
+      "withoutDriver": {
+        "local": 8000,
+        "interCity": 9000,
+        "outstation": 10000
+      }
+    },
+    "seo": {
+      "title": "Toyota Hilux Single Cabin Rent a Car Lahore | Iris Tours",
+      "description": "Rent Toyota Hilux Single Cabin in Lahore DHA for transport."
+    }
+  },
+  {
+    "id": "v-toyota-corolla-cross",
+    "name": "Toyota Corolla Cross",
+    "slug": "toyota-corolla-cross",
+    "category": "SUV",
+    "brand": "Toyota",
+    "year": 2024,
+    "transmission": "Automatic",
+    "fuelType": "Hybrid",
+    "seats": 5,
+    "luggage": 3,
+    "driverIncluded": false,
+    "features": [
+      "Air Conditioning",
+      "SUV Styling",
+      "Hybrid Efficiency"
+    ],
+    "images": {
+      "thumbnail": "/fleet/corolla-cross.png",
+      "gallery": [
+        "/fleet/corolla-cross.png"
+      ]
+    },
+    "rent": {
+      "daily": 12000,
+      "weekly": 75000,
+      "monthly": 280000,
+      "withDriver": {
+        "local": 13500,
+        "interCity": 14500,
+        "outstation": 16000
+      },
+      "withoutDriver": {
+        "local": 12000,
+        "interCity": 13000,
+        "outstation": 14000
+      }
+    },
+    "seo": {
+      "title": "Toyota Corolla Cross Rent a Car Lahore | Iris Tours",
+      "description": "Rent Toyota Corolla Cross in Lahore DHA for modern SUV travel."
+    }
+  },
+  {
+    "id": "v-toyota-prius",
+    "name": "Toyota Prius",
+    "slug": "toyota-prius",
+    "category": "Sedan",
+    "brand": "Toyota",
+    "year": 2024,
+    "transmission": "Automatic",
+    "fuelType": "Hybrid",
+    "seats": 5,
+    "luggage": 2,
+    "driverIncluded": false,
+    "features": [
+      "Air Conditioning",
+      "Hybrid Efficiency",
+      "Spacious Interior"
+    ],
+    "images": {
+      "thumbnail": "/fleet/Prius.png",
+      "gallery": [
+        "/fleet/Prius.png"
+      ]
+    },
+    "rent": {
+      "daily": 10000,
+      "weekly": 65000,
+      "monthly": 250000,
+      "withDriver": {
+        "local": 11500,
+        "interCity": 12500,
+        "outstation": 14000
+      },
+      "withoutDriver": {
+        "local": 10000,
+        "interCity": 11000,
+        "outstation": 12000
+      }
+    },
+    "seo": {
+      "title": "Toyota Prius Rent a Car Lahore | Iris Tours",
+      "description": "Rent Toyota Prius in Lahore DHA for comfortable family travel."
+    }
+  },
+  {
+    "id": "v-toyota-camry",
+    "name": "Toyota Camry",
+    "slug": "toyota-camry",
+    "category": "Luxury",
+    "brand": "Toyota",
+    "year": 2024,
+    "transmission": "Automatic",
+    "fuelType": "Hybrid",
+    "seats": 5,
+    "luggage": 2,
+    "driverIncluded": false,
+    "features": [
+      "Air Conditioning",
+      "Leather Seats",
+      "Sunroof",
+      "Hybrid Efficiency"
+    ],
+    "images": {
+      "thumbnail": "/fleet/camry-hybrid-new.png",
+      "gallery": [
+        "/fleet/camry-hybrid-new.png"
+      ]
+    },
+    "rent": {
+      "daily": 15000,
+      "weekly": 90000,
+      "monthly": 300000,
+      "withDriver": {
+        "local": 17000,
+        "interCity": 18000,
+        "outstation": 20000
+      },
+      "withoutDriver": {
+        "local": 15000,
+        "interCity": 16000,
+        "outstation": 17000
+      }
+    },
+    "seo": {
+      "title": "Toyota Camry Rent a Car Lahore | Iris Tours",
+      "description": "Rent Toyota Camry Hybrid in Lahore DHA for executive travel."
+    }
+  },
+  {
     "id": "v-suzuki-every",
     "name": "Suzuki Every",
     "slug": "suzuki-every",
@@ -389,9 +563,9 @@
     "driverIncluded": true,
     "color": "Premium Assorted",
     "images": {
-      "thumbnail": "https://www.toyota-indus.com/wp-content/uploads/Yaris-KV-1.38---1920-x-450.jpg",
+      "thumbnail": "/fleet/Website-200x90-1.png",
       "gallery": [
-        "https://www.toyota-indus.com/wp-content/uploads/Yaris-KV-1.38---1920-x-450.jpg"
+        "/fleet/Website-200x90-1.png"
       ]
     },
     "rent": {
@@ -910,7 +1084,8 @@
     "images": {
       "thumbnail": "/fleet/revo_rocco.png",
       "gallery": [
-        "/fleet/revo_rocco.png"
+        "/fleet/revo_rocco.png",
+        "/fleet/Revo-GRS-showroom.png"
       ]
     },
     "rent": {
@@ -975,7 +1150,8 @@
     "images": {
       "thumbnail": "/fleet/fortuner_legender_.png",
       "gallery": [
-        "/fleet/fortuner_legender_.png"
+        "/fleet/fortuner_legender_.png",
+        "/fleet/Fortuner-GRS-showroom.png"
       ]
     },
     "rent": {
@@ -1236,7 +1412,8 @@
     "images": {
       "thumbnail": "/fleet/Hiace.png",
       "gallery": [
-        "/fleet/Hiace.png"
+        "/fleet/Hiace.png",
+        "/fleet/hiace-deluxe.png"
       ]
     },
     "rent": {
