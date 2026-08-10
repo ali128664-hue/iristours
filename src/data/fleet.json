@@ -1,5 +1,110 @@
 [
   {
+    "id": "v-suzuki-every",
+    "name": "Suzuki Every",
+    "slug": "suzuki-every",
+    "category": "Van",
+    "brand": "Suzuki",
+    "year": 2024,
+    "transmission": "Automatic",
+    "fuelType": "Petrol",
+    "seats": 7,
+    "luggage": 3,
+    "driverIncluded": false,
+    "features": [
+      "Air Conditioning",
+      "Spacious",
+      "Sliding Doors"
+    ],
+    "images": {
+      "thumbnail": "/fleet/Every  (1).png",
+      "gallery": [
+        "/fleet/Every  (1).png",
+        "/fleet/Every  (2).png",
+        "/fleet/Every  (3).png",
+        "/fleet/Every  (4).png",
+        "/fleet/Every  (5).png",
+        "/fleet/Every  (6).png",
+        "/fleet/Every  (7).png",
+        "/fleet/Every  (8).png",
+        "/fleet/Every  (9).png",
+        "/fleet/Every  (10).png"
+      ]
+    },
+    "rent": {
+      "daily": 4500,
+      "weekly": 30000,
+      "monthly": 120000,
+      "withDriver": {
+        "local": 5500,
+        "interCity": 6500,
+        "outstation": 7500
+      },
+      "withoutDriver": {
+        "local": 4500,
+        "interCity": 5500,
+        "outstation": 6500
+      }
+    },
+    "seo": {
+      "title": "Suzuki Every Rent a Car Lahore | Iris Tours",
+      "description": "Rent Suzuki Every in Lahore DHA for family trips."
+    }
+  },
+  {
+    "id": "v-suzuki-swift",
+    "name": "Suzuki Swift",
+    "slug": "suzuki-swift",
+    "category": "Economy",
+    "brand": "Suzuki",
+    "year": 2024,
+    "transmission": "Automatic",
+    "fuelType": "Petrol",
+    "seats": 5,
+    "luggage": 2,
+    "driverIncluded": false,
+    "features": [
+      "Air Conditioning",
+      "Bluetooth",
+      "Power Windows",
+      "ABS"
+    ],
+    "images": {
+      "thumbnail": "/fleet/Swift (1).png",
+      "gallery": [
+        "/fleet/Swift (1).png",
+        "/fleet/Swift (2).png",
+        "/fleet/Swift (3).png",
+        "/fleet/Swift (4).png",
+        "/fleet/Swift (5).png",
+        "/fleet/Swift (6).png",
+        "/fleet/Swift (7).png",
+        "/fleet/Swift (8).png",
+        "/fleet/Swift (9).png",
+        "/fleet/Swift (10).png"
+      ]
+    },
+    "rent": {
+      "daily": 6000,
+      "weekly": 40000,
+      "monthly": 150000,
+      "withDriver": {
+        "local": 7000,
+        "interCity": 8000,
+        "outstation": 9000
+      },
+      "withoutDriver": {
+        "local": 6000,
+        "interCity": 7000,
+        "outstation": 8000
+      }
+    },
+    "seo": {
+      "title": "Suzuki Swift Rent a Car Lahore | Iris Tours",
+      "description": "Rent Suzuki Swift in Lahore DHA."
+    }
+  },
+  {
     "id": "v-suzuki-alto",
     "name": "Suzuki Alto",
     "slug": "suzuki-alto",
@@ -14,9 +119,16 @@
     "driverIncluded": true,
     "color": "Premium Assorted",
     "images": {
-      "thumbnail": "/fleet/Alto-new.png",
+      "thumbnail": "/fleet/Alto  (1).png",
       "gallery": [
-        "/fleet/Alto-new.png"
+        "/fleet/Alto  (1).png",
+        "/fleet/Alto  (2).png",
+        "/fleet/Alto  (3).png",
+        "/fleet/Alto  (4).png",
+        "/fleet/Alto  (5).png",
+        "/fleet/Alto  (6).png",
+        "/fleet/Alto  (7).png",
+        "/fleet/Alto  (8).png"
       ]
     },
     "rent": {
@@ -78,9 +190,9 @@
     "driverIncluded": true,
     "color": "Premium Assorted",
     "images": {
-      "thumbnail": "https://www.paksuzuki.com.pk/products/WagonR/WagonR%20Card%20with%20261x206%20(1).jpg",
+      "thumbnail": "/fleet/Wagonr (5) (1).png",
       "gallery": [
-        "https://www.paksuzuki.com.pk/products/WagonR/WagonR%20Card%20with%20261x206%20(1).jpg"
+        "/fleet/Wagonr (5) (1).png"
       ]
     },
     "rent": {
@@ -142,9 +254,16 @@
     "driverIncluded": true,
     "color": "Premium Assorted",
     "images": {
-      "thumbnail": "/fleet/Cultus-new.png",
+      "thumbnail": "/fleet/Cultus (1).png",
       "gallery": [
-        "/fleet/Cultus-new.png"
+        "/fleet/Cultus (1).png",
+        "/fleet/Cultus (2).png",
+        "/fleet/Cultus (3).png",
+        "/fleet/Cultus (4).png",
+        "/fleet/Cultus (5).png",
+        "/fleet/Cultus (6).png",
+        "/fleet/Cultus (7).png",
+        "/fleet/Cultus (8).png"
       ]
     },
     "rent": {

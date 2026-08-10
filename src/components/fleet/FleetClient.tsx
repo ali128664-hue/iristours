@@ -12,10 +12,18 @@ interface FleetClientProps {
 export default function FleetClient({ initialData }: FleetClientProps) {
   const [searchQuery, setSearchQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState("All");
+  const [activeBrand, setActiveBrand] = useState("All");
   const [activeSort, setActiveSort] = useState("Recommended");
   const [isFilterOpen, setIsFilterOpen] = useState(false);
 
   const categories = ["All", "Luxury", "SUV", "Sedan", "Economy", "Van", "Bus"];
+  
+  // Extract unique brands from data dynamically
+  const brands = useMemo(() => {
+    const uniqueBrands = Array.from(new Set(initialData.map(v => v.brand)));
+    return ["All", ...uniqueBrands].sort();
+  }, [initialData]);
+
   const sortOptions = ["Recommended", "Lowest Price", "Highest Price", "Newest"];
 
   const filteredAndSortedData = useMemo(() => {
@@ -34,6 +42,11 @@ export default function FleetClient({ initialData }: FleetClientProps) {
     // Category filter
     if (activeCategory !== "All") {
       result = result.filter(v => v.category === activeCategory);
+    }
+
+    // Brand filter
+    if (activeBrand !== "All") {
+      result = result.filter(v => v.brand === activeBrand);
     }
 
     // Sorting
@@ -91,7 +104,7 @@ export default function FleetClient({ initialData }: FleetClientProps) {
             ))}
           </div>
 
-          {/* Sort Dropdown & Mobile Filter Toggle */}
+          {/* Sort Dropdown, Brand Dropdown & Mobile Filter Toggle */}
           <div className="flex w-full lg:w-auto gap-4 items-center justify-between lg:justify-end">
             <button 
               className="lg:hidden flex items-center gap-2 px-4 py-3 rounded-full bg-bg-primary border border-border-primary text-text-primary"
@@ -99,6 +112,19 @@ export default function FleetClient({ initialData }: FleetClientProps) {
             >
               <Filter size={18} /> Filters
             </button>
+            
+            {/* Brand Filter */}
+            <div className="relative w-full lg:w-48 hidden lg:block">
+              <select 
+                value={activeBrand}
+                onChange={(e) => setActiveBrand(e.target.value)}
+                className="w-full bg-bg-primary border border-border-primary rounded-full py-3 px-6 text-sm text-text-primary focus:border-accent-primary focus:outline-none appearance-none cursor-pointer"
+              >
+                {brands.map(brand => (
+                  <option key={brand} value={brand}>{brand === "All" ? "All Brands" : brand}</option>
+                ))}
+              </select>
+            </div>
 
             <div className="relative w-full lg:w-48">
               <SlidersHorizontal className="absolute left-4 top-1/2 -translate-y-1/2 text-text-secondary" size={16} />
@@ -115,31 +141,43 @@ export default function FleetClient({ initialData }: FleetClientProps) {
           </div>
         </div>
 
-        {/* Mobile Categories (Collapsible) */}
+        {/* Mobile Filters (Collapsible) */}
         <AnimatePresence>
           {isFilterOpen && (
             <motion.div 
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
-              className="lg:hidden mt-4 pt-4 border-t border-border-primary flex flex-wrap gap-2"
+              className="lg:hidden mt-4 pt-4 border-t border-border-primary flex flex-col gap-4"
             >
-              {categories.map(cat => (
-                <button
-                  key={cat}
-                  onClick={() => {
-                    setActiveCategory(cat);
-                    setIsFilterOpen(false);
-                  }}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-colors border ${
-                    activeCategory === cat 
-                      ? "bg-accent-primary text-bg-primary border-accent-primary" 
-                      : "bg-bg-primary text-text-secondary border-border-primary"
-                  }`}
+              <div className="flex flex-wrap gap-2">
+                {categories.map(cat => (
+                  <button
+                    key={cat}
+                    onClick={() => {
+                      setActiveCategory(cat);
+                    }}
+                    className={`px-4 py-2 rounded-full text-sm font-medium transition-colors border ${
+                      activeCategory === cat 
+                        ? "bg-accent-primary text-bg-primary border-accent-primary" 
+                        : "bg-bg-primary text-text-secondary border-border-primary"
+                    }`}
+                  >
+                    {cat}
+                  </button>
+                ))}
+              </div>
+              <div className="w-full">
+                <select 
+                  value={activeBrand}
+                  onChange={(e) => setActiveBrand(e.target.value)}
+                  className="w-full bg-bg-primary border border-border-primary rounded-full py-3 px-6 text-sm text-text-primary focus:border-accent-primary focus:outline-none appearance-none cursor-pointer"
                 >
-                  {cat}
-                </button>
-              ))}
+                  {brands.map(brand => (
+                    <option key={brand} value={brand}>{brand === "All" ? "All Brands" : brand}</option>
+                  ))}
+                </select>
+              </div>
             </motion.div>
           )}
         </AnimatePresence>
@@ -184,6 +222,7 @@ export default function FleetClient({ initialData }: FleetClientProps) {
             onClick={() => {
               setSearchQuery("");
               setActiveCategory("All");
+              setActiveBrand("All");
             }}
             className="mt-6 px-6 py-2 rounded-full bg-bg-secondary border border-border-primary text-text-primary hover:border-accent-primary transition-colors"
           >
