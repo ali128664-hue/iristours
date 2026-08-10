@@ -14,9 +14,9 @@
     "driverIncluded": true,
     "color": "Premium Assorted",
     "images": {
-      "thumbnail": "https://www.paksuzuki.com.pk/cards/altoOut.jpg",
+      "thumbnail": "/fleet/Alto-new.png",
       "gallery": [
-        "https://www.paksuzuki.com.pk/cards/altoOut.jpg"
+        "/fleet/Alto-new.png"
       ]
     },
     "rent": {
@@ -142,9 +142,9 @@
     "driverIncluded": true,
     "color": "Premium Assorted",
     "images": {
-      "thumbnail": "https://www.paksuzuki.com.pk/cards/cultusOut.jpg",
+      "thumbnail": "/fleet/Cultus-new.png",
       "gallery": [
-        "https://www.paksuzuki.com.pk/cards/cultusOut.jpg"
+        "/fleet/Cultus-new.png"
       ]
     },
     "rent": {
@@ -334,9 +334,9 @@
     "driverIncluded": true,
     "color": "Premium Assorted",
     "images": {
-      "thumbnail": "https://www.toyota-indus.com/wp-content/uploads/Corolla-X-KV-1---1920-x-450.jpg",
+      "thumbnail": "/fleet/corolla-200-x-90.png",
       "gallery": [
-        "https://www.toyota-indus.com/wp-content/uploads/Corolla-X-KV-1---1920-x-450.jpg"
+        "/fleet/corolla-200-x-90.png"
       ]
     },
     "rent": {
@@ -789,9 +789,9 @@
     "driverIncluded": true,
     "color": "Premium Assorted",
     "images": {
-      "thumbnail": "https://www.toyota-indus.com/wp-content/uploads/Revo-KV-1---1920-x-450.jpg",
+      "thumbnail": "/fleet/revo_rocco.png",
       "gallery": [
-        "https://www.toyota-indus.com/wp-content/uploads/Revo-KV-1---1920-x-450.jpg"
+        "/fleet/revo_rocco.png"
       ]
     },
     "rent": {
@@ -854,9 +854,9 @@
     "driverIncluded": true,
     "color": "Premium Assorted",
     "images": {
-      "thumbnail": "https://www.toyota-indus.com/wp-content/uploads/IMC-Fortuner-35years-KV-1---1920-x-450.jpg",
+      "thumbnail": "/fleet/fortuner_legender_.png",
       "gallery": [
-        "https://www.toyota-indus.com/wp-content/uploads/IMC-Fortuner-35years-KV-1---1920-x-450.jpg"
+        "/fleet/fortuner_legender_.png"
       ]
     },
     "rent": {
@@ -986,9 +986,9 @@
     "driverIncluded": true,
     "color": "Premium Assorted",
     "images": {
-      "thumbnail": "https://www.toyota-indus.com/wp-content/uploads/Land-Cruiser-300-KV-1---1920-x-450.jpg",
+      "thumbnail": "/fleet/land-cruiser_300.png",
       "gallery": [
-        "https://www.toyota-indus.com/wp-content/uploads/Land-Cruiser-300-KV-1---1920-x-450.jpg"
+        "/fleet/land-cruiser_300.png"
       ]
     },
     "rent": {
@@ -1115,9 +1115,9 @@
     "driverIncluded": true,
     "color": "Premium Assorted",
     "images": {
-      "thumbnail": "https://www.toyota-indus.com/wp-content/uploads/Hiace-Grand-Cabin-KV-1---1920-x-450.jpg",
+      "thumbnail": "/fleet/Hiace.png",
       "gallery": [
-        "https://www.toyota-indus.com/wp-content/uploads/Hiace-Grand-Cabin-KV-1---1920-x-450.jpg"
+        "/fleet/Hiace.png"
       ]
     },
     "rent": {
@@ -1180,9 +1180,9 @@
     "driverIncluded": true,
     "color": "Premium Assorted",
     "images": {
-      "thumbnail": "https://www.toyota-indus.com/wp-content/uploads/Coaster-KV-1---1920-x-450.jpg",
+      "thumbnail": "/fleet/Coaster.png",
       "gallery": [
-        "https://www.toyota-indus.com/wp-content/uploads/Coaster-KV-1---1920-x-450.jpg"
+        "/fleet/Coaster.png"
       ]
     },
     "rent": {
