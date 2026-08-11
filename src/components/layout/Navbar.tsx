@@ -107,8 +107,8 @@ export default function Navbar() {
               );
             }
             if (link.name === "Areas") {
-              // Get only popular areas for the dropdown to keep it clean
-              const popularAreas = serviceAreas.filter(a => a.isPopular).slice(0, 10);
+              // Extract unique cities to show in the dropdown instead of individual areas
+              const cities = Array.from(new Set(serviceAreas.map(a => a.city)));
               return (
                 <div key="areas-dropdown" className="relative group">
                   <div className="flex items-center gap-1 cursor-pointer py-4 group">
@@ -130,13 +130,13 @@ export default function Navbar() {
                   
                   {/* Mega Menu Dropdown */}
                   <div className="absolute top-full left-1/2 -translate-x-1/2 w-64 bg-bg-primary border border-border-primary rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col overflow-hidden max-h-[80vh] overflow-y-auto">
-                    {popularAreas.map(area => (
-                      <Link key={area.slug} href={`/areas/${area.slug}`} className="px-4 py-3 text-sm font-medium text-text-primary hover:bg-bg-secondary hover:text-accent-primary transition-colors border-b border-border-primary last:border-0">
-                        {area.name}
+                    {cities.map(city => (
+                      <Link key={city} href={`/areas#${city}`} className="px-4 py-3 text-[15px] font-semibold text-text-primary hover:bg-bg-secondary hover:text-accent-primary transition-colors border-b border-border-primary last:border-0">
+                        {city}
                       </Link>
                     ))}
                     <Link href="/areas" className="px-4 py-3 text-sm font-bold text-accent-primary bg-accent-primary/10 hover:bg-accent-primary/20 transition-colors text-center sticky bottom-0 border-t border-border-primary">
-                      View All 100+ Areas
+                      View All 200+ Areas
                     </Link>
                   </div>
                 </div>

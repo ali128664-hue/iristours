@@ -38,7 +38,7 @@ export default function AreasIndexPage() {
 
       <div className="container mx-auto px-6 mt-16 space-y-24">
         {Object.entries(cities).map(([cityName, groups]) => (
-          <div key={cityName} className="scroll-mt-32">
+          <div key={cityName} id={cityName} className="scroll-mt-32">
             
             {/* City Header */}
             <div className="flex items-center gap-4 mb-10 pb-4 border-b border-border-primary">
