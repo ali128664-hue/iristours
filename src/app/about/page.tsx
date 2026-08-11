@@ -80,7 +80,7 @@ export default function AboutPage() {
             transition={{ duration: 0.8 }}
           >
             <img 
-              src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=1200&auto=format&fit=crop" 
+              src="/categories/about_fleet.jpg" 
               alt="Luxury Car Fleet" 
               className="rounded-3xl shadow-2xl object-cover h-[500px] w-full"
             />

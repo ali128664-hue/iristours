@@ -9,42 +9,42 @@ const categories = [
   {
     title: "Luxury Cars",
     icon: <CarFront size={32} className="text-accent-primary" />,
-    image: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80&w=600&auto=format&fit=crop",
+    image: "/categories/luxury.jpg",
     link: "/fleet?category=luxury",
     description: "Premium sedans and executive vehicles"
   },
   {
     title: "SUV & 4x4",
     icon: <Mountain size={32} className="text-accent-primary" />,
-    image: "https://images.unsplash.com/photo-1596568359550-93a9d3e8e2d4?q=80&w=600&auto=format&fit=crop",
+    image: "/categories/suv.jpg",
     link: "/fleet?category=suv",
     description: "Command the road with power and space"
   },
   {
     title: "Airport Transfer",
     icon: <Plane size={32} className="text-accent-primary" />,
-    image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=600&auto=format&fit=crop",
+    image: "/categories/airport.jpg",
     link: "/services/airport-transfer",
     description: "VIP meet & greet and seamless drops"
   },
   {
     title: "Wedding Cars",
     icon: <ShieldCheck size={32} className="text-accent-primary" />,
-    image: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=600&auto=format&fit=crop",
+    image: "/categories/wedding.jpg",
     link: "/services/wedding-cars",
     description: "Make your special day unforgettable"
   },
   {
     title: "Northern Tours",
     icon: <Users size={32} className="text-accent-primary" />,
-    image: "https://images.unsplash.com/photo-1596700676997-f56f4d80a133?q=80&w=600&auto=format&fit=crop",
+    image: "/tours/hunza.jpg",
     link: "/tours",
     description: "Explore Pakistan's majestic landscapes"
   },
   {
     title: "Corporate Fleet",
     icon: <Building size={32} className="text-accent-primary" />,
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=600&auto=format&fit=crop",
+    image: "/categories/corporate.jpg",
     link: "/services/corporate-rentals",
     description: "Monthly contracts & executive travel"
   }
