@@ -45,7 +45,7 @@ export default function Footer() {
               <a href="https://instagram.com" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-bg-card border border-border-primary flex items-center justify-center text-text-secondary hover:text-accent-primary hover:border-accent-primary transition-colors">
                 <FaInstagram size={18} />
               </a>
-              <a href="https://facebook.com" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-bg-card border border-border-primary flex items-center justify-center text-text-secondary hover:text-accent-primary hover:border-accent-primary transition-colors">
+              <a href="https://web.facebook.com/people/Iris-tours-Rental-Car/100083145616731/" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-bg-card border border-border-primary flex items-center justify-center text-text-secondary hover:text-accent-primary hover:border-accent-primary transition-colors">
                 <FaFacebook size={18} />
               </a>
               <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-bg-card border border-border-primary flex items-center justify-center text-text-secondary hover:text-accent-primary hover:border-accent-primary transition-colors">

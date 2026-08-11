@@ -113,7 +113,10 @@ export default function RootLayout({
               "opens": "00:00",
               "closes": "23:59"
             },
-            "sameAs": ["https://wa.me/923066305875"]
+            "sameAs": [
+              "https://wa.me/923066305875",
+              "https://web.facebook.com/people/Iris-tours-Rental-Car/100083145616731/"
+            ]
           })
         }} />
 
