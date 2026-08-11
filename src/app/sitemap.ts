@@ -16,6 +16,7 @@
 
 import { MetadataRoute } from "next";
 import fleetData from "@/data/fleet.json";
+import serviceAreas from "@/data/serviceAreas.json";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // Change this to your actual domain when deploying to production
@@ -31,9 +32,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
     { url: baseUrl, lastModified: new Date(), changeFrequency: "weekly", priority: 1.0 },
     { url: `${baseUrl}/fleet`, lastModified: new Date(), changeFrequency: "daily", priority: 0.9 },
+    { url: `${baseUrl}/areas`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
     { url: `${baseUrl}/about`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     { url: `${baseUrl}/services`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/tours`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
+    { url: `${baseUrl}/privacy-policy`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.5 },
   ];
 
   // ─── FLEET PAGES ──────────────────────────────────────────────────────────
@@ -46,6 +49,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }));
 
-  // Combine static and fleet pages into the final sitemap
-  return [...staticPages, ...fleetPages];
+  // ─── SERVICE AREA PAGES ───────────────────────────────────────────────────
+  // All 200+ service areas are generated automatically.
+  const areaPages: MetadataRoute.Sitemap = serviceAreas.map((area) => ({
+    url: `${baseUrl}/areas/${area.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.75, // slightly lower priority than fleet
+  }));
+
+  // Combine static, fleet, and area pages into the final sitemap
+  return [...staticPages, ...fleetPages, ...areaPages];
 }
