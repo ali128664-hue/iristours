@@ -79,8 +79,8 @@ export default function HeroSection() {
           priority
           className="object-cover"
         />
-        {/* Dark gradient overlay on top of the image for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-bg-primary/80 via-bg-primary/40 to-bg-primary" />
+        {/* Light gradient overlay to softly blend the image */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white/30 via-transparent to-bg-primary" />
       </motion.div>
 
       {/* Subtle green light glow effect (decorative) */}
@@ -93,41 +93,44 @@ export default function HeroSection() {
       ──────────────────────────────────────────────────────────────────────── */}
       <div ref={textRef} className="container mx-auto px-6 md:px-12 relative z-10 text-center mt-20">
         
-        {/* Small subtitle line above the main heading — change text here */}
-        <div className="hero-text overflow-hidden mb-4">
-          <h2 className="text-accent-secondary font-semibold tracking-[0.2em] uppercase text-sm md:text-base">
-            Premium Rent a Car in Lahore & Pakpattan
-          </h2>
-        </div>
-        
-        {/* ─── MAIN HEADLINE — change main headline text here ─────────────── */}
-        <div className="hero-text overflow-hidden mb-6">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold text-text-primary tracking-tight leading-tight">
-            Drive <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-primary to-blue-400">Luxury.</span><br />
-            Experience <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-secondary to-yellow-200">Perfection.</span>
-          </h1>
-        </div>
-        
-        {/* Description paragraph below the headline — change text here */}
-        <div className="hero-text overflow-hidden mb-12 max-w-2xl mx-auto">
-          <p className="text-lg md:text-xl text-text-secondary leading-relaxed">
-            Elevate your journey with our world-class fleet of luxury cars, SUVs, and professional chauffeurs across Pakistan.
-          </p>
-        </div>
-        
-        {/* ─── CTA BUTTONS — change button text and links here ─────────────── */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-          {/* Primary button — navigates to the fleet listing page */}
-          <div className="hero-btn w-full sm:w-auto">
-            <Button variant="primary" magnetic className="w-full sm:w-auto px-10 py-4 text-sm" onClick={() => window.location.href='/fleet'}>
-              Explore Fleet
-            </Button>
+        {/* Glassmorphism Card for Text Visibility */}
+        <div className="max-w-4xl mx-auto bg-white/70 backdrop-blur-xl p-8 md:p-12 rounded-[2.5rem] border border-white/60 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)]">
+          {/* Small subtitle line above the main heading — change text here */}
+          <div className="hero-text overflow-hidden mb-4">
+            <h2 className="text-accent-secondary font-bold tracking-[0.2em] uppercase text-sm md:text-base">
+              Premium Rent a Car in Lahore & Pakpattan
+            </h2>
           </div>
-          {/* Secondary button — opens WhatsApp. Change the wa.me number to update it. */}
-          <div className="hero-btn w-full sm:w-auto">
-            <Button variant="glass" magnetic className="w-full sm:w-auto px-10 py-4 text-sm" onClick={() => window.open('https://wa.me/923066305875', '_blank')}>
-              Book on WhatsApp
-            </Button>
+          
+          {/* ─── MAIN HEADLINE — change main headline text here ─────────────── */}
+          <div className="hero-text overflow-hidden mb-6">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-text-primary tracking-tight leading-tight">
+              Drive <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-primary to-accent-secondary">Luxury.</span><br />
+              Experience <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Perfection.</span>
+            </h1>
+          </div>
+          
+          {/* Description paragraph below the headline — change text here */}
+          <div className="hero-text overflow-hidden mb-10 max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-text-secondary leading-relaxed font-medium">
+              Elevate your journey with our world-class fleet of luxury cars, SUVs, and professional chauffeurs across Pakistan.
+            </p>
+          </div>
+          
+          {/* ─── CTA BUTTONS — change button text and links here ─────────────── */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+            {/* Primary button — navigates to the fleet listing page */}
+            <div className="hero-btn w-full sm:w-auto">
+              <Button variant="primary" magnetic className="w-full sm:w-auto px-10 py-4 text-sm shadow-xl shadow-accent-primary/20" onClick={() => window.location.href='/fleet'}>
+                Explore Fleet
+              </Button>
+            </div>
+            {/* Secondary button — opens WhatsApp. Change the wa.me number to update it. */}
+            <div className="hero-btn w-full sm:w-auto">
+              <Button variant="glass" magnetic className="w-full sm:w-auto px-10 py-4 text-sm bg-white border border-gray-200 shadow-xl shadow-black/5 hover:bg-gray-50" onClick={() => window.open('https://wa.me/923066305875', '_blank')}>
+                Book on WhatsApp
+              </Button>
+            </div>
           </div>
         </div>
       </div>

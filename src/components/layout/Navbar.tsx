@@ -62,9 +62,8 @@ export default function Navbar() {
     <header
       className={clsx(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out border-b",
-        isScrolled
-          ? "bg-white/90 backdrop-blur-xl border-gray-200 shadow-sm py-3"
-          : "bg-transparent border-transparent py-6"
+        "bg-white/70 backdrop-blur-lg border-white/50",
+        isScrolled ? "shadow-sm py-4" : "py-6"
       )}
     >
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
