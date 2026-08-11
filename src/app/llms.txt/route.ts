@@ -22,7 +22,7 @@ import fleetData from "@/data/fleet.json";
 export async function GET() {
   // Change this to your actual domain when deploying to production
   // e.g., "https://iristours.net"
-  const baseUrl = "https://iristours.com";
+  const baseUrl = "https://iristours.net";
 
   // Automatically generate a list of all vehicles with prices from fleet.json
   const fleetList = (fleetData as any[])

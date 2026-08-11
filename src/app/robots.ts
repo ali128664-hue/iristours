@@ -29,7 +29,7 @@ export default function robots(): MetadataRoute.Robots {
     ],
     // Update domain here when deploying to production
     // This must match your actual live domain (e.g., https://iristours.net/sitemap.xml)
-    sitemap: "https://iristours.com/sitemap.xml",
-    host: "https://iristours.com",
+    sitemap: "https://iristours.net/sitemap.xml",
+    host: "https://iristours.net",
   };
 }
