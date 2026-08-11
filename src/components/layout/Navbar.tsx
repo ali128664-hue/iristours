@@ -19,7 +19,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ChevronRight } from "lucide-react";
+import { Menu, X, ChevronRight, ChevronDown } from "lucide-react";
 import clsx from "clsx";
 // Logo component — the logo image is at public/logo.png, replace that file to update the logo
 import Logo from "@/components/ui/Logo";
@@ -74,18 +74,48 @@ export default function Navbar() {
 
         {/* Desktop Nav — visible on large screens only */}
         <nav className="hidden lg:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              className={clsx(
-                "text-sm font-medium tracking-wide uppercase transition-colors hover:text-accent-primary",
-                pathname === link.href ? "text-accent-primary" : "text-text-secondary"
-              )}
-            >
-              {link.name}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            if (link.name === "Fleet") {
+              return (
+                <div key="fleet-dropdown" className="relative group">
+                  <div className="flex items-center gap-1 cursor-pointer py-4">
+                    <Link
+                      href="/fleet"
+                      className={clsx(
+                        "text-sm font-medium tracking-wide uppercase transition-colors hover:text-accent-primary",
+                        pathname.startsWith("/fleet") ? "text-accent-primary" : "text-text-secondary"
+                      )}
+                    >
+                      Fleet
+                    </Link>
+                    <ChevronDown size={14} className="text-text-secondary group-hover:text-accent-primary transition-colors" />
+                  </div>
+                  
+                  {/* Dropdown Menu */}
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 w-48 bg-bg-primary border border-border-primary rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col overflow-hidden">
+                    <Link href="/fleet?category=Luxury" className="px-4 py-3 text-sm font-medium text-text-primary hover:bg-bg-secondary hover:text-accent-primary transition-colors border-b border-border-primary">Luxury Cars</Link>
+                    <Link href="/fleet?category=SUV" className="px-4 py-3 text-sm font-medium text-text-primary hover:bg-bg-secondary hover:text-accent-primary transition-colors border-b border-border-primary">SUVs & 4x4</Link>
+                    <Link href="/fleet?category=Sedan" className="px-4 py-3 text-sm font-medium text-text-primary hover:bg-bg-secondary hover:text-accent-primary transition-colors border-b border-border-primary">Sedans</Link>
+                    <Link href="/fleet?category=Economy" className="px-4 py-3 text-sm font-medium text-text-primary hover:bg-bg-secondary hover:text-accent-primary transition-colors border-b border-border-primary">Economy</Link>
+                    <Link href="/fleet?category=Van" className="px-4 py-3 text-sm font-medium text-text-primary hover:bg-bg-secondary hover:text-accent-primary transition-colors border-b border-border-primary">Vans</Link>
+                    <Link href="/fleet?category=Bus" className="px-4 py-3 text-sm font-medium text-text-primary hover:bg-bg-secondary hover:text-accent-primary transition-colors">Buses & Coasters</Link>
+                  </div>
+                </div>
+              );
+            }
+            return (
+              <Link
+                key={link.name}
+                href={link.href}
+                className={clsx(
+                  "text-sm font-medium tracking-wide uppercase transition-colors hover:text-accent-primary",
+                  pathname === link.href ? "text-accent-primary" : "text-text-secondary"
+                )}
+              >
+                {link.name}
+              </Link>
+            );
+          })}
         </nav>
 
         {/* Desktop CTA Button */}

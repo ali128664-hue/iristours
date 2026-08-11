@@ -20,7 +20,8 @@
 
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, Filter, SlidersHorizontal } from "lucide-react";
 import VehicleCard from "./VehicleCard";
@@ -31,6 +32,14 @@ interface FleetClientProps {
 }
 
 export default function FleetClient({ initialData }: FleetClientProps) {
+  return (
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading fleet...</div>}>
+      <FleetClientContent initialData={initialData} />
+    </Suspense>
+  );
+}
+
+function FleetClientContent({ initialData }: FleetClientProps) {
   // State for search text and active filters
   const [searchQuery, setSearchQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState("All");
@@ -42,6 +51,15 @@ export default function FleetClient({ initialData }: FleetClientProps) {
   // Edit this array to add or remove category filter options.
   // Values must exactly match the `category` field values in fleet.json.
   const categories = ["All", "Luxury", "SUV", "Sedan", "Economy", "Van", "Bus"];
+  
+  // Update category from URL if present
+  const searchParams = useSearchParams();
+  useEffect(() => {
+    const categoryParam = searchParams.get('category');
+    if (categoryParam && categories.includes(categoryParam)) {
+      setActiveCategory(categoryParam);
+    }
+  }, [searchParams]);
   
   // Brands are extracted automatically from fleet.json — no need to update this manually.
   // Adding a new car to fleet.json with a new brand will automatically add it to the dropdown.
