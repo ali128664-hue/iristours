@@ -130,7 +130,7 @@ export default function Footer() {
                 <li className="flex items-center gap-3">
                   <FaWhatsapp className="text-text-primary flex-shrink-0" size={16} />
                   {/* Change WhatsApp number here — replace 923066305875 with your number */}
-                  <a href="https://wa.me/923066305875" target="_blank" rel="noreferrer" className="text-text-secondary text-sm hover:text-accent-primary transition-colors">WhatsApp Chat</a>
+                  <a href="https://wa.me/923066305875?text=Hi!%20I%20need%20more%20information." target="_blank" rel="noreferrer" className="text-text-secondary text-sm hover:text-accent-primary transition-colors">WhatsApp Chat</a>
                 </li>
                 <li className="flex items-center gap-3">
                   <FaEnvelope className="text-text-primary flex-shrink-0" size={14} />

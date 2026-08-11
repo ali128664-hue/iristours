@@ -92,7 +92,7 @@ export default function Navbar() {
         <div className="hidden lg:block">
           {/* Change WhatsApp number here (desktop button): replace 923066305875 with your number */}
           <Link
-            href="https://wa.me/923066305875"
+            href="https://wa.me/923066305875?text=Hi!%20I%20want%20to%20book%20a%20car."
             target="_blank"
             rel="noopener noreferrer"
             className="px-6 py-2.5 rounded-full bg-gradient-to-tr from-accent-secondary to-accent-primary text-white font-semibold text-sm uppercase tracking-wider hover:brightness-110 transition-all shadow-[0_8px_16px_-4px_rgba(245,158,11,0.5),inset_0_2px_4px_rgba(255,255,255,0.4)] hover:shadow-[0_12px_24px_-6px_rgba(245,158,11,0.6),inset_0_2px_4px_rgba(255,255,255,0.6)] hover:-translate-y-1 inline-block border border-white/20"
@@ -157,7 +157,7 @@ export default function Navbar() {
               >
                 {/* Change WhatsApp number here (mobile button): replace 923066305875 with your number */}
                 <Link
-                  href="https://wa.me/923066305875"
+                  href="https://wa.me/923066305875?text=Hi!%20I%20want%20to%20book%20a%20car."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-gradient-to-r from-accent-secondary to-accent-primary text-white font-bold text-sm uppercase tracking-wider hover:brightness-110 shadow-lg shadow-accent-primary/20 transition-all active:scale-[0.98]"

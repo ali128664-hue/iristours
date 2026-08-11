@@ -91,10 +91,10 @@ export default function HeroSection() {
           All headline and subtitle text is here.
           Each div with class "hero-text" animates in on page load.
       ──────────────────────────────────────────────────────────────────────── */}
-      <div ref={textRef} className="container mx-auto px-6 md:px-12 relative z-10 text-center mt-20">
+      <div ref={textRef} className="container mx-auto px-6 md:px-12 relative z-10 text-center mt-12">
         
         {/* Glassmorphism Card for Text Visibility */}
-        <div className="max-w-4xl mx-auto bg-white/70 backdrop-blur-xl p-8 md:p-12 rounded-[2.5rem] border border-white/60 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)]">
+        <div className="max-w-4xl mx-auto bg-white/70 backdrop-blur-xl p-6 md:p-8 rounded-[2.5rem] border border-white/60 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)]">
           {/* Small subtitle line above the main heading — change text here */}
           <div className="hero-text overflow-hidden mb-4">
             <h2 className="text-accent-secondary font-bold tracking-[0.2em] uppercase text-sm md:text-base">
@@ -111,7 +111,7 @@ export default function HeroSection() {
           </div>
           
           {/* Description paragraph below the headline — change text here */}
-          <div className="hero-text overflow-hidden mb-10 max-w-2xl mx-auto">
+          <div className="hero-text overflow-hidden mb-8 max-w-2xl mx-auto">
             <p className="text-lg md:text-xl text-text-secondary leading-relaxed font-medium">
               Elevate your journey with our world-class fleet of luxury cars, SUVs, and professional chauffeurs across Pakistan.
             </p>
@@ -127,7 +127,7 @@ export default function HeroSection() {
             </div>
             {/* Secondary button — opens WhatsApp. Change the wa.me number to update it. */}
             <div className="hero-btn w-full sm:w-auto">
-              <Button variant="glass" magnetic className="w-full sm:w-auto px-10 py-4 text-sm bg-white border border-gray-200 shadow-xl shadow-black/5 hover:bg-gray-50" onClick={() => window.open('https://wa.me/923066305875', '_blank')}>
+              <Button variant="glass" magnetic className="w-full sm:w-auto px-10 py-4 text-sm bg-white border border-gray-200 shadow-xl shadow-black/5 hover:bg-gray-50" onClick={() => window.open('https://wa.me/923066305875?text=Hi!%20I%20want%20to%20book%20a%20car.', '_blank')}>
                 Book on WhatsApp
               </Button>
             </div>
