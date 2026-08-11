@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import logoImg from '../../../public/logo.png';
 
 interface LogoProps {
   className?: string;
@@ -10,7 +11,7 @@ interface LogoProps {
 export default function Logo({ className = "", width = 180, height = 60 }: LogoProps) {
   return (
     <Image
-      src="/logo.png"
+      src={logoImg}
       alt="Iris Tours Logo"
       width={typeof width === 'string' ? parseInt(width) : width}
       height={typeof height === 'string' ? parseInt(height) : height}
