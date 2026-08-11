@@ -32,12 +32,9 @@ import serviceAreas from "@/data/serviceAreas.json";
 const navLinks = [
   { name: "Home", href: "/" },
   { name: "Fleet", href: "/fleet" },
-  { name: "Areas", href: "/areas" },
-  { name: "Tours", href: "/tours" },
   { name: "Airport", href: "/services/airport-transfer" },
   { name: "Wedding", href: "/services/wedding-cars" },
-  { name: "Corporate", href: "/services/corporate-rentals" },
-  { name: "Gallery", href: "/gallery" },
+  { name: "Areas", href: "/areas" },
   { name: "About", href: "/about" },
 ];
 
