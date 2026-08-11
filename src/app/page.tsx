@@ -12,8 +12,8 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <QuickCategories />
       <FeaturedFleet />
+      <QuickCategories />
       <WhyChooseUs />
       <PopularDestinations />
       <AirportTransferSection />
