@@ -1,6 +1,7 @@
 [
   {
     "name": "DHA Phase 1, Lahore",
+    "city": "Lahore",
     "slug": "dha-phase-1-lahore",
     "group": "DHA Lahore",
     "isPopular": false,
@@ -10,6 +11,7 @@
   },
   {
     "name": "DHA Phase 2, Lahore",
+    "city": "Lahore",
     "slug": "dha-phase-2-lahore",
     "group": "DHA Lahore",
     "isPopular": false,
@@ -19,6 +21,7 @@
   },
   {
     "name": "DHA Phase 3, Lahore",
+    "city": "Lahore",
     "slug": "dha-phase-3-lahore",
     "group": "DHA Lahore",
     "isPopular": false,
@@ -28,6 +31,7 @@
   },
   {
     "name": "DHA Phase 4, Lahore",
+    "city": "Lahore",
     "slug": "dha-phase-4-lahore",
     "group": "DHA Lahore",
     "isPopular": false,
@@ -37,6 +41,7 @@
   },
   {
     "name": "DHA Phase 5, Lahore",
+    "city": "Lahore",
     "slug": "dha-phase-5-lahore",
     "group": "DHA Lahore",
     "isPopular": true,
@@ -46,6 +51,7 @@
   },
   {
     "name": "DHA Phase 6, Lahore",
+    "city": "Lahore",
     "slug": "dha-phase-6-lahore",
     "group": "DHA Lahore",
     "isPopular": true,
@@ -55,6 +61,7 @@
   },
   {
     "name": "DHA Phase 7, Lahore",
+    "city": "Lahore",
     "slug": "dha-phase-7-lahore",
     "group": "DHA Lahore",
     "isPopular": false,
@@ -64,6 +71,7 @@
   },
   {
     "name": "DHA Phase 8, Lahore",
+    "city": "Lahore",
     "slug": "dha-phase-8-lahore",
     "group": "DHA Lahore",
     "isPopular": false,
@@ -73,6 +81,7 @@
   },
   {
     "name": "DHA Phase 9, Lahore",
+    "city": "Lahore",
     "slug": "dha-phase-9-lahore",
     "group": "DHA Lahore",
     "isPopular": false,
@@ -82,6 +91,7 @@
   },
   {
     "name": "DHA Raya, Lahore",
+    "city": "Lahore",
     "slug": "dha-raya-lahore",
     "group": "DHA Lahore",
     "isPopular": true,
@@ -91,6 +101,7 @@
   },
   {
     "name": "DHA EME, Lahore",
+    "city": "Lahore",
     "slug": "dha-eme-lahore",
     "group": "DHA Lahore",
     "isPopular": false,
@@ -100,6 +111,7 @@
   },
   {
     "name": "DHA Pentagon, Lahore",
+    "city": "Lahore",
     "slug": "dha-pentagon-lahore",
     "group": "DHA Lahore",
     "isPopular": false,
@@ -109,6 +121,7 @@
   },
   {
     "name": "Model Town Block A, Lahore",
+    "city": "Lahore",
     "slug": "model-town-block-a-lahore",
     "group": "Model Town (Lahore)",
     "isPopular": false,
@@ -118,6 +131,7 @@
   },
   {
     "name": "Model Town Block B, Lahore",
+    "city": "Lahore",
     "slug": "model-town-block-b-lahore",
     "group": "Model Town (Lahore)",
     "isPopular": false,
@@ -127,6 +141,7 @@
   },
   {
     "name": "Model Town Block C, Lahore",
+    "city": "Lahore",
     "slug": "model-town-block-c-lahore",
     "group": "Model Town (Lahore)",
     "isPopular": true,
@@ -136,6 +151,7 @@
   },
   {
     "name": "Model Town Block D, Lahore",
+    "city": "Lahore",
     "slug": "model-town-block-d-lahore",
     "group": "Model Town (Lahore)",
     "isPopular": false,
@@ -145,6 +161,7 @@
   },
   {
     "name": "Model Town Block E, Lahore",
+    "city": "Lahore",
     "slug": "model-town-block-e-lahore",
     "group": "Model Town (Lahore)",
     "isPopular": false,
@@ -154,6 +171,7 @@
   },
   {
     "name": "Model Town Block F, Lahore",
+    "city": "Lahore",
     "slug": "model-town-block-f-lahore",
     "group": "Model Town (Lahore)",
     "isPopular": false,
@@ -163,6 +181,7 @@
   },
   {
     "name": "Model Town Block G, Lahore",
+    "city": "Lahore",
     "slug": "model-town-block-g-lahore",
     "group": "Model Town (Lahore)",
     "isPopular": false,
@@ -172,6 +191,7 @@
   },
   {
     "name": "Model Town Block H, Lahore",
+    "city": "Lahore",
     "slug": "model-town-block-h-lahore",
     "group": "Model Town (Lahore)",
     "isPopular": true,
@@ -181,6 +201,7 @@
   },
   {
     "name": "Model Town Block J, Lahore",
+    "city": "Lahore",
     "slug": "model-town-block-j-lahore",
     "group": "Model Town (Lahore)",
     "isPopular": false,
@@ -190,6 +211,7 @@
   },
   {
     "name": "Model Town Block K, Lahore",
+    "city": "Lahore",
     "slug": "model-town-block-k-lahore",
     "group": "Model Town (Lahore)",
     "isPopular": false,
@@ -199,6 +221,7 @@
   },
   {
     "name": "Model Town Block L, Lahore",
+    "city": "Lahore",
     "slug": "model-town-block-l-lahore",
     "group": "Model Town (Lahore)",
     "isPopular": false,
@@ -208,6 +231,7 @@
   },
   {
     "name": "Model Town Block M, Lahore",
+    "city": "Lahore",
     "slug": "model-town-block-m-lahore",
     "group": "Model Town (Lahore)",
     "isPopular": false,
@@ -217,6 +241,7 @@
   },
   {
     "name": "Model Town Block N, Lahore",
+    "city": "Lahore",
     "slug": "model-town-block-n-lahore",
     "group": "Model Town (Lahore)",
     "isPopular": false,
@@ -226,6 +251,7 @@
   },
   {
     "name": "Model Town Block P, Lahore",
+    "city": "Lahore",
     "slug": "model-town-block-p-lahore",
     "group": "Model Town (Lahore)",
     "isPopular": false,
@@ -235,6 +261,7 @@
   },
   {
     "name": "Model Town Block Q, Lahore",
+    "city": "Lahore",
     "slug": "model-town-block-q-lahore",
     "group": "Model Town (Lahore)",
     "isPopular": false,
@@ -244,6 +271,7 @@
   },
   {
     "name": "Model Town Block R, Lahore",
+    "city": "Lahore",
     "slug": "model-town-block-r-lahore",
     "group": "Model Town (Lahore)",
     "isPopular": false,
@@ -253,6 +281,7 @@
   },
   {
     "name": "Model Town Block S, Lahore",
+    "city": "Lahore",
     "slug": "model-town-block-s-lahore",
     "group": "Model Town (Lahore)",
     "isPopular": false,
@@ -262,6 +291,7 @@
   },
   {
     "name": "Model Town Block Extension, Lahore",
+    "city": "Lahore",
     "slug": "model-town-block-extension-lahore",
     "group": "Model Town (Lahore)",
     "isPopular": false,
@@ -271,6 +301,7 @@
   },
   {
     "name": "Johar Town Block A, Lahore",
+    "city": "Lahore",
     "slug": "johar-town-block-a-lahore",
     "group": "Johar Town (Lahore)",
     "isPopular": false,
@@ -280,6 +311,7 @@
   },
   {
     "name": "Johar Town Block B, Lahore",
+    "city": "Lahore",
     "slug": "johar-town-block-b-lahore",
     "group": "Johar Town (Lahore)",
     "isPopular": false,
@@ -289,6 +321,7 @@
   },
   {
     "name": "Johar Town Block C, Lahore",
+    "city": "Lahore",
     "slug": "johar-town-block-c-lahore",
     "group": "Johar Town (Lahore)",
     "isPopular": false,
@@ -298,6 +331,7 @@
   },
   {
     "name": "Johar Town Block D, Lahore",
+    "city": "Lahore",
     "slug": "johar-town-block-d-lahore",
     "group": "Johar Town (Lahore)",
     "isPopular": true,
@@ -307,6 +341,7 @@
   },
   {
     "name": "Johar Town Block E, Lahore",
+    "city": "Lahore",
     "slug": "johar-town-block-e-lahore",
     "group": "Johar Town (Lahore)",
     "isPopular": false,
@@ -316,6 +351,7 @@
   },
   {
     "name": "Johar Town Block F, Lahore",
+    "city": "Lahore",
     "slug": "johar-town-block-f-lahore",
     "group": "Johar Town (Lahore)",
     "isPopular": false,
@@ -325,6 +361,7 @@
   },
   {
     "name": "Johar Town Block G, Lahore",
+    "city": "Lahore",
     "slug": "johar-town-block-g-lahore",
     "group": "Johar Town (Lahore)",
     "isPopular": true,
@@ -334,6 +371,7 @@
   },
   {
     "name": "Johar Town Block H, Lahore",
+    "city": "Lahore",
     "slug": "johar-town-block-h-lahore",
     "group": "Johar Town (Lahore)",
     "isPopular": false,
@@ -343,6 +381,7 @@
   },
   {
     "name": "Johar Town Block J, Lahore",
+    "city": "Lahore",
     "slug": "johar-town-block-j-lahore",
     "group": "Johar Town (Lahore)",
     "isPopular": false,
@@ -352,6 +391,7 @@
   },
   {
     "name": "Johar Town Block K, Lahore",
+    "city": "Lahore",
     "slug": "johar-town-block-k-lahore",
     "group": "Johar Town (Lahore)",
     "isPopular": false,
@@ -361,6 +401,7 @@
   },
   {
     "name": "Johar Town Block L, Lahore",
+    "city": "Lahore",
     "slug": "johar-town-block-l-lahore",
     "group": "Johar Town (Lahore)",
     "isPopular": false,
@@ -370,6 +411,7 @@
   },
   {
     "name": "Johar Town Block M, Lahore",
+    "city": "Lahore",
     "slug": "johar-town-block-m-lahore",
     "group": "Johar Town (Lahore)",
     "isPopular": false,
@@ -379,6 +421,7 @@
   },
   {
     "name": "Johar Town Block N, Lahore",
+    "city": "Lahore",
     "slug": "johar-town-block-n-lahore",
     "group": "Johar Town (Lahore)",
     "isPopular": false,
@@ -388,6 +431,7 @@
   },
   {
     "name": "Johar Town Block P, Lahore",
+    "city": "Lahore",
     "slug": "johar-town-block-p-lahore",
     "group": "Johar Town (Lahore)",
     "isPopular": false,
@@ -397,6 +441,7 @@
   },
   {
     "name": "Johar Town Block Q, Lahore",
+    "city": "Lahore",
     "slug": "johar-town-block-q-lahore",
     "group": "Johar Town (Lahore)",
     "isPopular": false,
@@ -406,6 +451,7 @@
   },
   {
     "name": "Johar Town Block R, Lahore",
+    "city": "Lahore",
     "slug": "johar-town-block-r-lahore",
     "group": "Johar Town (Lahore)",
     "isPopular": false,
@@ -415,6 +461,7 @@
   },
   {
     "name": "Bahria Town Safari Villas, Lahore",
+    "city": "Lahore",
     "slug": "bahria-town-safari-villas-lahore",
     "group": "Bahria Town (Lahore)",
     "isPopular": false,
@@ -424,6 +471,7 @@
   },
   {
     "name": "Bahria Town Sector A, Lahore",
+    "city": "Lahore",
     "slug": "bahria-town-sector-a-lahore",
     "group": "Bahria Town (Lahore)",
     "isPopular": false,
@@ -433,6 +481,7 @@
   },
   {
     "name": "Bahria Town Sector B, Lahore",
+    "city": "Lahore",
     "slug": "bahria-town-sector-b-lahore",
     "group": "Bahria Town (Lahore)",
     "isPopular": false,
@@ -442,6 +491,7 @@
   },
   {
     "name": "Bahria Town Sector C, Lahore",
+    "city": "Lahore",
     "slug": "bahria-town-sector-c-lahore",
     "group": "Bahria Town (Lahore)",
     "isPopular": true,
@@ -451,6 +501,7 @@
   },
   {
     "name": "Bahria Town Sector D, Lahore",
+    "city": "Lahore",
     "slug": "bahria-town-sector-d-lahore",
     "group": "Bahria Town (Lahore)",
     "isPopular": false,
@@ -460,6 +511,7 @@
   },
   {
     "name": "Bahria Town Sector E, Lahore",
+    "city": "Lahore",
     "slug": "bahria-town-sector-e-lahore",
     "group": "Bahria Town (Lahore)",
     "isPopular": false,
@@ -469,6 +521,7 @@
   },
   {
     "name": "Bahria Town Sector F, Lahore",
+    "city": "Lahore",
     "slug": "bahria-town-sector-f-lahore",
     "group": "Bahria Town (Lahore)",
     "isPopular": false,
@@ -478,6 +531,7 @@
   },
   {
     "name": "Gulberg I, Lahore",
+    "city": "Lahore",
     "slug": "gulberg-i-lahore",
     "group": "Gulberg (Lahore)",
     "isPopular": false,
@@ -487,6 +541,7 @@
   },
   {
     "name": "Gulberg II, Lahore",
+    "city": "Lahore",
     "slug": "gulberg-ii-lahore",
     "group": "Gulberg (Lahore)",
     "isPopular": false,
@@ -496,6 +551,7 @@
   },
   {
     "name": "Gulberg III, Lahore",
+    "city": "Lahore",
     "slug": "gulberg-iii-lahore",
     "group": "Gulberg (Lahore)",
     "isPopular": true,
@@ -505,6 +561,7 @@
   },
   {
     "name": "MM Alam Road, Lahore",
+    "city": "Lahore",
     "slug": "mm-alam-road-lahore",
     "group": "Gulberg (Lahore)",
     "isPopular": true,
@@ -514,6 +571,7 @@
   },
   {
     "name": "Liberty Market, Lahore",
+    "city": "Lahore",
     "slug": "liberty-market-lahore",
     "group": "Gulberg (Lahore)",
     "isPopular": true,
@@ -523,6 +581,7 @@
   },
   {
     "name": "Main Boulevard Gulberg, Lahore",
+    "city": "Lahore",
     "slug": "main-boulevard-gulberg-lahore",
     "group": "Gulberg (Lahore)",
     "isPopular": false,
@@ -532,6 +591,7 @@
   },
   {
     "name": "Ghalib Market, Lahore",
+    "city": "Lahore",
     "slug": "ghalib-market-lahore",
     "group": "Gulberg (Lahore)",
     "isPopular": false,
@@ -541,6 +601,7 @@
   },
   {
     "name": "Cavalry Ground, Lahore",
+    "city": "Lahore",
     "slug": "cavalry-ground-lahore",
     "group": "Cantonment & Askari (Lahore)",
     "isPopular": true,
@@ -550,6 +611,7 @@
   },
   {
     "name": "Sarfaraz Rafiqui Road, Lahore",
+    "city": "Lahore",
     "slug": "sarfaraz-rafiqui-road-lahore",
     "group": "Cantonment & Askari (Lahore)",
     "isPopular": false,
@@ -559,6 +621,7 @@
   },
   {
     "name": "Tufail Road, Lahore",
+    "city": "Lahore",
     "slug": "tufail-road-lahore",
     "group": "Cantonment & Askari (Lahore)",
     "isPopular": false,
@@ -568,6 +631,7 @@
   },
   {
     "name": "Lahore Cantt, Lahore",
+    "city": "Lahore",
     "slug": "lahore-cantt-lahore",
     "group": "Cantonment & Askari (Lahore)",
     "isPopular": true,
@@ -577,6 +641,7 @@
   },
   {
     "name": "Askari 1, Lahore",
+    "city": "Lahore",
     "slug": "askari-1-lahore",
     "group": "Cantonment & Askari (Lahore)",
     "isPopular": false,
@@ -586,6 +651,7 @@
   },
   {
     "name": "Askari 2, Lahore",
+    "city": "Lahore",
     "slug": "askari-2-lahore",
     "group": "Cantonment & Askari (Lahore)",
     "isPopular": false,
@@ -595,6 +661,7 @@
   },
   {
     "name": "Askari 3, Lahore",
+    "city": "Lahore",
     "slug": "askari-3-lahore",
     "group": "Cantonment & Askari (Lahore)",
     "isPopular": false,
@@ -604,6 +671,7 @@
   },
   {
     "name": "Askari 4, Lahore",
+    "city": "Lahore",
     "slug": "askari-4-lahore",
     "group": "Cantonment & Askari (Lahore)",
     "isPopular": false,
@@ -613,6 +681,7 @@
   },
   {
     "name": "Askari 5, Lahore",
+    "city": "Lahore",
     "slug": "askari-5-lahore",
     "group": "Cantonment & Askari (Lahore)",
     "isPopular": false,
@@ -622,6 +691,7 @@
   },
   {
     "name": "Askari 6, Lahore",
+    "city": "Lahore",
     "slug": "askari-6-lahore",
     "group": "Cantonment & Askari (Lahore)",
     "isPopular": false,
@@ -631,6 +701,7 @@
   },
   {
     "name": "Askari 7, Lahore",
+    "city": "Lahore",
     "slug": "askari-7-lahore",
     "group": "Cantonment & Askari (Lahore)",
     "isPopular": false,
@@ -640,6 +711,7 @@
   },
   {
     "name": "Askari 8, Lahore",
+    "city": "Lahore",
     "slug": "askari-8-lahore",
     "group": "Cantonment & Askari (Lahore)",
     "isPopular": false,
@@ -649,6 +721,7 @@
   },
   {
     "name": "Askari 9, Lahore",
+    "city": "Lahore",
     "slug": "askari-9-lahore",
     "group": "Cantonment & Askari (Lahore)",
     "isPopular": false,
@@ -658,6 +731,7 @@
   },
   {
     "name": "Askari 10, Lahore",
+    "city": "Lahore",
     "slug": "askari-10-lahore",
     "group": "Cantonment & Askari (Lahore)",
     "isPopular": false,
@@ -667,6 +741,7 @@
   },
   {
     "name": "Askari 11, Lahore",
+    "city": "Lahore",
     "slug": "askari-11-lahore",
     "group": "Cantonment & Askari (Lahore)",
     "isPopular": true,
@@ -676,6 +751,7 @@
   },
   {
     "name": "Wapda Town, Lahore",
+    "city": "Lahore",
     "slug": "wapda-town-lahore",
     "group": "Other Major Areas (Lahore)",
     "isPopular": true,
@@ -685,6 +761,7 @@
   },
   {
     "name": "Faisal Town, Lahore",
+    "city": "Lahore",
     "slug": "faisal-town-lahore",
     "group": "Other Major Areas (Lahore)",
     "isPopular": true,
@@ -694,6 +771,7 @@
   },
   {
     "name": "Allama Iqbal Town, Lahore",
+    "city": "Lahore",
     "slug": "allama-iqbal-town-lahore",
     "group": "Other Major Areas (Lahore)",
     "isPopular": false,
@@ -703,6 +781,7 @@
   },
   {
     "name": "Garden Town, Lahore",
+    "city": "Lahore",
     "slug": "garden-town-lahore",
     "group": "Other Major Areas (Lahore)",
     "isPopular": true,
@@ -712,6 +791,7 @@
   },
   {
     "name": "Township, Lahore",
+    "city": "Lahore",
     "slug": "township-lahore",
     "group": "Other Major Areas (Lahore)",
     "isPopular": false,
@@ -721,6 +801,7 @@
   },
   {
     "name": "Valencia Town, Lahore",
+    "city": "Lahore",
     "slug": "valencia-town-lahore",
     "group": "Other Major Areas (Lahore)",
     "isPopular": false,
@@ -730,6 +811,7 @@
   },
   {
     "name": "Lake City, Lahore",
+    "city": "Lahore",
     "slug": "lake-city-lahore",
     "group": "Other Major Areas (Lahore)",
     "isPopular": true,
@@ -739,6 +821,7 @@
   },
   {
     "name": "Tariq Gardens, Lahore",
+    "city": "Lahore",
     "slug": "tariq-gardens-lahore",
     "group": "Other Major Areas (Lahore)",
     "isPopular": false,
@@ -748,6 +831,7 @@
   },
   {
     "name": "Tech Society, Lahore",
+    "city": "Lahore",
     "slug": "tech-society-lahore",
     "group": "Other Major Areas (Lahore)",
     "isPopular": false,
@@ -757,6 +841,7 @@
   },
   {
     "name": "Canal View, Lahore",
+    "city": "Lahore",
     "slug": "canal-view-lahore",
     "group": "Other Major Areas (Lahore)",
     "isPopular": false,
@@ -766,6 +851,7 @@
   },
   {
     "name": "Izmir Town, Lahore",
+    "city": "Lahore",
     "slug": "izmir-town-lahore",
     "group": "Other Major Areas (Lahore)",
     "isPopular": false,
@@ -775,6 +861,7 @@
   },
   {
     "name": "Bahria Orchard, Lahore",
+    "city": "Lahore",
     "slug": "bahria-orchard-lahore",
     "group": "Other Major Areas (Lahore)",
     "isPopular": false,
@@ -784,6 +871,7 @@
   },
   {
     "name": "Fazaia Housing Scheme, Lahore",
+    "city": "Lahore",
     "slug": "fazaia-housing-scheme-lahore",
     "group": "Other Major Areas (Lahore)",
     "isPopular": false,
@@ -793,6 +881,7 @@
   },
   {
     "name": "Al-Jalil Garden, Lahore",
+    "city": "Lahore",
     "slug": "al-jalil-garden-lahore",
     "group": "Other Major Areas (Lahore)",
     "isPopular": false,
@@ -802,6 +891,7 @@
   },
   {
     "name": "SA Gardens, Lahore",
+    "city": "Lahore",
     "slug": "sa-gardens-lahore",
     "group": "Other Major Areas (Lahore)",
     "isPopular": false,
@@ -811,6 +901,7 @@
   },
   {
     "name": "Tariq Road, Lahore",
+    "city": "Lahore",
     "slug": "tariq-road-lahore",
     "group": "Other Major Areas (Lahore)",
     "isPopular": false,
@@ -820,6 +911,7 @@
   },
   {
     "name": "Samanabad, Lahore",
+    "city": "Lahore",
     "slug": "samanabad-lahore",
     "group": "Other Major Areas (Lahore)",
     "isPopular": false,
@@ -829,6 +921,7 @@
   },
   {
     "name": "Sabzazar, Lahore",
+    "city": "Lahore",
     "slug": "sabzazar-lahore",
     "group": "Other Major Areas (Lahore)",
     "isPopular": false,
@@ -838,6 +931,7 @@
   },
   {
     "name": "Mustafa Town, Lahore",
+    "city": "Lahore",
     "slug": "mustafa-town-lahore",
     "group": "Other Major Areas (Lahore)",
     "isPopular": false,
@@ -847,6 +941,7 @@
   },
   {
     "name": "Tricon Village, Lahore",
+    "city": "Lahore",
     "slug": "tricon-village-lahore",
     "group": "Other Major Areas (Lahore)",
     "isPopular": false,
@@ -856,6 +951,7 @@
   },
   {
     "name": "State Life Housing Society, Lahore",
+    "city": "Lahore",
     "slug": "state-life-housing-society-lahore",
     "group": "Other Major Areas (Lahore)",
     "isPopular": false,
@@ -865,6 +961,7 @@
   },
   {
     "name": "Sui Gas Society, Lahore",
+    "city": "Lahore",
     "slug": "sui-gas-society-lahore",
     "group": "Other Major Areas (Lahore)",
     "isPopular": false,
@@ -874,6 +971,7 @@
   },
   {
     "name": "NFC Phase 1, Lahore",
+    "city": "Lahore",
     "slug": "nfc-phase-1-lahore",
     "group": "Other Major Areas (Lahore)",
     "isPopular": false,
@@ -883,6 +981,7 @@
   },
   {
     "name": "NFC Phase 2, Lahore",
+    "city": "Lahore",
     "slug": "nfc-phase-2-lahore",
     "group": "Other Major Areas (Lahore)",
     "isPopular": false,
@@ -892,6 +991,7 @@
   },
   {
     "name": "Sector F-6, Islamabad",
+    "city": "Islamabad",
     "slug": "sector-f-6-islamabad",
     "group": "Islamabad Sectors",
     "isPopular": true,
@@ -901,6 +1001,7 @@
   },
   {
     "name": "Sector F-7, Islamabad",
+    "city": "Islamabad",
     "slug": "sector-f-7-islamabad",
     "group": "Islamabad Sectors",
     "isPopular": true,
@@ -910,6 +1011,7 @@
   },
   {
     "name": "Sector F-8, Islamabad",
+    "city": "Islamabad",
     "slug": "sector-f-8-islamabad",
     "group": "Islamabad Sectors",
     "isPopular": false,
@@ -919,6 +1021,7 @@
   },
   {
     "name": "Sector F-10, Islamabad",
+    "city": "Islamabad",
     "slug": "sector-f-10-islamabad",
     "group": "Islamabad Sectors",
     "isPopular": false,
@@ -928,6 +1031,7 @@
   },
   {
     "name": "Sector F-11, Islamabad",
+    "city": "Islamabad",
     "slug": "sector-f-11-islamabad",
     "group": "Islamabad Sectors",
     "isPopular": true,
@@ -937,6 +1041,7 @@
   },
   {
     "name": "Sector G-6, Islamabad",
+    "city": "Islamabad",
     "slug": "sector-g-6-islamabad",
     "group": "Islamabad Sectors",
     "isPopular": false,
@@ -946,6 +1051,7 @@
   },
   {
     "name": "Sector G-7, Islamabad",
+    "city": "Islamabad",
     "slug": "sector-g-7-islamabad",
     "group": "Islamabad Sectors",
     "isPopular": false,
@@ -955,6 +1061,7 @@
   },
   {
     "name": "Sector G-8, Islamabad",
+    "city": "Islamabad",
     "slug": "sector-g-8-islamabad",
     "group": "Islamabad Sectors",
     "isPopular": false,
@@ -964,6 +1071,7 @@
   },
   {
     "name": "Sector G-9, Islamabad",
+    "city": "Islamabad",
     "slug": "sector-g-9-islamabad",
     "group": "Islamabad Sectors",
     "isPopular": false,
@@ -973,6 +1081,7 @@
   },
   {
     "name": "Sector G-10, Islamabad",
+    "city": "Islamabad",
     "slug": "sector-g-10-islamabad",
     "group": "Islamabad Sectors",
     "isPopular": false,
@@ -982,6 +1091,7 @@
   },
   {
     "name": "Sector G-11, Islamabad",
+    "city": "Islamabad",
     "slug": "sector-g-11-islamabad",
     "group": "Islamabad Sectors",
     "isPopular": true,
@@ -991,6 +1101,7 @@
   },
   {
     "name": "Sector G-13, Islamabad",
+    "city": "Islamabad",
     "slug": "sector-g-13-islamabad",
     "group": "Islamabad Sectors",
     "isPopular": false,
@@ -1000,6 +1111,7 @@
   },
   {
     "name": "Sector G-14, Islamabad",
+    "city": "Islamabad",
     "slug": "sector-g-14-islamabad",
     "group": "Islamabad Sectors",
     "isPopular": false,
@@ -1009,6 +1121,7 @@
   },
   {
     "name": "Sector I-8, Islamabad",
+    "city": "Islamabad",
     "slug": "sector-i-8-islamabad",
     "group": "Islamabad Sectors",
     "isPopular": true,
@@ -1018,6 +1131,7 @@
   },
   {
     "name": "Sector I-9, Islamabad",
+    "city": "Islamabad",
     "slug": "sector-i-9-islamabad",
     "group": "Islamabad Sectors",
     "isPopular": false,
@@ -1027,6 +1141,7 @@
   },
   {
     "name": "Sector I-10, Islamabad",
+    "city": "Islamabad",
     "slug": "sector-i-10-islamabad",
     "group": "Islamabad Sectors",
     "isPopular": false,
@@ -1036,6 +1151,7 @@
   },
   {
     "name": "Sector E-7, Islamabad",
+    "city": "Islamabad",
     "slug": "sector-e-7-islamabad",
     "group": "Islamabad Sectors",
     "isPopular": false,
@@ -1045,6 +1161,7 @@
   },
   {
     "name": "Sector E-11, Islamabad",
+    "city": "Islamabad",
     "slug": "sector-e-11-islamabad",
     "group": "Islamabad Sectors",
     "isPopular": false,
@@ -1054,6 +1171,7 @@
   },
   {
     "name": "Sector D-12, Islamabad",
+    "city": "Islamabad",
     "slug": "sector-d-12-islamabad",
     "group": "Islamabad Sectors",
     "isPopular": false,
@@ -1063,6 +1181,7 @@
   },
   {
     "name": "DHA Phase 1, Islamabad",
+    "city": "Islamabad",
     "slug": "dha-phase-1-islamabad",
     "group": "DHA Islamabad",
     "isPopular": false,
@@ -1072,6 +1191,7 @@
   },
   {
     "name": "DHA Phase 2, Islamabad",
+    "city": "Islamabad",
     "slug": "dha-phase-2-islamabad",
     "group": "DHA Islamabad",
     "isPopular": true,
@@ -1081,6 +1201,7 @@
   },
   {
     "name": "DHA Phase 5, Islamabad",
+    "city": "Islamabad",
     "slug": "dha-phase-5-islamabad",
     "group": "DHA Islamabad",
     "isPopular": false,
@@ -1090,6 +1211,7 @@
   },
   {
     "name": "DHA Defense Valley, Islamabad",
+    "city": "Islamabad",
     "slug": "dha-defense-valley-islamabad",
     "group": "DHA Islamabad",
     "isPopular": false,
@@ -1099,6 +1221,7 @@
   },
   {
     "name": "Bahria Town Phase 1, Islamabad",
+    "city": "Islamabad",
     "slug": "bahria-town-phase-1-islamabad",
     "group": "Bahria Town Islamabad",
     "isPopular": false,
@@ -1108,6 +1231,7 @@
   },
   {
     "name": "Bahria Town Phase 2, Islamabad",
+    "city": "Islamabad",
     "slug": "bahria-town-phase-2-islamabad",
     "group": "Bahria Town Islamabad",
     "isPopular": false,
@@ -1117,6 +1241,7 @@
   },
   {
     "name": "Bahria Town Phase 3, Islamabad",
+    "city": "Islamabad",
     "slug": "bahria-town-phase-3-islamabad",
     "group": "Bahria Town Islamabad",
     "isPopular": false,
@@ -1126,6 +1251,7 @@
   },
   {
     "name": "Bahria Town Phase 4, Islamabad",
+    "city": "Islamabad",
     "slug": "bahria-town-phase-4-islamabad",
     "group": "Bahria Town Islamabad",
     "isPopular": true,
@@ -1135,6 +1261,7 @@
   },
   {
     "name": "Bahria Town Phase 5, Islamabad",
+    "city": "Islamabad",
     "slug": "bahria-town-phase-5-islamabad",
     "group": "Bahria Town Islamabad",
     "isPopular": false,
@@ -1144,6 +1271,7 @@
   },
   {
     "name": "Bahria Town Phase 6, Islamabad",
+    "city": "Islamabad",
     "slug": "bahria-town-phase-6-islamabad",
     "group": "Bahria Town Islamabad",
     "isPopular": false,
@@ -1153,6 +1281,7 @@
   },
   {
     "name": "Bahria Town Phase 7, Islamabad",
+    "city": "Islamabad",
     "slug": "bahria-town-phase-7-islamabad",
     "group": "Bahria Town Islamabad",
     "isPopular": true,
@@ -1162,6 +1291,7 @@
   },
   {
     "name": "Bahria Town Phase 8, Islamabad",
+    "city": "Islamabad",
     "slug": "bahria-town-phase-8-islamabad",
     "group": "Bahria Town Islamabad",
     "isPopular": false,
@@ -1171,6 +1301,7 @@
   },
   {
     "name": "Bahria Town Enclave, Islamabad",
+    "city": "Islamabad",
     "slug": "bahria-town-enclave-islamabad",
     "group": "Bahria Town Islamabad",
     "isPopular": true,
@@ -1180,6 +1311,7 @@
   },
   {
     "name": "Blue Area, Islamabad",
+    "city": "Islamabad",
     "slug": "blue-area-islamabad",
     "group": "Other Major Areas (Islamabad)",
     "isPopular": true,
@@ -1189,6 +1321,7 @@
   },
   {
     "name": "Centaurus, Islamabad",
+    "city": "Islamabad",
     "slug": "centaurus-islamabad",
     "group": "Other Major Areas (Islamabad)",
     "isPopular": false,
@@ -1198,6 +1331,7 @@
   },
   {
     "name": "Bani Gala, Islamabad",
+    "city": "Islamabad",
     "slug": "bani-gala-islamabad",
     "group": "Other Major Areas (Islamabad)",
     "isPopular": false,
@@ -1207,6 +1341,7 @@
   },
   {
     "name": "Chak Shahzad, Islamabad",
+    "city": "Islamabad",
     "slug": "chak-shahzad-islamabad",
     "group": "Other Major Areas (Islamabad)",
     "isPopular": false,
@@ -1216,6 +1351,7 @@
   },
   {
     "name": "CBR Town, Islamabad",
+    "city": "Islamabad",
     "slug": "cbr-town-islamabad",
     "group": "Other Major Areas (Islamabad)",
     "isPopular": false,
@@ -1225,6 +1361,7 @@
   },
   {
     "name": "PWD Housing Society, Islamabad",
+    "city": "Islamabad",
     "slug": "pwd-housing-society-islamabad",
     "group": "Other Major Areas (Islamabad)",
     "isPopular": false,
@@ -1234,6 +1371,7 @@
   },
   {
     "name": "Soan Gardens, Islamabad",
+    "city": "Islamabad",
     "slug": "soan-gardens-islamabad",
     "group": "Other Major Areas (Islamabad)",
     "isPopular": false,
@@ -1243,6 +1381,7 @@
   },
   {
     "name": "Gulberg Greens, Islamabad",
+    "city": "Islamabad",
     "slug": "gulberg-greens-islamabad",
     "group": "Other Major Areas (Islamabad)",
     "isPopular": true,
@@ -1252,6 +1391,7 @@
   },
   {
     "name": "Multi Gardens B-17, Islamabad",
+    "city": "Islamabad",
     "slug": "multi-gardens-b-17-islamabad",
     "group": "Other Major Areas (Islamabad)",
     "isPopular": false,
@@ -1261,6 +1401,7 @@
   },
   {
     "name": "Faisal Town, Islamabad",
+    "city": "Islamabad",
     "slug": "faisal-town-islamabad",
     "group": "Other Major Areas (Islamabad)",
     "isPopular": false,
@@ -1270,6 +1411,7 @@
   },
   {
     "name": "Top City-1, Islamabad",
+    "city": "Islamabad",
     "slug": "top-city-1-islamabad",
     "group": "Other Major Areas (Islamabad)",
     "isPopular": false,
@@ -1279,6 +1421,7 @@
   },
   {
     "name": "Saddar, Rawalpindi",
+    "city": "Rawalpindi",
     "slug": "saddar-rawalpindi",
     "group": "Rawalpindi Areas",
     "isPopular": true,
@@ -1288,6 +1431,7 @@
   },
   {
     "name": "Commercial Market, Rawalpindi",
+    "city": "Rawalpindi",
     "slug": "commercial-market-rawalpindi",
     "group": "Rawalpindi Areas",
     "isPopular": true,
@@ -1297,6 +1441,7 @@
   },
   {
     "name": "Satellite Town, Rawalpindi",
+    "city": "Rawalpindi",
     "slug": "satellite-town-rawalpindi",
     "group": "Rawalpindi Areas",
     "isPopular": false,
@@ -1306,6 +1451,7 @@
   },
   {
     "name": "Chaklala Scheme 3, Rawalpindi",
+    "city": "Rawalpindi",
     "slug": "chaklala-scheme-3-rawalpindi",
     "group": "Rawalpindi Areas",
     "isPopular": true,
@@ -1315,6 +1461,7 @@
   },
   {
     "name": "Westridge, Rawalpindi",
+    "city": "Rawalpindi",
     "slug": "westridge-rawalpindi",
     "group": "Rawalpindi Areas",
     "isPopular": false,
@@ -1324,6 +1471,7 @@
   },
   {
     "name": "Peshawar Road, Rawalpindi",
+    "city": "Rawalpindi",
     "slug": "peshawar-road-rawalpindi",
     "group": "Rawalpindi Areas",
     "isPopular": false,
@@ -1333,6 +1481,7 @@
   },
   {
     "name": "Murree Road, Rawalpindi",
+    "city": "Rawalpindi",
     "slug": "murree-road-rawalpindi",
     "group": "Rawalpindi Areas",
     "isPopular": false,
@@ -1342,6 +1491,7 @@
   },
   {
     "name": "Raja Bazaar, Rawalpindi",
+    "city": "Rawalpindi",
     "slug": "raja-bazaar-rawalpindi",
     "group": "Rawalpindi Areas",
     "isPopular": false,
@@ -1351,6 +1501,7 @@
   },
   {
     "name": "Adiala Road, Rawalpindi",
+    "city": "Rawalpindi",
     "slug": "adiala-road-rawalpindi",
     "group": "Rawalpindi Areas",
     "isPopular": false,
@@ -1360,6 +1511,7 @@
   },
   {
     "name": "Lalkurti, Rawalpindi",
+    "city": "Rawalpindi",
     "slug": "lalkurti-rawalpindi",
     "group": "Rawalpindi Areas",
     "isPopular": false,
@@ -1369,6 +1521,7 @@
   },
   {
     "name": "Tench Bhatta, Rawalpindi",
+    "city": "Rawalpindi",
     "slug": "tench-bhatta-rawalpindi",
     "group": "Rawalpindi Areas",
     "isPopular": false,
@@ -1378,6 +1531,7 @@
   },
   {
     "name": "Askari 1, Rawalpindi",
+    "city": "Rawalpindi",
     "slug": "askari-1-rawalpindi",
     "group": "Rawalpindi Areas",
     "isPopular": false,
@@ -1387,6 +1541,7 @@
   },
   {
     "name": "Askari 7, Rawalpindi",
+    "city": "Rawalpindi",
     "slug": "askari-7-rawalpindi",
     "group": "Rawalpindi Areas",
     "isPopular": false,
@@ -1396,6 +1551,7 @@
   },
   {
     "name": "Askari 11, Rawalpindi",
+    "city": "Rawalpindi",
     "slug": "askari-11-rawalpindi",
     "group": "Rawalpindi Areas",
     "isPopular": false,
@@ -1405,6 +1561,7 @@
   },
   {
     "name": "Askari 13, Rawalpindi",
+    "city": "Rawalpindi",
     "slug": "askari-13-rawalpindi",
     "group": "Rawalpindi Areas",
     "isPopular": false,
@@ -1414,6 +1571,7 @@
   },
   {
     "name": "Askari 14, Rawalpindi",
+    "city": "Rawalpindi",
     "slug": "askari-14-rawalpindi",
     "group": "Rawalpindi Areas",
     "isPopular": false,
@@ -1423,6 +1581,7 @@
   },
   {
     "name": "Gulraiz, Rawalpindi",
+    "city": "Rawalpindi",
     "slug": "gulraiz-rawalpindi",
     "group": "Rawalpindi Areas",
     "isPopular": false,
@@ -1432,6 +1591,7 @@
   },
   {
     "name": "High Court Road, Rawalpindi",
+    "city": "Rawalpindi",
     "slug": "high-court-road-rawalpindi",
     "group": "Rawalpindi Areas",
     "isPopular": false,
@@ -1441,6 +1601,7 @@
   },
   {
     "name": "Peoples Colony, Faisalabad",
+    "city": "Faisalabad",
     "slug": "peoples-colony-faisalabad",
     "group": "Faisalabad Areas",
     "isPopular": true,
@@ -1450,6 +1611,7 @@
   },
   {
     "name": "Madina Town, Faisalabad",
+    "city": "Faisalabad",
     "slug": "madina-town-faisalabad",
     "group": "Faisalabad Areas",
     "isPopular": false,
@@ -1459,6 +1621,7 @@
   },
   {
     "name": "D-Ground, Faisalabad",
+    "city": "Faisalabad",
     "slug": "d-ground-faisalabad",
     "group": "Faisalabad Areas",
     "isPopular": true,
@@ -1468,6 +1631,7 @@
   },
   {
     "name": "Kohinoor City, Faisalabad",
+    "city": "Faisalabad",
     "slug": "kohinoor-city-faisalabad",
     "group": "Faisalabad Areas",
     "isPopular": true,
@@ -1477,6 +1641,7 @@
   },
   {
     "name": "Saeed Colony, Faisalabad",
+    "city": "Faisalabad",
     "slug": "saeed-colony-faisalabad",
     "group": "Faisalabad Areas",
     "isPopular": false,
@@ -1486,6 +1651,7 @@
   },
   {
     "name": "Eden Valley, Faisalabad",
+    "city": "Faisalabad",
     "slug": "eden-valley-faisalabad",
     "group": "Faisalabad Areas",
     "isPopular": false,
@@ -1495,6 +1661,7 @@
   },
   {
     "name": "Wapda City, Faisalabad",
+    "city": "Faisalabad",
     "slug": "wapda-city-faisalabad",
     "group": "Faisalabad Areas",
     "isPopular": false,
@@ -1504,6 +1671,7 @@
   },
   {
     "name": "Citi Housing, Faisalabad",
+    "city": "Faisalabad",
     "slug": "citi-housing-faisalabad",
     "group": "Faisalabad Areas",
     "isPopular": false,
@@ -1513,6 +1681,7 @@
   },
   {
     "name": "FDA City, Faisalabad",
+    "city": "Faisalabad",
     "slug": "fda-city-faisalabad",
     "group": "Faisalabad Areas",
     "isPopular": false,
@@ -1522,6 +1691,7 @@
   },
   {
     "name": "Ghulam Muhammad Abad, Faisalabad",
+    "city": "Faisalabad",
     "slug": "ghulam-muhammad-abad-faisalabad",
     "group": "Faisalabad Areas",
     "isPopular": false,
@@ -1531,6 +1701,7 @@
   },
   {
     "name": "Samnabad, Faisalabad",
+    "city": "Faisalabad",
     "slug": "samnabad-faisalabad",
     "group": "Faisalabad Areas",
     "isPopular": false,
@@ -1540,6 +1711,7 @@
   },
   {
     "name": "Sargodha Road, Faisalabad",
+    "city": "Faisalabad",
     "slug": "sargodha-road-faisalabad",
     "group": "Faisalabad Areas",
     "isPopular": false,
@@ -1549,6 +1721,7 @@
   },
   {
     "name": "Jaranwala Road, Faisalabad",
+    "city": "Faisalabad",
     "slug": "jaranwala-road-faisalabad",
     "group": "Faisalabad Areas",
     "isPopular": false,
@@ -1558,6 +1731,7 @@
   },
   {
     "name": "Canal Road, Faisalabad",
+    "city": "Faisalabad",
     "slug": "canal-road-faisalabad",
     "group": "Faisalabad Areas",
     "isPopular": false,
@@ -1567,6 +1741,7 @@
   },
   {
     "name": "Multan Cantt, Multan",
+    "city": "Multan",
     "slug": "multan-cantt-multan",
     "group": "Multan Areas",
     "isPopular": true,
@@ -1576,6 +1751,7 @@
   },
   {
     "name": "Bosan Road, Multan",
+    "city": "Multan",
     "slug": "bosan-road-multan",
     "group": "Multan Areas",
     "isPopular": true,
@@ -1585,6 +1761,7 @@
   },
   {
     "name": "Gulgasht Colony, Multan",
+    "city": "Multan",
     "slug": "gulgasht-colony-multan",
     "group": "Multan Areas",
     "isPopular": false,
@@ -1594,6 +1771,7 @@
   },
   {
     "name": "DHA Multan, Multan",
+    "city": "Multan",
     "slug": "dha-multan-multan",
     "group": "Multan Areas",
     "isPopular": true,
@@ -1603,6 +1781,7 @@
   },
   {
     "name": "Wapda Town, Multan",
+    "city": "Multan",
     "slug": "wapda-town-multan",
     "group": "Multan Areas",
     "isPopular": false,
@@ -1612,6 +1791,7 @@
   },
   {
     "name": "Buch Villas, Multan",
+    "city": "Multan",
     "slug": "buch-villas-multan",
     "group": "Multan Areas",
     "isPopular": false,
@@ -1621,6 +1801,7 @@
   },
   {
     "name": "Royal Orchard, Multan",
+    "city": "Multan",
     "slug": "royal-orchard-multan",
     "group": "Multan Areas",
     "isPopular": false,
@@ -1630,6 +1811,7 @@
   },
   {
     "name": "Fatima Jinnah Town, Multan",
+    "city": "Multan",
     "slug": "fatima-jinnah-town-multan",
     "group": "Multan Areas",
     "isPopular": false,
@@ -1639,6 +1821,7 @@
   },
   {
     "name": "Shalimar Colony, Multan",
+    "city": "Multan",
     "slug": "shalimar-colony-multan",
     "group": "Multan Areas",
     "isPopular": false,
@@ -1648,6 +1831,7 @@
   },
   {
     "name": "Shah Rukn-e-Alam Colony, Multan",
+    "city": "Multan",
     "slug": "shah-rukn-e-alam-colony-multan",
     "group": "Multan Areas",
     "isPopular": false,
@@ -1657,6 +1841,7 @@
   },
   {
     "name": "New Multan, Multan",
+    "city": "Multan",
     "slug": "new-multan-multan",
     "group": "Multan Areas",
     "isPopular": false,
@@ -1666,6 +1851,7 @@
   },
   {
     "name": "Citi Housing, Gujranwala",
+    "city": "Gujranwala",
     "slug": "citi-housing-gujranwala",
     "group": "Gujranwala Areas",
     "isPopular": true,
@@ -1675,6 +1861,7 @@
   },
   {
     "name": "DHA Gujranwala, Gujranwala",
+    "city": "Gujranwala",
     "slug": "dha-gujranwala-gujranwala",
     "group": "Gujranwala Areas",
     "isPopular": true,
@@ -1684,6 +1871,7 @@
   },
   {
     "name": "Wapda Town, Gujranwala",
+    "city": "Gujranwala",
     "slug": "wapda-town-gujranwala",
     "group": "Gujranwala Areas",
     "isPopular": false,
@@ -1693,6 +1881,7 @@
   },
   {
     "name": "Master City, Gujranwala",
+    "city": "Gujranwala",
     "slug": "master-city-gujranwala",
     "group": "Gujranwala Areas",
     "isPopular": false,
@@ -1702,6 +1891,7 @@
   },
   {
     "name": "DC Colony, Gujranwala",
+    "city": "Gujranwala",
     "slug": "dc-colony-gujranwala",
     "group": "Gujranwala Areas",
     "isPopular": false,
@@ -1711,6 +1901,7 @@
   },
   {
     "name": "Satellite Town, Gujranwala",
+    "city": "Gujranwala",
     "slug": "satellite-town-gujranwala",
     "group": "Gujranwala Areas",
     "isPopular": false,
@@ -1720,6 +1911,7 @@
   },
   {
     "name": "Model Town, Gujranwala",
+    "city": "Gujranwala",
     "slug": "model-town-gujranwala",
     "group": "Gujranwala Areas",
     "isPopular": false,
@@ -1729,6 +1921,7 @@
   },
   {
     "name": "Rahwali Cantt, Gujranwala",
+    "city": "Gujranwala",
     "slug": "rahwali-cantt-gujranwala",
     "group": "Gujranwala Areas",
     "isPopular": false,
@@ -1738,6 +1931,7 @@
   },
   {
     "name": "Sialkot Cantt, Sialkot",
+    "city": "Sialkot",
     "slug": "sialkot-cantt-sialkot",
     "group": "Sialkot Areas",
     "isPopular": true,
@@ -1747,6 +1941,7 @@
   },
   {
     "name": "Citi Housing, Sialkot",
+    "city": "Sialkot",
     "slug": "citi-housing-sialkot",
     "group": "Sialkot Areas",
     "isPopular": true,
@@ -1756,6 +1951,7 @@
   },
   {
     "name": "Defense Road, Sialkot",
+    "city": "Sialkot",
     "slug": "defense-road-sialkot",
     "group": "Sialkot Areas",
     "isPopular": false,
@@ -1765,6 +1961,7 @@
   },
   {
     "name": "Kashmir Road, Sialkot",
+    "city": "Sialkot",
     "slug": "kashmir-road-sialkot",
     "group": "Sialkot Areas",
     "isPopular": false,
@@ -1774,6 +1971,7 @@
   },
   {
     "name": "Ugoki, Sialkot",
+    "city": "Sialkot",
     "slug": "ugoki-sialkot",
     "group": "Sialkot Areas",
     "isPopular": false,
@@ -1783,6 +1981,7 @@
   },
   {
     "name": "Sambrial, Sialkot",
+    "city": "Sialkot",
     "slug": "sambrial-sialkot",
     "group": "Sialkot Areas",
     "isPopular": false,
@@ -1792,6 +1991,7 @@
   },
   {
     "name": "Model Town, Sialkot",
+    "city": "Sialkot",
     "slug": "model-town-sialkot",
     "group": "Sialkot Areas",
     "isPopular": false,

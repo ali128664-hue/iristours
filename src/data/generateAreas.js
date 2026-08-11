@@ -10,6 +10,7 @@ function addArea(name, group, isPopular = false, city = "Lahore") {
   const slug = generateSlug(name, city);
   data.push({
     name: `${name}, ${city}`,
+    city,
     slug,
     group,
     isPopular,
