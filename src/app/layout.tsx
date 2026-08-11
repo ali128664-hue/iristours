@@ -28,7 +28,10 @@ import Script from "next/script";
 // Update title, description, and keywords to match your current offerings.
 export const metadata: Metadata = {
   metadataBase: new URL("https://iristours.net"),
-  title: "Iris Tours | Rent a Car in Lahore & Pakpattan",
+  title: {
+    default: "Premium Rent a Car in Lahore DHA & Pakpattan | Iris Tours",
+    template: "%s | Iris Tours Pakistan",
+  },
   description: "Best Rent a Car in Lahore DHA and Pakpattan. Premium luxury car rental, SUVs, wedding cars, airport transfers, and northern tours in Pakistan. Book instantly via WhatsApp.",
   keywords: "Rent a car in Lahore, Best Rent a Car DHA Lahore, Cheap car rental Lahore, Luxury car rental Lahore, Wedding cars Lahore, Airport transfer Lahore, Prado for rent Lahore, Corolla for rent Lahore, V8 for rent Pakistan, Rent a car near me Lahore, Rent a car Pakpattan, Rent a car Lahore to Islamabad, DHA Phase 1 Rent a Car, Chauffeur driven cars Lahore, SUV rental Lahore, Iris Tours Lahore",
   alternates: {
