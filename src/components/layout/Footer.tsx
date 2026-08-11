@@ -104,7 +104,7 @@ export default function Footer() {
                   <li className="flex items-center gap-3">
                     <FaPhone className="text-text-primary flex-shrink-0" size={14} />
                     {/* Change Lahore phone number here */}
-                    <a href="tel:+923154973906" className="text-text-secondary text-sm hover:text-accent-primary transition-colors">+92 3154 97 39 06</a>
+                    <a href="tel:+923066305875" className="text-text-secondary text-sm hover:text-accent-primary transition-colors">+92 3066 30 58 75</a>
                   </li>
                 </ul>
               </div>
@@ -144,12 +144,9 @@ export default function Footer() {
         </div>
 
         {/* Footer Bottom Bar — copyright text */}
-        <div className="pt-8 border-t border-border-primary flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+        <div className="pt-8 border-t border-border-primary flex flex-col items-center justify-center gap-2 text-center">
           <p className="text-text-secondary text-sm">
-            &copy; {new Date().getFullYear()} Iris Tours. All rights reserved.
-          </p>
-          <p className="text-text-secondary text-sm">
-            Designed & Developed by <a href="https://www.linkedin.com/in/chansarhussain/" target="_blank" rel="noreferrer" className="text-text-primary hover:text-accent-primary transition-colors hover:underline">Ansar Hussain</a>
+            &copy; {new Date().getFullYear()} Iris Tours. All rights reserved. <span className="hidden md:inline mx-2">|</span> Designed & Developed by <a href="https://www.linkedin.com/in/chansarhussain/" target="_blank" rel="noreferrer" className="text-text-primary hover:text-accent-primary transition-colors hover:underline font-medium">Ansar Hussain</a>
           </p>
         </div>
       </div>

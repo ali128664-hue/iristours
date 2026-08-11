@@ -101,7 +101,7 @@ export default async function VehicleDetailPage({ params }: Props) {
   const whatsappMsg = encodeURIComponent(
     `Hi Iris Tours! I want to book the ${vehicle.name}. Please share availability and rates.`
   );
-  const whatsappUrl = `https://wa.me/923001234567?text=${whatsappMsg}`;
+  const whatsappUrl = `https://wa.me/923066305875?text=${whatsappMsg}`;
 
   // Schema.org Product markup — helps Google understand this is a rentable product
   const jsonLd = {
@@ -124,7 +124,7 @@ export default async function VehicleDetailPage({ params }: Props) {
           addressLocality: "Lahore",
           addressCountry: "PK",
         },
-        telephone: "+92-300-123-4567",
+        telephone: "+92-306-630-5875",
       },
     },
   };
@@ -356,7 +356,7 @@ export default async function VehicleDetailPage({ params }: Props) {
                   </a>
                   {/* Call Now button — update this phone number if needed */}
                   <a
-                    href="tel:+923001234567"
+                    href="tel:+923066305875"
                     className="flex items-center justify-center gap-3 w-full mt-3 border border-border-primary bg-bg-secondary hover:border-accent-primary text-text-primary font-semibold py-3 rounded-2xl transition-all"
                   >
                     <Phone size={18} />

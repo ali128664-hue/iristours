@@ -41,7 +41,7 @@ export async function GET() {
 - **Name:** Iris Tours
 - **Service:** Rent a Car, Chauffeur Service, Airport Transfers
 - **Location:** DHA Phase 5, Lahore, Pakistan
-- **Phone / WhatsApp:** +92-300-123-4567
+- **Phone / WhatsApp:** +92-306-630-5875
 - **Website:** ${baseUrl}
 - **Google Maps:** https://maps.app.goo.gl/3M34CsuyqWTeb7oc8
 
@@ -89,7 +89,7 @@ Lahore, DHA, Gulberg, Model Town, Johar Town, Bahria Town, Islamabad, Rawalpindi
 - Tours: ${baseUrl}/tours
 - llms.txt (this file): ${baseUrl}/llms.txt
 `;
-  // Update contact details here — replace +92-300-123-4567 in "Company Information"
+  // Update contact details here — replace +92-306-630-5875 in "Company Information"
   // with your actual WhatsApp/phone number.
 
   return new NextResponse(content, {

@@ -43,58 +43,6 @@ const faqs = [
   {
     question: "What is your fuel policy?",
     answer: "Vehicles are provided with a full tank of fuel. We request that you return the vehicle with a full tank. Alternatively, you can pay the difference based on current fuel rates at the time of return."
-  },
-  {
-    question: "Is there a mileage limit per day?",
-    answer: "Our standard daily rentals within Lahore have a generous mileage allowance (usually 150-200 km/day). Inter-city or long-term rentals are calculated on a customized basis. Excess mileage is charged at a minimal pre-agreed rate per km."
-  },
-  {
-    question: "Who pays for highway tolls and parking?",
-    answer: "The client is responsible for paying all highway tolls, M-Tag charges, and parking fees during the rental period. If the car is chauffeur-driven, the driver will request toll money at the plazas."
-  },
-  {
-    question: "What is your policy on traffic challans (tickets)?",
-    answer: "For self-drive rentals, the renter is 100% responsible for any traffic violations or e-challans incurred during the rental period. These will be deducted from your security deposit."
-  },
-
-  // Travel & Services
-  {
-    question: "Can I travel outside Lahore (inter-city)?",
-    answer: "Yes, you can travel anywhere in Pakistan. We offer special inter-city rates and northern tour packages (Swat, Naran, Hunza, Skardu) equipped with expert drivers who know the mountainous terrains."
-  },
-  {
-    question: "Who covers the chauffeur's food and accommodation on out-of-city trips?",
-    answer: "For inter-city travel or northern tours, the client is responsible for providing standard food and accommodation for the chauffeur. Alternatively, a daily driver allowance can be paid, and the driver will manage it themselves."
-  },
-  {
-    question: "Do you deliver cars to the airport or hotel?",
-    answer: "Yes, we offer VIP Meet & Greet services at Allama Iqbal International Airport, Lahore. We can also deliver the vehicle directly to your hotel, home, or office in DHA and surrounding areas."
-  },
-  {
-    question: "Do you offer wedding car decorations?",
-    answer: "Yes! We provide premium fresh floral arrangements and ribbons for wedding cars (Prado, V8, Civic, Limousines). Let us know your color theme, and we will have the car fully decorated before it arrives."
-  },
-  {
-    question: "Do you offer corporate or long-term rentals?",
-    answer: "Absolutely. We offer highly discounted monthly and yearly contracts for corporate executives and multinational companies, including full maintenance and dedicated chauffeurs."
-  },
-
-  // Vehicle Care & Safety
-  {
-    question: "What happens in case of a breakdown or accident?",
-    answer: "Our fleet is meticulously maintained to showroom standards. In the rare event of a breakdown, we provide an immediate replacement vehicle anywhere in Punjab. All our cars are comprehensively insured."
-  },
-  {
-    question: "Are your vehicles sanitized?",
-    answer: "Cleanliness is our hallmark. Every vehicle undergoes a strict deep-cleaning and sanitization process (including seats, AC vents, and handles) before and after each rental."
-  },
-  {
-    question: "Is smoking allowed in the vehicles?",
-    answer: "Smoking is strictly prohibited inside all our luxury vehicles to maintain a fresh, premium environment for our next clients. A heavy penalty is charged if the vehicle smells of smoke."
-  },
-  {
-    question: "Are pets allowed in the cars?",
-    answer: "Pets are generally not allowed to ensure the upholstery remains pristine and allergen-free. However, small pets in secure travel carriers may be permitted upon prior request."
   }
 ];
 
@@ -179,6 +127,11 @@ export default function HomeFAQ() {
             ))}
           </motion.div>
 
+        </div>
+        <div className="mt-12 text-center">
+          <a href="/faq" className="inline-block px-8 py-3 rounded-full border border-accent-primary text-accent-primary font-bold uppercase tracking-wider hover:bg-accent-primary hover:text-white transition-all">
+            View All FAQs
+          </a>
         </div>
       </div>
     </section>
