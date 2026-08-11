@@ -9,15 +9,13 @@ interface LogoProps {
 
 export default function Logo({ className = "", width = 180, height = 60 }: LogoProps) {
   return (
-    <div className={`relative ${className}`} style={{ width, height }}>
-      <Image
-        src="/logo.png"
-        alt="Iris Tours Logo"
-        fill
-        sizes="(max-width: 768px) 150px, 200px"
-        className="object-contain"
-        priority
-      />
-    </div>
+    <Image
+      src="/logo.png"
+      alt="Iris Tours Logo"
+      width={typeof width === 'string' ? parseInt(width) : width}
+      height={typeof height === 'string' ? parseInt(height) : height}
+      className={`object-contain ${className}`}
+      priority
+    />
   );
 }

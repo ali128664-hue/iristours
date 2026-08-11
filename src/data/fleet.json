@@ -62,10 +62,9 @@
       "Durable"
     ],
     "images": {
-      "thumbnail": "/fleet/hilux-single-cabin.png",
+      "thumbnail": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&q=80",
       "gallery": [
-        "/fleet/hilux-single-cabin.png",
-        "/fleet/hilux-e.png"
+        "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&q=80"
       ]
     },
     "rent": {
@@ -106,9 +105,9 @@
       "Hybrid Efficiency"
     ],
     "images": {
-      "thumbnail": "/fleet/corolla-cross.png",
+      "thumbnail": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&q=80",
       "gallery": [
-        "/fleet/corolla-cross.png"
+        "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&q=80"
       ]
     },
     "rent": {
@@ -149,9 +148,9 @@
       "Spacious Interior"
     ],
     "images": {
-      "thumbnail": "/fleet/Prius.png",
+      "thumbnail": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&q=80",
       "gallery": [
-        "/fleet/Prius.png"
+        "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&q=80"
       ]
     },
     "rent": {
@@ -193,9 +192,9 @@
       "Hybrid Efficiency"
     ],
     "images": {
-      "thumbnail": "/fleet/camry-hybrid-new.png",
+      "thumbnail": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&q=80",
       "gallery": [
-        "/fleet/camry-hybrid-new.png"
+        "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&q=80"
       ]
     },
     "rent": {
@@ -614,9 +613,9 @@
     "driverIncluded": true,
     "color": "Premium Assorted",
     "images": {
-      "thumbnail": "/fleet/Website-200x90-1.png",
+      "thumbnail": "https://www.toyota-indus.com/wp-content/uploads/Yaris-KV-1.38---1920-x-450.jpg",
       "gallery": [
-        "/fleet/Website-200x90-1.png"
+        "https://www.toyota-indus.com/wp-content/uploads/Yaris-KV-1.38---1920-x-450.jpg"
       ]
     },
     "rent": {
@@ -678,9 +677,9 @@
     "driverIncluded": true,
     "color": "Premium Assorted",
     "images": {
-      "thumbnail": "/fleet/corolla-200-x-90.png",
+      "thumbnail": "https://www.toyota-indus.com/wp-content/uploads/Corolla-X-KV-1---1920-x-450.jpg",
       "gallery": [
-        "/fleet/corolla-200-x-90.png"
+        "https://www.toyota-indus.com/wp-content/uploads/Corolla-X-KV-1---1920-x-450.jpg"
       ]
     },
     "rent": {
@@ -1141,10 +1140,9 @@
     "driverIncluded": true,
     "color": "Premium Assorted",
     "images": {
-      "thumbnail": "/fleet/revo_rocco.png",
+      "thumbnail": "https://www.toyota-indus.com/wp-content/uploads/Revo-KV-1---1920-x-450.jpg",
       "gallery": [
-        "/fleet/revo_rocco.png",
-        "/fleet/Revo-GRS-showroom.png"
+        "https://www.toyota-indus.com/wp-content/uploads/Revo-KV-1---1920-x-450.jpg"
       ]
     },
     "rent": {
@@ -1207,10 +1205,9 @@
     "driverIncluded": true,
     "color": "Premium Assorted",
     "images": {
-      "thumbnail": "/fleet/fortuner_legender_.png",
+      "thumbnail": "https://www.toyota-indus.com/wp-content/uploads/IMC-Fortuner-35years-KV-1---1920-x-450.jpg",
       "gallery": [
-        "/fleet/fortuner_legender_.png",
-        "/fleet/Fortuner-GRS-showroom.png"
+        "https://www.toyota-indus.com/wp-content/uploads/IMC-Fortuner-35years-KV-1---1920-x-450.jpg"
       ]
     },
     "rent": {
@@ -1340,9 +1337,9 @@
     "driverIncluded": true,
     "color": "Premium Assorted",
     "images": {
-      "thumbnail": "/fleet/land-cruiser_300.png",
+      "thumbnail": "https://www.toyota-indus.com/wp-content/uploads/Land-Cruiser-300-KV-1---1920-x-450.jpg",
       "gallery": [
-        "/fleet/land-cruiser_300.png"
+        "https://www.toyota-indus.com/wp-content/uploads/Land-Cruiser-300-KV-1---1920-x-450.jpg"
       ]
     },
     "rent": {
@@ -1469,10 +1466,9 @@
     "driverIncluded": true,
     "color": "Premium Assorted",
     "images": {
-      "thumbnail": "/fleet/Hiace.png",
+      "thumbnail": "https://www.toyota-indus.com/wp-content/uploads/Hiace-Grand-Cabin-KV-1---1920-x-450.jpg",
       "gallery": [
-        "/fleet/Hiace.png",
-        "/fleet/hiace-deluxe.png"
+        "https://www.toyota-indus.com/wp-content/uploads/Hiace-Grand-Cabin-KV-1---1920-x-450.jpg"
       ]
     },
     "rent": {
@@ -1535,9 +1531,9 @@
     "driverIncluded": true,
     "color": "Premium Assorted",
     "images": {
-      "thumbnail": "/fleet/Coaster.png",
+      "thumbnail": "https://www.toyota-indus.com/wp-content/uploads/Coaster-KV-1---1920-x-450.jpg",
       "gallery": [
-        "/fleet/Coaster.png"
+        "https://www.toyota-indus.com/wp-content/uploads/Coaster-KV-1---1920-x-450.jpg"
       ]
     },
     "rent": {
