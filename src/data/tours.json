@@ -7,10 +7,9 @@
     "recommendedVehicle": "Toyota Prado TX / Fortuner",
     "maxPassengers": 6,
     "images": {
-      "thumbnail": "https://images.unsplash.com/photo-1596700676997-f56f4d80a133?q=80&w=800&auto=format&fit=crop",
+      "thumbnail": "/tours/hunza.jpg",
       "gallery": [
-        "https://images.unsplash.com/photo-1596700676997-f56f4d80a133?q=80&w=1200&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1588667614138-028f096cf5d5?q=80&w=1200&auto=format&fit=crop"
+        "/tours/hunza.jpg"
       ]
     },
     "description": "Experience the majestic beauty of the Hunza Valley in absolute luxury. Our premium tour package offers specialized mountain-trained drivers, luxury 4x4 vehicles, and a carefully curated itinerary covering all major attractions including Baltit Fort, Attabad Lake, and Khunjerab Pass.",
@@ -42,9 +41,9 @@
     "recommendedVehicle": "Toyota Land Cruiser V8",
     "maxPassengers": 6,
     "images": {
-      "thumbnail": "https://images.unsplash.com/photo-1627885444648-5231c5188f55?q=80&w=800&auto=format&fit=crop",
+      "thumbnail": "/tours/skardu.jpg",
       "gallery": [
-        "https://images.unsplash.com/photo-1627885444648-5231c5188f55?q=80&w=1200&auto=format&fit=crop"
+        "/tours/skardu.jpg"
       ]
     },
     "description": "Discover the rugged beauty of Skardu and the breathtaking Deosai Plains. Our flagship expedition is designed for thrill-seekers who refuse to compromise on luxury. Traverse the second highest plateau in the world with our premium 4x4 fleet.",
@@ -77,9 +76,9 @@
     "recommendedVehicle": "Toyota Fortuner",
     "maxPassengers": 6,
     "images": {
-      "thumbnail": "https://images.unsplash.com/photo-1631526401089-9e7ec7884784?q=80&w=800&auto=format&fit=crop",
+      "thumbnail": "/tours/swat.jpg",
       "gallery": [
-        "https://images.unsplash.com/photo-1631526401089-9e7ec7884784?q=80&w=1200&auto=format&fit=crop"
+        "/tours/swat.jpg"
       ]
     },
     "description": "Known as the Switzerland of the East, Swat Valley offers lush green landscapes, dense forests, and clear rivers. Travel in comfort to Kalam, Malam Jabba, and Mahodand Lake with our premium SUVs.",
