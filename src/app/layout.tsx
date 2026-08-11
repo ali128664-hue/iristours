@@ -27,6 +27,7 @@ import Script from "next/script";
 // These values appear in Google search results and social media link previews.
 // Update title, description, and keywords to match your current offerings.
 export const metadata: Metadata = {
+  metadataBase: new URL("https://iristours.net"),
   title: "Iris Tours | Rent a Car in Lahore & Pakpattan",
   description: "Best Rent a Car in Lahore DHA and Pakpattan. Premium luxury car rental, SUVs, wedding cars, airport transfers, and northern tours in Pakistan. Book instantly via WhatsApp.",
   keywords: "Rent a car in Lahore, Best Rent a Car DHA Lahore, Cheap car rental Lahore, Luxury car rental Lahore, Wedding cars Lahore, Airport transfer Lahore, Prado for rent Lahore, Corolla for rent Lahore, V8 for rent Pakistan, Rent a car near me Lahore, Rent a car Pakpattan, Rent a car Lahore to Islamabad, DHA Phase 1 Rent a Car, Chauffeur driven cars Lahore, SUV rental Lahore, Iris Tours Lahore",
@@ -40,6 +41,20 @@ export const metadata: Metadata = {
     locale: "en_PK",
     url: "https://iristours.net",
     siteName: "Iris Tours",
+    images: [
+      {
+        url: "https://iristours.net/opengraph-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Iris Tours - Premium Car Rental",
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Iris Tours | Rent a Car in Lahore & Pakpattan",
+    description: "Best Rent a Car in Lahore DHA and Pakpattan. Premium luxury car rental, SUVs, and wedding cars.",
+    images: ["https://iristours.net/twitter-image.jpg"],
   },
   other: {
     // Geographic metadata — helps local SEO. Update if office location changes.
