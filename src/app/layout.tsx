@@ -78,6 +78,18 @@ export default function RootLayout({
             "sameAs": ["https://wa.me/923066305875"]
           })
         }} />
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-F5EG9TRQPR"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-F5EG9TRQPR');
+          `}
+        </Script>
       </head>
       <body className="antialiased bg-bg-primary text-text-primary min-h-screen flex flex-col">
         <SmoothScroll>
