@@ -1,3 +1,22 @@
+/**
+ * Footer.tsx — Website Footer (نیچے والا حصہ)
+ *
+ * This component renders the site footer shown on every page.
+ * It contains:
+ *  - Brand logo and tagline
+ *  - Social media icon links (Instagram, Facebook, LinkedIn)
+ *  - Quick Links column (main site pages)
+ *  - Company column (about, gallery, FAQ, contact, privacy)
+ *  - Contact info for Lahore and Pakpattan offices
+ *  - WhatsApp and email links
+ *
+ * HOW TO CHANGE THINGS:
+ *  - Phone numbers → find the `tel:+92...` links below and update them
+ *  - WhatsApp number → find `wa.me/923066305875` and update it
+ *  - Social media links → find the social icon <a> tags and change the href values
+ *  - Footer nav links → edit the <li> items in the Quick Links and Company sections
+ */
+
 import Link from "next/link";
 import { FaWhatsapp, FaInstagram, FaFacebook, FaLinkedin, FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
 import Logo from "@/components/ui/Logo";
@@ -8,7 +27,7 @@ export default function Footer() {
       <div className="container mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           
-          {/* Brand & About */}
+          {/* ─── Brand & About Column ─────────────────────────────────────────── */}
           <div>
             <Link href="/" className="mb-6 block w-max">
               <Logo width={150} height={50} />
@@ -16,6 +35,12 @@ export default function Footer() {
             <p className="text-text-secondary mb-6 leading-relaxed">
               Pakistan's premium luxury car rental & tours platform. Experience world-class mobility, professional drivers, and a breathtaking fleet of vehicles.
             </p>
+
+            {/* ─── SOCIAL MEDIA LINKS ───────────────────────────────────────────
+                Update social media links here.
+                Replace the href values with your actual social profile URLs.
+                Example Instagram: https://instagram.com/iristours
+            ──────────────────────────────────────────────────────────────────── */}
             <div className="flex items-center gap-4">
               <a href="https://instagram.com" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-bg-card border border-border-primary flex items-center justify-center text-text-secondary hover:text-accent-primary hover:border-accent-primary transition-colors">
                 <FaInstagram size={18} />
@@ -29,7 +54,11 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* ─── QUICK LINKS COLUMN ───────────────────────────────────────────────
+              Add/remove footer navigation links here.
+              Each <li> is one link in the "Quick Links" column.
+              Format: <li><Link href="/page-url">Link Text</Link></li>
+          ──────────────────────────────────────────────────────────────────────── */}
           <div>
             <h4 className="text-lg font-semibold text-text-primary mb-6 uppercase tracking-wider">Quick Links</h4>
             <ul className="flex flex-col gap-4">
@@ -41,7 +70,10 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Company */}
+          {/* ─── COMPANY LINKS COLUMN ─────────────────────────────────────────────
+              Add/remove company footer links here.
+              Same format as Quick Links above.
+          ──────────────────────────────────────────────────────────────────────── */}
           <div>
             <h4 className="text-lg font-semibold text-text-primary mb-6 uppercase tracking-wider">Company</h4>
             <ul className="flex flex-col gap-4">
@@ -53,12 +85,15 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact Info */}
+          {/* ─── CONTACT INFO COLUMN ──────────────────────────────────────────────
+              Change contact info here.
+              Update phone numbers, WhatsApp, and email addresses below.
+          ──────────────────────────────────────────────────────────────────────── */}
           <div>
             <h4 className="text-lg font-semibold text-text-primary mb-6 uppercase tracking-wider">Contact Us</h4>
             <div className="flex flex-col gap-6">
               
-              {/* Lahore Office */}
+              {/* Lahore Office — Update address and phone number here */}
               <div>
                 <h5 className="text-accent-primary font-medium mb-3 text-sm tracking-wide uppercase">Lahore Office</h5>
                 <ul className="flex flex-col gap-3">
@@ -68,12 +103,13 @@ export default function Footer() {
                   </li>
                   <li className="flex items-center gap-3">
                     <FaPhone className="text-text-primary flex-shrink-0" size={14} />
+                    {/* Change Lahore phone number here */}
                     <a href="tel:+923154973906" className="text-text-secondary text-sm hover:text-accent-primary transition-colors">+92 3154 97 39 06</a>
                   </li>
                 </ul>
               </div>
 
-              {/* Pakpattan Office */}
+              {/* Pakpattan Office — Update address and phone number here */}
               <div>
                 <h5 className="text-accent-primary font-medium mb-3 text-sm tracking-wide uppercase">Pakpattan Office</h5>
                 <ul className="flex flex-col gap-3">
@@ -83,19 +119,22 @@ export default function Footer() {
                   </li>
                   <li className="flex items-center gap-3">
                     <FaPhone className="text-text-primary flex-shrink-0" size={14} />
+                    {/* Change Pakpattan phone number here */}
                     <a href="tel:+923066305875" className="text-text-secondary text-sm hover:text-accent-primary transition-colors">+92 3066 30 58 75</a>
                   </li>
                 </ul>
               </div>
               
-              {/* Social / Digital */}
+              {/* WhatsApp and Email — Update social/digital contact info here */}
               <ul className="flex flex-col gap-3 pt-3 border-t border-border-primary/50">
                 <li className="flex items-center gap-3">
                   <FaWhatsapp className="text-text-primary flex-shrink-0" size={16} />
+                  {/* Change WhatsApp number here — replace 923066305875 with your number */}
                   <a href="https://wa.me/923066305875" target="_blank" rel="noreferrer" className="text-text-secondary text-sm hover:text-accent-primary transition-colors">WhatsApp Chat</a>
                 </li>
                 <li className="flex items-center gap-3">
                   <FaEnvelope className="text-text-primary flex-shrink-0" size={14} />
+                  {/* Change email address here */}
                   <a href="mailto:info@iristours.net" className="text-text-secondary text-sm hover:text-accent-primary transition-colors">info@iristours.net</a>
                 </li>
               </ul>
@@ -104,12 +143,13 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-border-primary flex flex-col md:flex-row items-center justify-between gap-4">
+        {/* Footer Bottom Bar — copyright text */}
+        <div className="pt-8 border-t border-border-primary flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
           <p className="text-text-secondary text-sm">
             &copy; {new Date().getFullYear()} Iris Tours. All rights reserved.
           </p>
           <p className="text-text-secondary text-sm">
-            Designed for Luxury.
+            Designed & Developed by <a href="https://www.linkedin.com/in/chansarhussain/" target="_blank" rel="noreferrer" className="text-text-primary hover:text-accent-primary transition-colors hover:underline">Ansar Hussain</a>
           </p>
         </div>
       </div>

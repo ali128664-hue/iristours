@@ -1,9 +1,33 @@
+/**
+ * sitemap.ts — XML Sitemap Generator (سائٹ میپ)
+ *
+ * This auto-generates /sitemap.xml for Google Search Console.
+ * Google uses this file to discover and index all pages on the website.
+ *
+ * - Static pages (Home, Fleet, About, etc.) are listed manually below.
+ * - All fleet/car pages are included automatically from fleet.json.
+ *   When you add a new car to fleet.json, its page is auto-added to the sitemap.
+ *
+ * HOW TO CHANGE:
+ *  - Domain URL → change the `baseUrl` variable below
+ *  - Add new static pages → add entries to the `staticPages` array
+ *  - Remove pages → delete entries from `staticPages`
+ */
+
 import { MetadataRoute } from "next";
 import fleetData from "@/data/fleet.json";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  // Change this to your actual domain when deploying to production
+  // e.g., "https://iristours.net"
   const baseUrl = "https://iristours.com";
 
+  // ─── STATIC PAGES ─────────────────────────────────────────────────────────
+  // Add any new pages here when you create them.
+  // Each entry needs:
+  //   url — full URL of the page
+  //   changeFrequency — how often Google should re-crawl ("daily", "weekly", "monthly")
+  //   priority — importance from 0.0 to 1.0 (homepage should be 1.0)
   const staticPages: MetadataRoute.Sitemap = [
     { url: baseUrl, lastModified: new Date(), changeFrequency: "weekly", priority: 1.0 },
     { url: `${baseUrl}/fleet`, lastModified: new Date(), changeFrequency: "daily", priority: 0.9 },
@@ -12,6 +36,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/tours`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
   ];
 
+  // ─── FLEET PAGES ──────────────────────────────────────────────────────────
+  // All car pages are generated automatically from fleet.json.
+  // No changes needed here — just add/remove cars in fleet.json.
   const fleetPages: MetadataRoute.Sitemap = (fleetData as any[]).map((vehicle) => ({
     url: `${baseUrl}/fleet/${vehicle.slug}`,
     lastModified: new Date(),
@@ -19,5 +46,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }));
 
+  // Combine static and fleet pages into the final sitemap
   return [...staticPages, ...fleetPages];
 }

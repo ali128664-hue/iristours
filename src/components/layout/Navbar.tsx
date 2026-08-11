@@ -1,3 +1,18 @@
+/**
+ * Navbar.tsx — Top Navigation Bar (اوپر والا مینو)
+ *
+ * This component renders the fixed top navigation bar with:
+ *  - The Iris Tours logo (links to home page)
+ *  - Desktop nav links (horizontal menu)
+ *  - "Book via WhatsApp" CTA button
+ *  - Mobile hamburger menu (slides in on small screens)
+ *
+ * HOW TO CHANGE THINGS:
+ *  - Add/remove nav links → edit the `navLinks` array below
+ *  - Change the logo → replace the file at public/logo.png
+ *  - Change WhatsApp number → find the two `wa.me/923066305875` links in this file
+ */
+
 "use client";
 
 import { useState, useEffect } from "react";
@@ -6,8 +21,13 @@ import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronRight } from "lucide-react";
 import clsx from "clsx";
+// Logo component — the logo image is at public/logo.png, replace that file to update the logo
 import Logo from "@/components/ui/Logo";
 
+// ─── NAVIGATION LINKS ─────────────────────────────────────────────────────────
+// Add or remove navigation items here.
+// Each item needs a `name` (what users see) and `href` (the page URL).
+// Example to add a Contact page: { name: "Contact", href: "/contact" }
 const navLinks = [
   { name: "Home", href: "/" },
   { name: "Fleet", href: "/fleet" },
@@ -24,6 +44,7 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 
+  // Adds a blurred background to the navbar when the user scrolls down
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -47,11 +68,12 @@ export default function Navbar() {
       )}
     >
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
+        {/* Logo — clicking this goes to the homepage */}
         <Link href="/" className="z-50">
           <Logo width={150} height={50} />
         </Link>
 
-        {/* Desktop Nav */}
+        {/* Desktop Nav — visible on large screens only */}
         <nav className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
             <Link
@@ -67,8 +89,9 @@ export default function Navbar() {
           ))}
         </nav>
 
-        {/* Desktop CTA */}
+        {/* Desktop CTA Button */}
         <div className="hidden lg:block">
+          {/* Change WhatsApp number here (desktop button): replace 923066305875 with your number */}
           <Link
             href="https://wa.me/923066305875"
             target="_blank"
@@ -79,7 +102,7 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Mobile Menu Toggle */}
+        {/* Mobile Menu Toggle Button */}
         <button
           className="lg:hidden text-text-primary p-2"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -89,7 +112,7 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu — slides in when hamburger is tapped */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
@@ -100,6 +123,7 @@ export default function Navbar() {
             className="absolute top-full left-0 right-0 bg-white/95 backdrop-blur-xl border-b border-border-primary lg:hidden shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] overflow-hidden"
           >
             <div className="flex flex-col px-6 py-8 gap-1 max-h-[80vh] overflow-y-auto">
+              {/* Render each nav link in the mobile menu */}
               {navLinks.map((link, i) => (
                 <motion.div
                   key={link.name}
@@ -124,6 +148,7 @@ export default function Navbar() {
                 </motion.div>
               ))}
               
+              {/* Mobile WhatsApp CTA Button */}
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -131,6 +156,7 @@ export default function Navbar() {
                 transition={{ delay: navLinks.length * 0.05 + 0.1, duration: 0.3 }}
                 className="mt-6"
               >
+                {/* Change WhatsApp number here (mobile button): replace 923066305875 with your number */}
                 <Link
                   href="https://wa.me/923066305875"
                   target="_blank"

@@ -1,3 +1,20 @@
+/**
+ * layout.tsx — Root Layout (شروع سے آخر تک ہر صفحے پر لاگو ہوتی ہے)
+ *
+ * This file wraps every page on the website with:
+ *  - Global metadata (SEO title, description, keywords)
+ *  - Google Analytics tracking
+ *  - Google Search Console verification
+ *  - Schema.org structured data (for Google rich results)
+ *  - The shared Navbar, Footer, and Floating WhatsApp button
+ *
+ * HOW TO USE:
+ *  - To change the site-wide SEO title/description → edit the `metadata` object below
+ *  - To change phone/business info for Google → edit the Schema.org `Script` block
+ *  - To switch Google Analytics → replace both instances of G-F5EG9TRQPR
+ *  - To re-verify Google Search Console → replace the `google` verification value
+ */
+
 import type { Metadata } from "next";
 import "./globals.css";
 import SmoothScroll from "@/components/layout/SmoothScroll";
@@ -6,6 +23,9 @@ import Footer from "@/components/layout/Footer";
 import FloatingWhatsApp from "@/components/shared/FloatingWhatsApp";
 import Script from "next/script";
 
+// ─── SITE-WIDE SEO METADATA ───────────────────────────────────────────────────
+// These values appear in Google search results and social media link previews.
+// Update title, description, and keywords to match your current offerings.
 export const metadata: Metadata = {
   title: "Iris Tours | Rent a Car in Lahore & Pakpattan",
   description: "Best Rent a Car in Lahore DHA and Pakpattan. Premium luxury car rental, SUVs, wedding cars, airport transfers, and northern tours in Pakistan. Book instantly via WhatsApp.",
@@ -22,12 +42,15 @@ export const metadata: Metadata = {
     siteName: "Iris Tours",
   },
   other: {
+    // Geographic metadata — helps local SEO. Update if office location changes.
     "geo.region": "PK-PB",
     "geo.placename": "Lahore",
     "geo.position": "31.4820;74.4079",
     "ICBM": "31.4820, 74.4079"
   },
   verification: {
+    // Change this if you re-verify Google Search Console with a new account/token.
+    // Get the new value from: Google Search Console → Settings → Ownership verification
     google: "gsCo28S1rrtbINhhxk28uBe6F6LReKN3LzkDCOfiq14",
   }
 };
@@ -40,6 +63,15 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* ─── SCHEMA.ORG STRUCTURED DATA ───────────────────────────────────────
+            This JSON-LD block tells Google about your business details.
+            It powers Google's rich result features (business panel, maps, etc.)
+            
+            TO UPDATE:
+            - Company phone → change "telephone" value (currently "+923066305875")
+            - Business address → change the "address" array entries below
+            - WhatsApp number → change the "sameAs" URL at the bottom
+        ──────────────────────────────────────────────────────────────────────── */}
         <Script id="local-business-schema" type="application/ld+json" dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
@@ -48,10 +80,12 @@ export default function RootLayout({
             "image": "https://iristours.net/logo.png",
             "@id": "https://iristours.net",
             "url": "https://iristours.net",
+            // Update phone number here for Schema.org business info
             "telephone": "+923066305875",
             "priceRange": "PKR",
             "address": [
               {
+                // Update business address here (Lahore office)
                 "@type": "PostalAddress",
                 "streetAddress": "143 Street, 153, Sector-H, DHA Phase-1",
                 "addressLocality": "Lahore",
@@ -60,6 +94,7 @@ export default function RootLayout({
                 "addressCountry": "PK"
               },
               {
+                // Update business address here (Pakpattan office)
                 "@type": "PostalAddress",
                 "streetAddress": "Malka Hans",
                 "addressLocality": "Pakpattan",
@@ -81,6 +116,12 @@ export default function RootLayout({
             "sameAs": ["https://wa.me/923066305875"]
           })
         }} />
+
+        {/* ─── GOOGLE ANALYTICS ─────────────────────────────────────────────────
+            Change the ID "G-F5EG9TRQPR" in BOTH lines below if you switch
+            Google Analytics accounts. Get your ID from:
+            analytics.google.com → Admin → Property → Data Streams
+        ──────────────────────────────────────────────────────────────────────── */}
         <Script
           strategy="afterInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=G-F5EG9TRQPR"
@@ -94,6 +135,11 @@ export default function RootLayout({
           `}
         </Script>
       </head>
+
+      {/* ─── PAGE BODY ──────────────────────────────────────────────────────────
+          The Navbar, Footer, and FloatingWhatsApp button are included on
+          every page automatically through this layout wrapper.
+      ──────────────────────────────────────────────────────────────────────── */}
       <body className="antialiased bg-bg-primary text-text-primary min-h-screen flex flex-col">
         <SmoothScroll>
           <Navbar />

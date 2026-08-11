@@ -1,9 +1,30 @@
+/**
+ * route.ts — Global llms.txt Generator
+ * Route: /llms.txt
+ *
+ * This generates the global /llms.txt file for the entire website.
+ * AI crawlers (ChatGPT, Google AI Overviews, Perplexity, Claude, etc.)
+ * read this file to understand your business, services, and fleet.
+ *
+ * It automatically lists all vehicles from fleet.json with their prices.
+ * No manual updates needed when you add/remove cars.
+ *
+ * HOW TO CHANGE:
+ *  - Company phone/WhatsApp → find the "Company Information" section below
+ *  - Domain URL → change the `baseUrl` variable
+ *  - Services list → edit the "## Services" section in the content string
+ *  - Why Choose Us → edit the "## Why Choose Iris Tours?" section
+ */
+
 import { NextResponse } from "next/server";
 import fleetData from "@/data/fleet.json";
 
 export async function GET() {
+  // Change this to your actual domain when deploying to production
+  // e.g., "https://iristours.net"
   const baseUrl = "https://iristours.com";
 
+  // Automatically generate a list of all vehicles with prices from fleet.json
   const fleetList = (fleetData as any[])
     .map(
       (v: any) =>
@@ -11,6 +32,7 @@ export async function GET() {
     )
     .join("\n");
 
+  // The full llms.txt content — AI crawlers read this to understand your business
   const content = `# Iris Tours — Rent a Car Lahore | llms.txt
 
 > Iris Tours is Lahore's premier car rental service. We provide professional chauffeur-driven and self-drive vehicle hire for airport transfers, corporate travel, weddings, outstation trips, and luxury tourism across Pakistan.
@@ -67,11 +89,14 @@ Lahore, DHA, Gulberg, Model Town, Johar Town, Bahria Town, Islamabad, Rawalpindi
 - Tours: ${baseUrl}/tours
 - llms.txt (this file): ${baseUrl}/llms.txt
 `;
+  // Update contact details here — replace +92-300-123-4567 in "Company Information"
+  // with your actual WhatsApp/phone number.
 
   return new NextResponse(content, {
     status: 200,
     headers: {
       "Content-Type": "text/plain; charset=utf-8",
+      // Cache for 24 hours — reduce max-age if you update content frequently
       "Cache-Control": "public, max-age=86400",
     },
   });

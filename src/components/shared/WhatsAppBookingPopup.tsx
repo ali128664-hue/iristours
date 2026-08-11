@@ -1,3 +1,16 @@
+/**
+ * WhatsAppBookingPopup.tsx — Booking Popup Form (بکنگ فارم پاپ اپ)
+ *
+ * This popup appears when a user clicks "Book Now" on a vehicle card.
+ * It collects booking details (name, phone, dates, cities, passengers)
+ * and formats them into a pre-filled WhatsApp message, then opens WhatsApp.
+ *
+ * HOW TO CHANGE:
+ *  - WhatsApp number → find `phoneNumber` in `handleGenerateWhatsApp` below
+ *  - WhatsApp message template → edit the `message` template string below
+ *  - Form fields → add/remove <div> blocks inside the grid
+ */
+
 "use client";
 
 import { useState } from "react";
@@ -5,6 +18,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X, Calendar, MapPin, Users, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 
+// Props passed in from VehicleCard: the car name, category, and daily price
 interface BookingPopupProps {
   isOpen: boolean;
   onClose: () => void;
@@ -14,6 +28,7 @@ interface BookingPopupProps {
 }
 
 export default function WhatsAppBookingPopup({ isOpen, onClose, productName, category, dailyPrice }: BookingPopupProps) {
+  // Form state — tracks what the user types into each field
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -26,13 +41,19 @@ export default function WhatsAppBookingPopup({ isOpen, onClose, productName, cat
     notes: ""
   });
 
+  // Updates form state when any input field changes
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  // Builds a formatted WhatsApp message and opens WhatsApp chat
   const handleGenerateWhatsApp = () => {
-    const phoneNumber = "923066305875"; // Placeholder, replace with actual
+    // Change WhatsApp number here for booking popup — replace 923066305875 with your number
+    // Format: country code + number, no spaces or dashes (e.g., 923001234567)
+    const phoneNumber = "923066305875";
     
+    // Change the default WhatsApp message template here.
+    // ${variable} placeholders are replaced automatically with the form data.
     const message = `Hello Iris Tours,
 
 I would like to book the following vehicle/tour.
@@ -66,6 +87,7 @@ Thank you.`;
     <AnimatePresence>
       {isOpen && (
         <>
+          {/* Backdrop overlay — click outside to close */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -73,6 +95,7 @@ Thank you.`;
             onClick={onClose}
             className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 overflow-y-auto"
           >
+            {/* Popup card */}
             <motion.div
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -80,6 +103,7 @@ Thank you.`;
             onClick={(e) => e.stopPropagation()}
             className="bg-gradient-to-b from-white to-bg-card w-full max-w-2xl rounded-2xl overflow-hidden shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25),inset_0_2px_4px_rgba(255,255,255,1)] border border-white/80 relative z-10 my-8"
           >
+              {/* Popup Header */}
               <div className="p-6 border-b border-border-primary flex justify-between items-center bg-bg-card">
                 <div>
                   <h3 className="text-xl font-bold text-text-primary uppercase tracking-wider">Book Now</h3>
@@ -90,6 +114,7 @@ Thank you.`;
                 </button>
               </div>
               
+              {/* Form Fields */}
               <div className="p-6 max-h-[70vh] overflow-y-auto custom-scrollbar">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
@@ -139,6 +164,7 @@ Thank you.`;
                 </div>
               </div>
               
+              {/* Popup Footer with action buttons */}
               <div className="p-6 border-t border-border-primary bg-bg-card flex justify-end gap-4">
                 <Button variant="secondary" onClick={onClose}>Cancel</Button>
                 <Button variant="primary" onClick={handleGenerateWhatsApp}>Continue to WhatsApp</Button>

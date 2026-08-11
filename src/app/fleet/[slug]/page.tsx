@@ -1,3 +1,21 @@
+/**
+ * page.tsx — Individual Car Detail Page (گاڑی کی تفصیلی صفحہ)
+ * Route: /fleet/[slug]  (e.g., /fleet/honda-hr-v)
+ *
+ * This page is automatically generated for each car in fleet.json.
+ * It shows:
+ *  - Hero image with car name, brand, and category
+ *  - Image gallery strip
+ *  - Overview, specifications, features, policies
+ *  - Sticky sidebar: pricing, WhatsApp & Call buttons, "Why Choose Iris Tours"
+ *  - Related vehicles at the bottom
+ *
+ * HOW TO CHANGE:
+ *  - WhatsApp number → change the number in `whatsappUrl` below
+ *  - "Why Choose Iris Tours" selling points → find the bullet list array below
+ *  - Domain URL → change `baseUrl` when you deploy to production
+ */
+
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import { Settings, Users, Fuel, Briefcase, CheckCircle2, Phone, MessageCircle, Star, ArrowLeft, MapPin, Clock, Shield } from "lucide-react";
@@ -10,12 +28,15 @@ interface Props {
   params: Promise<{ slug: string }>;
 }
 
+// Generates all valid slugs at build time so Next.js can pre-render each car page
 export async function generateStaticParams() {
   return fleetData.map((vehicle) => ({
     slug: vehicle.slug,
   }));
 }
 
+// Generates SEO metadata (title, description, Open Graph) for each car page.
+// Data comes from the `seo` field in fleet.json for each vehicle.
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const vehicle = fleetData.find((v) => v.slug === slug);
@@ -24,6 +45,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return { title: "Vehicle Not Found" };
   }
 
+  // Change this to your actual domain when deploying to production
+  // e.g., "https://iristours.net" or "https://yourdomain.com"
   const baseUrl = "https://iristours.com";
   const thumbnail = vehicle.images.thumbnail.startsWith("http")
     ? vehicle.images.thumbnail
@@ -67,16 +90,20 @@ export default async function VehicleDetailPage({ params }: Props) {
     notFound();
   }
 
+  // Find related vehicles by matching slugs listed in the vehicle's relatedVehicles array
   const relatedVehicles = fleetData.filter((v) =>
     (vehicle.relatedVehicles || []).includes(v.slug)
   );
 
+  // ─── WHATSAPP BOOKING URL ───────────────────────────────────────────────────
+  // Change WhatsApp number here for the "Book on WhatsApp" button on car detail pages.
+  // Replace 923001234567 with the actual number (country code + number, no spaces).
   const whatsappMsg = encodeURIComponent(
     `Hi Iris Tours! I want to book the ${vehicle.name}. Please share availability and rates.`
   );
   const whatsappUrl = `https://wa.me/923001234567?text=${whatsappMsg}`;
 
-  // JSON-LD Schema
+  // Schema.org Product markup — helps Google understand this is a rentable product
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -109,7 +136,7 @@ export default async function VehicleDetailPage({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <div className="bg-bg-primary min-h-screen">
-        {/* Hero Section */}
+        {/* Hero Section — large vehicle image with name overlay */}
         <div className="relative h-[55vh] min-h-[400px] w-full overflow-hidden">
           <Image
             src={vehicle.images.gallery?.[0] || vehicle.images.thumbnail}
@@ -121,7 +148,7 @@ export default async function VehicleDetailPage({ params }: Props) {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-bg-primary via-black/50 to-black/20" />
 
-          {/* Back button */}
+          {/* Back button — returns user to the fleet listing page */}
           <div className="absolute top-6 left-6">
             <Link
               href="/fleet"
@@ -132,7 +159,7 @@ export default async function VehicleDetailPage({ params }: Props) {
             </Link>
           </div>
 
-          {/* Hero Text */}
+          {/* Hero Text — vehicle name, category, brand, and location */}
           <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
             <div className="container mx-auto">
               <div className="flex items-center gap-3 mb-2">
@@ -156,10 +183,10 @@ export default async function VehicleDetailPage({ params }: Props) {
 
         <div className="container mx-auto px-4 md:px-8 lg:px-12 py-12">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
-            {/* Main Content */}
+            {/* ─── Main Content (left/centre) ───────────────────────────────────── */}
             <div className="lg:col-span-2 space-y-10">
 
-              {/* Image Gallery Strip */}
+              {/* Image Gallery Strip — shows thumbnails if more than 1 image exists */}
               {vehicle.images.gallery && vehicle.images.gallery.length > 1 && (
                 <div className="flex gap-3 overflow-x-auto pb-2 scrollbar-hide">
                   {vehicle.images.gallery.map((img: string, idx: number) => (
@@ -176,7 +203,7 @@ export default async function VehicleDetailPage({ params }: Props) {
                 </div>
               )}
 
-              {/* Overview */}
+              {/* Overview — reads from the `description` field in fleet.json */}
               <section>
                 <h2 className="text-2xl font-bold text-text-primary mb-4 flex items-center gap-3">
                   <span className="w-1 h-7 bg-accent-primary rounded-full inline-block" />
@@ -187,7 +214,7 @@ export default async function VehicleDetailPage({ params }: Props) {
                 </p>
               </section>
 
-              {/* Key Specs */}
+              {/* Key Specifications — reads from fleet.json (transmission, fuel, seats, luggage) */}
               <section>
                 <h2 className="text-2xl font-bold text-text-primary mb-6 flex items-center gap-3">
                   <span className="w-1 h-7 bg-accent-primary rounded-full inline-block" />
@@ -209,7 +236,7 @@ export default async function VehicleDetailPage({ params }: Props) {
                 </div>
               </section>
 
-              {/* Features */}
+              {/* Premium Features — reads from the `features` array in fleet.json */}
               <section>
                 <h2 className="text-2xl font-bold text-text-primary mb-6 flex items-center gap-3">
                   <span className="w-1 h-7 bg-accent-primary rounded-full inline-block" />
@@ -225,7 +252,7 @@ export default async function VehicleDetailPage({ params }: Props) {
                 </div>
               </section>
 
-              {/* Rental Policies */}
+              {/* Rental Policies — reads from the `policies` object in fleet.json */}
               <section>
                 <h2 className="text-2xl font-bold text-text-primary mb-6 flex items-center gap-3">
                   <span className="w-1 h-7 bg-accent-primary rounded-full inline-block" />
@@ -250,7 +277,7 @@ export default async function VehicleDetailPage({ params }: Props) {
                 </div>
               </section>
 
-              {/* Trust Badges */}
+              {/* Trust Badges — static icons shown below the policies */}
               <section className="grid grid-cols-3 gap-4">
                 {[
                   { icon: Shield, title: "Safe & Insured", desc: "All vehicles fully insured" },
@@ -268,10 +295,10 @@ export default async function VehicleDetailPage({ params }: Props) {
               </section>
             </div>
 
-            {/* Sidebar */}
+            {/* ─── Sidebar (sticky on desktop) ──────────────────────────────────── */}
             <div className="lg:col-span-1">
               <div className="sticky top-24 space-y-4">
-                {/* Price Card */}
+                {/* Price Card — prices pulled from the `rent` object in fleet.json */}
                 <div className="bg-bg-card border border-border-primary rounded-3xl p-6 shadow-xl">
                   <p className="text-text-secondary text-sm font-medium mb-2">Starting from</p>
                   <div className="flex items-end gap-2 mb-6">
@@ -281,6 +308,7 @@ export default async function VehicleDetailPage({ params }: Props) {
                     <span className="text-text-secondary mb-1">/day</span>
                   </div>
 
+                  {/* Detailed price breakdown */}
                   {vehicle.rent && (
                     <div className="space-y-3 mb-6">
                       {vehicle.rent.withDriver?.local && (
@@ -316,6 +344,7 @@ export default async function VehicleDetailPage({ params }: Props) {
                     </div>
                   )}
 
+                  {/* WhatsApp Booking Button — uses whatsappUrl defined at the top of this file */}
                   <a
                     href={whatsappUrl}
                     target="_blank"
@@ -325,6 +354,7 @@ export default async function VehicleDetailPage({ params }: Props) {
                     <MessageCircle size={20} />
                     Book on WhatsApp
                   </a>
+                  {/* Call Now button — update this phone number if needed */}
                   <a
                     href="tel:+923001234567"
                     className="flex items-center justify-center gap-3 w-full mt-3 border border-border-primary bg-bg-secondary hover:border-accent-primary text-text-primary font-semibold py-3 rounded-2xl transition-all"
@@ -334,7 +364,11 @@ export default async function VehicleDetailPage({ params }: Props) {
                   </a>
                 </div>
 
-                {/* Quick Info */}
+                {/* ─── WHY CHOOSE IRIS TOURS ─────────────────────────────────────────
+                    Edit these bullet points to change the selling points shown
+                    on every car detail page sidebar.
+                    Add a new string to the array to add a new bullet point.
+                ──────────────────────────────────────────────────────────────────── */}
                 <div className="bg-bg-card border border-border-primary rounded-3xl p-5">
                   <p className="font-bold text-text-primary mb-3">Why Choose Iris Tours?</p>
                   <ul className="space-y-2">
@@ -356,7 +390,7 @@ export default async function VehicleDetailPage({ params }: Props) {
             </div>
           </div>
 
-          {/* Related Vehicles */}
+          {/* Related Vehicles — shown at the bottom using relatedVehicles slugs from fleet.json */}
           {relatedVehicles.length > 0 && (
             <div className="mt-20 border-t border-border-primary pt-16">
               <h2 className="text-3xl font-bold text-text-primary mb-10 text-center">
