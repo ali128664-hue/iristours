@@ -303,7 +303,7 @@ export default async function VehicleDetailPage({ params }: Props) {
                   <p className="text-text-secondary text-sm font-medium mb-2">Starting from</p>
                   <div className="flex items-end gap-2 mb-6">
                     <span className="text-4xl font-extrabold text-accent-primary">
-                      PKR {(vehicle.rent?.daily || vehicle.rent?.withDriver?.local || 0).toLocaleString()}
+                      PKR {(vehicle.rent?.local || vehicle.rent?.daily || vehicle.rent?.withDriver?.local || 0).toLocaleString()}
                     </span>
                     <span className="text-text-secondary mb-1">/day</span>
                   </div>

@@ -36,6 +36,8 @@ export default function VehicleCard({ vehicle, index = 0 }: VehicleProps) {
   const [isPopupOpen, setIsPopupOpen] = useState(false); // controls the booking popup
   const [currentImageIndex, setCurrentImageIndex] = useState(0); // current slide in image slider
 
+  const displayPrice = vehicle.rent?.local ?? vehicle.rent?.daily ?? vehicle.rent?.withDriver?.local ?? 0;
+
   return (
     <>
       {/* ─── Card Container ─────────────────────────────────────────────────── */}
@@ -122,8 +124,8 @@ export default function VehicleCard({ vehicle, index = 0 }: VehicleProps) {
             </div>
             <div className="text-right">
               <p className="text-xs text-text-secondary uppercase tracking-wider mb-1">City Rate</p>
-              {/* Price shown here comes from rent.local or rent.daily in fleet.json */}
-              <p className="text-lg font-bold text-accent-primary">Rs. {(vehicle.rent.local ?? vehicle.rent.daily ?? 0).toLocaleString()}</p>
+              {/* Price shown here comes from rent.local, rent.daily or rent.withDriver.local in fleet.json */}
+              <p className="text-lg font-bold text-accent-primary">Rs. {displayPrice.toLocaleString()}</p>
               {vehicle.rent.interCity && <p className="text-xs text-text-secondary">Inter-City: Rs. {vehicle.rent.interCity.toLocaleString()}</p>}
             </div>
           </div>
@@ -178,7 +180,7 @@ export default function VehicleCard({ vehicle, index = 0 }: VehicleProps) {
         onClose={() => setIsPopupOpen(false)}
         productName={vehicle.name}
         category={vehicle.category}
-        dailyPrice={vehicle.rent.daily}
+        dailyPrice={displayPrice}
       />
     </>
   );

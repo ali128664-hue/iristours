@@ -35,7 +35,7 @@ export default function FleetClient({ initialData }: FleetClientProps) {
   const [searchQuery, setSearchQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState("All");
   const [activeBrand, setActiveBrand] = useState("All");
-  const [activeSort, setActiveSort] = useState("Recommended");
+  const [activeSort, setActiveSort] = useState("Lowest Price");
   const [isFilterOpen, setIsFilterOpen] = useState(false); // mobile filter panel toggle
 
   // ─── CATEGORY FILTER BUTTONS ────────────────────────────────────────────────
@@ -83,15 +83,23 @@ export default function FleetClient({ initialData }: FleetClientProps) {
     switch (activeSort) {
       case "Lowest Price":
         // Sorts by daily rate ascending
-        result.sort((a, b) => a.rent.daily - b.rent.daily);
+        result.sort((a, b) => {
+          const priceA = a.rent?.local ?? a.rent?.daily ?? a.rent?.withDriver?.local ?? 0;
+          const priceB = b.rent?.local ?? b.rent?.daily ?? b.rent?.withDriver?.local ?? 0;
+          return priceA - priceB;
+        });
         break;
       case "Highest Price":
         // Sorts by daily rate descending
-        result.sort((a, b) => b.rent.daily - a.rent.daily);
+        result.sort((a, b) => {
+          const priceA = a.rent?.local ?? a.rent?.daily ?? a.rent?.withDriver?.local ?? 0;
+          const priceB = b.rent?.local ?? b.rent?.daily ?? b.rent?.withDriver?.local ?? 0;
+          return priceB - priceA;
+        });
         break;
       case "Newest":
         // Sorts by the `year` field in fleet.json — newest first
-        result.sort((a, b) => b.year - a.year);
+        result.sort((a, b) => (b.year || 0) - (a.year || 0));
         break;
       case "Recommended":
       default:
