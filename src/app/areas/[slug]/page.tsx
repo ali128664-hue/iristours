@@ -13,8 +13,9 @@ export function generateStaticParams() {
   }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const area = serviceAreas.find(a => a.slug === params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const area = serviceAreas.find(a => a.slug === slug);
   if (!area) return { title: 'Area Not Found' };
 
   return {
@@ -27,8 +28,9 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   };
 }
 
-export default function AreaPage({ params }: { params: { slug: string } }) {
-  const area = serviceAreas.find(a => a.slug === params.slug);
+export default async function AreaPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const area = serviceAreas.find(a => a.slug === slug);
   if (!area) notFound();
 
   // Pick top 6 cars to showcase
