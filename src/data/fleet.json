@@ -1,5 +1,50 @@
 [
   {
+    "id": "v-honda-hr-v",
+    "name": "Honda HR-V",
+    "slug": "honda-hr-v",
+    "category": "SUV",
+    "brand": "Honda",
+    "year": 2024,
+    "transmission": "Automatic",
+    "fuelType": "Petrol",
+    "seats": 5,
+    "luggage": 3,
+    "driverIncluded": false,
+    "features": [
+      "Air Conditioning",
+      "Leather Seats",
+      "Modern SUV Design",
+      "Honda Sensing"
+    ],
+    "images": {
+      "thumbnail": "/fleet/Honda HR-V VTI (1).jpg",
+      "gallery": [
+        "/fleet/Honda HR-V VTI (1).jpg",
+        "/fleet/Honda HR-V VTI (2).jpg"
+      ]
+    },
+    "rent": {
+      "daily": 13000,
+      "weekly": 80000,
+      "monthly": 300000,
+      "withDriver": {
+        "local": 14500,
+        "interCity": 15500,
+        "outstation": 17000
+      },
+      "withoutDriver": {
+        "local": 13000,
+        "interCity": 14000,
+        "outstation": 15000
+      }
+    },
+    "seo": {
+      "title": "Honda HR-V Rent a Car Lahore | Iris Tours",
+      "description": "Rent Honda HR-V in Lahore DHA for premium SUV experience."
+    }
+  },
+  {
     "id": "v-toyota-hilux-single-cabin",
     "name": "Toyota Hilux Single Cabin",
     "slug": "toyota-hilux-single-cabin",
@@ -499,9 +544,15 @@
     "driverIncluded": true,
     "color": "Premium Assorted",
     "images": {
-      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/2022_Honda_City_ZX_i-VTEC_%28India%29_front_view_%28cropped%29.jpg/1280px-2022_Honda_City_ZX_i-VTEC_%28India%29_front_view_%28cropped%29.jpg",
+      "thumbnail": "/fleet/Honda city (1).webp",
       "gallery": [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/2022_Honda_City_ZX_i-VTEC_%28India%29_front_view_%28cropped%29.jpg/1280px-2022_Honda_City_ZX_i-VTEC_%28India%29_front_view_%28cropped%29.jpg"
+        "/fleet/Honda city (1).webp",
+        "/fleet/Honda city (2).webp",
+        "/fleet/Honda city (3).webp",
+        "/fleet/city-aspire-index.webp",
+        "/fleet/city-12-index.webp",
+        "/fleet/aspires-header.webp",
+        "/fleet/VTI-01_C-nn.webp"
       ]
     },
     "rent": {
@@ -692,9 +743,17 @@
     "driverIncluded": true,
     "color": "Premium Assorted",
     "images": {
-      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/2022_Honda_Civic_Sport%2C_front_8.15.22.jpg/1280px-2022_Honda_Civic_Sport%2C_front_8.15.22.jpg",
+      "thumbnail": "/fleet/Honda Civic Oriel (1).jpg",
       "gallery": [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/2022_Honda_Civic_Sport%2C_front_8.15.22.jpg/1280px-2022_Honda_Civic_Sport%2C_front_8.15.22.jpg"
+        "/fleet/Honda Civic Oriel (1).jpg",
+        "/fleet/Honda Civic Oriel (2).jpg",
+        "/fleet/Honda Civic Oriel (3).jpg",
+        "/fleet/Honda Civic RS (1).jpg",
+        "/fleet/Honda Civic RS (1).webp",
+        "/fleet/Honda Civic RS (2).jpg",
+        "/fleet/civic (1).jpg",
+        "/fleet/civic (1).webp",
+        "/fleet/civic (2).jpg"
       ]
     },
     "rent": {
