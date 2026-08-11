@@ -77,17 +77,21 @@ export default function Navbar() {
             if (link.name === "Fleet") {
               return (
                 <div key="fleet-dropdown" className="relative group">
-                  <div className="flex items-center gap-1 cursor-pointer py-4">
+                  <div className="flex items-center gap-1 cursor-pointer py-4 group">
                     <Link
                       href="/fleet"
                       className={clsx(
-                        "text-sm font-medium tracking-wide uppercase transition-colors hover:text-accent-primary",
-                        pathname.startsWith("/fleet") ? "text-accent-primary" : "text-text-secondary"
+                        "relative text-[15px] font-semibold tracking-wide transition-colors pb-1",
+                        pathname.startsWith("/fleet") ? "text-accent-primary" : "text-text-secondary group-hover:text-text-primary"
                       )}
                     >
                       Fleet
+                      <span className={clsx(
+                        "absolute -bottom-0 left-0 w-0 h-[2px] bg-accent-primary transition-all duration-300 group-hover:w-full",
+                        pathname.startsWith("/fleet") && "w-full"
+                      )} />
                     </Link>
-                    <ChevronDown size={14} className="text-text-secondary group-hover:text-accent-primary transition-colors" />
+                    <ChevronDown size={14} className="text-text-secondary group-hover:text-accent-primary transition-colors mt-[-4px]" />
                   </div>
                   
                   {/* Dropdown Menu */}
@@ -107,17 +111,21 @@ export default function Navbar() {
               const popularAreas = serviceAreas.filter(a => a.isPopular).slice(0, 10);
               return (
                 <div key="areas-dropdown" className="relative group">
-                  <div className="flex items-center gap-1 cursor-pointer py-4">
+                  <div className="flex items-center gap-1 cursor-pointer py-4 group">
                     <Link
                       href="/areas"
                       className={clsx(
-                        "text-sm font-medium tracking-wide uppercase transition-colors hover:text-accent-primary",
-                        pathname.startsWith("/areas") ? "text-accent-primary" : "text-text-secondary"
+                        "relative text-[15px] font-semibold tracking-wide transition-colors pb-1",
+                        pathname.startsWith("/areas") ? "text-accent-primary" : "text-text-secondary group-hover:text-text-primary"
                       )}
                     >
                       Service Areas
+                      <span className={clsx(
+                        "absolute -bottom-0 left-0 w-0 h-[2px] bg-accent-primary transition-all duration-300 group-hover:w-full",
+                        pathname.startsWith("/areas") && "w-full"
+                      )} />
                     </Link>
-                    <ChevronDown size={14} className="text-text-secondary group-hover:text-accent-primary transition-colors" />
+                    <ChevronDown size={14} className="text-text-secondary group-hover:text-accent-primary transition-colors mt-[-4px]" />
                   </div>
                   
                   {/* Mega Menu Dropdown */}
@@ -139,11 +147,15 @@ export default function Navbar() {
                 key={link.name}
                 href={link.href}
                 className={clsx(
-                  "text-sm font-medium tracking-wide uppercase transition-colors hover:text-accent-primary",
-                  pathname === link.href ? "text-accent-primary" : "text-text-secondary"
+                  "relative text-[15px] font-semibold tracking-wide transition-colors pb-1 group",
+                  pathname === link.href ? "text-accent-primary" : "text-text-secondary hover:text-text-primary"
                 )}
               >
                 {link.name}
+                <span className={clsx(
+                  "absolute -bottom-0 left-0 w-0 h-[2px] bg-accent-primary transition-all duration-300 group-hover:w-full",
+                  pathname === link.href && "w-full"
+                )} />
               </Link>
             );
           })}
