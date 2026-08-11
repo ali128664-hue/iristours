@@ -63,7 +63,7 @@ export default function Navbar() {
       className={clsx(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out border-b",
         isScrolled
-          ? "bg-bg-secondary/80 backdrop-blur-md border-border-primary py-4"
+          ? "bg-white/90 backdrop-blur-xl border-gray-200 shadow-sm py-3"
           : "bg-transparent border-transparent py-6"
       )}
     >
