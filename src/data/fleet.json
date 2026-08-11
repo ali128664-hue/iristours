@@ -42,7 +42,25 @@
     "seo": {
       "title": "Honda HR-V Rent a Car Lahore | Iris Tours",
       "description": "Rent Honda HR-V in Lahore DHA for premium SUV experience."
-    }
+    },
+    "description": "The Honda HR-V is a stylish and sporty SUV with a premium feel inside and out. Its elevated driving position and advanced Honda SENSING safety features make it a top pick for both city travel and highway cruises. Available from Iris Tours with flexible rental packages.",
+    "specifications": {
+      "luggage": 3,
+      "seats": 5,
+      "transmission": "Automatic",
+      "fuelType": "Petrol"
+    },
+    "fuel": "Petrol",
+    "policies": {
+      "fuelPolicy": "Fuel is included in the rental package. Vehicle is provided with a full tank.",
+      "mileagePolicy": "Local city packages include up to 100 km/day. Outstation packages offer unlimited mileage.",
+      "outstationPolicy": "Outstation charges apply per km beyond city limits. Driver allowance and toll charges are additional."
+    },
+    "relatedVehicles": [
+      "honda-city",
+      "honda-civic",
+      "honda-br-v"
+    ]
   },
   {
     "id": "v-toyota-hilux-single-cabin",
@@ -85,7 +103,25 @@
     "seo": {
       "title": "Toyota Hilux Single Cabin Rent a Car Lahore | Iris Tours",
       "description": "Rent Toyota Hilux Single Cabin in Lahore DHA for transport."
-    }
+    },
+    "description": "The Toyota Hilux Single Cabin is a durable and powerful pickup truck designed for light commercial use and off-road driving. Ideal for cargo transport, outstation deliveries, and adventure trips. Rent the Hilux Single Cabin from Iris Tours at affordable rates.",
+    "specifications": {
+      "luggage": 10,
+      "seats": 2,
+      "transmission": "Manual",
+      "fuelType": "Diesel"
+    },
+    "fuel": "Diesel",
+    "policies": {
+      "fuelPolicy": "Fuel is included in the rental package. Vehicle is provided with a full tank.",
+      "mileagePolicy": "Local city packages include up to 100 km/day. Outstation packages offer unlimited mileage.",
+      "outstationPolicy": "Outstation charges apply per km beyond city limits. Driver allowance and toll charges are additional."
+    },
+    "relatedVehicles": [
+      "toyota-corolla-cross",
+      "toyota-prius",
+      "toyota-camry"
+    ]
   },
   {
     "id": "v-toyota-corolla-cross",
@@ -128,7 +164,25 @@
     "seo": {
       "title": "Toyota Corolla Cross Rent a Car Lahore | Iris Tours",
       "description": "Rent Toyota Corolla Cross in Lahore DHA for modern SUV travel."
-    }
+    },
+    "description": "The Toyota Corolla Cross is a modern crossover SUV combining Corolla reliability with SUV versatility. Its spacious cabin, hybrid efficiency, and stylish exterior make it an excellent rental choice for families and corporate clients. Available at Iris Tours with flexible packages.",
+    "specifications": {
+      "luggage": 3,
+      "seats": 5,
+      "transmission": "Automatic",
+      "fuelType": "Hybrid"
+    },
+    "fuel": "Hybrid",
+    "policies": {
+      "fuelPolicy": "Fuel is included in the rental package. Vehicle is provided with a full tank.",
+      "mileagePolicy": "Local city packages include up to 100 km/day. Outstation packages offer unlimited mileage.",
+      "outstationPolicy": "Outstation charges apply per km beyond city limits. Driver allowance and toll charges are additional."
+    },
+    "relatedVehicles": [
+      "toyota-hilux-single-cabin",
+      "toyota-prius",
+      "toyota-camry"
+    ]
   },
   {
     "id": "v-toyota-prius",
@@ -171,7 +225,25 @@
     "seo": {
       "title": "Toyota Prius Rent a Car Lahore | Iris Tours",
       "description": "Rent Toyota Prius in Lahore DHA for comfortable family travel."
-    }
+    },
+    "description": "The Toyota Prius is a globally recognized hybrid sedan known for its exceptional fuel efficiency and eco-friendly performance. A popular choice for long-distance outstation trips and daily corporate rentals in Lahore. Rent the Toyota Prius from Iris Tours at competitive rates.",
+    "specifications": {
+      "luggage": 2,
+      "seats": 5,
+      "transmission": "Automatic",
+      "fuelType": "Hybrid"
+    },
+    "fuel": "Hybrid",
+    "policies": {
+      "fuelPolicy": "Fuel is included in the rental package. Vehicle is provided with a full tank.",
+      "mileagePolicy": "Local city packages include up to 100 km/day. Outstation packages offer unlimited mileage.",
+      "outstationPolicy": "Outstation charges apply per km beyond city limits. Driver allowance and toll charges are additional."
+    },
+    "relatedVehicles": [
+      "toyota-hilux-single-cabin",
+      "toyota-corolla-cross",
+      "toyota-camry"
+    ]
   },
   {
     "id": "v-toyota-camry",
@@ -215,7 +287,25 @@
     "seo": {
       "title": "Toyota Camry Rent a Car Lahore | Iris Tours",
       "description": "Rent Toyota Camry Hybrid in Lahore DHA for executive travel."
-    }
+    },
+    "description": "The Toyota Camry Hybrid is an executive sedan offering the best of both worlds: the prestige of a full-size luxury car and the efficiency of a hybrid engine. Perfect for VIP airport transfers, corporate meetings, and premium travel in Lahore DHA. Book the Camry from Iris Tours.",
+    "specifications": {
+      "luggage": 2,
+      "seats": 5,
+      "transmission": "Automatic",
+      "fuelType": "Hybrid"
+    },
+    "fuel": "Hybrid",
+    "policies": {
+      "fuelPolicy": "Fuel is included in the rental package. Vehicle is provided with a full tank.",
+      "mileagePolicy": "Local city packages include up to 100 km/day. Outstation packages offer unlimited mileage.",
+      "outstationPolicy": "Outstation charges apply per km beyond city limits. Driver allowance and toll charges are additional."
+    },
+    "relatedVehicles": [
+      "toyota-hilux-single-cabin",
+      "toyota-corolla-cross",
+      "toyota-prius"
+    ]
   },
   {
     "id": "v-suzuki-every",
@@ -267,7 +357,25 @@
     "seo": {
       "title": "Suzuki Every Rent a Car Lahore | Iris Tours",
       "description": "Rent Suzuki Every in Lahore DHA for family trips."
-    }
+    },
+    "description": "The Suzuki Every is a versatile mini-van ideal for groups, cargo, and outstation journeys. Its flat floor and wide doors make loading and unloading easy. Iris Tours offers the Suzuki Every for corporate and group travel throughout Pakistan.",
+    "specifications": {
+      "luggage": 3,
+      "seats": 7,
+      "transmission": "Automatic",
+      "fuelType": "Petrol"
+    },
+    "fuel": "Petrol",
+    "policies": {
+      "fuelPolicy": "Fuel is included in the rental package. Vehicle is provided with a full tank.",
+      "mileagePolicy": "Local city packages include up to 100 km/day. Outstation packages offer unlimited mileage.",
+      "outstationPolicy": "Outstation charges apply per km beyond city limits. Driver allowance and toll charges are additional."
+    },
+    "relatedVehicles": [
+      "suzuki-swift",
+      "suzuki-alto",
+      "suzuki-wagon-r"
+    ]
   },
   {
     "id": "v-suzuki-swift",
@@ -320,7 +428,25 @@
     "seo": {
       "title": "Suzuki Swift Rent a Car Lahore | Iris Tours",
       "description": "Rent Suzuki Swift in Lahore DHA."
-    }
+    },
+    "description": "The Suzuki Swift combines sporty styling with everyday practicality. Its zippy performance and modern look make it an excellent choice for corporate trips, airport pickups, and touring around Lahore. Iris Tours offers the Swift at competitive daily, weekly, and monthly rental rates.",
+    "specifications": {
+      "luggage": 2,
+      "seats": 5,
+      "transmission": "Automatic",
+      "fuelType": "Petrol"
+    },
+    "fuel": "Petrol",
+    "policies": {
+      "fuelPolicy": "Fuel is included in the rental package. Vehicle is provided with a full tank.",
+      "mileagePolicy": "Local city packages include up to 100 km/day. Outstation packages offer unlimited mileage.",
+      "outstationPolicy": "Outstation charges apply per km beyond city limits. Driver allowance and toll charges are additional."
+    },
+    "relatedVehicles": [
+      "suzuki-every",
+      "suzuki-alto",
+      "suzuki-wagon-r"
+    ]
   },
   {
     "id": "v-suzuki-alto",
