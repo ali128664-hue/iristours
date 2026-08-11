@@ -26,6 +26,9 @@ export const metadata: Metadata = {
     "geo.placename": "Lahore",
     "geo.position": "31.4820;74.4079",
     "ICBM": "31.4820, 74.4079"
+  },
+  verification: {
+    google: "gsCo28S1rrtbINhhxk28uBe6F6LReKN3LzkDCOfiq14",
   }
 };
 
