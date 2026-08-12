@@ -115,7 +115,7 @@ export default function Footer() {
                 <ul className="flex flex-col gap-3">
                   <li className="flex items-start gap-3">
                     <FaMapMarkerAlt className="text-text-primary mt-1 flex-shrink-0" size={14} />
-                    <span className="text-text-secondary text-sm leading-relaxed">Malka Hans, Islamabad, Punjab</span>
+                    <span className="text-text-secondary text-sm leading-relaxed">Islamabad, Pakistan</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <FaPhone className="text-text-primary flex-shrink-0" size={14} />

@@ -114,7 +114,7 @@ export default function RootLayout({
               {
                 // Update business address here (Islamabad office)
                 "@type": "PostalAddress",
-                "streetAddress": "Malka Hans",
+                "streetAddress": "Islamabad",
                 "addressLocality": "Islamabad",
                 "addressRegion": "Punjab",
                 "addressCountry": "PK"
