@@ -21,6 +21,7 @@ import SmoothScroll from "@/components/layout/SmoothScroll";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import FloatingWhatsApp from "@/components/shared/FloatingWhatsApp";
+import { CurrencyProvider } from "@/context/CurrencyContext";
 import Script from "next/script";
 
 // ─── SITE-WIDE SEO METADATA ───────────────────────────────────────────────────
@@ -162,14 +163,16 @@ export default function RootLayout({
           every page automatically through this layout wrapper.
       ──────────────────────────────────────────────────────────────────────── */}
       <body className="antialiased bg-bg-primary text-text-primary min-h-screen flex flex-col">
-        <SmoothScroll>
-          <Navbar />
-          <main className="flex-grow pt-[88px]">
-            {children}
-          </main>
-          <Footer />
-          <FloatingWhatsApp />
-        </SmoothScroll>
+        <CurrencyProvider>
+          <SmoothScroll>
+            <Navbar />
+            <main className="flex-grow pt-[88px]">
+              {children}
+            </main>
+            <Footer />
+            <FloatingWhatsApp />
+          </SmoothScroll>
+        </CurrencyProvider>
       </body>
     </html>
   );

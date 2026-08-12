@@ -19,11 +19,12 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ChevronRight, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronRight, ChevronDown, Globe } from "lucide-react";
 import clsx from "clsx";
 // Logo component — the logo image is at public/logo.png, replace that file to update the logo
 import Logo from "@/components/ui/Logo";
 import serviceAreas from "@/data/serviceAreas.json";
+import { useCurrency } from "@/context/CurrencyContext";
 
 // ─── NAVIGATION LINKS ─────────────────────────────────────────────────────────
 // Add or remove navigation items here.
@@ -42,6 +43,7 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
+  const { currency, toggleCurrency } = useCurrency();
 
   // Adds a blurred background to the navbar when the user scrolls down
   useEffect(() => {
@@ -161,8 +163,17 @@ export default function Navbar() {
           })}
         </nav>
 
-        {/* Desktop CTA Button */}
-        <div className="hidden lg:block">
+        {/* Desktop Actions */}
+        <div className="hidden lg:flex items-center gap-4">
+          <button 
+            onClick={toggleCurrency}
+            className="flex items-center gap-2 px-3 py-2 rounded-full border border-border-primary hover:bg-bg-secondary transition-colors text-sm font-semibold text-text-primary shadow-sm"
+            title="Toggle Currency"
+          >
+            <Globe size={16} />
+            {currency === 'PKR' ? 'PKR' : 'USD'}
+          </button>
+
           {/* Change WhatsApp number here (desktop button): replace 923154973906 with your number */}
           <Link
             href="https://wa.me/923154973906?text=Hi!%20I%20want%20to%20book%20a%20car."
@@ -220,14 +231,21 @@ export default function Navbar() {
                 </motion.div>
               ))}
               
-              {/* Mobile WhatsApp CTA Button */}
+              {/* Mobile Actions */}
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 10 }}
                 transition={{ delay: navLinks.length * 0.05 + 0.1, duration: 0.3 }}
-                className="mt-6"
+                className="mt-6 flex flex-col gap-4"
               >
+                <button 
+                  onClick={toggleCurrency}
+                  className="w-full flex items-center justify-center gap-2 px-6 py-4 rounded-xl border border-border-primary hover:bg-bg-secondary text-text-primary font-bold text-sm uppercase tracking-wider transition-all"
+                >
+                  <Globe size={18} />
+                  Switch to {currency === 'PKR' ? 'USD' : 'PKR'}
+                </button>
                 {/* Change WhatsApp number here (mobile button): replace 923154973906 with your number */}
                 <Link
                   href="https://wa.me/923154973906?text=Hi!%20I%20want%20to%20book%20a%20car."

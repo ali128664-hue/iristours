@@ -25,6 +25,8 @@ import { motion } from "framer-motion";
 import { Users, Settings, Fuel, ShieldCheck, UserCircle2, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import WhatsAppBookingPopup from "@/components/shared/WhatsAppBookingPopup";
+import { useCurrency } from "@/context/CurrencyContext";
+import { convertAndFormatPrice } from "@/utils/currency";
 
 // Props: the vehicle data object from fleet.json, and the stagger animation index
 interface VehicleProps {
@@ -35,6 +37,7 @@ interface VehicleProps {
 export default function VehicleCard({ vehicle, index = 0 }: VehicleProps) {
   const [isPopupOpen, setIsPopupOpen] = useState(false); // controls the booking popup
   const [currentImageIndex, setCurrentImageIndex] = useState(0); // current slide in image slider
+  const { currency } = useCurrency();
 
   const displayPrice = vehicle.rent?.local ?? vehicle.rent?.daily ?? vehicle.rent?.withDriver?.local ?? 0;
 
@@ -125,8 +128,8 @@ export default function VehicleCard({ vehicle, index = 0 }: VehicleProps) {
             <div className="text-right">
               <p className="text-xs text-text-secondary uppercase tracking-wider mb-1">City Rate</p>
               {/* Price shown here comes from rent.local, rent.daily or rent.withDriver.local in fleet.json */}
-              <p className="text-lg font-bold text-accent-primary">Rs. {displayPrice.toLocaleString()}</p>
-              {vehicle.rent.interCity && <p className="text-xs text-text-secondary">Inter-City: Rs. {vehicle.rent.interCity.toLocaleString()}</p>}
+              <p className="text-lg font-bold text-accent-primary">{convertAndFormatPrice(displayPrice, currency)}</p>
+              {vehicle.rent.interCity && <p className="text-xs text-text-secondary">Inter-City: {convertAndFormatPrice(vehicle.rent.interCity, currency)}</p>}
             </div>
           </div>
           

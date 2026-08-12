@@ -20,6 +20,8 @@ import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import { Settings, Users, Fuel, Briefcase, CheckCircle2, Phone, MessageCircle, Star, ArrowLeft, MapPin, Clock, Shield } from "lucide-react";
 import Link from "next/link";
+import { Button } from "@/components/ui/Button";
+import VehiclePricing from "@/components/fleet/VehiclePricing";
 import Image from "next/image";
 import fleetData from "@/data/fleet.json";
 import VehicleCard from "@/components/fleet/VehicleCard";
@@ -299,70 +301,7 @@ export default async function VehicleDetailPage({ params }: Props) {
             <div className="lg:col-span-1">
               <div className="sticky top-24 space-y-4">
                 {/* Price Card — prices pulled from the `rent` object in fleet.json */}
-                <div className="bg-bg-card border border-border-primary rounded-3xl p-6 shadow-xl">
-                  <p className="text-text-secondary text-sm font-medium mb-2">Starting from</p>
-                  <div className="flex items-end gap-2 mb-6">
-                    <span className="text-4xl font-extrabold text-accent-primary">
-                      PKR {(vehicle.rent?.local || vehicle.rent?.daily || vehicle.rent?.withDriver?.local || 0).toLocaleString()}
-                    </span>
-                    <span className="text-text-secondary mb-1">/day</span>
-                  </div>
-
-                  {/* Detailed price breakdown */}
-                  {vehicle.rent && (
-                    <div className="space-y-3 mb-6">
-                      {vehicle.rent.withDriver?.local && (
-                        <div className="flex justify-between items-center py-2 border-b border-border-primary">
-                          <span className="text-text-secondary text-sm">With Driver (Local)</span>
-                          <span className="font-semibold text-text-primary">PKR {vehicle.rent.withDriver.local.toLocaleString()}</span>
-                        </div>
-                      )}
-                      {vehicle.rent.withDriver?.interCity && (
-                        <div className="flex justify-between items-center py-2 border-b border-border-primary">
-                          <span className="text-text-secondary text-sm">With Driver (Inter-City)</span>
-                          <span className="font-semibold text-text-primary">PKR {vehicle.rent.withDriver.interCity.toLocaleString()}</span>
-                        </div>
-                      )}
-                      {vehicle.rent.withDriver?.outstation && (
-                        <div className="flex justify-between items-center py-2 border-b border-border-primary">
-                          <span className="text-text-secondary text-sm">Outstation</span>
-                          <span className="font-semibold text-text-primary">PKR {vehicle.rent.withDriver.outstation.toLocaleString()}</span>
-                        </div>
-                      )}
-                      {vehicle.rent.weekly && (
-                        <div className="flex justify-between items-center py-2 border-b border-border-primary">
-                          <span className="text-text-secondary text-sm">Weekly</span>
-                          <span className="font-semibold text-text-primary">PKR {vehicle.rent.weekly.toLocaleString()}</span>
-                        </div>
-                      )}
-                      {vehicle.rent.monthly && (
-                        <div className="flex justify-between items-center py-2">
-                          <span className="text-text-secondary text-sm">Monthly</span>
-                          <span className="font-semibold text-text-primary">PKR {vehicle.rent.monthly.toLocaleString()}</span>
-                        </div>
-                      )}
-                    </div>
-                  )}
-
-                  {/* WhatsApp Booking Button — uses whatsappUrl defined at the top of this file */}
-                  <a
-                    href={whatsappUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-3 w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 rounded-2xl transition-all shadow-lg shadow-green-500/30 hover:shadow-green-500/50 hover:-translate-y-0.5"
-                  >
-                    <MessageCircle size={20} />
-                    Book on WhatsApp
-                  </a>
-                  {/* Call Now button — update this phone number if needed */}
-                  <a
-                    href="tel:+923154973906"
-                    className="flex items-center justify-center gap-3 w-full mt-3 border border-border-primary bg-bg-secondary hover:border-accent-primary text-text-primary font-semibold py-3 rounded-2xl transition-all"
-                  >
-                    <Phone size={18} />
-                    Call Now
-                  </a>
-                </div>
+                <VehiclePricing rent={vehicle.rent} whatsappUrl={whatsappUrl} />
 
                 {/* ─── WHY CHOOSE IRIS TOURS ─────────────────────────────────────────
                     Edit these bullet points to change the selling points shown
