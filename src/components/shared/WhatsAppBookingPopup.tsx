@@ -13,10 +13,12 @@
 
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Calendar, MapPin, Users, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { useCurrency } from "@/context/CurrencyContext";
+import { convertAndFormatPrice } from "@/utils/currency";
 
 // Props passed in from VehicleCard: the car name, category, and daily price
 interface BookingPopupProps {
@@ -40,11 +42,31 @@ export default function WhatsAppBookingPopup({ isOpen, onClose, productName, cat
     passengers: "",
     notes: ""
   });
+  
+  const { currency } = useCurrency();
 
   // Updates form state when any input field changes
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+
+  // Automatically calculate days when dates change
+  useEffect(() => {
+    if (formData.pickupDate && formData.returnDate) {
+      const start = new Date(formData.pickupDate);
+      const end = new Date(formData.returnDate);
+      const diffTime = end.getTime() - start.getTime();
+      
+      if (diffTime >= 0) {
+        // If same day, count as 1 day. If next day, count as 2 days? Or 24h?
+        // standard is diff in days, minimum 1.
+        let diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+        if (diffDays === 0) diffDays = 1;
+        
+        setFormData(prev => ({ ...prev, days: diffDays.toString() }));
+      }
+    }
+  }, [formData.pickupDate, formData.returnDate]);
 
   // Builds a formatted WhatsApp message and opens WhatsApp chat
   const handleGenerateWhatsApp = () => {
@@ -60,7 +82,7 @@ I would like to book the following vehicle/tour.
 
 *Vehicle/Tour:* ${productName}
 *Category:* ${category}
-${dailyPrice ? `*Daily Rent:* Rs. ${dailyPrice.toLocaleString()}` : ''}
+${dailyPrice ? `*Daily Rent:* ${convertAndFormatPrice(dailyPrice, currency)}` : ''}
 
 *Pickup City:* ${formData.pickupCity}
 *Drop City:* ${formData.dropCity}
