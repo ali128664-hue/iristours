@@ -102,6 +102,9 @@ export default function AboutPage() {
               Whether you require an elegant sedan for a corporate event, a spacious SUV for a northern adventure, 
               or a grand limousine for your wedding day, we deliver excellence without compromise.
             </p>
+            <p className="text-lg text-text-secondary leading-relaxed">
+              Founded and led by <strong>Munir Hussain</strong>, Iris Tours has built a strong reputation for reliability and premium service. Under his leadership, the company has become a trusted partner for numerous European clients and international visitors who frequently travel to Pakistan. We understand global standards of hospitality and bring that excellence to every journey.
+            </p>
           </motion.div>
         </div>
 
