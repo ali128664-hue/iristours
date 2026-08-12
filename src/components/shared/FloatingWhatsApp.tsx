@@ -7,7 +7,7 @@
  *  - A circular WhatsApp icon button with a pulse animation
  *
  * HOW TO CHANGE:
- *  - WhatsApp number → change the number in the `href` below (currently 923066305875)
+ *  - WhatsApp number → change the number in the `href` below (currently 923154973906)
  *  - Tooltip message → change the text inside the <span> below
  */
 
@@ -29,12 +29,12 @@ export default function FloatingWhatsApp() {
           className="hidden md:flex bg-bg-card border border-border-primary rounded-full px-4 py-2 shadow-lg items-center"
         >
           <span className="text-sm font-medium text-text-primary tracking-wide">
-            Direct Call <span className="text-accent-primary ml-1">+92 306 6305875</span>
+            Direct Call <span className="text-accent-primary ml-1">+92 315 4973906</span>
           </span>
         </motion.div>
         
         <motion.a
-          href="tel:+923066305875"
+          href="tel:+923154973906"
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{
@@ -66,7 +66,7 @@ export default function FloatingWhatsApp() {
         </motion.div>
 
         <motion.a
-          href="https://wa.me/923066305875?text=Hi!%20I%20need%20help."
+          href="https://wa.me/923154973906?text=Hi!%20I%20need%20help."
           target="_blank"
           rel="noopener noreferrer"
           initial={{ scale: 0 }}

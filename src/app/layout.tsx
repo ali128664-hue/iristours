@@ -29,17 +29,17 @@ import Script from "next/script";
 export const metadata: Metadata = {
   metadataBase: new URL("https://iristours.net"),
   title: {
-    default: "Premium Rent a Car in Lahore DHA & Pakpattan | Iris Tours",
+    default: "Premium Rent a Car in Lahore DHA & Islamabad | Iris Tours",
     template: "%s | Iris Tours Pakistan",
   },
-  description: "Best Rent a Car in Lahore DHA and Pakpattan. Premium luxury car rental, SUVs, wedding cars, airport transfers, and northern tours in Pakistan. Book instantly via WhatsApp.",
-  keywords: "Rent a car in Lahore, Best Rent a Car DHA Lahore, Cheap car rental Lahore, Luxury car rental Lahore, Wedding cars Lahore, Airport transfer Lahore, Prado for rent Lahore, Corolla for rent Lahore, V8 for rent Pakistan, Rent a car near me Lahore, Rent a car Pakpattan, Rent a car Lahore to Islamabad, DHA Phase 1 Rent a Car, Chauffeur driven cars Lahore, SUV rental Lahore, Iris Tours Lahore",
+  description: "Best Rent a Car in Lahore DHA and Islamabad. Premium luxury car rental, SUVs, wedding cars, airport transfers, and northern tours in Pakistan. Book instantly via WhatsApp.",
+  keywords: "Rent a car in Lahore, Best Rent a Car DHA Lahore, Cheap car rental Lahore, Luxury car rental Lahore, Wedding cars Lahore, Airport transfer Lahore, Prado for rent Lahore, Corolla for rent Lahore, V8 for rent Pakistan, Rent a car near me Lahore, Rent a car Islamabad, Rent a car Lahore to Islamabad, DHA Phase 1 Rent a Car, Chauffeur driven cars Lahore, SUV rental Lahore, Iris Tours Lahore",
   alternates: {
     canonical: "https://iristours.net",
   },
   openGraph: {
-    title: "Iris Tours | Rent a Car in Lahore & Pakpattan",
-    description: "Best Rent a Car in Lahore DHA and Pakpattan. Premium luxury car rental, SUVs, and wedding cars.",
+    title: "Iris Tours | Rent a Car in Lahore & Islamabad",
+    description: "Best Rent a Car in Lahore DHA and Islamabad. Premium luxury car rental, SUVs, and wedding cars.",
     type: "website",
     locale: "en_PK",
     url: "https://iristours.net",
@@ -55,8 +55,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Iris Tours | Rent a Car in Lahore & Pakpattan",
-    description: "Best Rent a Car in Lahore DHA and Pakpattan. Premium luxury car rental, SUVs, and wedding cars.",
+    title: "Iris Tours | Rent a Car in Lahore & Islamabad",
+    description: "Best Rent a Car in Lahore DHA and Islamabad. Premium luxury car rental, SUVs, and wedding cars.",
     images: ["https://iristours.net/twitter-image.jpg"],
   },
   other: {
@@ -86,7 +86,7 @@ export default function RootLayout({
             It powers Google's rich result features (business panel, maps, etc.)
             
             TO UPDATE:
-            - Company phone → change "telephone" value (currently "+923066305875")
+            - Company phone → change "telephone" value (currently "+923154973906")
             - Business address → change the "address" array entries below
             - WhatsApp number → change the "sameAs" URL at the bottom
         ──────────────────────────────────────────────────────────────────────── */}
@@ -99,7 +99,7 @@ export default function RootLayout({
             "@id": "https://iristours.net",
             "url": "https://iristours.net",
             // Update phone number here for Schema.org business info
-            "telephone": "+923066305875",
+            "telephone": "+923154973906",
             "priceRange": "PKR",
             "address": [
               {
@@ -112,10 +112,10 @@ export default function RootLayout({
                 "addressCountry": "PK"
               },
               {
-                // Update business address here (Pakpattan office)
+                // Update business address here (Islamabad office)
                 "@type": "PostalAddress",
                 "streetAddress": "Malka Hans",
-                "addressLocality": "Pakpattan",
+                "addressLocality": "Islamabad",
                 "addressRegion": "Punjab",
                 "addressCountry": "PK"
               }
@@ -132,7 +132,7 @@ export default function RootLayout({
               "closes": "23:59"
             },
             "sameAs": [
-              "https://wa.me/923066305875",
+              "https://wa.me/923154973906",
               "https://web.facebook.com/people/Iris-tours-Rental-Car/100083145616731/"
             ]
           })

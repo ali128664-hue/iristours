@@ -7,12 +7,12 @@
  *  - Social media icon links (Instagram, Facebook, LinkedIn)
  *  - Quick Links column (main site pages)
  *  - Company column (about, gallery, FAQ, contact, privacy)
- *  - Contact info for Lahore and Pakpattan offices
+ *  - Contact info for Lahore and Islamabad offices
  *  - WhatsApp and email links
  *
  * HOW TO CHANGE THINGS:
  *  - Phone numbers → find the `tel:+92...` links below and update them
- *  - WhatsApp number → find `wa.me/923066305875` and update it
+ *  - WhatsApp number → find `wa.me/923154973906` and update it
  *  - Social media links → find the social icon <a> tags and change the href values
  *  - Footer nav links → edit the <li> items in the Quick Links and Company sections
  */
@@ -104,23 +104,23 @@ export default function Footer() {
                   <li className="flex items-center gap-3">
                     <FaPhone className="text-text-primary flex-shrink-0" size={14} />
                     {/* Change Lahore phone number here */}
-                    <a href="tel:+923066305875" className="text-text-secondary text-sm hover:text-accent-primary transition-colors">+92 3066 30 58 75</a>
+                    <a href="tel:+923154973906" className="text-text-secondary text-sm hover:text-accent-primary transition-colors">+92 315 497 3906</a>
                   </li>
                 </ul>
               </div>
 
-              {/* Pakpattan Office — Update address and phone number here */}
+              {/* Islamabad Office — Update address and phone number here */}
               <div>
-                <h5 className="text-accent-primary font-medium mb-3 text-sm tracking-wide uppercase">Pakpattan Office</h5>
+                <h5 className="text-accent-primary font-medium mb-3 text-sm tracking-wide uppercase">Islamabad Office</h5>
                 <ul className="flex flex-col gap-3">
                   <li className="flex items-start gap-3">
                     <FaMapMarkerAlt className="text-text-primary mt-1 flex-shrink-0" size={14} />
-                    <span className="text-text-secondary text-sm leading-relaxed">Malka Hans, Pakpattan, Punjab</span>
+                    <span className="text-text-secondary text-sm leading-relaxed">Malka Hans, Islamabad, Punjab</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <FaPhone className="text-text-primary flex-shrink-0" size={14} />
-                    {/* Change Pakpattan phone number here */}
-                    <a href="tel:+923066305875" className="text-text-secondary text-sm hover:text-accent-primary transition-colors">+92 3066 30 58 75</a>
+                    {/* Change Islamabad phone number here */}
+                    <a href="tel:+923066305875" className="text-text-secondary text-sm hover:text-accent-primary transition-colors">+92 306 630 5875</a>
                   </li>
                 </ul>
               </div>
@@ -129,8 +129,8 @@ export default function Footer() {
               <ul className="flex flex-col gap-3 pt-3 border-t border-border-primary/50">
                 <li className="flex items-center gap-3">
                   <FaWhatsapp className="text-text-primary flex-shrink-0" size={16} />
-                  {/* Change WhatsApp number here — replace 923066305875 with your number */}
-                  <a href="https://wa.me/923066305875?text=Hi!%20I%20need%20more%20information." target="_blank" rel="noreferrer" className="text-text-secondary text-sm hover:text-accent-primary transition-colors">WhatsApp Chat</a>
+                  {/* Change WhatsApp number here — replace 923154973906 with your number */}
+                  <a href="https://wa.me/923154973906?text=Hi!%20I%20need%20more%20information." target="_blank" rel="noreferrer" className="text-text-secondary text-sm hover:text-accent-primary transition-colors">WhatsApp Chat</a>
                 </li>
                 <li className="flex items-center gap-3">
                   <FaEnvelope className="text-text-primary flex-shrink-0" size={14} />

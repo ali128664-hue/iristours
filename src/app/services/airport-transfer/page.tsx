@@ -40,7 +40,7 @@ export default function AirportTransferPage() {
           <p className="text-text-secondary text-lg mb-8">
             Professional Drivers • Flight Tracking • 24/7 Service • Luxury Vehicles
           </p>
-          <a href="https://wa.me/923066305875?text=I%20need%20an%20airport%20transfer" target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/923154973906?text=I%20need%20an%20airport%20transfer" target="_blank" rel="noopener noreferrer">
             <Button variant="primary" className="px-10 py-4">Book on WhatsApp</Button>
           </a>
         </div>
@@ -98,7 +98,7 @@ export default function AirportTransferPage() {
             Book your premium airport transfer today. Skip the taxi lines and travel in ultimate comfort.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="https://wa.me/923066305875?text=I%20need%20an%20airport%20transfer" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/923154973906?text=I%20need%20an%20airport%20transfer" target="_blank" rel="noopener noreferrer">
               <Button variant="primary">Book on WhatsApp</Button>
             </a>
             <Link href="/fleet">

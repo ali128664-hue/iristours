@@ -98,7 +98,7 @@ export default function HeroSection() {
           {/* Small subtitle line above the main heading — change text here */}
           <div className="hero-text overflow-hidden mb-4">
             <h2 className="text-accent-secondary font-bold tracking-[0.2em] uppercase text-sm md:text-base">
-              Premium Rent a Car in Lahore & Pakpattan
+              Premium Rent a Car in Lahore & Islamabad
             </h2>
           </div>
           
@@ -127,7 +127,7 @@ export default function HeroSection() {
             </div>
             {/* Secondary button — opens WhatsApp. Change the wa.me number to update it. */}
             <div className="hero-btn w-full sm:w-auto">
-              <Button variant="glass" magnetic className="w-full sm:w-auto px-10 py-4 text-sm bg-white border border-gray-200 shadow-xl shadow-black/5 hover:bg-gray-50" onClick={() => window.open('https://wa.me/923066305875?text=Hi!%20I%20want%20to%20book%20a%20car.', '_blank')}>
+              <Button variant="glass" magnetic className="w-full sm:w-auto px-10 py-4 text-sm bg-white border border-gray-200 shadow-xl shadow-black/5 hover:bg-gray-50" onClick={() => window.open('https://wa.me/923154973906?text=Hi!%20I%20want%20to%20book%20a%20car.', '_blank')}>
                 Book on WhatsApp
               </Button>
             </div>

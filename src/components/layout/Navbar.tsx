@@ -10,7 +10,7 @@
  * HOW TO CHANGE THINGS:
  *  - Add/remove nav links → edit the `navLinks` array below
  *  - Change the logo → replace the file at public/logo.png
- *  - Change WhatsApp number → find the two `wa.me/923066305875` links in this file
+ *  - Change WhatsApp number → find the two `wa.me/923154973906` links in this file
  */
 
 "use client";
@@ -163,9 +163,9 @@ export default function Navbar() {
 
         {/* Desktop CTA Button */}
         <div className="hidden lg:block">
-          {/* Change WhatsApp number here (desktop button): replace 923066305875 with your number */}
+          {/* Change WhatsApp number here (desktop button): replace 923154973906 with your number */}
           <Link
-            href="https://wa.me/923066305875?text=Hi!%20I%20want%20to%20book%20a%20car."
+            href="https://wa.me/923154973906?text=Hi!%20I%20want%20to%20book%20a%20car."
             target="_blank"
             rel="noopener noreferrer"
             className="px-6 py-2.5 rounded-full bg-gradient-to-tr from-accent-secondary to-accent-primary text-white font-semibold text-sm uppercase tracking-wider hover:brightness-110 transition-all shadow-[0_8px_16px_-4px_rgba(245,158,11,0.5),inset_0_2px_4px_rgba(255,255,255,0.4)] hover:shadow-[0_12px_24px_-6px_rgba(245,158,11,0.6),inset_0_2px_4px_rgba(255,255,255,0.6)] hover:-translate-y-1 inline-block border border-white/20"
@@ -228,9 +228,9 @@ export default function Navbar() {
                 transition={{ delay: navLinks.length * 0.05 + 0.1, duration: 0.3 }}
                 className="mt-6"
               >
-                {/* Change WhatsApp number here (mobile button): replace 923066305875 with your number */}
+                {/* Change WhatsApp number here (mobile button): replace 923154973906 with your number */}
                 <Link
-                  href="https://wa.me/923066305875?text=Hi!%20I%20want%20to%20book%20a%20car."
+                  href="https://wa.me/923154973906?text=Hi!%20I%20want%20to%20book%20a%20car."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-gradient-to-r from-accent-secondary to-accent-primary text-white font-bold text-sm uppercase tracking-wider hover:brightness-110 shadow-lg shadow-accent-primary/20 transition-all active:scale-[0.98]"

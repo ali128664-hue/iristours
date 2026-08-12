@@ -75,18 +75,18 @@ ${(vehicle.features || []).map((f: string) => `- ${f}`).join("\n")}
 Iris Tours is a premier car rental and chauffeur service based in Lahore, Pakistan. We specialize in airport transfers, corporate travel, wedding rentals, outstation trips, and luxury vehicle hire across Pakistan.
 
 - **Location:** DHA Phase 5, Lahore, Pakistan
-- **WhatsApp:** +92-306-630-5875
+- **WhatsApp:** +92-315-497-3906
 - **Website:** https://iristours.com
 - **Fleet Page:** ${baseUrl}/fleet
 
 ## Contact & Booking
 To book the ${vehicle.name}, contact Iris Tours via:
-- WhatsApp: https://wa.me/923066305875
-- Phone: +92-306-630-5875
+- WhatsApp: https://wa.me/923154973906
+- Phone: +92-315-497-3906
 - Online: ${pageUrl}
 `;
   // Update WhatsApp number and website URL in the "About Iris Tours" and "Contact & Booking"
-  // sections above — replace +92-306-630-5875 and 923066305875 with your real numbers.
+  // sections above — replace +92-315-497-3906 and 923154973906 with your real numbers.
 
   return new NextResponse(content, {
     status: 200,

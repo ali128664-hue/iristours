@@ -108,7 +108,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
         {/* Call to Action */}
         <div className="mt-24 text-center">
           <Link
-            href={`https://wa.me/923066305875?text=Hi!%20I%20am%20looking%20to%20rent%20a%20car%20in%20${encodeURIComponent(area.name)}.`}
+            href={`https://wa.me/923154973906?text=Hi!%20I%20am%20looking%20to%20rent%20a%20car%20in%20${encodeURIComponent(area.name)}.`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-tr from-accent-secondary to-accent-primary text-white font-bold text-lg uppercase tracking-wider hover:brightness-110 shadow-lg shadow-accent-primary/20 transition-all hover:-translate-y-1"

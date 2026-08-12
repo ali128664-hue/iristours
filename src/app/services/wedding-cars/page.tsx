@@ -31,7 +31,7 @@ export default function WeddingCarsPage() {
           <p className="text-text-secondary text-lg mb-8">
             Premium Fleet • Floral Decorations • Professional Chauffeurs
           </p>
-          <a href="https://wa.me/923066305875?text=I%20want%20to%20book%20a%20wedding%20car" target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/923154973906?text=I%20want%20to%20book%20a%20wedding%20car" target="_blank" rel="noopener noreferrer">
             <Button variant="primary" className="px-10 py-4">Plan Your Big Day</Button>
           </a>
         </div>
@@ -73,7 +73,7 @@ export default function WeddingCarsPage() {
               From Mercedes S-Class to Toyota Land Cruiser V8, we have the perfect vehicle to match your style.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <a href="https://wa.me/923066305875?text=I%20want%20to%20book%20a%20wedding%20car" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/923154973906?text=I%20want%20to%20book%20a%20wedding%20car" target="_blank" rel="noopener noreferrer">
                 <Button variant="primary">Contact on WhatsApp</Button>
               </a>
               <Link href="/fleet">

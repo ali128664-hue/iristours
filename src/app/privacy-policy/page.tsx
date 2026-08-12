@@ -76,7 +76,7 @@ export default function PrivacyPolicyPage() {
             If you have any questions or concerns regarding this Privacy Policy or how your data is handled, please contact us:
           </p>
           <ul className="list-disc pl-6 space-y-2 mb-6">
-            <li><strong>Phone / WhatsApp:</strong> <a href="tel:+923066305875">+92 306 6305875</a></li>
+            <li><strong>Phone / WhatsApp:</strong> <a href="tel:+923154973906">+92 315 4973906</a></li>
             <li><strong>Email:</strong> <a href="mailto:info@iristours.net">info@iristours.net</a></li>
             <li><strong>Lahore Office:</strong> DHA Phase-1, Sector-H, 143 Street, 153, Lahore</li>
           </ul>

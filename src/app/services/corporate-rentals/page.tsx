@@ -31,7 +31,7 @@ export default function CorporateRentalsPage() {
           <p className="text-text-secondary text-lg mb-8">
             Monthly Contracts • Executive Travel • Dedicated Account Managers
           </p>
-          <a href="https://wa.me/923066305875?text=I%20need%20corporate%20rental%20services" target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/923154973906?text=I%20need%20corporate%20rental%20services" target="_blank" rel="noopener noreferrer">
             <Button variant="primary" className="px-10 py-4 text-bg-primary bg-text-primary hover:bg-text-secondary">Partner With Us</Button>
           </a>
         </div>
@@ -71,7 +71,7 @@ export default function CorporateRentalsPage() {
             Join the leading businesses in Pakistan who trust Iris Tours for their executive transportation needs.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="https://wa.me/923066305875?text=I%20need%20corporate%20rental%20services" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/923154973906?text=I%20need%20corporate%20rental%20services" target="_blank" rel="noopener noreferrer">
               <Button variant="primary" className="text-bg-primary bg-text-primary hover:bg-text-secondary border-none">Get a Corporate Quote</Button>
             </a>
             <Link href="/fleet">

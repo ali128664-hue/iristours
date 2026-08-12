@@ -15,7 +15,7 @@ const faqs = [
   },
   {
     question: "Which cities do you operate in?",
-    answer: "We are headquartered in Lahore and Pakpattan, but our services are nationwide. We cover all major cities in Pakistan and specialize in tours to the Northern areas including Hunza, Skardu, and Swat."
+    answer: "We are headquartered in Lahore and Islamabad, but our services are nationwide. We cover all major cities in Pakistan and specialize in tours to the Northern areas including Hunza, Skardu, and Swat."
   },
   {
     question: "Are your vehicles insured and maintained?",
@@ -94,7 +94,7 @@ export default function FAQPage() {
         >
           <p className="text-text-secondary mb-6">Still have questions?</p>
           <a 
-            href="https://wa.me/923066305875?text=Hi!%20I%20have%20a%20question%20from%20the%20FAQ%20page." 
+            href="https://wa.me/923154973906?text=Hi!%20I%20have%20a%20question%20from%20the%20FAQ%20page." 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-gradient-to-r from-accent-secondary to-accent-primary text-white font-bold text-sm uppercase tracking-wider hover:brightness-110 shadow-lg shadow-accent-primary/20 transition-all"

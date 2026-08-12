@@ -48,9 +48,9 @@ export default function WhatsAppBookingPopup({ isOpen, onClose, productName, cat
 
   // Builds a formatted WhatsApp message and opens WhatsApp chat
   const handleGenerateWhatsApp = () => {
-    // Change WhatsApp number here for booking popup — replace 923066305875 with your number
+    // Change WhatsApp number here for booking popup — replace 923154973906 with your number
     // Format: country code + number, no spaces or dashes (e.g., 923001234567)
-    const phoneNumber = "923066305875";
+    const phoneNumber = "923154973906";
     
     // Change the default WhatsApp message template here.
     // ${variable} placeholders are replaced automatically with the form data.
