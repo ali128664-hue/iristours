@@ -37,6 +37,7 @@ const navLinks = [
   { name: "Wedding", href: "/services/wedding-cars" },
   { name: "Areas", href: "/areas" },
   { name: "About", href: "/about" },
+  { name: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
