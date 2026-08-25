@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Clock, Send, MessageCircle } from "lucide-react";
@@ -15,8 +15,8 @@ export default function ContactClient() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const text = Hi, my name is . I am interested in .%0A%0AMessage: ;
-    window.open(https://wa.me/923066305875?text=, "_blank");
+    const text = `Hi, my name is ${formData.name}. I am interested in ${formData.service}.%0A%0AMessage: ${formData.message}`;
+    window.open(`https://wa.me/923066305875?text=${text}`, "_blank");
   };
 
   return (
