@@ -23,6 +23,7 @@ import Footer from "@/components/layout/Footer";
 import FloatingWhatsApp from "@/components/shared/FloatingWhatsApp";
 import { CurrencyProvider } from "@/context/CurrencyContext";
 import Script from "next/script";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 // ─── SITE-WIDE SEO METADATA ───────────────────────────────────────────────────
 // These values appear in Google search results and social media link previews.
@@ -171,6 +172,7 @@ export default function RootLayout({
             </main>
             <Footer />
             <FloatingWhatsApp />
+            <SpeedInsights />
           </SmoothScroll>
         </CurrencyProvider>
       </body>
