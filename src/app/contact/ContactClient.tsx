@@ -6,7 +6,8 @@ import Link from "next/link";
 import { useState } from "react";
 
 export default function ContactClient() {
-  const [copied, setCopied] = useState(false);
+  const [copiedIban, setCopiedIban] = useState(false);
+  const [copiedAcc, setCopiedAcc] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -16,8 +17,14 @@ export default function ContactClient() {
 
   const handleCopyIban = () => {
     navigator.clipboard.writeText("PK75FAYS0419007791557002");
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2500);
+    setCopiedIban(true);
+    setTimeout(() => setCopiedIban(false), 2500);
+  };
+
+  const handleCopyAcc = () => {
+    navigator.clipboard.writeText("0419007791557002");
+    setCopiedAcc(true);
+    setTimeout(() => setCopiedAcc(false), 2500);
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -162,6 +169,33 @@ export default function ContactClient() {
                       </div>
 
                       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between py-2 border-b border-border-primary/50 gap-2">
+                        <span className="text-text-secondary font-medium">Account Number</span>
+                        <div className="flex items-center gap-2">
+                          <span className="font-mono text-xs sm:text-sm font-bold text-accent-primary bg-bg-primary px-3 py-1.5 rounded-lg border border-border-primary select-all">
+                            0419007791557002
+                          </span>
+                          <button
+                            type="button"
+                            onClick={handleCopyAcc}
+                            title="Copy Account Number"
+                            className="p-1.5 rounded-lg bg-bg-primary hover:bg-accent-primary/20 text-text-secondary hover:text-accent-primary border border-border-primary transition-colors flex items-center gap-1 text-xs font-medium cursor-pointer"
+                          >
+                            {copiedAcc ? (
+                              <>
+                                <Check size={14} className="text-green-400" />
+                                <span className="text-green-400 font-bold">Copied</span>
+                              </>
+                            ) : (
+                              <>
+                                <Copy size={14} />
+                                <span>Copy</span>
+                              </>
+                            )}
+                          </button>
+                        </div>
+                      </div>
+
+                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between py-2 border-b border-border-primary/50 gap-2">
                         <span className="text-text-secondary font-medium">IBAN Number</span>
                         <div className="flex items-center gap-2">
                           <span className="font-mono text-xs sm:text-sm font-bold text-accent-primary bg-bg-primary px-3 py-1.5 rounded-lg border border-border-primary select-all">
@@ -173,7 +207,7 @@ export default function ContactClient() {
                             title="Copy IBAN"
                             className="p-1.5 rounded-lg bg-bg-primary hover:bg-accent-primary/20 text-text-secondary hover:text-accent-primary border border-border-primary transition-colors flex items-center gap-1 text-xs font-medium cursor-pointer"
                           >
-                            {copied ? (
+                            {copiedIban ? (
                               <>
                                 <Check size={14} className="text-green-400" />
                                 <span className="text-green-400 font-bold">Copied</span>
