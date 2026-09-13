@@ -53,12 +53,12 @@ ${vehicle.description}
 ${(vehicle.features || []).map((f: string) => `- ${f}`).join("\n")}
 
 ## Rental Pricing (PKR)
-- Daily Rate: PKR ${(vehicle.rent?.daily || 0).toLocaleString()}
+- Daily Rate: PKR ${(vehicle.rent?.daily || vehicle.rent?.local || vehicle.rent?.withDriver?.local || 0).toLocaleString()}
 - Weekly Rate: PKR ${(vehicle.rent?.weekly || 0).toLocaleString()}
 - Monthly Rate: PKR ${(vehicle.rent?.monthly || 0).toLocaleString()}
-- With Driver (Local): PKR ${(vehicle.rent?.withDriver?.local || 0).toLocaleString()}
-- With Driver (Inter-City): PKR ${(vehicle.rent?.withDriver?.interCity || 0).toLocaleString()}
-- With Driver (Outstation): PKR ${(vehicle.rent?.withDriver?.outstation || 0).toLocaleString()}
+- With Driver (Local): PKR ${(vehicle.rent?.withDriver?.local || vehicle.rent?.local || 0).toLocaleString()}
+- With Driver (Inter-City): PKR ${(vehicle.rent?.withDriver?.interCity || vehicle.rent?.interCity || 0).toLocaleString()}
+- With Driver (Outstation): PKR ${(vehicle.rent?.withDriver?.outstation || vehicle.rent?.outstation || 0).toLocaleString()}
 
 ## Rental Policies
 - **Fuel Policy:** ${vehicle.policies?.fuelPolicy || "Fuel included."}

@@ -27,22 +27,22 @@ export default function VehiclePricing({ rent, whatsappUrl }: VehiclePricingProp
       {/* Detailed price breakdown */}
       {rent && (
         <div className="space-y-3 mb-6">
-          {rent.withDriver?.local && (
+          {(rent.withDriver?.local || rent.local) && (
             <div className="flex justify-between items-center py-2 border-b border-border-primary">
-              <span className="text-text-secondary text-sm">With Driver (Local)</span>
-              <span className="font-semibold text-text-primary">{convertAndFormatPrice(rent.withDriver.local, currency)}</span>
+              <span className="text-text-secondary text-sm">Within City (Local)</span>
+              <span className="font-semibold text-text-primary">{convertAndFormatPrice(rent.withDriver?.local || rent.local, currency)}</span>
             </div>
           )}
-          {rent.withDriver?.interCity && (
+          {(rent.withDriver?.interCity || rent.interCity) && (
             <div className="flex justify-between items-center py-2 border-b border-border-primary">
-              <span className="text-text-secondary text-sm">With Driver (Inter-City)</span>
-              <span className="font-semibold text-text-primary">{convertAndFormatPrice(rent.withDriver.interCity, currency)}</span>
+              <span className="text-text-secondary text-sm">Inter-City</span>
+              <span className="font-semibold text-text-primary">{convertAndFormatPrice(rent.withDriver?.interCity || rent.interCity, currency)}</span>
             </div>
           )}
-          {rent.withDriver?.outstation && (
+          {(rent.withDriver?.outstation || rent.outstation) && (
             <div className="flex justify-between items-center py-2 border-b border-border-primary">
               <span className="text-text-secondary text-sm">Outstation</span>
-              <span className="font-semibold text-text-primary">{convertAndFormatPrice(rent.withDriver.outstation, currency)}</span>
+              <span className="font-semibold text-text-primary">{convertAndFormatPrice(rent.withDriver?.outstation || rent.outstation, currency)}</span>
             </div>
           )}
           {rent.weekly && (

@@ -28,7 +28,7 @@ export async function GET() {
   const fleetList = (fleetData as any[])
     .map(
       (v: any) =>
-        `- [${v.name}](${baseUrl}/fleet/${v.slug}) — ${v.brand} ${v.category}, ${v.seats} seats, PKR ${(v.rent?.daily || 0).toLocaleString()}/day`
+        `- [${v.name}](${baseUrl}/fleet/${v.slug}) — ${v.brand} ${v.category}, ${v.seats} seats, PKR ${(v.rent?.daily || v.rent?.local || v.rent?.withDriver?.local || 0).toLocaleString()}/day`
     )
     .join("\n");
 

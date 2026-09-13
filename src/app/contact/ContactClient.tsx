@@ -1,17 +1,24 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MapPin, Phone, Mail, Clock, Send, MessageCircle } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Send, MessageCircle, Landmark, Copy, Check } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 
 export default function ContactClient() {
+  const [copied, setCopied] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
     service: "Luxury Car Rental",
     message: ""
   });
+
+  const handleCopyIban = () => {
+    navigator.clipboard.writeText("PK75FAYS0419007791557002");
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2500);
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -127,6 +134,70 @@ export default function ContactClient() {
                       Monday - Sunday: 24/7<br />
                       Always open for bookings
                     </p>
+                  </div>
+                </div>
+
+                {/* Bank Account Details Card */}
+                <div className="pt-4 border-t border-border-primary">
+                  <div className="p-6 rounded-2xl bg-gradient-to-br from-bg-secondary via-bg-card to-bg-secondary border border-accent-primary/20 shadow-xl relative overflow-hidden">
+                    <div className="flex items-center gap-3 mb-5">
+                      <div className="w-12 h-12 rounded-xl bg-accent-primary/10 border border-accent-primary/30 flex items-center justify-center text-accent-primary shadow-[0_0_15px_rgba(22,199,158,0.15)] flex-shrink-0">
+                        <Landmark size={24} />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold text-text-primary">Official Bank Account</h3>
+                        <p className="text-xs text-text-secondary">For Advance Bookings &amp; Direct Bank Transfer</p>
+                      </div>
+                    </div>
+
+                    <div className="space-y-3 text-sm">
+                      <div className="flex justify-between items-center py-2 border-b border-border-primary/50">
+                        <span className="text-text-secondary font-medium">Bank</span>
+                        <span className="font-bold text-text-primary">Faysal Bank</span>
+                      </div>
+
+                      <div className="flex justify-between items-center py-2 border-b border-border-primary/50">
+                        <span className="text-text-secondary font-medium">Account Title</span>
+                        <span className="font-bold text-text-primary">MUNIR HUSSAIN</span>
+                      </div>
+
+                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between py-2 border-b border-border-primary/50 gap-2">
+                        <span className="text-text-secondary font-medium">IBAN Number</span>
+                        <div className="flex items-center gap-2">
+                          <span className="font-mono text-xs sm:text-sm font-bold text-accent-primary bg-bg-primary px-3 py-1.5 rounded-lg border border-border-primary select-all">
+                            PK75FAYS0419007791557002
+                          </span>
+                          <button
+                            type="button"
+                            onClick={handleCopyIban}
+                            title="Copy IBAN"
+                            className="p-1.5 rounded-lg bg-bg-primary hover:bg-accent-primary/20 text-text-secondary hover:text-accent-primary border border-border-primary transition-colors flex items-center gap-1 text-xs font-medium cursor-pointer"
+                          >
+                            {copied ? (
+                              <>
+                                <Check size={14} className="text-green-400" />
+                                <span className="text-green-400 font-bold">Copied</span>
+                              </>
+                            ) : (
+                              <>
+                                <Copy size={14} />
+                                <span>Copy</span>
+                              </>
+                            )}
+                          </button>
+                        </div>
+                      </div>
+
+                      <div className="flex flex-col sm:flex-row sm:justify-between py-2 gap-1">
+                        <span className="text-text-secondary font-medium">Branch Name</span>
+                        <span className="font-semibold text-text-primary sm:text-right">IBB MAULANA SHAUKAT ALI ROAD</span>
+                      </div>
+                    </div>
+
+                    <div className="mt-4 pt-3 border-t border-border-primary/40 text-xs text-text-secondary flex items-start gap-2">
+                      <span className="text-accent-primary font-bold">Note:</span>
+                      <span>After making payment, please send screenshot on WhatsApp (+92 306 6305875) for immediate vehicle reservation confirmation.</span>
+                    </div>
                   </div>
                 </div>
 
