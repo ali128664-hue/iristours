@@ -146,7 +146,7 @@ export default function Footer() {
         {/* Footer Bottom Bar — copyright text */}
         <div className="pt-8 border-t border-border-primary flex flex-col items-center justify-center gap-2 text-center">
           <p className="text-text-secondary text-sm">
-            &copy; {new Date().getFullYear()} Iris Tours. All rights reserved. <span className="hidden md:inline mx-2">|</span> Designed & Developed by <a href="https://www.linkedin.com/in/chansarhussain/" target="_blank" rel="noreferrer" className="text-text-primary hover:text-accent-primary transition-colors hover:underline font-medium">Ansar Hussain</a>
+            &copy; {new Date().getFullYear()} Iris Tours. All rights reserved. <span className="hidden md:inline mx-2">|</span> Designed & Developed by <a href="https://hussainxsolution.com/" target="_blank" rel="noreferrer" className="text-text-primary hover:text-accent-primary transition-colors hover:underline font-medium">Hussain X Solution</a>
           </p>
         </div>
       </div>
