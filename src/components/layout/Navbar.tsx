@@ -36,6 +36,7 @@ const navLinks = [
   { name: "Airport", href: "/services/airport-transfer" },
   { name: "Wedding", href: "/services/wedding-cars" },
   { name: "Areas", href: "/areas" },
+  { name: "Blog", href: "/blog" },
   { name: "About", href: "/about" },
 ];
 
