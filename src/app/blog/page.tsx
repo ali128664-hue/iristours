@@ -8,6 +8,24 @@ export const metadata: Metadata = {
 
 const blogs = [
   {
+    title: "Toyota Fortuner for Rent in Lahore: The Ultimate Power Move",
+    slug: "toyota-fortuner-for-rent",
+    desc: "Command respect on the road. Discover why renting a Toyota Fortuner is the perfect choice for VIPs and Northern Area tours.",
+    img: "/blog/fortuner-rental.jpg"
+  },
+  {
+    title: "Your Guide to Premium Car Rentals in DHA & Bahria Town Lahore",
+    slug: "rent-a-car-bahria-town-dha-lahore",
+    desc: "Need a premium car rental in Bahria Town, DHA, Lake City, or Johar Town? Get fast, reliable chauffeur-driven cars at your doorstep.",
+    img: "/blog/bahria-dha.jpg"
+  },
+  {
+    title: "Rent a Limousine in Lahore: Make an Unforgettable Grand Entrance",
+    slug: "limousine-rental-lahore",
+    desc: "Make your grand entrance unforgettable. Rent a luxurious stretch limousine for weddings and red-carpet arrivals in Lahore.",
+    img: "/blog/limousine-wedding.jpg"
+  },
+  {
     title: "The Ultimate Guide to Lahore to Islamabad Car Rental",
     slug: "lahore-to-islamabad-car-rental",
     desc: "Traveling the M2 motorway? Discover why renting a premium SUV or sedan with a driver is the best way to travel from Lahore to Islamabad.",
@@ -38,16 +56,16 @@ export default function BlogIndex() {
     <div className="bg-bg-primary min-h-screen pt-32 pb-20">
       <div className="container mx-auto px-6 max-w-6xl">
         <h1 className="text-4xl md:text-5xl font-bold text-text-primary mb-12 text-center">Our Latest Articles</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogs.map(blog => (
-            <Link key={blog.slug} href={`/blog/${blog.slug}`} className="group block bg-bg-secondary rounded-2xl overflow-hidden border border-border-primary hover:border-accent-primary transition-colors">
-              <div className="h-64 overflow-hidden">
+            <Link key={blog.slug} href={`/blog/${blog.slug}`} className="group block bg-bg-secondary rounded-2xl overflow-hidden border border-border-primary hover:border-accent-primary transition-colors flex flex-col">
+              <div className="h-56 overflow-hidden flex-shrink-0">
                 <img src={blog.img} alt={blog.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>
-              <div className="p-6">
-                <h2 className="text-2xl font-bold text-text-primary mb-3">{blog.title}</h2>
-                <p className="text-text-secondary">{blog.desc}</p>
-                <div className="mt-4 text-accent-primary font-medium">Read Article →</div>
+              <div className="p-6 flex flex-col flex-grow">
+                <h2 className="text-xl font-bold text-text-primary mb-3">{blog.title}</h2>
+                <p className="text-text-secondary text-sm flex-grow">{blog.desc}</p>
+                <div className="mt-4 text-accent-primary font-medium text-sm">Read Article →</div>
               </div>
             </Link>
           ))}
