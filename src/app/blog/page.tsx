@@ -8,6 +8,18 @@ export const metadata: Metadata = {
 
 const blogs = [
   {
+    title: "A Day in the Heart of Lahore: Exploring the Walled City",
+    slug: "a-day-in-the-walled-city-lahore",
+    desc: "Experience the magic of Badshahi Mosque and the Walled City without the traffic stress. Read our travel diary.",
+    img: "/blog/lahore-cultural-tour.jpg"
+  },
+  {
+    title: "From Lahore to the Mountains: A Weekend Getaway in a Toyota Fortuner",
+    slug: "from-lahore-to-the-mountains-a-weekend-getaway",
+    desc: "Read the story of a perfect road trip from Lahore to the Northern Areas in a chauffeur-driven Toyota Fortuner.",
+    img: "/blog/northern-areas-fortuner.jpg"
+  },
+  {
     title: "Toyota Fortuner for Rent in Lahore: The Ultimate Power Move",
     slug: "toyota-fortuner-for-rent",
     desc: "Command respect on the road. Discover why renting a Toyota Fortuner is the perfect choice for VIPs and Northern Area tours.",
@@ -55,7 +67,7 @@ export default function BlogIndex() {
   return (
     <div className="bg-bg-primary min-h-screen pt-32 pb-20">
       <div className="container mx-auto px-6 max-w-6xl">
-        <h1 className="text-4xl md:text-5xl font-bold text-text-primary mb-12 text-center">Our Latest Articles</h1>
+        <h1 className="text-4xl md:text-5xl font-bold text-text-primary mb-12 text-center">Our Latest Articles & Travel Stories</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogs.map(blog => (
             <Link key={blog.slug} href={`/blog/${blog.slug}`} className="group block bg-bg-secondary rounded-2xl overflow-hidden border border-border-primary hover:border-accent-primary transition-colors flex flex-col">
@@ -65,7 +77,7 @@ export default function BlogIndex() {
               <div className="p-6 flex flex-col flex-grow">
                 <h2 className="text-xl font-bold text-text-primary mb-3">{blog.title}</h2>
                 <p className="text-text-secondary text-sm flex-grow">{blog.desc}</p>
-                <div className="mt-4 text-accent-primary font-medium text-sm">Read Article →</div>
+                <div className="mt-4 text-accent-primary font-medium text-sm">Read Story →</div>
               </div>
             </Link>
           ))}
