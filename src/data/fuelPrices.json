@@ -11,10 +11,10 @@
     },
     "diesel": {
       "name": "High-Speed Diesel (Hi-Cetane Euro 5)",
-      "price": 389.14,
-      "previousPrice": 424.04,
-      "change": -34.9,
-      "changePercent": -8.23,
+      "price": 424.04,
+      "previousPrice": 424.92,
+      "change": -0.88,
+      "changePercent": -0.21,
       "unit": "L",
       "status": "verified"
     },
@@ -38,7 +38,7 @@
     },
     "kerosene": {
       "name": "Kerosene Oil (SKO)",
-      "price": 389.14,
+      "price": 347.32,
       "previousPrice": 347.32,
       "change": 41.82,
       "changePercent": 12.04,
@@ -56,15 +56,15 @@
     }
   },
   "meta": {
-    "effectiveFrom": "September 16, 2026",
+    "effectiveFrom": "2026-09-19",
     "nextExpectedRevision": "October 01, 2026",
-    "lastChecked": "2026-09-21T12:53:32.661Z",
-    "source": "Shell Pakistan / OGRA Feed (petrolratetoday.pk)",
+    "lastChecked": "2026-09-21T13:07:13.508Z",
+    "source": "OilPrices.pk (Live OGRA Notified Feed)",
     "isLiveVerified": true
   },
   "exchangeRates": {
     "base": "USD",
-    "lastUpdated": "2026-09-21T12:53:24.611Z",
+    "lastUpdated": "2026-09-21T13:07:13.089Z",
     "rates": {
       "USD": 1,
       "PKR": 277.926206,
@@ -89,9 +89,9 @@
       "currency": "PKR",
       "flag": "🇵🇰",
       "petrolLocal": 389.14,
-      "dieselLocal": 389.14,
+      "dieselLocal": 424.04,
       "petrolUsd": 1.4,
-      "dieselUsd": 1.4
+      "dieselUsd": 1.526
     },
     {
       "country": "United Arab Emirates",
