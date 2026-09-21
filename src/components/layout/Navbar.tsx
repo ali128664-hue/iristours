@@ -33,6 +33,7 @@ import { useCurrency } from "@/context/CurrencyContext";
 const navLinks = [
   { name: "Home", href: "/" },
   { name: "Fleet", href: "/fleet" },
+  { name: "Fuel Prices", href: "/fuel-prices-pakistan" },
   { name: "Airport", href: "/services/airport-transfer" },
   { name: "Wedding", href: "/services/wedding-cars" },
   { name: "Areas", href: "/areas" },

@@ -1,0 +1,495 @@
+{
+  "pakistan": {
+    "petrol": {
+      "name": "Petrol (Premier Euro 5)",
+      "price": 389.14,
+      "previousPrice": 390.79,
+      "change": -1.65,
+      "changePercent": -0.42,
+      "unit": "L",
+      "status": "verified"
+    },
+    "diesel": {
+      "name": "High-Speed Diesel (Hi-Cetane Euro 5)",
+      "price": 389.14,
+      "previousPrice": 424.04,
+      "change": -34.9,
+      "changePercent": -8.23,
+      "unit": "L",
+      "status": "verified"
+    },
+    "hiOctane": {
+      "name": "Hi-Octane 97 (Euro 5 / HOBC)",
+      "price": 389.14,
+      "previousPrice": 400,
+      "change": -10.86,
+      "changePercent": -2.72,
+      "unit": "L",
+      "status": "verified"
+    },
+    "lightDiesel": {
+      "name": "Light Diesel Oil (LDO)",
+      "price": 304.78,
+      "previousPrice": 305.5,
+      "change": -0.72,
+      "changePercent": -0.24,
+      "unit": "L",
+      "status": "verified"
+    },
+    "kerosene": {
+      "name": "Kerosene Oil (SKO)",
+      "price": 389.14,
+      "previousPrice": 347.32,
+      "change": 41.82,
+      "changePercent": 12.04,
+      "unit": "L",
+      "status": "verified"
+    },
+    "lpg": {
+      "name": "LPG (Liquefied Petroleum Gas)",
+      "price": 258.65,
+      "previousPrice": 259,
+      "change": -0.35,
+      "changePercent": -0.14,
+      "unit": "kg",
+      "status": "verified"
+    }
+  },
+  "meta": {
+    "effectiveFrom": "September 16, 2026",
+    "nextExpectedRevision": "October 01, 2026",
+    "lastChecked": "2026-09-21T12:53:32.661Z",
+    "source": "Shell Pakistan / OGRA Feed (petrolratetoday.pk)",
+    "isLiveVerified": true
+  },
+  "exchangeRates": {
+    "base": "USD",
+    "lastUpdated": "2026-09-21T12:53:24.611Z",
+    "rates": {
+      "USD": 1,
+      "PKR": 277.926206,
+      "AED": 3.6725,
+      "SAR": 3.75,
+      "GBP": 0.747411,
+      "CAD": 1.399324,
+      "EUR": 0.871295,
+      "INR": 96.03698,
+      "CNY": 6.704712,
+      "AUD": 1.404595,
+      "QAR": 3.64,
+      "OMR": 0.384497,
+      "TRY": 48.794548,
+      "MYR": 4.080413
+    }
+  },
+  "international": [
+    {
+      "country": "Pakistan",
+      "code": "PK",
+      "currency": "PKR",
+      "flag": "🇵🇰",
+      "petrolLocal": 389.14,
+      "dieselLocal": 389.14,
+      "petrolUsd": 1.4,
+      "dieselUsd": 1.4
+    },
+    {
+      "country": "United Arab Emirates",
+      "code": "AE",
+      "currency": "AED",
+      "flag": "🇦🇪",
+      "petrolLocal": 2.9,
+      "dieselLocal": 2.97,
+      "petrolUsd": 0.79,
+      "dieselUsd": 0.809
+    },
+    {
+      "country": "Saudi Arabia",
+      "code": "SA",
+      "currency": "SAR",
+      "flag": "🇸🇦",
+      "petrolLocal": 2.33,
+      "dieselLocal": 1.15,
+      "petrolUsd": 0.621,
+      "dieselUsd": 0.307
+    },
+    {
+      "country": "United States",
+      "code": "US",
+      "currency": "USD",
+      "flag": "🇺🇸",
+      "petrolLocal": 0.92,
+      "dieselLocal": 1.02,
+      "petrolUsd": 0.92,
+      "dieselUsd": 1.02
+    },
+    {
+      "country": "United Kingdom",
+      "code": "GB",
+      "currency": "GBP",
+      "flag": "🇬🇧",
+      "petrolLocal": 1.4,
+      "dieselLocal": 1.45,
+      "petrolUsd": 1.818,
+      "dieselUsd": 1.883
+    },
+    {
+      "country": "Canada",
+      "code": "CA",
+      "currency": "CAD",
+      "flag": "🇨🇦",
+      "petrolLocal": 1.6,
+      "dieselLocal": 1.65,
+      "petrolUsd": 1.176,
+      "dieselUsd": 1.213
+    },
+    {
+      "country": "Qatar",
+      "code": "QA",
+      "currency": "QAR",
+      "flag": "🇶🇦",
+      "petrolLocal": 2,
+      "dieselLocal": 2.05,
+      "petrolUsd": 0.549,
+      "dieselUsd": 0.563
+    },
+    {
+      "country": "Oman",
+      "code": "OM",
+      "currency": "OMR",
+      "flag": "🇴🇲",
+      "petrolLocal": 0.239,
+      "dieselLocal": 0.258,
+      "petrolUsd": 0.621,
+      "dieselUsd": 0.67
+    },
+    {
+      "country": "Turkey",
+      "code": "TR",
+      "currency": "TRY",
+      "flag": "🇹🇷",
+      "petrolLocal": 43.5,
+      "dieselLocal": 43.85,
+      "petrolUsd": 1.25,
+      "dieselUsd": 1.26
+    },
+    {
+      "country": "Germany",
+      "code": "DE",
+      "currency": "EUR",
+      "flag": "🇩🇪",
+      "petrolLocal": 1.73,
+      "dieselLocal": 1.62,
+      "petrolUsd": 1.88,
+      "dieselUsd": 1.761
+    },
+    {
+      "country": "India",
+      "code": "IN",
+      "currency": "INR",
+      "flag": "🇮🇳",
+      "petrolLocal": 99.4,
+      "dieselLocal": 88.5,
+      "petrolUsd": 1.19,
+      "dieselUsd": 1.06
+    },
+    {
+      "country": "China",
+      "code": "CN",
+      "currency": "CNY",
+      "flag": "🇨🇳",
+      "petrolLocal": 8.24,
+      "dieselLocal": 7.8,
+      "petrolUsd": 1.14,
+      "dieselUsd": 1.079
+    },
+    {
+      "country": "Australia",
+      "code": "AU",
+      "currency": "AUD",
+      "flag": "🇦🇺",
+      "petrolLocal": 1.86,
+      "dieselLocal": 1.92,
+      "petrolUsd": 1.24,
+      "dieselUsd": 1.28
+    },
+    {
+      "country": "Malaysia",
+      "code": "MY",
+      "currency": "MYR",
+      "flag": "🇲🇾",
+      "petrolLocal": 2.05,
+      "dieselLocal": 3.35,
+      "petrolUsd": 0.441,
+      "dieselUsd": 0.72
+    }
+  ],
+  "history": [
+    {
+      "date": "Sep 16, 2026",
+      "petrolPrice": 389.14,
+      "petrolChange": -1.65,
+      "dieselPrice": 424.04,
+      "dieselChange": -0.88,
+      "notes": "Relief due to easing international crude rates."
+    },
+    {
+      "date": "Sep 01, 2026",
+      "petrolPrice": 390.79,
+      "petrolChange": -1.21,
+      "dieselPrice": 424.92,
+      "dieselChange": 0.5,
+      "notes": "Slight reduction in petrol; diesel adjusted upwards."
+    },
+    {
+      "date": "Aug 16, 2026",
+      "petrolPrice": 392,
+      "petrolChange": 4.5,
+      "dieselPrice": 424.42,
+      "dieselChange": 3.8,
+      "notes": "Global oil price rise and petroleum levy adjustment."
+    },
+    {
+      "date": "Aug 01, 2026",
+      "petrolPrice": 387.5,
+      "petrolChange": 7.45,
+      "dieselPrice": 420.62,
+      "dieselChange": 8.1,
+      "notes": "Upward revision driven by currency import parity."
+    },
+    {
+      "date": "Jul 16, 2026",
+      "petrolPrice": 380.05,
+      "petrolChange": 9.99,
+      "dieselPrice": 412.52,
+      "dieselChange": 6.18,
+      "notes": "Federal budget petroleum levy changes applied."
+    },
+    {
+      "date": "Jul 01, 2026",
+      "petrolPrice": 370.06,
+      "petrolChange": 7.45,
+      "dieselPrice": 406.34,
+      "dieselChange": 9.56,
+      "notes": "Fiscal year-end review by Ministry of Petroleum & OGRA."
+    }
+  ],
+  "vehicleMileage": {
+    "honda-hr-v": {
+      "city": 11,
+      "highway": 14.5,
+      "combined": 12.5,
+      "fuelType": "Petrol"
+    },
+    "toyota-hilux-single-cabin": {
+      "city": 9.5,
+      "highway": 12.5,
+      "combined": 11,
+      "fuelType": "Diesel"
+    },
+    "toyota-corolla-cross": {
+      "city": 18,
+      "highway": 22,
+      "combined": 20,
+      "fuelType": "Hybrid"
+    },
+    "toyota-prius": {
+      "city": 21,
+      "highway": 24,
+      "combined": 22.5,
+      "fuelType": "Hybrid"
+    },
+    "toyota-camry": {
+      "city": 17,
+      "highway": 21,
+      "combined": 19,
+      "fuelType": "Hybrid"
+    },
+    "suzuki-every": {
+      "city": 12,
+      "highway": 15,
+      "combined": 13.5,
+      "fuelType": "Petrol"
+    },
+    "suzuki-swift": {
+      "city": 12,
+      "highway": 16,
+      "combined": 14,
+      "fuelType": "Petrol"
+    },
+    "suzuki-alto": {
+      "city": 16,
+      "highway": 21,
+      "combined": 18.5,
+      "fuelType": "Petrol"
+    },
+    "suzuki-wagon-r": {
+      "city": 14,
+      "highway": 18,
+      "combined": 16,
+      "fuelType": "Petrol"
+    },
+    "suzuki-cultus": {
+      "city": 14.5,
+      "highway": 18.5,
+      "combined": 16.5,
+      "fuelType": "Petrol"
+    },
+    "honda-city": {
+      "city": 12.5,
+      "highway": 16.5,
+      "combined": 14.5,
+      "fuelType": "Petrol"
+    },
+    "toyota-yaris": {
+      "city": 12.5,
+      "highway": 16.5,
+      "combined": 14.5,
+      "fuelType": "Petrol"
+    },
+    "toyota-corolla-altis-1-6": {
+      "city": 11,
+      "highway": 15,
+      "combined": 13,
+      "fuelType": "Petrol"
+    },
+    "toyota-corolla-grande-1-8": {
+      "city": 10.5,
+      "highway": 14.5,
+      "combined": 12.5,
+      "fuelType": "Petrol"
+    },
+    "honda-civic": {
+      "city": 10,
+      "highway": 14,
+      "combined": 12,
+      "fuelType": "Petrol"
+    },
+    "hyundai-sonata": {
+      "city": 9.5,
+      "highway": 13.5,
+      "combined": 11.5,
+      "fuelType": "Petrol"
+    },
+    "honda-br-v": {
+      "city": 10.5,
+      "highway": 13.5,
+      "combined": 12,
+      "fuelType": "Petrol"
+    },
+    "hyundai-tucson": {
+      "city": 9,
+      "highway": 12.5,
+      "combined": 10.5,
+      "fuelType": "Petrol"
+    },
+    "mg-hs": {
+      "city": 8.5,
+      "highway": 12,
+      "combined": 10,
+      "fuelType": "Petrol"
+    },
+    "kia-sportage": {
+      "city": 8.5,
+      "highway": 12,
+      "combined": 10,
+      "fuelType": "Petrol"
+    },
+    "haval-h6": {
+      "city": 9,
+      "highway": 12.5,
+      "combined": 10.5,
+      "fuelType": "Petrol"
+    },
+    "toyota-revo-hilux": {
+      "city": 9,
+      "highway": 12,
+      "combined": 10.5,
+      "fuelType": "Diesel"
+    },
+    "toyota-fortuner": {
+      "city": 8.5,
+      "highway": 11.5,
+      "combined": 9.8,
+      "fuelType": "Diesel"
+    },
+    "toyota-land-cruiser-prado": {
+      "city": 7.5,
+      "highway": 10.5,
+      "combined": 8.8,
+      "fuelType": "Diesel"
+    },
+    "toyota-land-cruiser-v8": {
+      "city": 6.5,
+      "highway": 9.5,
+      "combined": 7.8,
+      "fuelType": "Diesel"
+    },
+    "suzuki-apv": {
+      "city": 9,
+      "highway": 12,
+      "combined": 10.5,
+      "fuelType": "Petrol"
+    },
+    "toyota-hiace-grand-cabin": {
+      "city": 8.5,
+      "highway": 11,
+      "combined": 9.5,
+      "fuelType": "Diesel"
+    },
+    "toyota-coaster-saloon": {
+      "city": 6,
+      "highway": 8.5,
+      "combined": 7,
+      "fuelType": "Diesel"
+    },
+    "audi-a4": {
+      "city": 10,
+      "highway": 14,
+      "combined": 12,
+      "fuelType": "Petrol"
+    },
+    "audi-a6": {
+      "city": 9,
+      "highway": 13,
+      "combined": 11,
+      "fuelType": "Petrol"
+    },
+    "mercedes-benz-c-class-c180": {
+      "city": 10,
+      "highway": 14,
+      "combined": 12,
+      "fuelType": "Petrol"
+    },
+    "mercedes-benz-s-class": {
+      "city": 7.5,
+      "highway": 11,
+      "combined": 9,
+      "fuelType": "Petrol"
+    },
+    "range-rover": {
+      "city": 6.5,
+      "highway": 9.5,
+      "combined": 8,
+      "fuelType": "Petrol"
+    },
+    "mercedes-benz-g-wagon": {
+      "city": 5.5,
+      "highway": 8,
+      "combined": 6.5,
+      "fuelType": "Petrol"
+    },
+    "v8-limousine": {
+      "city": 5,
+      "highway": 7.5,
+      "combined": 6,
+      "fuelType": "Petrol"
+    },
+    "tundra-limousine": {
+      "city": 4.5,
+      "highway": 7,
+      "combined": 5.5,
+      "fuelType": "Petrol"
+    }
+  }
+}

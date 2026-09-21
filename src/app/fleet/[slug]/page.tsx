@@ -25,6 +25,7 @@ import VehiclePricing from "@/components/fleet/VehiclePricing";
 import Image from "next/image";
 import fleetData from "@/data/fleet.json";
 import VehicleCard from "@/components/fleet/VehicleCard";
+import VehicleFuelEstimator from "@/components/fuel/VehicleFuelEstimator";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -277,6 +278,15 @@ export default async function VehicleDetailPage({ params }: Props) {
                     </div>
                   ))}
                 </div>
+              </section>
+
+              {/* Fuel Efficiency & Quick Trip Cost Estimator */}
+              <section>
+                <VehicleFuelEstimator
+                  vehicleSlug={vehicle.slug}
+                  vehicleName={vehicle.name}
+                  fuelType={vehicle.fuel || vehicle.fuelType || "Petrol"}
+                />
               </section>
 
               {/* Trust Badges — static icons shown below the policies */}

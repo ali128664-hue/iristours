@@ -63,6 +63,7 @@ export default function Footer() {
             <h4 className="text-lg font-semibold text-text-primary mb-6 uppercase tracking-wider">Quick Links</h4>
             <ul className="flex flex-col gap-4">
               <li><Link href="/fleet" className="text-text-secondary hover:text-accent-primary transition-colors">Our Fleet</Link></li>
+              <li><Link href="/fuel-prices-pakistan" className="text-text-secondary hover:text-accent-primary transition-colors">Fuel Prices &amp; Calculator</Link></li>
               <li><Link href="/tours" className="text-text-secondary hover:text-accent-primary transition-colors">Northern Tours</Link></li>
               <li><Link href="/services/airport-transfer" className="text-text-secondary hover:text-accent-primary transition-colors">Airport Transfers</Link></li>
               <li><Link href="/services/wedding-cars" className="text-text-secondary hover:text-accent-primary transition-colors">Wedding Cars</Link></li>
