@@ -17,27 +17,36 @@ const CURRENCY_SYMBOLS: Record<CurrencyCode, string> = {
   EUR: "€",
 };
 
-export default function InternationalFuelPrices() {
+interface Props {
+  exchangeRates?: typeof fuelData.exchangeRates;
+  international?: typeof fuelData.international;
+}
+
+export default function InternationalFuelPrices({
+  exchangeRates: propRates,
+  international: propInternational,
+}: Props = {}) {
   const [currency, setCurrency] = useState<CurrencyCode>("PKR");
   const [searchTerm, setSearchTerm] = useState("");
 
-  const exchangeRates = fuelData.exchangeRates.rates as Record<string, number>;
+  const exchangeRates = (propRates?.rates || fuelData.exchangeRates.rates) as Record<string, number>;
+  const internationalList = propInternational || fuelData.international;
   const baseRate = exchangeRates[currency] || 1;
   const pkrRate = exchangeRates["PKR"] || 280.25;
 
   // Pakistan reference prices in USD
-  const pkItem = fuelData.international.find((c) => c.code === "PK");
+  const pkItem = internationalList.find((c) => c.code === "PK");
   const pkPetrolUsd = pkItem?.petrolUsd || 1.388;
 
   // Filtered countries
   const filteredCountries = useMemo(() => {
-    return fuelData.international.filter(
+    return internationalList.filter(
       (c) =>
         c.country.toLowerCase().includes(searchTerm.toLowerCase()) ||
         c.currency.toLowerCase().includes(searchTerm.toLowerCase()) ||
         c.code.toLowerCase().includes(searchTerm.toLowerCase())
     );
-  }, [searchTerm]);
+  }, [searchTerm, internationalList]);
 
   const convertPrice = (usdPrice: number): string => {
     const val = usdPrice * baseRate;

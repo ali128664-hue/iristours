@@ -5,8 +5,14 @@ import { History, TrendingDown, TrendingUp, Calendar, AlertCircle } from "lucide
 import clsx from "clsx";
 import fuelData from "@/data/fuelPrices.json";
 
-export default function FuelPriceHistory() {
-  const history = fuelData.history;
+interface Props {
+  history?: typeof fuelData.history;
+  meta?: typeof fuelData.meta;
+}
+
+export default function FuelPriceHistory({ history: propHistory, meta: propMeta }: Props = {}) {
+  const history = propHistory || fuelData.history;
+  const meta = propMeta || fuelData.meta;
 
   return (
     <div className="w-full bg-white rounded-3xl border border-border-primary p-6 md:p-10 shadow-xl">
@@ -25,7 +31,7 @@ export default function FuelPriceHistory() {
 
         <div className="text-xs text-text-secondary bg-bg-secondary px-4 py-2 rounded-2xl border border-border-primary">
           <span className="font-bold text-text-primary block">Next Expected Review:</span>
-          {fuelData.meta.nextExpectedRevision}
+          {meta.nextExpectedRevision}
         </div>
       </div>
 

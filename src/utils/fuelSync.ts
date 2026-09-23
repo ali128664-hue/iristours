@@ -253,11 +253,25 @@ async function fetchPakistanFuelRates(): Promise<{
   return null;
 }
 
+let memoryCache: {
+  data: typeof defaultFuelData;
+  timestamp: number;
+} | null = null;
+
+const CACHE_TTL_MS = 30 * 60 * 1000; // 30 minutes in memory
+
+/**
+ * Reset memory cache (called on sync endpoint)
+ */
+export function clearFuelCache(): void {
+  memoryCache = null;
+}
+
 /**
  * Execute automated sync with multi-tier fallback
  */
 export async function syncFuelPrices(): Promise<SyncResult> {
-  const currentData = { ...defaultFuelData };
+  const currentData = JSON.parse(JSON.stringify(getLatestFuelData())) as typeof defaultFuelData;
   let pakistanUpdated = false;
   let ratesUpdated = false;
   let sourceReport = "Retained Verified Baseline";
@@ -352,6 +366,12 @@ export async function syncFuelPrices(): Promise<SyncResult> {
     console.warn("Runtime disk write note:", (fsErr as Error).message);
   }
 
+  // Update in-memory cache
+  memoryCache = {
+    data: currentData,
+    timestamp: Date.now(),
+  };
+
   return {
     success: true,
     message: pakistanUpdated
@@ -366,7 +386,7 @@ export async function syncFuelPrices(): Promise<SyncResult> {
 }
 
 /**
- * Load latest cached fuel data
+ * Load latest cached fuel data from disk or bundled fallback
  */
 export function getLatestFuelData(): typeof defaultFuelData {
   try {
@@ -379,4 +399,31 @@ export function getLatestFuelData(): typeof defaultFuelData {
     // Fall back to imported default
   }
   return defaultFuelData;
+}
+
+/**
+ * Get live fuel data for Server Components.
+ * Uses 30-minute in-memory caching with automatic live refresh from OilPrices.pk / PSO.
+ */
+export async function getLiveFuelData(): Promise<typeof defaultFuelData> {
+  const now = Date.now();
+  if (memoryCache && now - memoryCache.timestamp < CACHE_TTL_MS) {
+    return memoryCache.data;
+  }
+
+  try {
+    const result = await syncFuelPrices();
+    if (result && result.data) {
+      return result.data;
+    }
+  } catch (err) {
+    console.warn("[getLiveFuelData] Upstream refresh failed, using local baseline:", (err as Error).message);
+  }
+
+  const fallback = getLatestFuelData();
+  memoryCache = {
+    data: fallback,
+    timestamp: now,
+  };
+  return fallback;
 }

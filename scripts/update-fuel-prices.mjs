@@ -175,6 +175,24 @@ async function run() {
   // Write updated data
   fs.writeFileSync(dataFilePath, JSON.stringify(fuelData, null, 2), "utf-8");
   console.log("[IRIS TOURS] Synchronizer finished successfully. fuelPrices.json saved.");
+
+  // 4. Ping live website to invalidate cache if site is reachable
+  const appUrl = process.env.NEXT_PUBLIC_APP_URL || process.env.APP_URL || "https://iristours.net";
+  const cronSecret = process.env.IRIS_CRON_SECRET || "iris_fuel_sync_secret_2026";
+  try {
+    console.log(`[INFO] Pinging ${appUrl}/api/fuel-prices/sync to revalidate production cache...`);
+    const pingRes = await fetch(`${appUrl}/api/fuel-prices/sync?secret=${encodeURIComponent(cronSecret)}`, {
+      signal: AbortSignal.timeout(10000),
+      headers: { "User-Agent": "IrisTours-Cron-Notifier/1.0" },
+    });
+    if (pingRes.ok) {
+      console.log("[SUCCESS] Live website cache revalidated successfully!");
+    } else {
+      console.warn(`[WARN] Live ping returned status ${pingRes.status}`);
+    }
+  } catch (pingErr) {
+    console.warn("[WARN] Could not ping live site:", pingErr.message);
+  }
 }
 
 run().catch((e) => {

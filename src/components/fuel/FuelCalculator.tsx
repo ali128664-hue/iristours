@@ -31,15 +31,25 @@ import {
 
 interface Props {
   initialVehicleSlug?: string;
+  liveFuelPrices?: {
+    petrol: { price: number; name?: string };
+    diesel: { price: number; name?: string };
+    hiOctane: { price: number; name?: string };
+    lpg: { price: number; name?: string };
+  };
 }
 
-export default function FuelCalculator({ initialVehicleSlug = "toyota-corolla-altis-1-6" }: Props) {
+export default function FuelCalculator({
+  initialVehicleSlug = "toyota-corolla-altis-1-6",
+  liveFuelPrices,
+}: Props) {
+  const defaultPetrol = liveFuelPrices?.petrol.price || 392.05;
   const [selectedVehicle, setSelectedVehicle] = useState<string>(initialVehicleSlug);
   const [distance, setDistance] = useState<number>(380);
   const [drivingCondition, setDrivingCondition] = useState<DrivingCondition>("highway");
   const [isRoundTrip, setIsRoundTrip] = useState<boolean>(false);
   const [customKmpl, setCustomKmpl] = useState<number>(13.5);
-  const [customFuelPrice, setCustomFuelPrice] = useState<number>(389.14);
+  const [customFuelPrice, setCustomFuelPrice] = useState<number>(defaultPetrol);
   const [includeRental, setIncludeRental] = useState<boolean>(false);
   const [rentalDays, setRentalDays] = useState<number>(1);
 
@@ -76,6 +86,14 @@ export default function FuelCalculator({ initialVehicleSlug = "toyota-corolla-al
       customFuelPrice: selectedVehicle === "custom" ? customFuelPrice : undefined,
       includeRental,
       rentalDays,
+      fuelPrices: liveFuelPrices
+        ? {
+            petrol: liveFuelPrices.petrol.price,
+            diesel: liveFuelPrices.diesel.price,
+            hiOctane: liveFuelPrices.hiOctane.price,
+            lpg: liveFuelPrices.lpg.price,
+          }
+        : undefined,
     });
   }, [
     distance,
@@ -86,6 +104,7 @@ export default function FuelCalculator({ initialVehicleSlug = "toyota-corolla-al
     customFuelPrice,
     includeRental,
     rentalDays,
+    liveFuelPrices,
   ]);
 
   // Cost per passenger
@@ -243,7 +262,7 @@ Please confirm vehicle availability and booking rates.`;
                     max="700"
                     step="0.5"
                     value={customFuelPrice}
-                    onChange={(e) => setCustomFuelPrice(parseFloat(e.target.value) || 389.14)}
+                    onChange={(e) => setCustomFuelPrice(parseFloat(e.target.value) || defaultPetrol)}
                     className="w-full px-3 py-2 bg-white rounded-xl border border-border-primary text-text-primary font-bold text-sm"
                   />
                 </div>

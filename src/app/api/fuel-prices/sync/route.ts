@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import { syncFuelPrices } from "@/utils/fuelSync";
+import { syncFuelPrices, clearFuelCache } from "@/utils/fuelSync";
+import { revalidatePath } from "next/cache";
 
 export const dynamic = "force-dynamic";
 
@@ -31,7 +32,17 @@ export async function GET(req: NextRequest) {
   }
 
   try {
+    clearFuelCache();
     const result = await syncFuelPrices();
+
+    try {
+      revalidatePath("/fuel-prices-pakistan");
+      revalidatePath("/");
+      revalidatePath("/fleet/[slug]", "page");
+    } catch (revalErr) {
+      console.warn("Cache revalidation note:", (revalErr as Error).message);
+    }
+
     return NextResponse.json(result, {
       status: 200,
       headers: {

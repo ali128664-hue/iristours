@@ -9,15 +9,38 @@ import clsx from "clsx";
 import fleetData from "@/data/fleet.json";
 import { compareTwoVehicles, DrivingCondition } from "@/utils/fuelCalculations";
 
-export default function VehicleComparison() {
+interface Props {
+  liveFuelPrices?: {
+    petrol?: { price: number };
+    diesel?: { price: number };
+    hiOctane?: { price: number };
+    lpg?: { price: number };
+  };
+}
+
+export default function VehicleComparison({ liveFuelPrices }: Props = {}) {
   const [vehicleASlug, setVehicleASlug] = useState<string>("toyota-prius");
   const [vehicleBSlug, setVehicleBSlug] = useState<string>("toyota-fortuner");
   const [distance, setDistance] = useState<number>(380);
   const [drivingCondition, setDrivingCondition] = useState<DrivingCondition>("highway");
 
   const comparison = useMemo(() => {
-    return compareTwoVehicles(vehicleASlug, vehicleBSlug, distance, drivingCondition, false);
-  }, [vehicleASlug, vehicleBSlug, distance, drivingCondition]);
+    return compareTwoVehicles(
+      vehicleASlug,
+      vehicleBSlug,
+      distance,
+      drivingCondition,
+      false,
+      liveFuelPrices
+        ? {
+            petrol: liveFuelPrices.petrol?.price,
+            diesel: liveFuelPrices.diesel?.price,
+            hiOctane: liveFuelPrices.hiOctane?.price,
+            lpg: liveFuelPrices.lpg?.price,
+          }
+        : undefined
+    );
+  }, [vehicleASlug, vehicleBSlug, distance, drivingCondition, liveFuelPrices]);
 
   const vehicleA = fleetData.find((v) => v.slug === vehicleASlug);
   const vehicleB = fleetData.find((v) => v.slug === vehicleBSlug);

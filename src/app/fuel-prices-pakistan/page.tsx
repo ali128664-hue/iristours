@@ -13,7 +13,7 @@ import {
   Clock,
   MapPin,
 } from "lucide-react";
-import fuelData from "@/data/fuelPrices.json";
+import { getLiveFuelData } from "@/utils/fuelSync";
 import FuelPriceCards from "@/components/fuel/FuelPriceCards";
 import FuelCalculator from "@/components/fuel/FuelCalculator";
 import VehicleComparison from "@/components/fuel/VehicleComparison";
@@ -21,14 +21,15 @@ import InternationalFuelPrices from "@/components/fuel/InternationalFuelPrices";
 import FuelPriceHistory from "@/components/fuel/FuelPriceHistory";
 import FleetShowcaseSection from "@/components/fuel/FleetShowcaseSection";
 
-// Hostinger automated ISR revalidation: refresh page every 6 hours
-export const revalidate = 21600;
+// Automated ISR revalidation: check fresh rates every 30 minutes
+export const revalidate = 1800;
 
 interface PageProps {
   searchParams: Promise<{ vehicle?: string }>;
 }
 
 export async function generateMetadata(): Promise<Metadata> {
+  const fuelData = await getLiveFuelData();
   const petrolPrice = fuelData.pakistan.petrol.price.toFixed(2);
   const dieselPrice = fuelData.pakistan.diesel.price.toFixed(2);
   const effectiveDate = fuelData.meta.effectiveFrom;
@@ -78,6 +79,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function FuelPricesPage({ searchParams }: PageProps) {
+  const fuelData = await getLiveFuelData();
   const { vehicle } = await searchParams;
   const initialVehicleSlug = vehicle || "toyota-corolla-altis-1-6";
 
@@ -345,22 +347,31 @@ export default async function FuelPricesPage({ searchParams }: PageProps) {
 
         {/* Section 2: Interactive Fuel Calculator */}
         <section id="calculator" className="container mx-auto px-4 md:px-8 lg:px-12 mb-24 scroll-mt-28">
-          <FuelCalculator initialVehicleSlug={initialVehicleSlug} />
+          <FuelCalculator
+            initialVehicleSlug={initialVehicleSlug}
+            liveFuelPrices={fuelData.pakistan}
+          />
         </section>
 
         {/* Section 3: Vehicle Comparison Tool */}
         <section id="compare" className="container mx-auto px-4 md:px-8 lg:px-12 mb-24 scroll-mt-28">
-          <VehicleComparison />
+          <VehicleComparison liveFuelPrices={fuelData.pakistan} />
         </section>
 
         {/* Section 4: International Fuel Prices */}
         <section id="international" className="container mx-auto px-4 md:px-8 lg:px-12 mb-24 scroll-mt-28">
-          <InternationalFuelPrices />
+          <InternationalFuelPrices
+            exchangeRates={fuelData.exchangeRates}
+            international={fuelData.international}
+          />
         </section>
 
         {/* Section 5: Price History */}
         <section id="history" className="container mx-auto px-4 md:px-8 lg:px-12 mb-24 scroll-mt-28">
-          <FuelPriceHistory />
+          <FuelPriceHistory
+            history={fuelData.history}
+            meta={fuelData.meta}
+          />
         </section>
 
         {/* Section 6: Frequently Asked Questions */}

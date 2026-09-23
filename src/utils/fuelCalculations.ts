@@ -10,6 +10,13 @@ export interface VehicleEfficiency {
   fuelType: string;
 }
 
+export interface FuelRatesInput {
+  petrol?: number;
+  diesel?: number;
+  hiOctane?: number;
+  lpg?: number;
+}
+
 export interface TripCalculationInput {
   distance: number; // km
   vehicleSlug: string; // vehicle slug or "custom"
@@ -19,6 +26,7 @@ export interface TripCalculationInput {
   customKmpl?: number;
   includeRental?: boolean;
   rentalDays?: number;
+  fuelPrices?: FuelRatesInput;
 }
 
 export interface TripCalculationResult {
@@ -81,17 +89,17 @@ export function getVehicleEfficiency(slug: string): VehicleEfficiency {
 /**
  * Get current Pakistan price for a fuel type
  */
-export function getCurrentFuelPrice(fuelType: string): number {
+export function getCurrentFuelPrice(fuelType: string, customRates?: FuelRatesInput): number {
   const norm = fuelType.toLowerCase();
   if (norm.includes("diesel")) {
-    return fuelData.pakistan.diesel.price;
+    return customRates?.diesel ?? fuelData.pakistan.diesel.price;
   } else if (norm.includes("hi-octane") || norm.includes("hobc")) {
-    return fuelData.pakistan.hiOctane.price;
+    return customRates?.hiOctane ?? fuelData.pakistan.hiOctane.price;
   } else if (norm.includes("lpg")) {
-    return fuelData.pakistan.lpg.price;
+    return customRates?.lpg ?? fuelData.pakistan.lpg.price;
   }
   // Petrol / Hybrid default to petrol rate
-  return fuelData.pakistan.petrol.price;
+  return customRates?.petrol ?? fuelData.pakistan.petrol.price;
 }
 
 /**
@@ -120,7 +128,7 @@ export function calculateTripFuelCost(input: TripCalculationInput): TripCalculat
   const fuelPricePerUnit =
     input.customFuelPrice && input.customFuelPrice > 0
       ? input.customFuelPrice
-      : getCurrentFuelPrice(fuelType);
+      : getCurrentFuelPrice(fuelType, input.fuelPrices);
 
   const fuelNeededLitres = effectiveDistance / Math.max(1, kmpl);
   const fuelCostPkr = Math.round(fuelNeededLitres * fuelPricePerUnit);
@@ -155,13 +163,15 @@ export function compareTwoVehicles(
   slugB: string,
   distance: number,
   drivingCondition: DrivingCondition = "combined",
-  isRoundTrip: boolean = false
+  isRoundTrip: boolean = false,
+  fuelPrices?: FuelRatesInput
 ): VehicleComparisonResult {
   const vehicleA = calculateTripFuelCost({
     distance,
     vehicleSlug: slugA,
     drivingCondition,
     isRoundTrip,
+    fuelPrices,
   });
 
   const vehicleB = calculateTripFuelCost({
@@ -169,6 +179,7 @@ export function compareTwoVehicles(
     vehicleSlug: slugB,
     drivingCondition,
     isRoundTrip,
+    fuelPrices,
   });
 
   const fuelDifferenceLitres =
