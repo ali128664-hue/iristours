@@ -1,0 +1,44 @@
+name: Daily Fuel Price Auto-Sync
+
+on:
+  schedule:
+    - cron: '0 6,18 * * *'
+  workflow_dispatch:
+
+jobs:
+  sync-fuel-prices:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24.x"
+
+      - name: Run Fuel Price Synchronizer
+        env:
+          APP_URL: "https://iristours.net"
+          IRIS_CRON_SECRET: "iris_fuel_sync_secret_2026"
+        run: |
+          node scripts/update-fuel-prices.mjs
+
+      - name: Trigger Live Website Cache Revalidation
+        run: |
+          curl -s -L -X GET "https://iristours.net/api/fuel-prices/sync?secret=iris_fuel_sync_secret_2026" || true
+
+      - name: Commit and Push if Rates Changed
+        run: |
+          git config --global user.name "Iris Tours Bot"
+          git config --global user.email "bot@iristours.net"
+          git add src/data/fuelPrices.json
+          if git diff --staged --quiet; then
+            echo "No price changes detected."
+          else
+            git commit -m "chore(automated): update Pakistan fuel prices via live feed [skip ci]"
+            git push origin master
+          fi
