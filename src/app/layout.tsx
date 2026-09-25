@@ -21,6 +21,7 @@ import SmoothScroll from "@/components/layout/SmoothScroll";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import FloatingWhatsApp from "@/components/shared/FloatingWhatsApp";
+import MobileBottomBar from "@/components/layout/MobileBottomBar";
 import { CurrencyProvider } from "@/context/CurrencyContext";
 import Script from "next/script";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -167,11 +168,12 @@ export default function RootLayout({
         <CurrencyProvider>
           <SmoothScroll>
             <Navbar />
-            <main className="flex-grow pt-[88px]">
+            <main className="flex-grow pt-[88px] pb-20 md:pb-0">
               {children}
             </main>
             <Footer />
             <FloatingWhatsApp />
+            <MobileBottomBar />
             <SpeedInsights />
           </SmoothScroll>
         </CurrencyProvider>

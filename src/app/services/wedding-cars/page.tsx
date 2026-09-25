@@ -31,9 +31,14 @@ export default function WeddingCarsPage() {
           <p className="text-text-secondary text-lg mb-8">
             Premium Fleet • Floral Decorations • Professional Chauffeurs
           </p>
-          <a href="https://wa.me/923154973906?text=I%20want%20to%20book%20a%20wedding%20car" target="_blank" rel="noopener noreferrer">
-            <Button variant="primary" className="px-10 py-4">Plan Your Big Day</Button>
-          </a>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="https://wa.me/923154973906?text=Hi%20Iris%20Tours!%20I%20want%20to%20book%20a%20wedding%20car%20package." target="_blank" rel="noopener noreferrer">
+              <Button variant="primary" className="px-8 py-4">Plan Your Big Day (WhatsApp)</Button>
+            </a>
+            <a href="tel:+923154973906">
+              <Button variant="glass" className="px-8 py-4 bg-white/20 text-white border-white/40">Call: 0315-4973906</Button>
+            </a>
+          </div>
         </div>
       </div>
 

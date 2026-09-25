@@ -24,6 +24,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import gsap from "gsap";
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
+import HeroQuickQuote from "@/components/home/HeroQuickQuote";
 
 export default function HeroSection() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -131,6 +132,11 @@ export default function HeroSection() {
                 Book on WhatsApp
               </Button>
             </div>
+          </div>
+
+          {/* ─── INSTANT WHATSAPP QUOTE & AVAILABILITY CALCULATOR + TRUST BADGES ─── */}
+          <div className="hero-text overflow-hidden">
+            <HeroQuickQuote />
           </div>
         </div>
       </div>

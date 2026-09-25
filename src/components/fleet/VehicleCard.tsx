@@ -23,6 +23,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Users, Settings, Fuel, ShieldCheck, UserCircle2, ChevronLeft, ChevronRight } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import { Button } from "@/components/ui/Button";
 import WhatsAppBookingPopup from "@/components/shared/WhatsAppBookingPopup";
 import { useCurrency } from "@/context/CurrencyContext";
@@ -40,6 +41,11 @@ export default function VehicleCard({ vehicle, index = 0 }: VehicleProps) {
   const { currency } = useCurrency();
 
   const displayPrice = vehicle.rent?.local ?? vehicle.rent?.daily ?? vehicle.rent?.withDriver?.local ?? 0;
+  const formattedPrice = convertAndFormatPrice(displayPrice, currency);
+  const directWhatsAppMsg = encodeURIComponent(
+    `Hi Iris Tours! 🚗 I would like to book the *${vehicle.name}* (${vehicle.category}, City Rate: ${formattedPrice}). Please confirm availability.`
+  );
+  const directWhatsAppUrl = `https://wa.me/923154973906?text=${directWhatsAppMsg}`;
 
   return (
     <>
@@ -161,19 +167,33 @@ export default function VehicleCard({ vehicle, index = 0 }: VehicleProps) {
           </div>
           
           {/* Action Buttons */}
-          <div className="flex gap-3">
-            {/* Book Now — opens the WhatsApp booking popup (WhatsAppBookingPopup.tsx) */}
-            {/* Change the WhatsApp booking message template in WhatsAppBookingPopup.tsx */}
-            <Button variant="primary" className="flex-1 text-xs py-2.5" onClick={() => setIsPopupOpen(true)}>
-              Book Now
-            </Button>
+          <div className="flex gap-2.5">
+            {/* 1-Tap Direct WhatsApp Booking */}
+            <a
+              href={directWhatsAppUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-[1.2] flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white font-extrabold text-xs uppercase tracking-wider shadow-sm active:scale-[0.98] transition-all"
+            >
+              <FaWhatsapp size={16} />
+              <span>WhatsApp</span>
+            </a>
+
             {/* View Details — navigates to the car's detail page */}
             <Link href={`/fleet/${vehicle.slug}`} className="flex-1" passHref>
               <Button variant="secondary" className="w-full text-xs py-2.5">
-                View Details
+                Details
               </Button>
             </Link>
           </div>
+
+          {/* Quick Custom Booking Option */}
+          <button
+            onClick={() => setIsPopupOpen(true)}
+            className="w-full text-center text-[11px] text-text-secondary hover:text-accent-primary mt-2.5 font-medium transition-colors cursor-pointer"
+          >
+            Need custom dates? <span className="underline font-semibold">Open booking form</span>
+          </button>
         </div>
       </motion.div>
 

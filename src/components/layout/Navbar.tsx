@@ -19,7 +19,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ChevronRight, ChevronDown, Globe } from "lucide-react";
+import { Menu, X, ChevronRight, ChevronDown, Globe, Phone } from "lucide-react";
 import clsx from "clsx";
 // Logo component — the logo image is at public/logo.png, replace that file to update the logo
 import Logo from "@/components/ui/Logo";
@@ -166,13 +166,22 @@ export default function Navbar() {
         </nav>
 
         {/* Desktop Actions */}
-        <div className="hidden lg:flex items-center gap-4">
+        <div className="hidden lg:flex items-center gap-3">
+          <a 
+            href="tel:+923154973906"
+            className="flex items-center gap-2 px-3.5 py-2 rounded-full border border-border-primary/80 bg-white/60 hover:bg-white text-text-primary hover:text-accent-primary font-bold text-xs tracking-wide transition-all shadow-sm"
+            title="Call Us Directly"
+          >
+            <Phone size={13} className="text-accent-primary" />
+            <span>0315-4973906</span>
+          </a>
+
           <button 
             onClick={toggleCurrency}
-            className="flex items-center gap-2 px-3 py-2 rounded-full border border-border-primary hover:bg-bg-secondary transition-colors text-sm font-semibold text-text-primary shadow-sm"
+            className="flex items-center gap-1.5 px-3 py-2 rounded-full border border-border-primary hover:bg-bg-secondary transition-colors text-xs font-semibold text-text-primary shadow-sm"
             title="Toggle Currency"
           >
-            <Globe size={16} />
+            <Globe size={14} />
             {currency === 'PKR' ? 'PKR' : 'USD'}
           </button>
 
@@ -181,20 +190,29 @@ export default function Navbar() {
             href="https://wa.me/923154973906?text=Hi!%20I%20want%20to%20book%20a%20car."
             target="_blank"
             rel="noopener noreferrer"
-            className="px-6 py-2.5 rounded-full bg-gradient-to-tr from-accent-secondary to-accent-primary text-white font-semibold text-sm uppercase tracking-wider hover:brightness-110 transition-all shadow-[0_8px_16px_-4px_rgba(245,158,11,0.5),inset_0_2px_4px_rgba(255,255,255,0.4)] hover:shadow-[0_12px_24px_-6px_rgba(245,158,11,0.6),inset_0_2px_4px_rgba(255,255,255,0.6)] hover:-translate-y-1 inline-block border border-white/20"
+            className="px-5 py-2.5 rounded-full bg-gradient-to-tr from-accent-secondary to-accent-primary text-white font-bold text-xs uppercase tracking-wider hover:brightness-110 transition-all shadow-[0_8px_16px_-4px_rgba(245,158,11,0.5),inset_0_2px_4px_rgba(255,255,255,0.4)] hover:shadow-[0_12px_24px_-6px_rgba(245,158,11,0.6),inset_0_2px_4px_rgba(255,255,255,0.6)] hover:-translate-y-0.5 inline-block border border-white/20"
           >
             Book via WhatsApp
           </Link>
         </div>
 
-        {/* Mobile Menu Toggle Button */}
-        <button
-          className="lg:hidden text-text-primary p-2"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          aria-label="Toggle Menu"
-        >
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        {/* Mobile Header Actions (Call & Menu) */}
+        <div className="lg:hidden flex items-center gap-2">
+          <a
+            href="tel:+923154973906"
+            className="p-2 rounded-full bg-accent-primary/10 text-accent-primary hover:bg-accent-primary hover:text-white transition-colors"
+            aria-label="Call Directly"
+          >
+            <Phone size={18} />
+          </a>
+          <button
+            className="text-text-primary p-2"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle Menu"
+          >
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu — slides in when hamburger is tapped */}

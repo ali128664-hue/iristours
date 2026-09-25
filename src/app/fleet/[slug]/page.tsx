@@ -132,11 +132,40 @@ export default async function VehicleDetailPage({ params }: Props) {
     },
   };
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://iristours.net",
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Fleet",
+        "item": "https://iristours.net/fleet",
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": vehicle.name,
+        "item": `https://iristours.net/fleet/${vehicle.slug}`,
+      },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <div className="bg-bg-primary min-h-screen">
         {/* Hero Section — large vehicle image with name overlay */}
