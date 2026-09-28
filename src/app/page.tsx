@@ -14,9 +14,13 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Premium Rent a Car in Lahore DHA & Islamabad | Luxury Fleet - Iris Tours",
   description: "Experience the best rent a car service in Lahore DHA and Islamabad. From Luxury SUVs like Prado & V8 to affordable daily rentals and wedding cars. Book instantly!",
+  alternates: {
+    canonical: "https://iristours.net",
+  },
   openGraph: {
     title: "Iris Tours | Premium Rent a Car in Lahore & Islamabad",
     description: "Experience the best rent a car service in Lahore DHA and Islamabad. From Luxury SUVs like Prado & V8 to affordable daily rentals and wedding cars.",
+    url: "https://iristours.net",
   }
 };
 

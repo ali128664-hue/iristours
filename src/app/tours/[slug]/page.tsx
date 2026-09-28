@@ -27,9 +27,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: tour.seo.title,
     description: tour.seo.description,
+    alternates: {
+      canonical: `https://iristours.net/tours/${slug}`,
+    },
     openGraph: {
       title: tour.seo.title,
       description: tour.seo.description,
+      url: `https://iristours.net/tours/${slug}`,
       images: [tour.images.thumbnail],
     }
   };

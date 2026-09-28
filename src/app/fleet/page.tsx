@@ -3,11 +3,15 @@ import FleetClient from "@/components/fleet/FleetClient";
 import fleetData from "@/data/fleet.json";
 
 export const metadata: Metadata = {
-  title: "Our Luxury Fleet | Iris Tours Pakistan",
-  description: "Browse our premium collection of luxury cars, SUVs, and executive sedans available for rent across Pakistan.",
+  title: "Rent a Car Fleet Lahore & Islamabad | Luxury SUVs, Sedans & Vans - Iris Tours",
+  description: "Explore 36+ premium vehicles for rent in Lahore DHA & Islamabad. Toyota Prado, Fortuner, Land Cruiser V8, Mercedes, Civic, and Hiace Grand Cabin with chauffeurs.",
+  alternates: {
+    canonical: "https://iristours.net/fleet",
+  },
   openGraph: {
-    title: "Our Luxury Fleet | Iris Tours",
-    description: "Premium luxury cars and SUVs for rent with professional drivers in Pakistan.",
+    title: "Rent a Car Fleet Lahore & Islamabad | Iris Tours",
+    description: "Explore 36+ luxury SUVs, sedans, and vans for rent in Lahore DHA and Islamabad with verified drivers.",
+    url: "https://iristours.net/fleet",
   }
 };
 

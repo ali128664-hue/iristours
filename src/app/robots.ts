@@ -27,9 +27,15 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/", "/_next/"],
       },
     ],
-    // Update domain here when deploying to production
-    // This must match your actual live domain (e.g., https://iristours.net/sitemap.xml)
-    sitemap: "https://iristours.net/sitemap.xml",
+    sitemap: [
+      "https://iristours.net/sitemap.xml",
+      "https://iristours.net/pages-sitemap/sitemap.xml",
+      "https://iristours.net/fleet-sitemap/sitemap.xml",
+      "https://iristours.net/services-sitemap/sitemap.xml",
+      "https://iristours.net/blog-sitemap/sitemap.xml",
+      "https://iristours.net/tours-sitemap/sitemap.xml",
+      "https://iristours.net/areas-sitemap/sitemap.xml",
+    ],
     host: "https://iristours.net",
   };
 }

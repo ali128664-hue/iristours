@@ -6,6 +6,14 @@ import serviceAreas from "@/data/serviceAreas.json";
 export const metadata: Metadata = {
   title: "Service Areas | Rent a Car in Lahore, Islamabad & More - Iris Tours",
   description: "Browse our complete list of service areas across Pakistan. We provide premium rent a car services in Lahore, Islamabad, Rawalpindi, Faisalabad, Multan, Gujranwala, and Sialkot.",
+  alternates: {
+    canonical: "https://iristours.net/areas",
+  },
+  openGraph: {
+    title: "Service Areas | Iris Tours Rent a Car",
+    description: "Doorstep car rental delivery across 200+ areas in Lahore, Islamabad, Rawalpindi, and Punjab.",
+    url: "https://iristours.net/areas",
+  },
 };
 
 export default function AreasIndexPage() {

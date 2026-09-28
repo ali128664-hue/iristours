@@ -4,8 +4,16 @@ import { Button } from "@/components/ui/Button";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Corporate Car Rentals | Iris Tours",
-  description: "Executive and corporate car rental services in Pakistan. Monthly contracts, VIP transport, and reliable business travel solutions.",
+  title: "Corporate Car Rental Lahore | Executive Fleet Solutions - Iris Tours",
+  description: "Monthly and daily corporate car rentals in Lahore and Islamabad. Premium executive sedans, Hiace vans, and luxury SUVs for businesses.",
+  alternates: {
+    canonical: "https://iristours.net/services/corporate-rentals",
+  },
+  openGraph: {
+    title: "Corporate Car Rental Lahore | Iris Tours",
+    description: "Executive transportation and corporate fleet contracts in Lahore & Islamabad with dedicated chauffeurs.",
+    url: "https://iristours.net/services/corporate-rentals",
+  },
 };
 
 export default function CorporateRentalsPage() {

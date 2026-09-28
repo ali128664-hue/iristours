@@ -4,8 +4,16 @@ import { Button } from "@/components/ui/Button";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Premium Airport Transfers | Iris Tours",
-  description: "Reliable, luxurious, and on-time airport transfers across major airports in Pakistan. VIP meet & greet service.",
+  title: "Airport Transfer Lahore & Islamabad | Airport Rent a Car - Iris Tours",
+  description: "Book 24/7 Allama Iqbal Airport Lahore & Islamabad airport transfer car rental with driver. On-time flight tracking, VIP meet & greet, and transparent rates.",
+  alternates: {
+    canonical: "https://iristours.net/services/airport-transfer",
+  },
+  openGraph: {
+    title: "Airport Transfer Lahore & Islamabad | Iris Tours",
+    description: "24/7 on-time airport pickup & drop-off in Lahore DHA and Islamabad with luxury sedans and SUVs.",
+    url: "https://iristours.net/services/airport-transfer",
+  },
 };
 
 const airports = [

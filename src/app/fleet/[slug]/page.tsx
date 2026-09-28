@@ -48,9 +48,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return { title: "Vehicle Not Found" };
   }
 
-  // Change this to your actual domain when deploying to production
-  // e.g., "https://iristours.net" or "https://yourdomain.com"
-  const baseUrl = "https://iristours.com";
+  // Production domain for canonical and metadata URLs
+  const baseUrl = "https://iristours.net";
   const thumbnail = vehicle.images.thumbnail.startsWith("http")
     ? vehicle.images.thumbnail
     : `${baseUrl}${vehicle.images.thumbnail}`;
@@ -123,7 +122,7 @@ export default async function VehicleDetailPage({ params }: Props) {
         name: "Iris Tours",
         address: {
           "@type": "PostalAddress",
-          streetAddress: "DHA Phase 5",
+          streetAddress: "143 Street, 153, Sector-H, DHA Phase-1",
           addressLocality: "Lahore",
           addressCountry: "PK",
         },

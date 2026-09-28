@@ -10,6 +10,15 @@ export async function GET() {
     <loc>${baseUrl}/fleet-sitemap/sitemap.xml</loc>
   </sitemap>
   <sitemap>
+    <loc>${baseUrl}/services-sitemap/sitemap.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>${baseUrl}/blog-sitemap/sitemap.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>${baseUrl}/tours-sitemap/sitemap.xml</loc>
+  </sitemap>
+  <sitemap>
     <loc>${baseUrl}/areas-sitemap/sitemap.xml</loc>
   </sitemap>
 </sitemapindex>
@@ -17,7 +26,8 @@ export async function GET() {
 
   return new Response(xml, {
     headers: {
-      "Content-Type": "text/xml",
+      "Content-Type": "text/xml; charset=utf-8",
+      "Cache-Control": "public, max-age=3600, s-maxage=3600",
     },
   });
 }

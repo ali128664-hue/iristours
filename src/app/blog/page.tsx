@@ -1,83 +1,64 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import blogs from "@/data/blogs.json";
 
 export const metadata: Metadata = {
-  title: "Blog | Iris Tours & Car Rental Lahore",
-  description: "Read our latest articles on car rentals, travel tips, and luxury chauffeur services in Lahore and across Pakistan.",
+  title: "Car Rental & Travel Blog Lahore | Tips, Rates & Guides - Iris Tours",
+  description: "Read expert guides on car rentals with driver in Lahore, Toyota Fortuner rentals, motorway travel tips, wedding car hiring, and northern tours.",
+  alternates: {
+    canonical: "https://iristours.net/blog",
+  },
+  openGraph: {
+    title: "Car Rental & Travel Blog Lahore | Iris Tours",
+    description: "Guides on car rentals, travel tips, and luxury chauffeur services in Lahore and Pakistan.",
+    url: "https://iristours.net/blog",
+  },
 };
-
-const blogs = [
-  {
-    title: "A Day in the Heart of Lahore: Exploring the Walled City",
-    slug: "a-day-in-the-walled-city-lahore",
-    desc: "Experience the magic of Badshahi Mosque and the Walled City without the traffic stress. Read our travel diary.",
-    img: "/blog/lahore-cultural-tour.jpg"
-  },
-  {
-    title: "From Lahore to the Mountains: A Weekend Getaway in a Toyota Fortuner",
-    slug: "from-lahore-to-the-mountains-a-weekend-getaway",
-    desc: "Read the story of a perfect road trip from Lahore to the Northern Areas in a chauffeur-driven Toyota Fortuner.",
-    img: "/blog/northern-areas-fortuner.jpg"
-  },
-  {
-    title: "Toyota Fortuner for Rent in Lahore: The Ultimate Power Move",
-    slug: "toyota-fortuner-for-rent",
-    desc: "Command respect on the road. Discover why renting a Toyota Fortuner is the perfect choice for VIPs and Northern Area tours.",
-    img: "/blog/fortuner-rental.jpg"
-  },
-  {
-    title: "Your Guide to Premium Car Rentals in DHA & Bahria Town Lahore",
-    slug: "rent-a-car-bahria-town-dha-lahore",
-    desc: "Need a premium car rental in Bahria Town, DHA, Lake City, or Johar Town? Get fast, reliable chauffeur-driven cars at your doorstep.",
-    img: "/blog/bahria-dha.jpg"
-  },
-  {
-    title: "Rent a Limousine in Lahore: Make an Unforgettable Grand Entrance",
-    slug: "limousine-rental-lahore",
-    desc: "Make your grand entrance unforgettable. Rent a luxurious stretch limousine for weddings and red-carpet arrivals in Lahore.",
-    img: "/blog/limousine-wedding.jpg"
-  },
-  {
-    title: "The Ultimate Guide to Lahore to Islamabad Car Rental",
-    slug: "lahore-to-islamabad-car-rental",
-    desc: "Traveling the M2 motorway? Discover why renting a premium SUV or sedan with a driver is the best way to travel from Lahore to Islamabad.",
-    img: "/blog/lahore-islamabad.jpg"
-  },
-  {
-    title: "Experience True Elegance: Luxury Car Rental in Lahore",
-    slug: "luxury-car-rental-lahore",
-    desc: "Elevate your journey with Iris Tours' luxury car rental in Lahore. Rent premium vehicles like Mercedes, Audi, and limousines with VIP chauffeurs.",
-    img: "/blog/luxury-rental.jpg"
-  },
-  {
-    title: "Why Navigating the City is Easier: Rent a Car With Driver",
-    slug: "lahore-car-rental-with-driver",
-    desc: "Stress-free travel starts here. Book a reliable Lahore car rental with a professional driver to navigate the city easily.",
-    img: "/blog/chauffeur-rental.jpg"
-  },
-  {
-    title: "Group Travel Made Easy: Renting a Hiace or Grand Cabin",
-    slug: "toyota-hiace-grand-cabin-rental",
-    desc: "Planning a family trip or corporate tour? Rent a Toyota Hiace, Grand Cabin, or Coaster in Lahore for spacious group travel.",
-    img: "/blog/hiace-rental.jpg"
-  }
-];
 
 export default function BlogIndex() {
   return (
     <div className="bg-bg-primary min-h-screen pt-32 pb-20">
       <div className="container mx-auto px-6 max-w-6xl">
-        <h1 className="text-4xl md:text-5xl font-bold text-text-primary mb-12 text-center">Our Latest Articles & Travel Stories</h1>
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <span className="inline-block px-4 py-1.5 rounded-full bg-accent-primary/10 border border-accent-primary/20 text-accent-primary text-xs font-bold uppercase tracking-widest mb-4">
+            Travel Guides & Insights
+          </span>
+          <h1 className="text-4xl md:text-5xl font-extrabold text-text-primary tracking-tight mb-4">
+            Car Rental & Travel Guides in Pakistan
+          </h1>
+          <p className="text-text-secondary text-lg">
+            Practical advice, car rental price guides, and northern Pakistan travel itineraries curated by our local chauffeurs and road experts.
+          </p>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {blogs.map(blog => (
-            <Link key={blog.slug} href={`/blog/${blog.slug}`} className="group block bg-bg-secondary rounded-2xl overflow-hidden border border-border-primary hover:border-accent-primary transition-colors flex flex-col">
-              <div className="h-56 overflow-hidden flex-shrink-0">
-                <img src={blog.img} alt={blog.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          {blogs.map((blog) => (
+            <Link
+              key={blog.slug}
+              href={`/blog/${blog.slug}`}
+              className="group block bg-bg-secondary rounded-2xl overflow-hidden border border-border-primary hover:border-accent-primary hover:shadow-xl transition-all duration-300 flex flex-col"
+            >
+              <div className="h-56 overflow-hidden flex-shrink-0 relative">
+                <img
+                  src={blog.img}
+                  alt={blog.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute bottom-3 right-3 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-md text-[11px] font-semibold text-white">
+                  {blog.readingTime || "5 min read"}
+                </div>
               </div>
               <div className="p-6 flex flex-col flex-grow">
-                <h2 className="text-xl font-bold text-text-primary mb-3">{blog.title}</h2>
-                <p className="text-text-secondary text-sm flex-grow">{blog.desc}</p>
-                <div className="mt-4 text-accent-primary font-medium text-sm">Read Story →</div>
+                <h2 className="text-xl font-bold text-text-primary mb-3 group-hover:text-accent-primary transition-colors leading-snug">
+                  {blog.title}
+                </h2>
+                <p className="text-text-secondary text-sm flex-grow leading-relaxed">
+                  {blog.desc}
+                </p>
+                <div className="mt-5 pt-4 border-t border-border-primary/60 flex items-center justify-between text-accent-primary font-semibold text-sm">
+                  <span>Read Article</span>
+                  <span>→</span>
+                </div>
               </div>
             </Link>
           ))}

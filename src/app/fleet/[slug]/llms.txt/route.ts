@@ -28,9 +28,8 @@ export async function GET(
     return new NextResponse("Vehicle not found", { status: 404 });
   }
 
-  // Change this to your actual domain when deploying
-  // e.g., "https://iristours.net"
-  const baseUrl = "https://iristours.com";
+  // Production domain
+  const baseUrl = "https://iristours.net";
   const pageUrl = `${baseUrl}/fleet/${vehicle.slug}`;
 
   // The text content returned at /fleet/[slug]/llms.txt
@@ -74,9 +73,9 @@ ${(vehicle.features || []).map((f: string) => `- ${f}`).join("\n")}
 ## About Iris Tours
 Iris Tours is a premier car rental and chauffeur service based in Lahore, Pakistan. We specialize in airport transfers, corporate travel, wedding rentals, outstation trips, and luxury vehicle hire across Pakistan.
 
-- **Location:** DHA Phase 5, Lahore, Pakistan
+- **Location:** 143 Street, 153, Sector-H, DHA Phase-1, Lahore, Pakistan
 - **WhatsApp:** +92-315-497-3906
-- **Website:** https://iristours.com
+- **Website:** https://iristours.net
 - **Fleet Page:** ${baseUrl}/fleet
 
 ## Contact & Booking

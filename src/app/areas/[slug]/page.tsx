@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { MapPin, PhoneCall, ShieldCheck, Clock, CheckCircle2, HelpCircle, Phone } from "lucide-react";
+import { MapPin, PhoneCall, ShieldCheck, Clock, CheckCircle2, HelpCircle, Phone, ChevronRight } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import serviceAreas from "@/data/serviceAreas.json";
 import fleetData from "@/data/fleet.json";
@@ -109,6 +109,31 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
     }))
   };
 
+  // AutoRental LocalBusiness Schema
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "AutoRental",
+    "name": `Iris Tours - Rent a Car in ${area.name}`,
+    "url": `https://iristours.net/areas/${area.slug}`,
+    "telephone": "+923154973906",
+    "priceRange": "PKR",
+    "areaServed": {
+      "@type": "Place",
+      "name": area.name
+    },
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Iris Tours",
+      "telephone": "+923154973906",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "143 Street, 153, Sector-H, DHA Phase-1",
+        "addressLocality": "Lahore",
+        "addressCountry": "PK"
+      }
+    }
+  };
+
   const whatsappInquiryUrl = `https://wa.me/923154973906?text=${encodeURIComponent(
     `Hi Iris Tours! 🚗 I am looking for a rental car in ${area.name}. Please share available vehicles and rates.`
   )}`;
@@ -124,14 +149,29 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
 
       <div className="bg-bg-primary min-h-screen pb-20">
         {/* Hero Section */}
         <div className="relative min-h-[380px] flex items-center justify-center overflow-hidden border-b border-border-primary py-16 bg-gradient-to-b from-white to-bg-secondary">
           <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-            <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-accent-primary/10 border border-accent-primary/20 text-accent-secondary font-bold text-xs uppercase tracking-wider mb-6">
-              <MapPin size={15} className="text-accent-primary" />
-              <span>Verified Service Area: {area.name}</span>
+            {/* Breadcrumb UI */}
+            <nav aria-label="Breadcrumb" className="inline-flex items-center gap-1.5 text-xs text-text-secondary mb-4 bg-white/80 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-border-primary shadow-xs">
+              <Link href="/" className="hover:text-accent-primary transition-colors">Home</Link>
+              <ChevronRight size={12} />
+              <Link href="/areas" className="hover:text-accent-primary transition-colors">Areas</Link>
+              <ChevronRight size={12} />
+              <span className="text-text-primary font-semibold">{area.city}</span>
+            </nav>
+
+            <div className="block mb-4">
+              <span className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-accent-primary/10 border border-accent-primary/20 text-accent-secondary font-bold text-xs uppercase tracking-wider">
+                <MapPin size={15} className="text-accent-primary" />
+                <span>Verified Service Area: {area.name}</span>
+              </span>
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-text-primary mb-5 tracking-tight leading-tight">
@@ -139,7 +179,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
             </h1>
 
             <p className="text-text-secondary text-lg max-w-2xl mx-auto mb-8 font-medium">
-              Premium chauffeur-driven car rental and tour mobility solutions in {area.name}, Lahore. 24/7 on-demand doorstep service.
+              Premium chauffeur-driven car rental and tour mobility solutions in {area.name}, {area.city}. 24/7 on-demand doorstep service.
             </p>
 
             {/* Instant Action CTA inside Hero */}
@@ -226,7 +266,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
               href="/fleet" 
               className="inline-block px-8 py-4 bg-bg-secondary border border-border-primary rounded-2xl text-text-primary font-bold hover:border-accent-primary hover:text-accent-primary transition-all shadow-sm"
             >
-              Explore Full 35+ Vehicle Fleet
+              Explore Full 36+ Vehicle Fleet
             </Link>
           </div>
 

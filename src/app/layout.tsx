@@ -37,9 +37,6 @@ export const metadata: Metadata = {
   },
   description: "Best Rent a Car in Lahore DHA and Islamabad. Premium luxury car rental, SUVs, wedding cars, airport transfers, and northern tours in Pakistan. Book instantly via WhatsApp.",
   keywords: "Rent a car in Lahore, Best Rent a Car DHA Lahore, Cheap car rental Lahore, Luxury car rental Lahore, Wedding cars Lahore, Airport transfer Lahore, Prado for rent Lahore, Corolla for rent Lahore, V8 for rent Pakistan, Rent a car near me Lahore, Rent a car Islamabad, Rent a car Lahore to Islamabad, DHA Phase 1 Rent a Car, Chauffeur driven cars Lahore, SUV rental Lahore, Iris Tours Lahore",
-  alternates: {
-    canonical: "https://iristours.net",
-  },
   openGraph: {
     title: "Iris Tours | Rent a Car in Lahore & Islamabad",
     description: "Best Rent a Car in Lahore DHA and Islamabad. Premium luxury car rental, SUVs, and wedding cars.",
@@ -104,6 +101,16 @@ export default function RootLayout({
             // Update phone number here for Schema.org business info
             "telephone": "+923154973906",
             "priceRange": "PKR",
+            "currenciesAccepted": "PKR, USD, AED, GBP",
+            "paymentAccepted": "Cash, Credit Card, Debit Card, Online Bank Transfer (IBFT), EasyPaisa, JazzCash",
+            "areaServed": [
+              { "@type": "City", "name": "Lahore" },
+              { "@type": "City", "name": "Islamabad" },
+              { "@type": "City", "name": "Rawalpindi" },
+              { "@type": "City", "name": "Faisalabad" },
+              { "@type": "City", "name": "Multan" },
+              { "@type": "City", "name": "Sialkot" }
+            ],
             "address": [
               {
                 // Update business address here (Lahore office)

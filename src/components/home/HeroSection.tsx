@@ -96,25 +96,24 @@ export default function HeroSection() {
         
         {/* Glassmorphism Card for Text Visibility */}
         <div className="max-w-4xl mx-auto bg-white/70 backdrop-blur-xl p-6 md:p-8 rounded-[2.5rem] border border-white/60 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)]">
-          {/* Small subtitle line above the main heading — change text here */}
+          {/* Small subtitle line above the main heading */}
           <div className="hero-text overflow-hidden mb-4">
-            <h2 className="text-accent-secondary font-bold tracking-[0.2em] uppercase text-sm md:text-base">
-              Premium Rent a Car in Lahore & Islamabad
-            </h2>
+            <span className="inline-block text-accent-secondary font-bold tracking-[0.2em] uppercase text-sm md:text-base">
+              Luxury Fleet &amp; Professional Chauffeurs
+            </span>
           </div>
           
-          {/* ─── MAIN HEADLINE — change main headline text here ─────────────── */}
+          {/* ─── MAIN HEADLINE ─────────────── */}
           <div className="hero-text overflow-hidden mb-6">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-text-primary tracking-tight leading-tight">
-              Drive <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-primary to-accent-secondary">Luxury.</span><br />
-              Experience <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Perfection.</span>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-text-primary tracking-tight leading-tight">
+              Rent a Car in <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-primary to-accent-secondary">Lahore DHA</span> &amp; <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Islamabad</span>
             </h1>
           </div>
           
-          {/* Description paragraph below the headline — change text here */}
+          {/* Description paragraph below the headline */}
           <div className="hero-text overflow-hidden mb-8 max-w-2xl mx-auto">
             <p className="text-lg md:text-xl text-text-secondary leading-relaxed font-medium">
-              Elevate your journey with our world-class fleet of luxury cars, SUVs, and professional chauffeurs across Pakistan.
+              Drive Luxury. Experience Perfection. Elevate your journey with our world-class fleet of luxury cars, SUVs (Prado, Fortuner, V8), and verified chauffeurs across Pakistan.
             </p>
           </div>
           

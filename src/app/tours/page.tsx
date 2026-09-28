@@ -3,12 +3,16 @@ import TourCard from "@/components/tours/TourCard";
 import toursData from "@/data/tours.json";
 
 export const metadata: Metadata = {
-  title: "Northern Pakistan Tours | Iris Tours",
-  description: "Explore the breathtaking beauty of Northern Pakistan with our luxury tour packages. Travel in comfort with premium SUVs and professional drivers.",
+  title: "Northern Pakistan Tours & 4x4 SUV Rental | Iris Tours",
+  description: "Explore Hunza, Skardu, Swat, and Northern Pakistan with luxury 4x4 SUVs (Prado, V8, Fortuner) and mountain-expert chauffeurs. Custom tour packages.",
+  alternates: {
+    canonical: "https://iristours.net/tours",
+  },
   openGraph: {
-    title: "Northern Pakistan Tours | Iris Tours",
-    description: "Premium luxury tour packages for Northern Pakistan.",
-  }
+    title: "Northern Pakistan Tours & 4x4 SUV Rental | Iris Tours",
+    description: "Premium luxury tour packages for Northern Pakistan with expert mountain chauffeurs.",
+    url: "https://iristours.net/tours",
+  },
 };
 
 export default function ToursPage() {

@@ -4,8 +4,16 @@ import { Button } from "@/components/ui/Button";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Luxury Wedding Cars | Iris Tours",
-  description: "Make your special day unforgettable with our premium fleet of decorated wedding cars. Rent Mercedes, BMW, Audi, and Land Cruiser for weddings in Pakistan.",
+  title: "Wedding Car Rental Lahore DHA | Decorated Luxury Cars - Iris Tours",
+  description: "Rent luxury wedding cars in Lahore DHA & Islamabad. Mercedes, Audi, Prado, V8 and vintage cars with professional drivers and floral decoration.",
+  alternates: {
+    canonical: "https://iristours.net/services/wedding-cars",
+  },
+  openGraph: {
+    title: "Wedding Car Rental Lahore DHA | Iris Tours",
+    description: "Make your wedding day unforgettable with decorated Mercedes, Audi, Prado, and Land Cruiser V8 rentals in Lahore.",
+    url: "https://iristours.net/services/wedding-cars",
+  },
 };
 
 export default function WeddingCarsPage() {

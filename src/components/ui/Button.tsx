@@ -7,7 +7,7 @@ import clsx from "clsx";
 import { HTMLMotionProps } from "framer-motion";
 
 interface ButtonProps extends HTMLMotionProps<"button"> {
-  variant?: "primary" | "secondary" | "glass";
+  variant?: "primary" | "secondary" | "glass" | "outline";
   magnetic?: boolean;
   children: React.ReactNode;
 }
@@ -35,7 +35,8 @@ export function Button({ variant = "primary", magnetic = false, className, child
   const variants = {
     primary: "bg-gradient-to-tr from-accent-secondary to-accent-primary text-white shadow-[0_8px_16px_-4px_rgba(245,158,11,0.5),inset_0_2px_4px_rgba(255,255,255,0.4)] hover:shadow-[0_12px_24px_-6px_rgba(245,158,11,0.6),inset_0_2px_4px_rgba(255,255,255,0.6)] hover:-translate-y-1 hover:brightness-110 border border-white/20",
     secondary: "bg-white/80 backdrop-blur-md shadow-[0_8px_16px_-4px_rgba(0,0,0,0.1),inset_0_2px_4px_rgba(255,255,255,0.8)] hover:shadow-[0_12px_24px_-6px_rgba(0,0,0,0.15),inset_0_2px_4px_rgba(255,255,255,0.9)] hover:-translate-y-1 text-text-primary border border-border-primary/50",
-    glass: "bg-white/40 backdrop-blur-xl shadow-[0_8px_32px_0_rgba(0,0,0,0.05),inset_0_1px_2px_rgba(255,255,255,0.8)] border border-white/60 text-text-primary hover:bg-white/60 hover:-translate-y-1 hover:shadow-[0_12px_36px_0_rgba(0,0,0,0.1)]"
+    glass: "bg-white/40 backdrop-blur-xl shadow-[0_8px_32px_0_rgba(0,0,0,0.05),inset_0_1px_2px_rgba(255,255,255,0.8)] border border-white/60 text-text-primary hover:bg-white/60 hover:-translate-y-1 hover:shadow-[0_12px_36px_0_rgba(0,0,0,0.1)]",
+    outline: "border border-border-primary bg-bg-card hover:bg-bg-secondary text-text-primary shadow-sm hover:-translate-y-0.5"
   };
 
   return (
