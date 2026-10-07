@@ -113,7 +113,7 @@ export default function BlogPost() {
                   <td className="py-2">High</td>
                 </tr>
                 <tr className="border-b border-border-primary/30">
-                  <td className="py-2"><Link href="/fleet/honda-hr-v" className="text-accent-primary hover:underline">Honda HR-V</Link> / Kia Sportage</td>
+                  <td className="py-2"><Link href="/fleet/kia-sportage" className="text-accent-primary hover:underline">Kia Sportage</Link> / Haval H6</td>
                   <td className="py-2">3–4 Passengers</td>
                   <td className="py-2">Very High</td>
                 </tr>

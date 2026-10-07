@@ -50,7 +50,7 @@ function FleetClientContent({ initialData }: FleetClientProps) {
   // ─── CATEGORY FILTER BUTTONS ────────────────────────────────────────────────
   // Edit this array to add or remove category filter options.
   // Values must exactly match the `category` field values in fleet.json.
-  const categories = ["All", "Luxury", "SUV", "Sedan", "Economy", "Van", "Bus"];
+  const categories = ["All", "Luxury", "SUV", "Sedan", "Economy", "Van"];
   
   // Update category from URL if present
   const searchParams = useSearchParams();

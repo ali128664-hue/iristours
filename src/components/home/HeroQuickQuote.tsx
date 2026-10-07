@@ -51,7 +51,7 @@ Please send me the best discounted quotation. Thank you!`;
               <option value="Toyota Prado TX/TZ">Toyota Prado TX / TZ</option>
               <option value="Land Cruiser V8">Land Cruiser V8 (ZX)</option>
               <option value="Honda Civic / Grande">Honda Civic / Corolla Altis</option>
-              <option value="Toyota Yaris / Honda City">Toyota Yaris / City (Economy)</option>
+              <option value="Toyota Yaris">Toyota Yaris (Economy)</option>
               <option value="Toyota Hiace Grand Cabin">Hiace Grand Cabin (Vans)</option>
               <option value="Mercedes / Audi / Luxury">Mercedes / Audi (VIP Luxury)</option>
               <option value="Coaster / Saloon Bus">Toyota Coaster (Tours & Groups)</option>

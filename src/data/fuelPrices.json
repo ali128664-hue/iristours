@@ -47,7 +47,7 @@
     },
     "lpg": {
       "name": "LPG (Liquefied Petroleum Gas)",
-      "price": 258.65,
+      "price": 279.34,
       "previousPrice": 259,
       "change": -0.35,
       "changePercent": -0.14,
@@ -78,8 +78,8 @@
       "AUD": 1.406391,
       "QAR": 3.64,
       "OMR": 0.384497,
-      "TRY": 48.831559,
-      "MYR": 4.074253
+      "TRY": 49.192482,
+      "MYR": 4.085363
     }
   },
   "international": [
@@ -275,72 +275,6 @@
     }
   ],
   "vehicleMileage": {
-    "honda-hr-v": {
-      "city": 11,
-      "highway": 14.5,
-      "combined": 12.5,
-      "fuelType": "Petrol"
-    },
-    "toyota-hilux-single-cabin": {
-      "city": 9.5,
-      "highway": 12.5,
-      "combined": 11,
-      "fuelType": "Diesel"
-    },
-    "toyota-corolla-cross": {
-      "city": 18,
-      "highway": 22,
-      "combined": 20,
-      "fuelType": "Hybrid"
-    },
-    "toyota-prius": {
-      "city": 21,
-      "highway": 24,
-      "combined": 22.5,
-      "fuelType": "Hybrid"
-    },
-    "toyota-camry": {
-      "city": 17,
-      "highway": 21,
-      "combined": 19,
-      "fuelType": "Hybrid"
-    },
-    "suzuki-every": {
-      "city": 12,
-      "highway": 15,
-      "combined": 13.5,
-      "fuelType": "Petrol"
-    },
-    "suzuki-swift": {
-      "city": 12,
-      "highway": 16,
-      "combined": 14,
-      "fuelType": "Petrol"
-    },
-    "suzuki-alto": {
-      "city": 16,
-      "highway": 21,
-      "combined": 18.5,
-      "fuelType": "Petrol"
-    },
-    "suzuki-wagon-r": {
-      "city": 14,
-      "highway": 18,
-      "combined": 16,
-      "fuelType": "Petrol"
-    },
-    "suzuki-cultus": {
-      "city": 14.5,
-      "highway": 18.5,
-      "combined": 16.5,
-      "fuelType": "Petrol"
-    },
-    "honda-city": {
-      "city": 12.5,
-      "highway": 16.5,
-      "combined": 14.5,
-      "fuelType": "Petrol"
-    },
     "toyota-yaris": {
       "city": 12.5,
       "highway": 16.5,
@@ -365,31 +299,13 @@
       "combined": 12,
       "fuelType": "Petrol"
     },
-    "hyundai-sonata": {
-      "city": 9.5,
-      "highway": 13.5,
-      "combined": 11.5,
-      "fuelType": "Petrol"
-    },
     "honda-br-v": {
       "city": 10.5,
       "highway": 13.5,
       "combined": 12,
       "fuelType": "Petrol"
     },
-    "hyundai-tucson": {
-      "city": 9,
-      "highway": 12.5,
-      "combined": 10.5,
-      "fuelType": "Petrol"
-    },
     "mg-hs": {
-      "city": 8.5,
-      "highway": 12,
-      "combined": 10,
-      "fuelType": "Petrol"
-    },
-    "kia-sportage": {
       "city": 8.5,
       "highway": 12,
       "combined": 10,
@@ -401,10 +317,16 @@
       "combined": 10.5,
       "fuelType": "Petrol"
     },
-    "toyota-revo-hilux": {
-      "city": 9,
+    "kia-sportage": {
+      "city": 8.5,
       "highway": 12,
-      "combined": 10.5,
+      "combined": 10,
+      "fuelType": "Petrol"
+    },
+    "toyota-land-cruiser-prado": {
+      "city": 7.5,
+      "highway": 10.5,
+      "combined": 8.8,
       "fuelType": "Diesel"
     },
     "toyota-fortuner": {
@@ -413,23 +335,11 @@
       "combined": 9.8,
       "fuelType": "Diesel"
     },
-    "toyota-land-cruiser-prado": {
-      "city": 7.5,
-      "highway": 10.5,
-      "combined": 8.8,
-      "fuelType": "Diesel"
-    },
     "toyota-land-cruiser-v8": {
       "city": 6.5,
       "highway": 9.5,
       "combined": 7.8,
       "fuelType": "Diesel"
-    },
-    "suzuki-apv": {
-      "city": 9,
-      "highway": 12,
-      "combined": 10.5,
-      "fuelType": "Petrol"
     },
     "toyota-hiace-grand-cabin": {
       "city": 8.5,
@@ -443,12 +353,6 @@
       "combined": 7,
       "fuelType": "Diesel"
     },
-    "audi-a4": {
-      "city": 10,
-      "highway": 14,
-      "combined": 12,
-      "fuelType": "Petrol"
-    },
     "audi-a6": {
       "city": 9,
       "highway": 13,
@@ -461,12 +365,6 @@
       "combined": 12,
       "fuelType": "Petrol"
     },
-    "mercedes-benz-s-class": {
-      "city": 7.5,
-      "highway": 11,
-      "combined": 9,
-      "fuelType": "Petrol"
-    },
     "range-rover": {
       "city": 6.5,
       "highway": 9.5,
@@ -477,18 +375,6 @@
       "city": 5.5,
       "highway": 8,
       "combined": 6.5,
-      "fuelType": "Petrol"
-    },
-    "v8-limousine": {
-      "city": 5,
-      "highway": 7.5,
-      "combined": 6,
-      "fuelType": "Petrol"
-    },
-    "tundra-limousine": {
-      "city": 4.5,
-      "highway": 7,
-      "combined": 5.5,
       "fuelType": "Petrol"
     }
   }

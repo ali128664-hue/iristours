@@ -1,742 +1,5 @@
 [
   {
-    "id": "v-honda-hr-v",
-    "name": "Honda HR-V",
-    "slug": "honda-hr-v",
-    "category": "SUV",
-    "brand": "Honda",
-    "year": 2024,
-    "transmission": "Automatic",
-    "fuelType": "Petrol",
-    "seats": 5,
-    "luggage": 3,
-    "driverIncluded": false,
-    "features": [
-      "Air Conditioning",
-      "Leather Seats",
-      "Modern SUV Design",
-      "Honda Sensing"
-    ],
-    "images": {
-      "thumbnail": "/fleet/Honda HR-V VTI (1).jpg",
-      "gallery": [
-        "/fleet/Honda HR-V VTI (1).jpg",
-        "/fleet/Honda HR-V VTI (2).jpg"
-      ]
-    },
-    "rent": {
-      "daily": 13000,
-      "weekly": 80000,
-      "monthly": 300000,
-      "withDriver": {
-        "local": 14500,
-        "interCity": 16500,
-        "outstation": 16500
-      },
-      "withoutDriver": {
-        "local": 13000,
-        "interCity": 15000,
-        "outstation": 15000
-      },
-      "local": 13000
-    },
-    "seo": {
-      "title": "Rent Honda HR-V in Lahore | Premium Car Rental & Tours - Iris Tours",
-      "description": "Looking for a Honda HR-V on rent in Lahore or Islamabad? Iris Tours offers immaculate condition Honda suvs with professional chauffeurs. Book your ride today!"
-    },
-    "description": "Experience unmatched power, prestige, and comfort with our **Honda HR-V** rental service in Lahore. Whether you are planning a high-profile corporate visit, a luxury wedding, or an adventurous trip to the breathtaking Northern Areas of Pakistan (Murree, Naran, Hunza), the Honda HR-V is your ultimate companion. \n\nAt Iris Tours, we don't just rent cars; we provide an experience. Our Honda HR-V fleet is maintained in showroom condition, ensuring a flawless and safe journey. Choose our highly trained, uniformed professional chauffeurs for a completely stress-free ride, or opt for a tailored outstation package. \n\n**Why Book the Honda HR-V with Us?**\n- 🌟 **Immaculate Condition:** Spotless interior, fully sanitized, and mechanically perfect.\n- 👨‍✈️ **Elite Chauffeurs:** Courteous, route-experienced, and professional drivers.\n- 🏔️ **Tour Ready:** Perfectly equipped for tough terrains and long highway cruising.\n- 🕒 **On-Time Guarantee:** We value your time—punctuality is our core promise.\n\nDon't settle for less. Elevate your journey and make a lasting impression. Reserve your Honda HR-V today!",
-    "specifications": {
-      "luggage": 3,
-      "seats": 5,
-      "transmission": "Automatic",
-      "fuelType": "Petrol"
-    },
-    "fuel": "Petrol",
-    "policies": {
-      "fuelPolicy": "Fuel is included in the rental package. Vehicle is provided with a full tank.",
-      "mileagePolicy": "Local city packages include up to 100 km/day. Outstation packages offer unlimited mileage.",
-      "outstationPolicy": "Outstation charges apply per km beyond city limits. Driver allowance and toll charges are additional."
-    },
-    "relatedVehicles": [
-      "honda-city",
-      "honda-civic",
-      "honda-br-v"
-    ]
-  },
-  {
-    "id": "v-toyota-hilux-single-cabin",
-    "name": "Toyota Hilux Single Cabin",
-    "slug": "toyota-hilux-single-cabin",
-    "category": "Van",
-    "brand": "Toyota",
-    "year": 2024,
-    "transmission": "Manual",
-    "fuelType": "Diesel",
-    "seats": 2,
-    "luggage": 10,
-    "driverIncluded": false,
-    "features": [
-      "Air Conditioning",
-      "Large Cargo Bed",
-      "Durable"
-    ],
-    "images": {
-      "thumbnail": "/fleet/Hilux Single Cabin.jpg",
-      "gallery": [
-        "/fleet/Hilux Single Cabin.jpg"
-      ]
-    },
-    "rent": {
-      "daily": 8000,
-      "weekly": 50000,
-      "monthly": 200000,
-      "withDriver": {
-        "local": 9500,
-        "interCity": 11500,
-        "outstation": 11500
-      },
-      "withoutDriver": {
-        "local": 8000,
-        "interCity": 10000,
-        "outstation": 10000
-      },
-      "local": 8000
-    },
-    "seo": {
-      "title": "Rent Toyota Hilux Single Cabin in Lahore | Premium Car Rental & Tours - Iris Tours",
-      "description": "Looking for a Toyota Hilux Single Cabin on rent in Lahore or Islamabad? Iris Tours offers immaculate condition Toyota vans with professional chauffeurs. Book your ride today!"
-    },
-    "description": "Planning a group trip, family vacation, or corporate retreat? The **Toyota Hilux Single Cabin** offers the perfect blend of spacious luxury, safety, and comfort for large groups traveling across Pakistan. \n\nNavigating Lahore's traffic or traveling inter-city to Islamabad and the Northern Areas can be exhausting. Let Iris Tours take the wheel. Our Toyota Hilux Single Cabin comes with ample legroom, powerful dual AC, and top-tier luggage capacity, ensuring every passenger travels in absolute comfort. \n\n**Why Choose Our Toyota Hilux Single Cabin Service?**\n- 👨‍👩‍👧‍👦 **Perfect for Groups:** Keep everyone together without compromising on comfort.\n- 🛡️ **Safety First:** Driven by seasoned professionals with years of heavy-vehicle experience on mountain and highway routes.\n- 💼 **Corporate & Event Ready:** The ideal choice for wedding guest transport, corporate delegations, and airport transfers.\n- ✨ **Premium Comfort:** Reclining seats, spotless interiors, and a smooth ride.\n\nTravel together, travel better. Contact Iris Tours now to secure the Toyota Hilux Single Cabin for your upcoming trip!",
-    "specifications": {
-      "luggage": 10,
-      "seats": 2,
-      "transmission": "Manual",
-      "fuelType": "Diesel"
-    },
-    "fuel": "Diesel",
-    "policies": {
-      "fuelPolicy": "Fuel is included in the rental package. Vehicle is provided with a full tank.",
-      "mileagePolicy": "Local city packages include up to 100 km/day. Outstation packages offer unlimited mileage.",
-      "outstationPolicy": "Outstation charges apply per km beyond city limits. Driver allowance and toll charges are additional."
-    },
-    "relatedVehicles": [
-      "toyota-corolla-cross",
-      "toyota-prius",
-      "toyota-camry"
-    ]
-  },
-  {
-    "id": "v-toyota-corolla-cross",
-    "name": "Toyota Corolla Cross",
-    "slug": "toyota-corolla-cross",
-    "category": "SUV",
-    "brand": "Toyota",
-    "year": 2024,
-    "transmission": "Automatic",
-    "fuelType": "Hybrid",
-    "seats": 5,
-    "luggage": 3,
-    "driverIncluded": false,
-    "features": [
-      "Air Conditioning",
-      "SUV Styling",
-      "Hybrid Efficiency"
-    ],
-    "images": {
-      "thumbnail": "/fleet/toyota Corolla Cross.png",
-      "gallery": [
-        "/fleet/toyota Corolla Cross.png"
-      ]
-    },
-    "rent": {
-      "daily": 12000,
-      "weekly": 75000,
-      "monthly": 280000,
-      "withDriver": {
-        "local": 13500,
-        "interCity": 15500,
-        "outstation": 15500
-      },
-      "withoutDriver": {
-        "local": 12000,
-        "interCity": 14000,
-        "outstation": 14000
-      },
-      "local": 12000
-    },
-    "seo": {
-      "title": "Rent Toyota Corolla Cross in Lahore | Premium Car Rental & Tours - Iris Tours",
-      "description": "Looking for a Toyota Corolla Cross on rent in Lahore or Islamabad? Iris Tours offers immaculate condition Toyota suvs with professional chauffeurs. Book your ride today!"
-    },
-    "description": "Experience unmatched power, prestige, and comfort with our **Toyota Corolla Cross** rental service in Lahore. Whether you are planning a high-profile corporate visit, a luxury wedding, or an adventurous trip to the breathtaking Northern Areas of Pakistan (Murree, Naran, Hunza), the Toyota Corolla Cross is your ultimate companion. \n\nAt Iris Tours, we don't just rent cars; we provide an experience. Our Toyota Corolla Cross fleet is maintained in showroom condition, ensuring a flawless and safe journey. Choose our highly trained, uniformed professional chauffeurs for a completely stress-free ride, or opt for a tailored outstation package. \n\n**Why Book the Toyota Corolla Cross with Us?**\n- 🌟 **Immaculate Condition:** Spotless interior, fully sanitized, and mechanically perfect.\n- 👨‍✈️ **Elite Chauffeurs:** Courteous, route-experienced, and professional drivers.\n- 🏔️ **Tour Ready:** Perfectly equipped for tough terrains and long highway cruising.\n- 🕒 **On-Time Guarantee:** We value your time—punctuality is our core promise.\n\nDon't settle for less. Elevate your journey and make a lasting impression. Reserve your Toyota Corolla Cross today!",
-    "specifications": {
-      "luggage": 3,
-      "seats": 5,
-      "transmission": "Automatic",
-      "fuelType": "Hybrid"
-    },
-    "fuel": "Hybrid",
-    "policies": {
-      "fuelPolicy": "Fuel is included in the rental package. Vehicle is provided with a full tank.",
-      "mileagePolicy": "Local city packages include up to 100 km/day. Outstation packages offer unlimited mileage.",
-      "outstationPolicy": "Outstation charges apply per km beyond city limits. Driver allowance and toll charges are additional."
-    },
-    "relatedVehicles": [
-      "toyota-hilux-single-cabin",
-      "toyota-prius",
-      "toyota-camry"
-    ]
-  },
-  {
-    "id": "v-toyota-prius",
-    "name": "Toyota Prius",
-    "slug": "toyota-prius",
-    "category": "Sedan",
-    "brand": "Toyota",
-    "year": 2024,
-    "transmission": "Automatic",
-    "fuelType": "Hybrid",
-    "seats": 5,
-    "luggage": 2,
-    "driverIncluded": false,
-    "features": [
-      "Air Conditioning",
-      "Hybrid Efficiency",
-      "Spacious Interior"
-    ],
-    "images": {
-      "thumbnail": "/fleet/Prius.jpg",
-      "gallery": [
-        "/fleet/Prius.jpg",
-        "/fleet/gallery_prius6.jpg"
-      ]
-    },
-    "rent": {
-      "daily": 10000,
-      "weekly": 65000,
-      "monthly": 250000,
-      "withDriver": {
-        "local": 11500,
-        "interCity": 13500,
-        "outstation": 13500
-      },
-      "withoutDriver": {
-        "local": 10000,
-        "interCity": 12000,
-        "outstation": 12000
-      },
-      "local": 10000
-    },
-    "seo": {
-      "title": "Rent Toyota Prius in Lahore | Premium Car Rental & Tours - Iris Tours",
-      "description": "Looking for a Toyota Prius on rent in Lahore or Islamabad? Iris Tours offers immaculate condition Toyota sedans with professional chauffeurs. Book your ride today!"
-    },
-    "description": "Looking for a reliable, comfortable, and stylish ride in Lahore? The **Toyota Prius** is the smartest choice for everyday travel, executive duties, and inter-city trips. \n\nAt Iris Tours, we provide the Toyota Prius in absolute pristine condition. Whether you need a swift Allama Iqbal Airport pick & drop, a dependable car for a week of corporate meetings in DHA, or a smooth ride to Islamabad, this vehicle delivers exceptional comfort and fuel efficiency. Skip the hassle of unreliable ride-hailing apps and enjoy the peace of mind that comes with a dedicated, premium rental service.\n\n**Why Rent the Toyota Prius from Us?**\n- 🚗 **Reliability Guaranteed:** Fully maintained, strictly serviced, and ready for the road.\n- 💼 **Professional Drivers Available:** Relax in the back seat while our expert chauffeurs navigate the city traffic.\n- 💰 **Transparent Pricing:** No hidden fees, clear mileage policies, and highly competitive rates.\n- ⏱️ **Instant Booking:** Quick, hassle-free reservations directly via WhatsApp.\n\nEnjoy a seamless, premium travel experience. Lock in your Toyota Prius booking with Iris Tours today!",
-    "specifications": {
-      "luggage": 2,
-      "seats": 5,
-      "transmission": "Automatic",
-      "fuelType": "Hybrid"
-    },
-    "fuel": "Hybrid",
-    "policies": {
-      "fuelPolicy": "Fuel is included in the rental package. Vehicle is provided with a full tank.",
-      "mileagePolicy": "Local city packages include up to 100 km/day. Outstation packages offer unlimited mileage.",
-      "outstationPolicy": "Outstation charges apply per km beyond city limits. Driver allowance and toll charges are additional."
-    },
-    "relatedVehicles": [
-      "toyota-hilux-single-cabin",
-      "toyota-corolla-cross",
-      "toyota-camry"
-    ]
-  },
-  {
-    "id": "v-toyota-camry",
-    "name": "Toyota Camry",
-    "slug": "toyota-camry",
-    "category": "Luxury",
-    "brand": "Toyota",
-    "year": 2024,
-    "transmission": "Automatic",
-    "fuelType": "Hybrid",
-    "seats": 5,
-    "luggage": 2,
-    "driverIncluded": false,
-    "features": [
-      "Air Conditioning",
-      "Leather Seats",
-      "Sunroof",
-      "Hybrid Efficiency"
-    ],
-    "images": {
-      "thumbnail": "/fleet/Camry.jfif",
-      "gallery": [
-        "/fleet/Camry.jfif"
-      ]
-    },
-    "rent": {
-      "daily": 15000,
-      "weekly": 90000,
-      "monthly": 300000,
-      "withDriver": {
-        "local": 17000,
-        "interCity": 19000,
-        "outstation": 19000
-      },
-      "withoutDriver": {
-        "local": 15000,
-        "interCity": 17000,
-        "outstation": 17000
-      },
-      "local": 15000
-    },
-    "seo": {
-      "title": "Rent Toyota Camry in Lahore | Premium Car Rental & Tours - Iris Tours",
-      "description": "Looking for a Toyota Camry on rent in Lahore or Islamabad? Iris Tours offers immaculate condition Toyota luxurys with professional chauffeurs. Book your ride today!"
-    },
-    "description": "Step into a world of pure elegance with the **Toyota Camry**. Designed for those who demand nothing but the absolute best, this vehicle is the pinnacle of luxury car rentals in Lahore. \n\nWhether you need a prestigious arrival for your wedding day, a VIP airport transfer for foreign delegates, or an executive ride for your corporate meetings in DHA and Gulberg, the Toyota Camry guarantees you will arrive in style. Iris Tours takes pride in offering this masterpiece in pristine condition, complemented by our VIP chauffeur service.\n\n**The Iris Tours Luxury Promise:**\n- 🎩 **VIP Chauffeur Service:** Highly trained, discreet, and sharply dressed chauffeurs.\n- 💎 **Showroom Quality:** Flawless exterior, luxurious plush interiors, and a cabin that smells brand new.\n- 📸 **Wedding & Event Perfection:** The ultimate statement car to make your special day unforgettable.\n- 🛡️ **Absolute Privacy & Comfort:** Tinted windows, whisper-quiet cabin, and ultimate ride smoothness.\n\nMake your next journey extraordinary. Book the Toyota Camry today and experience true VIP treatment.",
-    "specifications": {
-      "luggage": 2,
-      "seats": 5,
-      "transmission": "Automatic",
-      "fuelType": "Hybrid"
-    },
-    "fuel": "Hybrid",
-    "policies": {
-      "fuelPolicy": "Fuel is included in the rental package. Vehicle is provided with a full tank.",
-      "mileagePolicy": "Local city packages include up to 100 km/day. Outstation packages offer unlimited mileage.",
-      "outstationPolicy": "Outstation charges apply per km beyond city limits. Driver allowance and toll charges are additional."
-    },
-    "relatedVehicles": [
-      "toyota-hilux-single-cabin",
-      "toyota-corolla-cross",
-      "toyota-prius"
-    ]
-  },
-  {
-    "id": "v-suzuki-every",
-    "name": "Suzuki Every",
-    "slug": "suzuki-every",
-    "category": "Van",
-    "brand": "Suzuki",
-    "year": 2024,
-    "transmission": "Automatic",
-    "fuelType": "Petrol",
-    "seats": 7,
-    "luggage": 3,
-    "driverIncluded": false,
-    "features": [
-      "Air Conditioning",
-      "Spacious",
-      "Sliding Doors"
-    ],
-    "images": {
-      "thumbnail": "/fleet/Every  (1).png",
-      "gallery": [
-        "/fleet/Every  (1).png",
-        "/fleet/Every  (2).png",
-        "/fleet/Every  (3).png",
-        "/fleet/Every  (4).png",
-        "/fleet/Every  (5).png",
-        "/fleet/Every  (6).png",
-        "/fleet/Every  (7).png",
-        "/fleet/Every  (8).png",
-        "/fleet/Every  (9).png",
-        "/fleet/Every  (10).png"
-      ]
-    },
-    "rent": {
-      "daily": 4500,
-      "weekly": 30000,
-      "monthly": 120000,
-      "withDriver": {
-        "local": 5500,
-        "interCity": 7500,
-        "outstation": 7500
-      },
-      "withoutDriver": {
-        "local": 4500,
-        "interCity": 6500,
-        "outstation": 6500
-      },
-      "local": 4500
-    },
-    "seo": {
-      "title": "Rent Suzuki Every in Lahore | Premium Car Rental & Tours - Iris Tours",
-      "description": "Looking for a Suzuki Every on rent in Lahore or Islamabad? Iris Tours offers immaculate condition Suzuki vans with professional chauffeurs. Book your ride today!"
-    },
-    "description": "Planning a group trip, family vacation, or corporate retreat? The **Suzuki Every** offers the perfect blend of spacious luxury, safety, and comfort for large groups traveling across Pakistan. \n\nNavigating Lahore's traffic or traveling inter-city to Islamabad and the Northern Areas can be exhausting. Let Iris Tours take the wheel. Our Suzuki Every comes with ample legroom, powerful dual AC, and top-tier luggage capacity, ensuring every passenger travels in absolute comfort. \n\n**Why Choose Our Suzuki Every Service?**\n- 👨‍👩‍👧‍👦 **Perfect for Groups:** Keep everyone together without compromising on comfort.\n- 🛡️ **Safety First:** Driven by seasoned professionals with years of heavy-vehicle experience on mountain and highway routes.\n- 💼 **Corporate & Event Ready:** The ideal choice for wedding guest transport, corporate delegations, and airport transfers.\n- ✨ **Premium Comfort:** Reclining seats, spotless interiors, and a smooth ride.\n\nTravel together, travel better. Contact Iris Tours now to secure the Suzuki Every for your upcoming trip!",
-    "specifications": {
-      "luggage": 3,
-      "seats": 7,
-      "transmission": "Automatic",
-      "fuelType": "Petrol"
-    },
-    "fuel": "Petrol",
-    "policies": {
-      "fuelPolicy": "Fuel is included in the rental package. Vehicle is provided with a full tank.",
-      "mileagePolicy": "Local city packages include up to 100 km/day. Outstation packages offer unlimited mileage.",
-      "outstationPolicy": "Outstation charges apply per km beyond city limits. Driver allowance and toll charges are additional."
-    },
-    "relatedVehicles": [
-      "suzuki-swift",
-      "suzuki-alto",
-      "suzuki-wagon-r"
-    ]
-  },
-  {
-    "id": "v-suzuki-swift",
-    "name": "Suzuki Swift",
-    "slug": "suzuki-swift",
-    "category": "Economy",
-    "brand": "Suzuki",
-    "year": 2024,
-    "transmission": "Automatic",
-    "fuelType": "Petrol",
-    "seats": 5,
-    "luggage": 2,
-    "driverIncluded": false,
-    "features": [
-      "Air Conditioning",
-      "Bluetooth",
-      "Power Windows",
-      "ABS"
-    ],
-    "images": {
-      "thumbnail": "/fleet/Swift (1).png",
-      "gallery": [
-        "/fleet/Swift (1).png",
-        "/fleet/Swift (2).png",
-        "/fleet/Swift (3).png",
-        "/fleet/Swift (4).png",
-        "/fleet/Swift (5).png",
-        "/fleet/Swift (6).png",
-        "/fleet/Swift (7).png",
-        "/fleet/Swift (8).png",
-        "/fleet/Swift (9).png",
-        "/fleet/Swift (10).png"
-      ]
-    },
-    "rent": {
-      "daily": 6000,
-      "weekly": 40000,
-      "monthly": 150000,
-      "withDriver": {
-        "local": 7000,
-        "interCity": 9000,
-        "outstation": 9000
-      },
-      "withoutDriver": {
-        "local": 6000,
-        "interCity": 8000,
-        "outstation": 8000
-      },
-      "local": 6000
-    },
-    "seo": {
-      "title": "Rent Suzuki Swift in Lahore | Premium Car Rental & Tours - Iris Tours",
-      "description": "Looking for a Suzuki Swift on rent in Lahore or Islamabad? Iris Tours offers immaculate condition Suzuki economys with professional chauffeurs. Book your ride today!"
-    },
-    "description": "Looking for a reliable, comfortable, and stylish ride in Lahore? The **Suzuki Swift** is the smartest choice for everyday travel, executive duties, and inter-city trips. \n\nAt Iris Tours, we provide the Suzuki Swift in absolute pristine condition. Whether you need a swift Allama Iqbal Airport pick & drop, a dependable car for a week of corporate meetings in DHA, or a smooth ride to Islamabad, this vehicle delivers exceptional comfort and fuel efficiency. Skip the hassle of unreliable ride-hailing apps and enjoy the peace of mind that comes with a dedicated, premium rental service.\n\n**Why Rent the Suzuki Swift from Us?**\n- 🚗 **Reliability Guaranteed:** Fully maintained, strictly serviced, and ready for the road.\n- 💼 **Professional Drivers Available:** Relax in the back seat while our expert chauffeurs navigate the city traffic.\n- 💰 **Transparent Pricing:** No hidden fees, clear mileage policies, and highly competitive rates.\n- ⏱️ **Instant Booking:** Quick, hassle-free reservations directly via WhatsApp.\n\nEnjoy a seamless, premium travel experience. Lock in your Suzuki Swift booking with Iris Tours today!",
-    "specifications": {
-      "luggage": 2,
-      "seats": 5,
-      "transmission": "Automatic",
-      "fuelType": "Petrol"
-    },
-    "fuel": "Petrol",
-    "policies": {
-      "fuelPolicy": "Fuel is included in the rental package. Vehicle is provided with a full tank.",
-      "mileagePolicy": "Local city packages include up to 100 km/day. Outstation packages offer unlimited mileage.",
-      "outstationPolicy": "Outstation charges apply per km beyond city limits. Driver allowance and toll charges are additional."
-    },
-    "relatedVehicles": [
-      "suzuki-every",
-      "suzuki-alto",
-      "suzuki-wagon-r"
-    ]
-  },
-  {
-    "id": "v-suzuki-alto",
-    "name": "Suzuki Alto",
-    "slug": "suzuki-alto",
-    "category": "Economy",
-    "brand": "Suzuki",
-    "year": 2024,
-    "transmission": "Manual",
-    "fuel": "Petrol",
-    "seats": 5,
-    "doors": 4,
-    "airConditioning": true,
-    "driverIncluded": true,
-    "color": "Premium Assorted",
-    "images": {
-      "thumbnail": "/fleet/Alto  (1).png",
-      "gallery": [
-        "/fleet/Alto  (1).png",
-        "/fleet/Alto  (2).png",
-        "/fleet/Alto  (3).png",
-        "/fleet/Alto  (4).png",
-        "/fleet/Alto  (5).png",
-        "/fleet/Alto  (6).png",
-        "/fleet/Alto  (7).png",
-        "/fleet/Alto  (8).png"
-      ]
-    },
-    "rent": {
-      "local": 3500,
-      "interCity": 5500,
-      "outstation": 5500,
-      "weekly": 21000,
-      "monthly": 75000,
-      "securityDeposit": 15000,
-      "note": "Local = within city. Inter-city = Lahore to Islamabad/Multan etc. Outstation = Northern areas/long tours.",
-      "daily": 3500
-    },
-    "availability": true,
-    "description": "Looking for a reliable, comfortable, and stylish ride in Lahore? The **Suzuki Alto** is the smartest choice for everyday travel, executive duties, and inter-city trips. \n\nAt Iris Tours, we provide the Suzuki Alto in absolute pristine condition. Whether you need a swift Allama Iqbal Airport pick & drop, a dependable car for a week of corporate meetings in DHA, or a smooth ride to Islamabad, this vehicle delivers exceptional comfort and fuel efficiency. Skip the hassle of unreliable ride-hailing apps and enjoy the peace of mind that comes with a dedicated, premium rental service.\n\n**Why Rent the Suzuki Alto from Us?**\n- 🚗 **Reliability Guaranteed:** Fully maintained, strictly serviced, and ready for the road.\n- 💼 **Professional Drivers Available:** Relax in the back seat while our expert chauffeurs navigate the city traffic.\n- 💰 **Transparent Pricing:** No hidden fees, clear mileage policies, and highly competitive rates.\n- ⏱️ **Instant Booking:** Quick, hassle-free reservations directly via WhatsApp.\n\nEnjoy a seamless, premium travel experience. Lock in your Suzuki Alto booking with Iris Tours today!",
-    "features": [
-      "Air Conditioning",
-      "Power Steering",
-      "Music System",
-      "Professional Driver",
-      "CNG/Petrol Dual Fuel"
-    ],
-    "specifications": {
-      "engine": "660cc / 1000cc",
-      "horsepower": "50-67 hp",
-      "luggage": "1-2 bags",
-      "bluetooth": true,
-      "usbCharging": true,
-      "premiumAudio": false
-    },
-    "whatsappCategory": "Economy",
-    "seo": {
-      "title": "Rent Suzuki Alto in Lahore | Premium Car Rental & Tours - Iris Tours",
-      "description": "Looking for a Suzuki Alto on rent in Lahore or Islamabad? Iris Tours offers immaculate condition Suzuki economys with professional chauffeurs. Book your ride today!"
-    },
-    "policies": {
-      "fuelPolicy": "Full tank diya jayega, full tank wapis karein.",
-      "mileagePolicy": "City mein unlimited, inter-city par per km charges apply.",
-      "outstationPolicy": "Inter-city aur northern tour ke liye available. Driver ka khana aur raat ka kiraya client dega.",
-      "airportPickup": true,
-      "weddingAvailable": false,
-      "corporateAvailable": true
-    },
-    "relatedVehicles": [
-      "v-suzuki-wagon-r",
-      "v-suzuki-cultus"
-    ]
-  },
-  {
-    "id": "v-suzuki-wagon-r",
-    "name": "Suzuki Wagon R",
-    "slug": "suzuki-wagon-r",
-    "category": "Economy",
-    "brand": "Suzuki",
-    "year": 2024,
-    "transmission": "Automatic",
-    "fuel": "Petrol",
-    "seats": 5,
-    "doors": 4,
-    "airConditioning": true,
-    "driverIncluded": true,
-    "color": "Premium Assorted",
-    "images": {
-      "thumbnail": "/fleet/Wagonr (5) (1).png",
-      "gallery": [
-        "/fleet/Wagonr (5) (1).png"
-      ]
-    },
-    "rent": {
-      "local": 4000,
-      "interCity": 6000,
-      "outstation": 6000,
-      "weekly": 24000,
-      "monthly": 85000,
-      "securityDeposit": 15000,
-      "note": "Local = within city. Inter-city = Lahore to Islamabad/Multan etc. Outstation = Northern areas/long tours.",
-      "daily": 4000
-    },
-    "availability": true,
-    "description": "Looking for a reliable, comfortable, and stylish ride in Lahore? The **Suzuki Wagon R** is the smartest choice for everyday travel, executive duties, and inter-city trips. \n\nAt Iris Tours, we provide the Suzuki Wagon R in absolute pristine condition. Whether you need a swift Allama Iqbal Airport pick & drop, a dependable car for a week of corporate meetings in DHA, or a smooth ride to Islamabad, this vehicle delivers exceptional comfort and fuel efficiency. Skip the hassle of unreliable ride-hailing apps and enjoy the peace of mind that comes with a dedicated, premium rental service.\n\n**Why Rent the Suzuki Wagon R from Us?**\n- 🚗 **Reliability Guaranteed:** Fully maintained, strictly serviced, and ready for the road.\n- 💼 **Professional Drivers Available:** Relax in the back seat while our expert chauffeurs navigate the city traffic.\n- 💰 **Transparent Pricing:** No hidden fees, clear mileage policies, and highly competitive rates.\n- ⏱️ **Instant Booking:** Quick, hassle-free reservations directly via WhatsApp.\n\nEnjoy a seamless, premium travel experience. Lock in your Suzuki Wagon R booking with Iris Tours today!",
-    "features": [
-      "Air Conditioning",
-      "Power Steering",
-      "Music System",
-      "Professional Driver",
-      "Spacious Cabin"
-    ],
-    "specifications": {
-      "engine": "998cc",
-      "horsepower": "67 hp",
-      "luggage": "2 bags",
-      "bluetooth": true,
-      "usbCharging": true,
-      "premiumAudio": false
-    },
-    "whatsappCategory": "Economy",
-    "seo": {
-      "title": "Rent Suzuki Wagon R in Lahore | Premium Car Rental & Tours - Iris Tours",
-      "description": "Looking for a Suzuki Wagon R on rent in Lahore or Islamabad? Iris Tours offers immaculate condition Suzuki economys with professional chauffeurs. Book your ride today!"
-    },
-    "policies": {
-      "fuelPolicy": "Full tank diya jayega, full tank wapis karein.",
-      "mileagePolicy": "City mein unlimited, inter-city par per km charges apply.",
-      "outstationPolicy": "Inter-city aur outstation ke liye available. Driver ka khana aur accommodation client ki zimmedari.",
-      "airportPickup": true,
-      "weddingAvailable": false,
-      "corporateAvailable": true
-    },
-    "relatedVehicles": [
-      "v-suzuki-alto",
-      "v-suzuki-cultus"
-    ]
-  },
-  {
-    "id": "v-suzuki-cultus",
-    "name": "Suzuki Cultus",
-    "slug": "suzuki-cultus",
-    "category": "Economy",
-    "brand": "Suzuki",
-    "year": 2024,
-    "transmission": "Automatic",
-    "fuel": "Petrol",
-    "seats": 5,
-    "doors": 4,
-    "airConditioning": true,
-    "driverIncluded": true,
-    "color": "Premium Assorted",
-    "images": {
-      "thumbnail": "/fleet/Cultus (1).png",
-      "gallery": [
-        "/fleet/Cultus (1).png",
-        "/fleet/Cultus (2).png",
-        "/fleet/Cultus (3).png",
-        "/fleet/Cultus (4).png",
-        "/fleet/Cultus (5).png",
-        "/fleet/Cultus (6).png",
-        "/fleet/Cultus (7).png",
-        "/fleet/Cultus (8).png"
-      ]
-    },
-    "rent": {
-      "local": 4500,
-      "interCity": 6500,
-      "outstation": 6500,
-      "weekly": 27000,
-      "monthly": 95000,
-      "securityDeposit": 15000,
-      "note": "Local = within city. Inter-city = Lahore to Islamabad/Multan etc. Outstation = Northern areas/long tours.",
-      "daily": 4500
-    },
-    "availability": true,
-    "description": "Looking for a reliable, comfortable, and stylish ride in Lahore? The **Suzuki Cultus** is the smartest choice for everyday travel, executive duties, and inter-city trips. \n\nAt Iris Tours, we provide the Suzuki Cultus in absolute pristine condition. Whether you need a swift Allama Iqbal Airport pick & drop, a dependable car for a week of corporate meetings in DHA, or a smooth ride to Islamabad, this vehicle delivers exceptional comfort and fuel efficiency. Skip the hassle of unreliable ride-hailing apps and enjoy the peace of mind that comes with a dedicated, premium rental service.\n\n**Why Rent the Suzuki Cultus from Us?**\n- 🚗 **Reliability Guaranteed:** Fully maintained, strictly serviced, and ready for the road.\n- 💼 **Professional Drivers Available:** Relax in the back seat while our expert chauffeurs navigate the city traffic.\n- 💰 **Transparent Pricing:** No hidden fees, clear mileage policies, and highly competitive rates.\n- ⏱️ **Instant Booking:** Quick, hassle-free reservations directly via WhatsApp.\n\nEnjoy a seamless, premium travel experience. Lock in your Suzuki Cultus booking with Iris Tours today!",
-    "features": [
-      "Air Conditioning",
-      "Power Steering",
-      "Music System",
-      "Professional Driver",
-      "Fuel Efficient"
-    ],
-    "specifications": {
-      "engine": "1000cc",
-      "horsepower": "67 hp",
-      "luggage": "2 bags",
-      "bluetooth": true,
-      "usbCharging": true,
-      "premiumAudio": false
-    },
-    "whatsappCategory": "Economy",
-    "seo": {
-      "title": "Rent Suzuki Cultus in Lahore | Premium Car Rental & Tours - Iris Tours",
-      "description": "Looking for a Suzuki Cultus on rent in Lahore or Islamabad? Iris Tours offers immaculate condition Suzuki economys with professional chauffeurs. Book your ride today!"
-    },
-    "policies": {
-      "fuelPolicy": "Full tank diya jayega, full tank wapis karein.",
-      "mileagePolicy": "City mein unlimited mileage.",
-      "outstationPolicy": "Inter-city ke liye available. Driver expenses client ki zimmedari.",
-      "airportPickup": true,
-      "weddingAvailable": false,
-      "corporateAvailable": true
-    },
-    "relatedVehicles": [
-      "v-suzuki-alto",
-      "v-honda-city"
-    ]
-  },
-  {
-    "id": "v-honda-city",
-    "name": "Honda City",
-    "slug": "honda-city",
-    "category": "Economy",
-    "brand": "Honda",
-    "year": 2024,
-    "transmission": "Automatic",
-    "fuel": "Petrol",
-    "seats": 5,
-    "doors": 4,
-    "airConditioning": true,
-    "driverIncluded": true,
-    "color": "Premium Assorted",
-    "images": {
-      "thumbnail": "/fleet/Honda city (1).webp",
-      "gallery": [
-        "/fleet/Honda city (1).webp",
-        "/fleet/Honda city (2).webp",
-        "/fleet/Honda city (3).webp",
-        "/fleet/city-aspire-index.webp",
-        "/fleet/city-12-index.webp",
-        "/fleet/aspires-header.webp",
-        "/fleet/VTI-01_C-nn.webp"
-      ]
-    },
-    "rent": {
-      "local": 5000,
-      "interCity": 7000,
-      "outstation": 7000,
-      "weekly": 30000,
-      "monthly": 110000,
-      "securityDeposit": 20000,
-      "note": "Local = within city. Inter-city = Lahore to Islamabad/Multan etc. Outstation = Northern areas/long tours.",
-      "daily": 5000
-    },
-    "availability": true,
-    "description": "Looking for a reliable, comfortable, and stylish ride in Lahore? The **Honda City** is the smartest choice for everyday travel, executive duties, and inter-city trips. \n\nAt Iris Tours, we provide the Honda City in absolute pristine condition. Whether you need a swift Allama Iqbal Airport pick & drop, a dependable car for a week of corporate meetings in DHA, or a smooth ride to Islamabad, this vehicle delivers exceptional comfort and fuel efficiency. Skip the hassle of unreliable ride-hailing apps and enjoy the peace of mind that comes with a dedicated, premium rental service.\n\n**Why Rent the Honda City from Us?**\n- 🚗 **Reliability Guaranteed:** Fully maintained, strictly serviced, and ready for the road.\n- 💼 **Professional Drivers Available:** Relax in the back seat while our expert chauffeurs navigate the city traffic.\n- 💰 **Transparent Pricing:** No hidden fees, clear mileage policies, and highly competitive rates.\n- ⏱️ **Instant Booking:** Quick, hassle-free reservations directly via WhatsApp.\n\nEnjoy a seamless, premium travel experience. Lock in your Honda City booking with Iris Tours today!",
-    "features": [
-      "Air Conditioning",
-      "Power Steering",
-      "Touchscreen Infotainment",
-      "Professional Driver",
-      "Keyless Entry"
-    ],
-    "specifications": {
-      "engine": "1200cc / 1500cc",
-      "horsepower": "89-119 hp",
-      "luggage": "3 bags",
-      "bluetooth": true,
-      "usbCharging": true,
-      "premiumAudio": false
-    },
-    "whatsappCategory": "Economy",
-    "seo": {
-      "title": "Rent Honda City in Lahore | Premium Car Rental & Tours - Iris Tours",
-      "description": "Looking for a Honda City on rent in Lahore or Islamabad? Iris Tours offers immaculate condition Honda economys with professional chauffeurs. Book your ride today!"
-    },
-    "policies": {
-      "fuelPolicy": "Full tank diya jayega, full tank wapis karein.",
-      "mileagePolicy": "City mein unlimited. Inter-city mein 300km/day included.",
-      "outstationPolicy": "Available for inter-city. Driver ka khana aur stay client dega.",
-      "airportPickup": true,
-      "weddingAvailable": false,
-      "corporateAvailable": true
-    },
-    "relatedVehicles": [
-      "v-toyota-yaris",
-      "v-toyota-corolla-gli-altis-grande"
-    ]
-  },
-  {
     "id": "v-toyota-yaris",
     "name": "Toyota Yaris",
     "slug": "toyota-yaris",
@@ -797,9 +60,10 @@
       "corporateAvailable": true
     },
     "relatedVehicles": [
-      "v-honda-city",
-      "v-toyota-corolla-gli-altis-grande"
-    ]
+      "toyota-corolla-altis-1-6",
+      "honda-civic"
+    ],
+    "fuelType": "Petrol"
   },
   {
     "id": "v-toyota-corolla-gli-altis-grande",
@@ -863,9 +127,11 @@
       "corporateAvailable": true
     },
     "relatedVehicles": [
-      "v-honda-civic",
-      "v-hyundai-sonata"
-    ]
+      "toyota-corolla-grande-1-8",
+      "honda-civic",
+      "toyota-yaris"
+    ],
+    "fuelType": "Petrol"
   },
   {
     "id": "v-toyota-corolla-grande",
@@ -930,10 +196,11 @@
       "corporateAvailable": true
     },
     "relatedVehicles": [
-      "v-toyota-corolla-gli-altis-grande",
-      "v-honda-civic",
-      "v-toyota-yaris"
-    ]
+      "toyota-corolla-altis-1-6",
+      "honda-civic",
+      "toyota-yaris"
+    ],
+    "fuelType": "Petrol"
   },
   {
     "id": "v-honda-civic",
@@ -1005,75 +272,10 @@
       "corporateAvailable": true
     },
     "relatedVehicles": [
-      "v-toyota-corolla-gli-altis-grande",
-      "v-hyundai-sonata"
-    ]
-  },
-  {
-    "id": "v-hyundai-sonata",
-    "name": "Hyundai Sonata",
-    "slug": "hyundai-sonata",
-    "category": "Sedan",
-    "brand": "Hyundai",
-    "year": 2024,
-    "transmission": "Automatic",
-    "fuel": "Petrol",
-    "seats": 5,
-    "doors": 4,
-    "airConditioning": true,
-    "driverIncluded": true,
-    "color": "Premium Assorted",
-    "images": {
-      "thumbnail": "/fleet/Hyundai Sonata.jpg",
-      "gallery": [
-        "/fleet/Hyundai Sonata.jpg"
-      ]
-    },
-    "rent": {
-      "local": 12000,
-      "interCity": 14000,
-      "outstation": 14000,
-      "weekly": 70000,
-      "monthly": 250000,
-      "securityDeposit": 30000,
-      "note": "Local = within Lahore. Inter-city = Lahore to Islamabad/Multan. Outstation = Northern Pakistan tours.",
-      "daily": 12000
-    },
-    "availability": true,
-    "description": "Step into a world of pure elegance with the **Hyundai Sonata**. Designed for those who demand nothing but the absolute best, this vehicle is the pinnacle of luxury car rentals in Lahore. \n\nWhether you need a prestigious arrival for your wedding day, a VIP airport transfer for foreign delegates, or an executive ride for your corporate meetings in DHA and Gulberg, the Hyundai Sonata guarantees you will arrive in style. Iris Tours takes pride in offering this masterpiece in pristine condition, complemented by our VIP chauffeur service.\n\n**The Iris Tours Luxury Promise:**\n- 🎩 **VIP Chauffeur Service:** Highly trained, discreet, and sharply dressed chauffeurs.\n- 💎 **Showroom Quality:** Flawless exterior, luxurious plush interiors, and a cabin that smells brand new.\n- 📸 **Wedding & Event Perfection:** The ultimate statement car to make your special day unforgettable.\n- 🛡️ **Absolute Privacy & Comfort:** Tinted windows, whisper-quiet cabin, and ultimate ride smoothness.\n\nMake your next journey extraordinary. Book the Hyundai Sonata today and experience true VIP treatment.",
-    "features": [
-      "Panoramic Sunroof",
-      "Leather Seats",
-      "12.3-inch Touchscreen",
-      "Ventilated Seats",
-      "Professional Chauffeur",
-      "Premium Bose Audio"
+      "toyota-corolla-grande-1-8",
+      "toyota-corolla-altis-1-6"
     ],
-    "specifications": {
-      "engine": "2000cc / 2500cc",
-      "horsepower": "180-191 hp",
-      "luggage": "4 bags",
-      "bluetooth": true,
-      "usbCharging": true,
-      "premiumAudio": true
-    },
-    "whatsappCategory": "Sedan",
-    "seo": {
-      "title": "Rent Hyundai Sonata in Lahore | Premium Car Rental & Tours - Iris Tours",
-      "description": "Looking for a Hyundai Sonata on rent in Lahore or Islamabad? Iris Tours offers immaculate condition Hyundai sedans with professional chauffeurs. Book your ride today!"
-    },
-    "policies": {
-      "fuelPolicy": "Full tank diya jayega, full tank wapis karein.",
-      "mileagePolicy": "City mein unlimited. Inter-city 300km/day included.",
-      "outstationPolicy": "VIP trips ke liye available. Driver per-day allowance client dega.",
-      "airportPickup": true,
-      "weddingAvailable": true,
-      "corporateAvailable": true
-    },
-    "relatedVehicles": [
-      "v-honda-civic",
-      "v-audi-a4"
-    ]
+    "fuelType": "Petrol"
   },
   {
     "id": "v-honda-br-v",
@@ -1137,75 +339,11 @@
       "corporateAvailable": true
     },
     "relatedVehicles": [
-      "v-hyundai-tucson",
-      "v-kia-sportage"
-    ]
-  },
-  {
-    "id": "v-hyundai-tucson",
-    "name": "Hyundai Tucson",
-    "slug": "hyundai-tucson",
-    "category": "SUV",
-    "brand": "Hyundai",
-    "year": 2024,
-    "transmission": "Automatic",
-    "fuel": "Petrol",
-    "seats": 5,
-    "doors": 4,
-    "airConditioning": true,
-    "driverIncluded": true,
-    "color": "Premium Assorted",
-    "images": {
-      "thumbnail": "/fleet/Hyundai Tucson.jpg",
-      "gallery": [
-        "/fleet/Hyundai Tucson.jpg"
-      ]
-    },
-    "rent": {
-      "local": 12000,
-      "interCity": 14000,
-      "outstation": 14000,
-      "weekly": 72000,
-      "monthly": 260000,
-      "securityDeposit": 30000,
-      "note": "Local = within Lahore. Inter-city = Lahore to Islamabad/Multan. Outstation = Northern areas/tours.",
-      "daily": 12000
-    },
-    "availability": true,
-    "description": "Experience unmatched power, prestige, and comfort with our **Hyundai Tucson** rental service in Lahore. Whether you are planning a high-profile corporate visit, a luxury wedding, or an adventurous trip to the breathtaking Northern Areas of Pakistan (Murree, Naran, Hunza), the Hyundai Tucson is your ultimate companion. \n\nAt Iris Tours, we don't just rent cars; we provide an experience. Our Hyundai Tucson fleet is maintained in showroom condition, ensuring a flawless and safe journey. Choose our highly trained, uniformed professional chauffeurs for a completely stress-free ride, or opt for a tailored outstation package. \n\n**Why Book the Hyundai Tucson with Us?**\n- 🌟 **Immaculate Condition:** Spotless interior, fully sanitized, and mechanically perfect.\n- 👨‍✈️ **Elite Chauffeurs:** Courteous, route-experienced, and professional drivers.\n- 🏔️ **Tour Ready:** Perfectly equipped for tough terrains and long highway cruising.\n- 🕒 **On-Time Guarantee:** We value your time—punctuality is our core promise.\n\nDon't settle for less. Elevate your journey and make a lasting impression. Reserve your Hyundai Tucson today!",
-    "features": [
-      "Panoramic Sunroof",
-      "AWD Available",
-      "10.25-inch Touchscreen",
-      "Professional Chauffeur",
-      "Ventilated Seats",
-      "ADAS Safety"
+      "kia-sportage",
+      "mg-hs",
+      "haval-h6"
     ],
-    "specifications": {
-      "engine": "2000cc / 1600cc Turbo",
-      "horsepower": "150-178 hp",
-      "luggage": "4 bags",
-      "bluetooth": true,
-      "usbCharging": true,
-      "premiumAudio": true
-    },
-    "whatsappCategory": "SUV",
-    "seo": {
-      "title": "Rent Hyundai Tucson in Lahore | Premium Car Rental & Tours - Iris Tours",
-      "description": "Looking for a Hyundai Tucson on rent in Lahore or Islamabad? Iris Tours offers immaculate condition Hyundai suvs with professional chauffeurs. Book your ride today!"
-    },
-    "policies": {
-      "fuelPolicy": "Full tank diya jayega, full tank wapis karein.",
-      "mileagePolicy": "City unlimited. Inter-city 300km/day included.",
-      "outstationPolicy": "Northern tours ke liye available. Driver ka per-day allowance aur accommodation client dega.",
-      "airportPickup": true,
-      "weddingAvailable": true,
-      "corporateAvailable": true
-    },
-    "relatedVehicles": [
-      "v-kia-sportage",
-      "v-mg-hs"
-    ]
+    "fuelType": "Petrol"
   },
   {
     "id": "v-mg-hs",
@@ -1270,75 +408,11 @@
       "corporateAvailable": true
     },
     "relatedVehicles": [
-      "v-hyundai-tucson",
-      "v-kia-sportage"
-    ]
-  },
-  {
-    "id": "v-kia-sportage",
-    "name": "Kia Sportage",
-    "slug": "kia-sportage",
-    "category": "SUV",
-    "brand": "Kia",
-    "year": 2024,
-    "transmission": "Automatic",
-    "fuel": "Petrol",
-    "seats": 5,
-    "doors": 4,
-    "airConditioning": true,
-    "driverIncluded": true,
-    "color": "Premium Assorted",
-    "images": {
-      "thumbnail": "/fleet/Kia Sportage.png",
-      "gallery": [
-        "/fleet/Kia Sportage.png"
-      ]
-    },
-    "rent": {
-      "local": 14000,
-      "interCity": 16000,
-      "outstation": 16000,
-      "weekly": 84000,
-      "monthly": 300000,
-      "securityDeposit": 30000,
-      "note": "Local = within Lahore. Inter-city = Lahore to Islamabad/Multan. Outstation = Northern areas/tours.",
-      "daily": 14000
-    },
-    "availability": true,
-    "description": "Experience unmatched power, prestige, and comfort with our **Kia Sportage** rental service in Lahore. Whether you are planning a high-profile corporate visit, a luxury wedding, or an adventurous trip to the breathtaking Northern Areas of Pakistan (Murree, Naran, Hunza), the Kia Sportage is your ultimate companion. \n\nAt Iris Tours, we don't just rent cars; we provide an experience. Our Kia Sportage fleet is maintained in showroom condition, ensuring a flawless and safe journey. Choose our highly trained, uniformed professional chauffeurs for a completely stress-free ride, or opt for a tailored outstation package. \n\n**Why Book the Kia Sportage with Us?**\n- 🌟 **Immaculate Condition:** Spotless interior, fully sanitized, and mechanically perfect.\n- 👨‍✈️ **Elite Chauffeurs:** Courteous, route-experienced, and professional drivers.\n- 🏔️ **Tour Ready:** Perfectly equipped for tough terrains and long highway cruising.\n- 🕒 **On-Time Guarantee:** We value your time—punctuality is our core promise.\n\nDon't settle for less. Elevate your journey and make a lasting impression. Reserve your Kia Sportage today!",
-    "features": [
-      "Panoramic Sunroof",
-      "Dual-Zone Climate Control",
-      "Turbo Engine",
-      "Professional Driver",
-      "Harman Kardon Audio",
-      "4WD Available"
+      "kia-sportage",
+      "haval-h6",
+      "honda-br-v"
     ],
-    "specifications": {
-      "engine": "2000cc / 1600cc Turbo",
-      "horsepower": "158-174 hp",
-      "luggage": "4 bags",
-      "bluetooth": true,
-      "usbCharging": true,
-      "premiumAudio": true
-    },
-    "whatsappCategory": "SUV",
-    "seo": {
-      "title": "Rent Kia Sportage in Lahore | Premium Car Rental & Tours - Iris Tours",
-      "description": "Looking for a Kia Sportage on rent in Lahore or Islamabad? Iris Tours offers immaculate condition Kia suvs with professional chauffeurs. Book your ride today!"
-    },
-    "policies": {
-      "fuelPolicy": "Full tank diya jayega, full tank wapis karein.",
-      "mileagePolicy": "City unlimited. Inter-city 300km/day included.",
-      "outstationPolicy": "Available for northern tours. Driver ka khana aur raat ka accommodation client dega.",
-      "airportPickup": true,
-      "weddingAvailable": true,
-      "corporateAvailable": true
-    },
-    "relatedVehicles": [
-      "v-hyundai-tucson",
-      "v-toyota-fortuner"
-    ]
+    "fuelType": "Petrol"
   },
   {
     "id": "v-haval-h6",
@@ -1402,144 +476,79 @@
       "corporateAvailable": true
     },
     "relatedVehicles": [
-      "v-kia-sportage",
-      "v-mg-hs",
-      "v-hyundai-tucson"
-    ]
+      "mg-hs",
+      "kia-sportage",
+      "honda-br-v"
+    ],
+    "fuelType": "Petrol"
   },
   {
-    "id": "v-toyota-revo-hilux",
-    "name": "Toyota Revo (Hilux)",
-    "slug": "toyota-revo-hilux",
+    "id": "v-kia-sportage",
+    "name": "Kia Sportage",
+    "slug": "kia-sportage",
     "category": "SUV",
-    "brand": "Toyota",
+    "brand": "Kia",
     "year": 2024,
     "transmission": "Automatic",
-    "fuel": "Diesel",
+    "fuel": "Petrol",
     "seats": 5,
     "doors": 4,
     "airConditioning": true,
     "driverIncluded": true,
     "color": "Premium Assorted",
     "images": {
-      "thumbnail": "/fleet/Revo Rocco Attitude White.png",
+      "thumbnail": "/fleet/Kia Sportage.png",
       "gallery": [
-        "/fleet/Revo Rocco Attitude White.png",
-        "/fleet/Revo Rocco Attitude Black.png"
+        "/fleet/Kia Sportage.png"
       ]
     },
     "rent": {
-      "local": 12000,
-      "interCity": 14000,
-      "outstation": 14000,
-      "weekly": 72000,
-      "monthly": 260000,
+      "local": 14000,
+      "interCity": 16000,
+      "outstation": 16000,
+      "weekly": 84000,
+      "monthly": 300000,
       "securityDeposit": 30000,
-      "note": "Local = within Lahore. Inter-city = Lahore to Islamabad/Multan. Outstation = Northern areas, off-road tours.",
-      "daily": 12000
+      "note": "Local = within Lahore. Inter-city = Lahore to Islamabad/Multan. Outstation = Northern areas/tours.",
+      "daily": 14000
     },
     "availability": true,
-    "description": "Experience unmatched power, prestige, and comfort with our **Toyota Revo (Hilux)** rental service in Lahore. Whether you are planning a high-profile corporate visit, a luxury wedding, or an adventurous trip to the breathtaking Northern Areas of Pakistan (Murree, Naran, Hunza), the Toyota Revo (Hilux) is your ultimate companion. \n\nAt Iris Tours, we don't just rent cars; we provide an experience. Our Toyota Revo (Hilux) fleet is maintained in showroom condition, ensuring a flawless and safe journey. Choose our highly trained, uniformed professional chauffeurs for a completely stress-free ride, or opt for a tailored outstation package. \n\n**Why Book the Toyota Revo (Hilux) with Us?**\n- 🌟 **Immaculate Condition:** Spotless interior, fully sanitized, and mechanically perfect.\n- 👨‍✈️ **Elite Chauffeurs:** Courteous, route-experienced, and professional drivers.\n- 🏔️ **Tour Ready:** Perfectly equipped for tough terrains and long highway cruising.\n- 🕒 **On-Time Guarantee:** We value your time—punctuality is our core promise.\n\nDon't settle for less. Elevate your journey and make a lasting impression. Reserve your Toyota Revo (Hilux) today!",
+    "description": "Experience unmatched power, prestige, and comfort with our **Kia Sportage** rental service in Lahore. Whether you are planning a high-profile corporate visit, a luxury wedding, or an adventurous trip to the breathtaking Northern Areas of Pakistan (Murree, Naran, Hunza), the Kia Sportage is your ultimate companion. \n\nAt Iris Tours, we don't just rent cars; we provide an experience. Our Kia Sportage fleet is maintained in showroom condition, ensuring a flawless and safe journey. Choose our highly trained, uniformed professional chauffeurs for a completely stress-free ride, or opt for a tailored outstation package. \n\n**Why Book the Kia Sportage with Us?**\n- 🌟 **Immaculate Condition:** Spotless interior, fully sanitized, and mechanically perfect.\n- 👨‍✈️ **Elite Chauffeurs:** Courteous, route-experienced, and professional drivers.\n- 🏔️ **Tour Ready:** Perfectly equipped for tough terrains and long highway cruising.\n- 🕒 **On-Time Guarantee:** We value your time—punctuality is our core promise.\n\nDon't settle for less. Elevate your journey and make a lasting impression. Reserve your Kia Sportage today!",
     "features": [
-      "4x4 Drive",
-      "Diesel Engine",
-      "High Ground Clearance",
+      "Panoramic Sunroof",
+      "Dual-Zone Climate Control",
+      "Turbo Engine",
       "Professional Driver",
-      "Tow Hook",
-      "Bed Liner"
+      "Harman Kardon Audio",
+      "4WD Available"
     ],
     "specifications": {
-      "engine": "2800cc Diesel",
-      "horsepower": "201 hp",
-      "luggage": "Large pickup bed",
-      "bluetooth": true,
-      "usbCharging": true,
-      "premiumAudio": false
-    },
-    "whatsappCategory": "SUV",
-    "seo": {
-      "title": "Rent Toyota Revo (Hilux) in Lahore | Premium Car Rental & Tours - Iris Tours",
-      "description": "Looking for a Toyota Revo (Hilux) on rent in Lahore or Islamabad? Iris Tours offers immaculate condition Toyota suvs with professional chauffeurs. Book your ride today!"
-    },
-    "policies": {
-      "fuelPolicy": "Diesel full tank diya jayega, full tank wapis karein.",
-      "mileagePolicy": "City unlimited. Inter-city 350km/day included.",
-      "outstationPolicy": "Northern off-road tours ke liye perfect. Driver ka per-day allowance PKR 1200 client dega.",
-      "airportPickup": true,
-      "weddingAvailable": false,
-      "corporateAvailable": true
-    },
-    "relatedVehicles": [
-      "v-toyota-fortuner",
-      "v-toyota-land-cruiser-prado"
-    ]
-  },
-  {
-    "id": "v-toyota-fortuner",
-    "name": "Toyota Fortuner",
-    "slug": "toyota-fortuner",
-    "category": "SUV",
-    "brand": "Toyota",
-    "year": 2024,
-    "transmission": "Automatic",
-    "fuel": "Diesel",
-    "seats": 7,
-    "doors": 4,
-    "airConditioning": true,
-    "driverIncluded": true,
-    "color": "Premium Assorted",
-    "images": {
-      "thumbnail": "/fleet/Fortuner.png",
-      "gallery": [
-        "/fleet/Fortuner.png"
-      ]
-    },
-    "rent": {
-      "local": 18000,
-      "interCity": 20000,
-      "outstation": 20000,
-      "weekly": 110000,
-      "monthly": 450000,
-      "securityDeposit": 40000,
-      "note": "Local = within Lahore. Inter-city = Lahore to Islamabad/Multan. Outstation = Northern areas. Northern tour price on request.",
-      "daily": 18000
-    },
-    "availability": true,
-    "description": "Experience unmatched power, prestige, and comfort with our **Toyota Fortuner** rental service in Lahore. Whether you are planning a high-profile corporate visit, a luxury wedding, or an adventurous trip to the breathtaking Northern Areas of Pakistan (Murree, Naran, Hunza), the Toyota Fortuner is your ultimate companion. \n\nAt Iris Tours, we don't just rent cars; we provide an experience. Our Toyota Fortuner fleet is maintained in showroom condition, ensuring a flawless and safe journey. Choose our highly trained, uniformed professional chauffeurs for a completely stress-free ride, or opt for a tailored outstation package. \n\n**Why Book the Toyota Fortuner with Us?**\n- 🌟 **Immaculate Condition:** Spotless interior, fully sanitized, and mechanically perfect.\n- 👨‍✈️ **Elite Chauffeurs:** Courteous, route-experienced, and professional drivers.\n- 🏔️ **Tour Ready:** Perfectly equipped for tough terrains and long highway cruising.\n- 🕒 **On-Time Guarantee:** We value your time—punctuality is our core promise.\n\nDon't settle for less. Elevate your journey and make a lasting impression. Reserve your Toyota Fortuner today!",
-    "features": [
-      "7-Seater",
-      "4x4 Drive",
-      "Diesel Engine",
-      "Professional Chauffeur",
-      "Premium Leather Seats",
-      "Rear AC",
-      "Sunroof"
-    ],
-    "specifications": {
-      "engine": "2800cc Diesel / 2700cc Petrol",
-      "horsepower": "177-201 hp",
-      "luggage": "5+ bags",
+      "engine": "2000cc / 1600cc Turbo",
+      "horsepower": "158-174 hp",
+      "luggage": "4 bags",
       "bluetooth": true,
       "usbCharging": true,
       "premiumAudio": true
     },
     "whatsappCategory": "SUV",
     "seo": {
-      "title": "Rent Toyota Fortuner in Lahore | Premium Car Rental & Tours - Iris Tours",
-      "description": "Looking for a Toyota Fortuner on rent in Lahore or Islamabad? Iris Tours offers immaculate condition Toyota suvs with professional chauffeurs. Book your ride today!"
+      "title": "Rent Kia Sportage in Lahore | Premium Car Rental & Tours - Iris Tours",
+      "description": "Looking for a Kia Sportage on rent in Lahore or Islamabad? Iris Tours offers immaculate condition Kia suvs with professional chauffeurs. Book your ride today!"
     },
     "policies": {
       "fuelPolicy": "Full tank diya jayega, full tank wapis karein.",
-      "mileagePolicy": "City unlimited. Inter-city 350km/day included.",
-      "outstationPolicy": "Northern tours ke liye available. Driver ka per-day allowance PKR 1500 client dega. Accommodation bhi client ki zimmedari.",
+      "mileagePolicy": "City unlimited. Inter-city 300km/day included.",
+      "outstationPolicy": "Available for northern tours. Driver ka khana aur raat ka accommodation client dega.",
       "airportPickup": true,
       "weddingAvailable": true,
       "corporateAvailable": true
     },
     "relatedVehicles": [
-      "v-toyota-land-cruiser-prado",
-      "v-toyota-land-cruiser-v8"
-    ]
+      "haval-h6",
+      "mg-hs",
+      "toyota-fortuner"
+    ],
+    "fuelType": "Petrol"
   },
   {
     "id": "v-toyota-land-cruiser-prado",
@@ -1604,9 +613,80 @@
       "corporateAvailable": true
     },
     "relatedVehicles": [
-      "v-toyota-land-cruiser-v8",
-      "v-toyota-fortuner"
-    ]
+      "toyota-fortuner",
+      "toyota-land-cruiser-v8",
+      "range-rover"
+    ],
+    "fuelType": "Diesel"
+  },
+  {
+    "id": "v-toyota-fortuner",
+    "name": "Toyota Fortuner",
+    "slug": "toyota-fortuner",
+    "category": "SUV",
+    "brand": "Toyota",
+    "year": 2024,
+    "transmission": "Automatic",
+    "fuel": "Diesel",
+    "seats": 7,
+    "doors": 4,
+    "airConditioning": true,
+    "driverIncluded": true,
+    "color": "Premium Assorted",
+    "images": {
+      "thumbnail": "/fleet/Fortuner.png",
+      "gallery": [
+        "/fleet/Fortuner.png"
+      ]
+    },
+    "rent": {
+      "local": 18000,
+      "interCity": 20000,
+      "outstation": 20000,
+      "weekly": 110000,
+      "monthly": 450000,
+      "securityDeposit": 40000,
+      "note": "Local = within Lahore. Inter-city = Lahore to Islamabad/Multan. Outstation = Northern areas. Northern tour price on request.",
+      "daily": 18000
+    },
+    "availability": true,
+    "description": "Experience unmatched power, prestige, and comfort with our **Toyota Fortuner** rental service in Lahore. Whether you are planning a high-profile corporate visit, a luxury wedding, or an adventurous trip to the breathtaking Northern Areas of Pakistan (Murree, Naran, Hunza), the Toyota Fortuner is your ultimate companion. \n\nAt Iris Tours, we don't just rent cars; we provide an experience. Our Toyota Fortuner fleet is maintained in showroom condition, ensuring a flawless and safe journey. Choose our highly trained, uniformed professional chauffeurs for a completely stress-free ride, or opt for a tailored outstation package. \n\n**Why Book the Toyota Fortuner with Us?**\n- 🌟 **Immaculate Condition:** Spotless interior, fully sanitized, and mechanically perfect.\n- 👨‍✈️ **Elite Chauffeurs:** Courteous, route-experienced, and professional drivers.\n- 🏔️ **Tour Ready:** Perfectly equipped for tough terrains and long highway cruising.\n- 🕒 **On-Time Guarantee:** We value your time—punctuality is our core promise.\n\nDon't settle for less. Elevate your journey and make a lasting impression. Reserve your Toyota Fortuner today!",
+    "features": [
+      "7-Seater",
+      "4x4 Drive",
+      "Diesel Engine",
+      "Professional Chauffeur",
+      "Premium Leather Seats",
+      "Rear AC",
+      "Sunroof"
+    ],
+    "specifications": {
+      "engine": "2800cc Diesel / 2700cc Petrol",
+      "horsepower": "177-201 hp",
+      "luggage": "5+ bags",
+      "bluetooth": true,
+      "usbCharging": true,
+      "premiumAudio": true
+    },
+    "whatsappCategory": "SUV",
+    "seo": {
+      "title": "Rent Toyota Fortuner in Lahore | Premium Car Rental & Tours - Iris Tours",
+      "description": "Looking for a Toyota Fortuner on rent in Lahore or Islamabad? Iris Tours offers immaculate condition Toyota suvs with professional chauffeurs. Book your ride today!"
+    },
+    "policies": {
+      "fuelPolicy": "Full tank diya jayega, full tank wapis karein.",
+      "mileagePolicy": "City unlimited. Inter-city 350km/day included.",
+      "outstationPolicy": "Northern tours ke liye available. Driver ka per-day allowance PKR 1500 client dega. Accommodation bhi client ki zimmedari.",
+      "airportPickup": true,
+      "weddingAvailable": true,
+      "corporateAvailable": true
+    },
+    "relatedVehicles": [
+      "toyota-land-cruiser-prado",
+      "toyota-land-cruiser-v8",
+      "kia-sportage"
+    ],
+    "fuelType": "Diesel"
   },
   {
     "id": "v-toyota-land-cruiser-v8",
@@ -1672,73 +752,11 @@
       "corporateAvailable": true
     },
     "relatedVehicles": [
-      "v-toyota-land-cruiser-prado",
-      "v-range-rover"
-    ]
-  },
-  {
-    "id": "v-suzuki-apv",
-    "name": "Suzuki APV",
-    "slug": "suzuki-apv",
-    "category": "Van",
-    "brand": "Suzuki",
-    "year": 2024,
-    "transmission": "Manual",
-    "fuel": "Petrol",
-    "seats": 8,
-    "doors": 4,
-    "airConditioning": true,
-    "driverIncluded": true,
-    "color": "Premium Assorted",
-    "images": {
-      "thumbnail": "/fleet/Suzuki apv.webp",
-      "gallery": [
-        "/fleet/Suzuki apv.webp"
-      ]
-    },
-    "rent": {
-      "local": 7000,
-      "interCity": 9000,
-      "outstation": 9000,
-      "weekly": 42000,
-      "monthly": 150000,
-      "securityDeposit": 20000,
-      "note": "Local = within Lahore. Inter-city = Lahore to Islamabad/Multan etc. Outstation = Northern areas.",
-      "daily": 7000
-    },
-    "availability": true,
-    "description": "Planning a group trip, family vacation, or corporate retreat? The **Suzuki APV** offers the perfect blend of spacious luxury, safety, and comfort for large groups traveling across Pakistan. \n\nNavigating Lahore's traffic or traveling inter-city to Islamabad and the Northern Areas can be exhausting. Let Iris Tours take the wheel. Our Suzuki APV comes with ample legroom, powerful dual AC, and top-tier luggage capacity, ensuring every passenger travels in absolute comfort. \n\n**Why Choose Our Suzuki APV Service?**\n- 👨‍👩‍👧‍👦 **Perfect for Groups:** Keep everyone together without compromising on comfort.\n- 🛡️ **Safety First:** Driven by seasoned professionals with years of heavy-vehicle experience on mountain and highway routes.\n- 💼 **Corporate & Event Ready:** The ideal choice for wedding guest transport, corporate delegations, and airport transfers.\n- ✨ **Premium Comfort:** Reclining seats, spotless interiors, and a smooth ride.\n\nTravel together, travel better. Contact Iris Tours now to secure the Suzuki APV for your upcoming trip!",
-    "features": [
-      "8-Seater",
-      "Air Conditioning",
-      "Sliding Side Door",
-      "Professional Driver",
-      "Good Luggage Space"
+      "toyota-land-cruiser-prado",
+      "range-rover",
+      "mercedes-benz-g-wagon"
     ],
-    "specifications": {
-      "engine": "1500cc G15A",
-      "horsepower": "95 hp",
-      "luggage": "Medium luggage boot",
-      "bluetooth": false,
-      "usbCharging": false,
-      "premiumAudio": false
-    },
-    "whatsappCategory": "Van",
-    "seo": {
-      "title": "Rent Suzuki APV in Lahore | Premium Car Rental & Tours - Iris Tours",
-      "description": "Looking for a Suzuki APV on rent in Lahore or Islamabad? Iris Tours offers immaculate condition Suzuki vans with professional chauffeurs. Book your ride today!"
-    },
-    "policies": {
-      "fuelPolicy": "Full tank diya jayega, full tank wapis karein.",
-      "mileagePolicy": "City unlimited. Inter-city extra charges.",
-      "outstationPolicy": "Group travel ke liye available. Driver ka per-day allowance client dega.",
-      "airportPickup": true,
-      "weddingAvailable": true,
-      "corporateAvailable": true
-    },
-    "relatedVehicles": [
-      "v-toyota-hiace-grand-cabin"
-    ]
+    "fuelType": "Diesel"
   },
   {
     "id": "v-toyota-hiace-grand-cabin",
@@ -1802,9 +820,9 @@
       "corporateAvailable": true
     },
     "relatedVehicles": [
-      "v-toyota-coaster-saloon",
-      "v-suzuki-apv"
-    ]
+      "toyota-coaster-saloon"
+    ],
+    "fuelType": "Diesel"
   },
   {
     "id": "v-toyota-coaster-saloon",
@@ -1868,75 +886,9 @@
       "corporateAvailable": true
     },
     "relatedVehicles": [
-      "v-yutong-bus",
-      "v-toyota-hiace-grand-cabin"
-    ]
-  },
-  {
-    "id": "v-audi-a4",
-    "name": "Audi A4",
-    "slug": "audi-a4",
-    "category": "Luxury",
-    "brand": "Audi",
-    "year": 2024,
-    "transmission": "Automatic",
-    "fuel": "Petrol",
-    "seats": 5,
-    "doors": 4,
-    "airConditioning": true,
-    "driverIncluded": true,
-    "color": "Premium Assorted",
-    "images": {
-      "thumbnail": "/fleet/Audi A4.jpg",
-      "gallery": [
-        "/fleet/Audi A4.jpg"
-      ]
-    },
-    "rent": {
-      "local": 25000,
-      "interCity": 27000,
-      "outstation": 27000,
-      "weekly": 150000,
-      "monthly": 550000,
-      "securityDeposit": 75000,
-      "note": "Local = within Lahore. Inter-city = Lahore to Islamabad. Outstation = on request.",
-      "daily": 25000
-    },
-    "availability": true,
-    "description": "Step into a world of pure elegance with the **Audi A4**. Designed for those who demand nothing but the absolute best, this vehicle is the pinnacle of luxury car rentals in Lahore. \n\nWhether you need a prestigious arrival for your wedding day, a VIP airport transfer for foreign delegates, or an executive ride for your corporate meetings in DHA and Gulberg, the Audi A4 guarantees you will arrive in style. Iris Tours takes pride in offering this masterpiece in pristine condition, complemented by our VIP chauffeur service.\n\n**The Iris Tours Luxury Promise:**\n- 🎩 **VIP Chauffeur Service:** Highly trained, discreet, and sharply dressed chauffeurs.\n- 💎 **Showroom Quality:** Flawless exterior, luxurious plush interiors, and a cabin that smells brand new.\n- 📸 **Wedding & Event Perfection:** The ultimate statement car to make your special day unforgettable.\n- 🛡️ **Absolute Privacy & Comfort:** Tinted windows, whisper-quiet cabin, and ultimate ride smoothness.\n\nMake your next journey extraordinary. Book the Audi A4 today and experience true VIP treatment.",
-    "features": [
-      "S-Line Exterior",
-      "Virtual Cockpit",
-      "Quattro AWD",
-      "Professional Chauffeur",
-      "Bang & Olufsen Audio",
-      "Matrix LED Headlights"
+      "toyota-hiace-grand-cabin"
     ],
-    "specifications": {
-      "engine": "2000cc TFSI Turbo",
-      "horsepower": "190-265 hp",
-      "luggage": "3-4 bags",
-      "bluetooth": true,
-      "usbCharging": true,
-      "premiumAudio": true
-    },
-    "whatsappCategory": "Luxury",
-    "seo": {
-      "title": "Rent Audi A4 in Lahore | Premium Car Rental & Tours - Iris Tours",
-      "description": "Looking for a Audi A4 on rent in Lahore or Islamabad? Iris Tours offers immaculate condition Audi luxurys with professional chauffeurs. Book your ride today!"
-    },
-    "policies": {
-      "fuelPolicy": "Full tank diya jayega, full tank wapis karein.",
-      "mileagePolicy": "City 200km/day. Inter-city extra charges.",
-      "outstationPolicy": "On request. Driver allowance + premium accommodation client ka.",
-      "airportPickup": true,
-      "weddingAvailable": true,
-      "corporateAvailable": true
-    },
-    "relatedVehicles": [
-      "v-audi-a6",
-      "v-mercedes-benz-c-class-c180"
-    ]
+    "fuelType": "Diesel"
   },
   {
     "id": "v-audi-a6",
@@ -2001,9 +953,10 @@
       "corporateAvailable": true
     },
     "relatedVehicles": [
-      "v-mercedes-benz-s-class",
-      "v-audi-a4"
-    ]
+      "mercedes-benz-c-class-c180",
+      "range-rover"
+    ],
+    "fuelType": "Petrol"
   },
   {
     "id": "v-mercedes-benz-c-class-c180",
@@ -2067,76 +1020,10 @@
       "corporateAvailable": true
     },
     "relatedVehicles": [
-      "v-mercedes-benz-s-class",
-      "v-audi-a6"
-    ]
-  },
-  {
-    "id": "v-mercedes-benz-s-class",
-    "name": "Mercedes Benz S-Class",
-    "slug": "mercedes-benz-s-class",
-    "category": "Luxury",
-    "brand": "Mercedes",
-    "year": 2024,
-    "transmission": "Automatic",
-    "fuel": "Petrol",
-    "seats": 5,
-    "doors": 4,
-    "airConditioning": true,
-    "driverIncluded": true,
-    "color": "Premium Assorted",
-    "images": {
-      "thumbnail": "/fleet/Mercedes Benz S-Class.webp",
-      "gallery": [
-        "/fleet/Mercedes Benz S-Class.webp"
-      ]
-    },
-    "rent": {
-      "local": 75000,
-      "interCity": 77000,
-      "outstation": 77000,
-      "weekly": 450000,
-      "monthly": 1500000,
-      "securityDeposit": 200000,
-      "note": "Local = within Lahore. Inter-city = Lahore to Islamabad only. Outstation strictly on request. Minimum 12-hour booking.",
-      "daily": 75000
-    },
-    "availability": true,
-    "description": "Step into a world of pure elegance with the **Mercedes Benz S-Class**. Designed for those who demand nothing but the absolute best, this vehicle is the pinnacle of luxury car rentals in Lahore. \n\nWhether you need a prestigious arrival for your wedding day, a VIP airport transfer for foreign delegates, or an executive ride for your corporate meetings in DHA and Gulberg, the Mercedes Benz S-Class guarantees you will arrive in style. Iris Tours takes pride in offering this masterpiece in pristine condition, complemented by our VIP chauffeur service.\n\n**The Iris Tours Luxury Promise:**\n- 🎩 **VIP Chauffeur Service:** Highly trained, discreet, and sharply dressed chauffeurs.\n- 💎 **Showroom Quality:** Flawless exterior, luxurious plush interiors, and a cabin that smells brand new.\n- 📸 **Wedding & Event Perfection:** The ultimate statement car to make your special day unforgettable.\n- 🛡️ **Absolute Privacy & Comfort:** Tinted windows, whisper-quiet cabin, and ultimate ride smoothness.\n\nMake your next journey extraordinary. Book the Mercedes Benz S-Class today and experience true VIP treatment.",
-    "features": [
-      "First-Class Rear Suite",
-      "Massage Seats",
-      "OLED Rear Screens",
-      "Professional Chauffeur",
-      "Active Ambient Lighting",
-      "Burmester 4D Audio",
-      "Magic Body Control"
+      "audi-a6",
+      "toyota-corolla-grande-1-8"
     ],
-    "specifications": {
-      "engine": "3000cc / 4000cc V8",
-      "horsepower": "429-503 hp",
-      "luggage": "4 bags",
-      "bluetooth": true,
-      "usbCharging": true,
-      "premiumAudio": true
-    },
-    "whatsappCategory": "Luxury",
-    "seo": {
-      "title": "Rent Mercedes Benz S-Class in Lahore | Premium Car Rental & Tours - Iris Tours",
-      "description": "Looking for a Mercedes Benz S-Class on rent in Lahore or Islamabad? Iris Tours offers immaculate condition Mercedes luxurys with professional chauffeurs. Book your ride today!"
-    },
-    "policies": {
-      "fuelPolicy": "Premium fuel full tank. Return full tank.",
-      "mileagePolicy": "City 100km/day. Each extra km charged.",
-      "outstationPolicy": "Strictly on special request only. All expenses client dega.",
-      "airportPickup": true,
-      "weddingAvailable": true,
-      "corporateAvailable": true
-    },
-    "relatedVehicles": [
-      "v-range-rover",
-      "v-audi-a6"
-    ]
+    "fuelType": "Petrol"
   },
   {
     "id": "v-range-rover",
@@ -2200,9 +1087,11 @@
       "corporateAvailable": true
     },
     "relatedVehicles": [
-      "v-mercedes-benz-s-class",
-      "v-toyota-land-cruiser-v8"
-    ]
+      "mercedes-benz-g-wagon",
+      "toyota-land-cruiser-v8",
+      "audi-a6"
+    ],
+    "fuelType": "Petrol"
   },
   {
     "id": "v-mercedes-benz-g-wagon",
@@ -2266,142 +1155,9 @@
       "corporateAvailable": true
     },
     "relatedVehicles": [
-      "v-range-rover",
-      "v-mercedes-benz-s-class",
-      "v-toyota-land-cruiser-v8"
-    ]
-  },
-  {
-    "id": "v-v8-limousine",
-    "name": "V8 Limousine",
-    "slug": "v8-limousine",
-    "category": "Luxury",
-    "brand": "Toyota",
-    "year": 2024,
-    "transmission": "Automatic",
-    "fuel": "Petrol",
-    "seats": 8,
-    "doors": 4,
-    "airConditioning": true,
-    "driverIncluded": true,
-    "color": "Black / White",
-    "images": {
-      "thumbnail": "/fleet/V8 Limousine.jpg",
-      "gallery": [
-        "/fleet/V8 Limousine.jpg"
-      ]
-    },
-    "rent": {
-      "local": 70000,
-      "interCity": 72000,
-      "outstation": 72000,
-      "weekly": 420000,
-      "monthly": 1500000,
-      "securityDeposit": 200000,
-      "note": "Per-event pricing. Minimum 6-hour booking. Lahore and Punjab only. Book 3 days in advance.",
-      "daily": 70000
-    },
-    "availability": true,
-    "description": "Experience unmatched power, prestige, and comfort with our **V8 Limousine** rental service in Lahore. Whether you are planning a high-profile corporate visit, a luxury wedding, or an adventurous trip to the breathtaking Northern Areas of Pakistan (Murree, Naran, Hunza), the V8 Limousine is your ultimate companion. \n\nAt Iris Tours, we don't just rent cars; we provide an experience. Our V8 Limousine fleet is maintained in showroom condition, ensuring a flawless and safe journey. Choose our highly trained, uniformed professional chauffeurs for a completely stress-free ride, or opt for a tailored outstation package. \n\n**Why Book the V8 Limousine with Us?**\n- 🌟 **Immaculate Condition:** Spotless interior, fully sanitized, and mechanically perfect.\n- 👨‍✈️ **Elite Chauffeurs:** Courteous, route-experienced, and professional drivers.\n- 🏔️ **Tour Ready:** Perfectly equipped for tough terrains and long highway cruising.\n- 🕒 **On-Time Guarantee:** We value your time—punctuality is our core promise.\n\nDon't settle for less. Elevate your journey and make a lasting impression. Reserve your V8 Limousine today!",
-    "features": [
-      "8-Seater SUV Limo",
-      "SUV Ground Clearance",
-      "LED Party Lighting",
-      "Professional Chauffeur",
-      "Mini Bar",
-      "360-degree sound",
-      "Privacy Divider"
+      "range-rover",
+      "toyota-land-cruiser-v8"
     ],
-    "specifications": {
-      "engine": "4600cc V8",
-      "horsepower": "300+ hp",
-      "luggage": "Minimal",
-      "bluetooth": true,
-      "usbCharging": true,
-      "premiumAudio": true
-    },
-    "whatsappCategory": "Luxury",
-    "seo": {
-      "title": "Rent V8 Limousine in Lahore | Premium Car Rental & Tours - Iris Tours",
-      "description": "Looking for a V8 Limousine on rent in Lahore or Islamabad? Iris Tours offers immaculate condition Toyota luxurys with professional chauffeurs. Book your ride today!"
-    },
-    "policies": {
-      "fuelPolicy": "Fuel included in package.",
-      "mileagePolicy": "Per-event pricing.",
-      "outstationPolicy": "Punjab only.",
-      "airportPickup": false,
-      "weddingAvailable": true,
-      "corporateAvailable": false
-    },
-    "relatedVehicles": [
-      "v-chrysler-limousine",
-      "v-hummer-limousine"
-    ]
-  },
-  {
-    "id": "v-tundra-limousine",
-    "name": "Tundra Limousine",
-    "slug": "tundra-limousine",
-    "category": "Luxury",
-    "brand": "Toyota",
-    "year": 2024,
-    "transmission": "Automatic",
-    "fuel": "Petrol",
-    "seats": 12,
-    "doors": 4,
-    "airConditioning": true,
-    "driverIncluded": true,
-    "color": "Black",
-    "images": {
-      "thumbnail": "/fleet/toyota Tundra Limousine.jfif",
-      "gallery": [
-        "/fleet/toyota Tundra Limousine.jfif"
-      ]
-    },
-    "rent": {
-      "local": 80000,
-      "interCity": 82000,
-      "outstation": 82000,
-      "weekly": 480000,
-      "monthly": 1700000,
-      "securityDeposit": 250000,
-      "note": "Per-event pricing. Minimum 6-hour booking. Lahore and surrounding areas only.",
-      "daily": 80000
-    },
-    "availability": true,
-    "description": "Step into a world of pure elegance with the **Tundra Limousine**. Designed for those who demand nothing but the absolute best, this vehicle is the pinnacle of luxury car rentals in Lahore. \n\nWhether you need a prestigious arrival for your wedding day, a VIP airport transfer for foreign delegates, or an executive ride for your corporate meetings in DHA and Gulberg, the Tundra Limousine guarantees you will arrive in style. Iris Tours takes pride in offering this masterpiece in pristine condition, complemented by our VIP chauffeur service.\n\n**The Iris Tours Luxury Promise:**\n- 🎩 **VIP Chauffeur Service:** Highly trained, discreet, and sharply dressed chauffeurs.\n- 💎 **Showroom Quality:** Flawless exterior, luxurious plush interiors, and a cabin that smells brand new.\n- 📸 **Wedding & Event Perfection:** The ultimate statement car to make your special day unforgettable.\n- 🛡️ **Absolute Privacy & Comfort:** Tinted windows, whisper-quiet cabin, and ultimate ride smoothness.\n\nMake your next journey extraordinary. Book the Tundra Limousine today and experience true VIP treatment.",
-    "features": [
-      "12-Seater Tundra Stretch",
-      "Pickup Style Limo",
-      "LED Lighting",
-      "Professional Chauffeur",
-      "Premium Sound System",
-      "Open Sunroof Option"
-    ],
-    "specifications": {
-      "engine": "5700cc V8",
-      "horsepower": "381 hp",
-      "luggage": "Minimal",
-      "bluetooth": true,
-      "usbCharging": true,
-      "premiumAudio": true
-    },
-    "whatsappCategory": "Luxury",
-    "seo": {
-      "title": "Rent Tundra Limousine in Lahore | Premium Car Rental & Tours - Iris Tours",
-      "description": "Looking for a Tundra Limousine on rent in Lahore or Islamabad? Iris Tours offers immaculate condition Toyota luxurys with professional chauffeurs. Book your ride today!"
-    },
-    "policies": {
-      "fuelPolicy": "Fuel included in package.",
-      "mileagePolicy": "Per-event pricing.",
-      "outstationPolicy": "Lahore and Punjab only.",
-      "airportPickup": false,
-      "weddingAvailable": true,
-      "corporateAvailable": false
-    },
-    "relatedVehicles": [
-      "v-v8-limousine",
-      "v-chrysler-limousine"
-    ]
+    "fuelType": "Petrol"
   }
 ]

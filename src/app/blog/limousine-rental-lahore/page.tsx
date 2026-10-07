@@ -97,7 +97,7 @@ export default function BlogPost() {
           <p>Because these vehicles are rare and highly sought after, <strong>hiring a limousine</strong> requires early planning. We recommend booking at least a month in advance, especially if your event falls on a weekend.</p>
 
           <h2>Conclusion</h2>
-          <p>Your grand event deserves a grand entrance. Let Iris Tours handle the logistics while you enjoy the luxury. Browse our <Link href="/fleet/v8-limousine" className="text-accent-primary hover:underline">V8 Limousine details</Link> and reserve your vehicle today.</p>
+          <p>Your grand event deserves a grand entrance. Let Iris Tours handle the logistics while you enjoy the luxury. Browse our <Link href="/fleet" className="text-accent-primary hover:underline">luxury fleet details</Link> and reserve your premium vehicle today.</p>
 
           <div className="mt-12 text-center p-8 bg-bg-secondary rounded-2xl border border-border-primary">
             <h3 className="text-2xl font-bold text-text-primary mb-3">Book a Limousine for Your Event</h3>

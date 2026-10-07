@@ -19,7 +19,7 @@ interface Props {
 }
 
 export default function VehicleComparison({ liveFuelPrices }: Props = {}) {
-  const [vehicleASlug, setVehicleASlug] = useState<string>("toyota-prius");
+  const [vehicleASlug, setVehicleASlug] = useState<string>("toyota-yaris");
   const [vehicleBSlug, setVehicleBSlug] = useState<string>("toyota-fortuner");
   const [distance, setDistance] = useState<number>(380);
   const [drivingCondition, setDrivingCondition] = useState<DrivingCondition>("highway");

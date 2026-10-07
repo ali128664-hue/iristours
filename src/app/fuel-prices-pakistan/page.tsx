@@ -35,7 +35,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const effectiveDate = fuelData.meta.effectiveFrom;
 
   const title = `Pakistan Petrol Price Today | Rs. ${petrolPrice}/L | Iris Tours Fuel Cost Calculator`;
-  const description = `Current Pakistan fuel prices today (w.e.f. ${effectiveDate}): Petrol at Rs. ${petrolPrice}/L, High-Speed Diesel at Rs. ${dieselPrice}/L. Calculate trip fuel consumption and travel costs across 36 luxury Iris Tours rental vehicles.`;
+  const description = `Current Pakistan fuel prices today (w.e.f. ${effectiveDate}): Petrol at Rs. ${petrolPrice}/L, High-Speed Diesel at Rs. ${dieselPrice}/L. Calculate trip fuel consumption and travel costs across 17 luxury Iris Tours rental vehicles.`;
   const url = "https://iristours.net/fuel-prices-pakistan";
 
   return {
@@ -155,7 +155,7 @@ export default async function FuelPricesPage({ searchParams }: PageProps) {
             name: "How do I calculate trip fuel cost for an Iris Tours car rental?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Use our interactive Vehicle Fuel Cost Calculator to pick any car from our 36-vehicle fleet, specify your route or distance, and select your driving condition to get total litres needed, fuel expense in PKR, and cost per kilometer.",
+              text: "Use our interactive Vehicle Fuel Cost Calculator to pick any car from our 17-vehicle fleet, specify your route or distance, and select your driving condition to get total litres needed, fuel expense in PKR, and cost per kilometer.",
             },
           },
         ],
@@ -178,7 +178,7 @@ export default async function FuelPricesPage({ searchParams }: PageProps) {
     },
     {
       q: "How accurate are the fuel consumption figures for Iris Tours vehicles?",
-      a: "Our calculator incorporates verified, real-world tested fuel economy figures (km/L) for all 36 vehicles in our fleet. We test separate mileage profiles for city stop-and-go traffic, motorway high-speed cruising, and northern mountain hill climbs.",
+      a: "Our calculator incorporates verified, real-world tested fuel economy figures (km/L) for all 17 vehicles in our fleet. We test separate mileage profiles for city stop-and-go traffic, motorway high-speed cruising, and northern mountain hill climbs.",
     },
     {
       q: "Can I book a rental car with fuel included from Iris Tours?",
@@ -278,7 +278,7 @@ export default async function FuelPricesPage({ searchParams }: PageProps) {
 
               {/* Subtitle */}
               <p className="text-base md:text-xl text-text-secondary leading-relaxed max-w-3xl mb-8">
-                Official petrol, diesel, and LPG rates across Pakistan updated in real-time. Calculate exact trip fuel expenses for all <strong>36 Iris Tours luxury vehicles</strong>, compare fleet consumption side-by-side, and benchmark against international rates.
+                Official petrol, diesel, and LPG rates across Pakistan updated in real-time. Calculate exact trip fuel expenses for all <strong>17 Iris Tours luxury vehicles</strong>, compare fleet consumption side-by-side, and benchmark against international rates.
               </p>
 
               {/* Quick Navigation Pills */}
@@ -320,7 +320,7 @@ export default async function FuelPricesPage({ searchParams }: PageProps) {
                   href="#fleet"
                   className="px-4 py-2 rounded-xl bg-bg-secondary border border-border-primary text-xs font-bold text-accent-primary hover:bg-white transition-all shadow-xs"
                 >
-                  Explore Fleet (36)
+                  Explore Fleet (17)
                 </a>
               </div>
             </div>

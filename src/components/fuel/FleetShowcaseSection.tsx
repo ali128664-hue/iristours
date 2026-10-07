@@ -11,7 +11,7 @@ export default function FleetShowcaseSection() {
   const [activeCategory, setActiveCategory] = useState<string>("All");
 
   const categories = [
-    { id: "All", label: "All Vehicles (36)" },
+    { id: "All", label: `All Vehicles (${fleetData.length})` },
     { id: "SUV", label: "SUVs & 4x4" },
     { id: "Luxury", label: "Luxury & Executive" },
     { id: "Sedan", label: "Premium Sedans" },
