@@ -58,13 +58,13 @@
   "meta": {
     "effectiveFrom": "14 Oct 2026",
     "nextExpectedRevision": "October 01, 2026",
-    "lastChecked": "2026-10-14T19:46:44.585Z",
+    "lastChecked": "2026-10-14T19:55:19.689Z",
     "source": "OilPrices.pk (Live Real-time OGRA Notified Feed)",
     "isLiveVerified": true
   },
   "exchangeRates": {
     "base": "USD",
-    "lastUpdated": "2026-10-14T19:46:44.475Z",
+    "lastUpdated": "2026-10-14T19:55:19.591Z",
     "rates": {
       "USD": 1,
       "PKR": 277.05126,
@@ -73,15 +73,9 @@
       "GBP": 0.754721,
       "CAD": 1.422113,
       "EUR": 0.893421,
-<<<<<<< HEAD
-      "INR": 96.46757,
-      "CNY": 6.711932,
-      "AUD": 1.43284,
-=======
       "INR": 95.319179,
       "CNY": 6.705025,
       "AUD": 1.432809,
->>>>>>> 07ce713 (feat(blog): add 5 comprehensive SEO blogs with images for Lahore car rental and KPK outstation travel)
       "QAR": 3.64,
       "OMR": 0.384497,
       "TRY": 49.379871,
