@@ -11,6 +11,22 @@ export const metadata: Metadata = {
     title: "Car Rental FAQs | Iris Tours Lahore",
     description: "Answers to common car rental questions: booking process, chauffeur policies, and payment terms.",
     url: "https://iristours.net/faq",
+    siteName: "Iris Tours",
+    images: [
+      {
+        url: "https://iristours.net/opengraph-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Car Rental FAQs - Iris Tours Lahore",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Car Rental FAQs | Iris Tours Lahore",
+    description: "Answers to common car rental questions: booking process, chauffeur policies, and payment terms.",
+    images: ["https://iristours.net/opengraph-image.jpg"],
   },
 };
 

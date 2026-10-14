@@ -12,8 +12,15 @@ export const metadata: Metadata = {
     title: "Luxury Car Rental Lahore | Iris Tours",
     description: "Premium Mercedes, Audi, and limousine rental in Lahore with verified VIP chauffeurs.",
     url: "https://iristours.net/blog/luxury-car-rental-lahore",
+    siteName: "Iris Tours",
     images: ["https://iristours.net/blog/luxury-rental.jpg"],
     type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Luxury Car Rental Lahore | Iris Tours",
+    description: "Premium Mercedes, Audi, and limousine rental in Lahore with verified VIP chauffeurs.",
+    images: ["https://iristours.net/blog/luxury-rental.jpg"],
   },
 };
 

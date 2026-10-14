@@ -105,14 +105,14 @@ export default function HeroSection() {
           {/* ─── MAIN HEADLINE ─────────────── */}
           <div className="hero-text overflow-hidden mb-6">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-text-primary tracking-tight leading-tight">
-              Rent a Car in <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-primary to-accent-secondary">Lahore DHA</span> &amp; <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Islamabad</span>
+              Rent a Car in <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-primary to-accent-secondary">Lahore</span>
             </h1>
           </div>
           
           {/* Description paragraph below the headline */}
           <div className="hero-text overflow-hidden mb-8 max-w-2xl mx-auto">
             <p className="text-lg md:text-xl text-text-secondary leading-relaxed font-medium">
-              Drive Luxury. Experience Perfection. Elevate your journey with our world-class fleet of luxury cars, SUVs (Prado, Fortuner, V8), and verified chauffeurs across Pakistan.
+              Best car rental service in Lahore with verified professional chauffeurs. Experience luxury sedans, 4x4 SUVs (Prado, Fortuner, Land Cruiser V8), airport transfers, and outstation tours with 100% transparent rates.
             </p>
           </div>
           

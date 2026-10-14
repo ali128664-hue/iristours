@@ -12,8 +12,15 @@ export const metadata: Metadata = {
     title: "Rent a Car in Bahria Town & DHA Lahore | Iris Tours",
     description: "Doorstep car rental in DHA Lahore (Phases 1-9), Bahria Town, and Lake City with verified chauffeurs.",
     url: "https://iristours.net/blog/rent-a-car-bahria-town-dha-lahore",
+    siteName: "Iris Tours",
     images: ["https://iristours.net/blog/bahria-dha.jpg"],
     type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Rent a Car in Bahria Town & DHA Lahore | Iris Tours",
+    description: "Doorstep car rental in DHA Lahore (Phases 1-9), Bahria Town, and Lake City with verified chauffeurs.",
+    images: ["https://iristours.net/blog/bahria-dha.jpg"],
   },
 };
 

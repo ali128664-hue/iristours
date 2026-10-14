@@ -24,18 +24,38 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return { title: "Tour Not Found" };
   }
 
+  const baseUrl = "https://iristours.net";
+  const ogImage = tour.images.thumbnail.startsWith("http")
+    ? tour.images.thumbnail
+    : `${baseUrl}${tour.images.thumbnail}`;
+
   return {
     title: tour.seo.title,
     description: tour.seo.description,
     alternates: {
-      canonical: `https://iristours.net/tours/${slug}`,
+      canonical: `${baseUrl}/tours/${slug}`,
     },
     openGraph: {
       title: tour.seo.title,
       description: tour.seo.description,
-      url: `https://iristours.net/tours/${slug}`,
-      images: [tour.images.thumbnail],
-    }
+      url: `${baseUrl}/tours/${slug}`,
+      siteName: "Iris Tours",
+      images: [
+        {
+          url: ogImage,
+          width: 1200,
+          height: 630,
+          alt: tour.title,
+        },
+      ],
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: tour.seo.title,
+      description: tour.seo.description,
+      images: [ogImage],
+    },
   };
 }
 

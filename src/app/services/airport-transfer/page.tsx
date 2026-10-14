@@ -4,15 +4,31 @@ import { Button } from "@/components/ui/Button";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Airport Transfer Lahore & Islamabad | Airport Rent a Car - Iris Tours",
-  description: "Book 24/7 Allama Iqbal Airport Lahore & Islamabad airport transfer car rental with driver. On-time flight tracking, VIP meet & greet, and transparent rates.",
+  title: "Airport Transfer Lahore | 24/7 Allama Iqbal Airport Car Rental - Iris Tours",
+  description: "Book 24/7 Allama Iqbal International Airport (LHE) Lahore transfer car rental with driver. Flight tracking, terminal meet & greet, and transparent rates. Book now!",
   alternates: {
     canonical: "https://iristours.net/services/airport-transfer",
   },
   openGraph: {
-    title: "Airport Transfer Lahore & Islamabad | Iris Tours",
-    description: "24/7 on-time airport pickup & drop-off in Lahore DHA and Islamabad with luxury sedans and SUVs.",
+    title: "Airport Transfer Lahore | 24/7 Airport Car Rental - Iris Tours",
+    description: "24/7 on-time airport pickup & drop-off at Allama Iqbal International Airport Lahore with luxury sedans and SUVs.",
     url: "https://iristours.net/services/airport-transfer",
+    siteName: "Iris Tours",
+    images: [
+      {
+        url: "https://iristours.net/blog/lahore-airport-car-rental-service.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Airport Transfer Lahore - Iris Tours",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Airport Transfer Lahore | Iris Tours",
+    description: "24/7 airport pickup & drop-off at Allama Iqbal International Airport Lahore with luxury sedans and SUVs.",
+    images: ["https://iristours.net/blog/lahore-airport-car-rental-service.jpg"],
   },
 };
 

@@ -3,16 +3,32 @@ import FleetClient from "@/components/fleet/FleetClient";
 import fleetData from "@/data/fleet.json";
 
 export const metadata: Metadata = {
-  title: "Rent a Car Fleet Lahore & Islamabad | Luxury SUVs, Sedans & Vans - Iris Tours",
-  description: "Explore 36+ premium vehicles for rent in Lahore DHA & Islamabad. Toyota Prado, Fortuner, Land Cruiser V8, Mercedes, Civic, and Hiace Grand Cabin with chauffeurs.",
+  title: "Rent a Car Fleet in Lahore | Luxury SUVs, Sedans & Vans - Iris Tours",
+  description: "Browse 36+ verified rental cars in Lahore. Toyota Fortuner, Prado, Land Cruiser V8, Mercedes, Civic, and Hiace Grand Cabin with professional chauffeurs. Book 24/7!",
   alternates: {
     canonical: "https://iristours.net/fleet",
   },
   openGraph: {
-    title: "Rent a Car Fleet Lahore & Islamabad | Iris Tours",
-    description: "Explore 36+ luxury SUVs, sedans, and vans for rent in Lahore DHA and Islamabad with verified drivers.",
+    title: "Rent a Car Fleet in Lahore | Luxury SUVs, Sedans & Vans - Iris Tours",
+    description: "Browse 36+ verified rental cars in Lahore. Toyota Fortuner, Prado, Land Cruiser V8, Mercedes, Civic, and Hiace Grand Cabin with professional chauffeurs.",
     url: "https://iristours.net/fleet",
-  }
+    siteName: "Iris Tours",
+    images: [
+      {
+        url: "https://iristours.net/blog/rent-a-car-lahore-fleet-lineup.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Rent a Car Fleet in Lahore - Iris Tours",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Rent a Car Fleet in Lahore | Iris Tours",
+    description: "Browse 36+ verified rental cars in Lahore with professional chauffeurs.",
+    images: ["https://iristours.net/blog/rent-a-car-lahore-fleet-lineup.jpg"],
+  },
 };
 
 export default function FleetPage() {

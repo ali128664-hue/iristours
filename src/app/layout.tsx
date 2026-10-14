@@ -32,14 +32,14 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 export const metadata: Metadata = {
   metadataBase: new URL("https://iristours.net"),
   title: {
-    default: "Premium Rent a Car in Lahore DHA & Islamabad | Iris Tours",
+    default: "Rent a Car in Lahore | Best Car Rental Service - Iris Tours",
     template: "%s | Iris Tours Pakistan",
   },
-  description: "Best Rent a Car in Lahore DHA and Islamabad. Premium luxury car rental, SUVs, wedding cars, airport transfers, and northern tours in Pakistan. Book instantly via WhatsApp.",
-  keywords: "Rent a car in Lahore, Best Rent a Car DHA Lahore, Cheap car rental Lahore, Luxury car rental Lahore, Wedding cars Lahore, Airport transfer Lahore, Prado for rent Lahore, Corolla for rent Lahore, V8 for rent Pakistan, Rent a car near me Lahore, Rent a car Islamabad, Rent a car Lahore to Islamabad, DHA Phase 1 Rent a Car, Chauffeur driven cars Lahore, SUV rental Lahore, Iris Tours Lahore",
+  description: "Best rent a car in Lahore with verified professional chauffeurs. Luxury SUVs (Prado, Fortuner, Land Cruiser V8), executive sedans, wedding cars, airport transfers & northern tours at transparent rates. Book 24/7!",
+  keywords: "Rent a car in Lahore, Rent car Lahore, Car rental in Lahore, Cheap rent a car in Lahore, Luxury car rental Lahore, Car rental with driver Lahore, Wedding cars Lahore, Airport transfer Lahore, Prado for rent Lahore, Fortuner for rent Lahore, Corolla for rent Lahore, V8 for rent Lahore, Iris Tours Lahore",
   openGraph: {
-    title: "Iris Tours | Rent a Car in Lahore & Islamabad",
-    description: "Best Rent a Car in Lahore DHA and Islamabad. Premium luxury car rental, SUVs, and wedding cars.",
+    title: "Rent a Car in Lahore | Best Car Rental Service - Iris Tours",
+    description: "Best rent a car in Lahore with verified professional chauffeurs. Luxury SUVs, executive sedans, wedding cars, and airport transfers at transparent rates.",
     type: "website",
     locale: "en_PK",
     url: "https://iristours.net",
@@ -49,14 +49,14 @@ export const metadata: Metadata = {
         url: "https://iristours.net/opengraph-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Iris Tours - Premium Car Rental",
+        alt: "Iris Tours - Rent a Car in Lahore",
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Iris Tours | Rent a Car in Lahore & Islamabad",
-    description: "Best Rent a Car in Lahore DHA and Islamabad. Premium luxury car rental, SUVs, and wedding cars.",
+    title: "Rent a Car in Lahore | Best Car Rental Service - Iris Tours",
+    description: "Best rent a car in Lahore with verified professional chauffeurs. Luxury SUVs, executive sedans, wedding cars, and airport transfers.",
     images: ["https://iristours.net/twitter-image.jpg"],
   },
   other: {

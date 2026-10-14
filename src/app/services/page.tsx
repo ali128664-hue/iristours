@@ -4,8 +4,8 @@ import { Plane, Heart, Building, Compass, ShieldCheck, Clock, PhoneCall, ArrowRi
 import { Button } from "@/components/ui/Button";
 
 export const metadata: Metadata = {
-  title: "Car Rental & Chauffeur Services in Lahore & Islamabad | Iris Tours",
-  description: "Explore our range of premium car rental services: 24/7 Airport transfers, luxury wedding cars, corporate monthly rentals, and inter-city chauffeur tours across Pakistan.",
+  title: "Car Rental & Chauffeur Services in Lahore | Iris Tours",
+  description: "Explore our range of premium car rental services in Lahore: 24/7 Airport transfers, luxury wedding cars, corporate monthly rentals, and inter-city chauffeur tours across Pakistan.",
   alternates: {
     canonical: "https://iristours.net/services",
   },
@@ -13,6 +13,22 @@ export const metadata: Metadata = {
     title: "Car Rental & Chauffeur Services in Lahore | Iris Tours",
     description: "Explore premium car rental services: Airport transfers, wedding cars, corporate mobility, and Northern tour charters.",
     url: "https://iristours.net/services",
+    siteName: "Iris Tours",
+    images: [
+      {
+        url: "https://iristours.net/blog/rent-a-car-lahore-fleet-lineup.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Car Rental Services in Lahore - Iris Tours",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Car Rental & Chauffeur Services in Lahore | Iris Tours",
+    description: "Explore premium car rental services in Lahore with Iris Tours.",
+    images: ["https://iristours.net/blog/rent-a-car-lahore-fleet-lineup.jpg"],
   },
 };
 

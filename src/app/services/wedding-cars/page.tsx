@@ -4,15 +4,31 @@ import { Button } from "@/components/ui/Button";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Wedding Car Rental Lahore DHA | Decorated Luxury Cars - Iris Tours",
-  description: "Rent luxury wedding cars in Lahore DHA & Islamabad. Mercedes, Audi, Prado, V8 and vintage cars with professional drivers and floral decoration.",
+  title: "Wedding Car Rental in Lahore | Decorated Luxury Cars - Iris Tours",
+  description: "Rent luxury wedding cars in Lahore. Mercedes, Audi, Prado, Land Cruiser V8, and limousines with professional uniformed drivers and custom floral decorations. Book 24/7!",
   alternates: {
     canonical: "https://iristours.net/services/wedding-cars",
   },
   openGraph: {
-    title: "Wedding Car Rental Lahore DHA | Iris Tours",
-    description: "Make your wedding day unforgettable with decorated Mercedes, Audi, Prado, and Land Cruiser V8 rentals in Lahore.",
+    title: "Wedding Car Rental in Lahore | Decorated Luxury Cars - Iris Tours",
+    description: "Make your wedding day unforgettable with decorated Mercedes, Audi, Prado, and Land Cruiser V8 rentals in Lahore with Iris Tours.",
     url: "https://iristours.net/services/wedding-cars",
+    siteName: "Iris Tours",
+    images: [
+      {
+        url: "https://iristours.net/blog/limousine-wedding.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Wedding Car Rental in Lahore - Iris Tours",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Wedding Car Rental in Lahore | Iris Tours",
+    description: "Make your wedding day unforgettable with decorated Mercedes, Audi, Prado, and Land Cruiser V8 rentals in Lahore.",
+    images: ["https://iristours.net/blog/limousine-wedding.jpg"],
   },
 };
 

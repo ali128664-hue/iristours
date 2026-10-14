@@ -12,8 +12,15 @@ export const metadata: Metadata = {
     title: "Toyota Hiace & Grand Cabin Rental Lahore | Iris Tours",
     description: "Spacious 14-seater Grand Cabin and Coaster bus rental in Lahore with experienced long-route chauffeurs.",
     url: "https://iristours.net/blog/toyota-hiace-grand-cabin-rental",
+    siteName: "Iris Tours",
     images: ["https://iristours.net/blog/hiace-rental.jpg"],
     type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Toyota Hiace & Grand Cabin Rental Lahore | Iris Tours",
+    description: "Spacious 14-seater Grand Cabin and Coaster bus rental in Lahore with experienced long-route chauffeurs.",
+    images: ["https://iristours.net/blog/hiace-rental.jpg"],
   },
 };
 

@@ -274,6 +274,19 @@ export default function RentACarLahoreNorthernAreasBlog() {
             </div>
           </div>
 
+          {/* Secondary Image: Babusar Pass Expedition */}
+          <figure className="my-10">
+            <img
+              src="/blog/babusar-pass-kkh-highway-expedition.jpg"
+              alt="Modern luxury SUVs traveling on Babusar Pass mountain road with snow-capped peaks in Northern Pakistan"
+              className="w-full h-[320px] sm:h-[400px] object-cover rounded-2xl shadow-lg border border-border-primary"
+              loading="lazy"
+            />
+            <figcaption className="text-center text-xs text-text-secondary mt-2">
+              Ascending Babusar Pass (4,173m): High-altitude cooling and mountain engine endurance verified before every departure.
+            </figcaption>
+          </figure>
+
           <h2 className="text-2xl sm:text-3xl font-bold mt-12 mb-4">
             How Iris Tours Prepares Vehicles for Northern Expeditions
           </h2>

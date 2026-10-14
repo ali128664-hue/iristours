@@ -12,8 +12,15 @@ export const metadata: Metadata = {
     title: "Toyota Fortuner for Rent in Lahore | Iris Tours",
     description: "Rent latest Toyota Fortuner Sigma 4 / Legender in Lahore with driver. Ideal for VIP delegations, wedding events, and northern area tours.",
     url: "https://iristours.net/blog/toyota-fortuner-for-rent",
+    siteName: "Iris Tours",
     images: ["https://iristours.net/blog/fortuner-rental.jpg"],
     type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Toyota Fortuner for Rent in Lahore | Iris Tours",
+    description: "Rent latest Toyota Fortuner Sigma 4 / Legender in Lahore with driver. Ideal for VIP delegations, wedding events, and northern area tours.",
+    images: ["https://iristours.net/blog/fortuner-rental.jpg"],
   },
 };
 

@@ -265,6 +265,19 @@ export default function LahoreToSwatCarRentalBlog() {
             </li>
           </ul>
 
+          {/* Secondary Image: Kalam Swat Mountain Road */}
+          <figure className="my-10">
+            <img
+              src="/blog/swat-kalam-mountain-road-4x4.jpg"
+              alt="Toyota 4x4 SUV driving along mountain road in Kalam Swat Valley KPK alongside river"
+              className="w-full h-[320px] sm:h-[400px] object-cover rounded-2xl shadow-lg border border-border-primary"
+              loading="lazy"
+            />
+            <figcaption className="text-center text-xs text-text-secondary mt-2">
+              Upper Swat off-road terrain: Our 4x4 Fortuner and Prado fleet handles rocky riverbed bypasses between Bahrain and Kalam effortlessly.
+            </figcaption>
+          </figure>
+
           <h2 className="text-2xl sm:text-3xl font-bold mt-12 mb-4">
             Best Rental Vehicles from Lahore for Swat
           </h2>

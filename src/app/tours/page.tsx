@@ -3,8 +3,8 @@ import TourCard from "@/components/tours/TourCard";
 import toursData from "@/data/tours.json";
 
 export const metadata: Metadata = {
-  title: "Northern Pakistan Tours & 4x4 SUV Rental | Iris Tours",
-  description: "Explore Hunza, Skardu, Swat, and Northern Pakistan with luxury 4x4 SUVs (Prado, V8, Fortuner) and mountain-expert chauffeurs. Custom tour packages.",
+  title: "Northern Pakistan Tours & 4x4 SUV Rental from Lahore | Iris Tours",
+  description: "Explore Hunza, Skardu, Swat, and Northern Pakistan with luxury 4x4 SUVs (Prado, Fortuner, V8) and mountain-expert chauffeurs from Lahore. Custom tour packages.",
   alternates: {
     canonical: "https://iristours.net/tours",
   },
@@ -12,6 +12,22 @@ export const metadata: Metadata = {
     title: "Northern Pakistan Tours & 4x4 SUV Rental | Iris Tours",
     description: "Premium luxury tour packages for Northern Pakistan with expert mountain chauffeurs.",
     url: "https://iristours.net/tours",
+    siteName: "Iris Tours",
+    images: [
+      {
+        url: "https://iristours.net/blog/lahore-northern-areas-kpk-4x4-rental.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Northern Pakistan Tours from Lahore - Iris Tours",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Northern Pakistan Tours & 4x4 SUV Rental | Iris Tours",
+    description: "Premium luxury tour packages for Northern Pakistan with expert mountain chauffeurs.",
+    images: ["https://iristours.net/blog/lahore-northern-areas-kpk-4x4-rental.jpg"],
   },
 };
 

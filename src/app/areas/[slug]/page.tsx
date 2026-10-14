@@ -31,12 +31,22 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       title: area.metaTitle,
       description: area.metaDescription,
       url: `${baseUrl}/areas/${area.slug}`,
+      siteName: "Iris Tours",
+      images: [
+        {
+          url: `${baseUrl}/opengraph-image.jpg`,
+          width: 1200,
+          height: 630,
+          alt: area.metaTitle,
+        },
+      ],
       type: "website",
     },
     twitter: {
       card: "summary_large_image",
       title: area.metaTitle,
       description: area.metaDescription,
+      images: [`${baseUrl}/opengraph-image.jpg`],
     }
   };
 }

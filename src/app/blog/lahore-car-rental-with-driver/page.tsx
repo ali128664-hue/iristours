@@ -12,8 +12,15 @@ export const metadata: Metadata = {
     title: "Lahore Car Rental With Driver | Iris Tours",
     description: "Stress-free travel across Lahore with professional chauffeurs. Economical to luxury sedans and SUVs.",
     url: "https://iristours.net/blog/lahore-car-rental-with-driver",
+    siteName: "Iris Tours",
     images: ["https://iristours.net/blog/chauffeur-rental.jpg"],
     type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Lahore Car Rental With Driver | Iris Tours",
+    description: "Stress-free travel across Lahore with professional chauffeurs. Economical to luxury sedans and SUVs.",
+    images: ["https://iristours.net/blog/chauffeur-rental.jpg"],
   },
 };
 

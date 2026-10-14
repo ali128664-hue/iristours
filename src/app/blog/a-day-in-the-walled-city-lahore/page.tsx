@@ -12,8 +12,15 @@ export const metadata: Metadata = {
     title: "Exploring the Walled City of Lahore With a Private Chauffeur | Iris Tours",
     description: "Sightseeing in Lahore without traffic headaches. Professional chauffeurs for cultural and heritage tours.",
     url: "https://iristours.net/blog/a-day-in-the-walled-city-lahore",
+    siteName: "Iris Tours",
     images: ["https://iristours.net/blog/lahore-cultural-tour.jpg"],
     type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Exploring the Walled City of Lahore With a Private Chauffeur | Iris Tours",
+    description: "Sightseeing in Lahore without traffic headaches. Professional chauffeurs for cultural and heritage tours.",
+    images: ["https://iristours.net/blog/lahore-cultural-tour.jpg"],
   },
 };
 

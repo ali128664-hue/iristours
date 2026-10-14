@@ -3,6 +3,30 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Privacy Policy | Iris Tours Pakistan",
   description: "Learn how Iris Tours collects, uses, and protects your personal information when you use our car rental services.",
+  alternates: {
+    canonical: "https://iristours.net/privacy-policy",
+  },
+  openGraph: {
+    title: "Privacy Policy | Iris Tours Pakistan",
+    description: "Learn how Iris Tours collects, uses, and protects your personal information.",
+    url: "https://iristours.net/privacy-policy",
+    siteName: "Iris Tours",
+    images: [
+      {
+        url: "https://iristours.net/opengraph-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Iris Tours Privacy Policy",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Privacy Policy | Iris Tours Pakistan",
+    description: "Learn how Iris Tours collects, uses, and protects your personal information.",
+    images: ["https://iristours.net/opengraph-image.jpg"],
+  },
 };
 
 export default function PrivacyPolicyPage() {

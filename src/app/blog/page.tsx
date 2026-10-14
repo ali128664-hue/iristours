@@ -12,6 +12,22 @@ export const metadata: Metadata = {
     title: "Car Rental & Travel Blog Lahore | Iris Tours",
     description: "Guides on car rentals, travel tips, and luxury chauffeur services in Lahore and Pakistan.",
     url: "https://iristours.net/blog",
+    siteName: "Iris Tours",
+    images: [
+      {
+        url: "https://iristours.net/blog/rent-a-car-in-lahore-featured.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Car Rental & Travel Blog Lahore - Iris Tours",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Car Rental & Travel Blog Lahore | Iris Tours",
+    description: "Guides on car rentals, travel tips, and luxury chauffeur services in Lahore and Pakistan.",
+    images: ["https://iristours.net/blog/rent-a-car-in-lahore-featured.jpg"],
   },
 };
 

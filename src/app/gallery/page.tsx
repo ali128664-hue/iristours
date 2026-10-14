@@ -9,8 +9,24 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Vehicle & Tour Gallery | Iris Tours",
-    description: "Photos of our luxury vehicles and northern tour expeditions.",
+    description: "Photos of our luxury vehicles and northern tour expeditions in Pakistan.",
     url: "https://iristours.net/gallery",
+    siteName: "Iris Tours",
+    images: [
+      {
+        url: "https://iristours.net/blog/rent-a-car-lahore-fleet-lineup.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Iris Tours Gallery - Luxury Car Rental",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Vehicle & Tour Gallery | Iris Tours",
+    description: "Photos of our luxury vehicles and northern tour expeditions in Pakistan.",
+    images: ["https://iristours.net/blog/rent-a-car-lahore-fleet-lineup.jpg"],
   },
 };
 

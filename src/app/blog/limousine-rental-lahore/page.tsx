@@ -12,8 +12,15 @@ export const metadata: Metadata = {
     title: "Rent a Limousine in Lahore | Iris Tours",
     description: "Stretch limousine rental in Lahore with professional VIP chauffeur for weddings and grand ceremonies.",
     url: "https://iristours.net/blog/limousine-rental-lahore",
+    siteName: "Iris Tours",
     images: ["https://iristours.net/blog/limousine-wedding.jpg"],
     type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Rent a Limousine in Lahore | Iris Tours",
+    description: "Stretch limousine rental in Lahore with professional VIP chauffeur for weddings and grand ceremonies.",
+    images: ["https://iristours.net/blog/limousine-wedding.jpg"],
   },
 };
 

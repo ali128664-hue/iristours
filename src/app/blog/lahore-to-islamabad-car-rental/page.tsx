@@ -12,8 +12,15 @@ export const metadata: Metadata = {
     title: "Lahore to Islamabad Car Rental with Driver | Iris Tours",
     description: "Door-to-door car rental from Lahore DHA to Islamabad. Luxury sedans, Fortuner, and Grand Cabin with verified drivers.",
     url: "https://iristours.net/blog/lahore-to-islamabad-car-rental",
+    siteName: "Iris Tours",
     images: ["https://iristours.net/blog/lahore-islamabad.jpg"],
     type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Lahore to Islamabad Car Rental with Driver | Iris Tours",
+    description: "Door-to-door car rental from Lahore to Islamabad. Luxury sedans, Fortuner, and Grand Cabin with verified drivers.",
+    images: ["https://iristours.net/blog/lahore-islamabad.jpg"],
   },
 };
 

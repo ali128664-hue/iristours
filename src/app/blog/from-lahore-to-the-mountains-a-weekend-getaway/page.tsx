@@ -12,8 +12,15 @@ export const metadata: Metadata = {
     title: "From Lahore to the Mountains: Weekend in a Toyota Fortuner | Iris Tours",
     description: "4x4 SUV road trip from Lahore to Northern Pakistan with a professional mountain driver.",
     url: "https://iristours.net/blog/from-lahore-to-the-mountains-a-weekend-getaway",
+    siteName: "Iris Tours",
     images: ["https://iristours.net/blog/northern-areas-fortuner.jpg"],
     type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "From Lahore to the Mountains: Weekend in a Toyota Fortuner | Iris Tours",
+    description: "4x4 SUV road trip from Lahore to Northern Pakistan with a professional mountain driver.",
+    images: ["https://iristours.net/blog/northern-areas-fortuner.jpg"],
   },
 };
 

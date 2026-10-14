@@ -254,6 +254,19 @@ export default function LahoreToKpkMotorwayBlog() {
             </table>
           </div>
 
+          {/* Secondary Image: Salt Range on M-2 */}
+          <figure className="my-10">
+            <img
+              src="/blog/lahore-islamabad-motorway-salt-range.jpg"
+              alt="Silver sedan driving along scenic curves of Salt Range Kallar Kahar on M-2 Motorway between Lahore and KPK"
+              className="w-full h-[320px] sm:h-[400px] object-cover rounded-2xl shadow-lg border border-border-primary"
+              loading="lazy"
+            />
+            <figcaption className="text-center text-xs text-text-secondary mt-2">
+              Navigating the Kallar Kahar Salt Range: Iris Tours chauffeurs maintain strict low-gear safety on steep motorway descents.
+            </figcaption>
+          </figure>
+
           <h2 className="text-2xl sm:text-3xl font-bold mt-12 mb-4">
             How Iris Tours Solves Highway Blockades &amp; Motorway Closures
           </h2>
