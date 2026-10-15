@@ -62,7 +62,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section ref={containerRef} className="relative min-h-[100dvh] md:min-h-[800px] w-full overflow-hidden flex items-center justify-center bg-bg-primary">
+    <section ref={containerRef} className="relative min-h-[100dvh] md:min-h-[800px] w-full overflow-hidden flex items-center justify-center bg-transparent">
       
       {/* ─── HERO BACKGROUND ──────────────────────────────────────────────────
           Change hero background image here.
@@ -71,7 +71,7 @@ export default function HeroSection() {
           
           Current image: luxury car on a road (from Unsplash)
       ──────────────────────────────────────────────────────────────────────── */}
-      <motion.div style={{ y, opacity }} className="absolute inset-0 z-0">
+      <motion.div style={{ y, opacity }} className="absolute inset-0 z-0 pointer-events-none opacity-20 mix-blend-screen">
         <Image
           src="https://images.unsplash.com/photo-1617531653332-bd46c24f2068?q=80&w=2000&auto=format&fit=crop"
           alt="Luxury Car Rental Pakistan"
@@ -79,13 +79,13 @@ export default function HeroSection() {
           priority
           className="object-cover"
         />
-        {/* Light gradient overlay to softly blend the image */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white/30 via-transparent to-bg-primary" />
+        {/* Soft blend into 3D midnight atmosphere */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#070b14]/50 via-transparent to-[#070b14]" />
       </motion.div>
 
-      {/* Subtle green light glow effect (decorative) */}
-      <div className="absolute inset-0 z-0 opacity-30 mix-blend-screen pointer-events-none" 
-           style={{ backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(22, 199, 158, 0.1) 0%, transparent 50%)' }} />
+      {/* Subtle gold/amber ambient light glow */}
+      <div className="absolute inset-0 z-0 opacity-25 mix-blend-screen pointer-events-none" 
+           style={{ backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(245, 158, 11, 0.15) 0%, transparent 60%)' }} />
 
       {/* ─── HERO TEXT CONTENT ────────────────────────────────────────────────
           All headline and subtitle text is here.
@@ -94,24 +94,24 @@ export default function HeroSection() {
       <div ref={textRef} className="container mx-auto px-6 md:px-12 relative z-10 text-center mt-12">
         
         {/* Glassmorphism Card for Text Visibility */}
-        <div className="max-w-4xl mx-auto bg-white/70 backdrop-blur-xl p-6 md:p-8 rounded-[2.5rem] border border-white/60 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)]">
+        <div className="max-w-4xl mx-auto bg-slate-950/70 backdrop-blur-2xl p-6 md:p-8 rounded-[2.5rem] border border-white/10 shadow-[0_30px_70px_rgba(0,0,0,0.6),inset_0_1px_0_rgba(255,255,255,0.1)]">
           {/* Small subtitle line above the main heading */}
           <div className="hero-text overflow-hidden mb-4">
-            <span className="inline-block text-accent-secondary font-bold tracking-[0.2em] uppercase text-sm md:text-base">
+            <span className="inline-block text-accent-primary font-bold tracking-[0.2em] uppercase text-sm md:text-base">
               Luxury Fleet &amp; Professional Chauffeurs
             </span>
           </div>
           
           {/* ─── MAIN HEADLINE ─────────────── */}
           <div className="hero-text overflow-hidden mb-6">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-text-primary tracking-tight leading-tight">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-tight">
               Rent a Car in <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-primary to-accent-secondary">Lahore</span>
             </h1>
           </div>
           
           {/* Description paragraph below the headline */}
           <div className="hero-text overflow-hidden mb-8 max-w-2xl mx-auto">
-            <p className="text-lg md:text-xl text-text-secondary leading-relaxed font-medium">
+            <p className="text-lg md:text-xl text-slate-300 leading-relaxed font-medium">
               Best car rental service in Lahore with verified professional chauffeurs. Experience luxury sedans, 4x4 SUVs (Prado, Fortuner, Land Cruiser V8), airport transfers, and outstation tours with 100% transparent rates.
             </p>
           </div>
@@ -126,7 +126,7 @@ export default function HeroSection() {
             </div>
             {/* Secondary button — opens WhatsApp. Change the wa.me number to update it. */}
             <div className="hero-btn w-full sm:w-auto">
-              <Button variant="glass" magnetic className="w-full sm:w-auto px-10 py-4 text-sm bg-white border border-gray-200 shadow-xl shadow-black/5 hover:bg-gray-50" onClick={() => window.open('https://wa.me/923154973906?text=Hi!%20I%20want%20to%20book%20a%20car.', '_blank')}>
+              <Button variant="glass" magnetic className="w-full sm:w-auto px-10 py-4 text-sm bg-slate-900/80 backdrop-blur-md border border-white/15 text-white shadow-xl hover:bg-slate-800/90" onClick={() => window.open('https://wa.me/923154973906?text=Hi!%20I%20want%20to%20book%20a%20car.', '_blank')}>
                 Book on WhatsApp
               </Button>
             </div>

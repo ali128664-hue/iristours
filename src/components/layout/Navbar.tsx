@@ -65,8 +65,8 @@ export default function Navbar() {
     <header
       className={clsx(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out border-b",
-        "bg-white/70 backdrop-blur-lg border-white/50",
-        isScrolled ? "shadow-sm py-4" : "py-6"
+        "bg-slate-950/75 backdrop-blur-xl border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.5)]",
+        isScrolled ? "shadow-lg py-4" : "py-6"
       )}
     >
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
@@ -86,7 +86,7 @@ export default function Navbar() {
                       href="/fleet"
                       className={clsx(
                         "relative text-[15px] font-semibold tracking-wide transition-colors pb-1",
-                        pathname.startsWith("/fleet") ? "text-accent-primary" : "text-text-secondary group-hover:text-text-primary"
+                        pathname.startsWith("/fleet") ? "text-accent-primary" : "text-slate-300 group-hover:text-white"
                       )}
                     >
                       Fleet
@@ -95,17 +95,17 @@ export default function Navbar() {
                         pathname.startsWith("/fleet") && "w-full"
                       )} />
                     </Link>
-                    <ChevronDown size={14} className="text-text-secondary group-hover:text-accent-primary transition-colors mt-[-4px]" />
+                    <ChevronDown size={14} className="text-slate-400 group-hover:text-accent-primary transition-colors mt-[-4px]" />
                   </div>
                   
                   {/* Dropdown Menu */}
-                  <div className="absolute top-full left-1/2 -translate-x-1/2 w-48 bg-bg-primary border border-border-primary rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col overflow-hidden">
-                    <Link href="/fleet?category=Luxury" className="px-4 py-3 text-sm font-medium text-text-primary hover:bg-bg-secondary hover:text-accent-primary transition-colors border-b border-border-primary">Luxury Cars</Link>
-                    <Link href="/fleet?category=SUV" className="px-4 py-3 text-sm font-medium text-text-primary hover:bg-bg-secondary hover:text-accent-primary transition-colors border-b border-border-primary">SUVs & 4x4</Link>
-                    <Link href="/fleet?category=Sedan" className="px-4 py-3 text-sm font-medium text-text-primary hover:bg-bg-secondary hover:text-accent-primary transition-colors border-b border-border-primary">Sedans</Link>
-                    <Link href="/fleet?category=Economy" className="px-4 py-3 text-sm font-medium text-text-primary hover:bg-bg-secondary hover:text-accent-primary transition-colors border-b border-border-primary">Economy</Link>
-                    <Link href="/fleet?category=Van" className="px-4 py-3 text-sm font-medium text-text-primary hover:bg-bg-secondary hover:text-accent-primary transition-colors border-b border-border-primary">Vans</Link>
-                    <Link href="/fleet?category=Bus" className="px-4 py-3 text-sm font-medium text-text-primary hover:bg-bg-secondary hover:text-accent-primary transition-colors">Buses & Coasters</Link>
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 w-48 bg-slate-900/95 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col overflow-hidden">
+                    <Link href="/fleet?category=Luxury" className="px-4 py-3 text-sm font-medium text-white hover:bg-slate-800 hover:text-accent-primary transition-colors border-b border-white/10">Luxury Cars</Link>
+                    <Link href="/fleet?category=SUV" className="px-4 py-3 text-sm font-medium text-white hover:bg-slate-800 hover:text-accent-primary transition-colors border-b border-white/10">SUVs & 4x4</Link>
+                    <Link href="/fleet?category=Sedan" className="px-4 py-3 text-sm font-medium text-white hover:bg-slate-800 hover:text-accent-primary transition-colors border-b border-white/10">Sedans</Link>
+                    <Link href="/fleet?category=Economy" className="px-4 py-3 text-sm font-medium text-white hover:bg-slate-800 hover:text-accent-primary transition-colors border-b border-white/10">Economy</Link>
+                    <Link href="/fleet?category=Van" className="px-4 py-3 text-sm font-medium text-white hover:bg-slate-800 hover:text-accent-primary transition-colors border-b border-white/10">Vans</Link>
+                    <Link href="/fleet?category=Bus" className="px-4 py-3 text-sm font-medium text-white hover:bg-slate-800 hover:text-accent-primary transition-colors">Buses & Coasters</Link>
                   </div>
                 </div>
               );
@@ -129,17 +129,17 @@ export default function Navbar() {
                         pathname.startsWith("/areas") && "w-full"
                       )} />
                     </Link>
-                    <ChevronDown size={14} className="text-text-secondary group-hover:text-accent-primary transition-colors mt-[-4px]" />
+                    <ChevronDown size={14} className="text-slate-400 group-hover:text-accent-primary transition-colors mt-[-4px]" />
                   </div>
                   
                   {/* Mega Menu Dropdown */}
-                  <div className="absolute top-full left-1/2 -translate-x-1/2 w-64 bg-bg-primary border border-border-primary rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col overflow-hidden max-h-[80vh] overflow-y-auto">
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 w-64 bg-slate-900/95 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col overflow-hidden max-h-[80vh] overflow-y-auto">
                     {cities.map(city => (
-                      <Link key={city} href={`/areas#${city}`} className="px-4 py-3 text-[15px] font-semibold text-text-primary hover:bg-bg-secondary hover:text-accent-primary transition-colors border-b border-border-primary last:border-0">
+                      <Link key={city} href={`/areas#${city}`} className="px-4 py-3 text-[15px] font-semibold text-white hover:bg-slate-800 hover:text-accent-primary transition-colors border-b border-white/10 last:border-0">
                         {city}
                       </Link>
                     ))}
-                    <Link href="/areas" className="px-4 py-3 text-sm font-bold text-accent-primary bg-accent-primary/10 hover:bg-accent-primary/20 transition-colors text-center sticky bottom-0 border-t border-border-primary">
+                    <Link href="/areas" className="px-4 py-3 text-sm font-bold text-accent-primary bg-accent-primary/10 hover:bg-accent-primary/20 transition-colors text-center sticky bottom-0 border-t border-white/10">
                       View All 200+ Areas
                     </Link>
                   </div>
@@ -152,7 +152,7 @@ export default function Navbar() {
                 href={link.href}
                 className={clsx(
                   "relative text-[15px] font-semibold tracking-wide transition-colors pb-1 group",
-                  pathname === link.href ? "text-accent-primary" : "text-text-secondary hover:text-text-primary"
+                  pathname === link.href ? "text-accent-primary" : "text-slate-300 hover:text-white"
                 )}
               >
                 {link.name}
@@ -169,7 +169,7 @@ export default function Navbar() {
         <div className="hidden lg:flex items-center gap-3">
           <a 
             href="tel:+923154973906"
-            className="flex items-center gap-2 px-3.5 py-2 rounded-full border border-border-primary/80 bg-white/60 hover:bg-white text-text-primary hover:text-accent-primary font-bold text-xs tracking-wide transition-all shadow-sm"
+            className="flex items-center gap-2 px-3.5 py-2 rounded-full border border-white/10 bg-slate-900/80 hover:bg-slate-800 text-white hover:text-accent-primary font-bold text-xs tracking-wide transition-all shadow-sm"
             title="Call Us Directly"
           >
             <Phone size={13} className="text-accent-primary" />
@@ -178,7 +178,7 @@ export default function Navbar() {
 
           <button 
             onClick={toggleCurrency}
-            className="flex items-center gap-1.5 px-3 py-2 rounded-full border border-border-primary hover:bg-bg-secondary transition-colors text-xs font-semibold text-text-primary shadow-sm"
+            className="flex items-center gap-1.5 px-3 py-2 rounded-full border border-white/10 bg-slate-900/80 hover:bg-slate-800 transition-colors text-xs font-semibold text-white shadow-sm cursor-pointer"
             title="Toggle Currency"
           >
             <Globe size={14} />

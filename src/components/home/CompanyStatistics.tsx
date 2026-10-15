@@ -49,7 +49,7 @@ function Counter({ from = 0, to, duration = 2, suffix = "" }: { from?: number, t
 
 export default function CompanyStatistics() {
   return (
-    <section className="py-24 bg-bg-secondary border-t border-b border-border-primary">
+    <section className="py-24 bg-bg-secondary/40 backdrop-blur-md border-t border-b border-white/10">
       <div className="container mx-auto px-6 md:px-12">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
           {stats.map((stat, index) => (
@@ -64,7 +64,7 @@ export default function CompanyStatistics() {
               <div className="text-4xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-accent-primary to-accent-secondary">
                 <Counter to={stat.value} suffix={stat.suffix} />
               </div>
-              <h4 className="text-sm md:text-base font-semibold text-text-secondary uppercase tracking-wider">
+              <h4 className="text-sm md:text-base font-semibold text-slate-300 uppercase tracking-wider">
                 {stat.label}
               </h4>
             </motion.div>

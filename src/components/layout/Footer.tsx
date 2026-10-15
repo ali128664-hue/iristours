@@ -23,7 +23,7 @@ import Logo from "@/components/ui/Logo";
 
 export default function Footer() {
   return (
-    <footer className="bg-bg-secondary border-t border-border-primary pt-20 pb-10">
+    <footer className="bg-slate-950/80 backdrop-blur-xl border-t border-white/10 pt-20 pb-10 text-slate-300">
       <div className="container mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           
@@ -32,7 +32,7 @@ export default function Footer() {
             <Link href="/" className="mb-6 block w-max">
               <Logo width={150} height={50} />
             </Link>
-            <p className="text-text-secondary mb-6 leading-relaxed">
+            <p className="text-slate-300 mb-6 leading-relaxed">
               Pakistan's premium luxury car rental & tours platform. Experience world-class mobility, professional drivers, and a breathtaking fleet of vehicles.
             </p>
 
@@ -42,13 +42,13 @@ export default function Footer() {
                 Example Instagram: https://instagram.com/iristours
             ──────────────────────────────────────────────────────────────────── */}
             <div className="flex items-center gap-4">
-              <a href="https://instagram.com" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-bg-card border border-border-primary flex items-center justify-center text-text-secondary hover:text-accent-primary hover:border-accent-primary transition-colors">
+              <a href="https://instagram.com" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-slate-900 border border-white/10 flex items-center justify-center text-slate-300 hover:text-accent-primary hover:border-accent-primary transition-colors">
                 <FaInstagram size={18} />
               </a>
-              <a href="https://web.facebook.com/people/Iris-tours-Rental-Car/100083145616731/" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-bg-card border border-border-primary flex items-center justify-center text-text-secondary hover:text-accent-primary hover:border-accent-primary transition-colors">
+              <a href="https://web.facebook.com/people/Iris-tours-Rental-Car/100083145616731/" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-slate-900 border border-white/10 flex items-center justify-center text-slate-300 hover:text-accent-primary hover:border-accent-primary transition-colors">
                 <FaFacebook size={18} />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-bg-card border border-border-primary flex items-center justify-center text-text-secondary hover:text-accent-primary hover:border-accent-primary transition-colors">
+              <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-slate-900 border border-white/10 flex items-center justify-center text-slate-300 hover:text-accent-primary hover:border-accent-primary transition-colors">
                 <FaLinkedin size={18} />
               </a>
             </div>
@@ -56,7 +56,7 @@ export default function Footer() {
 
           {/* ─── QUICK LINKS COLUMN ─────────────────────────────────────────────── */}
           <div>
-            <h4 className="text-lg font-semibold text-text-primary mb-6 uppercase tracking-wider">Quick Links</h4>
+            <h4 className="text-lg font-semibold text-white mb-6 uppercase tracking-wider">Quick Links</h4>
             <ul className="flex flex-col gap-3">
               <li><Link href="/fleet" className="text-text-secondary hover:text-accent-primary transition-colors text-sm">Our Fleet</Link></li>
               <li><Link href="/services" className="text-text-secondary hover:text-accent-primary transition-colors text-sm">All Rental Services</Link></li>

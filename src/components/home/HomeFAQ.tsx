@@ -63,7 +63,7 @@ export default function HomeFAQ() {
   };
 
   return (
-    <section className="py-24 bg-bg-primary">
+    <section className="py-24 bg-bg-primary/40 backdrop-blur-md">
       <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <div className="container mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
@@ -73,11 +73,11 @@ export default function HomeFAQ() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-5xl font-bold text-text-primary mb-6">
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Frequently Asked <br/>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-primary to-accent-secondary">Questions</span>
             </h2>
-            <p className="text-lg text-text-secondary mb-8">
+            <p className="text-lg text-slate-300 mb-8">
               Find quick answers to common questions about our car rental process, policies, and services. If you need more help, our WhatsApp support is available 24/7.
             </p>
           </motion.div>
@@ -93,18 +93,18 @@ export default function HomeFAQ() {
                 key={index} 
                 className={clsx(
                   "border rounded-2xl overflow-hidden transition-colors duration-300",
-                  openIndex === index ? "bg-bg-card border-accent-primary/50 shadow-lg" : "bg-bg-secondary border-border-primary"
+                  openIndex === index ? "bg-slate-900/85 backdrop-blur-xl border-accent-primary/50 shadow-2xl" : "bg-slate-950/60 backdrop-blur-md border-white/10"
                 )}
               >
                 <button
                   onClick={() => setOpenIndex(openIndex === index ? null : index)}
                   className="w-full px-6 py-5 flex items-center justify-between text-left"
                 >
-                  <span className="font-semibold text-text-primary pr-4">{faq.question}</span>
+                  <span className="font-semibold text-white pr-4">{faq.question}</span>
                   <ChevronDown 
                     size={20} 
                     className={clsx(
-                      "text-text-secondary transition-transform duration-300 flex-shrink-0",
+                      "text-slate-400 transition-transform duration-300 flex-shrink-0",
                       openIndex === index ? "rotate-180 text-accent-primary" : ""
                     )} 
                   />
@@ -117,7 +117,7 @@ export default function HomeFAQ() {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3, ease: "easeInOut" }}
                     >
-                       <div className="px-6 pb-6 text-text-secondary leading-relaxed border-t border-border-primary/50 pt-4">
+                       <div className="px-6 pb-6 text-slate-300 leading-relaxed border-t border-white/10 pt-4">
                         {faq.answer}
                       </div>
                     </motion.div>

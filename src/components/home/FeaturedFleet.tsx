@@ -24,7 +24,7 @@ export default function FeaturedFleet() {
   };
 
   return (
-    <section className="py-24 bg-bg-primary relative overflow-hidden">
+    <section className="py-24 bg-bg-primary/40 backdrop-blur-md relative overflow-hidden">
       <div className="container mx-auto px-6 md:px-12">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div className="max-w-2xl">
@@ -32,7 +32,7 @@ export default function FeaturedFleet() {
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="text-3xl md:text-5xl font-bold text-text-primary mb-4"
+              className="text-3xl md:text-5xl font-bold text-white mb-4"
             >
               Our Complete Fleet
             </motion.h2>
@@ -41,7 +41,7 @@ export default function FeaturedFleet() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-text-secondary text-lg"
+              className="text-slate-300 text-lg"
             >
               Experience the pinnacle of automotive engineering. Swipe or click through our premium collection to find your perfect ride.
             </motion.p>
@@ -56,14 +56,14 @@ export default function FeaturedFleet() {
             <div className="flex gap-2 mr-4">
               <button 
                 onClick={scrollLeft}
-                className="w-12 h-12 rounded-full border border-border-primary bg-bg-card flex items-center justify-center text-text-primary hover:bg-accent-primary hover:text-white hover:border-accent-primary transition-colors shadow-sm"
+                className="w-12 h-12 rounded-full border border-white/10 bg-slate-900/80 backdrop-blur-md flex items-center justify-center text-white hover:bg-accent-primary hover:text-white hover:border-accent-primary transition-colors shadow-md cursor-pointer"
                 aria-label="Scroll left"
               >
                 <ChevronLeft size={24} />
               </button>
               <button 
                 onClick={scrollRight}
-                className="w-12 h-12 rounded-full border border-border-primary bg-bg-card flex items-center justify-center text-text-primary hover:bg-accent-primary hover:text-white hover:border-accent-primary transition-colors shadow-sm"
+                className="w-12 h-12 rounded-full border border-white/10 bg-slate-900/80 backdrop-blur-md flex items-center justify-center text-white hover:bg-accent-primary hover:text-white hover:border-accent-primary transition-colors shadow-md cursor-pointer"
                 aria-label="Scroll right"
               >
                 <ChevronRight size={24} />

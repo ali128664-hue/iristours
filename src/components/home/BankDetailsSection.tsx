@@ -44,7 +44,7 @@ export default function BankDetailsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-3xl md:text-5xl font-bold text-text-primary tracking-tight"
+              className="text-3xl md:text-5xl font-bold text-white tracking-tight"
             >
               Official <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-primary to-accent-secondary">Bank Account</span>
             </motion.h2>
@@ -53,7 +53,7 @@ export default function BankDetailsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.15 }}
-              className="text-text-secondary text-base md:text-lg mt-3"
+              className="text-slate-300 text-base md:text-lg mt-3"
             >
               For online bank transfers (IBFT), advance bookings, and corporate account payments.
             </motion.p>
@@ -65,16 +65,16 @@ export default function BankDetailsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="p-8 md:p-10 rounded-3xl bg-gradient-to-br from-bg-card via-bg-secondary to-bg-card border border-accent-primary/30 shadow-2xl relative overflow-hidden"
+            className="p-8 md:p-10 rounded-3xl bg-slate-900/80 backdrop-blur-xl border border-white/10 shadow-2xl relative overflow-hidden"
           >
-            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pb-6 border-b border-border-primary/60">
+            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pb-6 border-b border-white/10">
               <div className="flex items-center gap-4">
-                <div className="w-14 h-14 rounded-2xl bg-accent-primary/10 border border-accent-primary/30 flex items-center justify-center text-accent-primary shadow-[0_0_20px_rgba(22,199,158,0.2)] flex-shrink-0">
+                <div className="w-14 h-14 rounded-2xl bg-accent-primary/10 border border-accent-primary/30 flex items-center justify-center text-accent-primary shadow-[0_0_20px_rgba(245,158,11,0.2)] flex-shrink-0">
                   <Landmark size={28} />
                 </div>
                 <div>
                   <span className="text-xs font-semibold uppercase tracking-wider text-accent-primary">Verified Business Account</span>
-                  <h3 className="text-2xl font-extrabold text-text-primary">Faysal Bank Limited</h3>
+                  <h3 className="text-2xl font-extrabold text-white">Faysal Bank Limited</h3>
                 </div>
               </div>
 
@@ -90,19 +90,19 @@ export default function BankDetailsSection() {
 
             {/* Details Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-6 text-sm">
-              <div className="p-4 rounded-xl bg-bg-primary/60 border border-border-primary flex flex-col justify-between gap-1">
-                <span className="text-text-secondary text-xs uppercase font-medium">Bank Name</span>
-                <span className="text-base font-bold text-text-primary">Faysal Bank</span>
+              <div className="p-4 rounded-xl bg-slate-950/60 border border-white/10 flex flex-col justify-between gap-1">
+                <span className="text-slate-400 text-xs uppercase font-medium">Bank Name</span>
+                <span className="text-base font-bold text-white">Faysal Bank</span>
               </div>
 
-              <div className="p-4 rounded-xl bg-bg-primary/60 border border-border-primary flex flex-col justify-between gap-1">
-                <span className="text-text-secondary text-xs uppercase font-medium">Account Title</span>
-                <span className="text-base font-bold text-text-primary">MUNIR HUSSAIN</span>
+              <div className="p-4 rounded-xl bg-slate-950/60 border border-white/10 flex flex-col justify-between gap-1">
+                <span className="text-slate-400 text-xs uppercase font-medium">Account Title</span>
+                <span className="text-base font-bold text-white">MUNIR HUSSAIN</span>
               </div>
 
-              <div className="p-4 rounded-xl bg-bg-primary/60 border border-border-primary flex flex-col justify-between gap-2">
+              <div className="p-4 rounded-xl bg-slate-950/60 border border-white/10 flex flex-col justify-between gap-2">
                 <div className="flex items-center justify-between">
-                  <span className="text-text-secondary text-xs uppercase font-medium">Account Number</span>
+                  <span className="text-slate-400 text-xs uppercase font-medium">Account Number</span>
                   <button
                     type="button"
                     onClick={handleCopyAcc}
@@ -126,13 +126,13 @@ export default function BankDetailsSection() {
                 </span>
               </div>
 
-              <div className="p-4 rounded-xl bg-bg-primary/60 border border-border-primary flex flex-col justify-between gap-2">
+              <div className="p-4 rounded-xl bg-slate-950/60 border border-white/10 flex flex-col justify-between gap-2">
                 <div className="flex items-center justify-between">
-                  <span className="text-text-secondary text-xs uppercase font-medium">IBAN Number</span>
+                  <span className="text-slate-400 text-xs uppercase font-medium">IBAN Number</span>
                   <button
                     type="button"
                     onClick={handleCopyIban}
-                    className="p-1 px-2.5 rounded-lg bg-bg-secondary hover:bg-accent-primary/20 text-text-secondary hover:text-accent-primary border border-border-primary transition-colors flex items-center gap-1 text-xs font-semibold cursor-pointer"
+                    className="p-1 px-2.5 rounded-lg bg-slate-900 hover:bg-accent-primary/20 text-slate-300 hover:text-accent-primary border border-white/10 transition-colors flex items-center gap-1 text-xs font-semibold cursor-pointer"
                   >
                     {copiedIban ? (
                       <>
@@ -152,14 +152,14 @@ export default function BankDetailsSection() {
                 </span>
               </div>
 
-              <div className="md:col-span-2 p-4 rounded-xl bg-bg-primary/60 border border-border-primary flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
-                <span className="text-text-secondary text-xs uppercase font-medium">Branch Name</span>
-                <span className="text-sm md:text-base font-semibold text-text-primary">IBB MAULANA SHAUKAT ALI ROAD</span>
+              <div className="md:col-span-2 p-4 rounded-xl bg-slate-950/60 border border-white/10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
+                <span className="text-slate-400 text-xs uppercase font-medium">Branch Name</span>
+                <span className="text-sm md:text-base font-semibold text-white">IBB MAULANA SHAUKAT ALI ROAD</span>
               </div>
             </div>
 
             {/* Note & WhatsApp confirmation */}
-            <div className="pt-4 border-t border-border-primary/50 flex items-start gap-3 text-xs md:text-sm text-text-secondary">
+            <div className="pt-4 border-t border-white/10 flex items-start gap-3 text-xs md:text-sm text-slate-300">
               <span className="text-accent-primary font-bold">Important:</span>
               <span>
                 Please share the transaction screenshot / receipt via WhatsApp to{" "}

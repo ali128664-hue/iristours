@@ -29,9 +29,9 @@ Please send me the best discounted quotation. Thank you!`;
       {/* Quick Booking Bar */}
       <form
         onSubmit={handleWhatsAppQuote}
-        className="bg-white/95 backdrop-blur-md rounded-2xl p-3 md:p-4 border border-border-primary/80 shadow-lg text-left"
+        className="bg-slate-900/80 backdrop-blur-xl rounded-2xl p-3 md:p-4 border border-white/10 shadow-2xl text-left"
       >
-        <div className="text-xs font-bold uppercase tracking-wider text-accent-secondary mb-2.5 flex items-center gap-1.5">
+        <div className="text-xs font-bold uppercase tracking-wider text-accent-primary mb-2.5 flex items-center gap-1.5">
           <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
           <span>Instant WhatsApp Rate & Availability Calculator</span>
         </div>
@@ -39,13 +39,13 @@ Please send me the best discounted quotation. Thank you!`;
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 mb-3">
           {/* Vehicle Select */}
           <div className="relative">
-            <label className="block text-[11px] font-semibold text-text-secondary mb-1 flex items-center gap-1">
+            <label className="block text-[11px] font-semibold text-slate-300 mb-1 flex items-center gap-1">
               <Car size={12} className="text-accent-primary" /> Vehicle Category
             </label>
             <select
               value={selectedVehicle}
               onChange={(e) => setSelectedVehicle(e.target.value)}
-              className="w-full text-xs font-semibold bg-bg-card border border-border-primary rounded-xl px-3 py-2.5 text-text-primary focus:outline-none focus:border-accent-primary cursor-pointer"
+              className="w-full text-xs font-semibold bg-slate-950/80 border border-white/10 rounded-xl px-3 py-2.5 text-white focus:outline-none focus:border-accent-primary cursor-pointer"
             >
               <option value="Toyota Fortuner">Toyota Fortuner (SUV)</option>
               <option value="Toyota Prado TX/TZ">Toyota Prado TX / TZ</option>
@@ -60,13 +60,13 @@ Please send me the best discounted quotation. Thank you!`;
 
           {/* City / Area Select */}
           <div className="relative">
-            <label className="block text-[11px] font-semibold text-text-secondary mb-1 flex items-center gap-1">
+            <label className="block text-[11px] font-semibold text-slate-300 mb-1 flex items-center gap-1">
               <MapPin size={12} className="text-accent-primary" /> City / Location
             </label>
             <select
               value={selectedCity}
               onChange={(e) => setSelectedCity(e.target.value)}
-              className="w-full text-xs font-semibold bg-bg-card border border-border-primary rounded-xl px-3 py-2.5 text-text-primary focus:outline-none focus:border-accent-primary cursor-pointer"
+              className="w-full text-xs font-semibold bg-slate-950/80 border border-white/10 rounded-xl px-3 py-2.5 text-white focus:outline-none focus:border-accent-primary cursor-pointer"
             >
               <option value="Lahore (DHA / All Areas)">Lahore (DHA, Gulberg & All Areas)</option>
               <option value="Lahore Airport (Meet & Greet)">Allama Iqbal Airport Transfer</option>
@@ -78,13 +78,13 @@ Please send me the best discounted quotation. Thank you!`;
 
           {/* Duration */}
           <div className="relative">
-            <label className="block text-[11px] font-semibold text-text-secondary mb-1 flex items-center gap-1">
+            <label className="block text-[11px] font-semibold text-slate-300 mb-1 flex items-center gap-1">
               <Calendar size={12} className="text-accent-primary" /> Rental Duration
             </label>
             <select
               value={selectedDuration}
               onChange={(e) => setSelectedDuration(e.target.value)}
-              className="w-full text-xs font-semibold bg-bg-card border border-border-primary rounded-xl px-3 py-2.5 text-text-primary focus:outline-none focus:border-accent-primary cursor-pointer"
+              className="w-full text-xs font-semibold bg-slate-950/80 border border-white/10 rounded-xl px-3 py-2.5 text-white focus:outline-none focus:border-accent-primary cursor-pointer"
             >
               <option value="1 Day (City Travel)">1 Day (City Rental)</option>
               <option value="2-3 Days">2 - 3 Days</option>
@@ -106,35 +106,35 @@ Please send me the best discounted quotation. Thank you!`;
 
       {/* Trust Proof Badges */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-5">
-        <div className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-white/60 border border-white/80 backdrop-blur-sm text-left">
+        <div className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-slate-950/60 border border-white/10 backdrop-blur-sm text-left">
           <Star className="text-amber-500 fill-amber-500 flex-shrink-0" size={16} />
           <div>
-            <span className="block text-[11px] font-extrabold text-text-primary leading-tight">4.9 / 5 Rating</span>
-            <span className="block text-[9px] text-text-secondary">350+ Google Reviews</span>
+            <span className="block text-[11px] font-extrabold text-white leading-tight">4.9 / 5 Rating</span>
+            <span className="block text-[9px] text-slate-400">350+ Google Reviews</span>
           </div>
         </div>
 
-        <div className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-white/60 border border-white/80 backdrop-blur-sm text-left">
+        <div className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-slate-950/60 border border-white/10 backdrop-blur-sm text-left">
           <Clock className="text-accent-primary flex-shrink-0" size={16} />
           <div>
-            <span className="block text-[11px] font-extrabold text-text-primary leading-tight">Fast Response</span>
-            <span className="block text-[9px] text-text-secondary">Reply in 5-10 Mins</span>
+            <span className="block text-[11px] font-extrabold text-white leading-tight">Fast Response</span>
+            <span className="block text-[9px] text-slate-400">Reply in 5-10 Mins</span>
           </div>
         </div>
 
-        <div className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-white/60 border border-white/80 backdrop-blur-sm text-left">
-          <ShieldCheck className="text-green-600 flex-shrink-0" size={16} />
+        <div className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-slate-950/60 border border-white/10 backdrop-blur-sm text-left">
+          <ShieldCheck className="text-green-500 flex-shrink-0" size={16} />
           <div>
-            <span className="block text-[11px] font-extrabold text-text-primary leading-tight">Zero Hidden Fees</span>
-            <span className="block text-[9px] text-text-secondary">Transparent Rates</span>
+            <span className="block text-[11px] font-extrabold text-white leading-tight">Zero Hidden Fees</span>
+            <span className="block text-[9px] text-slate-400">Transparent Rates</span>
           </div>
         </div>
 
-        <div className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-white/60 border border-white/80 backdrop-blur-sm text-left">
+        <div className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-slate-950/60 border border-white/10 backdrop-blur-sm text-left">
           <Award className="text-accent-primary flex-shrink-0" size={16} />
           <div>
-            <span className="block text-[11px] font-extrabold text-text-primary leading-tight">50+ Clean Cars</span>
-            <span className="block text-[9px] text-text-secondary">Chauffeurs Included</span>
+            <span className="block text-[11px] font-extrabold text-white leading-tight">50+ Clean Cars</span>
+            <span className="block text-[9px] text-slate-400">Chauffeurs Included</span>
           </div>
         </div>
       </div>

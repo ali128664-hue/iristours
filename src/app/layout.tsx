@@ -17,6 +17,8 @@
 
 import type { Metadata } from "next";
 import "./globals.css";
+import Iris3DWorld from "@/components/3d/Iris3DWorld";
+import ScrollReveal3D from "@/components/3d/ScrollReveal3D";
 import SmoothScroll from "@/components/layout/SmoothScroll";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -171,11 +173,13 @@ export default function RootLayout({
           The Navbar, Footer, and FloatingWhatsApp button are included on
           every page automatically through this layout wrapper.
       ──────────────────────────────────────────────────────────────────────── */}
-      <body className="antialiased bg-bg-primary text-text-primary min-h-screen flex flex-col">
+      <body className="antialiased bg-[#070b14] text-text-primary min-h-screen flex flex-col relative selection:bg-accent-primary selection:text-black">
+        <Iris3DWorld />
+        <ScrollReveal3D />
         <CurrencyProvider>
           <SmoothScroll>
             <Navbar />
-            <main className="flex-grow pt-[88px] pb-20 md:pb-0">
+            <main className="flex-grow pt-[88px] pb-20 md:pb-0 relative z-[2]">
               {children}
             </main>
             <Footer />

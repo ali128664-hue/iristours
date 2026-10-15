@@ -8,45 +8,45 @@ const features = [
   {
     title: "Professional Drivers",
     description: "Highly trained, vetted, and courteous chauffeurs.",
-    icon: <ShieldCheck size={28} className="text-bg-primary" />,
-    className: "md:col-span-2 md:row-span-2 bg-accent-primary text-bg-primary"
+    icon: <ShieldCheck size={28} className="text-slate-950" />,
+    className: "md:col-span-2 md:row-span-2 bg-gradient-to-br from-amber-500 to-amber-600 text-slate-950 shadow-2xl shadow-amber-500/20"
   },
   {
     title: "24/7 Support",
     description: "Round-the-clock assistance for all your travel needs.",
     icon: <Headset size={28} className="text-accent-primary" />,
-    className: "bg-bg-card border border-border-primary"
+    className: "bg-slate-900/80 backdrop-blur-xl border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.4)]"
   },
   {
     title: "Luxury Fleet",
     description: "Immaculately maintained premium vehicles.",
     icon: <Star size={28} className="text-accent-primary" />,
-    className: "bg-bg-card border border-border-primary"
+    className: "bg-slate-900/80 backdrop-blur-xl border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.4)]"
   },
   {
     title: "Transparent Pricing",
     description: "No hidden costs. What you see is what you pay.",
     icon: <Award size={28} className="text-accent-primary" />,
-    className: "bg-bg-card border border-border-primary"
+    className: "bg-slate-900/80 backdrop-blur-xl border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.4)]"
   },
   {
     title: "Nationwide Coverage",
     description: "Available across all major cities and northern areas.",
     icon: <Map size={28} className="text-accent-primary" />,
-    className: "md:col-span-2 bg-bg-card border border-border-primary"
+    className: "md:col-span-2 bg-slate-900/80 backdrop-blur-xl border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.4)]"
   }
 ];
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-24 bg-bg-secondary">
+    <section className="py-24 bg-bg-secondary/40 backdrop-blur-md">
       <div className="container mx-auto px-6 md:px-12">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl font-bold text-text-primary mb-4"
+            className="text-3xl md:text-5xl font-bold text-white mb-4"
           >
             The Iris Advantage
           </motion.h2>
@@ -55,7 +55,7 @@ export default function WhyChooseUs() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-text-secondary text-lg"
+            className="text-slate-300 text-lg"
           >
             Why thousands of travelers choose us for their luxury transportation needs across Pakistan.
           </motion.p>
