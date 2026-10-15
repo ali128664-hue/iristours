@@ -97,7 +97,7 @@ export default function HeroSection() {
               </Button>
             </div>
             <div className="hero-btn w-full sm:w-auto">
-              <Button variant="glass" magnetic className="w-full sm:w-auto px-10 py-4 text-sm bg-slate-900 hover:bg-slate-800 text-white shadow-lg border-transparent font-bold" onClick={() => window.open('https://wa.me/923154973906?text=Hi!%20I%20want%20to%20book%20a%20car.', '_blank')}>
+              <Button variant="secondary" magnetic className="w-full sm:w-auto px-10 py-4 text-sm font-bold shadow-lg" onClick={() => window.open('https://wa.me/923154973906?text=Hi!%20I%20want%20to%20book%20a%20car.', '_blank')}>
                 Book on WhatsApp
               </Button>
             </div>

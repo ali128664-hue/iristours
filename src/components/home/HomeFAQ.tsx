@@ -5,6 +5,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import clsx from "clsx";
 import Script from "next/script";
+import Link from "next/link";
+import { Button } from "@/components/ui/Button";
 
 const faqs = [
   // Booking & Requirements
@@ -129,9 +131,11 @@ export default function HomeFAQ() {
 
         </div>
         <div className="mt-12 text-center">
-          <a href="/faq" className="inline-block px-8 py-3 rounded-full border border-accent-primary text-accent-primary font-bold uppercase tracking-wider hover:bg-accent-primary hover:text-white transition-all">
-            View All FAQs
-          </a>
+          <Link href="/faq">
+            <Button variant="outline" className="px-8 py-3 font-bold text-slate-800">
+              View All FAQs
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

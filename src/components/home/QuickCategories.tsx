@@ -99,9 +99,9 @@ export default function QuickCategories() {
         >
           {categories.map((category, index) => (
             <motion.div key={index} variants={itemVariants}>
-              <Card3DTilt max={8} speed={350} glare={true} maxGlare={0.18} scale={1.02}>
+              <Card3DTilt max={8} speed={350} glare={true} maxGlare={0.18} scale={1.02} className="h-full w-full">
                 <Link href={category.link} className="block group h-full">
-                  <div className="relative h-64 rounded-[26px] p-2 bg-white/80 backdrop-blur-xl border border-white/90 shadow-[0_12px_36px_-6px_rgba(15,23,42,0.07)] transition-all duration-500 group-hover:border-amber-400/60 group-hover:shadow-[0_24px_50px_-10px_rgba(217,119,6,0.22)] [transform-style:preserve-3d]">
+                  <div className="relative h-64 rounded-[26px] p-2 bg-white/80 backdrop-blur-xl border border-white/90 shadow-[0_12px_36px_-6px_rgba(15,23,42,0.07)] transition-all duration-500 group-hover:border-amber-400/60 group-hover:shadow-[0_24px_50px_-10px_rgba(217,119,6,0.22)] w-full max-w-full overflow-hidden md:[transform-style:preserve-3d]">
                     <div className="relative h-full w-full rounded-[20px] overflow-hidden">
                       <Image
                         src={category.image}
@@ -112,12 +112,12 @@ export default function QuickCategories() {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-transparent opacity-85 transition-opacity duration-300 group-hover:opacity-75" />
                       
-                      <div className="absolute inset-0 p-6 flex flex-col justify-end [transform-style:preserve-3d]">
-                        <div className="w-12 h-12 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center mb-3 border border-white/30 group-hover:scale-110 transition-transform duration-300 [transform:translateZ(30px)] shadow-md">
+                      <div className="absolute inset-0 p-6 flex flex-col justify-end md:[transform-style:preserve-3d]">
+                        <div className="w-12 h-12 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center mb-3 border border-white/30 group-hover:scale-110 transition-transform duration-300 md:[transform:translateZ(30px)] shadow-md">
                           {category.icon}
                         </div>
-                        <h3 className="text-2xl font-black text-white mb-1 group-hover:text-amber-400 transition-colors [transform:translateZ(25px)] tracking-tight">{category.title}</h3>
-                        <p className="text-slate-200 text-xs font-medium [transform:translateZ(15px)]">{category.description}</p>
+                        <h3 className="text-2xl font-black text-white mb-1 group-hover:text-amber-400 transition-colors md:[transform:translateZ(25px)] tracking-tight">{category.title}</h3>
+                        <p className="text-slate-200 text-xs font-medium md:[transform:translateZ(15px)]">{category.description}</p>
                       </div>
                     </div>
                   </div>

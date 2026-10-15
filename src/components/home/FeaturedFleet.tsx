@@ -76,14 +76,14 @@ export default function FeaturedFleet() {
         </div>
 
         {/* Carousel Container */}
-        <div className="relative -mx-6 md:-mx-12 px-6 md:px-12">
+        <div className="relative -mx-4 sm:-mx-6 md:-mx-12 px-4 sm:px-6 md:px-12 w-[calc(100%+2rem)] sm:w-[calc(100%+3rem)] md:w-[calc(100%+6rem)] overflow-hidden">
           <div 
             ref={scrollContainerRef}
-            className="flex gap-8 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-8 pt-4"
+            className="flex gap-4 sm:gap-6 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-8 pt-4 px-1"
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
             {fleetData.map((vehicle) => (
-              <div key={vehicle.id} className="min-w-[300px] md:min-w-[400px] snap-start flex-shrink-0">
+              <div key={vehicle.id} className="w-[84vw] max-w-[360px] sm:w-[350px] md:w-[380px] snap-center sm:snap-start flex-shrink-0">
                 <VehicleCard vehicle={vehicle} />
               </div>
             ))}

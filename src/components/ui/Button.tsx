@@ -1,10 +1,9 @@
 "use client";
 
 import React, { useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, HTMLMotionProps } from "framer-motion";
+import { twMerge } from "tailwind-merge";
 import clsx from "clsx";
-
-import { HTMLMotionProps } from "framer-motion";
 
 interface ButtonProps extends HTMLMotionProps<"button"> {
   variant?: "primary" | "secondary" | "glass" | "outline";
@@ -12,7 +11,13 @@ interface ButtonProps extends HTMLMotionProps<"button"> {
   children: React.ReactNode;
 }
 
-export function Button({ variant = "primary", magnetic = false, className, children, ...props }: ButtonProps) {
+export function Button({
+  variant = "primary",
+  magnetic = false,
+  className,
+  children,
+  ...props
+}: ButtonProps) {
   const ref = useRef<HTMLButtonElement>(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
@@ -22,7 +27,7 @@ export function Button({ variant = "primary", magnetic = false, className, child
     const { height, width, left, top } = ref.current.getBoundingClientRect();
     const middleX = clientX - (left + width / 2);
     const middleY = clientY - (top + height / 2);
-    setPosition({ x: middleX * 0.2, y: middleY * 0.2 });
+    setPosition({ x: middleX * 0.15, y: middleY * 0.15 });
   };
 
   const reset = () => {
@@ -30,13 +35,18 @@ export function Button({ variant = "primary", magnetic = false, className, child
     setPosition({ x: 0, y: 0 });
   };
 
-  const baseStyles = "relative inline-flex items-center justify-center px-8 py-3 rounded-full font-semibold uppercase tracking-wider transition-all overflow-hidden";
-  
+  const baseStyles =
+    "relative inline-flex items-center justify-center px-7 py-3 rounded-full font-bold uppercase tracking-wider transition-all duration-200 overflow-hidden text-center cursor-pointer active:scale-[0.98]";
+
   const variants = {
-    primary: "bg-gradient-to-tr from-accent-secondary to-accent-primary text-white shadow-[0_8px_16px_-4px_rgba(245,158,11,0.5),inset_0_2px_4px_rgba(255,255,255,0.4)] hover:shadow-[0_12px_24px_-6px_rgba(245,158,11,0.6),inset_0_2px_4px_rgba(255,255,255,0.6)] hover:-translate-y-1 hover:brightness-110 border border-white/20",
-    secondary: "bg-white/92 backdrop-blur-md shadow-md hover:shadow-lg hover:-translate-y-1 text-slate-800 border border-slate-200/90 hover:border-amber-500 hover:text-amber-600 hover:bg-amber-50/50",
-    glass: "bg-white/90 backdrop-blur-xl shadow-lg border border-slate-200/90 text-slate-800 hover:bg-white hover:-translate-y-1 hover:text-amber-600 hover:border-amber-500/50",
-    outline: "border border-slate-300 bg-white/70 hover:bg-white text-slate-700 shadow-sm hover:-translate-y-0.5 hover:border-amber-500 hover:text-amber-600"
+    primary:
+      "bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 text-white shadow-md shadow-amber-500/25 hover:shadow-lg hover:shadow-amber-500/35 hover:brightness-105 border border-amber-400/40",
+    secondary:
+      "bg-slate-900 hover:bg-slate-800 text-white shadow-md hover:shadow-slate-900/20 border border-slate-800 hover:-translate-y-0.5",
+    glass:
+      "bg-white/95 backdrop-blur-xl border border-slate-300 text-slate-900 hover:bg-white hover:border-amber-500 hover:text-amber-600 shadow-sm",
+    outline:
+      "border-2 border-slate-300 bg-white hover:bg-slate-50 text-slate-800 hover:border-amber-500 hover:text-amber-600 shadow-sm",
   };
 
   return (
@@ -46,10 +56,10 @@ export function Button({ variant = "primary", magnetic = false, className, child
       onMouseLeave={reset}
       animate={{ x: position.x, y: position.y }}
       transition={{ type: "spring", stiffness: 150, damping: 15, mass: 0.1 }}
-      className={clsx(baseStyles, variants[variant], className)}
+      className={twMerge(clsx(baseStyles, variants[variant], className))}
       {...props}
     >
-      <span className="relative z-10">{children}</span>
+      <span className="relative z-10 flex items-center justify-center gap-2">{children}</span>
     </motion.button>
   );
 }

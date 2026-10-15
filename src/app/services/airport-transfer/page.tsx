@@ -66,10 +66,10 @@ export default function AirportTransferPage() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a href="https://wa.me/923154973906?text=Hi%20Iris%20Tours!%20I%20need%20an%20urgent%20Airport%20Transfer." target="_blank" rel="noopener noreferrer">
-              <Button variant="primary" className="px-8 py-4">Book on WhatsApp</Button>
+              <Button variant="primary" className="px-8 py-4 font-bold shadow-lg shadow-amber-500/25">Book on WhatsApp</Button>
             </a>
             <a href="tel:+923154973906">
-              <Button variant="glass" className="px-8 py-4 bg-white/20 text-white border-white/40">Call: 0315-4973906</Button>
+              <Button variant="secondary" className="px-8 py-4 font-bold">Call: 0315-4973906</Button>
             </a>
           </div>
         </div>

@@ -27,16 +27,16 @@ export default function Card3DTilt({
   const [isHovered, setIsHovered] = useState(false);
   const [transformStyle, setTransformStyle] = useState("");
   const [glareStyle, setGlareStyle] = useState<React.CSSProperties>({});
-  const [isTouchDevice, setIsTouchDevice] = useState(false);
+  const [isTouchDevice, setIsTouchDevice] = useState(true);
 
   useEffect(() => {
-    // Detect touch device to disable heavy tilt and preserve smooth native scrolling
+    // Detect touch device / mobile width to disable heavy tilt and preserve smooth native scrolling
     const checkTouch = () => {
-      setIsTouchDevice(
+      const isTouch =
         window.matchMedia("(pointer: coarse)").matches ||
         window.innerWidth < 768 ||
-        "ontouchstart" in window
-      );
+        "ontouchstart" in window;
+      setIsTouchDevice(isTouch);
     };
     checkTouch();
     window.addEventListener("resize", checkTouch);
@@ -44,7 +44,7 @@ export default function Card3DTilt({
   }, []);
 
   const handleMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
-    if (disabled || isTouchDevice || !cardRef.current) return;
+    if (disabled || isTouchDevice || typeof window === "undefined" || window.innerWidth < 768 || !cardRef.current) return;
 
     const card = cardRef.current;
     const rect = card.getBoundingClientRect();
@@ -97,14 +97,18 @@ export default function Card3DTilt({
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className={`relative [transform-style:preserve-3d] ${className}`}
-      style={{
-        transform: transformStyle,
-        transition: isHovered
-          ? `transform 100ms ease-out`
-          : `transform ${speed}ms cubic-bezier(0.03, 0.98, 0.52, 0.99)`,
-        willChange: isHovered ? "transform" : "auto",
-      }}
+      className={`relative w-full ${isTouchDevice ? "" : "md:[transform-style:preserve-3d]"} ${className}`}
+      style={
+        isTouchDevice
+          ? undefined
+          : {
+              transform: transformStyle,
+              transition: isHovered
+                ? `transform 100ms ease-out`
+                : `transform ${speed}ms cubic-bezier(0.03, 0.98, 0.52, 0.99)`,
+              willChange: isHovered ? "transform" : "auto",
+            }
+      }
     >
       {children}
 
