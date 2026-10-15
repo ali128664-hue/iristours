@@ -12,14 +12,14 @@ import BankDetailsSection from "@/components/home/BankDetailsSection";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Rent a Car in Lahore | Best Car Rental Service - Iris Tours",
-  description: "Looking to rent a car in Lahore? Iris Tours offers verified chauffeur-driven cars, luxury SUVs (Prado, Fortuner, V8), executive sedans, and wedding car rentals at transparent daily rates. Book 24/7!",
+  title: "Rent a Car in Lahore | Best Luxury Car Rental Service - Iris Tours",
+  description: "Looking to rent a car in Lahore? Iris Tours offers verified chauffeur-driven cars, interactive 3D luxury fleet (Prado, Fortuner, Land Cruiser V8), executive sedans, and wedding car rentals at transparent daily rates. Book 24/7!",
   alternates: {
     canonical: "https://iristours.net",
   },
   openGraph: {
-    title: "Rent a Car in Lahore | Best Car Rental Service - Iris Tours",
-    description: "Looking to rent a car in Lahore? Iris Tours offers verified chauffeur-driven cars, luxury SUVs (Prado, Fortuner, V8), executive sedans, and wedding car rentals at transparent daily rates.",
+    title: "Rent a Car in Lahore | Best Luxury Car Rental Service - Iris Tours",
+    description: "Looking to rent a car in Lahore? Iris Tours offers verified chauffeur-driven cars, interactive 3D luxury fleet (Prado, Fortuner, V8), executive sedans, and wedding car rentals at transparent daily rates.",
     url: "https://iristours.net",
     siteName: "Iris Tours",
     images: [
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         url: "https://iristours.net/opengraph-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Rent a Car in Lahore - Iris Tours",
+        alt: "Rent a Car in Lahore - Iris Tours 3D Luxury Fleet",
       },
     ],
     locale: "en_PK",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rent a Car in Lahore | Best Car Rental Service - Iris Tours",
+    title: "Rent a Car in Lahore | Best Luxury Car Rental Service - Iris Tours",
     description: "Looking to rent a car in Lahore? Iris Tours offers verified chauffeur-driven cars, luxury SUVs, sedans & wedding car rentals at transparent daily rates.",
     images: ["https://iristours.net/opengraph-image.jpg"],
   },

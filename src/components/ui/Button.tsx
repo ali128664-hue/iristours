@@ -34,9 +34,9 @@ export function Button({ variant = "primary", magnetic = false, className, child
   
   const variants = {
     primary: "bg-gradient-to-tr from-accent-secondary to-accent-primary text-white shadow-[0_8px_16px_-4px_rgba(245,158,11,0.5),inset_0_2px_4px_rgba(255,255,255,0.4)] hover:shadow-[0_12px_24px_-6px_rgba(245,158,11,0.6),inset_0_2px_4px_rgba(255,255,255,0.6)] hover:-translate-y-1 hover:brightness-110 border border-white/20",
-    secondary: "bg-slate-900/80 backdrop-blur-md shadow-[0_8px_16px_-4px_rgba(0,0,0,0.5),inset_0_1px_1px_rgba(255,255,255,0.15)] hover:shadow-[0_12px_24px_-6px_rgba(245,158,11,0.25)] hover:-translate-y-1 text-white border border-white/10 hover:border-accent-primary/50 hover:bg-slate-800/80",
-    glass: "bg-slate-900/60 backdrop-blur-xl shadow-[0_8px_32px_0_rgba(0,0,0,0.4),inset_0_1px_1px_rgba(255,255,255,0.15)] border border-white/15 text-white hover:bg-slate-800/70 hover:-translate-y-1 hover:border-accent-primary/40",
-    outline: "border border-white/10 bg-slate-900/60 hover:bg-slate-800/80 text-white shadow-sm hover:-translate-y-0.5 hover:border-accent-primary/40"
+    secondary: "bg-white/92 backdrop-blur-md shadow-md hover:shadow-lg hover:-translate-y-1 text-slate-800 border border-slate-200/90 hover:border-amber-500 hover:text-amber-600 hover:bg-amber-50/50",
+    glass: "bg-white/90 backdrop-blur-xl shadow-lg border border-slate-200/90 text-slate-800 hover:bg-white hover:-translate-y-1 hover:text-amber-600 hover:border-amber-500/50",
+    outline: "border border-slate-300 bg-white/70 hover:bg-white text-slate-700 shadow-sm hover:-translate-y-0.5 hover:border-amber-500 hover:text-amber-600"
   };
 
   return (
@@ -53,3 +53,5 @@ export function Button({ variant = "primary", magnetic = false, className, child
     </motion.button>
   );
 }
+
+export default Button;

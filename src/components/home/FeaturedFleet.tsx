@@ -24,7 +24,7 @@ export default function FeaturedFleet() {
   };
 
   return (
-    <section className="py-24 bg-bg-primary/40 backdrop-blur-md relative overflow-hidden">
+    <section className="py-24 bg-slate-50/50 backdrop-blur-md relative overflow-hidden">
       <div className="container mx-auto px-6 md:px-12">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div className="max-w-2xl">
@@ -32,7 +32,7 @@ export default function FeaturedFleet() {
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="text-3xl md:text-5xl font-bold text-white mb-4"
+              className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-4"
             >
               Our Complete Fleet
             </motion.h2>
@@ -41,7 +41,7 @@ export default function FeaturedFleet() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-slate-300 text-lg"
+              className="text-slate-600 text-lg font-medium"
             >
               Experience the pinnacle of automotive engineering. Swipe or click through our premium collection to find your perfect ride.
             </motion.p>
@@ -56,21 +56,21 @@ export default function FeaturedFleet() {
             <div className="flex gap-2 mr-4">
               <button 
                 onClick={scrollLeft}
-                className="w-12 h-12 rounded-full border border-white/10 bg-slate-900/80 backdrop-blur-md flex items-center justify-center text-white hover:bg-accent-primary hover:text-white hover:border-accent-primary transition-colors shadow-md cursor-pointer"
+                className="w-12 h-12 rounded-full border border-slate-200 bg-white/90 backdrop-blur-md flex items-center justify-center text-slate-800 hover:bg-amber-500 hover:text-white hover:border-amber-500 transition-colors shadow-sm cursor-pointer"
                 aria-label="Scroll left"
               >
                 <ChevronLeft size={24} />
               </button>
               <button 
                 onClick={scrollRight}
-                className="w-12 h-12 rounded-full border border-white/10 bg-slate-900/80 backdrop-blur-md flex items-center justify-center text-white hover:bg-accent-primary hover:text-white hover:border-accent-primary transition-colors shadow-md cursor-pointer"
+                className="w-12 h-12 rounded-full border border-slate-200 bg-white/90 backdrop-blur-md flex items-center justify-center text-slate-800 hover:bg-amber-500 hover:text-white hover:border-amber-500 transition-colors shadow-sm cursor-pointer"
                 aria-label="Scroll right"
               >
                 <ChevronRight size={24} />
               </button>
             </div>
             <Link href="/fleet" className="hidden sm:block">
-              <Button variant="secondary">View Full Fleet</Button>
+              <Button variant="secondary" className="bg-slate-900 hover:bg-slate-800 text-white font-bold">View Full Fleet</Button>
             </Link>
           </motion.div>
         </div>
@@ -82,9 +82,9 @@ export default function FeaturedFleet() {
             className="flex gap-8 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-8 pt-4"
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
-            {fleetData.map((vehicle, index) => (
+            {fleetData.map((vehicle) => (
               <div key={vehicle.id} className="min-w-[300px] md:min-w-[400px] snap-start flex-shrink-0">
-                <VehicleCard vehicle={vehicle} index={index} />
+                <VehicleCard vehicle={vehicle} />
               </div>
             ))}
           </div>
@@ -92,7 +92,7 @@ export default function FeaturedFleet() {
         
         <div className="mt-8 text-center sm:hidden">
             <Link href="/fleet">
-              <Button variant="secondary" className="w-full">View Full Fleet</Button>
+              <Button variant="secondary" className="w-full bg-slate-900 text-white font-bold">View Full Fleet</Button>
             </Link>
         </div>
       </div>

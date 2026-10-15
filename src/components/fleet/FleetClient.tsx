@@ -152,10 +152,10 @@ function FleetClientContent({ initialData }: FleetClientProps) {
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors whitespace-nowrap border ${
+                className={`px-4 py-2 rounded-full text-sm font-semibold transition-all whitespace-nowrap border ${
                   activeCategory === cat 
-                    ? "bg-accent-primary text-bg-primary border-accent-primary shadow-[0_0_15px_rgba(22,199,158,0.3)]" 
-                    : "bg-bg-primary text-text-secondary border-border-primary hover:border-text-secondary"
+                    ? "bg-amber-500 text-white border-amber-500 shadow-md" 
+                    : "bg-white text-slate-600 border-slate-200 hover:border-amber-500 hover:text-amber-600"
                 }`}
               >
                 {cat}
@@ -218,10 +218,10 @@ function FleetClientContent({ initialData }: FleetClientProps) {
                     onClick={() => {
                       setActiveCategory(cat);
                     }}
-                    className={`px-4 py-2 rounded-full text-sm font-medium transition-colors border ${
+                    className={`px-4 py-2 rounded-full text-sm font-semibold transition-all border ${
                       activeCategory === cat 
-                        ? "bg-accent-primary text-bg-primary border-accent-primary" 
-                        : "bg-bg-primary text-text-secondary border-border-primary"
+                        ? "bg-amber-500 text-white border-amber-500 shadow-sm" 
+                        : "bg-white text-slate-600 border-slate-200"
                     }`}
                   >
                     {cat}

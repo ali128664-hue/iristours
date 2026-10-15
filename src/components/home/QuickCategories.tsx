@@ -9,42 +9,42 @@ import Card3DTilt from "@/components/3d/Card3DTilt";
 const categories = [
   {
     title: "Luxury Cars",
-    icon: <CarFront size={32} className="text-accent-primary" />,
+    icon: <CarFront size={30} className="text-amber-500" />,
     image: "/categories/luxury.jpg",
     link: "/fleet?category=luxury",
     description: "Premium sedans and executive vehicles"
   },
   {
     title: "SUV & 4x4",
-    icon: <Mountain size={32} className="text-accent-primary" />,
+    icon: <Mountain size={30} className="text-amber-500" />,
     image: "/categories/suv.jpg",
     link: "/fleet?category=suv",
     description: "Command the road with power and space"
   },
   {
     title: "Airport Transfer",
-    icon: <Plane size={32} className="text-accent-primary" />,
+    icon: <Plane size={30} className="text-amber-500" />,
     image: "/categories/airport.jpg",
     link: "/services/airport-transfer",
     description: "VIP meet & greet and seamless drops"
   },
   {
     title: "Wedding Cars",
-    icon: <ShieldCheck size={32} className="text-accent-primary" />,
+    icon: <ShieldCheck size={30} className="text-amber-500" />,
     image: "/categories/wedding.jpg",
     link: "/services/wedding-cars",
     description: "Make your special day unforgettable"
   },
   {
     title: "Northern Tours",
-    icon: <Users size={32} className="text-accent-primary" />,
+    icon: <Users size={30} className="text-amber-500" />,
     image: "/tours/hunza.jpg",
     link: "/tours",
     description: "Explore Pakistan's majestic landscapes"
   },
   {
     title: "Corporate Fleet",
-    icon: <Building size={32} className="text-accent-primary" />,
+    icon: <Building size={30} className="text-amber-500" />,
     image: "/categories/corporate.jpg",
     link: "/services/corporate-rentals",
     description: "Monthly contracts & executive travel"
@@ -68,14 +68,14 @@ const itemVariants = {
 
 export default function QuickCategories() {
   return (
-    <section className="py-24 bg-bg-secondary/40 backdrop-blur-md relative">
+    <section className="py-24 bg-white/40 backdrop-blur-md relative">
       <div className="container mx-auto px-6 md:px-12">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl font-bold text-white mb-4"
+            className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-4"
           >
             Premium Mobility Solutions
           </motion.h2>
@@ -84,7 +84,7 @@ export default function QuickCategories() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-slate-300 text-lg"
+            className="text-slate-600 text-lg font-medium"
           >
             Select a category to explore our world-class vehicles and specialized services.
           </motion.p>
@@ -99,24 +99,26 @@ export default function QuickCategories() {
         >
           {categories.map((category, index) => (
             <motion.div key={index} variants={itemVariants}>
-              <Card3DTilt max={8} speed={400} glare={true} maxGlare={0.2} scale={1.03}>
-                <Link href={category.link} className="block group">
-                  <div className="relative h-64 rounded-2xl overflow-hidden border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] transition-all duration-500 group-hover:border-accent-primary/40 group-hover:shadow-[0_25px_50px_-12px_rgba(245,158,11,0.25)] [transform-style:preserve-3d]">
-                    <Image
-                      src={category.image}
-                      alt={category.title}
-                      fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-110"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent opacity-90 transition-opacity duration-300 group-hover:opacity-80" />
-                    
-                    <div className="absolute inset-0 p-8 flex flex-col justify-end [transform-style:preserve-3d]">
-                      <div className="bg-slate-900/80 backdrop-blur-md w-14 h-14 rounded-full flex items-center justify-center mb-4 border border-white/10 group-hover:scale-110 transition-transform duration-300 [transform:translateZ(30px)]">
-                        {category.icon}
+              <Card3DTilt max={8} speed={350} glare={true} maxGlare={0.18} scale={1.02}>
+                <Link href={category.link} className="block group h-full">
+                  <div className="relative h-64 rounded-[26px] p-2 bg-white/80 backdrop-blur-xl border border-white/90 shadow-[0_12px_36px_-6px_rgba(15,23,42,0.07)] transition-all duration-500 group-hover:border-amber-400/60 group-hover:shadow-[0_24px_50px_-10px_rgba(217,119,6,0.22)] [transform-style:preserve-3d]">
+                    <div className="relative h-full w-full rounded-[20px] overflow-hidden">
+                      <Image
+                        src={category.image}
+                        alt={category.title}
+                        fill
+                        className="object-cover transition-transform duration-700 ease-out group-hover:scale-108"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-transparent opacity-85 transition-opacity duration-300 group-hover:opacity-75" />
+                      
+                      <div className="absolute inset-0 p-6 flex flex-col justify-end [transform-style:preserve-3d]">
+                        <div className="w-12 h-12 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center mb-3 border border-white/30 group-hover:scale-110 transition-transform duration-300 [transform:translateZ(30px)] shadow-md">
+                          {category.icon}
+                        </div>
+                        <h3 className="text-2xl font-black text-white mb-1 group-hover:text-amber-400 transition-colors [transform:translateZ(25px)] tracking-tight">{category.title}</h3>
+                        <p className="text-slate-200 text-xs font-medium [transform:translateZ(15px)]">{category.description}</p>
                       </div>
-                      <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-accent-primary transition-colors [transform:translateZ(25px)]">{category.title}</h3>
-                      <p className="text-slate-300 text-sm [transform:translateZ(15px)]">{category.description}</p>
                     </div>
                   </div>
                 </Link>

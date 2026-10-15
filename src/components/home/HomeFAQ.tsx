@@ -73,11 +73,11 @@ export default function HomeFAQ() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">
               Frequently Asked <br/>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-primary to-accent-secondary">Questions</span>
             </h2>
-            <p className="text-lg text-slate-300 mb-8">
+            <p className="text-lg text-slate-600 mb-8 font-medium">
               Find quick answers to common questions about our car rental process, policies, and services. If you need more help, our WhatsApp support is available 24/7.
             </p>
           </motion.div>
@@ -92,20 +92,20 @@ export default function HomeFAQ() {
               <div 
                 key={index} 
                 className={clsx(
-                  "border rounded-2xl overflow-hidden transition-colors duration-300",
-                  openIndex === index ? "bg-slate-900/85 backdrop-blur-xl border-accent-primary/50 shadow-2xl" : "bg-slate-950/60 backdrop-blur-md border-white/10"
+                  "border rounded-2xl overflow-hidden transition-all duration-300",
+                  openIndex === index ? "bg-white/95 backdrop-blur-xl border-amber-500/50 shadow-lg" : "bg-white/80 backdrop-blur-md border-slate-200/90 hover:border-slate-300 shadow-sm"
                 )}
               >
                 <button
                   onClick={() => setOpenIndex(openIndex === index ? null : index)}
                   className="w-full px-6 py-5 flex items-center justify-between text-left"
                 >
-                  <span className="font-semibold text-white pr-4">{faq.question}</span>
+                  <span className="font-semibold text-slate-900 pr-4">{faq.question}</span>
                   <ChevronDown 
                     size={20} 
                     className={clsx(
-                      "text-slate-400 transition-transform duration-300 flex-shrink-0",
-                      openIndex === index ? "rotate-180 text-accent-primary" : ""
+                      "text-slate-500 transition-transform duration-300 flex-shrink-0",
+                      openIndex === index ? "rotate-180 text-amber-600" : ""
                     )} 
                   />
                 </button>
@@ -117,7 +117,7 @@ export default function HomeFAQ() {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3, ease: "easeInOut" }}
                     >
-                       <div className="px-6 pb-6 text-slate-300 leading-relaxed border-t border-white/10 pt-4">
+                       <div className="px-6 pb-6 text-slate-600 leading-relaxed border-t border-slate-100 pt-4 font-normal">
                         {faq.answer}
                       </div>
                     </motion.div>

@@ -10,7 +10,7 @@ export default function PopularDestinations() {
   const featuredTours = toursData.slice(0, 3);
 
   return (
-    <section className="py-24 bg-bg-primary/40 backdrop-blur-md relative overflow-hidden">
+    <section className="py-24 bg-white/40 backdrop-blur-md relative overflow-hidden">
       <div className="container mx-auto px-6 md:px-12">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div className="max-w-2xl">
@@ -18,7 +18,7 @@ export default function PopularDestinations() {
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="text-3xl md:text-5xl font-bold text-white mb-4"
+              className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-4"
             >
               Popular Destinations
             </motion.h2>
@@ -27,7 +27,7 @@ export default function PopularDestinations() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-slate-300 text-lg"
+              className="text-slate-600 text-lg font-medium"
             >
               Explore the untouched beauty of Northern Pakistan with our meticulously curated luxury tour packages.
             </motion.p>
@@ -39,7 +39,7 @@ export default function PopularDestinations() {
             viewport={{ once: true }}
           >
             <Link href="/tours">
-              <Button variant="secondary">View All Tours</Button>
+              <Button variant="secondary" className="bg-slate-900 hover:bg-slate-800 text-white font-bold">View All Tours</Button>
             </Link>
           </motion.div>
         </div>

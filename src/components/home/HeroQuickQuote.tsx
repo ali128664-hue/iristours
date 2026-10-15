@@ -29,23 +29,23 @@ Please send me the best discounted quotation. Thank you!`;
       {/* Quick Booking Bar */}
       <form
         onSubmit={handleWhatsAppQuote}
-        className="bg-slate-900/80 backdrop-blur-xl rounded-2xl p-3 md:p-4 border border-white/10 shadow-2xl text-left"
+        className="bg-white/92 backdrop-blur-xl rounded-2xl p-3 md:p-4 border border-slate-200/90 shadow-xl text-left"
       >
-        <div className="text-xs font-bold uppercase tracking-wider text-accent-primary mb-2.5 flex items-center gap-1.5">
-          <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-          <span>Instant WhatsApp Rate & Availability Calculator</span>
+        <div className="text-xs font-bold uppercase tracking-wider text-amber-600 mb-2.5 flex items-center gap-1.5">
+          <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+          <span>Instant WhatsApp Rate &amp; Availability Calculator</span>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 mb-3">
           {/* Vehicle Select */}
           <div className="relative">
-            <label className="block text-[11px] font-semibold text-slate-300 mb-1 flex items-center gap-1">
-              <Car size={12} className="text-accent-primary" /> Vehicle Category
+            <label className="block text-[11px] font-bold text-slate-700 mb-1 flex items-center gap-1">
+              <Car size={12} className="text-amber-600" /> Vehicle Category
             </label>
             <select
               value={selectedVehicle}
               onChange={(e) => setSelectedVehicle(e.target.value)}
-              className="w-full text-xs font-semibold bg-slate-950/80 border border-white/10 rounded-xl px-3 py-2.5 text-white focus:outline-none focus:border-accent-primary cursor-pointer"
+              className="w-full text-xs font-semibold bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 text-slate-900 focus:outline-none focus:border-amber-500 cursor-pointer shadow-sm"
             >
               <option value="Toyota Fortuner">Toyota Fortuner (SUV)</option>
               <option value="Toyota Prado TX/TZ">Toyota Prado TX / TZ</option>
@@ -54,22 +54,22 @@ Please send me the best discounted quotation. Thank you!`;
               <option value="Toyota Yaris">Toyota Yaris (Economy)</option>
               <option value="Toyota Hiace Grand Cabin">Hiace Grand Cabin (Vans)</option>
               <option value="Mercedes / Audi / Luxury">Mercedes / Audi (VIP Luxury)</option>
-              <option value="Coaster / Saloon Bus">Toyota Coaster (Tours & Groups)</option>
+              <option value="Coaster / Saloon Bus">Toyota Coaster (Tours &amp; Groups)</option>
             </select>
           </div>
 
           {/* City / Area Select */}
           <div className="relative">
-            <label className="block text-[11px] font-semibold text-slate-300 mb-1 flex items-center gap-1">
-              <MapPin size={12} className="text-accent-primary" /> City / Location
+            <label className="block text-[11px] font-bold text-slate-700 mb-1 flex items-center gap-1">
+              <MapPin size={12} className="text-amber-600" /> City / Location
             </label>
             <select
               value={selectedCity}
               onChange={(e) => setSelectedCity(e.target.value)}
-              className="w-full text-xs font-semibold bg-slate-950/80 border border-white/10 rounded-xl px-3 py-2.5 text-white focus:outline-none focus:border-accent-primary cursor-pointer"
+              className="w-full text-xs font-semibold bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 text-slate-900 focus:outline-none focus:border-amber-500 cursor-pointer shadow-sm"
             >
-              <option value="Lahore (DHA / All Areas)">Lahore (DHA, Gulberg & All Areas)</option>
-              <option value="Lahore Airport (Meet & Greet)">Allama Iqbal Airport Transfer</option>
+              <option value="Lahore (DHA / All Areas)">Lahore (DHA, Gulberg &amp; All Areas)</option>
+              <option value="Lahore Airport (Meet &amp; Greet)">Allama Iqbal Airport Transfer</option>
               <option value="Islamabad / Rawalpindi">Islamabad / Rawalpindi</option>
               <option value="Lahore to Islamabad Inter-City">Lahore ➔ Islamabad Inter-City</option>
               <option value="Northern Tour (Hunza/Skardu/Murree)">Northern Areas Tour Package</option>
@@ -78,13 +78,13 @@ Please send me the best discounted quotation. Thank you!`;
 
           {/* Duration */}
           <div className="relative">
-            <label className="block text-[11px] font-semibold text-slate-300 mb-1 flex items-center gap-1">
-              <Calendar size={12} className="text-accent-primary" /> Rental Duration
+            <label className="block text-[11px] font-bold text-slate-700 mb-1 flex items-center gap-1">
+              <Calendar size={12} className="text-amber-600" /> Rental Duration
             </label>
             <select
               value={selectedDuration}
               onChange={(e) => setSelectedDuration(e.target.value)}
-              className="w-full text-xs font-semibold bg-slate-950/80 border border-white/10 rounded-xl px-3 py-2.5 text-white focus:outline-none focus:border-accent-primary cursor-pointer"
+              className="w-full text-xs font-semibold bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 text-slate-900 focus:outline-none focus:border-amber-500 cursor-pointer shadow-sm"
             >
               <option value="1 Day (City Travel)">1 Day (City Rental)</option>
               <option value="2-3 Days">2 - 3 Days</option>
@@ -100,41 +100,41 @@ Please send me the best discounted quotation. Thank you!`;
           className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-gradient-to-r from-[#25D366] to-[#128C7E] text-white font-extrabold text-xs uppercase tracking-wider hover:brightness-105 active:scale-[0.99] transition-all shadow-md shadow-green-500/20"
         >
           <FaWhatsapp size={16} />
-          <span>Get Instant WhatsApp Quote & Availability</span>
+          <span>Get Instant WhatsApp Quote &amp; Availability</span>
         </button>
       </form>
 
       {/* Trust Proof Badges */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-5">
-        <div className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-slate-950/60 border border-white/10 backdrop-blur-sm text-left">
+        <div className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-white/85 border border-slate-200/90 backdrop-blur-sm text-left shadow-sm">
           <Star className="text-amber-500 fill-amber-500 flex-shrink-0" size={16} />
           <div>
-            <span className="block text-[11px] font-extrabold text-white leading-tight">4.9 / 5 Rating</span>
-            <span className="block text-[9px] text-slate-400">350+ Google Reviews</span>
+            <span className="block text-[11px] font-extrabold text-slate-900 leading-tight">4.9 / 5 Rating</span>
+            <span className="block text-[9px] text-slate-500 font-medium">350+ Google Reviews</span>
           </div>
         </div>
 
-        <div className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-slate-950/60 border border-white/10 backdrop-blur-sm text-left">
-          <Clock className="text-accent-primary flex-shrink-0" size={16} />
+        <div className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-white/85 border border-slate-200/90 backdrop-blur-sm text-left shadow-sm">
+          <Clock className="text-amber-600 flex-shrink-0" size={16} />
           <div>
-            <span className="block text-[11px] font-extrabold text-white leading-tight">Fast Response</span>
-            <span className="block text-[9px] text-slate-400">Reply in 5-10 Mins</span>
+            <span className="block text-[11px] font-extrabold text-slate-900 leading-tight">Fast Response</span>
+            <span className="block text-[9px] text-slate-500 font-medium">Reply in 5-10 Mins</span>
           </div>
         </div>
 
-        <div className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-slate-950/60 border border-white/10 backdrop-blur-sm text-left">
-          <ShieldCheck className="text-green-500 flex-shrink-0" size={16} />
+        <div className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-white/85 border border-slate-200/90 backdrop-blur-sm text-left shadow-sm">
+          <ShieldCheck className="text-emerald-600 flex-shrink-0" size={16} />
           <div>
-            <span className="block text-[11px] font-extrabold text-white leading-tight">Zero Hidden Fees</span>
-            <span className="block text-[9px] text-slate-400">Transparent Rates</span>
+            <span className="block text-[11px] font-extrabold text-slate-900 leading-tight">Zero Hidden Fees</span>
+            <span className="block text-[9px] text-slate-500 font-medium">Transparent Rates</span>
           </div>
         </div>
 
-        <div className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-slate-950/60 border border-white/10 backdrop-blur-sm text-left">
-          <Award className="text-accent-primary flex-shrink-0" size={16} />
+        <div className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-white/85 border border-slate-200/90 backdrop-blur-sm text-left shadow-sm">
+          <Award className="text-amber-600 flex-shrink-0" size={16} />
           <div>
-            <span className="block text-[11px] font-extrabold text-white leading-tight">50+ Clean Cars</span>
-            <span className="block text-[9px] text-slate-400">Chauffeurs Included</span>
+            <span className="block text-[11px] font-extrabold text-slate-900 leading-tight">50+ Clean Cars</span>
+            <span className="block text-[9px] text-slate-500 font-medium">Chauffeurs Included</span>
           </div>
         </div>
       </div>

@@ -4,8 +4,8 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Clock, Users, Car } from "lucide-react";
-import { Button } from "@/components/ui/Button";
+import { Clock, Users, Car, MapPin, ArrowRight } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import WhatsAppBookingPopup from "@/components/shared/WhatsAppBookingPopup";
 import Card3DTilt from "@/components/3d/Card3DTilt";
 
@@ -17,65 +17,105 @@ interface TourProps {
 export default function TourCard({ tour, index = 0 }: TourProps) {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
+  const directWhatsAppUrl = `https://wa.me/923154973906?text=${encodeURIComponent(
+    `Hi Iris Tours! 🏔️ I am interested in booking the *${tour.title}* Northern Pakistan Tour package. Please share itinerary details and 4x4 vehicle availability.`
+  )}`;
+
   return (
     <>
-      <Card3DTilt max={10} speed={400} glare={true} maxGlare={0.22} scale={1.03} className="h-full">
+      <Card3DTilt max={7} speed={400} glare={true} maxGlare={0.16} scale={1.02} className="h-full">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.6, delay: index * 0.1 }}
-          className="group relative bg-slate-900/80 backdrop-blur-xl rounded-2xl overflow-hidden border border-white/10 transition-all duration-300 hover:shadow-[0_30px_60px_-15px_rgba(245,158,11,0.25)] hover:border-accent-primary/50 flex flex-col h-full [transform-style:preserve-3d]"
+          whileHover={{ y: -6 }}
+          className="group relative bg-white/85 backdrop-blur-2xl rounded-[28px] p-3 border border-white/90 shadow-[0_15px_40px_-10px_rgba(15,23,42,0.07),0_1px_3px_rgba(15,23,42,0.03)] hover:shadow-[0_30px_60px_-12px_rgba(217,119,6,0.22)] hover:border-amber-400/60 transition-all duration-500 flex flex-col h-full [transform-style:preserve-3d]"
         >
-          <div className="relative h-72 w-full overflow-hidden [transform:translateZ(35px)] [transform-style:preserve-3d]">
+          {/* ─── Hero Image with Inset Squircle & Badges ─────────────────── */}
+          <div className="relative h-72 w-full rounded-[22px] overflow-hidden [transform:translateZ(35px)] [transform-style:preserve-3d] shadow-sm">
             <Image
               src={tour.images.thumbnail}
               alt={tour.title}
               fill
-              className="object-cover transition-transform duration-700 group-hover:scale-110"
+              className="object-cover transition-transform duration-700 ease-out group-hover:scale-108"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent opacity-90" />
-            
-            <div className="absolute bottom-4 left-6 right-6 [transform:translateZ(25px)]">
-              <h3 className="text-2xl font-bold text-white mb-2 line-clamp-2">{tour.title}</h3>
-              <div className="flex flex-wrap gap-3">
-                <div className="flex items-center gap-1.5 text-xs font-medium text-slate-300 bg-slate-950/60 backdrop-blur-sm px-2.5 py-1 rounded-full border border-white/10">
-                  <Clock size={12} className="text-accent-primary" />
-                  {tour.duration}
+            {/* Cinematic Gradient */}
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/30 to-transparent opacity-95" />
+
+            {/* Top Category Badge */}
+            <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-md border border-slate-200/90 rounded-full px-3 py-1 flex items-center gap-1.5 z-10 shadow-sm">
+              <MapPin size={12} className="text-amber-600" />
+              <span className="text-[11px] font-extrabold tracking-wider text-slate-800 uppercase">
+                Northern Tour
+              </span>
+            </div>
+
+            {/* In-Image Title & Quick Badges (translateZ: 25px) */}
+            <div className="absolute bottom-4 left-5 right-5 [transform:translateZ(25px)]">
+              <h3 className="text-2xl font-black text-white mb-2 line-clamp-2 leading-tight tracking-tight drop-shadow-md">
+                {tour.title}
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                <div className="flex items-center gap-1.5 text-xs font-bold text-white bg-white/20 backdrop-blur-md px-3 py-1 rounded-full border border-white/30 shadow-sm">
+                  <Clock size={13} className="text-amber-400" />
+                  <span>{tour.duration}</span>
                 </div>
-                <div className="flex items-center gap-1.5 text-xs font-medium text-slate-300 bg-slate-950/60 backdrop-blur-sm px-2.5 py-1 rounded-full border border-white/10">
-                  <Users size={12} className="text-accent-primary" />
-                  Max {tour.maxPassengers}
+                <div className="flex items-center gap-1.5 text-xs font-bold text-white bg-white/20 backdrop-blur-md px-3 py-1 rounded-full border border-white/30 shadow-sm">
+                  <Users size={13} className="text-amber-400" />
+                  <span>Max {tour.maxPassengers} Guests</span>
                 </div>
               </div>
             </div>
           </div>
-          
-          <div className="p-6 flex-grow flex flex-col [transform-style:preserve-3d]">
-            <p className="text-slate-300 text-sm line-clamp-3 mb-6 flex-grow [transform:translateZ(15px)]">
+
+          {/* ─── Card Body ───────────────────────────────────────────────── */}
+          <div className="p-4 pt-4 flex-grow flex flex-col [transform-style:preserve-3d]">
+            <p className="text-slate-600 text-sm line-clamp-3 mb-4 flex-grow font-medium leading-relaxed [transform:translateZ(15px)]">
               {tour.description}
             </p>
-            
-            <div className="flex items-center gap-2 mb-6 p-3 rounded-lg bg-slate-950/60 border border-white/5 [transform:translateZ(20px)]">
-              <Car size={16} className="text-accent-primary flex-shrink-0" />
-              <span className="text-xs text-slate-200 line-clamp-1">Best With: {tour.recommendedVehicle}</span>
+
+            {/* Recommended Vehicle Chip */}
+            <div className="flex items-center gap-2 mb-5 p-3 rounded-xl bg-slate-50/90 border border-slate-200/80 [transform:translateZ(20px)] group-hover:bg-amber-50/40 transition-colors">
+              <div className="w-8 h-8 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-600 flex-shrink-0">
+                <Car size={16} />
+              </div>
+              <div>
+                <span className="text-[10px] text-slate-400 uppercase tracking-wider font-bold block">Recommended Vehicle</span>
+                <span className="text-xs text-slate-800 font-bold line-clamp-1">{tour.recommendedVehicle}</span>
+              </div>
             </div>
-            
-            <div className="flex gap-3 mt-auto [transform:translateZ(30px)]">
-              <Button variant="primary" className="flex-1 text-xs py-2.5 shadow-lg shadow-accent-primary/20" onClick={() => setIsPopupOpen(true)}>
-                Book Tour
-              </Button>
+
+            {/* Dual Action Buttons (translateZ: 30px) */}
+            <div className="flex gap-2.5 mt-auto [transform:translateZ(30px)]">
+              {/* WhatsApp Direct Inquiry */}
+              <a
+                href={directWhatsAppUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-[1.3] flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white font-extrabold text-xs uppercase tracking-wider shadow-md hover:shadow-green-500/25 active:scale-[0.98] transition-all"
+              >
+                <FaWhatsapp size={17} />
+                <span>Book WhatsApp</span>
+              </a>
+
+              {/* View Tour Details */}
               <Link href={`/tours/${tour.slug}`} className="flex-1" passHref>
-                <Button variant="secondary" className="w-full text-xs py-2.5 bg-slate-800/80 hover:bg-slate-700/80 text-white border-white/10">
-                  View Details
-                </Button>
+                <button
+                  type="button"
+                  className="w-full h-full flex items-center justify-center gap-1 py-3 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs uppercase tracking-wider shadow-sm transition-all active:scale-[0.98] cursor-pointer"
+                >
+                  <span>Details</span>
+                  <ArrowRight size={13} />
+                </button>
               </Link>
             </div>
           </div>
         </motion.div>
       </Card3DTilt>
 
+      {/* WhatsApp Booking Popup */}
       <WhatsAppBookingPopup
         isOpen={isPopupOpen}
         onClose={() => setIsPopupOpen(false)}

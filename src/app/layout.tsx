@@ -34,14 +34,14 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 export const metadata: Metadata = {
   metadataBase: new URL("https://iristours.net"),
   title: {
-    default: "Rent a Car in Lahore | Best Car Rental Service - Iris Tours",
+    default: "Rent a Car in Lahore | Best Luxury Car Rental Service - Iris Tours",
     template: "%s | Iris Tours Pakistan",
   },
-  description: "Best rent a car in Lahore with verified professional chauffeurs. Luxury SUVs (Prado, Fortuner, Land Cruiser V8), executive sedans, wedding cars, airport transfers & northern tours at transparent rates. Book 24/7!",
-  keywords: "Rent a car in Lahore, Rent car Lahore, Car rental in Lahore, Cheap rent a car in Lahore, Luxury car rental Lahore, Car rental with driver Lahore, Wedding cars Lahore, Airport transfer Lahore, Prado for rent Lahore, Fortuner for rent Lahore, Corolla for rent Lahore, V8 for rent Lahore, Iris Tours Lahore",
+  description: "Best rent a car in Lahore with verified professional chauffeurs & 3D fleet showcase. Luxury SUVs (Prado, Fortuner, Land Cruiser V8), executive sedans, wedding cars, airport transfers & northern tours at transparent rates. Book 24/7!",
+  keywords: "Rent a car in Lahore, Rent car Lahore, Car rental in Lahore, Luxury car rental Lahore, Car rental with driver Lahore, 3D luxury car rental, Prado for rent Lahore, Fortuner for rent Lahore, Land Cruiser V8 for rent Lahore, Wedding cars Lahore, Airport transfer Lahore, Iris Tours Lahore",
   openGraph: {
-    title: "Rent a Car in Lahore | Best Car Rental Service - Iris Tours",
-    description: "Best rent a car in Lahore with verified professional chauffeurs. Luxury SUVs, executive sedans, wedding cars, and airport transfers at transparent rates.",
+    title: "Rent a Car in Lahore | Best Luxury Car Rental Service - Iris Tours",
+    description: "Best rent a car in Lahore with verified professional chauffeurs & 3D fleet showcase. Luxury SUVs, executive sedans, wedding cars, and airport transfers at transparent rates.",
     type: "website",
     locale: "en_PK",
     url: "https://iristours.net",
@@ -173,7 +173,7 @@ export default function RootLayout({
           The Navbar, Footer, and FloatingWhatsApp button are included on
           every page automatically through this layout wrapper.
       ──────────────────────────────────────────────────────────────────────── */}
-      <body className="antialiased bg-[#070b14] text-text-primary min-h-screen flex flex-col relative selection:bg-accent-primary selection:text-black">
+      <body className="antialiased bg-bg-primary text-text-primary min-h-screen flex flex-col relative selection:bg-accent-primary selection:text-white">
         <Iris3DWorld />
         <ScrollReveal3D />
         <CurrencyProvider>

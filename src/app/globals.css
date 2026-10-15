@@ -3,22 +3,22 @@
 @import "tailwindcss";
 
 :root {
-  /* Translucent deep obsidian luxury glass variables */
-  --background-primary: rgba(7, 11, 20, 0.70);
-  --background-secondary: rgba(11, 17, 32, 0.65);
-  --background-card: rgba(15, 23, 42, 0.65);
-  --glass-surface: rgba(255, 255, 255, 0.05);
+  /* Ultra-Luxury Daylight Crystal Glass Theme */
+  --background-primary: #F8FAFC;
+  --background-secondary: #FFFFFF;
+  --background-card: rgba(255, 255, 255, 0.90);
+  --glass-surface: rgba(255, 255, 255, 0.82);
   
-  --accent-primary: #F59E0B;
-  --accent-secondary: #D97706;
+  --accent-primary: #D97706;
+  --accent-secondary: #B45309;
   
-  --text-primary: #F8FAFC;
-  --text-secondary: #94A3B8;
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
   
-  --border-color: rgba(255, 255, 255, 0.12);
+  --border-color: rgba(226, 232, 240, 0.85);
   
-  --color-success: #00C853;
-  --color-warning: #FFC107;
+  --color-success: #059669;
+  --color-warning: #D97706;
 }
 
 @theme inline {
@@ -40,7 +40,7 @@
 }
 
 body {
-  background-color: #070B14;
+  background-color: #F8FAFC;
   color: var(--text-primary);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
@@ -50,7 +50,7 @@ body {
 
 html {
   overflow-x: hidden;
-  background-color: #070B14;
+  background-color: #F8FAFC;
 }
 
 /* 3D Perspective & Depth Utilities */
@@ -82,32 +82,32 @@ html {
   transform: translateZ(35px);
 }
 
-/* Translucent Glassmorphism Section & Card Layering */
+/* Translucent Crystal Glassmorphism Section & Card Layering */
 .glass-luxury-section {
-  background: rgba(10, 15, 28, 0.55);
+  background: rgba(248, 250, 252, 0.65);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
 
 .glass-luxury-card {
-  background: rgba(15, 23, 42, 0.65);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.06), 0 4px 6px -2px rgba(15, 23, 42, 0.03);
 }
 
-/* Custom Scrollbar for Luxury Midnight Feel */
+/* Custom Scrollbar for Luxury Pearl & Gold Feel */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #070B14;
+  background: #F1F5F9;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(245, 158, 11, 0.3);
+  background: rgba(217, 119, 6, 0.35);
   border-radius: 4px;
 }
 

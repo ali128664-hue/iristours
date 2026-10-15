@@ -142,7 +142,7 @@ export default function GoogleReviews() {
   const r = reviews[current];
 
   return (
-    <section className="py-24 bg-bg-secondary/40 backdrop-blur-md relative overflow-hidden">
+    <section className="py-24 bg-slate-50/50 backdrop-blur-md relative overflow-hidden">
       {/* Decorative blobs */}
       <div className="absolute -top-40 -left-40 w-96 h-96 bg-[#4285F4]/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-[#FBBC04]/10 rounded-full blur-3xl pointer-events-none" />
@@ -158,23 +158,23 @@ export default function GoogleReviews() {
         >
           {/* Iris Tours Logo */}
           <div className="flex justify-center mb-6">
-            <div className="bg-slate-900/80 backdrop-blur-md rounded-2xl shadow-xl border border-white/10 px-8 py-4 inline-flex items-center justify-center">
+            <div className="bg-white/95 backdrop-blur-md rounded-2xl shadow-md border border-slate-200 px-8 py-4 inline-flex items-center justify-center">
               <Logo width={180} height={60} />
             </div>
           </div>
 
-          <div className="inline-flex items-center gap-2 bg-slate-900/80 border border-white/10 rounded-full px-4 py-1.5 text-xs font-semibold text-slate-300 mb-5 shadow-sm">
+          <div className="inline-flex items-center gap-2 bg-white border border-slate-200 rounded-full px-4 py-1.5 text-xs font-semibold text-slate-700 mb-5 shadow-sm">
             <GoogleIcon className="w-4 h-4" />
             Verified Google Reviews
           </div>
 
-          <h2 className="text-3xl md:text-5xl font-black text-white mb-4 leading-tight">
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-4 leading-tight">
             Real Customers.{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4285F4] via-[#EA4335] to-[#FBBC04]">
               Real Reviews.
             </span>
           </h2>
-          <p className="text-slate-300 text-lg max-w-xl mx-auto">
+          <p className="text-slate-600 text-lg max-w-xl mx-auto font-medium">
             Pulled directly from our Google Maps listing — unedited, authentic feedback from our clients.
           </p>
         </motion.div>
@@ -187,12 +187,12 @@ export default function GoogleReviews() {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="lg:col-span-2 bg-slate-900/80 backdrop-blur-xl rounded-3xl border border-white/10 shadow-2xl p-8 flex flex-col items-center text-center"
+            className="lg:col-span-2 bg-white/95 backdrop-blur-xl rounded-3xl border border-slate-200 shadow-xl p-8 flex flex-col items-center text-center"
           >
             <GoogleIcon className="w-8 h-8 mb-4" />
-            <p className="text-6xl font-black text-white mb-2">{OVERALL_RATING}</p>
+            <p className="text-6xl font-black text-slate-900 mb-2">{OVERALL_RATING}</p>
             <StarRating rating={5} size={22} />
-            <p className="text-slate-400 text-sm mt-2 mb-6">Based on {TOTAL_REVIEWS}+ Google reviews</p>
+            <p className="text-slate-500 text-sm mt-2 mb-6 font-medium">Based on {TOTAL_REVIEWS}+ Google reviews</p>
 
             {/* Rating Bars */}
             <div className="w-full space-y-2">
@@ -204,9 +204,9 @@ export default function GoogleReviews() {
                 { star: 1, width: "0.5%"},
               ].map(({ star, width }) => (
                 <div key={star} className="flex items-center gap-2">
-                  <span className="text-xs text-slate-400 w-2 flex-shrink-0">{star}</span>
+                  <span className="text-xs text-slate-500 w-2 flex-shrink-0 font-medium">{star}</span>
                   <Star size={10} fill="#FBBC04" className="text-[#FBBC04] flex-shrink-0" />
-                  <div className="flex-1 h-2 bg-slate-800 rounded-full overflow-hidden">
+                  <div className="flex-1 h-2 bg-slate-100 rounded-full overflow-hidden">
                     <motion.div
                       initial={{ width: 0 }}
                       whileInView={{ width }}
@@ -215,7 +215,7 @@ export default function GoogleReviews() {
                       className="h-full bg-gradient-to-r from-[#FBBC04] to-[#f59e0b] rounded-full"
                     />
                   </div>
-                  <span className="text-xs text-slate-400 w-8 text-right flex-shrink-0">{width}</span>
+                  <span className="text-xs text-slate-500 w-8 text-right flex-shrink-0 font-medium">{width}</span>
                 </div>
               ))}
             </div>
@@ -272,7 +272,7 @@ export default function GoogleReviews() {
                   animate="center"
                   exit="exit"
                   transition={{ duration: 0.42, ease: [0.4, 0, 0.2, 1] }}
-                  className="bg-slate-900/85 backdrop-blur-xl border border-white/10 rounded-3xl p-8 shadow-2xl"
+                  className="bg-white/95 backdrop-blur-xl border border-slate-200/90 rounded-3xl p-8 shadow-xl"
                 >
                   {/* Top row */}
                   <div className="flex items-start justify-between mb-5">
@@ -284,8 +284,8 @@ export default function GoogleReviews() {
                         {r.initials}
                       </div>
                       <div>
-                        <p className="font-bold text-white">{r.name}</p>
-                        <p className="text-slate-400 text-xs">{r.timeAgo}</p>
+                        <p className="font-bold text-slate-900">{r.name}</p>
+                        <p className="text-slate-500 text-xs font-medium">{r.timeAgo}</p>
                       </div>
                     </div>
                     <GoogleIcon className="w-6 h-6 opacity-80 flex-shrink-0" />
@@ -296,16 +296,16 @@ export default function GoogleReviews() {
 
                   {/* Review text */}
                   <div className="relative mt-4">
-                    <Quote size={36} className="absolute -top-2 -left-1 text-slate-800" fill="currentColor" />
-                    <p className="text-slate-200 leading-relaxed pl-6 text-[15px]">
+                    <Quote size={36} className="absolute -top-2 -left-1 text-slate-100" fill="currentColor" />
+                    <p className="text-slate-700 leading-relaxed pl-6 text-[15px] font-medium">
                       &ldquo;{r.content}&rdquo;
                     </p>
                   </div>
 
                   {/* Footer */}
-                  <div className="mt-6 pt-4 border-t border-white/10 flex items-center gap-2">
+                  <div className="mt-6 pt-4 border-t border-slate-100 flex items-center gap-2">
                     <div className="w-2 h-2 rounded-full bg-[#34A853]" />
-                    <p className="text-xs text-slate-400">Posted on Google Maps</p>
+                    <p className="text-xs text-slate-500 font-medium">Posted on Google Maps</p>
                   </div>
                 </motion.div>
               </AnimatePresence>
@@ -314,14 +314,14 @@ export default function GoogleReviews() {
             {/* Prev / Next arrows */}
             <button
               onClick={prev}
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-5 w-10 h-10 bg-slate-900/90 text-white border border-white/10 rounded-full flex items-center justify-center shadow-xl hover:border-accent-primary hover:text-accent-primary transition-all duration-200 z-10"
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-5 w-10 h-10 bg-white text-slate-800 border border-slate-200 rounded-full flex items-center justify-center shadow-lg hover:border-amber-500 hover:text-amber-600 transition-all duration-200 z-10"
               aria-label="Previous review"
             >
               <ChevronLeft size={18} />
             </button>
             <button
               onClick={next}
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-5 w-10 h-10 bg-slate-900/90 text-white border border-white/10 rounded-full flex items-center justify-center shadow-xl hover:border-accent-primary hover:text-accent-primary transition-all duration-200 z-10"
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-5 w-10 h-10 bg-white text-slate-800 border border-slate-200 rounded-full flex items-center justify-center shadow-lg hover:border-amber-500 hover:text-amber-600 transition-all duration-200 z-10"
               aria-label="Next review"
             >
               <ChevronRight size={18} />

@@ -1,203 +1,237 @@
-/**
- * VehicleCard.tsx — Vehicle Card Component (گاڑی کا کارڈ)
- *
- * This is the car card component shown in the fleet grid on /fleet.
- * Each card displays:
- *  - An image slider (if the vehicle has multiple gallery images)
- *  - Category badge and Driver badge (if driver is included)
- *  - Car name, brand, city rate price
- *  - 4 spec icons: Transmission, Seats, Fuel, Driver/Self-Drive
- *  - "Book Now" button (opens WhatsApp booking popup)
- *  - "View Details" button (links to the car's detail page)
- *
- * HOW TO CHANGE:
- *  - WhatsApp message template → the message is built in WhatsAppBookingPopup.tsx,
- *    but this card triggers it — so change the message there.
- *  - The image slider activates automatically if gallery has more than 1 image.
- */
-
 "use client";
 
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Users, Settings, Fuel, ShieldCheck, UserCircle2, ChevronLeft, ChevronRight } from "lucide-react";
+import { Settings, Users, Fuel, UserCircle2, ChevronLeft, ChevronRight, ShieldCheck, ArrowRight } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { Button } from "@/components/ui/Button";
 import WhatsAppBookingPopup from "@/components/shared/WhatsAppBookingPopup";
-import Card3DTilt from "@/components/3d/Card3DTilt";
 import { useCurrency } from "@/context/CurrencyContext";
 import { convertAndFormatPrice } from "@/utils/currency";
+import Card3DTilt from "@/components/3d/Card3DTilt";
 
-// Props: the vehicle data object from fleet.json, and the stagger animation index
-interface VehicleProps {
-  vehicle: any;
+interface VehicleCardProps {
+  vehicle: {
+    id: string;
+    slug: string;
+    name: string;
+    brand: string;
+    category: string;
+    images: {
+      thumbnail: string;
+      gallery?: string[];
+    };
+    transmission: string;
+    seats: number;
+    fuel: string;
+    driverIncluded: boolean;
+    rent: {
+      local?: number;
+      daily?: number;
+      interCity?: number;
+      withDriver?: {
+        local?: number;
+        daily?: number;
+      };
+    };
+  };
   index?: number;
 }
 
-export default function VehicleCard({ vehicle, index = 0 }: VehicleProps) {
-  const [isPopupOpen, setIsPopupOpen] = useState(false); // controls the booking popup
-  const [currentImageIndex, setCurrentImageIndex] = useState(0); // current slide in image slider
+export default function VehicleCard({ vehicle }: VehicleCardProps) {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const { currency } = useCurrency();
 
-  const displayPrice = vehicle.rent?.local ?? vehicle.rent?.daily ?? vehicle.rent?.withDriver?.local ?? 0;
-  const formattedPrice = convertAndFormatPrice(displayPrice, currency);
-  const directWhatsAppMsg = encodeURIComponent(
-    `Hi Iris Tours! 🚗 I would like to book the *${vehicle.name}* (${vehicle.category}, City Rate: ${formattedPrice}). Please confirm availability.`
-  );
-  const directWhatsAppUrl = `https://wa.me/923154973906?text=${directWhatsAppMsg}`;
+  const displayPrice = vehicle.rent.local || vehicle.rent.daily || vehicle.rent.withDriver?.local || 0;
+
+  const directWhatsAppUrl = `https://wa.me/923154973906?text=${encodeURIComponent(
+    `Hi Iris Tours! 🚗 I would like to book the *${vehicle.name}* (${vehicle.category}, City Rate: Rs. ${displayPrice.toLocaleString()}). Please confirm availability.`
+  )}`;
 
   return (
     <>
-      {/* ─── Card Container with 3D Tilt ──────────────────────────────────── */}
-      <Card3DTilt max={10} speed={400} glare={true} maxGlare={0.22} scale={1.03} className="h-full">
+      <Card3DTilt max={7} speed={400} maxGlare={0.16} scale={1.02} className="h-full">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.6, delay: index * 0.1 }}
-          className="group relative bg-slate-900/80 backdrop-blur-xl rounded-2xl overflow-hidden border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.1)] transition-all duration-500 hover:shadow-[0_30px_60px_-15px_rgba(245,158,11,0.25),0_0_0_1px_rgba(245,158,11,0.3)] hover:border-accent-primary/40 h-full flex flex-col [transform-style:preserve-3d]"
+          whileHover={{ y: -6 }}
+          transition={{ duration: 0.35, ease: "easeOut" }}
+          className="group relative bg-white/85 backdrop-blur-2xl rounded-[28px] p-3 border border-white/90 shadow-[0_15px_40px_-10px_rgba(15,23,42,0.07),0_1px_3px_rgba(15,23,42,0.03)] hover:shadow-[0_30px_60px_-12px_rgba(217,119,6,0.22)] hover:border-amber-400/60 transition-all duration-500 h-full flex flex-col [transform-style:preserve-3d]"
         >
-          {/* ─── Image Area with Slider & 3D Layer (translateZ: 35px) ───────── */}
-          <div className="relative h-64 w-full overflow-hidden group/slider [transform:translateZ(35px)] [transform-style:preserve-3d]">
+          {/* ─── Modern Image Container (Aspect-ratio & Inset Glass) ───────── */}
+          <div className="relative h-64 w-full rounded-[22px] overflow-hidden group/slider [transform:translateZ(35px)] [transform-style:preserve-3d] shadow-sm">
             <Image
               src={vehicle.images.gallery?.[currentImageIndex] || vehicle.images.thumbnail}
               alt={vehicle.name}
               fill
-              className="object-cover transition-transform duration-700 group-hover:scale-110"
+              className="object-cover transition-transform duration-700 ease-out group-hover:scale-108"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent opacity-80" />
-            
-            {/* Slider Controls — only shown if there are 2+ images in the gallery */}
+            {/* Subtle luxury ambient daylight gradient */}
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent opacity-50" />
+
+            {/* Slider Navigation Arrows */}
             {vehicle.images.gallery && vehicle.images.gallery.length > 1 && (
               <>
-                {/* Previous image button */}
-                <button 
+                <button
+                  type="button"
                   onClick={(e) => {
                     e.preventDefault();
                     e.stopPropagation();
-                    setCurrentImageIndex(prev => prev === 0 ? vehicle.images.gallery.length - 1 : prev - 1);
+                    const gallery = vehicle.images.gallery || [];
+                    setCurrentImageIndex((prev) => (prev === 0 ? gallery.length - 1 : prev - 1));
                   }}
-                  className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/60 text-white flex items-center justify-center opacity-0 group-hover/slider:opacity-100 transition-opacity hover:bg-black/80 z-20"
+                  className="absolute left-2.5 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/85 backdrop-blur-md text-slate-800 flex items-center justify-center opacity-0 group-hover/slider:opacity-100 transition-all hover:bg-white hover:scale-105 shadow-md z-20 cursor-pointer"
+                  aria-label="Previous photo"
                 >
-                  <ChevronLeft size={18} />
+                  <ChevronLeft size={16} />
                 </button>
-                {/* Next image button */}
-                <button 
+                <button
+                  type="button"
                   onClick={(e) => {
                     e.preventDefault();
                     e.stopPropagation();
-                    setCurrentImageIndex(prev => prev === vehicle.images.gallery.length - 1 ? 0 : prev + 1);
+                    const gallery = vehicle.images.gallery || [];
+                    setCurrentImageIndex((prev) => (prev === gallery.length - 1 ? 0 : prev + 1));
                   }}
-                  className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/60 text-white flex items-center justify-center opacity-0 group-hover/slider:opacity-100 transition-opacity hover:bg-black/80 z-20"
+                  className="absolute right-2.5 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/85 backdrop-blur-md text-slate-800 flex items-center justify-center opacity-0 group-hover/slider:opacity-100 transition-all hover:bg-white hover:scale-105 shadow-md z-20 cursor-pointer"
+                  aria-label="Next photo"
                 >
-                  <ChevronRight size={18} />
+                  <ChevronRight size={16} />
                 </button>
-                {/* Dot indicators showing which image is active */}
-                <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-1.5 z-20">
+
+                {/* Dot Pagination */}
+                <div className="absolute bottom-3 left-0 right-0 flex justify-center gap-1.5 z-20">
                   {vehicle.images.gallery.map((_: any, idx: number) => (
-                    <div 
-                      key={idx} 
-                      className={`h-1.5 rounded-full transition-all ${idx === currentImageIndex ? 'w-4 bg-accent-primary' : 'w-1.5 bg-white/50'}`}
+                    <div
+                      key={idx}
+                      className={`h-1.5 rounded-full transition-all duration-300 ${
+                        idx === currentImageIndex ? "w-5 bg-amber-500 shadow-sm" : "w-1.5 bg-white/80"
+                      }`}
                     />
                   ))}
                 </div>
               </>
             )}
 
-            {/* Category badge (e.g., "SUV", "Luxury") — top left */}
-            <div className="absolute top-4 left-4 bg-slate-950/80 backdrop-blur-md border border-white/10 rounded-full px-3 py-1 flex items-center gap-2 z-10">
-              <span className="w-2 h-2 rounded-full bg-accent-primary animate-pulse" />
-              <span className="text-xs font-semibold tracking-wide text-white uppercase">{vehicle.category}</span>
+            {/* Category Badge (Top Left) */}
+            <div className="absolute top-3 left-3 bg-white/92 backdrop-blur-md border border-slate-200/90 rounded-full px-3 py-1 flex items-center gap-1.5 z-10 shadow-sm">
+              <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
+              <span className="text-[11px] font-extrabold tracking-wider text-slate-800 uppercase">
+                {vehicle.category}
+              </span>
             </div>
-            
-            {/* "Driver" badge — shown top right only if driverIncluded is true in fleet.json */}
+
+            {/* Chauffeur / Driver Badge (Top Right) */}
             {vehicle.driverIncluded && (
-              <div className="absolute top-4 right-4 bg-accent-primary text-white backdrop-blur-md rounded-full px-3 py-1 flex items-center gap-1.5 shadow-md z-10">
-                <UserCircle2 size={14} className="text-white" />
-                <span className="text-xs font-bold tracking-wide uppercase">Driver</span>
+              <div className="absolute top-3 right-3 bg-amber-500/95 text-white backdrop-blur-md rounded-full px-3 py-1 flex items-center gap-1.5 shadow-md z-10">
+                <UserCircle2 size={13} className="text-white" />
+                <span className="text-[10px] font-extrabold tracking-wider uppercase">Chauffeur</span>
               </div>
             )}
           </div>
-          
+
           {/* ─── Card Body with 3D Layering ───────────────────────────────── */}
-          <div className="p-6 relative flex-grow flex flex-col [transform-style:preserve-3d]">
-            {/* Car name, brand, and price display (translateZ: 25px) */}
+          <div className="p-4 pt-4 flex-grow flex flex-col [transform-style:preserve-3d]">
+            {/* Header: Title, Brand & Price Display */}
             <div className="flex justify-between items-start mb-4 [transform:translateZ(25px)]">
-              <div>
-                <h3 className="text-xl font-bold text-white mb-1">{vehicle.name}</h3>
-                <p className="text-slate-400 text-sm">{vehicle.brand} • {vehicle.category}</p>
+              <div className="flex-1 pr-3">
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="text-xs font-bold text-amber-600 uppercase tracking-wider">{vehicle.brand}</span>
+                  <span className="text-slate-300 text-xs">•</span>
+                  <span className="inline-flex items-center gap-1 text-[11px] text-slate-500 font-medium">
+                    <ShieldCheck size={12} className="text-green-600" />
+                    Verified Fleet
+                  </span>
+                </div>
+                <h3 className="text-xl font-black text-slate-900 tracking-tight group-hover:text-amber-600 transition-colors line-clamp-1">
+                  {vehicle.name}
+                </h3>
               </div>
-              <div className="text-right">
-                <p className="text-xs text-slate-400 uppercase tracking-wider mb-1">City Rate</p>
-                {/* Price shown here comes from rent.local, rent.daily or rent.withDriver.local in fleet.json */}
-                <p className="text-lg font-bold text-accent-primary">{convertAndFormatPrice(displayPrice, currency)}</p>
-                {vehicle.rent.interCity && <p className="text-xs text-slate-400">Inter-City: {convertAndFormatPrice(vehicle.rent.interCity, currency)}</p>}
+
+              {/* Price Tag */}
+              <div className="text-right flex-shrink-0">
+                <span className="block text-[10px] text-slate-400 uppercase tracking-wider font-bold">From</span>
+                <span className="text-2xl font-black text-slate-900 tracking-tight leading-none block">
+                  {convertAndFormatPrice(displayPrice, currency)}
+                </span>
+                <span className="text-[10px] text-slate-500 font-semibold block mt-0.5">/ day intra-city</span>
               </div>
             </div>
-            
+
             {/* Key Specs Grid (translateZ: 20px) */}
-            <div className="grid grid-cols-4 gap-2 mb-6 [transform:translateZ(20px)]">
-              <div className="flex flex-col items-center justify-center p-2 rounded-lg bg-slate-950/60 border border-white/5">
-                <Settings size={15} className="text-slate-400 mb-1" />
-                <span className="text-xs text-slate-200 text-center leading-tight">{vehicle.transmission}</span>
+            <div className="grid grid-cols-4 gap-2 mb-5 [transform:translateZ(20px)]">
+              <div className="flex flex-col items-center justify-center p-2 rounded-xl bg-slate-50/90 border border-slate-200/80 transition-colors group-hover:bg-amber-50/40">
+                <Settings size={15} className="text-slate-600 mb-1" />
+                <span className="text-[11px] text-slate-800 font-bold text-center leading-tight">
+                  {vehicle.transmission}
+                </span>
               </div>
-              <div className="flex flex-col items-center justify-center p-2 rounded-lg bg-slate-950/60 border border-white/5">
-                <Users size={15} className="text-slate-400 mb-1" />
-                <span className="text-xs text-slate-200 text-center leading-tight">{vehicle.seats} Seats</span>
+              <div className="flex flex-col items-center justify-center p-2 rounded-xl bg-slate-50/90 border border-slate-200/80 transition-colors group-hover:bg-amber-50/40">
+                <Users size={15} className="text-slate-600 mb-1" />
+                <span className="text-[11px] text-slate-800 font-bold text-center leading-tight">
+                  {vehicle.seats} Seats
+                </span>
               </div>
-              <div className="flex flex-col items-center justify-center p-2 rounded-lg bg-slate-950/60 border border-white/5">
-                <Fuel size={15} className="text-slate-400 mb-1" />
-                <span className="text-xs text-slate-200 text-center leading-tight">{vehicle.fuel}</span>
+              <div className="flex flex-col items-center justify-center p-2 rounded-xl bg-slate-50/90 border border-slate-200/80 transition-colors group-hover:bg-amber-50/40">
+                <Fuel size={15} className="text-slate-600 mb-1" />
+                <span className="text-[11px] text-slate-800 font-bold text-center leading-tight">
+                  {vehicle.fuel}
+                </span>
               </div>
-              {/* Driver/Self-Drive indicator */}
-              <div className={`flex flex-col items-center justify-center p-2 rounded-lg border ${
-                vehicle.driverIncluded
-                  ? "bg-accent-primary/10 border-accent-primary/40"
-                  : "bg-slate-950/60 border-white/5"
-              }`}>
-                <UserCircle2 size={15} className={vehicle.driverIncluded ? "text-accent-primary mb-1" : "text-slate-400 mb-1"} />
-                <span className={`text-xs text-center leading-tight font-semibold ${
-                  vehicle.driverIncluded ? "text-accent-primary" : "text-slate-400"
-                }`}>{vehicle.driverIncluded ? "Driver" : "Self Drive"}</span>
+              <div
+                className={`flex flex-col items-center justify-center p-2 rounded-xl border transition-colors ${
+                  vehicle.driverIncluded
+                    ? "bg-amber-500/10 border-amber-500/30 text-amber-700"
+                    : "bg-slate-50/90 border-slate-200/80 text-slate-800"
+                }`}
+              >
+                <UserCircle2 size={15} className={vehicle.driverIncluded ? "text-amber-600 mb-1" : "text-slate-600 mb-1"} />
+                <span className="text-[11px] font-bold text-center leading-tight">
+                  {vehicle.driverIncluded ? "With Driver" : "Self Drive"}
+                </span>
               </div>
             </div>
-            
+
             {/* Action Buttons (translateZ: 30px) */}
             <div className="flex gap-2.5 mt-auto [transform:translateZ(30px)]">
-              {/* 1-Tap Direct WhatsApp Booking */}
+              {/* Instant WhatsApp 1-Tap Booking */}
               <a
                 href={directWhatsAppUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-[1.2] flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white font-extrabold text-xs uppercase tracking-wider shadow-md hover:shadow-green-500/20 active:scale-[0.98] transition-all"
+                className="flex-[1.3] flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white font-extrabold text-xs uppercase tracking-wider shadow-md hover:shadow-green-500/25 active:scale-[0.98] transition-all"
               >
-                <FaWhatsapp size={16} />
-                <span>WhatsApp</span>
+                <FaWhatsapp size={17} />
+                <span>Book WhatsApp</span>
               </a>
 
-              {/* View Details — navigates to the car's detail page */}
+              {/* View Details Page */}
               <Link href={`/fleet/${vehicle.slug}`} className="flex-1" passHref>
-                <Button variant="secondary" className="w-full text-xs py-2.5 bg-slate-800/80 hover:bg-slate-700/80 text-white border-white/10">
-                  Details
-                </Button>
+                <button
+                  type="button"
+                  className="w-full h-full flex items-center justify-center gap-1 py-3 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs uppercase tracking-wider shadow-sm transition-all active:scale-[0.98] cursor-pointer"
+                >
+                  <span>Details</span>
+                  <ArrowRight size={13} />
+                </button>
               </Link>
             </div>
 
             {/* Quick Custom Booking Option */}
             <button
+              type="button"
               onClick={() => setIsPopupOpen(true)}
-              className="w-full text-center text-[11px] text-slate-400 hover:text-accent-primary mt-2.5 font-medium transition-colors cursor-pointer"
+              className="w-full text-center text-[11px] text-slate-500 hover:text-amber-600 mt-2.5 font-semibold transition-colors cursor-pointer"
             >
-              Need custom dates? <span className="underline font-semibold">Open booking form</span>
+              Need custom dates or outstation? <span className="underline font-bold text-slate-800 hover:text-amber-600">Quick Booking Form</span>
             </button>
           </div>
         </motion.div>
       </Card3DTilt>
 
-      {/* WhatsApp Booking Popup — appears when "Book Now" is clicked */}
+      {/* WhatsApp Booking Popup */}
       <WhatsAppBookingPopup
         isOpen={isPopupOpen}
         onClose={() => setIsPopupOpen(false)}
