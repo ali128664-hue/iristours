@@ -12,9 +12,9 @@
     "diesel": {
       "name": "High-Speed Diesel (Hi-Cetane Euro 5)",
       "price": 395.2,
-      "previousPrice": 402.96,
-      "change": -7.76,
-      "changePercent": -1.93,
+      "previousPrice": 395.2,
+      "change": 0,
+      "changePercent": 0,
       "unit": "L",
       "status": "verified"
     },
@@ -58,21 +58,21 @@
   "meta": {
     "effectiveFrom": "2026-11-03",
     "nextExpectedRevision": "October 01, 2026",
-    "lastChecked": "2026-11-03T00:51:51.986Z",
+    "lastChecked": "2026-11-03T13:59:37.060Z",
     "source": "OilPrices.pk (Live OGRA Notified Feed)",
     "isLiveVerified": true
   },
   "exchangeRates": {
     "base": "USD",
-    "lastUpdated": "2026-11-03T00:51:51.373Z",
+    "lastUpdated": "2026-11-03T13:59:36.171Z",
     "rates": {
       "USD": 1,
-      "PKR": 276.733456,
+      "PKR": 276.692206,
       "AED": 3.6725,
       "SAR": 3.75,
-      "GBP": 0.746906,
-      "CAD": 1.396839,
-      "EUR": 0.896073,
+      "GBP": 0.745737,
+      "CAD": 1.39809,
+      "EUR": 0.893269,
       "INR": 95.252751,
       "CNY": 6.706494,
       "AUD": 1.433021,
@@ -90,7 +90,7 @@
       "flag": "🇵🇰",
       "petrolLocal": 374.51,
       "dieselLocal": 395.2,
-      "petrolUsd": 1.353,
+      "petrolUsd": 1.354,
       "dieselUsd": 1.428
     },
     {
