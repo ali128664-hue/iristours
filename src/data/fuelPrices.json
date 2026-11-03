@@ -2,19 +2,19 @@
   "pakistan": {
     "petrol": {
       "name": "Petrol (Premier Euro 5)",
-      "price": 374.51,
-      "previousPrice": 294.08,
-      "change": 80.43,
-      "changePercent": 27.35,
+      "price": 369.06,
+      "previousPrice": 374.51,
+      "change": -5.45,
+      "changePercent": -1.46,
       "unit": "L",
       "status": "verified"
     },
     "diesel": {
       "name": "High-Speed Diesel (Hi-Cetane Euro 5)",
-      "price": 395.2,
+      "price": 391.52,
       "previousPrice": 395.2,
-      "change": 0,
-      "changePercent": 0,
+      "change": -3.68,
+      "changePercent": -0.93,
       "unit": "L",
       "status": "verified"
     },
@@ -56,15 +56,15 @@
     }
   },
   "meta": {
-    "effectiveFrom": "2026-11-03",
+    "effectiveFrom": "2026-11-04",
     "nextExpectedRevision": "October 01, 2026",
-    "lastChecked": "2026-11-03T13:59:37.060Z",
+    "lastChecked": "2026-11-03T23:10:26.611Z",
     "source": "OilPrices.pk (Live OGRA Notified Feed)",
     "isLiveVerified": true
   },
   "exchangeRates": {
     "base": "USD",
-    "lastUpdated": "2026-11-03T13:59:36.171Z",
+    "lastUpdated": "2026-11-03T23:10:25.782Z",
     "rates": {
       "USD": 1,
       "PKR": 276.692206,
@@ -88,10 +88,10 @@
       "code": "PK",
       "currency": "PKR",
       "flag": "🇵🇰",
-      "petrolLocal": 374.51,
-      "dieselLocal": 395.2,
-      "petrolUsd": 1.354,
-      "dieselUsd": 1.428
+      "petrolLocal": 369.06,
+      "dieselLocal": 391.52,
+      "petrolUsd": 1.334,
+      "dieselUsd": 1.415
     },
     {
       "country": "United Arab Emirates",
