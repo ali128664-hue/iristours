@@ -58,21 +58,21 @@
   "meta": {
     "effectiveFrom": "2026-11-07",
     "nextExpectedRevision": "October 01, 2026",
-    "lastChecked": "2026-11-07T21:42:10.718Z",
+    "lastChecked": "2026-11-08T13:11:16.454Z",
     "source": "OilPrices.pk (Live OGRA Notified Feed)",
     "isLiveVerified": true
   },
   "exchangeRates": {
     "base": "USD",
-    "lastUpdated": "2026-11-07T21:42:09.765Z",
+    "lastUpdated": "2026-11-08T13:11:15.848Z",
     "rates": {
       "USD": 1,
-      "PKR": 276.456593,
+      "PKR": 276.577812,
       "AED": 3.6725,
       "SAR": 3.75,
-      "GBP": 0.747719,
-      "CAD": 1.409999,
-      "EUR": 0.896118,
+      "GBP": 0.747473,
+      "CAD": 1.409364,
+      "EUR": 0.895793,
       "INR": 95.252751,
       "CNY": 6.706494,
       "AUD": 1.433021,
@@ -90,7 +90,7 @@
       "flag": "🇵🇰",
       "petrolLocal": 346,
       "dieselLocal": 378,
-      "petrolUsd": 1.252,
+      "petrolUsd": 1.251,
       "dieselUsd": 1.367
     },
     {
