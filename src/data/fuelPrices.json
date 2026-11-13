@@ -2,10 +2,10 @@
   "pakistan": {
     "petrol": {
       "name": "Petrol (Premier Euro 5)",
-      "price": 332,
-      "previousPrice": 335,
-      "change": -3,
-      "changePercent": -0.9,
+      "price": 330,
+      "previousPrice": 332,
+      "change": -2,
+      "changePercent": -0.6,
       "unit": "L",
       "status": "verified"
     },
@@ -38,7 +38,7 @@
     },
     "kerosene": {
       "name": "Kerosene Oil (SKO)",
-      "price": 308.52,
+      "price": 283.64,
       "previousPrice": 347.32,
       "change": 41.82,
       "changePercent": 12.04,
@@ -56,15 +56,15 @@
     }
   },
   "meta": {
-    "effectiveFrom": "2026-11-13",
+    "effectiveFrom": "2026-11-14",
     "nextExpectedRevision": "October 01, 2026",
-    "lastChecked": "2026-11-13T14:26:19.208Z",
+    "lastChecked": "2026-11-13T23:27:04.182Z",
     "source": "OilPrices.pk (Live OGRA Notified Feed)",
     "isLiveVerified": true
   },
   "exchangeRates": {
     "base": "USD",
-    "lastUpdated": "2026-11-13T14:26:18.648Z",
+    "lastUpdated": "2026-11-13T23:27:03.507Z",
     "rates": {
       "USD": 1,
       "PKR": 276.622899,
@@ -88,9 +88,9 @@
       "code": "PK",
       "currency": "PKR",
       "flag": "🇵🇰",
-      "petrolLocal": 332,
+      "petrolLocal": 330,
       "dieselLocal": 360,
-      "petrolUsd": 1.2,
+      "petrolUsd": 1.193,
       "dieselUsd": 1.301
     },
     {
