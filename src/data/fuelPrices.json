@@ -58,13 +58,13 @@
   "meta": {
     "effectiveFrom": "2026-11-14",
     "nextExpectedRevision": "October 01, 2026",
-    "lastChecked": "2026-11-14T13:22:12.092Z",
+    "lastChecked": "2026-11-14T22:14:32.628Z",
     "source": "OilPrices.pk (Live OGRA Notified Feed)",
     "isLiveVerified": true
   },
   "exchangeRates": {
     "base": "USD",
-    "lastUpdated": "2026-11-14T13:22:11.412Z",
+    "lastUpdated": "2026-11-14T22:14:32.387Z",
     "rates": {
       "USD": 1,
       "PKR": 276.595456,
