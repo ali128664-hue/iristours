@@ -1,259 +1,233 @@
 "use client";
 
-import { useState, useEffect } from "react";
+/**
+ * Navbar.tsx — top navigation on every page (اوپر والا مینو)
+ *
+ * Desktop: logo, menu with Fleet / Services dropdowns, phone, PKR/USD switch, WhatsApp.
+ * Mobile:  logo, call button and a menu button that opens a full-screen menu.
+ *
+ * HOW TO CHANGE:
+ *  - Menu items → edit FLEET_LINKS, SERVICE_LINKS and MAIN_LINKS below
+ *  - Phone / WhatsApp → src/lib/site.ts
+ */
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ChevronRight, ChevronDown, Globe, Phone } from "lucide-react";
+import { Menu, X, ChevronDown, Phone } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import clsx from "clsx";
 import Logo from "@/components/ui/Logo";
-import serviceAreas from "@/data/serviceAreas.json";
 import { useCurrency } from "@/context/CurrencyContext";
+import { PHONE, whatsappLink } from "@/lib/site";
 
-const navLinks = [
-  { name: "Home", href: "/" },
-  { name: "Fleet", href: "/fleet" },
-  { name: "Fuel Prices", href: "/fuel-prices-pakistan" },
-  { name: "Airport", href: "/services/airport-transfer" },
-  { name: "Wedding", href: "/services/wedding-cars" },
-  { name: "Tours", href: "/tours", mobileOnly: true },
-  { name: "Areas", href: "/areas" },
-  { name: "Blog", href: "/blog" },
-  { name: "About", href: "/about" },
-  { name: "Contact", href: "/contact", mobileOnly: true },
+const FLEET_LINKS = [
+  { name: "All cars", href: "/fleet" },
+  { name: "Economy", href: "/fleet?category=Economy" },
+  { name: "Sedans", href: "/fleet?category=Sedan" },
+  { name: "SUVs and 4x4", href: "/fleet?category=SUV" },
+  { name: "Luxury", href: "/fleet?category=Luxury" },
+  { name: "Vans and coasters", href: "/fleet?category=Van" },
 ];
 
+const SERVICE_LINKS = [
+  { name: "All services", href: "/services" },
+  { name: "Airport transfer", href: "/services/airport-transfer" },
+  { name: "Wedding cars", href: "/services/wedding-cars" },
+  { name: "Corporate rentals", href: "/services/corporate-rentals" },
+  { name: "Northern tours", href: "/tours" },
+];
+
+const MAIN_LINKS = [
+  { name: "Areas", href: "/areas" },
+  { name: "Fuel prices", href: "/fuel-prices-pakistan" },
+  { name: "Blog", href: "/blog" },
+  { name: "About", href: "/about" },
+  { name: "Contact", href: "/contact" },
+];
+
+const BOOK_URL = whatsappLink("Hi Iris Tours! I want to book a car.");
+
+function Dropdown({ label, links, active }: { label: string; links: { name: string; href: string }[]; active: boolean }) {
+  return (
+    <div className="relative group">
+      <button
+        type="button"
+        aria-haspopup="true"
+        className={clsx(
+          "flex items-center gap-1 py-2 text-[15px] font-medium transition-colors",
+          active ? "text-text-primary" : "text-slate-600 hover:text-text-primary group-focus-within:text-text-primary"
+        )}
+      >
+        {label}
+        <ChevronDown size={15} className="transition-transform group-hover:rotate-180 group-focus-within:rotate-180" />
+        {active && <span className="absolute -bottom-[3px] left-0 right-5 h-[2px] rounded-full bg-brand-orange" />}
+      </button>
+      <div className="absolute left-1/2 top-full -translate-x-1/2 pt-3 opacity-0 invisible translate-y-1 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 transition-all duration-150">
+        <div className="w-56 rounded-2xl border border-border-primary bg-white p-2 shadow-[0_18px_40px_-12px_rgba(21,22,26,0.25)]">
+          {links.map((l) => (
+            <Link key={l.href} href={l.href} className="block rounded-xl px-3.5 py-2.5 text-[15px] text-slate-700 hover:bg-slate-100 hover:text-text-primary transition-colors">
+              {l.name}
+            </Link>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const pathname = usePathname();
+  const [open, setOpen] = useState(false);
+  const pathname = usePathname() || "/";
   const { currency, toggleCurrency } = useCurrency();
 
+  // Close the mobile menu after navigating
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 40);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  useEffect(() => {
-    setIsMobileMenuOpen(false);
+    setOpen(false);
   }, [pathname]);
 
+  // Lock page scroll while the mobile menu is open; Esc closes it
+  useEffect(() => {
+    if (!open) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
+    window.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = prev;
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [open]);
+
+  const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href));
+
   return (
-    <header
-      className={clsx(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out border-b",
-        "bg-white/90 backdrop-blur-xl border-slate-200/80 shadow-[0_4px_20px_-4px_rgba(15,23,42,0.06)]",
-        isScrolled ? "py-3.5 shadow-md" : "py-5"
-      )}
-    >
-      <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
-        {/* Logo */}
-        <Link href="/" className="z-50">
-          <Logo width={150} height={50} />
+    <header className="fixed inset-x-0 top-0 z-50 h-[72px] border-b border-border-primary bg-white/95 backdrop-blur-md">
+      <div className="container mx-auto flex h-full items-center justify-between gap-6 px-5 md:px-12">
+        <Link href="/" aria-label="Iris Tours home" className="flex-shrink-0">
+          <Logo width={132} height={44} />
         </Link>
 
-        {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-7">
-          {navLinks.filter((link) => !("mobileOnly" in link)).map((link) => {
-            if (link.name === "Fleet") {
-              return (
-                <div key="fleet-dropdown" className="relative group">
-                  <div className="flex items-center gap-1 cursor-pointer py-4 group">
-                    <Link
-                      href="/fleet"
-                      className={clsx(
-                        "relative text-[15px] font-bold tracking-wide transition-colors pb-1",
-                        pathname.startsWith("/fleet") ? "text-amber-600" : "text-slate-700 group-hover:text-amber-600"
-                      )}
-                    >
-                      Fleet
-                      <span className={clsx(
-                        "absolute -bottom-0 left-0 w-0 h-[2px] bg-amber-500 transition-all duration-300 group-hover:w-full",
-                        pathname.startsWith("/fleet") && "w-full"
-                      )} />
-                    </Link>
-                    <ChevronDown size={14} className="text-slate-400 group-hover:text-amber-600 transition-colors mt-[-4px]" />
-                  </div>
-                  
-                  {/* Dropdown Menu */}
-                  <div className="absolute top-full left-1/2 -translate-x-1/2 w-48 bg-white/98 backdrop-blur-xl border border-slate-200/90 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 flex flex-col overflow-hidden">
-                    <Link href="/fleet?category=Luxury" className="px-4 py-3 text-sm font-semibold text-slate-800 hover:bg-slate-50 hover:text-amber-600 transition-colors border-b border-slate-100">Luxury Cars</Link>
-                    <Link href="/fleet?category=SUV" className="px-4 py-3 text-sm font-semibold text-slate-800 hover:bg-slate-50 hover:text-amber-600 transition-colors border-b border-slate-100">SUVs &amp; 4x4</Link>
-                    <Link href="/fleet?category=Sedan" className="px-4 py-3 text-sm font-semibold text-slate-800 hover:bg-slate-50 hover:text-amber-600 transition-colors border-b border-slate-100">Sedans</Link>
-                    <Link href="/fleet?category=Economy" className="px-4 py-3 text-sm font-semibold text-slate-800 hover:bg-slate-50 hover:text-amber-600 transition-colors border-b border-slate-100">Economy</Link>
-                    <Link href="/fleet?category=Van" className="px-4 py-3 text-sm font-semibold text-slate-800 hover:bg-slate-50 hover:text-amber-600 transition-colors">Vans &amp; Coasters</Link>
-                  </div>
-                </div>
-              );
-            }
-            if (link.name === "Areas") {
-              const cities = Array.from(new Set(serviceAreas.map(a => a.city)));
-              return (
-                <div key="areas-dropdown" className="relative group">
-                  <div className="flex items-center gap-1 cursor-pointer py-4 group">
-                    <Link
-                      href="/areas"
-                      className={clsx(
-                        "relative text-[15px] font-bold tracking-wide transition-colors pb-1",
-                        pathname.startsWith("/areas") ? "text-amber-600" : "text-slate-700 group-hover:text-amber-600"
-                      )}
-                    >
-                      Service Areas
-                      <span className={clsx(
-                        "absolute -bottom-0 left-0 w-0 h-[2px] bg-amber-500 transition-all duration-300 group-hover:w-full",
-                        pathname.startsWith("/areas") && "w-full"
-                      )} />
-                    </Link>
-                    <ChevronDown size={14} className="text-slate-400 group-hover:text-amber-600 transition-colors mt-[-4px]" />
-                  </div>
-                  
-                  {/* Mega Menu Dropdown */}
-                  <div className="absolute top-full left-1/2 -translate-x-1/2 w-64 bg-white/98 backdrop-blur-xl border border-slate-200/90 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 flex flex-col overflow-hidden max-h-[80vh] overflow-y-auto" data-lenis-prevent>
-                    {cities.map(city => (
-                      <Link key={city} href={`/areas#${city}`} className="px-4 py-3 text-[14px] font-semibold text-slate-800 hover:bg-slate-50 hover:text-amber-600 transition-colors border-b border-slate-100 last:border-0">
-                        {city}
-                      </Link>
-                    ))}
-                    <Link href="/areas" className="px-4 py-3 text-xs font-bold text-amber-700 bg-amber-50 hover:bg-amber-100 transition-colors text-center sticky bottom-0 border-t border-slate-200">
-                      View All 200+ Areas
-                    </Link>
-                  </div>
-                </div>
-              );
-            }
-            return (
-              <Link
-                key={link.name}
-                href={link.href}
-                className={clsx(
-                  "relative text-[15px] font-bold tracking-wide transition-colors pb-1 group",
-                  pathname === link.href ? "text-amber-600" : "text-slate-700 hover:text-amber-600"
-                )}
-              >
-                {link.name}
-                <span className={clsx(
-                  "absolute -bottom-0 left-0 w-0 h-[2px] bg-amber-500 transition-all duration-300 group-hover:w-full",
-                  pathname === link.href && "w-full"
-                )} />
-              </Link>
-            );
-          })}
+        {/* Desktop menu */}
+        <nav aria-label="Main" className="hidden lg:flex items-center gap-7">
+          <Dropdown label="Fleet" links={FLEET_LINKS} active={isActive("/fleet")} />
+          <Dropdown label="Services" links={SERVICE_LINKS} active={isActive("/services") || isActive("/tours")} />
+          {MAIN_LINKS.map((l) => (
+            <Link
+              key={l.href}
+              href={l.href}
+              className={clsx(
+                "relative py-2 text-[15px] font-medium transition-colors",
+                isActive(l.href) ? "text-text-primary" : "text-slate-600 hover:text-text-primary"
+              )}
+            >
+              {l.name}
+              {isActive(l.href) && <span className="absolute -bottom-[3px] left-0 right-0 h-[2px] rounded-full bg-brand-orange" />}
+            </Link>
+          ))}
         </nav>
 
-        {/* Desktop Actions */}
-        <div className="hidden lg:flex items-center gap-3">
-          <a 
-            href="tel:+923154973906"
-            className="flex items-center gap-2 px-3.5 py-2 rounded-full border border-slate-200/90 bg-white hover:bg-slate-50 text-slate-800 hover:text-amber-600 font-bold text-xs tracking-wide transition-all shadow-sm"
-            title="Call Us Directly"
-          >
-            <Phone size={13} className="text-amber-600" />
-            <span>0315-4973906</span>
-          </a>
-
-          <button 
+        {/* Desktop actions */}
+        <div className="hidden lg:flex items-center gap-2">
+          <button
+            type="button"
             onClick={toggleCurrency}
-            className="flex items-center gap-1.5 px-3 py-2 rounded-full border border-slate-200/90 bg-white hover:bg-slate-50 transition-colors text-xs font-bold text-slate-800 shadow-sm cursor-pointer"
-            title="Toggle Currency"
+            title="Show prices in PKR or USD"
+            className="rounded-full px-3 py-2 text-sm font-semibold text-slate-600 hover:bg-slate-100 hover:text-text-primary transition-colors"
           >
-            <Globe size={14} className="text-slate-500" />
-            {currency === 'PKR' ? 'PKR' : 'USD'}
+            {currency}
           </button>
-
-          <Link
-            href="https://wa.me/923154973906?text=Hi!%20I%20want%20to%20book%20a%20car."
+          <a href={`tel:${PHONE.tel}`} className="hidden xl:inline-flex items-center gap-2 rounded-full px-3 py-2 text-sm font-semibold text-text-primary hover:bg-slate-100 transition-colors">
+            <Phone size={15} className="text-accent-primary" />
+            {PHONE.display}
+          </a>
+          <a
+            href={BOOK_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-5 py-2.5 rounded-full bg-gradient-to-r from-amber-600 to-amber-500 text-white font-extrabold text-xs uppercase tracking-wider hover:brightness-105 transition-all shadow-md shadow-amber-500/25 active:scale-95 inline-block"
+            className="inline-flex items-center gap-2 rounded-full bg-brand-ink px-5 py-2.5 text-sm font-semibold text-white hover:bg-brand-orange hover:text-brand-ink transition-colors"
           >
-            Book via WhatsApp
-          </Link>
+            <FaWhatsapp size={17} />
+            Book on WhatsApp
+          </a>
         </div>
 
-        {/* Mobile Header Actions */}
-        <div className="lg:hidden flex items-center gap-2">
-          <a
-            href="tel:+923154973906"
-            className="p-2 rounded-full bg-amber-50 text-amber-600 hover:bg-amber-100 transition-colors"
-            aria-label="Call Directly"
-          >
-            <Phone size={18} />
+        {/* Mobile actions */}
+        <div className="flex lg:hidden items-center gap-1.5">
+          <a href={`tel:${PHONE.tel}`} aria-label={`Call ${PHONE.display}`} className="flex h-11 w-11 items-center justify-center rounded-full text-text-primary hover:bg-slate-100">
+            <Phone size={20} />
           </a>
           <button
-            className="text-slate-800 p-2"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle Menu"
+            type="button"
+            onClick={() => setOpen((v) => !v)}
+            aria-expanded={open}
+            aria-controls="mobile-menu"
+            aria-label={open ? "Close menu" : "Open menu"}
+            className="flex h-11 w-11 items-center justify-center rounded-full bg-slate-100 text-text-primary"
           >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {open ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      <AnimatePresence>
-        {isMobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -20, height: 0 }}
-            animate={{ opacity: 1, y: 0, height: "auto" }}
-            exit={{ opacity: 0, y: -20, height: 0 }}
-            transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
-            className="absolute top-full left-0 right-0 bg-white/98 backdrop-blur-xl border-b border-slate-200 lg:hidden shadow-[0_20px_40px_-15px_rgba(15,23,42,0.1)] overflow-hidden"
-          >
-            <div className="flex flex-col px-6 py-8 gap-1 max-h-[80vh] overflow-y-auto" data-lenis-prevent>
-              {navLinks.map((link, i) => (
-                <motion.div
-                  key={link.name}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
-                  transition={{ delay: i * 0.05, duration: 0.3 }}
-                >
-                  <Link
-                    href={link.href}
-                    className={clsx(
-                      "flex items-center justify-between py-4 border-b border-slate-100 last:border-0",
-                      "text-base font-bold tracking-wide uppercase transition-all duration-300",
-                      pathname === link.href 
-                        ? "text-amber-600 pl-2" 
-                        : "text-slate-700 hover:text-amber-600 hover:pl-2"
-                    )}
-                  >
-                    <span>{link.name}</span>
-                    <ChevronRight size={18} className={pathname === link.href ? "text-amber-600" : "text-slate-300"} />
-                  </Link>
-                </motion.div>
-              ))}
-              
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 10 }}
-                transition={{ delay: navLinks.length * 0.05 + 0.1, duration: 0.3 }}
-                className="mt-6 flex flex-col gap-4"
-              >
-                <button 
-                  onClick={toggleCurrency}
-                  className="w-full flex items-center justify-center gap-2 px-6 py-4 rounded-xl border border-slate-200 hover:bg-slate-50 text-slate-800 font-bold text-sm uppercase tracking-wider transition-all"
-                >
-                  <Globe size={18} className="text-slate-500" />
-                  Switch to {currency === 'PKR' ? 'USD' : 'PKR'}
-                </button>
-                <Link
-                  href="https://wa.me/923154973906?text=Hi!%20I%20want%20to%20book%20a%20car."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-gradient-to-r from-amber-600 to-amber-500 text-white font-extrabold text-sm uppercase tracking-wider shadow-md shadow-amber-500/25 transition-all active:scale-[0.98]"
-                >
-                  Book via WhatsApp
+      {/* Mobile menu */}
+      {open && (
+        <div id="mobile-menu" className="lg:hidden fixed inset-x-0 top-[72px] bottom-0 overflow-y-auto bg-white" data-lenis-prevent>
+          <nav aria-label="Mobile" className="container mx-auto px-5 pt-4 pb-32">
+            <p className="px-1 pb-2 pt-2 text-sm font-semibold text-slate-500">Cars</p>
+            <div className="grid grid-cols-2 gap-2">
+              {FLEET_LINKS.map((l) => (
+                <Link key={l.href} href={l.href} className="rounded-xl border border-border-primary px-4 py-3 text-[15px] font-medium text-text-primary active:bg-slate-100">
+                  {l.name}
                 </Link>
-              </motion.div>
+              ))}
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+
+            <p className="px-1 pb-2 pt-6 text-sm font-semibold text-slate-500">Services</p>
+            <ul className="divide-y divide-border-primary rounded-xl border border-border-primary">
+              {SERVICE_LINKS.slice(1).map((l) => (
+                <li key={l.href}>
+                  <Link href={l.href} className="block px-4 py-3.5 text-base font-medium text-text-primary active:bg-slate-100">
+                    {l.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            <ul className="mt-6 divide-y divide-border-primary rounded-xl border border-border-primary">
+              {[{ name: "Home", href: "/" }, ...MAIN_LINKS, { name: "Northern tours", href: "/tours" }, { name: "FAQ", href: "/faq" }].map((l) => (
+                <li key={l.href}>
+                  <Link
+                    href={l.href}
+                    className={clsx("block px-4 py-3.5 text-base font-medium active:bg-slate-100", isActive(l.href) ? "text-accent-primary" : "text-text-primary")}
+                  >
+                    {l.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            <button
+              type="button"
+              onClick={toggleCurrency}
+              className="mt-6 w-full rounded-xl border border-border-primary px-4 py-3.5 text-left text-base font-medium text-text-primary"
+            >
+              Prices shown in {currency}. Switch to {currency === "PKR" ? "USD" : "PKR"}
+            </button>
+
+            <div className="mt-6 grid grid-cols-1 gap-3">
+              <a href={BOOK_URL} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 rounded-full bg-[#25D366] py-4 text-base font-semibold text-white">
+                <FaWhatsapp size={20} />
+                Book on WhatsApp
+              </a>
+              <a href={`tel:${PHONE.tel}`} className="flex items-center justify-center gap-2 rounded-full border border-border-primary py-4 text-base font-semibold text-text-primary">
+                <Phone size={18} className="text-accent-primary" />
+                Call {PHONE.display}
+              </a>
+            </div>
+          </nav>
+        </div>
+      )}
     </header>
   );
 }

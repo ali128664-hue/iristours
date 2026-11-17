@@ -50,12 +50,12 @@ export default function BlogPost() {
   };
 
   return (
-    <div className="bg-bg-primary min-h-screen pt-32 pb-20">
+    <div className="bg-bg-primary min-h-screen pt-8 pb-16 md:pt-12 md:pb-20">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
-      <div className="container mx-auto px-6 max-w-4xl">
+      <div className="container mx-auto px-5 max-w-3xl">
         {/* Breadcrumb */}
         <div className="flex items-center gap-2 text-xs text-text-secondary mb-6">
           <Link href="/" className="hover:text-accent-primary">Home</Link>
@@ -72,10 +72,10 @@ export default function BlogPost() {
         <img 
           src="/blog/bahria-dha.jpg" 
           alt="A modern high-end sedan parked on a wide street in Bahria Town Lahore near the Eiffel Tower replica" 
-          className="w-full h-[400px] object-cover rounded-3xl mb-10 shadow-lg"
+          className="w-full h-56 md:h-[420px] object-cover rounded-3xl mb-10 shadow-lg"
         />
 
-        <div className="prose prose-invert prose-p:text-text-secondary prose-headings:text-text-primary max-w-none">
+        <div className="article-body  prose-p:text-text-secondary prose-headings:text-text-primary max-w-none">
           <p className="text-lg leading-relaxed">
             Living in or visiting the upscale neighborhoods of South Lahore means you expect a certain standard of service. When you are looking to <strong>rent a car in Bahria Town Lahore</strong> or need immediate transport in DHA, you shouldn't have to wait hours for an unreliable cab to arrive from the other side of the city.
           </p>

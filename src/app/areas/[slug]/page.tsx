@@ -1,11 +1,14 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Link from "next/link";
-import { MapPin, PhoneCall, ShieldCheck, Clock, CheckCircle2, HelpCircle, Phone, ChevronRight } from "lucide-react";
-import { FaWhatsapp } from "react-icons/fa";
+import { ChevronDown, Check } from "lucide-react";
+import PageHeader, { HeaderButtons } from "@/components/ui/PageHeader";
+import { Section, SectionHeading } from "@/components/ui/Section";
+import CtaBand from "@/components/ui/CtaBand";
+import { PHONE, whatsappLink } from "@/lib/site";
 import serviceAreas from "@/data/serviceAreas.json";
 import fleetData from "@/data/fleet.json";
 import VehicleCard from "@/components/fleet/VehicleCard";
+import Link from "next/link";
 import RichText from "@/components/ui/RichText";
 
 // Generate static params so Next.js pre-builds all 200+ area pages for lightning-fast SEO
@@ -58,7 +61,10 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
   if (!area) notFound();
 
   // Pick top 6 cars to showcase
-  const showcaseCars = fleetData.slice(0, 6);
+  const showcaseCars = ["toyota-yaris", "toyota-corolla-altis-1-6", "honda-civic", "toyota-fortuner", "toyota-land-cruiser-prado", "toyota-hiace-grand-cabin"]
+    .map((s) => fleetData.find((v) => v.slug === s))
+    .filter((v): v is (typeof fleetData)[number] => Boolean(v));
+  const nearby = serviceAreas.filter((a) => a.group === area.group && a.slug !== area.slug).slice(0, 12);
 
   // Localized FAQs for Google Rich Snippets & User Convenience
   const localFaqs = [
@@ -145,201 +151,89 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
     }
   };
 
-  const whatsappInquiryUrl = `https://wa.me/923154973906?text=${encodeURIComponent(
-    `Hi Iris Tours! 🚗 I am looking for a rental car in ${area.name}. Please share available vehicles and rates.`
-  )}`;
+  const whatsappInquiryUrl = whatsappLink(`Hi Iris Tours! I am looking for a rental car in ${area.name}. Please share available cars and rates.`);
 
   return (
     <>
-      {/* Structured Data Schemas for SEO Ranking & Rich Snippets */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
+
+      <PageHeader
+        title={`Rent a car in ${area.name}`}
+        intro={`Chauffeur-driven cars delivered to your door in ${area.name.split(",")[0]}, any time of day.`}
+        crumbs={[{ label: "Areas", href: "/areas" }, { label: area.name.split(",")[0] }]}
+        actions={<HeaderButtons whatsappHref={whatsappInquiryUrl} phoneHref={`tel:${PHONE.tel}`} phoneLabel={PHONE.display} />}
       />
 
-      <div className="bg-bg-primary min-h-screen pb-20">
-        {/* Hero Section */}
-        <div className="relative min-h-[380px] flex items-center justify-center overflow-hidden border-b border-border-primary py-16 bg-gradient-to-b from-white to-bg-secondary">
-          <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-            {/* Breadcrumb UI */}
-            <nav aria-label="Breadcrumb" className="inline-flex items-center gap-1.5 text-xs text-text-secondary mb-4 bg-white/80 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-border-primary shadow-xs">
-              <Link href="/" className="hover:text-accent-primary transition-colors">Home</Link>
-              <ChevronRight size={12} />
-              <Link href="/areas" className="hover:text-accent-primary transition-colors">Areas</Link>
-              <ChevronRight size={12} />
-              <span className="text-text-primary font-semibold">{area.city}</span>
-            </nav>
-
-            <div className="block mb-4">
-              <span className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-accent-primary/10 border border-accent-primary/20 text-accent-secondary font-bold text-xs uppercase tracking-wider">
-                <MapPin size={15} className="text-accent-primary" />
-                <span>Verified Service Area: {area.name}</span>
-              </span>
-            </div>
-            
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-text-primary mb-5 tracking-tight leading-tight">
-              Rent a Car in <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-primary to-accent-secondary">{area.name}</span>
-            </h1>
-
-            <p className="text-text-secondary text-lg max-w-2xl mx-auto mb-8 font-medium">
-              Premium chauffeur-driven car rental and tour mobility solutions in {area.name}, {area.city}. 24/7 on-demand doorstep service.
-            </p>
-
-            {/* Instant Action CTA inside Hero */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a
-                href={whatsappInquiryUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white font-extrabold text-sm uppercase tracking-wider shadow-lg shadow-green-500/25 active:scale-[0.99] transition-all"
-              >
-                <FaWhatsapp size={18} />
-                <span>WhatsApp Instant Quote</span>
-              </a>
-
-              <a
-                href="tel:+923154973906"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-white border border-border-primary hover:border-accent-primary text-text-primary font-bold text-sm tracking-wide shadow-sm transition-all"
-              >
-                <Phone size={16} className="text-accent-primary" />
-                <span>Call Chauffeur Desk: 0315-4973906</span>
-              </a>
+      <Section>
+        <div className="grid gap-10 lg:grid-cols-12 lg:gap-12">
+          <div className="lg:col-span-7">
+            <h2 className="text-3xl">Car rental in {area.name.split(",")[0]}</h2>
+            <RichText text={area.description} className="mt-5 text-[17px] text-text-secondary" />
+          </div>
+          <div className="lg:col-span-5">
+            <div className="rounded-3xl bg-brand-ink p-6 text-white md:p-7">
+              <p className="text-lg font-semibold">Every booking includes</p>
+              <ul className="mt-4 space-y-3">
+                {["Doorstep pickup and drop", "Professional, background-checked driver", "Clean car with working AC", "Support on WhatsApp, 24 hours"].map((i) => (
+                  <li key={i} className="flex items-start gap-2.5 text-white/85">
+                    <Check size={18} className="mt-0.5 flex-shrink-0 text-brand-orange" aria-hidden="true" />
+                    {i}
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
+      </Section>
 
-        {/* Local Fast Delivery Callout Strip */}
-        <div className="bg-accent-primary/10 border-y border-accent-primary/20 py-3.5 px-6 text-center">
-          <p className="text-xs md:text-sm font-bold text-text-primary flex items-center justify-center gap-2">
-            <span className="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse" />
-            <span>Need a luxury SUV or economy car delivered to <strong>{area.name}</strong> within 30 minutes? Call our 24/7 dispatch desk.</span>
-          </p>
-        </div>
-
-        <div className="container mx-auto px-6 mt-16">
-          
-          {/* SEO Content Section — 100% Original Content Preserved */}
-          <div className="max-w-4xl mx-auto mb-20 bg-bg-secondary p-8 md:p-12 rounded-3xl border border-border-primary shadow-sm prose prose-invert prose-p:text-text-secondary prose-headings:text-text-primary">
-            <h2 className="text-3xl font-bold mb-6">Why Rent a Car in {area.name} with Us?</h2>
-            <RichText text={area.description} className="text-lg text-text-secondary mb-6" />
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 not-prose">
-              <div className="flex flex-col items-center text-center p-5 bg-white/70 rounded-2xl border border-border-primary/80">
-                <div className="w-12 h-12 rounded-full bg-accent-primary/10 flex items-center justify-center mb-4">
-                  <Clock className="text-accent-primary" size={24} />
-                </div>
-                <h3 className="font-bold text-text-primary mb-2 text-base">Prompt 30-Min Service</h3>
-                <p className="text-xs text-text-secondary">Rapid doorstep pickup and drop-off anywhere in {area.name}.</p>
-              </div>
-              <div className="flex flex-col items-center text-center p-5 bg-white/70 rounded-2xl border border-border-primary/80">
-                <div className="w-12 h-12 rounded-full bg-accent-primary/10 flex items-center justify-center mb-4">
-                  <ShieldCheck className="text-accent-primary" size={24} />
-                </div>
-                <h3 className="font-bold text-text-primary mb-2 text-base">Safe & Verified Drivers</h3>
-                <p className="text-xs text-text-secondary">Fully vetted, background-checked professional chauffeurs.</p>
-              </div>
-              <div className="flex flex-col items-center text-center p-5 bg-white/70 rounded-2xl border border-border-primary/80">
-                <div className="w-12 h-12 rounded-full bg-accent-primary/10 flex items-center justify-center mb-4">
-                  <PhoneCall className="text-accent-primary" size={24} />
-                </div>
-                <h3 className="font-bold text-text-primary mb-2 text-base">24/7 Live Support</h3>
-                <p className="text-xs text-text-secondary">Always accessible on WhatsApp for immediate bookings.</p>
-              </div>
+      <Section tone="white">
+        <SectionHeading title={`Cars available in ${area.name.split(",")[0]}`} action={{ href: "/fleet", label: `All ${fleetData.length} cars` }} />
+        <div className="-mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-4 scrollbar-hide md:mx-0 md:grid md:grid-cols-2 md:gap-6 md:overflow-visible md:px-0 lg:grid-cols-3">
+          {showcaseCars.map((vehicle) => (
+            <div key={vehicle.id} className="w-[84%] flex-shrink-0 snap-start sm:w-[60%] md:w-auto">
+              <VehicleCard vehicle={vehicle} />
             </div>
-          </div>
+          ))}
+        </div>
+      </Section>
 
-          {/* Fleet Showcase */}
-          <div className="mb-14 text-center">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-text-primary mb-3">
-              Available Vehicles for Rent in {area.name}
-            </h2>
-            <p className="text-text-secondary max-w-xl mx-auto">
-              Choose from our diverse fleet of premium SUVs, luxury sedans, and economical family cars.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {showcaseCars.map(vehicle => (
-              <VehicleCard key={vehicle.id} vehicle={vehicle} />
+      <Section>
+        <div className="grid gap-8 lg:grid-cols-12 lg:gap-12">
+          <h2 className="text-3xl md:text-[2.6rem] lg:col-span-4">Questions about {area.name.split(",")[0]}</h2>
+          <div className="divide-y divide-border-primary border-y border-border-primary lg:col-span-8">
+            {localFaqs.map((faq) => (
+              <details key={faq.q} className="group py-1">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-4 text-base md:text-lg font-semibold text-text-primary [&::-webkit-details-marker]:hidden">
+                  {faq.q}
+                  <ChevronDown size={20} className="flex-shrink-0 text-slate-400 transition-transform group-open:rotate-180" aria-hidden="true" />
+                </summary>
+                <p className="pb-5 pr-8 leading-relaxed text-text-secondary">{faq.a}</p>
+              </details>
             ))}
           </div>
-
-          <div className="text-center mb-20">
-            <Link 
-              href="/fleet" 
-              className="inline-block px-8 py-4 bg-bg-secondary border border-border-primary rounded-2xl text-text-primary font-bold hover:border-accent-primary hover:text-accent-primary transition-all shadow-sm"
-            >
-              Explore Our Full Vehicle Fleet
-            </Link>
-          </div>
-
-          {/* Local Area FAQs Section (Matches FAQ Schema for SEO Rich Results) */}
-          <div className="max-w-4xl mx-auto mb-20">
-            <div className="text-center mb-10">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-accent-primary/10 text-accent-secondary font-bold text-xs uppercase tracking-wider mb-3">
-                <HelpCircle size={14} className="text-accent-primary" />
-                <span>Frequently Asked Questions</span>
-              </div>
-              <h2 className="text-2xl md:text-3xl font-extrabold text-text-primary">
-                Common Questions About Car Rental in {area.name}
-              </h2>
-            </div>
-
-            <div className="space-y-4">
-              {localFaqs.map((faq, idx) => (
-                <div key={idx} className="bg-bg-secondary border border-border-primary rounded-2xl p-6 shadow-sm">
-                  <h3 className="text-base md:text-lg font-bold text-text-primary mb-2 flex items-start gap-2.5">
-                    <CheckCircle2 size={18} className="text-accent-primary mt-1 flex-shrink-0" />
-                    <span>{faq.q}</span>
-                  </h3>
-                  <p className="text-sm text-text-secondary leading-relaxed pl-7">
-                    {faq.a}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Bottom High-Converting Action Box */}
-          <div className="max-w-4xl mx-auto bg-gradient-to-r from-bg-secondary to-white border border-border-primary rounded-3xl p-8 md:p-12 text-center shadow-lg">
-            <h3 className="text-2xl md:text-3xl font-extrabold text-text-primary mb-3">
-              Ready to Book Your Ride in {area.name}?
-            </h3>
-            <p className="text-text-secondary text-sm md:text-base max-w-xl mx-auto mb-8">
-              Contact Iris Tours now for instant confirmation, immaculate vehicles, and professional chauffeurs delivered right to your doorstep.
-            </p>
-
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a
-                href={whatsappInquiryUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white font-extrabold text-sm uppercase tracking-wider shadow-lg shadow-green-500/25 transition-all"
-              >
-                <FaWhatsapp size={20} />
-                <span>Chat on WhatsApp</span>
-              </a>
-
-              <a
-                href="tel:+923154973906"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-text-primary hover:bg-black text-white font-bold text-sm tracking-wide transition-all"
-              >
-                <Phone size={16} />
-                <span>Call Directly: +92 315 4973906</span>
-              </a>
-            </div>
-          </div>
-
         </div>
-      </div>
+      </Section>
+
+      {nearby.length > 0 && (
+        <Section tone="white">
+          <SectionHeading title={`Nearby in ${area.group}`} action={{ href: "/areas", label: "All areas" }} />
+          <ul className="flex flex-wrap gap-2">
+            {nearby.map((a) => (
+              <li key={a.slug}>
+                <Link href={`/areas/${a.slug}`} className="inline-block rounded-full border border-border-primary bg-bg-primary px-4 py-2 text-[15px] text-text-primary hover:border-brand-orange transition-colors">
+                  {a.name.split(",")[0]}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </Section>
+      )}
+
+      <Section>
+        <CtaBand title={`Need a car in ${area.name.split(",")[0]}?`} text="Send your pickup time and destination on WhatsApp and we will confirm the car and price." message={`Hi Iris Tours! I need a car in ${area.name}.`} />
+      </Section>
     </>
   );
 }

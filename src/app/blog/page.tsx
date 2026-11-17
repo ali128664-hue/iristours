@@ -1,5 +1,8 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
+import PageHeader from "@/components/ui/PageHeader";
+import { Section } from "@/components/ui/Section";
 import blogs from "@/data/blogs.json";
 
 export const metadata: Metadata = {
@@ -32,54 +35,49 @@ export const metadata: Metadata = {
 };
 
 export default function BlogIndex() {
+  const [first, ...rest] = blogs;
   return (
-    <div className="bg-bg-primary min-h-screen pt-32 pb-20">
-      <div className="container mx-auto px-6 max-w-6xl">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-accent-primary/10 border border-accent-primary/20 text-accent-primary text-xs font-bold uppercase tracking-widest mb-4">
-            Travel Guides & Insights
-          </span>
-          <h1 className="text-4xl md:text-5xl font-extrabold text-text-primary tracking-tight mb-4">
-            Car Rental & Travel Guides in Pakistan
-          </h1>
-          <p className="text-text-secondary text-lg">
-            Practical advice, car rental price guides, and northern Pakistan travel itineraries curated by our local chauffeurs and road experts.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {blogs.map((blog) => (
-            <Link
-              key={blog.slug}
-              href={`/blog/${blog.slug}`}
-              className="group block bg-bg-secondary rounded-2xl overflow-hidden border border-border-primary hover:border-accent-primary hover:shadow-xl transition-all duration-300 flex flex-col"
-            >
-              <div className="h-56 overflow-hidden flex-shrink-0 relative">
-                <img
-                  src={blog.img}
-                  alt={blog.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute bottom-3 right-3 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-md text-[11px] font-semibold text-white">
-                  {blog.readingTime || "5 min read"}
-                </div>
-              </div>
-              <div className="p-6 flex flex-col flex-grow">
-                <h2 className="text-xl font-bold text-text-primary mb-3 group-hover:text-accent-primary transition-colors leading-snug">
-                  {blog.title}
-                </h2>
-                <p className="text-text-secondary text-sm flex-grow leading-relaxed">
-                  {blog.desc}
-                </p>
-                <div className="mt-5 pt-4 border-t border-border-primary/60 flex items-center justify-between text-accent-primary font-semibold text-sm">
-                  <span>Read Article</span>
-                  <span>→</span>
-                </div>
-              </div>
-            </Link>
+    <>
+      <PageHeader
+        title="Car rental and travel guides"
+        intro="Rates, routes and road conditions in Lahore, Islamabad and the north, written by our drivers and team."
+        crumbs={[{ label: "Blog" }]}
+      />
+      <Section>
+        {first && (
+          <Link href={`/blog/${first.slug}`} className="group mb-8 grid overflow-hidden rounded-3xl border border-border-primary bg-white md:mb-10 lg:grid-cols-2">
+            <span className="relative block aspect-[16/9] lg:aspect-auto lg:min-h-[340px]">
+              <Image src={first.img} alt="" fill priority sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
+            </span>
+            <span className="flex flex-col justify-center p-6 md:p-10">
+              <span className="text-sm text-text-secondary">{first.readingTime || "5 min read"}</span>
+              <span className="mt-2 text-2xl font-semibold leading-tight text-text-primary group-hover:text-accent-primary md:text-3xl" style={{ fontFamily: "var(--font-display)" }}>
+                {first.title}
+              </span>
+              <span className="mt-3 leading-relaxed text-text-secondary">{first.desc}</span>
+              <span className="mt-5 font-semibold text-text-primary">Read the guide</span>
+            </span>
+          </Link>
+        )}
+        <ul className="grid gap-5 md:grid-cols-2 lg:grid-cols-3 md:gap-6">
+          {rest.map((blog) => (
+            <li key={blog.slug}>
+              <Link href={`/blog/${blog.slug}`} className="group flex h-full flex-col overflow-hidden rounded-3xl border border-border-primary bg-white">
+                <span className="relative block aspect-[16/10] overflow-hidden bg-slate-200">
+                  <Image src={blog.img} alt="" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
+                </span>
+                <span className="flex flex-1 flex-col p-5 md:p-6">
+                  <span className="text-sm text-text-secondary">{blog.readingTime || "5 min read"}</span>
+                  <span className="mt-1.5 text-xl font-semibold leading-snug text-text-primary group-hover:text-accent-primary" style={{ fontFamily: "var(--font-display)" }}>
+                    {blog.title}
+                  </span>
+                  <span className="mt-2 line-clamp-3 text-[15px] leading-relaxed text-text-secondary">{blog.desc}</span>
+                </span>
+              </Link>
+            </li>
           ))}
-        </div>
-      </div>
-    </div>
+        </ul>
+      </Section>
+    </>
   );
 }

@@ -1,108 +1,67 @@
-"use client";
+/**
+ * FeaturedFleet.tsx — "Pick your car" on the homepage.
+ * Phones: swipe sideways through the cars. Desktop: grid of six.
+ *
+ * HOW TO CHANGE: edit FEATURED_SLUGS (slugs from src/data/fleet.json)
+ */
 
-import { useRef } from "react";
-import { motion } from "framer-motion";
 import Link from "next/link";
-import { Button } from "@/components/ui/Button";
 import VehicleCard from "@/components/fleet/VehicleCard";
+import { Section, SectionHeading } from "@/components/ui/Section";
 import fleetData from "@/data/fleet.json";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+
+const FEATURED_SLUGS = [
+  "toyota-yaris",
+  "toyota-corolla-altis-1-6",
+  "honda-civic",
+  "toyota-fortuner",
+  "toyota-land-cruiser-prado",
+  "toyota-hiace-grand-cabin",
+];
+
+const CATEGORIES = [
+  { label: "Economy", value: "Economy" },
+  { label: "Sedans", value: "Sedan" },
+  { label: "SUVs", value: "SUV" },
+  { label: "Luxury", value: "Luxury" },
+  { label: "Vans", value: "Van" },
+];
 
 export default function FeaturedFleet() {
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
-
-  const scrollLeft = () => {
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({ left: -400, behavior: "smooth" });
-    }
-  };
-
-  const scrollRight = () => {
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({ left: 400, behavior: "smooth" });
-    }
-  };
+  const featured = FEATURED_SLUGS.map((s) => fleetData.find((v) => v.slug === s)).filter(
+    (v): v is (typeof fleetData)[number] => Boolean(v)
+  );
 
   return (
-    <section className="py-24 bg-slate-50/50 backdrop-blur-md relative overflow-hidden">
-      <div className="container mx-auto px-6 md:px-12">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-          <div className="max-w-2xl">
-            <motion.h2 
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-4"
-            >
-              Our Complete Fleet
-            </motion.h2>
-            <motion.p 
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="text-slate-600 text-lg font-medium"
-            >
-              Experience the pinnacle of automotive engineering. Swipe or click through our premium collection to find your perfect ride.
-            </motion.p>
-          </div>
-          
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="flex items-center gap-4"
-          >
-            <div className="flex gap-2 mr-4">
-              <button 
-                onClick={scrollLeft}
-                className="w-12 h-12 rounded-full border border-slate-200 bg-white/90 backdrop-blur-md flex items-center justify-center text-slate-800 hover:bg-amber-500 hover:text-white hover:border-amber-500 transition-colors shadow-sm cursor-pointer"
-                aria-label="Scroll left"
-              >
-                <ChevronLeft size={24} />
-              </button>
-              <button 
-                onClick={scrollRight}
-                className="w-12 h-12 rounded-full border border-slate-200 bg-white/90 backdrop-blur-md flex items-center justify-center text-slate-800 hover:bg-amber-500 hover:text-white hover:border-amber-500 transition-colors shadow-sm cursor-pointer"
-                aria-label="Scroll right"
-              >
-                <ChevronRight size={24} />
-              </button>
-            </div>
-            <Link href="/fleet" className="hidden sm:block">
-              <Button variant="secondary" className="bg-slate-900 hover:bg-slate-800 text-white font-bold">View Full Fleet</Button>
-            </Link>
-          </motion.div>
-        </div>
+    <Section>
+      <SectionHeading
+        title="Pick your car"
+        intro="Every car comes with a professional driver and a clear daily rate."
+        action={{ href: "/fleet", label: `See all ${fleetData.length} cars` }}
+      />
 
-        {/* Carousel Container */}
-        <div className="relative -mx-4 sm:-mx-6 md:-mx-12 px-4 sm:px-6 md:px-12 w-[calc(100%+2rem)] sm:w-[calc(100%+3rem)] md:w-[calc(100%+6rem)] overflow-hidden">
-          <div 
-            ref={scrollContainerRef}
-            className="flex gap-4 sm:gap-6 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-8 pt-4 px-1"
-            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-          >
-            {fleetData.map((vehicle) => (
-              <div key={vehicle.id} className="w-[84vw] max-w-[360px] sm:w-[350px] md:w-[380px] snap-center sm:snap-start flex-shrink-0">
-                <VehicleCard vehicle={vehicle} />
-              </div>
-            ))}
-          </div>
-        </div>
-        
-        <div className="mt-8 text-center sm:hidden">
-            <Link href="/fleet">
-              <Button variant="secondary" className="w-full bg-slate-900 text-white font-bold">View Full Fleet</Button>
+      <div className="-mx-5 mb-6 flex gap-2 overflow-x-auto px-5 pb-1 scrollbar-hide md:mx-0 md:px-0" aria-label="Browse by type">
+        {CATEGORIES.map((c) => {
+          const count = fleetData.filter((v) => v.category === c.value).length;
+          return (
+            <Link
+              key={c.value}
+              href={`/fleet?category=${c.value}`}
+              className="flex-shrink-0 rounded-full border border-border-primary bg-white px-4 py-2 text-[15px] font-medium text-text-primary hover:border-slate-400 transition-colors"
+            >
+              {c.label} <span className="text-slate-400">{count}</span>
             </Link>
-        </div>
+          );
+        })}
       </div>
 
-      {/* Hide scrollbar styles for Webkit */}
-      <style dangerouslySetInnerHTML={{__html: `
-        .hide-scrollbar::-webkit-scrollbar {
-          display: none;
-        }
-      `}} />
-    </section>
+      <div className="-mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-4 scrollbar-hide md:mx-0 md:grid md:grid-cols-2 md:gap-6 md:overflow-visible md:px-0 lg:grid-cols-3">
+        {featured.map((vehicle) => (
+          <div key={vehicle.id} className="w-[84%] flex-shrink-0 snap-start sm:w-[60%] md:w-auto">
+            <VehicleCard vehicle={vehicle} />
+          </div>
+        ))}
+      </div>
+    </Section>
   );
 }

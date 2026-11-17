@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import PageHeader from "@/components/ui/PageHeader";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | Iris Tours Pakistan",
@@ -31,13 +32,11 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicyPage() {
   return (
-    <div className="bg-bg-primary min-h-screen pt-32 pb-20">
-      <div className="container mx-auto px-6 md:px-12 max-w-4xl">
-        <h1 className="text-4xl md:text-5xl font-bold text-text-primary mb-8 tracking-tight">
-          Privacy <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-primary to-accent-secondary">Policy</span>
-        </h1>
-
-        <div className="prose prose-invert max-w-none prose-p:text-text-secondary prose-headings:text-text-primary prose-a:text-accent-primary">
+    <>
+    <PageHeader title="Privacy policy" crumbs={[{ label: "Privacy policy" }]} />
+    <div className="bg-bg-primary pt-10 pb-20 md:pt-14">
+      <div className="container mx-auto px-5 max-w-3xl">
+        <div className="article-body">
           <p className="text-lg mb-8">
             Last Updated: {new Date().toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}
           </p>
@@ -108,5 +107,6 @@ export default function PrivacyPolicyPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

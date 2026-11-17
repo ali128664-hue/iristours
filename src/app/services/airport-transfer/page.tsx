@@ -1,7 +1,6 @@
 import { Metadata } from "next";
-import { Plane, Clock, ShieldCheck, MapPin } from "lucide-react";
-import { Button } from "@/components/ui/Button";
-import Link from "next/link";
+import ServicePage from "@/components/services/ServicePage";
+import { Section, SectionHeading } from "@/components/ui/Section";
 
 export const metadata: Metadata = {
   title: "Airport Transfer Lahore | 24/7 Allama Iqbal Airport Car Rental - Iris Tours",
@@ -32,111 +31,49 @@ export const metadata: Metadata = {
   },
 };
 
-const airports = [
-  { name: "Allama Iqbal Int. Airport", code: "LHE", city: "Lahore" },
-  { name: "Islamabad Int. Airport", code: "ISB", city: "Islamabad" },
-  { name: "Jinnah Int. Airport", code: "KHI", city: "Karachi" },
-  { name: "Multan Int. Airport", code: "MUX", city: "Multan" },
-  { name: "Sialkot Int. Airport", code: "SKT", city: "Sialkot" },
-  { name: "Peshawar Int. Airport", code: "PEW", city: "Peshawar" },
+const AIRPORTS = [
+  { name: "Allama Iqbal International Airport", code: "LHE", city: "Lahore" },
+  { name: "Islamabad International Airport", code: "ISB", city: "Islamabad" },
+  { name: "Multan International Airport", code: "MUX", city: "Multan" },
+  { name: "Sialkot International Airport", code: "SKT", city: "Sialkot" },
+  { name: "Jinnah International Airport", code: "KHI", city: "Karachi" },
+  { name: "Peshawar International Airport", code: "PEW", city: "Peshawar" },
 ];
 
 export default function AirportTransferPage() {
   return (
-    <div className="bg-bg-primary min-h-screen">
-      {/* Hero */}
-      <div className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden border-b border-border-primary">
-        <div className="absolute inset-0 z-0">
-          <img
-            src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1920&auto=format&fit=crop"
-            alt="Airport Transfer"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-bg-primary/90 via-bg-primary/50 to-bg-primary" />
-        </div>
-        
-        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto mt-20">
-          <Plane className="w-16 h-16 text-accent-primary mx-auto mb-6 opacity-80" />
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-text-primary mb-6 tracking-tight leading-tight">
-            Premium Airport <br/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-primary to-blue-400">Transfers Across Pakistan</span>
-          </h1>
-          <p className="text-text-secondary text-lg mb-8">
-            Professional Drivers • Flight Tracking • 24/7 Service • Luxury Vehicles
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="https://wa.me/923154973906?text=Hi%20Iris%20Tours!%20I%20need%20an%20urgent%20Airport%20Transfer." target="_blank" rel="noopener noreferrer">
-              <Button variant="primary" className="px-8 py-4 font-bold shadow-lg shadow-amber-500/25">Book on WhatsApp</Button>
-            </a>
-            <a href="tel:+923154973906">
-              <Button variant="secondary" className="px-8 py-4 font-bold">Call: 0315-4973906</Button>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      {/* Services Content */}
-      <div className="container mx-auto px-6 md:px-12 py-24">
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
-          <div className="bg-bg-secondary p-8 rounded-3xl border border-border-primary text-center">
-            <Clock size={40} className="text-accent-primary mx-auto mb-6" />
-            <h3 className="text-2xl font-bold text-text-primary mb-4">Punctuality Guaranteed</h3>
-            <p className="text-text-secondary leading-relaxed">
-              We track your flight in real-time. Whether you arrive early or late, your chauffeur will be waiting.
-            </p>
-          </div>
-          <div className="bg-bg-secondary p-8 rounded-3xl border border-border-primary text-center">
-            <ShieldCheck size={40} className="text-accent-primary mx-auto mb-6" />
-            <h3 className="text-2xl font-bold text-text-primary mb-4">VIP Meet & Greet</h3>
-            <p className="text-text-secondary leading-relaxed">
-              Your chauffeur will meet you at the arrivals hall with a personalized name board and assist with luggage.
-            </p>
-          </div>
-          <div className="bg-bg-secondary p-8 rounded-3xl border border-border-primary text-center">
-            <Plane size={40} className="text-accent-primary mx-auto mb-6" />
-            <h3 className="text-2xl font-bold text-text-primary mb-4">All Major Airports</h3>
-            <p className="text-text-secondary leading-relaxed">
-              Operating seamlessly across Lahore, Islamabad, Karachi, and other major hubs in Pakistan.
-            </p>
-          </div>
-        </div>
-
-        {/* Covered Airports */}
-        <div className="mb-24">
-          <h2 className="text-3xl md:text-5xl font-bold text-text-primary mb-12 text-center">Airports We Serve</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {airports.map((airport, idx) => (
-              <div key={idx} className="bg-bg-card p-6 rounded-2xl border border-border-primary flex items-center gap-4 hover:border-accent-primary transition-colors cursor-pointer group">
-                <div className="bg-bg-primary w-16 h-16 rounded-xl flex items-center justify-center border border-border-primary flex-shrink-0 group-hover:bg-accent-primary/20 transition-colors">
-                  <span className="text-xl font-bold text-text-primary group-hover:text-accent-primary">{airport.code}</span>
-                </div>
-                <div>
-                  <h4 className="text-lg font-bold text-text-primary mb-1">{airport.name}</h4>
-                  <p className="text-text-secondary text-sm flex items-center gap-1"><MapPin size={14}/> {airport.city}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* CTA */}
-        <div className="bg-accent-primary/10 rounded-3xl p-12 text-center border border-accent-primary/20">
-          <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-6">Need a ride from the airport?</h2>
-          <p className="text-text-secondary text-lg mb-8 max-w-2xl mx-auto">
-            Book your premium airport transfer today. Skip the taxi lines and travel in ultimate comfort.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="https://wa.me/923154973906?text=I%20need%20an%20airport%20transfer" target="_blank" rel="noopener noreferrer">
-              <Button variant="primary">Book on WhatsApp</Button>
-            </a>
-            <Link href="/fleet">
-              <Button variant="secondary">View Our Fleet</Button>
-            </Link>
-          </div>
-        </div>
-
-      </div>
-    </div>
+    <ServicePage
+      crumb="Airport transfer"
+      title="Airport pickup and drop in Lahore and Islamabad"
+      intro="Your driver waits at arrivals with your name on a board, tracks your flight and helps with luggage. Available 24 hours, for one-way or return trips."
+      whatsappMessage="Hi Iris Tours! I need an airport transfer. Flight number:"
+      features={[
+        { title: "We track your flight", text: "Arriving early or late, the driver adjusts to your actual landing time at no extra cost." },
+        { title: "Meet and greet at arrivals", text: "A uniformed driver meets you with a name board and helps with your bags to the car." },
+        { title: "60 minutes free waiting", text: "Immigration and baggage take time. The first hour of waiting on pickups is free." },
+        { title: "Any time, day or night", text: "Early morning and late-night flights are covered. Book on WhatsApp at any hour." },
+        { title: "Room for your luggage", text: "Sedans for two, SUVs and Hiace vans for families and groups with lots of bags." },
+        { title: "Clear price before you travel", text: "We confirm the fare on WhatsApp when you book, so there are no hidden charges." },
+      ]}
+      carSlugs={["toyota-corolla-altis-1-6", "honda-civic", "toyota-fortuner", "toyota-land-cruiser-prado", "toyota-hiace-grand-cabin", "mercedes-benz-c-class-c180"]}
+      carsTitle="Cars for airport transfers"
+      carsIntro="Pick by the number of passengers and bags."
+      cta={{ title: "Landing soon?", text: "Send your flight number, date and drop-off address on WhatsApp and we will confirm your driver." }}
+    >
+      <Section tone="white">
+        <SectionHeading title="Airports we cover" />
+        <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {AIRPORTS.map((a) => (
+            <li key={a.code} className="flex items-center gap-4 rounded-2xl border border-border-primary bg-bg-primary p-4">
+              <span className="flex h-12 w-14 flex-shrink-0 items-center justify-center rounded-xl bg-brand-ink font-semibold text-white">{a.code}</span>
+              <span>
+                <span className="block font-semibold text-text-primary">{a.name}</span>
+                <span className="block text-sm text-text-secondary">{a.city}</span>
+              </span>
+            </li>
+          ))}
+        </ul>
+      </Section>
+    </ServicePage>
   );
 }

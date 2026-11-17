@@ -186,13 +186,13 @@ export default function RentACarInLahoreBlog() {
   ];
 
   return (
-    <div className="bg-bg-primary min-h-screen pt-32 pb-20">
+    <div className="bg-bg-primary min-h-screen pt-8 pb-16 md:pt-12 md:pb-20">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
       />
 
-      <div className="container mx-auto px-6 max-w-4xl">
+      <div className="container mx-auto px-5 max-w-3xl">
         {/* Breadcrumb Navigation */}
         <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-text-secondary mb-6">
           <Link href="/" className="hover:text-accent-primary transition-colors">Home</Link>
@@ -261,7 +261,7 @@ export default function RentACarInLahoreBlog() {
         </aside>
 
         {/* Main Content Body */}
-        <article className="prose prose-invert prose-p:text-text-secondary prose-headings:text-text-primary prose-strong:text-text-primary max-w-none">
+        <article className="article-body  prose-p:text-text-secondary prose-headings:text-text-primary prose-strong:text-text-primary max-w-none">
           <p className="text-base sm:text-lg leading-relaxed">
             Lahore, the pulsating cultural and economic heartbeat of Pakistan, is a city of grand boulevards, historic alleys, sprawling business centers, and vibrant food streets. Whether you are landing at <Link href="/services/airport-transfer" className="text-accent-primary hover:underline">Allama Iqbal International Airport (LHE)</Link> for a corporate conference, hosting relatives for an extravagant Punjabi wedding, or embarking on a scenic family road trip up the M-2 Motorway, having dependable personal transportation is indispensable.
           </p>

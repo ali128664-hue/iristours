@@ -1,43 +1,27 @@
-import Link from 'next/link';
-import { CarFront, MapPinOff } from 'lucide-react';
-import { Button } from '@/components/ui/Button';
+import Link from "next/link";
+import { FaWhatsapp } from "react-icons/fa";
+import { whatsappLink } from "@/lib/site";
 
 export default function NotFound() {
   return (
-    <div className="min-h-[80vh] flex items-center justify-center bg-bg-primary relative overflow-hidden">
-      {/* Decorative background effects */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-accent-primary/5 rounded-full blur-[100px] pointer-events-none" />
-      
-      <div className="text-center px-6 relative z-10">
-        <div className="relative inline-block mb-6 mt-16">
-          <h1 className="text-9xl font-black text-text-primary/5">404</h1>
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="relative">
-              <CarFront size={72} className="text-text-primary" />
-              <MapPinOff size={32} className="text-accent-primary absolute -bottom-2 -right-2 bg-bg-primary rounded-full p-1 border border-border-primary" />
-            </div>
-          </div>
-        </div>
-        
-        <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">
-          Looks like this road is closed.
-        </h2>
-        
-        <p className="text-text-secondary text-lg max-w-md mx-auto mb-10">
-          The page you are looking for doesn't exist, has been moved, or is temporarily unavailable. Let's get you back on track.
+    <div className="bg-bg-primary">
+      <div className="container mx-auto flex min-h-[70vh] flex-col items-start justify-center px-5 py-16 md:px-12">
+        <p className="font-semibold text-accent-primary">Error 404</p>
+        <h1 className="mt-3 max-w-2xl text-4xl md:text-6xl">This page took a wrong turn.</h1>
+        <p className="mt-4 max-w-xl text-lg text-text-secondary">
+          The page you are looking for has moved or no longer exists. Try the fleet or the homepage, or message us and we will help.
         </p>
-        
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Link href="/">
-            <Button variant="primary" className="w-full sm:w-auto px-8">
-              Return Home
-            </Button>
+        <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+          <Link href="/fleet" className="inline-flex items-center justify-center rounded-full bg-brand-orange px-7 py-3.5 font-semibold text-brand-ink hover:bg-brand-ink hover:text-white transition-colors">
+            See cars and rates
           </Link>
-          <Link href="/fleet">
-            <Button variant="secondary" className="w-full sm:w-auto px-8">
-              View Our Fleet
-            </Button>
+          <Link href="/" className="inline-flex items-center justify-center rounded-full border border-border-primary px-7 py-3.5 font-semibold text-text-primary hover:border-slate-400 transition-colors">
+            Go to homepage
           </Link>
+          <a href={whatsappLink("Hi Iris Tours! I could not find a page on your website.")} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full px-5 py-3.5 font-semibold text-text-primary hover:text-accent-primary">
+            <FaWhatsapp size={18} className="text-[#25D366]" />
+            Ask on WhatsApp
+          </a>
         </div>
       </div>
     </div>

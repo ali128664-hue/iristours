@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import PageHeader from "@/components/ui/PageHeader";
 import {
   Fuel,
   ChevronRight,
@@ -193,139 +194,48 @@ export default async function FuelPricesPage({ searchParams }: PageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <div className="bg-bg-primary min-h-screen pt-24 md:pt-28 pb-0">
-        {/* Real-time Ticker Bar */}
-        <div className="bg-gradient-to-r from-neutral-900 via-neutral-800 to-neutral-900 text-white py-2.5 px-4 border-b border-neutral-700/60 shadow-inner">
-          <div className="container mx-auto flex items-center justify-between gap-6 overflow-x-auto scrollbar-hide text-xs">
-            <div className="flex items-center gap-3 whitespace-nowrap">
-              <span className="flex h-2.5 w-2.5 relative">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-              </span>
-              <span className="font-black uppercase tracking-wider text-amber-400">
-                LIVE FUEL INDEX
-              </span>
-              <span className="text-neutral-400">•</span>
-              <span className="text-neutral-300">
-                Petrol: <strong className="text-white">Rs. {petrol.price.toFixed(2)}/L</strong>{" "}
-                <span className="text-emerald-400">({petrol.change < 0 ? petrol.change.toFixed(2) : `+${petrol.change.toFixed(2)}`})</span>
-              </span>
-              <span className="text-neutral-400">•</span>
-              <span className="text-neutral-300">
-                Diesel: <strong className="text-white">Rs. {diesel.price.toFixed(2)}/L</strong>{" "}
-                <span className="text-emerald-400">({diesel.change < 0 ? diesel.change.toFixed(2) : `+${diesel.change.toFixed(2)}`})</span>
-              </span>
-              <span className="text-neutral-400">•</span>
-              <span className="text-neutral-300">
-                Hi-Octane: <strong className="text-white">Rs. {fuelData.pakistan.hiOctane.price.toFixed(2)}/L</strong>
-              </span>
-              <span className="text-neutral-400">•</span>
-              <span className="text-neutral-300">
-                LPG: <strong className="text-white">Rs. {fuelData.pakistan.lpg.price.toFixed(2)}/kg</strong>
-              </span>
-            </div>
-
-            <div className="hidden lg:flex items-center gap-3 text-neutral-400 whitespace-nowrap">
-              <span>USD/PKR: <strong className="text-white">{usdPkr.toFixed(2)}</strong></span>
-              <span>•</span>
-              <span className="text-emerald-400 font-medium">Synced via OilPrices.pk &amp; OGRA</span>
-            </div>
-          </div>
-        </div>
-
-        {/* Breadcrumb Navigation */}
-        <div className="container mx-auto px-4 md:px-8 lg:px-12 my-6">
-          <nav className="flex items-center gap-2 text-xs font-semibold text-text-secondary">
-            <Link href="/" className="hover:text-accent-primary transition-colors">
-              Home
-            </Link>
-            <ChevronRight size={14} />
-            <span className="text-text-primary">Fuel Prices &amp; Calculator</span>
+      <div className="bg-bg-primary min-h-screen pb-0">
+        <PageHeader
+          title="Petrol and diesel prices in Pakistan today"
+          intro={`Official rates effective ${effectiveDate}, checked automatically twice a day. Use the calculator below to work out the fuel cost of any trip in our cars.`}
+          crumbs={[{ label: "Fuel prices" }]}
+        >
+          <dl className="mt-7 grid grid-cols-2 gap-3 sm:grid-cols-4 lg:max-w-3xl">
+            {[
+              { label: "Petrol", value: petrol.price, unit: "L", change: petrol.change },
+              { label: "Diesel", value: diesel.price, unit: "L", change: diesel.change },
+              { label: "Hi-Octane", value: fuelData.pakistan.hiOctane.price, unit: "L", change: null },
+              { label: "LPG", value: fuelData.pakistan.lpg.price, unit: "kg", change: null },
+            ].map((f) => (
+              <div key={f.label} className="rounded-2xl border border-white/15 bg-white/5 p-4">
+                <dt className="text-sm text-white/65">{f.label}</dt>
+                <dd className="mt-1">
+                  <span className="text-xl font-semibold text-white sm:text-2xl">Rs. {f.value.toFixed(2)}</span>
+                  <span className="text-sm text-white/60"> /{f.unit}</span>
+                  {typeof f.change === "number" && f.change !== 0 && (
+                    <span className={`block text-sm ${f.change < 0 ? "text-emerald-400" : "text-rose-400"}`}>
+                      {f.change < 0 ? "Down" : "Up"} Rs. {Math.abs(f.change).toFixed(2)}
+                    </span>
+                  )}
+                </dd>
+              </div>
+            ))}
+          </dl>
+          <nav aria-label="On this page" className="mt-6 flex flex-wrap gap-2">
+            {[
+              ["#calculator", "Trip fuel calculator"],
+              ["#compare", "Compare two cars"],
+              ["#history", "Price history"],
+              ["#international", "Other countries"],
+            ].map(([href, label]) => (
+              <a key={href} href={href} className="rounded-full border border-white/20 px-4 py-2 text-sm font-medium text-white/85 hover:border-white hover:text-white transition-colors">
+                {label}
+              </a>
+            ))}
           </nav>
-        </div>
-
-        {/* Hero Section */}
-        <section className="container mx-auto px-4 md:px-8 lg:px-12 mb-16">
-          <div className="relative overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-bg-secondary via-white to-amber-50/60 border border-border-primary p-8 md:p-14 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.08)]">
-            {/* Background luxury ambient glow */}
-            <div className="absolute -right-20 -top-20 w-96 h-96 bg-accent-primary/10 rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute -left-20 -bottom-20 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
-
-            <div className="relative z-10 max-w-4xl">
-              {/* Badge */}
-              <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white border border-border-primary shadow-xs mb-6 flex-wrap">
-                <span className="relative flex h-2.5 w-2.5">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-                </span>
-                <span className="text-xs font-black uppercase tracking-wider text-text-primary">
-                  Official Notification w.e.f. {effectiveDate}
-                </span>
-                <span className="text-text-secondary text-xs">•</span>
-                <span className="text-xs font-extrabold text-emerald-700 flex items-center gap-1">
-                  <ShieldCheck size={15} />
-                  Live Sync via OilPrices.pk
-                </span>
-              </div>
-
-              {/* Headline */}
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-text-primary tracking-tight leading-[1.08] mb-6 font-heading">
-                Pakistan Fuel Prices Today <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-primary via-amber-600 to-accent-secondary">
-                  &amp; Vehicle Fuel Cost Calculator
-                </span>
-              </h1>
-
-              {/* Subtitle */}
-              <p className="text-base md:text-xl text-text-secondary leading-relaxed max-w-3xl mb-8">
-                Official petrol, diesel, and LPG rates across Pakistan updated in real-time. Calculate exact trip fuel expenses for all <strong>17 Iris Tours luxury vehicles</strong>, compare fleet consumption side-by-side, and benchmark against international rates.
-              </p>
-
-              {/* Quick Navigation Pills */}
-              <div className="flex flex-wrap items-center gap-2 pt-4 border-t border-border-primary/60">
-                <span className="text-xs font-black uppercase tracking-wider text-text-secondary mr-2">
-                  Jump To:
-                </span>
-                <a
-                  href="#live-prices"
-                  className="px-4 py-2 rounded-xl bg-white border border-border-primary text-xs font-bold text-text-primary hover:border-accent-primary hover:text-accent-primary transition-all shadow-xs"
-                >
-                  Live Rates
-                </a>
-                <a
-                  href="#calculator"
-                  className="px-4 py-2 rounded-xl bg-gradient-to-r from-accent-secondary to-accent-primary text-white text-xs font-bold shadow-md shadow-accent-primary/25 hover:brightness-110 transition-all"
-                >
-                  Fuel Cost Calculator
-                </a>
-                <a
-                  href="#compare"
-                  className="px-4 py-2 rounded-xl bg-white border border-border-primary text-xs font-bold text-text-primary hover:border-accent-primary hover:text-accent-primary transition-all shadow-xs"
-                >
-                  Compare Vehicles
-                </a>
-                <a
-                  href="#international"
-                  className="px-4 py-2 rounded-xl bg-white border border-border-primary text-xs font-bold text-text-primary hover:border-accent-primary hover:text-accent-primary transition-all shadow-xs"
-                >
-                  Global Benchmarks
-                </a>
-                <a
-                  href="#history"
-                  className="px-4 py-2 rounded-xl bg-white border border-border-primary text-xs font-bold text-text-primary hover:border-accent-primary hover:text-accent-primary transition-all shadow-xs"
-                >
-                  Price History
-                </a>
-                <a
-                  href="#fleet"
-                  className="px-4 py-2 rounded-xl bg-bg-secondary border border-border-primary text-xs font-bold text-accent-primary hover:bg-white transition-all shadow-xs"
-                >
-                  Explore Fleet (17)
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
+          <p className="mt-5 text-sm text-white/50">USD/PKR {usdPkr.toFixed(2)}. Source: OilPrices.pk and OGRA notifications.</p>
+        </PageHeader>
+        <div className="pt-12 md:pt-16" />
 
         {/* Section 1: Live Rates Grid */}
         <section id="live-prices" className="container mx-auto px-4 md:px-8 lg:px-12 mb-24 scroll-mt-28">

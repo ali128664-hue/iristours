@@ -1,91 +1,25 @@
 /**
- * FloatingWhatsApp.tsx — Floating WhatsApp Button (نیچے دائیں طرف کا WhatsApp بٹن)
- *
- * This renders the fixed floating WhatsApp button visible on every page.
- * It includes:
- *  - A tooltip label ("Need Help? Chat on WhatsApp") — visible on desktop
- *  - A circular WhatsApp icon button with a pulse animation
- *
- * HOW TO CHANGE:
- *  - WhatsApp number → change the number in the `href` below (currently 923154973906)
- *  - Tooltip message → change the text inside the <span> below
+ * FloatingWhatsApp.tsx — round WhatsApp button in the bottom-right corner
+ * on tablets and desktops (phones use the bottom bar instead).
+ * WhatsApp number comes from src/lib/site.ts
  */
 
-"use client";
-
-import { motion } from "framer-motion";
-import { FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
+import { whatsappLink } from "@/lib/site";
 
 export default function FloatingWhatsApp() {
   return (
-    <div className="hidden md:flex fixed bottom-6 right-6 z-50 flex-col items-end gap-4">
-      
-      {/* Floating Phone Button */}
-      <div className="flex items-center gap-3">
-        <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 1, duration: 0.5 }}
-          className="hidden md:flex bg-bg-card border border-border-primary rounded-full px-4 py-2 shadow-lg items-center"
-        >
-          <span className="text-sm font-medium text-text-primary tracking-wide">
-            Direct Call <span className="text-accent-primary ml-1">+92 315 4973906</span>
-          </span>
-        </motion.div>
-        
-        <motion.a
-          href="tel:+923154973906"
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{
-            type: "spring",
-            stiffness: 260,
-            damping: 20,
-            delay: 0.6,
-          }}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          className="relative flex items-center justify-center w-14 h-14 bg-bg-secondary border border-border-primary rounded-full shadow-[0_0_20px_rgba(0,0,0,0.5)] text-text-primary hover:text-accent-primary transition-colors"
-          aria-label="Call directly"
-        >
-          <FaPhoneAlt size={22} />
-        </motion.a>
-      </div>
-
-      {/* Floating WhatsApp Button */}
-      <div className="flex items-center gap-3">
-        <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 1, duration: 0.5 }}
-          className="hidden md:flex bg-bg-card border border-border-primary rounded-full px-4 py-2 shadow-lg items-center"
-        >
-          <span className="text-sm font-medium text-text-primary tracking-wide">
-            Need Help? <span className="text-accent-primary ml-1">Chat on WhatsApp</span>
-          </span>
-        </motion.div>
-
-        <motion.a
-          href="https://wa.me/923154973906?text=Hi!%20I%20need%20help."
-          target="_blank"
-          rel="noopener noreferrer"
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{
-            type: "spring",
-            stiffness: 260,
-            damping: 20,
-            delay: 0.5,
-          }}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          className="relative flex items-center justify-center w-14 h-14 bg-accent-primary rounded-full shadow-[0_0_20px_rgba(22,199,158,0.5)] text-bg-primary hover:bg-white transition-colors"
-          aria-label="Contact on WhatsApp"
-        >
-          <FaWhatsapp size={28} />
-          <span className="absolute w-full h-full rounded-full bg-accent-primary opacity-50 animate-ping" style={{ animationDuration: '2s' }}></span>
-        </motion.a>
-      </div>
-    </div>
+    <a
+      href={whatsappLink("Hi Iris Tours! I need some information.")}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chat with us on WhatsApp"
+      className="group hidden md:flex fixed bottom-6 right-6 z-40 items-center gap-3 rounded-full bg-[#25D366] py-3 pl-3 pr-5 text-white shadow-[0_12px_30px_-8px_rgba(37,211,102,0.6)] hover:bg-[#1fb85a] transition-colors"
+    >
+      <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/20">
+        <FaWhatsapp size={22} />
+      </span>
+      <span className="font-semibold">Chat on WhatsApp</span>
+    </a>
   );
 }

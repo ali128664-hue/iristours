@@ -1,103 +1,88 @@
 "use client";
 
-import React from 'react';
-import { Phone, ShieldCheck, Zap, Sparkles } from 'lucide-react';
-import { FaWhatsapp } from 'react-icons/fa';
-import { useCurrency } from '@/context/CurrencyContext';
-import { convertAndFormatPrice } from '@/utils/currency';
+/**
+ * VehiclePricing.tsx — price card on the car detail page:
+ * rate table plus Book (form → WhatsApp), WhatsApp chat and Call buttons.
+ */
+
+import { useState } from "react";
+import { Phone } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
+import { useCurrency } from "@/context/CurrencyContext";
+import { convertAndFormatPrice } from "@/utils/currency";
+import WhatsAppBookingPopup from "@/components/shared/WhatsAppBookingPopup";
+import { PHONE } from "@/lib/site";
 
 interface VehiclePricingProps {
   rent: any;
   whatsappUrl: string;
+  vehicleName?: string;
+  category?: string;
 }
 
-export default function VehiclePricing({ rent, whatsappUrl }: VehiclePricingProps) {
+export default function VehiclePricing({ rent, whatsappUrl, vehicleName = "this car", category = "" }: VehiclePricingProps) {
   const { currency } = useCurrency();
-  const startingPrice = rent?.local || rent?.daily || rent?.withDriver?.local || 0;
+  const [open, setOpen] = useState(false);
+  const local = rent?.withDriver?.local || rent?.local || rent?.daily || 0;
+
+  const rows = [
+    { label: "Outside the city, per day", value: rent?.withDriver?.interCity || rent?.interCity },
+    { label: "Northern areas, per day", value: rent?.withDriver?.outstation || rent?.outstation },
+    { label: "Weekly", value: rent?.weekly },
+    { label: "Monthly", value: rent?.monthly },
+  ].filter((r) => r.value);
 
   return (
-    <div className="bg-bg-card border border-border-primary rounded-3xl p-6 shadow-xl">
-      {/* Promotional Discount Badge */}
-      <div className="mb-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gradient-to-r from-accent-primary/20 to-amber-500/10 border border-accent-primary/30 text-accent-secondary font-bold text-xs uppercase tracking-wider">
-        <Sparkles size={13} className="text-accent-primary" />
-        <span>Discount on 3+ Days Rental</span>
-      </div>
-
-      <p className="text-text-secondary text-sm font-medium mb-1">Starting from</p>
-      <div className="flex items-end gap-2 mb-6">
-        <span className="text-4xl font-extrabold text-accent-primary">
-          {convertAndFormatPrice(startingPrice, currency)}
+    <div className="rounded-3xl border border-border-primary bg-bg-primary p-5 md:p-6">
+      <p className="text-sm text-text-secondary">Within the city, with driver</p>
+      <p className="mt-1">
+        <span className="text-4xl font-semibold text-text-primary" style={{ fontFamily: "var(--font-display)" }}>
+          {convertAndFormatPrice(local, currency)}
         </span>
-        <span className="text-text-secondary mb-1">/day</span>
-      </div>
+        <span className="text-text-secondary"> / day</span>
+      </p>
 
-      {/* Detailed price breakdown */}
-      {rent && (
-        <div className="space-y-3 mb-6 bg-white/70 rounded-2xl p-4 border border-border-primary/80">
-          {(rent.withDriver?.local || rent.local) && (
-            <div className="flex justify-between items-center py-2 border-b border-border-primary">
-              <span className="text-text-secondary text-sm">Within City (Local)</span>
-              <span className="font-semibold text-text-primary">{convertAndFormatPrice(rent.withDriver?.local || rent.local, currency)}</span>
+      {rows.length > 0 && (
+        <dl className="mt-4 divide-y divide-border-primary border-y border-border-primary">
+          {rows.map((r) => (
+            <div key={r.label} className="flex justify-between gap-4 py-2.5 text-[15px]">
+              <dt className="text-text-secondary">{r.label}</dt>
+              <dd className="font-semibold text-text-primary">{convertAndFormatPrice(r.value, currency)}</dd>
             </div>
-          )}
-          {(rent.withDriver?.interCity || rent.interCity) && (
-            <div className="flex justify-between items-center py-2 border-b border-border-primary">
-              <span className="text-text-secondary text-sm">Inter-City</span>
-              <span className="font-semibold text-text-primary">{convertAndFormatPrice(rent.withDriver?.interCity || rent.interCity, currency)}</span>
-            </div>
-          )}
-          {(rent.withDriver?.outstation || rent.outstation) && (
-            <div className="flex justify-between items-center py-2 border-b border-border-primary">
-              <span className="text-text-secondary text-sm">Outstation</span>
-              <span className="font-semibold text-text-primary">{convertAndFormatPrice(rent.withDriver?.outstation || rent.outstation, currency)}</span>
-            </div>
-          )}
-          {rent.weekly && (
-            <div className="flex justify-between items-center py-2 border-b border-border-primary">
-              <span className="text-text-secondary text-sm">Weekly</span>
-              <span className="font-semibold text-text-primary">{convertAndFormatPrice(rent.weekly, currency)}</span>
-            </div>
-          )}
-          {rent.monthly && (
-            <div className="flex justify-between items-center py-2">
-              <span className="text-text-secondary text-sm">Monthly</span>
-              <span className="font-semibold text-text-primary">{convertAndFormatPrice(rent.monthly, currency)}</span>
-            </div>
-          )}
-        </div>
+          ))}
+        </dl>
       )}
+      <p className="mt-3 text-sm text-text-secondary">Discount on bookings of 3 days or more.</p>
 
-      {/* Instant Highlights */}
-      <div className="space-y-2 mb-6">
-        <div className="flex items-center gap-2 text-xs font-semibold text-text-secondary">
-          <Zap size={14} className="text-amber-500" />
-          <span>Doorstep Delivery available in Lahore</span>
-        </div>
-        <div className="flex items-center gap-2 text-xs font-semibold text-text-secondary">
-          <ShieldCheck size={14} className="text-green-600" />
-          <span>Professional driver & zero hidden fees</span>
+      <div className="mt-5 grid gap-2.5">
+        <button
+          type="button"
+          onClick={() => setOpen(true)}
+          className="rounded-full bg-brand-orange py-3.5 text-base font-semibold text-brand-ink hover:bg-brand-ink hover:text-white transition-colors"
+        >
+          Check dates and book
+        </button>
+        <div className="grid grid-cols-2 gap-2.5">
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-2 rounded-full bg-[#25D366] py-3 font-semibold text-white hover:bg-[#1fb85a] transition-colors"
+          >
+            <FaWhatsapp size={18} />
+            WhatsApp
+          </a>
+          <a
+            href={`tel:${PHONE.tel}`}
+            className="flex items-center justify-center gap-2 rounded-full border border-border-primary bg-white py-3 font-semibold text-text-primary hover:border-slate-400 transition-colors"
+          >
+            <Phone size={16} className="text-accent-primary" />
+            Call
+          </a>
         </div>
       </div>
 
-      {/* WhatsApp Booking Button */}
-      <a
-        href={whatsappUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex items-center justify-center gap-2.5 w-full bg-[#25D366] hover:bg-[#20ba59] text-white font-extrabold py-4 rounded-2xl transition-all shadow-lg shadow-green-500/25 hover:shadow-green-500/40 hover:-translate-y-0.5 active:scale-[0.99] uppercase tracking-wider text-sm"
-      >
-        <FaWhatsapp size={20} />
-        <span>Book on WhatsApp</span>
-      </a>
-
-      {/* Direct Call Button */}
-      <a
-        href="tel:+923154973906"
-        className="flex items-center justify-center gap-2.5 w-full mt-3 border border-border-primary bg-bg-secondary hover:border-accent-primary text-text-primary font-bold py-3.5 rounded-2xl transition-all shadow-sm active:scale-[0.99] text-sm"
-      >
-        <Phone size={17} className="text-accent-primary" />
-        <span>Direct Call: 0315-4973906</span>
-      </a>
+      <WhatsAppBookingPopup isOpen={open} onClose={() => setOpen(false)} productName={vehicleName} category={category} dailyPrice={local} />
     </div>
   );
 }

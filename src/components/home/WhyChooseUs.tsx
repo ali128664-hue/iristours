@@ -1,108 +1,54 @@
-"use client";
+/**
+ * WhyChooseUs.tsx — "How booking works" on the homepage:
+ * three real steps, then the four things every booking includes.
+ */
 
-import { motion } from "framer-motion";
-import { ShieldCheck, Map, Star, Award, Headset } from "lucide-react";
-import clsx from "clsx";
+import { Check } from "lucide-react";
+import { Section, SectionHeading } from "@/components/ui/Section";
 
-const features = [
-  {
-    title: "Professional Drivers",
-    description: "Highly trained, vetted, and courteous chauffeurs.",
-    icon: <ShieldCheck size={28} className="text-white" />,
-    className: "md:col-span-2 md:row-span-2 bg-gradient-to-br from-amber-500 to-amber-600 text-white shadow-xl shadow-amber-500/20"
-  },
-  {
-    title: "24/7 Support",
-    description: "Round-the-clock assistance for all your travel needs.",
-    icon: <Headset size={28} className="text-amber-600" />,
-    className: "bg-white/92 backdrop-blur-xl border border-slate-200/90 shadow-[0_10px_30px_rgba(15,23,42,0.06)] text-slate-900"
-  },
-  {
-    title: "Luxury Fleet",
-    description: "Immaculately maintained premium vehicles.",
-    icon: <Star size={28} className="text-amber-600" />,
-    className: "bg-white/92 backdrop-blur-xl border border-slate-200/90 shadow-[0_10px_30px_rgba(15,23,42,0.06)] text-slate-900"
-  },
-  {
-    title: "Transparent Pricing",
-    description: "No hidden costs. What you see is what you pay.",
-    icon: <Award size={28} className="text-amber-600" />,
-    className: "bg-white/92 backdrop-blur-xl border border-slate-200/90 shadow-[0_10px_30px_rgba(15,23,42,0.06)] text-slate-900"
-  },
-  {
-    title: "Nationwide Coverage",
-    description: "Available across all major cities and northern areas.",
-    icon: <Map size={28} className="text-amber-600" />,
-    className: "md:col-span-2 bg-white/92 backdrop-blur-xl border border-slate-200/90 shadow-[0_10px_30px_rgba(15,23,42,0.06)] text-slate-900"
-  }
+const STEPS = [
+  { title: "Choose a car", text: "Browse the fleet and compare daily rates. Not sure which car fits? Tell us the number of passengers and we will suggest one." },
+  { title: "Send your dates on WhatsApp", text: "Share pickup point, dates and destination. We confirm availability and the final price in writing." },
+  { title: "Your driver arrives", text: "A clean car and a uniformed driver reach your door, hotel or airport gate on time." },
+];
+
+const INCLUDED = [
+  "Professional, background-checked driver",
+  "Clean, serviced car with working AC",
+  "Doorstep pickup anywhere in Lahore",
+  "Free cancellation up to 24 hours before",
 ];
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-24 bg-slate-50/50 backdrop-blur-md">
-      <div className="container mx-auto px-6 md:px-12">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-4"
-          >
-            The Iris Advantage
-          </motion.h2>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-slate-600 text-lg font-medium"
-          >
-            Why thousands of travelers choose us for their luxury transportation needs across Pakistan.
-          </motion.p>
-        </div>
+    <Section>
+      <SectionHeading title="How booking works" intro="Booking takes a few minutes on WhatsApp, any time of day or night." />
 
-        <div className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-3 gap-6 h-auto md:h-[600px]">
-          {features.map((feature, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={clsx(
-                "rounded-3xl p-8 flex flex-col justify-between group overflow-hidden relative transition-all hover:scale-[1.02]",
-                feature.className
-              )}
-            >
-              <div className={clsx(
-                "w-14 h-14 rounded-full flex items-center justify-center mb-6",
-                index === 0 ? "bg-white/20 backdrop-blur-md" : "bg-slate-50 border border-slate-200"
-              )}>
-                {feature.icon}
-              </div>
-              <div className="relative z-10">
-                <h3 className={clsx(
-                  "text-2xl font-bold mb-2",
-                  index === 0 ? "text-white" : "text-slate-900"
-                )}>
-                  {feature.title}
-                </h3>
-                <p className={clsx(
-                  "text-sm leading-relaxed",
-                  index === 0 ? "text-white/90" : "text-slate-600"
-                )}>
-                  {feature.description}
-                </p>
-              </div>
-              
-              {/* Decorative Background Elements */}
-              <div className="absolute -bottom-10 -right-10 opacity-10 group-hover:scale-125 transition-transform duration-700 pointer-events-none">
-                {feature.icon}
-              </div>
-            </motion.div>
+      <ol className="grid gap-4 md:grid-cols-3 md:gap-6">
+        {STEPS.map((s, i) => (
+          <li key={s.title} className="flex gap-4 rounded-3xl border border-border-primary bg-white p-5 md:block md:p-7">
+            <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-brand-orange text-lg font-semibold text-brand-ink" aria-hidden="true">
+              {i + 1}
+            </span>
+            <div>
+              <h3 className="text-xl md:mt-5">{s.title}</h3>
+              <p className="mt-1.5 leading-relaxed text-text-secondary md:mt-2">{s.text}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+
+      <div className="mt-6 rounded-3xl bg-brand-ink p-6 md:mt-8 md:p-8">
+        <p className="text-lg font-semibold text-white">Included in every booking</p>
+        <ul className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {INCLUDED.map((item) => (
+            <li key={item} className="flex items-start gap-2.5 text-white/80">
+              <Check size={18} className="mt-0.5 flex-shrink-0 text-brand-orange" aria-hidden="true" />
+              {item}
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
-    </section>
+    </Section>
   );
 }
