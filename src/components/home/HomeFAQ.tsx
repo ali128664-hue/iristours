@@ -1,18 +1,17 @@
-"use client";
+/**
+ * HomeFAQ.tsx — common questions on the homepage (also sent to Google as FAQ data).
+ * Edit the `faqs` list to change questions and answers.
+ */
 
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown } from "lucide-react";
-import clsx from "clsx";
-import Script from "next/script";
 import Link from "next/link";
-import { Button } from "@/components/ui/Button";
+import { ChevronDown } from "lucide-react";
+import { Section } from "@/components/ui/Section";
 
 const faqs = [
   // Booking & Requirements
   {
     question: "How do I book a vehicle?",
-    answer: "Booking is seamless. Browse our fleet, click 'Book Now', fill in your travel details, and our system will generate a WhatsApp message. Send it to us, and our team will confirm availability and finalize your booking instantly."
+    answer: "Booking is seamless. Browse the fleet, tap 'Book now' and fill in your dates and pickup point. This opens WhatsApp with a ready-made message. Send it, and our team confirms availability and the final price."
   },
   {
     question: "What documents are required to rent a car?",
@@ -49,95 +48,42 @@ const faqs = [
 ];
 
 export default function HomeFAQ() {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
-
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": faqs.map(faq => ({
+    mainEntity: faqs.map((faq) => ({
       "@type": "Question",
-      "name": faq.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": faq.answer
-      }
-    }))
+      name: faq.question,
+      acceptedAnswer: { "@type": "Answer", text: faq.answer },
+    })),
   };
 
   return (
-    <section className="py-24 bg-bg-primary/40 backdrop-blur-md">
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <div className="container mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-          
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">
-              Frequently Asked <br/>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-primary to-accent-secondary">Questions</span>
-            </h2>
-            <p className="text-lg text-slate-600 mb-8 font-medium">
-              Find quick answers to common questions about our car rental process, policies, and services. If you need more help, our WhatsApp support is available 24/7.
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="space-y-4"
-          >
-            {faqs.map((faq, index) => (
-              <div 
-                key={index} 
-                className={clsx(
-                  "border rounded-2xl overflow-hidden transition-all duration-300",
-                  openIndex === index ? "bg-white/95 backdrop-blur-xl border-amber-500/50 shadow-lg" : "bg-white/80 backdrop-blur-md border-slate-200/90 hover:border-slate-300 shadow-sm"
-                )}
-              >
-                <button
-                  onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                  className="w-full px-6 py-5 flex items-center justify-between text-left"
-                >
-                  <span className="font-semibold text-slate-900 pr-4">{faq.question}</span>
-                  <ChevronDown 
-                    size={20} 
-                    className={clsx(
-                      "text-slate-500 transition-transform duration-300 flex-shrink-0",
-                      openIndex === index ? "rotate-180 text-amber-600" : ""
-                    )} 
-                  />
-                </button>
-                <AnimatePresence>
-                  {openIndex === index && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3, ease: "easeInOut" }}
-                    >
-                       <div className="px-6 pb-6 text-slate-600 leading-relaxed border-t border-slate-100 pt-4 font-normal">
-                        {faq.answer}
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-            ))}
-          </motion.div>
-
-        </div>
-        <div className="mt-12 text-center">
-          <Link href="/faq">
-            <Button variant="outline" className="px-8 py-3 font-bold text-slate-800">
-              View All FAQs
-            </Button>
+    <Section tone="white">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <div className="grid gap-8 lg:grid-cols-12 lg:gap-12">
+        <div className="lg:col-span-4">
+          <h2 className="text-3xl md:text-[2.6rem]">Questions people ask</h2>
+          <p className="mt-3 text-base md:text-lg leading-relaxed text-text-secondary">
+            Can&apos;t find your answer? Message us on WhatsApp and we will reply right away.
+          </p>
+          <Link href="/faq" className="mt-5 inline-flex rounded-full border border-border-primary px-5 py-3 text-[15px] font-semibold text-text-primary hover:border-slate-400 transition-colors">
+            All questions
           </Link>
         </div>
+
+        <div className="divide-y divide-border-primary border-y border-border-primary lg:col-span-8">
+          {faqs.map((faq) => (
+            <details key={faq.question} className="group py-1">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-4 text-left text-base md:text-lg font-semibold text-text-primary [&::-webkit-details-marker]:hidden">
+                {faq.question}
+                <ChevronDown size={20} className="flex-shrink-0 text-slate-400 transition-transform group-open:rotate-180" aria-hidden="true" />
+              </summary>
+              <p className="pb-5 pr-8 leading-relaxed text-text-secondary">{faq.answer}</p>
+            </details>
+          ))}
+        </div>
       </div>
-    </section>
+    </Section>
   );
 }

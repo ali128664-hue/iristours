@@ -1,7 +1,5 @@
 import { Metadata } from "next";
-import { Heart, Sparkles, ShieldCheck } from "lucide-react";
-import { Button } from "@/components/ui/Button";
-import Link from "next/link";
+import ServicePage from "@/components/services/ServicePage";
 
 export const metadata: Metadata = {
   title: "Wedding Car Rental in Lahore | Decorated Luxury Cars - Iris Tours",
@@ -34,85 +32,21 @@ export const metadata: Metadata = {
 
 export default function WeddingCarsPage() {
   return (
-    <div className="bg-bg-primary min-h-screen">
-      {/* Hero */}
-      <div className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden border-b border-border-primary">
-        <div className="absolute inset-0 z-0">
-          <img
-            src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1920&auto=format&fit=crop"
-            alt="Wedding Cars"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-bg-primary/90 via-bg-primary/50 to-bg-primary" />
-        </div>
-        
-        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto mt-20">
-          <Heart className="w-16 h-16 text-accent-secondary mx-auto mb-6 opacity-80" />
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-text-primary mb-6 tracking-tight leading-tight">
-            Luxury <br/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-secondary to-yellow-200">Wedding Cars</span>
-          </h1>
-          <p className="text-text-secondary text-lg mb-8">
-            Premium Fleet • Floral Decorations • Professional Chauffeurs
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="https://wa.me/923154973906?text=Hi%20Iris%20Tours!%20I%20want%20to%20book%20a%20wedding%20car%20package." target="_blank" rel="noopener noreferrer">
-              <Button variant="primary" className="px-8 py-4 font-bold shadow-lg shadow-amber-500/25">Plan Your Big Day (WhatsApp)</Button>
-            </a>
-            <a href="tel:+923154973906">
-              <Button variant="secondary" className="px-8 py-4 font-bold">Call: 0315-4973906</Button>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      {/* Services Content */}
-      <div className="container mx-auto px-6 md:px-12 py-24">
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
-          <div className="bg-bg-secondary p-8 rounded-3xl border border-border-primary text-center">
-            <Sparkles size={40} className="text-accent-secondary mx-auto mb-6" />
-            <h3 className="text-2xl font-bold text-text-primary mb-4">Floral Decorations</h3>
-            <p className="text-text-secondary leading-relaxed">
-              We offer bespoke floral decoration services tailored to your wedding theme and preferences.
-            </p>
-          </div>
-          <div className="bg-bg-secondary p-8 rounded-3xl border border-border-primary text-center">
-            <ShieldCheck size={40} className="text-accent-secondary mx-auto mb-6" />
-            <h3 className="text-2xl font-bold text-text-primary mb-4">Professional Drivers</h3>
-            <p className="text-text-secondary leading-relaxed">
-              Our impeccably dressed chauffeurs ensure a smooth, luxurious, and stress-free ride on your special day.
-            </p>
-          </div>
-          <div className="bg-bg-secondary p-8 rounded-3xl border border-border-primary text-center">
-            <Heart size={40} className="text-accent-secondary mx-auto mb-6" />
-            <h3 className="text-2xl font-bold text-text-primary mb-4">Wedding Convoy</h3>
-            <p className="text-text-secondary leading-relaxed">
-              Book multiple vehicles for the bride, groom, and VIP family members with our special convoy packages.
-            </p>
-          </div>
-        </div>
-
-        {/* CTA */}
-        <div className="bg-bg-secondary rounded-3xl p-12 text-center border border-border-primary relative overflow-hidden">
-          <div className="absolute inset-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1920&auto=format&fit=crop')] bg-cover bg-center" />
-          <div className="relative z-10">
-            <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-6">Make Your Grand Entrance</h2>
-            <p className="text-text-secondary text-lg mb-8 max-w-2xl mx-auto">
-              From Mercedes S-Class to Toyota Land Cruiser V8, we have the perfect vehicle to match your style.
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <a href="https://wa.me/923154973906?text=I%20want%20to%20book%20a%20wedding%20car" target="_blank" rel="noopener noreferrer">
-                <Button variant="primary">Contact on WhatsApp</Button>
-              </a>
-              <Link href="/fleet">
-                <Button variant="secondary">Browse Luxury Fleet</Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
+    <ServicePage
+      crumb="Wedding cars"
+      title="Wedding cars in Lahore"
+      intro="Decorated Prado, Land Cruiser V8, Mercedes and Audi for the barat, mehndi and valima, with a smartly dressed driver who knows the venue routes."
+      whatsappMessage="Hi Iris Tours! I want to book a wedding car. Date and venue:"
+      features={[
+        { title: "Floral decoration", text: "Fresh flower decoration matched to your theme and colours. Tell us what you have in mind." },
+        { title: "Smart, punctual drivers", text: "Drivers arrive early, dressed for the occasion, and handle the convoy timing for you." },
+        { title: "Convoy packages", text: "Book several cars together for the groom, bride and close family, all arriving as one convoy." },
+        { title: "Barat, mehndi and valima", text: "Hire a car for one event or for every day of the wedding." },
+      ]}
+      carSlugs={["toyota-land-cruiser-v8", "toyota-land-cruiser-prado", "mercedes-benz-c-class-c180", "audi-a6", "range-rover", "mercedes-benz-g-wagon"]}
+      carsTitle="Popular wedding cars"
+      carsIntro="Rates below are for the car with driver. Decoration is quoted separately."
+      cta={{ title: "Planning your wedding?", text: "Send your dates, venues and how many cars you need. We will send a full quote with decoration." }}
+    />
   );
 }

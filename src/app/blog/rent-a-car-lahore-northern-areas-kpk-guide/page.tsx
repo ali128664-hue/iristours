@@ -135,13 +135,13 @@ export default function RentACarLahoreNorthernAreasBlog() {
   ];
 
   return (
-    <div className="bg-bg-primary min-h-screen pt-32 pb-20">
+    <div className="bg-bg-primary min-h-screen pt-8 pb-16 md:pt-12 md:pb-20">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
       />
 
-      <div className="container mx-auto px-6 max-w-4xl">
+      <div className="container mx-auto px-5 max-w-3xl">
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-text-secondary mb-6">
           <Link href="/" className="hover:text-accent-primary transition-colors">Home</Link>
@@ -206,7 +206,7 @@ export default function RentACarLahoreNorthernAreasBlog() {
         </aside>
 
         {/* Body Content */}
-        <article className="prose prose-invert prose-p:text-text-secondary prose-headings:text-text-primary prose-strong:text-text-primary max-w-none">
+        <article className="article-body  prose-p:text-text-secondary prose-headings:text-text-primary prose-strong:text-text-primary max-w-none">
           <p className="text-base sm:text-lg leading-relaxed">
             Every year, thousands of adventurous souls set out from Lahore to witness the staggering peaks of Rakaposhi, the mystical plains of Deosai, and the tranquil turquoise waters of Attabad Lake. Yet, the journey through the rugged mountain terrain of <strong>KPK and the Karakoram Highway (KKH)</strong> demands serious respect.
           </p>

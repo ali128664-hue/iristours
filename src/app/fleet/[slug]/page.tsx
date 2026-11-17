@@ -18,11 +18,12 @@
 
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
-import { Settings, Users, Fuel, Briefcase, CheckCircle2, Phone, MessageCircle, Star, ArrowLeft, MapPin, Clock, Shield } from "lucide-react";
+import { Settings2, Users, Fuel, Briefcase, Check, MapPin, Clock, Gauge, ChevronRight } from "lucide-react";
 import Link from "next/link";
-import { Button } from "@/components/ui/Button";
 import VehiclePricing from "@/components/fleet/VehiclePricing";
 import Image from "next/image";
+import { Section, SectionHeading } from "@/components/ui/Section";
+import { whatsappLink } from "@/lib/site";
 import fleetData from "@/data/fleet.json";
 import VehicleCard from "@/components/fleet/VehicleCard";
 import VehicleFuelEstimator from "@/components/fuel/VehicleFuelEstimator";
@@ -99,13 +100,8 @@ export default async function VehicleDetailPage({ params }: Props) {
     (vehicle.relatedVehicles || []).includes(v.slug)
   );
 
-  // ─── WHATSAPP BOOKING URL ───────────────────────────────────────────────────
-  // Change WhatsApp number here for the "Book on WhatsApp" button on car detail pages.
-  // Replace 923001234567 with the actual number (country code + number, no spaces).
-  const whatsappMsg = encodeURIComponent(
-    `Hi Iris Tours! I want to book the ${vehicle.name}. Please share availability and rates.`
-  );
-  const whatsappUrl = `https://wa.me/923154973906?text=${whatsappMsg}`;
+  // WhatsApp number is set in src/lib/site.ts
+  const whatsappUrl = whatsappLink(`Hi Iris Tours! I want to book the ${vehicle.name}. Please share availability and rates.`);
 
   // Schema.org Product markup — helps Google understand this is a rentable product
   const jsonLd = {
@@ -158,218 +154,140 @@ export default async function VehicleDetailPage({ params }: Props) {
     ],
   };
 
+  const gallery: string[] = vehicle.images.gallery?.length ? vehicle.images.gallery : [vehicle.images.thumbnail];
+  const luggage = String(vehicle.specifications?.luggage || vehicle.luggage || "2 bags");
+  const specs = [
+    { icon: Users, label: "Seats", value: `${vehicle.seats}` },
+    { icon: Settings2, label: "Gearbox", value: vehicle.transmission },
+    { icon: Fuel, label: "Fuel", value: vehicle.fuel || vehicle.fuelType },
+    { icon: Briefcase, label: "Luggage", value: /bag/i.test(luggage) ? luggage : `${luggage} bags` },
+    ...(vehicle.specifications?.engine ? [{ icon: Gauge, label: "Engine", value: vehicle.specifications.engine }] : []),
+  ];
+  const policies = [
+    { icon: Fuel, label: "Fuel", value: vehicle.policies?.fuelPolicy },
+    { icon: Clock, label: "Mileage", value: vehicle.policies?.mileagePolicy },
+    { icon: MapPin, label: "Out of city", value: vehicle.policies?.outstationPolicy },
+  ].filter((p) => p.value);
+
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
-      <div className="bg-bg-primary min-h-screen">
-        {/* Hero Section — large vehicle image with name overlay */}
-        <div className="relative h-[55vh] min-h-[400px] w-full overflow-hidden">
-          <Image
-            src={vehicle.images.gallery?.[0] || vehicle.images.thumbnail}
-            alt={vehicle.name}
-            fill
-            className="object-cover"
-            priority
-            sizes="100vw"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-bg-primary via-black/50 to-black/20" />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
 
-          {/* Back button — returns user to the fleet listing page */}
-          <div className="absolute top-6 left-6">
-            <Link
-              href="/fleet"
-              className="flex items-center gap-2 bg-black/40 backdrop-blur-md text-white px-4 py-2 rounded-full border border-white/20 hover:bg-black/60 transition-all text-sm font-medium"
-            >
-              <ArrowLeft size={16} />
-              Back to Fleet
-            </Link>
-          </div>
+      <div className="border-b border-border-primary bg-white">
+        <div className="container mx-auto px-5 md:px-12 py-6 md:py-10">
+          <nav aria-label="Breadcrumb" className="mb-5 text-sm text-slate-500">
+            <ol className="flex flex-wrap items-center gap-1.5">
+              <li><Link href="/" className="hover:text-text-primary">Home</Link></li>
+              <li className="flex items-center gap-1.5"><ChevronRight size={14} aria-hidden="true" /><Link href="/fleet" className="hover:text-text-primary">Fleet</Link></li>
+              <li className="flex items-center gap-1.5"><ChevronRight size={14} aria-hidden="true" /><span className="text-text-primary" aria-current="page">{vehicle.name}</span></li>
+            </ol>
+          </nav>
 
-          {/* Hero Text — vehicle name, category, brand, and location */}
-          <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
-            <div className="container mx-auto">
-              <div className="flex items-center gap-3 mb-2">
-                <span className="bg-accent-primary/90 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest">
-                  {vehicle.category}
-                </span>
-                <span className="bg-white/10 backdrop-blur text-white text-xs font-semibold px-3 py-1 rounded-full border border-white/20">
-                  {vehicle.brand}
-                </span>
+          <div className="grid gap-8 lg:grid-cols-12 lg:gap-12">
+            {/* Photos */}
+            <div className="lg:col-span-7">
+              <div className="relative aspect-[16/10] overflow-hidden rounded-3xl border border-border-primary bg-white">
+                <Image src={gallery[0]} alt={vehicle.name} fill priority sizes="(max-width: 1024px) 100vw, 58vw" className="object-contain p-4 md:p-8" />
               </div>
-              <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-2 tracking-tight">
-                {vehicle.name}
-              </h1>
-              <div className="flex items-center gap-2 text-white/70">
-                <MapPin size={14} />
-                <span className="text-sm">Available in Lahore, DHA &amp; Pakistan-wide</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="container mx-auto px-4 md:px-8 lg:px-12 py-12">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
-            {/* ─── Main Content (left/centre) ───────────────────────────────────── */}
-            <div className="lg:col-span-2 space-y-10">
-
-              {/* Image Gallery Strip — shows thumbnails if more than 1 image exists */}
-              {vehicle.images.gallery && vehicle.images.gallery.length > 1 && (
-                <VehicleThumbStrip images={vehicle.images.gallery} alt={vehicle.name} />
+              {gallery.length > 1 && (
+                <div className="mt-3">
+                  <VehicleThumbStrip images={gallery} alt={vehicle.name} />
+                </div>
               )}
-
-              {/* Overview — reads from the `description` field in fleet.json */}
-              <section>
-                <h2 className="text-2xl font-bold text-text-primary mb-4 flex items-center gap-3">
-                  <span className="w-1 h-7 bg-accent-primary rounded-full inline-block" />
-                  Overview
-                </h2>
-                <RichText text={vehicle.description} className="text-text-secondary text-lg" />
-              </section>
-
-              {/* Key Specifications — reads from fleet.json (transmission, fuel, seats, luggage) */}
-              <section>
-                <h2 className="text-2xl font-bold text-text-primary mb-6 flex items-center gap-3">
-                  <span className="w-1 h-7 bg-accent-primary rounded-full inline-block" />
-                  Key Specifications
-                </h2>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  {[
-                    { icon: Settings, label: "Transmission", value: vehicle.transmission },
-                    { icon: Fuel, label: "Fuel", value: vehicle.fuel || vehicle.fuelType },
-                    { icon: Users, label: "Passengers", value: `${vehicle.seats} Seats` },
-                    { icon: Briefcase, label: "Luggage", value: `${vehicle.specifications?.luggage || vehicle.luggage || 2} Bags` },
-                  ].map(({ icon: Icon, label, value }) => (
-                    <div key={label} className="bg-bg-secondary p-5 rounded-2xl border border-border-primary flex flex-col items-center justify-center text-center gap-2 hover:border-accent-primary/50 hover:shadow-md transition-all">
-                      <Icon className="text-accent-primary" size={26} />
-                      <span className="text-xs text-text-secondary font-medium tracking-wide uppercase">{label}</span>
-                      <span className="font-bold text-text-primary text-sm">{value}</span>
-                    </div>
-                  ))}
-                </div>
-              </section>
-
-              {/* Premium Features — reads from the `features` array in fleet.json */}
-              <section>
-                <h2 className="text-2xl font-bold text-text-primary mb-6 flex items-center gap-3">
-                  <span className="w-1 h-7 bg-accent-primary rounded-full inline-block" />
-                  Premium Features
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  {vehicle.features.map((feature: string, idx: number) => (
-                    <div key={idx} className="flex items-center gap-3 bg-bg-secondary p-3 rounded-xl border border-border-primary">
-                      <CheckCircle2 className="text-accent-primary flex-shrink-0" size={18} />
-                      <span className="text-text-secondary text-sm font-medium">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-              </section>
-
-              {/* Rental Policies — reads from the `policies` object in fleet.json */}
-              <section>
-                <h2 className="text-2xl font-bold text-text-primary mb-6 flex items-center gap-3">
-                  <span className="w-1 h-7 bg-accent-primary rounded-full inline-block" />
-                  Rental Policies
-                </h2>
-                <div className="space-y-4">
-                  {[
-                    { icon: Fuel, label: "Fuel Policy", value: vehicle.policies?.fuelPolicy },
-                    { icon: Clock, label: "Mileage Policy", value: vehicle.policies?.mileagePolicy },
-                    { icon: MapPin, label: "Outstation Policy", value: vehicle.policies?.outstationPolicy },
-                  ].filter(p => p.value).map(({ icon: Icon, label, value }) => (
-                    <div key={label} className="flex items-start gap-4 p-4 bg-bg-secondary rounded-xl border border-border-primary">
-                      <div className="w-10 h-10 rounded-xl bg-accent-primary/10 flex items-center justify-center flex-shrink-0">
-                        <Icon className="text-accent-primary" size={18} />
-                      </div>
-                      <div>
-                        <p className="font-semibold text-text-primary text-sm mb-1">{label}</p>
-                        <p className="text-text-secondary text-sm">{value}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </section>
-
-              {/* Fuel Efficiency & Quick Trip Cost Estimator */}
-              <section>
-                <VehicleFuelEstimator
-                  vehicleSlug={vehicle.slug}
-                  vehicleName={vehicle.name}
-                  fuelType={vehicle.fuel || vehicle.fuelType || "Petrol"}
-                />
-              </section>
-
-              {/* Trust Badges — static icons shown below the policies */}
-              <section className="grid grid-cols-3 gap-4">
-                {[
-                  { icon: Shield, title: "Safe & Insured", desc: "All vehicles fully insured" },
-                  { icon: Clock, title: "24/7 Support", desc: "Always available on WhatsApp" },
-                  { icon: Star, title: "5-Star Rated", desc: "Trusted by 1000+ customers" },
-                ].map(({ icon: Icon, title, desc }) => (
-                  <div key={title} className="text-center p-4 bg-bg-secondary rounded-2xl border border-border-primary">
-                    <div className="w-12 h-12 rounded-full bg-accent-primary/10 flex items-center justify-center mx-auto mb-3">
-                      <Icon className="text-accent-primary" size={22} />
-                    </div>
-                    <p className="font-bold text-text-primary text-sm">{title}</p>
-                    <p className="text-text-secondary text-xs mt-1">{desc}</p>
-                  </div>
-                ))}
-              </section>
             </div>
 
-            {/* ─── Sidebar (sticky on desktop) ──────────────────────────────────── */}
-            <div className="lg:col-span-1">
-              <div className="sticky top-24 space-y-4">
-                {/* Price Card — prices pulled from the `rent` object in fleet.json */}
-                <VehiclePricing rent={vehicle.rent} whatsappUrl={whatsappUrl} />
-
-                {/* ─── WHY CHOOSE IRIS TOURS ─────────────────────────────────────────
-                    Edit these bullet points to change the selling points shown
-                    on every car detail page sidebar.
-                    Add a new string to the array to add a new bullet point.
-                ──────────────────────────────────────────────────────────────────── */}
-                <div className="bg-bg-card border border-border-primary rounded-3xl p-5">
-                  <p className="font-bold text-text-primary mb-3">Why Choose Iris Tours?</p>
-                  <ul className="space-y-2">
-                    {[
-                      "Professional, uniformed drivers",
-                      "Flexible hourly, daily & monthly packages",
-                      "Pick-up & drop anywhere in Lahore",
-                      "Free cancellation up to 24 hours",
-                      "Corporate & wedding packages available",
-                    ].map((item) => (
-                      <li key={item} className="flex items-start gap-2 text-sm text-text-secondary">
-                        <CheckCircle2 className="text-accent-primary mt-0.5 flex-shrink-0" size={15} />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+            {/* Name, specs and price */}
+            <div className="lg:col-span-5">
+              <p className="text-slate-500">{vehicle.brand} &middot; {vehicle.category}</p>
+              <h1 className="mt-1 text-4xl md:text-5xl">{vehicle.name}</h1>
+              <ul className="mt-5 flex flex-wrap gap-2">
+                {specs.slice(0, 4).map(({ icon: Icon, label, value }) => (
+                  <li key={label} className="flex items-center gap-2 rounded-full border border-border-primary px-3.5 py-2 text-sm text-text-primary">
+                    <Icon size={15} className="text-slate-400" aria-hidden="true" />
+                    <span className="sr-only">{label}: </span>
+                    {label === "Seats" ? `${value} seats` : value}
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-6">
+                <VehiclePricing rent={vehicle.rent} whatsappUrl={whatsappUrl} vehicleName={vehicle.name} category={vehicle.category} />
               </div>
             </div>
           </div>
-
-          {/* Related Vehicles — shown at the bottom using relatedVehicles slugs from fleet.json */}
-          {relatedVehicles.length > 0 && (
-            <div className="mt-20 border-t border-border-primary pt-16">
-              <h2 className="text-3xl font-bold text-text-primary mb-10 text-center">
-                You May Also Like
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {relatedVehicles.slice(0, 3).map((relatedVehicle: any, index: number) => (
-                  <VehicleCard key={relatedVehicle.id} vehicle={relatedVehicle} index={index} />
-                ))}
-              </div>
-            </div>
-          )}
         </div>
       </div>
+
+      <Section>
+        <div className="grid gap-10 lg:grid-cols-12 lg:gap-12">
+          <div className="lg:col-span-7">
+            <h2 className="text-3xl">About this car</h2>
+            <RichText text={vehicle.description} className="mt-5 text-[17px] text-text-secondary" />
+          </div>
+
+          <div className="space-y-6 lg:col-span-5">
+            <div className="rounded-3xl border border-border-primary bg-white p-6">
+              <h2 className="text-2xl">Specifications</h2>
+              <dl className="mt-4 divide-y divide-border-primary">
+                {specs.map(({ label, value }) => (
+                  <div key={label} className="flex justify-between gap-4 py-3 text-[15px]">
+                    <dt className="text-text-secondary">{label}</dt>
+                    <dd className="text-right font-semibold text-text-primary">{value}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+
+            {vehicle.features?.length > 0 && (
+              <div className="rounded-3xl border border-border-primary bg-white p-6">
+                <h2 className="text-2xl">Features</h2>
+                <ul className="mt-4 grid gap-2.5 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
+                  {vehicle.features.map((f: string) => (
+                    <li key={f} className="flex items-start gap-2.5 text-[15px] text-text-primary">
+                      <Check size={17} className="mt-0.5 flex-shrink-0 text-accent-primary" aria-hidden="true" />
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {policies.length > 0 && (
+              <div className="rounded-3xl border border-border-primary bg-white p-6">
+                <h2 className="text-2xl">Rental rules</h2>
+                <dl className="mt-4 space-y-4">
+                  {policies.map(({ icon: Icon, label, value }) => (
+                    <div key={label} className="flex gap-3">
+                      <Icon size={18} className="mt-0.5 flex-shrink-0 text-accent-primary" aria-hidden="true" />
+                      <div>
+                        <dt className="font-semibold text-text-primary">{label}</dt>
+                        <dd className="text-[15px] leading-relaxed text-text-secondary">{value}</dd>
+                      </div>
+                    </div>
+                  ))}
+                </dl>
+              </div>
+            )}
+          </div>
+        </div>
+      </Section>
+
+      <Section tone="white">
+        <VehicleFuelEstimator vehicleSlug={vehicle.slug} vehicleName={vehicle.name} fuelType={vehicle.fuel || vehicle.fuelType || "Petrol"} />
+      </Section>
+
+      {relatedVehicles.length > 0 && (
+        <Section>
+          <SectionHeading title="Similar cars" action={{ href: "/fleet", label: "All cars" }} />
+          <div className="-mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-4 scrollbar-hide md:mx-0 md:grid md:grid-cols-2 md:gap-6 md:overflow-visible md:px-0 lg:grid-cols-3">
+            {relatedVehicles.slice(0, 3).map((v) => (
+              <div key={v.id} className="w-[84%] flex-shrink-0 snap-start sm:w-[60%] md:w-auto">
+                <VehicleCard vehicle={v} />
+              </div>
+            ))}
+          </div>
+        </Section>
+      )}
     </>
   );
 }

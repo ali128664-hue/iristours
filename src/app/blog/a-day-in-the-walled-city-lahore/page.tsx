@@ -50,12 +50,12 @@ export default function BlogPost() {
   };
 
   return (
-    <div className="bg-bg-primary min-h-screen pt-32 pb-20">
+    <div className="bg-bg-primary min-h-screen pt-8 pb-16 md:pt-12 md:pb-20">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
-      <div className="container mx-auto px-6 max-w-4xl">
+      <div className="container mx-auto px-5 max-w-3xl">
         {/* Breadcrumb */}
         <div className="flex items-center gap-2 text-xs text-text-secondary mb-6">
           <Link href="/" className="hover:text-accent-primary">Home</Link>
@@ -72,10 +72,10 @@ export default function BlogPost() {
         <img 
           src="/blog/lahore-cultural-tour.jpg" 
           alt="A happy family stepping out of a luxurious black sedan near the beautiful Badshahi Mosque in Lahore" 
-          className="w-full h-[400px] object-cover rounded-3xl mb-10 shadow-lg"
+          className="w-full h-56 md:h-[420px] object-cover rounded-3xl mb-10 shadow-lg"
         />
 
-        <div className="prose prose-invert prose-p:text-text-secondary prose-headings:text-text-primary max-w-none">
+        <div className="article-body  prose-p:text-text-secondary prose-headings:text-text-primary max-w-none">
           <p className="text-lg leading-relaxed">
             <em>“Those who haven’t seen Lahore, haven’t been born,”</em> goes the famous Punjabi proverb. But anyone who has actually tried to navigate the narrow, bustling streets of the Walled City knows that finding parking near the Badshahi Mosque can age you a few years!
           </p>

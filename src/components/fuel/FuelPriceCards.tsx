@@ -53,7 +53,7 @@ export default function FuelPriceCards({ pakistanData, effectiveFrom, lastChecke
       tag: "Most Popular",
       accentBorder: "border-t-amber-500",
       accentBg: "bg-amber-500/10 text-amber-600",
-      recommended: "Civic, Corolla, Yaris, Alto, Cultus, Prius & all sedans",
+      recommended: "Yaris, Corolla, Civic, BR-V, MG HS, Haval H6 and Sportage",
     },
     {
       key: "diesel",
@@ -63,7 +63,7 @@ export default function FuelPriceCards({ pakistanData, effectiveFrom, lastChecke
       tag: "Heavy Fleet & 4x4",
       accentBorder: "border-t-blue-600",
       accentBg: "bg-blue-500/10 text-blue-600",
-      recommended: "Land Cruiser V8, Prado, Fortuner, Revo, Hiace & Coasters",
+      recommended: "Land Cruiser V8, Prado, Fortuner, Hiace and Coaster",
     },
     {
       key: "hiOctane",
@@ -73,7 +73,7 @@ export default function FuelPriceCards({ pakistanData, effectiveFrom, lastChecke
       tag: "Executive & Turbo",
       accentBorder: "border-t-purple-600",
       accentBg: "bg-purple-500/10 text-purple-600",
-      recommended: "Mercedes Benz S/C-Class, Audi A6/A4, Range Rover & G-Wagon",
+      recommended: "Mercedes C-Class, Audi A6, Range Rover and G-Wagon",
     },
     {
       key: "lpg",

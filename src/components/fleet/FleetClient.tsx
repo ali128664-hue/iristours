@@ -1,323 +1,181 @@
 /**
- * FleetClient.tsx — Fleet Listing Page (فلیٹ لسٹنگ صفحہ)
+ * FleetClient.tsx — Fleet Listing (فلیٹ لسٹنگ)
  *
- * This is the main fleet listing page component with search, filter, and sort.
- * It renders the grid of vehicle cards at /fleet.
- *
- * Features:
- *  - Live search by car name, brand, or category
- *  - Category filter buttons (Luxury, SUV, Sedan, Economy, Van, Bus)
- *  - Brand dropdown — brands are extracted automatically from fleet.json
- *  - Sort options (Recommended, Lowest Price, Highest Price, Newest)
- *  - Responsive grid: 1 column on mobile, 2 on tablet, 3 on desktop
- *  - Animated empty state when no vehicles match the filters
- *
- * HOW TO CHANGE:
- *  - Categories → edit the `categories` array below
- *  - Sort options → edit the `sortOptions` array below
- *  - Brands are auto-extracted from fleet.json — no change needed here
+ * Search, type filter, brand filter and sorting for the /fleet page.
+ * Categories must match the `category` values in src/data/fleet.json.
+ * Brands are read from fleet.json automatically.
  */
 
 "use client";
 
-import { useState, useMemo, useEffect, Suspense } from "react";
+import { useEffect, useMemo, useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
-import { motion, AnimatePresence } from "framer-motion";
-import { Search, Filter, SlidersHorizontal } from "lucide-react";
+import { Search, X } from "lucide-react";
+import clsx from "clsx";
 import VehicleCard from "./VehicleCard";
 
-// Props received from the parent server component — the full fleet data array
 interface FleetClientProps {
   initialData: any[];
 }
 
+const CATEGORIES = [
+  { label: "All", value: "All" },
+  { label: "Economy", value: "Economy" },
+  { label: "Sedans", value: "Sedan" },
+  { label: "SUVs", value: "SUV" },
+  { label: "Luxury", value: "Luxury" },
+  { label: "Vans", value: "Van" },
+];
+
+const SORTS = ["Lowest price", "Highest price", "Most seats", "Newest"];
+
+const priceOf = (v: any) => v.rent?.local ?? v.rent?.daily ?? v.rent?.withDriver?.local ?? 0;
+
 export default function FleetClient({ initialData }: FleetClientProps) {
   return (
-    <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading fleet...</div>}>
+    <Suspense fallback={<div className="container mx-auto px-5 py-16 text-text-secondary">Loading cars...</div>}>
       <FleetClientContent initialData={initialData} />
     </Suspense>
   );
 }
 
 function FleetClientContent({ initialData }: FleetClientProps) {
-  // State for search text and active filters
-  const [searchQuery, setSearchQuery] = useState("");
-  const [activeCategory, setActiveCategory] = useState("All");
-  const [activeBrand, setActiveBrand] = useState("All");
-  const [activeSort, setActiveSort] = useState("Lowest Price");
-  const [isFilterOpen, setIsFilterOpen] = useState(false); // mobile filter panel toggle
+  const [query, setQuery] = useState("");
+  const [category, setCategory] = useState("All");
+  const [brand, setBrand] = useState("All");
+  const [sort, setSort] = useState(SORTS[0]);
 
-  // ─── CATEGORY FILTER BUTTONS ────────────────────────────────────────────────
-  // Edit this array to add or remove category filter options.
-  // Values must exactly match the `category` field values in fleet.json.
-  const categories = ["All", "Luxury", "SUV", "Sedan", "Economy", "Van"];
-  
-  // Update category from URL if present
+  // Pick up ?category=SUV (any letter case) from links on other pages
   const searchParams = useSearchParams();
   useEffect(() => {
-    const categoryParam = searchParams.get('category');
-    if (!categoryParam) return;
-    // Match case-insensitively so links like ?category=suv or ?category=luxury also work
-    const match = categories.find((c) => c.toLowerCase() === categoryParam.toLowerCase());
-    if (match) setActiveCategory(match);
+    const param = searchParams.get("category");
+    if (!param) return;
+    const match = CATEGORIES.find((c) => c.value.toLowerCase() === param.toLowerCase());
+    if (match) setCategory(match.value);
   }, [searchParams]);
-  
-  // Brands are extracted automatically from fleet.json — no need to update this manually.
-  // Adding a new car to fleet.json with a new brand will automatically add it to the dropdown.
-  const brands = useMemo(() => {
-    const uniqueBrands = Array.from(new Set(initialData.map(v => v.brand)));
-    return ["All", ...uniqueBrands].sort();
-  }, [initialData]);
 
-  // ─── SORT OPTIONS ──────────────────────────────────────────────────────────
-  // Add/remove sort options here.
-  // Each option must have a matching case in the switch statement in filteredAndSortedData.
-  const sortOptions = ["Recommended", "Lowest Price", "Highest Price", "Newest"];
+  const brands = useMemo(() => ["All", ...Array.from(new Set(initialData.map((v) => v.brand))).sort()], [initialData]);
 
-  // Applies search query, category filter, brand filter, and sort to the fleet data
-  const filteredAndSortedData = useMemo(() => {
-    let result = [...initialData];
-
-    // Filter by search query (matches name, brand, or category)
-    if (searchQuery) {
-      const query = searchQuery.toLowerCase();
-      result = result.filter(v => 
-        v.name.toLowerCase().includes(query) || 
-        v.brand.toLowerCase().includes(query) ||
-        v.category.toLowerCase().includes(query)
-      );
-    }
-
-    // Filter by selected category
-    if (activeCategory !== "All") {
-      result = result.filter(v => v.category === activeCategory);
-    }
-
-    // Filter by selected brand
-    if (activeBrand !== "All") {
-      result = result.filter(v => v.brand === activeBrand);
-    }
-
-    // Sort the results based on the selected sort option
-    switch (activeSort) {
-      case "Lowest Price":
-        // Sorts by daily rate ascending
-        result.sort((a, b) => {
-          const priceA = a.rent?.local ?? a.rent?.daily ?? a.rent?.withDriver?.local ?? 0;
-          const priceB = b.rent?.local ?? b.rent?.daily ?? b.rent?.withDriver?.local ?? 0;
-          return priceA - priceB;
-        });
-        break;
-      case "Highest Price":
-        // Sorts by daily rate descending
-        result.sort((a, b) => {
-          const priceA = a.rent?.local ?? a.rent?.daily ?? a.rent?.withDriver?.local ?? 0;
-          const priceB = b.rent?.local ?? b.rent?.daily ?? b.rent?.withDriver?.local ?? 0;
-          return priceB - priceA;
-        });
-        break;
+  const results = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    const list = initialData.filter(
+      (v) =>
+        (category === "All" || v.category === category) &&
+        (brand === "All" || v.brand === brand) &&
+        (!q || `${v.name} ${v.brand} ${v.category}`.toLowerCase().includes(q))
+    );
+    switch (sort) {
+      case "Highest price":
+        return list.sort((a, b) => priceOf(b) - priceOf(a));
+      case "Most seats":
+        return list.sort((a, b) => (b.seats || 0) - (a.seats || 0));
       case "Newest":
-        // Sorts by the `year` field in fleet.json — newest first
-        result.sort((a, b) => (b.year || 0) - (a.year || 0));
-        break;
-      case "Recommended":
+        return list.sort((a, b) => (b.year || 0) - (a.year || 0));
       default:
-        // Keep original order from fleet.json (no sorting)
-        break;
+        return list.sort((a, b) => priceOf(a) - priceOf(b));
     }
+  }, [initialData, query, category, brand, sort]);
 
-    return result;
-  }, [initialData, searchQuery, activeCategory, activeBrand, activeSort]);
+  const filtered = Boolean(query) || category !== "All" || brand !== "All";
+  const reset = () => {
+    setQuery("");
+    setCategory("All");
+    setBrand("All");
+  };
+
+  const selectClass =
+    "w-full appearance-none rounded-full border border-border-primary bg-white px-4 py-2.5 text-[15px] text-text-primary focus:border-accent-primary focus:outline-none";
 
   return (
-    <div className="container mx-auto px-6 md:px-12 py-16">
-      {/* ─── Search and Filters Bar (sticky at the top) ───────────────────────── */}
-      <div className="bg-bg-secondary border border-border-primary rounded-2xl p-4 md:p-6 mb-12 shadow-lg sticky top-24 z-30">
-        <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
-          
-          {/* Search Input */}
-          <div className="relative w-full lg:w-1/3">
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-text-secondary" size={20} />
-            <input 
-              type="text" 
-              placeholder="Search by name, brand, or category..." 
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-bg-primary border border-border-primary rounded-full py-3 pl-12 pr-6 text-text-primary focus:border-accent-primary focus:outline-none transition-colors"
-            />
-          </div>
+    <>
+      {/* Filters — stick under the menu while scrolling */}
+      <div className="sticky top-[72px] z-30 border-b border-border-primary bg-bg-primary/95 backdrop-blur-md">
+        <div className="container mx-auto px-5 md:px-12 py-3 md:py-4">
+          <div className="flex flex-col gap-3 lg:flex-row lg:items-center">
+            <label className="relative block lg:w-72">
+              <span className="sr-only">Search cars</span>
+              <Search size={18} className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" aria-hidden="true" />
+              <input
+                type="search"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                placeholder="Search by car or brand"
+                className="w-full rounded-full border border-border-primary bg-white py-2.5 pl-11 pr-4 text-text-primary placeholder:text-slate-400 focus:border-accent-primary focus:outline-none"
+              />
+            </label>
 
-          {/* Category Filter Buttons — visible on desktop */}
-          <div className="hidden lg:flex items-center gap-2 overflow-x-auto custom-scrollbar pb-2 lg:pb-0 w-full lg:w-auto">
-            {categories.map(cat => (
-              <button
-                key={cat}
-                onClick={() => setActiveCategory(cat)}
-                className={`px-4 py-2 rounded-full text-sm font-semibold transition-all whitespace-nowrap border ${
-                  activeCategory === cat 
-                    ? "bg-amber-500 text-white border-amber-500 shadow-md" 
-                    : "bg-white text-slate-600 border-slate-200 hover:border-amber-500 hover:text-amber-600"
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
-
-          {/* Sort Dropdown, Brand Dropdown & Mobile Filter Toggle */}
-          <div className="flex w-full lg:w-auto gap-4 items-center justify-between lg:justify-end">
-            {/* Mobile: show "Filters" button to expand the filter panel */}
-            <button 
-              className="lg:hidden flex items-center gap-2 px-4 py-3 rounded-full bg-bg-primary border border-border-primary text-text-primary"
-              onClick={() => setIsFilterOpen(!isFilterOpen)}
-            >
-              <Filter size={18} /> Filters
-            </button>
-            
-            {/* Brand Filter Dropdown — visible on desktop */}
-            <div className="relative w-full lg:w-48 hidden lg:block">
-              <select 
-                value={activeBrand}
-                onChange={(e) => setActiveBrand(e.target.value)}
-                className="w-full bg-bg-primary border border-border-primary rounded-full py-3 px-6 text-sm text-text-primary focus:border-accent-primary focus:outline-none appearance-none cursor-pointer"
-              >
-                {brands.map(brand => (
-                  <option key={brand} value={brand}>{brand === "All" ? "All Brands" : brand}</option>
-                ))}
-              </select>
+            <div className="-mx-5 flex gap-2 overflow-x-auto px-5 scrollbar-hide lg:mx-0 lg:flex-1 lg:px-0" role="group" aria-label="Car type">
+              {CATEGORIES.map((c) => (
+                <button
+                  key={c.value}
+                  type="button"
+                  onClick={() => setCategory(c.value)}
+                  aria-pressed={category === c.value}
+                  className={clsx(
+                    "flex-shrink-0 rounded-full border px-4 py-2 text-[15px] font-medium transition-colors",
+                    category === c.value ? "border-brand-ink bg-brand-ink text-white" : "border-border-primary bg-white text-text-primary hover:border-slate-400"
+                  )}
+                >
+                  {c.label}
+                </button>
+              ))}
             </div>
 
-            {/* Sort Dropdown */}
-            <div className="relative w-full lg:w-48">
-              <SlidersHorizontal className="absolute left-4 top-1/2 -translate-y-1/2 text-text-secondary" size={16} />
-              <select 
-                value={activeSort}
-                onChange={(e) => setActiveSort(e.target.value)}
-                className="w-full bg-bg-primary border border-border-primary rounded-full py-3 pl-10 pr-10 text-sm text-text-primary focus:border-accent-primary focus:outline-none appearance-none cursor-pointer"
-              >
-                {sortOptions.map(opt => (
-                  <option key={opt} value={opt}>{opt}</option>
-                ))}
-              </select>
+            <div className="grid grid-cols-2 gap-2 lg:w-[360px]">
+              <label>
+                <span className="sr-only">Brand</span>
+                <select value={brand} onChange={(e) => setBrand(e.target.value)} className={selectClass}>
+                  {brands.map((b) => (
+                    <option key={b} value={b}>
+                      {b === "All" ? "All brands" : b}
+                    </option>
+                  ))}
+                </select>
+              </label>
+              <label>
+                <span className="sr-only">Sort by</span>
+                <select value={sort} onChange={(e) => setSort(e.target.value)} className={selectClass}>
+                  {SORTS.map((s) => (
+                    <option key={s} value={s}>
+                      {s}
+                    </option>
+                  ))}
+                </select>
+              </label>
             </div>
           </div>
         </div>
-
-        {/* Mobile Filters Panel (collapsible) — shows category and brand filters */}
-        <AnimatePresence>
-          {isFilterOpen && (
-            <motion.div 
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: "auto", opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
-              className="lg:hidden mt-4 pt-4 border-t border-border-primary flex flex-col gap-4"
-            >
-              <div className="flex flex-wrap gap-2">
-                {categories.map(cat => (
-                  <button
-                    key={cat}
-                    onClick={() => {
-                      setActiveCategory(cat);
-                    }}
-                    className={`px-4 py-2 rounded-full text-sm font-semibold transition-all border ${
-                      activeCategory === cat 
-                        ? "bg-amber-500 text-white border-amber-500 shadow-sm" 
-                        : "bg-white text-slate-600 border-slate-200"
-                    }`}
-                  >
-                    {cat}
-                  </button>
-                ))}
-              </div>
-              <div className="w-full">
-                <select 
-                  value={activeBrand}
-                  onChange={(e) => setActiveBrand(e.target.value)}
-                  className="w-full bg-bg-primary border border-border-primary rounded-full py-3 px-6 text-sm text-text-primary focus:border-accent-primary focus:outline-none appearance-none cursor-pointer"
-                >
-                  {brands.map(brand => (
-                    <option key={brand} value={brand}>{brand === "All" ? "All Brands" : brand}</option>
-                  ))}
-                </select>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
       </div>
 
-      {/* ─── Results Grid ───────────────────────────────────────────────────────
-          Renders all matching vehicles as VehicleCard components.
-          If no vehicles match, shows an empty state with a "Clear Filters" button.
-      ──────────────────────────────────────────────────────────────────────── */}
-      {/* Result count + quick reset so users always know what the filters are doing */}
-      <div className="flex flex-wrap items-center justify-between gap-3 mb-6 text-sm" aria-live="polite">
-        <p className="text-text-secondary">
-          Showing <span className="font-bold text-text-primary">{filteredAndSortedData.length}</span> of {initialData.length} vehicles
-          {activeCategory !== "All" && <> in <span className="font-bold text-text-primary">{activeCategory}</span></>}
-          {activeBrand !== "All" && <> by <span className="font-bold text-text-primary">{activeBrand}</span></>}
-        </p>
-        {(searchQuery || activeCategory !== "All" || activeBrand !== "All") && (
-          <button
-            type="button"
-            onClick={() => {
-              setSearchQuery("");
-              setActiveCategory("All");
-              setActiveBrand("All");
-            }}
-            className="px-4 py-1.5 rounded-full border border-border-primary bg-bg-secondary text-text-primary font-semibold hover:border-accent-primary transition-colors"
-          >
-            Clear filters
-          </button>
+      <div className="container mx-auto px-5 md:px-12 py-8 md:py-12">
+        <div className="mb-6 flex items-center justify-between gap-3" aria-live="polite">
+          <p className="text-text-secondary">
+            <span className="font-semibold text-text-primary">{results.length}</span> of {initialData.length} cars
+          </p>
+          {filtered && (
+            <button type="button" onClick={reset} className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 font-semibold text-text-primary hover:bg-slate-100">
+              <X size={16} aria-hidden="true" />
+              Clear filters
+            </button>
+          )}
+        </div>
+
+        {results.length > 0 ? (
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 md:gap-6">
+            {results.map((vehicle, i) => (
+              <VehicleCard key={vehicle.id} vehicle={vehicle} priority={i < 3} />
+            ))}
+          </div>
+        ) : (
+          <div className="rounded-3xl border border-dashed border-border-primary bg-white px-6 py-16 text-center">
+            <p className="text-xl font-semibold text-text-primary">No cars match these filters</p>
+            <p className="mt-2 text-text-secondary">Try another type or brand, or clear the search.</p>
+            <button type="button" onClick={reset} className="mt-6 rounded-full bg-brand-ink px-6 py-3 font-semibold text-white">
+              Show all cars
+            </button>
+          </div>
         )}
       </div>
-
-      {filteredAndSortedData.length > 0 ? (
-        <motion.div 
-          layout
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
-          <AnimatePresence>
-            {filteredAndSortedData.map((vehicle, index) => (
-              <motion.div
-                layout
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.3 }}
-                key={vehicle.id}
-              >
-                <VehicleCard vehicle={vehicle} index={index % 6} />
-              </motion.div>
-            ))}
-          </AnimatePresence>
-        </motion.div>
-      ) : (
-        /* Empty State — shown when no vehicles match the search/filter */
-        <motion.div 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="flex flex-col items-center justify-center py-20 text-center"
-        >
-          <div className="w-24 h-24 mb-6 rounded-full bg-bg-secondary border border-border-primary flex items-center justify-center">
-            <Search size={40} className="text-text-secondary" />
-          </div>
-          <h3 className="text-2xl font-bold text-text-primary mb-2">No Vehicles Found</h3>
-          <p className="text-text-secondary max-w-md">
-            We couldn't find any vehicles matching your search criteria. Try adjusting your filters or search term.
-          </p>
-          {/* "Clear All Filters" button — resets all search/filter/brand to defaults */}
-          <button 
-            onClick={() => {
-              setSearchQuery("");
-              setActiveCategory("All");
-              setActiveBrand("All");
-            }}
-            className="mt-6 px-6 py-2 rounded-full bg-bg-secondary border border-border-primary text-text-primary hover:border-accent-primary transition-colors"
-          >
-            Clear All Filters
-          </button>
-        </motion.div>
-      )}
-    </div>
+    </>
   );
 }

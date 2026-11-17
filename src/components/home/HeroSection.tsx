@@ -47,8 +47,8 @@ export default function HeroSection() {
         }}
       />
 
-      <div className="container mx-auto px-6 md:px-12 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 items-center pt-12 pb-10 md:pt-20 md:pb-14 lg:min-h-[calc(100dvh-88px-96px)]">
+      <div className="container mx-auto px-5 md:px-12 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 items-center pt-9 pb-8 md:pt-20 md:pb-14 lg:min-h-[calc(100dvh-72px-96px)]">
           {/* ─── Text ───────────────────────────────────────────────────────── */}
           <div className="lg:col-span-6 xl:col-span-6">
             <p className="iris-rise text-brand-orange font-semibold text-sm md:text-base mb-5" style={{ animationDelay: "0.05s" }}>
@@ -123,7 +123,7 @@ export default function HeroSection() {
 
       {/* ─── Real starting rates ────────────────────────────────────────────── */}
       <div className="relative z-10 border-t border-white/10">
-        <div className="container mx-auto px-6 md:px-12">
+        <div className="container mx-auto px-5 md:px-12">
           <ul className="grid grid-cols-1 sm:grid-cols-3 sm:divide-x divide-white/10">
             {rateStrip.map((vehicle) => (
               <li key={vehicle.slug} className="border-b border-white/10 last:border-b-0 sm:border-b-0 sm:px-6 sm:first:pl-0 sm:last:pr-0">
@@ -133,13 +133,13 @@ export default function HeroSection() {
                 >
                   <span>
                     <span className="block text-sm text-white/60">{vehicle.category}</span>
-                    <span className="block text-base md:text-lg font-semibold text-white group-hover:text-brand-orange transition-colors">
+                    <span className="block text-base md:text-lg font-semibold leading-snug text-white group-hover:text-brand-orange transition-colors">
                       {vehicle.name}
                     </span>
                   </span>
                   <span className="text-right">
                     <span className="block text-sm text-white/60">from</span>
-                    <span className="block text-base md:text-lg font-semibold text-white">
+                    <span className="block whitespace-nowrap text-base md:text-lg font-semibold text-white">
                       {convertAndFormatPrice(vehicle.rent.local, currency)}
                       <span className="text-white/60 font-normal text-sm"> / day</span>
                     </span>

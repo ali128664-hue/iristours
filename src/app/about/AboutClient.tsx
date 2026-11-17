@@ -1,137 +1,92 @@
-"use client";
+/**
+ * AboutClient.tsx — About page content (ہمارے بارے میں)
+ * Edit STATS, VALUES and the story paragraphs below.
+ */
 
-import React from "react";
-import { motion } from "framer-motion";
-import { Shield, Star, Users, MapPin } from "lucide-react";
+import Image from "next/image";
+import { Shield, Car, Users, MapPin } from "lucide-react";
+import PageHeader from "@/components/ui/PageHeader";
+import { Section, SectionHeading } from "@/components/ui/Section";
+import CtaBand from "@/components/ui/CtaBand";
+import fleetData from "@/data/fleet.json";
 
-const stats = [
-  { label: "Happy Clients", value: "10,000+" },
-  { label: "Premium Vehicles", value: "150+" },
-  { label: "Cities Covered", value: "20+" },
-  { label: "Years Experience", value: "15+" },
+const STATS = [
+  { value: "15+", label: "years in business" },
+  { value: "10,000+", label: "customers served" },
+  { value: `${fleetData.length}`, label: "car models to choose from" },
+  { value: "20+", label: "cities covered" },
 ];
 
-const features = [
-  {
-    icon: <Shield className="w-8 h-8 text-accent-primary" />,
-    title: "Unmatched Safety",
-    description: "Every vehicle undergoes rigorous safety checks. Your peace of mind is our highest priority."
-  },
-  {
-    icon: <Star className="w-8 h-8 text-accent-primary" />,
-    title: "Premium Fleet",
-    description: "From luxury sedans to spacious SUVs, our fleet represents the pinnacle of automotive engineering."
-  },
-  {
-    icon: <Users className="w-8 h-8 text-accent-primary" />,
-    title: "Professional Chauffeurs",
-    description: "Highly trained, deeply courteous, and intimately familiar with every route across Pakistan."
-  },
-  {
-    icon: <MapPin className="w-8 h-8 text-accent-primary" />,
-    title: "Nationwide Presence",
-    description: "Whether you are in Lahore or exploring the Northern valleys, we are always within reach."
-  }
+const VALUES = [
+  { icon: Shield, title: "Safety first", text: "Every car is checked before each trip, and every driver is background-checked." },
+  { icon: Car, title: "Well-kept cars", text: "From an economy Yaris to a Land Cruiser V8, cars are clean, serviced and ready on time." },
+  { icon: Users, title: "Courteous drivers", text: "Trained, polite drivers who know the city roads, motorways and northern routes." },
+  { icon: MapPin, title: "Across Pakistan", text: "Based in Lahore and Islamabad, with trips to every major city and the northern valleys." },
 ];
 
 export default function AboutClient() {
   return (
-    <div className="min-h-screen pt-32 pb-20 bg-bg-primary">
-      <div className="container mx-auto px-6 md:px-12">
-        {/* Header Section */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="max-w-4xl mx-auto text-center mb-24"
-        >
-          <h1 className="text-5xl md:text-6xl font-bold text-text-primary mb-8 tracking-tight">
-            Redefining Luxury Travel in Pakistan
-          </h1>
-          <p className="text-xl text-text-secondary leading-relaxed">
-            Iris Tours was founded on a simple principle: travel should be an experience, not just a journey. 
-            For over a decade, we have been the preferred choice for executives, families, and luxury seekers across Pakistan.
-          </p>
-        </motion.div>
+    <>
+      <PageHeader
+        title="About Iris Tours"
+        intro="A Lahore car rental company built on one idea: the trip should be as comfortable as the destination."
+        crumbs={[{ label: "About" }]}
+      />
 
-        {/* Stats Section */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-32">
-          {stats.map((stat, index) => (
-            <motion.div 
-              key={stat.label}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1, duration: 0.8 }}
-              className="text-center p-8 bg-bg-card rounded-2xl border border-border-primary hover:border-accent-primary transition-colors"
-            >
-              <div className="text-4xl md:text-5xl font-bold text-text-primary mb-2">{stat.value}</div>
-              <div className="text-text-secondary font-medium tracking-wide uppercase text-sm">{stat.label}</div>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* Story Section */}
-        <div className="grid md:grid-cols-2 gap-16 items-center mb-32">
-          <motion.div 
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <img 
-              src="/categories/about_fleet.jpg" 
-              alt="Luxury Car Fleet" 
-              className="rounded-3xl shadow-2xl object-cover h-[500px] w-full"
-            />
-          </motion.div>
-          
-          <motion.div 
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="space-y-6"
-          >
-            <h2 className="text-4xl font-bold text-text-primary">Our Philosophy</h2>
-            <p className="text-lg text-text-secondary leading-relaxed">
-              We believe that true luxury lies in the details. From the immaculate condition of our vehicles to the 
-              impeccable manners of our chauffeurs, every aspect of Iris Tours is designed to exceed expectations.
-            </p>
-            <p className="text-lg text-text-secondary leading-relaxed">
-              Whether you require an elegant sedan for a corporate event, a spacious SUV for a northern adventure, 
-              or a grand limousine for your wedding day, we deliver excellence without compromise.
-            </p>
-            <p className="text-lg text-text-secondary leading-relaxed">
-              Founded and led by <strong>Munir Hussain</strong>, Iris Tours has built a strong reputation for reliability and premium service. Under his leadership, the company has become a trusted partner for numerous European clients and international visitors who frequently travel to Pakistan. We understand global standards of hospitality and bring that excellence to every journey.
-            </p>
-          </motion.div>
-        </div>
-
-        {/* Features Section */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-text-primary mb-16">Why Choose Iris Tours</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-left">
-            {features.map((feature, index) => (
-              <motion.div 
-                key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1, duration: 0.8 }}
-                className="bg-bg-card p-8 rounded-2xl border border-border-primary"
-              >
-                <div className="w-16 h-16 rounded-2xl bg-bg-primary flex items-center justify-center mb-6">
-                  {feature.icon}
-                </div>
-                <h3 className="text-xl font-bold text-text-primary mb-4">{feature.title}</h3>
-                <p className="text-text-secondary leading-relaxed">{feature.description}</p>
-              </motion.div>
-            ))}
+      <Section>
+        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-3xl bg-slate-200">
+            <Image src="/categories/about_fleet.jpg" alt="Iris Tours cars lined up" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
+          </div>
+          <div>
+            <h2 className="text-3xl md:text-[2.6rem]">Our story</h2>
+            <div className="mt-5 space-y-4 text-[17px] leading-relaxed text-text-secondary">
+              <p>
+                Iris Tours is founded and led by <strong className="text-text-primary">Munir Hussain</strong>. For more than a decade we have driven executives, families and visitors from abroad across Pakistan.
+              </p>
+              <p>
+                We believe the details matter: a clean car, a driver who arrives early, and a price that is clear before you travel. Many European and international clients book with us every time they visit.
+              </p>
+              <p>
+                Whether you need a sedan for a business meeting, an SUV for the mountains or a Land Cruiser for a wedding, we will find the right car for you.
+              </p>
+            </div>
           </div>
         </div>
 
-      </div>
-    </div>
+        <dl className="mt-12 grid grid-cols-2 gap-4 md:mt-16 lg:grid-cols-4 md:gap-6">
+          {STATS.map((s) => (
+            <div key={s.label} className="rounded-3xl border border-border-primary bg-white p-5 md:p-6">
+              <dt className="sr-only">{s.label}</dt>
+              <dd>
+                <span className="font-display block text-4xl font-semibold text-text-primary md:text-5xl">
+                  {s.value}
+                </span>
+                <span className="mt-1 block text-text-secondary">{s.label}</span>
+              </dd>
+            </div>
+          ))}
+        </dl>
+      </Section>
+
+      <Section tone="white">
+        <SectionHeading title="What we stand for" />
+        <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 md:gap-6">
+          {VALUES.map(({ icon: Icon, title, text }) => (
+            <li key={title} className="rounded-3xl border border-border-primary bg-bg-primary p-6">
+              <span className="flex h-11 w-11 items-center justify-center rounded-full bg-brand-ink text-brand-orange">
+                <Icon size={20} aria-hidden="true" />
+              </span>
+              <h3 className="mt-5 text-xl">{title}</h3>
+              <p className="mt-2 leading-relaxed text-text-secondary">{text}</p>
+            </li>
+          ))}
+        </ul>
+      </Section>
+
+      <Section>
+        <CtaBand />
+      </Section>
+    </>
   );
 }

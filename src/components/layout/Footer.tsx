@@ -1,175 +1,186 @@
 /**
  * Footer.tsx — Website Footer (نیچے والا حصہ)
  *
- * This component renders the site footer shown on every page.
- * It contains:
- *  - Brand logo and tagline
- *  - Social media icon links (Instagram, Facebook, LinkedIn)
- *  - Quick Links column (main site pages)
- *  - Company column (about, gallery, FAQ, contact, privacy)
- *  - Contact info for Lahore and Islamabad offices
- *  - WhatsApp and email links
+ * Shown on every page: contact details, page links and popular service areas.
  *
- * HOW TO CHANGE THINGS:
- *  - Phone numbers → find the `tel:+92...` links below and update them
- *  - WhatsApp number → find `wa.me/923154973906` and update it
- *  - Social media links → find the social icon <a> tags and change the href values
- *  - Footer nav links → edit the <li> items in the Quick Links and Company sections
+ * HOW TO CHANGE:
+ *  - Phone, WhatsApp, email, address → src/lib/site.ts
+ *  - Link lists → LINK_GROUPS below
+ *  - Popular areas → POPULAR_AREAS below (slugs from src/data/serviceAreas.json)
  */
 
 import Link from "next/link";
-import { FaWhatsapp, FaInstagram, FaFacebook, FaLinkedin, FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
+import { FaWhatsapp, FaFacebook, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import Logo from "@/components/ui/Logo";
+import serviceAreas from "@/data/serviceAreas.json";
+import { ADDRESS, EMAIL, PHONE, SOCIAL, whatsappLink } from "@/lib/site";
+
+const LINK_GROUPS = [
+  {
+    title: "Rent a car",
+    links: [
+      { name: "All cars and rates", href: "/fleet" },
+      { name: "SUVs and 4x4", href: "/fleet?category=SUV" },
+      { name: "Luxury cars", href: "/fleet?category=Luxury" },
+      { name: "Vans and coasters", href: "/fleet?category=Van" },
+      { name: "Fuel cost calculator", href: "/fuel-prices-pakistan" },
+    ],
+  },
+  {
+    title: "Services",
+    links: [
+      { name: "Airport transfer", href: "/services/airport-transfer" },
+      { name: "Wedding cars", href: "/services/wedding-cars" },
+      { name: "Corporate rentals", href: "/services/corporate-rentals" },
+      { name: "Northern tours", href: "/tours" },
+      { name: "All services", href: "/services" },
+    ],
+  },
+  {
+    title: "Company",
+    links: [
+      { name: "About us", href: "/about" },
+      { name: "Contact", href: "/contact" },
+      { name: "FAQ", href: "/faq" },
+      { name: "Blog", href: "/blog" },
+      { name: "Gallery", href: "/gallery" },
+      { name: "Privacy policy", href: "/privacy-policy" },
+    ],
+  },
+];
+
+const POPULAR_AREAS = [
+  "dha-phase-5-lahore",
+  "dha-phase-6-lahore",
+  "gulberg-iii-lahore",
+  "johar-town-block-d-lahore",
+  "bahria-town-sector-c-lahore",
+  "model-town-block-c-lahore",
+  "lahore-cantt-lahore",
+  "blue-area-islamabad",
+  "sector-f-7-islamabad",
+  "saddar-rawalpindi",
+];
 
 export default function Footer() {
+  const areas = POPULAR_AREAS.map((slug) => serviceAreas.find((a) => a.slug === slug)).filter(
+    (a): a is (typeof serviceAreas)[number] => Boolean(a)
+  );
+
   return (
-    <footer className="bg-white/95 backdrop-blur-xl border-t border-slate-200/90 pt-20 pb-10 text-slate-600 shadow-[0_-10px_30px_rgba(0,0,0,0.03)]">
-      <div className="container mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-          
-          {/* ─── Brand & About Column ─────────────────────────────────────────── */}
+    <footer className="bg-brand-ink text-white/70">
+      {/* Booking strip */}
+      <div className="border-b border-white/10">
+        <div className="container mx-auto px-5 md:px-12 py-10 md:py-12 flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
           <div>
-            <Link href="/" className="mb-6 block w-max">
-              <Logo width={150} height={50} />
-            </Link>
-            <p className="text-slate-600 mb-6 leading-relaxed">
-              Pakistan's premium luxury car rental & tours platform. Experience world-class mobility, professional drivers, and a breathtaking fleet of vehicles.
+            <p className="font-display text-2xl md:text-3xl font-semibold text-white">
+              Need a car today?
             </p>
-
-            {/* ─── SOCIAL MEDIA LINKS ───────────────────────────────────────────
-                Update social media links here.
-                Replace the href values with your actual social profile URLs.
-                Example Instagram: https://instagram.com/iristours
-            ──────────────────────────────────────────────────────────────────── */}
-            <div className="flex items-center gap-4">
-              <a href="https://instagram.com" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-700 hover:text-white hover:bg-amber-500 hover:border-amber-500 transition-all shadow-sm">
-                <FaInstagram size={18} />
-              </a>
-              <a href="https://web.facebook.com/people/Iris-tours-Rental-Car/100083145616731/" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-700 hover:text-white hover:bg-amber-500 hover:border-amber-500 transition-all shadow-sm">
-                <FaFacebook size={18} />
-              </a>
-              <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-700 hover:text-white hover:bg-amber-500 hover:border-amber-500 transition-all shadow-sm">
-                <FaLinkedin size={18} />
-              </a>
-            </div>
+            <p className="mt-2 text-white/65">Message us with your dates and pickup point. We are available 24 hours a day.</p>
           </div>
-
-          {/* ─── QUICK LINKS COLUMN ─────────────────────────────────────────────── */}
-          <div>
-            <h4 className="text-lg font-bold text-slate-900 mb-6 uppercase tracking-wider">Quick Links</h4>
-            <ul className="flex flex-col gap-3">
-              <li><Link href="/fleet" className="text-text-secondary hover:text-accent-primary transition-colors text-sm">Our Fleet</Link></li>
-              <li><Link href="/services" className="text-text-secondary hover:text-accent-primary transition-colors text-sm">All Rental Services</Link></li>
-              <li><Link href="/services/airport-transfer" className="text-text-secondary hover:text-accent-primary transition-colors text-sm">Airport Transfers</Link></li>
-              <li><Link href="/services/wedding-cars" className="text-text-secondary hover:text-accent-primary transition-colors text-sm">Wedding Cars</Link></li>
-              <li><Link href="/services/corporate-rentals" className="text-text-secondary hover:text-accent-primary transition-colors text-sm">Corporate Rentals</Link></li>
-              <li><Link href="/tours" className="text-text-secondary hover:text-accent-primary transition-colors text-sm">Northern Pakistan Tours</Link></li>
-              <li><Link href="/fuel-prices-pakistan" className="text-text-secondary hover:text-accent-primary transition-colors text-sm">Fuel Prices Calculator</Link></li>
-            </ul>
-          </div>
-
-          {/* ─── COMPANY LINKS COLUMN ───────────────────────────────────────────── */}
-          <div>
-            <h4 className="text-lg font-bold text-slate-900 mb-6 uppercase tracking-wider">Company</h4>
-            <ul className="flex flex-col gap-3">
-              <li><Link href="/about" className="text-slate-600 hover:text-amber-600 transition-colors text-sm">About Us</Link></li>
-              <li><Link href="/blog" className="text-slate-600 hover:text-amber-600 transition-colors text-sm">Rental Guides &amp; Blog</Link></li>
-              <li><Link href="/areas" className="text-slate-600 hover:text-amber-600 transition-colors text-sm">Service Areas &amp; Cities</Link></li>
-              <li><Link href="/gallery" className="text-slate-600 hover:text-amber-600 transition-colors text-sm">Fleet Gallery</Link></li>
-              <li><Link href="/faq" className="text-slate-600 hover:text-amber-600 transition-colors text-sm">FAQs</Link></li>
-              <li><Link href="/contact" className="text-slate-600 hover:text-amber-600 transition-colors text-sm">Contact Us</Link></li>
-              <li><Link href="/privacy-policy" className="text-slate-600 hover:text-amber-600 transition-colors text-sm">Privacy Policy</Link></li>
-            </ul>
-          </div>
-
-          {/* ─── CONTACT INFO COLUMN ────────────────────────────────────────────── */}
-          <div>
-            <h4 className="text-lg font-bold text-slate-900 mb-6 uppercase tracking-wider">Contact Us</h4>
-            <div className="flex flex-col gap-6">
-              
-              {/* Lahore Office */}
-              <div>
-                <h5 className="text-amber-600 font-bold mb-3 text-sm tracking-wide uppercase">Lahore Office</h5>
-                <ul className="flex flex-col gap-2">
-                  <li className="flex items-start gap-3">
-                    <FaMapMarkerAlt className="text-slate-700 mt-1 flex-shrink-0" size={14} />
-                    <span className="text-slate-600 text-sm leading-relaxed">DHA Phase-1, Sector-H, 143 Street, 153, Lahore</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <FaPhone className="text-slate-700 flex-shrink-0" size={14} />
-                    <a href="tel:+923154973906" className="text-slate-600 text-sm hover:text-amber-600 transition-colors">+92 315 497 3906</a>
-                  </li>
-                </ul>
-              </div>
-
-              {/* Islamabad Office */}
-              <div>
-                <h5 className="text-amber-600 font-bold mb-3 text-sm tracking-wide uppercase">Islamabad Office</h5>
-                <ul className="flex flex-col gap-2">
-                  <li className="flex items-start gap-3">
-                    <FaMapMarkerAlt className="text-slate-700 mt-1 flex-shrink-0" size={14} />
-                    <span className="text-slate-600 text-sm leading-relaxed">Islamabad, Pakistan</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <FaPhone className="text-slate-700 flex-shrink-0" size={14} />
-                    <a href="tel:+923066305875" className="text-slate-600 text-sm hover:text-amber-600 transition-colors">+92 306 630 5875</a>
-                  </li>
-                </ul>
-              </div>
-              
-              {/* WhatsApp and Email */}
-              <ul className="flex flex-col gap-2 pt-3 border-t border-slate-200">
-                <li className="flex items-center gap-3">
-                  <FaWhatsapp className="text-green-600 flex-shrink-0" size={16} />
-                  <a href="https://wa.me/923154973906?text=Hi!%20I%20need%20more%20information." target="_blank" rel="noreferrer" className="text-slate-600 text-sm hover:text-amber-600 transition-colors">WhatsApp Chat: +92 315 497 3906</a>
-                </li>
-                <li className="flex items-center gap-3">
-                  <FaEnvelope className="text-slate-700 flex-shrink-0" size={14} />
-                  <a href="mailto:info@iristours.net" className="text-slate-600 text-sm hover:text-amber-600 transition-colors">info@iristours.net</a>
-                </li>
-              </ul>
-
-            </div>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <a
+              href={whatsappLink("Hi Iris Tours! I need a car.")}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] hover:bg-[#1fb85a] px-6 py-3.5 font-semibold text-white transition-colors"
+            >
+              <FaWhatsapp size={19} />
+              WhatsApp us
+            </a>
+            <a
+              href={`tel:${PHONE.tel}`}
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-white/25 hover:border-white px-6 py-3.5 font-semibold text-white transition-colors"
+            >
+              <FaPhoneAlt size={14} className="text-brand-orange" />
+              Call {PHONE.display}
+            </a>
           </div>
         </div>
+      </div>
 
-        {/* ─── POPULAR SERVICE AREAS & KEYWORDS STRIP ──────────────────────────── */}
-        <div className="pt-8 mb-12 border-t border-slate-200">
-          <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
-            <h5 className="text-sm font-bold uppercase tracking-wider text-slate-900">
-              Popular Rental Locations
-            </h5>
-            <Link href="/areas" className="text-xs text-accent-primary hover:underline mt-1 md:mt-0 font-medium">
-              View All 180+ Service Areas &rarr;
+      <div className="container mx-auto px-5 md:px-12 py-12 md:py-14">
+        <div className="grid grid-cols-2 gap-x-6 gap-y-10 lg:grid-cols-12">
+          {/* Brand + contact */}
+          <div className="col-span-2 lg:col-span-4">
+            <Link href="/" aria-label="Iris Tours home" className="inline-block rounded-xl bg-white px-3 py-1.5">
+              <Logo width={128} height={42} />
             </Link>
+            <p className="mt-5 max-w-sm leading-relaxed">
+              Chauffeur-driven car rental in Lahore and Islamabad, with airport transfers, wedding cars and northern tours across Pakistan.
+            </p>
+            <ul className="mt-6 space-y-3 text-[15px]">
+              <li className="flex gap-3">
+                <FaMapMarkerAlt className="mt-1 flex-shrink-0 text-brand-orange" size={14} />
+                <span>{ADDRESS.lahore}</span>
+              </li>
+              <li className="flex gap-3">
+                <FaPhoneAlt className="mt-1 flex-shrink-0 text-brand-orange" size={13} />
+                <a href={`tel:${PHONE.tel}`} className="hover:text-white transition-colors">
+                  {PHONE.international}
+                </a>
+              </li>
+              <li className="flex gap-3">
+                <FaEnvelope className="mt-1 flex-shrink-0 text-brand-orange" size={14} />
+                <a href={`mailto:${EMAIL}`} className="hover:text-white transition-colors">
+                  {EMAIL}
+                </a>
+              </li>
+              <li className="flex gap-3">
+                <FaFacebook className="mt-1 flex-shrink-0 text-brand-orange" size={14} />
+                <a href={SOCIAL.facebook} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                  Facebook page
+                </a>
+              </li>
+            </ul>
           </div>
-          <div className="flex flex-wrap gap-2 text-xs">
-            <Link href="/areas/dha-phase-5-lahore" className="px-2.5 py-1 rounded bg-slate-50 border border-slate-200 text-slate-600 hover:text-amber-600 hover:border-amber-500 transition-colors">Rent a Car DHA Phase 5 Lahore</Link>
-            <Link href="/areas/dha-phase-6-lahore" className="px-2.5 py-1 rounded bg-slate-50 border border-slate-200 text-slate-600 hover:text-amber-600 hover:border-amber-500 transition-colors">Rent a Car DHA Phase 6 Lahore</Link>
-            <Link href="/areas/gulberg-iii-lahore" className="px-2.5 py-1 rounded bg-slate-50 border border-slate-200 text-slate-600 hover:text-amber-600 hover:border-amber-500 transition-colors">Rent a Car Gulberg Lahore</Link>
-            <Link href="/areas/johar-town-block-d-lahore" className="px-2.5 py-1 rounded bg-slate-50 border border-slate-200 text-slate-600 hover:text-amber-600 hover:border-amber-500 transition-colors">Rent a Car Johar Town</Link>
-            <Link href="/areas/bahria-town-sector-c-lahore" className="px-2.5 py-1 rounded bg-slate-50 border border-slate-200 text-slate-600 hover:text-amber-600 hover:border-amber-500 transition-colors">Car Rental Bahria Town Lahore</Link>
-            <Link href="/areas/model-town-block-c-lahore" className="px-2.5 py-1 rounded bg-slate-50 border border-slate-200 text-slate-600 hover:text-amber-600 hover:border-amber-500 transition-colors">Rent a Car Model Town</Link>
-            <Link href="/areas/lahore-cantt-lahore" className="px-2.5 py-1 rounded bg-slate-50 border border-slate-200 text-slate-600 hover:text-amber-600 hover:border-amber-500 transition-colors">Rent a Car Lahore Cantt</Link>
-            <Link href="/areas/lake-city-lahore" className="px-2.5 py-1 rounded bg-slate-50 border border-slate-200 text-slate-600 hover:text-amber-600 hover:border-amber-500 transition-colors">Rent a Car Lake City</Link>
-            <Link href="/areas/askari-11-lahore" className="px-2.5 py-1 rounded bg-slate-50 border border-slate-200 text-slate-600 hover:text-amber-600 hover:border-amber-500 transition-colors">Rent a Car Askari 11</Link>
-            <Link href="/areas/blue-area-islamabad" className="px-2.5 py-1 rounded bg-slate-50 border border-slate-200 text-slate-600 hover:text-amber-600 hover:border-amber-500 transition-colors">Rent a Car Blue Area Islamabad</Link>
-            <Link href="/areas/sector-f-6-islamabad" className="px-2.5 py-1 rounded bg-slate-50 border border-slate-200 text-slate-600 hover:text-amber-600 hover:border-amber-500 transition-colors">Rent a Car Sector F-6 Islamabad</Link>
-            <Link href="/areas/sector-f-7-islamabad" className="px-2.5 py-1 rounded bg-slate-50 border border-slate-200 text-slate-600 hover:text-amber-600 hover:border-amber-500 transition-colors">Rent a Car Sector F-7 Islamabad</Link>
-            <Link href="/areas/dha-phase-2-islamabad" className="px-2.5 py-1 rounded bg-slate-50 border border-slate-200 text-slate-600 hover:text-amber-600 hover:border-amber-500 transition-colors">Rent a Car DHA Islamabad</Link>
-            <Link href="/areas/bahria-town-phase-4-islamabad" className="px-2.5 py-1 rounded bg-slate-50 border border-slate-200 text-slate-600 hover:text-amber-600 hover:border-amber-500 transition-colors">Car Rental Bahria Town Islamabad</Link>
-            <Link href="/areas/saddar-rawalpindi" className="px-2.5 py-1 rounded bg-slate-50 border border-slate-200 text-slate-600 hover:text-amber-600 hover:border-amber-500 transition-colors">Rent a Car Saddar Rawalpindi</Link>
-            <Link href="/areas/d-ground-faisalabad" className="px-2.5 py-1 rounded bg-slate-50 border border-slate-200 text-slate-600 hover:text-amber-600 hover:border-amber-500 transition-colors">Rent a Car Faisalabad D-Ground</Link>
-            <Link href="/areas/multan-cantt-multan" className="px-2.5 py-1 rounded bg-slate-50 border border-slate-200 text-slate-600 hover:text-amber-600 hover:border-amber-500 transition-colors">Rent a Car Multan Cantt</Link>
-            <Link href="/areas/sialkot-cantt-sialkot" className="px-2.5 py-1 rounded bg-slate-50 border border-slate-200 text-slate-600 hover:text-amber-600 hover:border-amber-500 transition-colors">Rent a Car Sialkot Cantt</Link>
-            <Link href="/areas/citi-housing-gujranwala" className="px-2.5 py-1 rounded bg-slate-50 border border-slate-200 text-slate-600 hover:text-amber-600 hover:border-amber-500 transition-colors">Rent a Car Gujranwala</Link>
+
+          {/* Link groups */}
+          {LINK_GROUPS.map((group) => (
+            <div key={group.title} className="lg:col-span-2">
+              <p className="mb-4 font-semibold text-white">{group.title}</p>
+              <ul className="space-y-2.5 text-[15px]">
+                {group.links.map((l) => (
+                  <li key={l.href}>
+                    <Link href={l.href} className="hover:text-white transition-colors">
+                      {l.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+
+          {/* Areas */}
+          <div className="col-span-2 lg:col-span-2">
+            <p className="mb-4 font-semibold text-white">Popular areas</p>
+            <ul className="flex flex-wrap gap-2 text-sm lg:flex-col lg:gap-2.5 lg:text-[15px]">
+              {areas.map((a) => (
+                <li key={a.slug}>
+                  <Link
+                    href={`/areas/${a.slug}`}
+                    className="inline-block rounded-full border border-white/15 px-3 py-1.5 hover:border-white/40 hover:text-white transition-colors lg:rounded-none lg:border-0 lg:p-0"
+                  >
+                    {a.name}
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <Link href="/areas" className="inline-block rounded-full px-3 py-1.5 font-semibold text-brand-orange hover:text-white lg:p-0">
+                  All {serviceAreas.length} areas
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
 
-        {/* Footer Bottom Bar — copyright text */}
-        <div className="pt-8 border-t border-slate-200 flex flex-col items-center justify-center gap-2 text-center">
-          <p className="text-slate-500 text-sm">
-            &copy; {new Date().getFullYear()} Iris Tours. All rights reserved. <span className="hidden md:inline mx-2">|</span> Designed & Developed by <a href="https://hussainxsolution.com/" target="_blank" rel="noreferrer" className="text-slate-900 hover:text-amber-600 transition-colors hover:underline font-medium">Hussain X Solution</a>
+        <div className="mt-12 flex flex-col gap-2 border-t border-white/10 pt-6 text-sm text-white/50 md:flex-row md:justify-between">
+          <p>&copy; {new Date().getFullYear()} Iris Tours &amp; Rental Car Services. All rights reserved.</p>
+          <p>
+            Designed and developed by{" "}
+            <a href="https://hussainxsolution.com/" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-white">
+              Hussain X Solution
+            </a>
           </p>
         </div>
       </div>
