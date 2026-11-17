@@ -7,8 +7,8 @@ export default function manifest(): MetadataRoute.Manifest {
     description: "Best Rent a Car in Lahore DHA and Islamabad. Luxury sedans, SUVs, wedding cars, airport transfers, and northern tours.",
     start_url: "/",
     display: "standalone",
-    background_color: "#0B0F19",
-    theme_color: "#FF6B00",
+    background_color: "#15161A",
+    theme_color: "#F7931E",
     icons: [
       {
         src: "/logo.png",

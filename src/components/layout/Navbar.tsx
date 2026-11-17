@@ -16,9 +16,11 @@ const navLinks = [
   { name: "Fuel Prices", href: "/fuel-prices-pakistan" },
   { name: "Airport", href: "/services/airport-transfer" },
   { name: "Wedding", href: "/services/wedding-cars" },
+  { name: "Tours", href: "/tours", mobileOnly: true },
   { name: "Areas", href: "/areas" },
   { name: "Blog", href: "/blog" },
   { name: "About", href: "/about" },
+  { name: "Contact", href: "/contact", mobileOnly: true },
 ];
 
 export default function Navbar() {
@@ -55,7 +57,7 @@ export default function Navbar() {
 
         {/* Desktop Nav */}
         <nav className="hidden lg:flex items-center gap-7">
-          {navLinks.map((link) => {
+          {navLinks.filter((link) => !("mobileOnly" in link)).map((link) => {
             if (link.name === "Fleet") {
               return (
                 <div key="fleet-dropdown" className="relative group">
@@ -82,8 +84,7 @@ export default function Navbar() {
                     <Link href="/fleet?category=SUV" className="px-4 py-3 text-sm font-semibold text-slate-800 hover:bg-slate-50 hover:text-amber-600 transition-colors border-b border-slate-100">SUVs &amp; 4x4</Link>
                     <Link href="/fleet?category=Sedan" className="px-4 py-3 text-sm font-semibold text-slate-800 hover:bg-slate-50 hover:text-amber-600 transition-colors border-b border-slate-100">Sedans</Link>
                     <Link href="/fleet?category=Economy" className="px-4 py-3 text-sm font-semibold text-slate-800 hover:bg-slate-50 hover:text-amber-600 transition-colors border-b border-slate-100">Economy</Link>
-                    <Link href="/fleet?category=Van" className="px-4 py-3 text-sm font-semibold text-slate-800 hover:bg-slate-50 hover:text-amber-600 transition-colors border-b border-slate-100">Vans</Link>
-                    <Link href="/fleet?category=Bus" className="px-4 py-3 text-sm font-semibold text-slate-800 hover:bg-slate-50 hover:text-amber-600 transition-colors">Buses &amp; Coasters</Link>
+                    <Link href="/fleet?category=Van" className="px-4 py-3 text-sm font-semibold text-slate-800 hover:bg-slate-50 hover:text-amber-600 transition-colors">Vans &amp; Coasters</Link>
                   </div>
                 </div>
               );
@@ -110,7 +111,7 @@ export default function Navbar() {
                   </div>
                   
                   {/* Mega Menu Dropdown */}
-                  <div className="absolute top-full left-1/2 -translate-x-1/2 w-64 bg-white/98 backdrop-blur-xl border border-slate-200/90 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 flex flex-col overflow-hidden max-h-[80vh] overflow-y-auto">
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 w-64 bg-white/98 backdrop-blur-xl border border-slate-200/90 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 flex flex-col overflow-hidden max-h-[80vh] overflow-y-auto" data-lenis-prevent>
                     {cities.map(city => (
                       <Link key={city} href={`/areas#${city}`} className="px-4 py-3 text-[14px] font-semibold text-slate-800 hover:bg-slate-50 hover:text-amber-600 transition-colors border-b border-slate-100 last:border-0">
                         {city}
@@ -201,7 +202,7 @@ export default function Navbar() {
             transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
             className="absolute top-full left-0 right-0 bg-white/98 backdrop-blur-xl border-b border-slate-200 lg:hidden shadow-[0_20px_40px_-15px_rgba(15,23,42,0.1)] overflow-hidden"
           >
-            <div className="flex flex-col px-6 py-8 gap-1 max-h-[80vh] overflow-y-auto">
+            <div className="flex flex-col px-6 py-8 gap-1 max-h-[80vh] overflow-y-auto" data-lenis-prevent>
               {navLinks.map((link, i) => (
                 <motion.div
                   key={link.name}

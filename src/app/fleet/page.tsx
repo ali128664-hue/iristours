@@ -4,13 +4,13 @@ import fleetData from "@/data/fleet.json";
 
 export const metadata: Metadata = {
   title: "Rent a Car Fleet in Lahore | 3D Luxury SUVs, Sedans & Vans - Iris Tours",
-  description: "Browse 36+ verified rental cars in Lahore in an interactive 3D fleet showcase. Toyota Fortuner, Prado, Land Cruiser V8, Mercedes, Civic, and Hiace Grand Cabin with professional chauffeurs. Book 24/7!",
+  description: "Browse verified rental cars in Lahore in an interactive 3D fleet showcase. Toyota Fortuner, Prado, Land Cruiser V8, Mercedes, Civic, and Hiace Grand Cabin with professional chauffeurs. Book 24/7!",
   alternates: {
     canonical: "https://iristours.net/fleet",
   },
   openGraph: {
     title: "Rent a Car Fleet in Lahore | 3D Luxury SUVs, Sedans & Vans - Iris Tours",
-    description: "Browse 36+ verified rental cars in Lahore in an interactive 3D fleet showcase. Toyota Fortuner, Prado, Land Cruiser V8, Mercedes, Civic, and Hiace Grand Cabin with professional chauffeurs.",
+    description: "Browse verified rental cars in Lahore in an interactive 3D fleet showcase. Toyota Fortuner, Prado, Land Cruiser V8, Mercedes, Civic, and Hiace Grand Cabin with professional chauffeurs.",
     url: "https://iristours.net/fleet",
     siteName: "Iris Tours",
     images: [
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Rent a Car Fleet in Lahore | 3D Luxury SUVs & Sedans - Iris Tours",
-    description: "Browse 36+ verified rental cars in Lahore with professional chauffeurs in our interactive 3D fleet showcase.",
+    description: "Browse verified rental cars in Lahore with professional chauffeurs in our interactive 3D fleet showcase.",
     images: ["https://iristours.net/blog/rent-a-car-lahore-fleet-lineup.jpg"],
   },
 };

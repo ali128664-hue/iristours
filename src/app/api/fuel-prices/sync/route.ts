@@ -4,11 +4,15 @@ import { revalidatePath } from "next/cache";
 
 export const dynamic = "force-dynamic";
 
-const SYNC_SECRET = process.env.IRIS_CRON_SECRET || "iris_fuel_sync_secret_2026";
+// Set IRIS_CRON_SECRET in the hosting environment (and as a GitHub Actions secret).
+// Without it the endpoint stays locked in production.
+const SYNC_SECRET = process.env.IRIS_CRON_SECRET;
 
 function isAuthorized(req: NextRequest): boolean {
   // Allow local development without secret
   if (process.env.NODE_ENV === "development") return true;
+
+  if (!SYNC_SECRET) return false;
 
   const urlSecret = req.nextUrl.searchParams.get("secret");
   const authHeader = req.headers.get("authorization");

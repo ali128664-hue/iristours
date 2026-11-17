@@ -15,6 +15,7 @@
  */
 
 import { NextRequest, NextResponse } from "next/server";
+import { stripMarkdown } from "@/components/ui/RichText";
 import fleetData from "@/data/fleet.json";
 
 export async function GET(
@@ -46,7 +47,7 @@ export async function GET(
 - **Luggage Capacity:** ${vehicle.specifications?.luggage || vehicle.luggage || 2} bags
 
 ## Description
-${vehicle.description}
+${stripMarkdown(vehicle.description)}
 
 ## Features
 ${(vehicle.features || []).map((f: string) => `- ${f}`).join("\n")}

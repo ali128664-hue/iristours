@@ -23,13 +23,10 @@ jobs:
       - name: Run Fuel Price Synchronizer
         env:
           APP_URL: "https://iristours.net"
-          IRIS_CRON_SECRET: "iris_fuel_sync_secret_2026"
+          # Add this under: GitHub repo → Settings → Secrets and variables → Actions
+          IRIS_CRON_SECRET: ${{ secrets.IRIS_CRON_SECRET }}
         run: |
           node scripts/update-fuel-prices.mjs
-
-      - name: Trigger Live Website Cache Revalidation
-        run: |
-          curl -s -L -X GET "https://iristours.net/api/fuel-prices/sync?secret=iris_fuel_sync_secret_2026" || true
 
       - name: Commit and Push if Rates Changed
         run: |

@@ -22,8 +22,8 @@
       "name": "Hi-Octane 97 (Euro 5 / HOBC)",
       "price": 400,
       "previousPrice": 400,
-      "change": -10.86,
-      "changePercent": -2.72,
+      "change": 0,
+      "changePercent": 0,
       "unit": "L",
       "status": "verified"
     },
@@ -39,9 +39,9 @@
     "kerosene": {
       "name": "Kerosene Oil (SKO)",
       "price": 283.64,
-      "previousPrice": 347.32,
-      "change": 41.82,
-      "changePercent": 12.04,
+      "previousPrice": 308.52,
+      "change": -24.88,
+      "changePercent": -8.06,
       "unit": "L",
       "status": "verified"
     },
@@ -49,15 +49,15 @@
       "name": "LPG (Liquefied Petroleum Gas)",
       "price": 279.34,
       "previousPrice": 259,
-      "change": -0.35,
-      "changePercent": -0.14,
+      "change": 20.34,
+      "changePercent": 7.85,
       "unit": "kg",
       "status": "verified"
     }
   },
   "meta": {
     "effectiveFrom": "2026-11-17",
-    "nextExpectedRevision": "October 01, 2026",
+    "nextExpectedRevision": "December 01, 2026",
     "lastChecked": "2026-11-17T01:49:10.254Z",
     "source": "OilPrices.pk (Live OGRA Notified Feed)",
     "isLiveVerified": true
@@ -226,52 +226,124 @@
   ],
   "history": [
     {
-      "date": "Sep 16, 2026",
-      "petrolPrice": 389.14,
-      "petrolChange": -1.65,
-      "dieselPrice": 424.04,
-      "dieselChange": -0.88,
-      "notes": "Relief due to easing international crude rates."
+      "date": "Nov 17, 2026",
+      "petrolPrice": 328,
+      "petrolChange": -2,
+      "dieselPrice": 358,
+      "dieselChange": -2,
+      "notes": "Rate revision recorded from the live price feed."
     },
     {
-      "date": "Sep 01, 2026",
-      "petrolPrice": 390.79,
-      "petrolChange": -1.21,
-      "dieselPrice": 424.92,
-      "dieselChange": 0.5,
-      "notes": "Slight reduction in petrol; diesel adjusted upwards."
+      "date": "Nov 14, 2026",
+      "petrolPrice": 330,
+      "petrolChange": -2,
+      "dieselPrice": 360,
+      "dieselChange": 0,
+      "notes": "Rate revision recorded from the live price feed."
     },
     {
-      "date": "Aug 16, 2026",
-      "petrolPrice": 392,
-      "petrolChange": 4.5,
-      "dieselPrice": 424.42,
-      "dieselChange": 3.8,
-      "notes": "Global oil price rise and petroleum levy adjustment."
+      "date": "Nov 13, 2026",
+      "petrolPrice": 332,
+      "petrolChange": -3,
+      "dieselPrice": 360,
+      "dieselChange": -4,
+      "notes": "Rate revision recorded from the live price feed."
     },
     {
-      "date": "Aug 01, 2026",
-      "petrolPrice": 387.5,
-      "petrolChange": 7.45,
-      "dieselPrice": 420.62,
-      "dieselChange": 8.1,
-      "notes": "Upward revision driven by currency import parity."
+      "date": "Nov 12, 2026",
+      "petrolPrice": 335,
+      "petrolChange": -3,
+      "dieselPrice": 364,
+      "dieselChange": -7,
+      "notes": "Rate revision recorded from the live price feed."
     },
     {
-      "date": "Jul 16, 2026",
-      "petrolPrice": 380.05,
-      "petrolChange": 9.99,
-      "dieselPrice": 412.52,
-      "dieselChange": 6.18,
-      "notes": "Federal budget petroleum levy changes applied."
+      "date": "Nov 11, 2026",
+      "petrolPrice": 338,
+      "petrolChange": -8,
+      "dieselPrice": 371,
+      "dieselChange": -7,
+      "notes": "Rate revision recorded from the live price feed."
     },
     {
-      "date": "Jul 01, 2026",
-      "petrolPrice": 370.06,
-      "petrolChange": 7.45,
-      "dieselPrice": 406.34,
-      "dieselChange": 9.56,
-      "notes": "Fiscal year-end review by Ministry of Petroleum & OGRA."
+      "date": "Nov 07, 2026",
+      "petrolPrice": 346,
+      "petrolChange": -6.59,
+      "dieselPrice": 378,
+      "dieselChange": -4.25,
+      "notes": "Rate revision recorded from the live price feed."
+    },
+    {
+      "date": "Nov 06, 2026",
+      "petrolPrice": 352.59,
+      "petrolChange": -9.41,
+      "dieselPrice": 382.25,
+      "dieselChange": -5.56,
+      "notes": "Rate revision recorded from the live price feed."
+    },
+    {
+      "date": "Nov 05, 2026",
+      "petrolPrice": 362,
+      "petrolChange": -7.06,
+      "dieselPrice": 387.81,
+      "dieselChange": -3.71,
+      "notes": "Rate revision recorded from the live price feed."
+    },
+    {
+      "date": "Nov 04, 2026",
+      "petrolPrice": 369.06,
+      "petrolChange": -5.45,
+      "dieselPrice": 391.52,
+      "dieselChange": -3.68,
+      "notes": "Rate revision recorded from the live price feed."
+    },
+    {
+      "date": "Nov 03, 2026",
+      "petrolPrice": 374.51,
+      "petrolChange": -3.4,
+      "dieselPrice": 395.2,
+      "dieselChange": -7.76,
+      "notes": "Rate revision recorded from the live price feed."
+    },
+    {
+      "date": "Oct 31, 2026",
+      "petrolPrice": 377.91,
+      "petrolChange": 0,
+      "dieselPrice": 402.96,
+      "dieselChange": 2.29,
+      "notes": "Rate revision recorded from the live price feed."
+    },
+    {
+      "date": "Oct 30, 2026",
+      "petrolPrice": 377.91,
+      "petrolChange": 0,
+      "dieselPrice": 400.67,
+      "dieselChange": 0.85,
+      "notes": "Rate revision recorded from the live price feed."
+    },
+    {
+      "date": "Oct 29, 2026",
+      "petrolPrice": 377.91,
+      "petrolChange": 1.85,
+      "dieselPrice": 399.82,
+      "dieselChange": 1.75,
+      "notes": "Rate revision recorded from the live price feed."
+    },
+    {
+      "date": "Oct 28, 2026",
+      "petrolPrice": 376.06,
+      "petrolChange": -3.19,
+      "dieselPrice": 398.07,
+      "dieselChange": 2.25,
+      "notes": "Rate revision recorded from the live price feed."
+    },
+    {
+      "date": "Oct 27, 2026",
+      "petrolPrice": 379.25,
+      "petrolChange": 1.54,
+      "dieselPrice": 395.82,
+      "dieselChange": 2.16,
+      "notes": "Rate revision recorded from the live price feed."
     }
   ],
   "vehicleMileage": {

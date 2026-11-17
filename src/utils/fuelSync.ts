@@ -15,7 +15,8 @@ export interface SyncResult {
 /**
  * Parses numeric price from text
  */
-function parsePrice(text: string): number | null {
+function parsePrice(text: string | undefined): number | null {
+  if (!text) return null;
   const cleaned = text.replace(/[^0-9.]/g, "").trim();
   const num = parseFloat(cleaned);
   return isNaN(num) || num <= 0 ? null : Math.round(num * 100) / 100;
@@ -165,8 +166,7 @@ async function fetchPakistanFuelRates(): Promise<{
             diesel: dieselItem?.pricePkr,
             previousDiesel: prevDieselItem?.pricePkr,
             kerosene: skoItem?.pricePkr,
-            lpg: lpgPrice || 258.65,
-            hiOctane: 400.0,
+            lpg: lpgPrice,
             effectiveDate: formattedDate || latestDate,
             source: "OilPrices.pk (Live Real-time OGRA Notified Feed)",
           };
@@ -194,10 +194,10 @@ async function fetchPakistanFuelRates(): Promise<{
     if (res.ok) {
       const html = await res.text();
       const petrolMatch = html.match(/Premier\s*Euro\s*5[^0-9<]*([0-9]+\.[0-9]{2})/i);
-      const dieselMatch = html.match(/Hi-Cetane|High\s*Speed\s*Diesel[^0-9<]*([0-9]+\.[0-9]{2})/i);
-      const hobcMatch = html.match(/Altron\s*Premium|Hi-Octane[^0-9<]*([0-9]+\.[0-9]{2})/i);
+      const dieselMatch = html.match(/(?:Hi-Cetane|High\s*Speed\s*Diesel)[^0-9<]*([0-9]+\.[0-9]{2})/i);
+      const hobcMatch = html.match(/(?:Altron\s*Premium|Hi-Octane)[^0-9<]*([0-9]+\.[0-9]{2})/i);
       const ldoMatch = html.match(/Light\s*Diesel[^0-9<]*([0-9]+\.[0-9]{2})/i);
-      const skoMatch = html.match(/Kerosene|SKO[^0-9<]*([0-9]+\.[0-9]{2})/i);
+      const skoMatch = html.match(/(?:Kerosene|SKO)[^0-9<]*([0-9]+\.[0-9]{2})/i);
 
       const petrol = petrolMatch ? parsePrice(petrolMatch[1]) : null;
       const diesel = dieselMatch ? parsePrice(dieselMatch[1]) : null;
@@ -253,6 +253,62 @@ async function fetchPakistanFuelRates(): Promise<{
   return null;
 }
 
+const round2 = (n: number) => Math.round(n * 100) / 100;
+const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const HISTORY_LIMIT = 15;
+
+interface PriceEntry {
+  name: string;
+  price: number;
+  previousPrice: number;
+  change: number;
+  changePercent: number;
+  status?: string;
+}
+
+/** A new price is only trusted if it is within 15% of a known reference (guards against feed glitches). */
+function isPlausible(newPrice: number | undefined, reference: number): newPrice is number {
+  if (typeof newPrice !== "number" || !(newPrice > 0)) return false;
+  if (!(reference > 0)) return true;
+  return Math.abs(newPrice - reference) / reference <= 0.15;
+}
+
+/** Updates price + previousPrice + change + changePercent together. Returns true if the price changed. */
+function applyPrice(entry: PriceEntry, newPrice: number | undefined, previousFromFeed?: number): boolean {
+  if (typeof newPrice !== "number") return false;
+  const matchesStored = isPlausible(newPrice, entry.price);
+  const matchesFeedHistory = typeof previousFromFeed === "number" && isPlausible(newPrice, previousFromFeed);
+  if (!matchesStored && !matchesFeedHistory) {
+    console.warn(`Ignored implausible price for ${entry.name}: ${newPrice} (stored ${entry.price})`);
+    return false;
+  }
+  const changed = Math.abs(entry.price - newPrice) > 0.001;
+  if (typeof previousFromFeed === "number" && isPlausible(previousFromFeed, newPrice)) {
+    entry.previousPrice = previousFromFeed;
+  } else if (changed) {
+    entry.previousPrice = entry.price;
+  }
+  entry.price = newPrice;
+  entry.change = round2(entry.price - entry.previousPrice);
+  entry.changePercent = entry.previousPrice > 0 ? round2(((entry.price - entry.previousPrice) / entry.previousPrice) * 100) : 0;
+  entry.status = "verified";
+  return changed;
+}
+
+function shortDate(value: string): string {
+  const d = new Date(value);
+  if (Number.isNaN(d.getTime())) return value;
+  return `${MONTHS[d.getUTCMonth()].slice(0, 3)} ${String(d.getUTCDate()).padStart(2, "0")}, ${d.getUTCFullYear()}`;
+}
+
+/** OGRA reviews prices on the 1st and 16th of each month — returns the next one after today. */
+function nextRevisionDate(now: Date = new Date()): string {
+  const y = now.getUTCFullYear();
+  const m = now.getUTCMonth();
+  const next = now.getUTCDate() < 16 ? new Date(Date.UTC(y, m, 16)) : new Date(Date.UTC(y, m + 1, 1));
+  return `${MONTHS[next.getUTCMonth()]} ${String(next.getUTCDate()).padStart(2, "0")}, ${next.getUTCFullYear()}`;
+}
+
 let memoryCache: {
   data: typeof defaultFuelData;
   timestamp: number;
@@ -292,54 +348,32 @@ export async function syncFuelPrices(): Promise<SyncResult> {
   if (pakRates && pakRates.petrol) {
     sourceReport = pakRates.source;
 
-    // Update petrol
-    if (pakRates.petrol) {
-      const p = currentData.pakistan.petrol;
-      if (pakRates.previousPetrol) {
-        p.previousPrice = pakRates.previousPetrol;
-      } else if (Math.abs(p.price - pakRates.petrol) > 0.001) {
-        p.previousPrice = p.price;
+    const pk = currentData.pakistan;
+    const petrolChanged = applyPrice(pk.petrol, pakRates.petrol, pakRates.previousPetrol);
+    const dieselChanged = applyPrice(pk.diesel, pakRates.diesel, pakRates.previousDiesel);
+    applyPrice(pk.kerosene, pakRates.kerosene);
+    applyPrice(pk.lpg, pakRates.lpg);
+    applyPrice(pk.hiOctane, pakRates.hiOctane);
+    applyPrice(pk.lightDiesel, pakRates.lightDiesel);
+
+    if (petrolChanged || dieselChanged) {
+      if (pakRates.effectiveDate) {
+        currentData.meta.effectiveFrom = pakRates.effectiveDate;
       }
-      p.price = pakRates.petrol;
-      p.change = Math.round((p.price - p.previousPrice) * 100) / 100;
-      p.changePercent =
-        p.previousPrice > 0
-          ? Math.round(((p.price - p.previousPrice) / p.previousPrice) * 10000) / 100
-          : 0;
-      p.status = "verified";
+      // Keep the history table in step with the live price
+      const entryDate = shortDate(pakRates.effectiveDate || new Date().toISOString());
+      const entry = {
+        date: entryDate,
+        petrolPrice: pk.petrol.price,
+        petrolChange: pk.petrol.change,
+        dieselPrice: pk.diesel.price,
+        dieselChange: pk.diesel.change,
+        notes: "Rate revision recorded from the live price feed.",
+      };
+      currentData.history = [entry, ...currentData.history.filter((h) => h.date !== entryDate)].slice(0, HISTORY_LIMIT);
     }
 
-    // Update diesel
-    if (pakRates.diesel) {
-      const d = currentData.pakistan.diesel;
-      if (pakRates.previousDiesel) {
-        d.previousPrice = pakRates.previousDiesel;
-      } else if (Math.abs(d.price - pakRates.diesel) > 0.001) {
-        d.previousPrice = d.price;
-      }
-      d.price = pakRates.diesel;
-      d.change = Math.round((d.price - d.previousPrice) * 100) / 100;
-      d.changePercent =
-        d.previousPrice > 0
-          ? Math.round(((d.price - d.previousPrice) / d.previousPrice) * 10000) / 100
-          : 0;
-      d.status = "verified";
-    }
-
-    if (pakRates.kerosene) {
-      currentData.pakistan.kerosene.price = pakRates.kerosene;
-    }
-    if (pakRates.lpg) {
-      currentData.pakistan.lpg.price = pakRates.lpg;
-    }
-    if (pakRates.hiOctane) {
-      currentData.pakistan.hiOctane.price = pakRates.hiOctane;
-    }
-
-    if (pakRates.effectiveDate) {
-      currentData.meta.effectiveFrom = pakRates.effectiveDate;
-    }
-
+    currentData.meta.nextExpectedRevision = nextRevisionDate();
     currentData.meta.lastChecked = new Date().toISOString();
     currentData.meta.source = pakRates.source;
     currentData.meta.isLiveVerified = true;

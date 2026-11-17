@@ -11,14 +11,14 @@ const categories = [
     title: "Luxury Cars",
     icon: <CarFront size={30} className="text-amber-500" />,
     image: "/categories/luxury.jpg",
-    link: "/fleet?category=luxury",
+    link: "/fleet?category=Luxury",
     description: "Premium sedans and executive vehicles"
   },
   {
     title: "SUV & 4x4",
     icon: <Mountain size={30} className="text-amber-500" />,
     image: "/categories/suv.jpg",
-    link: "/fleet?category=suv",
+    link: "/fleet?category=SUV",
     description: "Command the road with power and space"
   },
   {

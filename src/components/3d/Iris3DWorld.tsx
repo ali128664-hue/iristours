@@ -28,9 +28,9 @@ export default function Iris3DWorld() {
 
     // ─── 1. SCENE, DAYLIGHT SKY & DEPTH FOG ────────────────────────────────────
     const scene = new THREE.Scene();
-    const bgColor = 0xf8fafc; // Luminous pearl / platinum daylight sky
+    const bgColor = 0xfafaf7; // Luminous pearl / platinum daylight sky
     scene.background = new THREE.Color(bgColor);
-    scene.fog = new THREE.FogExp2(0xf1f5f9, 0.009); // Crisp atmospheric depth fog
+    scene.fog = new THREE.FogExp2(0xf3f2ee, 0.009); // Crisp atmospheric depth fog
 
     const camera = new THREE.PerspectiveCamera(
       45,

@@ -6,6 +6,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import serviceAreas from "@/data/serviceAreas.json";
 import fleetData from "@/data/fleet.json";
 import VehicleCard from "@/components/fleet/VehicleCard";
+import RichText from "@/components/ui/RichText";
 
 // Generate static params so Next.js pre-builds all 200+ area pages for lightning-fast SEO
 export function generateStaticParams() {
@@ -228,7 +229,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
           {/* SEO Content Section — 100% Original Content Preserved */}
           <div className="max-w-4xl mx-auto mb-20 bg-bg-secondary p-8 md:p-12 rounded-3xl border border-border-primary shadow-sm prose prose-invert prose-p:text-text-secondary prose-headings:text-text-primary">
             <h2 className="text-3xl font-bold mb-6">Why Rent a Car in {area.name} with Us?</h2>
-            <p className="text-lg leading-relaxed mb-6">{area.description}</p>
+            <RichText text={area.description} className="text-lg text-text-secondary mb-6" />
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 not-prose">
               <div className="flex flex-col items-center text-center p-5 bg-white/70 rounded-2xl border border-border-primary/80">
@@ -276,7 +277,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
               href="/fleet" 
               className="inline-block px-8 py-4 bg-bg-secondary border border-border-primary rounded-2xl text-text-primary font-bold hover:border-accent-primary hover:text-accent-primary transition-all shadow-sm"
             >
-              Explore Full 36+ Vehicle Fleet
+              Explore Our Full Vehicle Fleet
             </Link>
           </div>
 

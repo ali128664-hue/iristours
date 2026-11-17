@@ -17,7 +17,7 @@
 
 import type { Metadata } from "next";
 import "./globals.css";
-import Iris3DWorld from "@/components/3d/Iris3DWorld";
+import Iris3DLazy from "@/components/3d/Iris3DLazy";
 import ScrollReveal3D from "@/components/3d/ScrollReveal3D";
 import SmoothScroll from "@/components/layout/SmoothScroll";
 import Navbar from "@/components/layout/Navbar";
@@ -83,6 +83,13 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* Brand fonts — preconnected and loaded here (faster than CSS @import) */}
+        <link rel="preconnect" href="https://api.fontshare.com" />
+        <link rel="preconnect" href="https://cdn.fontshare.com" crossOrigin="anonymous" />
+        <link
+          rel="stylesheet"
+          href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=general-sans@400,500,600,700&display=swap"
+        />
         {/* ─── SCHEMA.ORG STRUCTURED DATA ───────────────────────────────────────
             This JSON-LD block tells Google about your business details.
             It powers Google's rich result features (business panel, maps, etc.)
@@ -92,7 +99,7 @@ export default function RootLayout({
             - Business address → change the "address" array entries below
             - WhatsApp number → change the "sameAs" URL at the bottom
         ──────────────────────────────────────────────────────────────────────── */}
-        <Script id="local-business-schema" type="application/ld+json" dangerouslySetInnerHTML={{
+        <script id="local-business-schema" type="application/ld+json" dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "AutoRental",
@@ -128,7 +135,7 @@ export default function RootLayout({
                 "@type": "PostalAddress",
                 "streetAddress": "Islamabad",
                 "addressLocality": "Islamabad",
-                "addressRegion": "Punjab",
+                "addressRegion": "Islamabad Capital Territory",
                 "addressCountry": "PK"
               }
             ],
@@ -174,7 +181,7 @@ export default function RootLayout({
           every page automatically through this layout wrapper.
       ──────────────────────────────────────────────────────────────────────── */}
       <body className="antialiased bg-bg-primary text-text-primary min-h-screen flex flex-col relative selection:bg-accent-primary selection:text-white">
-        <Iris3DWorld />
+        <Iris3DLazy />
         <ScrollReveal3D />
         <CurrencyProvider>
           <SmoothScroll>

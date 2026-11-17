@@ -36,11 +36,11 @@ export function Button({
   };
 
   const baseStyles =
-    "relative inline-flex items-center justify-center px-7 py-3 rounded-full font-bold uppercase tracking-wider transition-all duration-200 overflow-hidden text-center cursor-pointer active:scale-[0.98]";
+    "relative inline-flex items-center justify-center px-7 py-3 rounded-full font-semibold tracking-wide transition-all duration-200 overflow-hidden text-center cursor-pointer active:scale-[0.98]";
 
   const variants = {
     primary:
-      "bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 text-white shadow-md shadow-amber-500/25 hover:shadow-lg hover:shadow-amber-500/35 hover:brightness-105 border border-amber-400/40",
+      "bg-brand-orange text-brand-ink shadow-sm hover:bg-brand-ink hover:text-white border border-transparent",
     secondary:
       "bg-slate-900 hover:bg-slate-800 text-white shadow-md hover:shadow-slate-900/20 border border-slate-800 hover:-translate-y-0.5",
     glass:

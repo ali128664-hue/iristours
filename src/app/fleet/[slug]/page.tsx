@@ -26,6 +26,8 @@ import Image from "next/image";
 import fleetData from "@/data/fleet.json";
 import VehicleCard from "@/components/fleet/VehicleCard";
 import VehicleFuelEstimator from "@/components/fuel/VehicleFuelEstimator";
+import VehicleThumbStrip from "@/components/fleet/VehicleThumbStrip";
+import RichText, { stripMarkdown } from "@/components/ui/RichText";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -110,7 +112,7 @@ export default async function VehicleDetailPage({ params }: Props) {
     "@context": "https://schema.org",
     "@type": "Product",
     name: `${vehicle.name} Rent a Car Lahore`,
-    description: vehicle.description,
+    description: stripMarkdown(vehicle.description),
     brand: { "@type": "Brand", name: vehicle.brand },
     offers: {
       "@type": "Offer",
@@ -219,19 +221,7 @@ export default async function VehicleDetailPage({ params }: Props) {
 
               {/* Image Gallery Strip — shows thumbnails if more than 1 image exists */}
               {vehicle.images.gallery && vehicle.images.gallery.length > 1 && (
-                <div className="flex gap-3 overflow-x-auto pb-2 scrollbar-hide">
-                  {vehicle.images.gallery.map((img: string, idx: number) => (
-                    <div key={idx} className="relative flex-shrink-0 w-36 h-24 rounded-xl overflow-hidden border-2 border-border-primary hover:border-accent-primary transition-all cursor-pointer">
-                      <Image
-                        src={img}
-                        alt={`${vehicle.name} view ${idx + 1}`}
-                        fill
-                        className="object-cover"
-                        sizes="144px"
-                      />
-                    </div>
-                  ))}
-                </div>
+                <VehicleThumbStrip images={vehicle.images.gallery} alt={vehicle.name} />
               )}
 
               {/* Overview — reads from the `description` field in fleet.json */}
@@ -240,9 +230,7 @@ export default async function VehicleDetailPage({ params }: Props) {
                   <span className="w-1 h-7 bg-accent-primary rounded-full inline-block" />
                   Overview
                 </h2>
-                <p className="text-text-secondary leading-relaxed text-lg">
-                  {vehicle.description}
-                </p>
+                <RichText text={vehicle.description} className="text-text-secondary text-lg" />
               </section>
 
               {/* Key Specifications — reads from fleet.json (transmission, fuel, seats, luggage) */}

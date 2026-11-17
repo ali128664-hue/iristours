@@ -29,7 +29,9 @@ export default function ContactClient() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const text = `Hi, my name is ${formData.name}. I am interested in ${formData.service}.%0A%0AMessage: ${formData.message}`;
+    const text = encodeURIComponent(
+      `Hi, my name is ${formData.name}. I am interested in ${formData.service}.\n\nPhone: ${formData.phone}\n\nMessage: ${formData.message}`
+    );
     window.open(`https://wa.me/923066305875?text=${text}`, "_blank");
   };
 

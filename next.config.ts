@@ -33,7 +33,6 @@ const nextConfig: NextConfig = {
         destination: "/fleet/honda-br-v",
         permanent: true,
       },
-      { source: "/services", destination: "/", permanent: true },
       {
         source: "/6-reasons-iris-tours-is-your-go-to-rent-a-car-in-lahore",
         destination: "/blog",
@@ -127,18 +126,6 @@ const nextConfig: NextConfig = {
       {
         source: "/toyota-corolla-gli-rent-a-car-in-lahore-pakistan",
         destination: "/fleet/toyota-corolla-altis-1-6",
-        permanent: true,
-      },
-      {
-        source: "/",
-        has: [{ type: "query", key: "page_id", value: "172" }],
-        destination: "/",
-        permanent: true,
-      },
-      {
-        source: "/",
-        has: [{ type: "query", key: "page_id", value: "207" }],
-        destination: "/",
         permanent: true,
       },
       {

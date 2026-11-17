@@ -15,6 +15,53 @@ const dataFilePath = path.resolve(__dirname, "../src/data/fuelPrices.json");
 
 console.log("[IRIS TOURS] Fuel Price Synchronizer started at:", new Date().toISOString());
 
+const round2 = (n) => Math.round(n * 100) / 100;
+const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const HISTORY_LIMIT = 15;
+
+/** A new price is only trusted if it is within 15% of the stored one (guards against feed glitches). */
+function isPlausible(newPrice, oldPrice) {
+  if (typeof newPrice !== "number" || !(newPrice > 0)) return false;
+  if (!(oldPrice > 0)) return true;
+  return Math.abs(newPrice - oldPrice) / oldPrice <= 0.15;
+}
+
+/** Updates price + previousPrice + change + changePercent together. Returns true if the price changed. */
+function applyPrice(entry, newPrice, previousFromFeed) {
+  const matchesStored = isPlausible(newPrice, entry.price);
+  const matchesFeedHistory = typeof previousFromFeed === "number" && isPlausible(newPrice, previousFromFeed);
+  if (!matchesStored && !matchesFeedHistory) {
+    console.warn(`[WARN] Ignored implausible price for ${entry.name}: ${newPrice} (stored ${entry.price})`);
+    return false;
+  }
+  const changed = Math.abs(entry.price - newPrice) > 0.001;
+  if (typeof previousFromFeed === "number" && isPlausible(previousFromFeed, newPrice)) {
+    entry.previousPrice = previousFromFeed;
+  } else if (changed) {
+    entry.previousPrice = entry.price;
+  }
+  entry.price = newPrice;
+  entry.change = round2(entry.price - entry.previousPrice);
+  entry.changePercent = entry.previousPrice > 0 ? round2(((entry.price - entry.previousPrice) / entry.previousPrice) * 100) : 0;
+  return changed;
+}
+
+/** "2026-11-17" -> "Nov 17, 2026" (falls back to the raw text if it is not a date) */
+function shortDate(value) {
+  const d = new Date(value);
+  if (Number.isNaN(d.getTime())) return String(value);
+  return `${MONTHS[d.getUTCMonth()].slice(0, 3)} ${String(d.getUTCDate()).padStart(2, "0")}, ${d.getUTCFullYear()}`;
+}
+
+/** OGRA reviews prices on the 1st and 16th of each month — returns the next one after today. */
+function nextRevisionDate(now = new Date()) {
+  const y = now.getUTCFullYear();
+  const m = now.getUTCMonth();
+  const day = now.getUTCDate();
+  const next = day < 16 ? new Date(Date.UTC(y, m, 16)) : new Date(Date.UTC(y, m + 1, 1));
+  return `${MONTHS[next.getUTCMonth()]} ${String(next.getUTCDate()).padStart(2, "0")}, ${next.getUTCFullYear()}`;
+}
+
 async function run() {
   if (!fs.existsSync(dataFilePath)) {
     console.error("[ERROR] fuelPrices.json not found at:", dataFilePath);
@@ -23,6 +70,8 @@ async function run() {
 
   const rawData = fs.readFileSync(dataFilePath, "utf-8");
   const fuelData = JSON.parse(rawData);
+  let pricesChanged = false;
+  let ratesRefreshed = false;
 
   // 1. Fetch Currency Rates
   try {
@@ -42,6 +91,7 @@ async function run() {
           EUR: fxJson.rates.EUR || fuelData.exchangeRates.rates.EUR,
         };
         fuelData.exchangeRates.lastUpdated = new Date().toISOString();
+        ratesRefreshed = true;
         console.log(`[SUCCESS] Exchange rates updated. USD/PKR = ${fxJson.rates.PKR}`);
       }
     }
@@ -91,31 +141,30 @@ async function run() {
 
         if (petrolItem && petrolItem.pricePkr > 200 && petrolItem.pricePkr < 600) {
           const p = fuelData.pakistan.petrol;
-          p.previousPrice = prevPetrolItem ? prevPetrolItem.pricePkr : p.price;
-          p.price = petrolItem.pricePkr;
-          p.change = Math.round((p.price - p.previousPrice) * 100) / 100;
-          p.changePercent =
-            p.previousPrice > 0
-              ? Math.round(((p.price - p.previousPrice) / p.previousPrice) * 10000) / 100
-              : 0;
+          const d = fuelData.pakistan.diesel;
+          const petrolChanged = applyPrice(p, petrolItem.pricePkr, prevPetrolItem?.pricePkr);
+          const dieselChanged = dieselItem ? applyPrice(d, dieselItem.pricePkr, prevDieselItem?.pricePkr) : false;
+          const keroseneChanged = skoItem ? applyPrice(fuelData.pakistan.kerosene, skoItem.pricePkr) : false;
 
-          if (dieselItem) {
-            const d = fuelData.pakistan.diesel;
-            d.previousPrice = prevDieselItem ? prevDieselItem.pricePkr : d.price;
-            d.price = dieselItem.pricePkr;
-            d.change = Math.round((d.price - d.previousPrice) * 100) / 100;
-            d.changePercent =
-              d.previousPrice > 0
-                ? Math.round(((d.price - d.previousPrice) / d.previousPrice) * 10000) / 100
-                : 0;
+          if (petrolChanged || dieselChanged) {
+            // Keep the history table on the website in step with the live price
+            const entryDate = shortDate(latestDate);
+            const entry = {
+              date: entryDate,
+              petrolPrice: p.price,
+              petrolChange: p.change,
+              dieselPrice: d.price,
+              dieselChange: d.change,
+              notes: "Rate revision recorded from the live price feed.",
+            };
+            const history = Array.isArray(fuelData.history) ? fuelData.history : [];
+            fuelData.history = [entry, ...history.filter((h) => h.date !== entryDate)].slice(0, HISTORY_LIMIT);
           }
 
-          if (skoItem) {
-            fuelData.pakistan.kerosene.price = skoItem.pricePkr;
+          if (petrolChanged || dieselChanged || keroseneChanged) {
+            pricesChanged = true;
+            fuelData.meta.effectiveFrom = latestDate;
           }
-
-          fuelData.meta.effectiveFrom = latestDate;
-          fuelData.meta.lastChecked = new Date().toISOString();
           fuelData.meta.source = "OilPrices.pk (Live OGRA Notified Feed)";
           updatedPakistan = true;
           console.log(`[SUCCESS] OilPrices.pk verified: Petrol Rs. ${p.price}, Diesel Rs. ${fuelData.pakistan.diesel.price}`);
@@ -138,12 +187,12 @@ async function run() {
       if (psoRes.ok) {
         const html = await psoRes.text();
         const petrolMatch = html.match(/Premier\s*Euro\s*5[^0-9<]*([0-9]+\.[0-9]{2})/i);
-        const dieselMatch = html.match(/Hi-Cetane|High\s*Speed\s*Diesel[^0-9<]*([0-9]+\.[0-9]{2})/i);
+        const dieselMatch = html.match(/(?:Hi-Cetane|High\s*Speed\s*Diesel)[^0-9<]*([0-9]+\.[0-9]{2})/i);
 
         if (petrolMatch) {
           const petrol = parseFloat(petrolMatch[1]);
-          if (petrol > 200 && petrol < 600) {
-            fuelData.pakistan.petrol.price = petrol;
+          if (petrol > 200 && petrol < 600 && isPlausible(petrol, fuelData.pakistan.petrol.price)) {
+            if (applyPrice(fuelData.pakistan.petrol, petrol)) pricesChanged = true;
             fuelData.meta.source = "Pakistan State Oil (PSO) Direct Feed";
             updatedPakistan = true;
             console.log(`[SUCCESS] PSO Petrol verified: Rs. ${petrol}`);
@@ -151,8 +200,8 @@ async function run() {
         }
         if (dieselMatch) {
           const diesel = parseFloat(dieselMatch[1]);
-          if (diesel > 200 && diesel < 600) {
-            fuelData.pakistan.diesel.price = diesel;
+          if (diesel > 200 && diesel < 600 && isPlausible(diesel, fuelData.pakistan.diesel.price)) {
+            if (applyPrice(fuelData.pakistan.diesel, diesel)) pricesChanged = true;
             console.log(`[SUCCESS] PSO Diesel verified: Rs. ${diesel}`);
           }
         }
@@ -172,18 +221,35 @@ async function run() {
     pkEntry.dieselUsd = Math.round((pkEntry.dieselLocal / pkUsdRate) * 1000) / 1000;
   }
 
-  // Write updated data
-  fs.writeFileSync(dataFilePath, JSON.stringify(fuelData, null, 2), "utf-8");
-  console.log("[IRIS TOURS] Synchronizer finished successfully. fuelPrices.json saved.");
+  fuelData.meta.nextExpectedRevision = nextRevisionDate();
 
-  // 4. Ping live website to invalidate cache if site is reachable
+  // Only rewrite the file (and so only create a git commit) when a price actually
+  // changed, or once a week to keep exchange rates reasonably fresh.
+  const original = JSON.parse(rawData);
+  const lastWrite = new Date(original.exchangeRates?.lastUpdated || 0).getTime();
+  const ratesAreStale = ratesRefreshed && Date.now() - lastWrite > 7 * 24 * 60 * 60 * 1000;
+  const revisionDateMoved = original.meta?.nextExpectedRevision !== fuelData.meta.nextExpectedRevision;
+
+  if (pricesChanged || ratesAreStale || revisionDateMoved) {
+    fuelData.meta.lastChecked = new Date().toISOString();
+    fs.writeFileSync(dataFilePath, JSON.stringify(fuelData, null, 2) + "\n", "utf-8");
+    console.log("[IRIS TOURS] Changes found. fuelPrices.json saved.");
+  } else {
+    console.log("[IRIS TOURS] No price changes. fuelPrices.json left untouched.");
+  }
+
+  // 4. Ask the live website to refresh its cache (needs the IRIS_CRON_SECRET environment variable)
   const appUrl = process.env.NEXT_PUBLIC_APP_URL || process.env.APP_URL || "https://iristours.net";
-  const cronSecret = process.env.IRIS_CRON_SECRET || "iris_fuel_sync_secret_2026";
+  const cronSecret = process.env.IRIS_CRON_SECRET;
+  if (!cronSecret) {
+    console.warn("[WARN] IRIS_CRON_SECRET is not set — skipping live cache refresh.");
+    return;
+  }
   try {
     console.log(`[INFO] Pinging ${appUrl}/api/fuel-prices/sync to revalidate production cache...`);
-    const pingRes = await fetch(`${appUrl}/api/fuel-prices/sync?secret=${encodeURIComponent(cronSecret)}`, {
-      signal: AbortSignal.timeout(10000),
-      headers: { "User-Agent": "IrisTours-Cron-Notifier/1.0" },
+    const pingRes = await fetch(`${appUrl}/api/fuel-prices/sync`, {
+      signal: AbortSignal.timeout(15000),
+      headers: { "User-Agent": "IrisTours-Cron-Notifier/1.0", "x-cron-secret": cronSecret },
     });
     if (pingRes.ok) {
       console.log("[SUCCESS] Live website cache revalidated successfully!");

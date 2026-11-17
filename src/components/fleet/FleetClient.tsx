@@ -56,9 +56,10 @@ function FleetClientContent({ initialData }: FleetClientProps) {
   const searchParams = useSearchParams();
   useEffect(() => {
     const categoryParam = searchParams.get('category');
-    if (categoryParam && categories.includes(categoryParam)) {
-      setActiveCategory(categoryParam);
-    }
+    if (!categoryParam) return;
+    // Match case-insensitively so links like ?category=suv or ?category=luxury also work
+    const match = categories.find((c) => c.toLowerCase() === categoryParam.toLowerCase());
+    if (match) setActiveCategory(match);
   }, [searchParams]);
   
   // Brands are extracted automatically from fleet.json — no need to update this manually.
@@ -126,7 +127,7 @@ function FleetClientContent({ initialData }: FleetClientProps) {
     }
 
     return result;
-  }, [initialData, searchQuery, activeCategory, activeSort]);
+  }, [initialData, searchQuery, activeCategory, activeBrand, activeSort]);
 
   return (
     <div className="container mx-auto px-6 md:px-12 py-16">
@@ -248,6 +249,28 @@ function FleetClientContent({ initialData }: FleetClientProps) {
           Renders all matching vehicles as VehicleCard components.
           If no vehicles match, shows an empty state with a "Clear Filters" button.
       ──────────────────────────────────────────────────────────────────────── */}
+      {/* Result count + quick reset so users always know what the filters are doing */}
+      <div className="flex flex-wrap items-center justify-between gap-3 mb-6 text-sm" aria-live="polite">
+        <p className="text-text-secondary">
+          Showing <span className="font-bold text-text-primary">{filteredAndSortedData.length}</span> of {initialData.length} vehicles
+          {activeCategory !== "All" && <> in <span className="font-bold text-text-primary">{activeCategory}</span></>}
+          {activeBrand !== "All" && <> by <span className="font-bold text-text-primary">{activeBrand}</span></>}
+        </p>
+        {(searchQuery || activeCategory !== "All" || activeBrand !== "All") && (
+          <button
+            type="button"
+            onClick={() => {
+              setSearchQuery("");
+              setActiveCategory("All");
+              setActiveBrand("All");
+            }}
+            className="px-4 py-1.5 rounded-full border border-border-primary bg-bg-secondary text-text-primary font-semibold hover:border-accent-primary transition-colors"
+          >
+            Clear filters
+          </button>
+        )}
+      </div>
+
       {filteredAndSortedData.length > 0 ? (
         <motion.div 
           layout
