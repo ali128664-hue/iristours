@@ -6,8 +6,8 @@ import CtaBand from "@/components/ui/CtaBand";
 import serviceAreas from "@/data/serviceAreas.json";
 
 export const metadata: Metadata = {
-  title: "Service Areas | Rent a Car in Lahore & Across Pakistan - Iris Tours",
-  description: "Browse our complete list of service areas across Pakistan. We provide premium rent a car services in Lahore, Islamabad, Rawalpindi, Faisalabad, Multan, Gujranwala, and Sialkot.",
+  title: "Rent a Car Near You: 200 Areas in Lahore & Islamabad",
+  description: "Doorstep car rental with driver in 200 areas of Lahore, Islamabad, Rawalpindi and more: DHA, Gulberg, Johar Town, Bahria Town, Model Town and Cantt.",
   alternates: {
     canonical: "https://iristours.net/areas",
   },
@@ -39,6 +39,7 @@ export default function AreasIndexPage() {
   return (
     <>
       <PageHeader
+        image="/blog/bahria-dha.jpg"
         title="Areas we cover"
         intro={`Doorstep pickup in ${serviceAreas.length} areas across ${cities.join(", ")}. Find yours below.`}
         crumbs={[{ label: "Areas" }]}

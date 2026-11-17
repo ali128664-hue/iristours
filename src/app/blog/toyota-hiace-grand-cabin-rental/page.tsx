@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 
 export const metadata: Metadata = {
-  title: "Toyota Hiace & Grand Cabin Rental Lahore | Group Tours - Iris Tours",
+  title: "Toyota Hiace & Grand Cabin Rental Lahore | Group Tours",
   description: "Rent Toyota Hiace Grand Cabin and Saloon Coaster in Lahore with driver for family trips, Northern Area tours, and corporate delegations. Best group rates.",
   alternates: {
     canonical: "https://iristours.net/blog/toyota-hiace-grand-cabin-rental",

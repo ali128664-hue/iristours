@@ -49,7 +49,7 @@ function CopyRow({ label, value }: { label: string; value: string }) {
 
 export default function BankCard({ className = "" }: { className?: string }) {
   return (
-        <div className={`rounded-3xl border border-border-primary bg-white p-5 md:p-7 ${className}`}>
+        <div className={`shadow-lift rounded-[1.6rem] bg-white ring-1 ring-slate-200/80 p-5 md:p-7 ${className}`}>
           <div className="flex items-center gap-3 border-b border-border-primary pb-4">
             <span className="flex h-11 w-11 items-center justify-center rounded-full bg-brand-ink text-white">
               <Landmark size={20} aria-hidden="true" />

@@ -19,7 +19,7 @@ interface Tour {
 export default function TourCard({ tour }: { tour: Tour; index?: number }) {
   const href = `/tours/${tour.slug}`;
   return (
-    <article className="group flex h-full flex-col overflow-hidden rounded-3xl border border-border-primary bg-white">
+    <article className="group flex h-full flex-col overflow-hidden shadow-lift rounded-[1.6rem] bg-white ring-1 ring-slate-200/80">
       <Link href={href} className="relative block aspect-[4/3] overflow-hidden bg-slate-200" tabIndex={-1} aria-hidden="true">
         <Image
           src={tour.images.thumbnail}

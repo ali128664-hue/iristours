@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import AboutClient from "./AboutClient";
 
 export const metadata: Metadata = {
-  title: "About Iris Tours | Leading Rent a Car in Lahore",
+  title: "About Iris Tours: Chauffeur Car Rental in Lahore",
   description: "Learn more about Iris Tours, Lahore's trusted car rental service. Over 15 years of excellence providing chauffeur-driven luxury sedans, SUVs, and Northern tours.",
   alternates: {
     canonical: "https://iristours.net/about",

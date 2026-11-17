@@ -16,7 +16,7 @@
  */
 
 import type { Metadata } from "next";
-import { Archivo } from "next/font/google";
+import { Archivo, Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/layout/SmoothScroll";
 import Navbar from "@/components/layout/Navbar";
@@ -39,11 +39,18 @@ const archivo = Archivo({
   variable: "--font-archivo",
 });
 
+// Display face for headings: a characterful grotesque with optical sizes.
+const bricolage = Bricolage_Grotesque({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-bricolage",
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://iristours.net"),
   title: {
-    default: "Rent a Car in Lahore | Best Luxury Car Rental Service - Iris Tours",
-    template: "%s | Iris Tours Pakistan",
+    default: "Rent a Car in Lahore with Driver | Iris Tours",
+    template: "%s | Iris Tours",
   },
   description: "Best rent a car in Lahore with verified professional chauffeurs. Luxury SUVs (Prado, Fortuner, Land Cruiser V8), executive sedans, wedding cars, airport transfers & northern tours at transparent rates. Book 24/7!",
   keywords: "Rent a car in Lahore, Rent car Lahore, Car rental in Lahore, Luxury car rental Lahore, Car rental with driver Lahore, Prado for rent Lahore, Fortuner for rent Lahore, Land Cruiser V8 for rent Lahore, Wedding cars Lahore, Airport transfer Lahore, Iris Tours Lahore",
@@ -89,7 +96,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={archivo.variable} suppressHydrationWarning>
+    <html lang="en" className={`${archivo.variable} ${bricolage.variable}`} suppressHydrationWarning>
       <head>
         {/* ─── SCHEMA.ORG STRUCTURED DATA ───────────────────────────────────────
             This JSON-LD block tells Google about your business details.

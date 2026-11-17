@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import PageHeader from "@/components/ui/PageHeader";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Iris Tours Pakistan",
+  title: "Privacy Policy",
   description: "Learn how Iris Tours collects, uses, and protects your personal information when you use our car rental services.",
   alternates: {
     canonical: "https://iristours.net/privacy-policy",

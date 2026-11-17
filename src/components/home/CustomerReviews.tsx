@@ -118,8 +118,8 @@ export default function GoogleReviews() {
     <Section>
       <div className="grid gap-8 lg:grid-cols-12 lg:gap-10">
         <div className="lg:col-span-4">
-          <h2 className="text-3xl md:text-[2.6rem]">What customers say</h2>
-          <div className="mt-6 flex items-center gap-4 rounded-3xl border border-border-primary bg-white p-5">
+          <h2 className="text-[2.1rem] md:text-5xl">What customers say</h2>
+          <div className="mt-6 flex items-center gap-4 shadow-lift rounded-[1.6rem] bg-white ring-1 ring-slate-200/80 p-5">
             <GoogleIcon className="h-9 w-9 flex-shrink-0" />
             <div>
               <p className="flex items-center gap-2">
@@ -144,7 +144,7 @@ export default function GoogleReviews() {
         <ul className="-mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-4 scrollbar-hide lg:col-span-8 lg:mx-0 lg:grid lg:grid-cols-2 lg:overflow-visible lg:px-0 lg:[&>li:nth-child(n+5)]:hidden">
           {reviews.slice(0, 6).map((r) => (
             <li key={r.name} className="w-[84%] flex-shrink-0 snap-start sm:w-[55%] lg:w-auto">
-              <figure className="flex h-full flex-col rounded-3xl border border-border-primary bg-white p-5 md:p-6">
+              <figure className="flex h-full flex-col shadow-lift rounded-[1.6rem] bg-white ring-1 ring-slate-200/80 p-5 md:p-6">
                 <Stars rating={r.rating} />
                 <blockquote className="mt-3 flex-1 text-[15px] leading-relaxed text-text-primary">{r.content}</blockquote>
                 <figcaption className="mt-5 flex items-center gap-3">

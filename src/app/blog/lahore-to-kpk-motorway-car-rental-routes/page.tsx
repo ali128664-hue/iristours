@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 
 export const metadata: Metadata = {
-  title: "Lahore to KPK & Islamabad Travel: Road Updates, Alternate Routes & Car Rental",
+  title: "Lahore to KPK & Islamabad by Car: Routes & Road Updates",
   description: "Planning travel from Lahore to KPK, Peshawar, or Islamabad? Discover updated motorway routes (M-2, M-1), detour tips during road closures & book reliable chauffeur car rental from Lahore.",
   alternates: {
     canonical: "https://iristours.net/blog/lahore-to-kpk-motorway-car-rental-routes",

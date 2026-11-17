@@ -30,6 +30,7 @@ export default function ServicePage({
   carsIntro,
   children,
   cta,
+  image,
 }: {
   crumb: string;
   title: string;
@@ -42,6 +43,7 @@ export default function ServicePage({
   carsIntro?: string;
   children?: React.ReactNode;
   cta: { title: string; text: string };
+  image?: string;
 }) {
   const cars = carSlugs.map((s) => fleetData.find((v) => v.slug === s)).filter((v): v is (typeof fleetData)[number] => Boolean(v));
 
@@ -50,6 +52,7 @@ export default function ServicePage({
       <PageHeader
         title={title}
         intro={intro}
+        image={image}
         crumbs={[{ label: "Services", href: "/services" }, { label: crumb }]}
         actions={<HeaderButtons whatsappHref={whatsappLink(whatsappMessage)} phoneHref={`tel:${PHONE.tel}`} phoneLabel={PHONE.display} />}
       />
@@ -58,7 +61,7 @@ export default function ServicePage({
         <SectionHeading title={featuresTitle} />
         <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 md:gap-6">
           {features.map((f) => (
-            <li key={f.title} className="rounded-3xl border border-border-primary bg-white p-6">
+            <li key={f.title} className="shadow-lift rounded-[1.6rem] bg-white ring-1 ring-slate-200/80 p-6">
               <span className="flex h-9 w-9 items-center justify-center rounded-full bg-brand-orange/15 text-accent-primary">
                 <Check size={18} aria-hidden="true" />
               </span>

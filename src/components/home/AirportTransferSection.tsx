@@ -22,7 +22,7 @@ export default function AirportTransferSection() {
           <Image src="/categories/airport.jpg" alt="Chauffeur meeting a passenger at the airport" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
         </div>
         <div>
-          <h2 className="text-3xl md:text-[2.6rem] text-white">Airport pickup and drop</h2>
+          <h2 className="text-[2.1rem] md:text-5xl text-white">Airport pickup and drop</h2>
           <p className="mt-3 text-base md:text-lg leading-relaxed text-white/70">
             Land, walk out and your car is waiting. Book one way or a return trip with any car in the fleet.
           </p>

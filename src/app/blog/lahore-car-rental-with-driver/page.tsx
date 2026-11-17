@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 
 export const metadata: Metadata = {
-  title: "Lahore Car Rental With Driver | Professional Chauffeurs - Iris Tours",
+  title: "Lahore Car Rental With Driver | Professional Chauffeurs",
   description: "Book reliable Lahore car rental with driver. Iris Tours provides background-verified chauffeurs, clean AC vehicles, and 24/7 city navigation across Lahore DHA.",
   alternates: {
     canonical: "https://iristours.net/blog/lahore-car-rental-with-driver",

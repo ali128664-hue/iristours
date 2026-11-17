@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     : `${baseUrl}${tour.images.thumbnail}`;
 
   return {
-    title: tour.seo.title,
+    title: tour.seo.title.replace(/\s*\|\s*Iris Tours$/, ""),
     description: tour.seo.description,
     alternates: {
       canonical: `${baseUrl}/tours/${slug}`,
@@ -78,7 +78,7 @@ export default async function TourDetailPage({ params }: Props) {
 
   return (
     <>
-      <PageHeader title={tour.title} crumbs={[{ label: "Tours", href: "/tours" }, { label: tour.title }]}>
+      <PageHeader image={tour.images.thumbnail} title={tour.title} crumbs={[{ label: "Tours", href: "/tours" }, { label: tour.title }]}>
         <ul className="mt-6 flex flex-wrap gap-2">
           {facts.map(({ icon: Icon, text }) => (
             <li key={text} className="flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-sm text-white/85">

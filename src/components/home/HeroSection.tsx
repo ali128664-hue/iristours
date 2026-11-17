@@ -3,145 +3,221 @@
 /**
  * HeroSection.tsx — Homepage hero (پہلا حصہ جو وزیٹر کو نظر آتا ہے)
  *
- * Charcoal band in the logo colours: big headline on the left, a real car
- * from the fleet on the right sitting inside the orange "iris" ring from the
- * logo, and three real starting rates along the bottom.
+ * Full-width photo of the fleet on a Lahore boulevard at dusk, the main
+ * headline on the left and a quick booking card on the right that sends the
+ * request straight to WhatsApp. Real starting rates sit along the bottom.
  *
  * HOW TO CHANGE:
+ *  - Background photo → HERO_PHOTO (any wide photo in /public)
  *  - Headline / paragraph → edit the text below
- *  - Hero car photo → change HERO_CAR (any image in public/fleet works best
- *    with a light-coloured car on a transparent background)
- *  - Cars shown in the rate strip → edit RATE_STRIP_SLUGS (slugs from fleet.json)
- *  - WhatsApp / phone number → WHATSAPP_URL and PHONE below
+ *  - Cars in the rate strip → RATE_STRIP_SLUGS (slugs from fleet.json)
+ *  - Options in the booking card → CAR_TYPES / PICKUPS
  */
 
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Phone } from "lucide-react";
+import { ArrowRight, Phone, Star, ShieldCheck, Clock, Award } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import fleetData from "@/data/fleet.json";
 import { useCurrency } from "@/context/CurrencyContext";
 import { convertAndFormatPrice } from "@/utils/currency";
+import { PHONE, whatsappLink } from "@/lib/site";
 
-const HERO_CAR = { src: "/fleet/Land Cruiser V8.png", width: 800, height: 495, alt: "Toyota Land Cruiser V8 for rent in Lahore with chauffeur" };
-const RATE_STRIP_SLUGS = ["toyota-yaris", "toyota-fortuner", "toyota-land-cruiser-v8"];
-const WHATSAPP_URL = "https://wa.me/923154973906?text=Hi!%20I%20want%20to%20book%20a%20car.";
-const PHONE = { href: "tel:+923154973906", label: "0315-4973906" };
+const HERO_PHOTO = "/blog/rent-a-car-in-lahore-featured.jpg";
+const RATE_STRIP_SLUGS = ["toyota-yaris", "toyota-corolla-altis-1-6", "toyota-fortuner", "toyota-land-cruiser-v8"];
+
+const CAR_TYPES = [
+  "Economy car (Yaris, City)",
+  "Sedan (Corolla, Civic)",
+  "SUV (Fortuner, Prado)",
+  "Land Cruiser V8",
+  "Luxury (Mercedes, Audi, Range Rover)",
+  "Van (Hiace, Coaster)",
+];
+const PICKUPS = ["Lahore city", "Allama Iqbal Airport, Lahore", "Islamabad", "Islamabad Airport", "Other city"];
 
 export default function HeroSection() {
   const { currency } = useCurrency();
+  const [car, setCar] = useState(CAR_TYPES[2]);
+  const [pickup, setPickup] = useState(PICKUPS[0]);
+  const [date, setDate] = useState("");
+  const [days, setDays] = useState("1");
 
   const rateStrip = RATE_STRIP_SLUGS.map((slug) => fleetData.find((v) => v.slug === slug)).filter(
     (v): v is (typeof fleetData)[number] => Boolean(v)
   );
 
+  const message = [
+    "Hi Iris Tours! I want to book a car with driver.",
+    `Car: ${car}`,
+    `Pickup: ${pickup}`,
+    `Date: ${date || "please suggest"}`,
+    `Days: ${days}`,
+  ].join("\n");
+
+  const field =
+    "w-full appearance-none rounded-xl border border-slate-200 bg-slate-50 px-3.5 py-3 text-[15px] font-medium text-text-primary focus:border-brand-orange focus:bg-white focus:outline-none";
+
   return (
-    <section className="relative w-full overflow-hidden bg-brand-ink text-white">
-      {/* Soft orange light from the right, behind the car */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          backgroundImage:
-            "radial-gradient(60% 70% at 82% 45%, rgba(247,147,30,0.16) 0%, rgba(247,147,30,0) 70%), linear-gradient(180deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0) 30%)",
-        }}
-      />
+    <section className="relative isolate overflow-hidden bg-brand-ink text-white">
+      {/* Photo + overlays */}
+      <div className="absolute inset-0 -z-10 photo-grain">
+        <Image
+          src={HERO_PHOTO}
+          alt="Toyota Prado and Mercedes from the Iris Tours fleet on a Lahore boulevard at sunset"
+          fill
+          priority
+          sizes="100vw"
+          className="iris-zoom object-cover object-[70%_50%]"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-ink via-brand-ink/85 to-brand-ink/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-ink via-transparent to-brand-ink/40" />
+      </div>
 
-      <div className="container mx-auto px-5 md:px-12 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 items-center pt-9 pb-8 md:pt-20 md:pb-14 lg:min-h-[calc(100dvh-72px-96px)]">
-          {/* ─── Text ───────────────────────────────────────────────────────── */}
-          <div className="lg:col-span-6 xl:col-span-6">
-            <p className="iris-rise text-brand-orange font-semibold text-sm md:text-base mb-5" style={{ animationDelay: "0.05s" }}>
-              Chauffeur-driven car rental in Lahore, Islamabad and across Pakistan
-            </p>
+      <div className="container mx-auto px-5 md:px-12">
+        <div className="grid items-center gap-10 pb-10 pt-12 md:pt-20 lg:grid-cols-12 lg:gap-8 lg:pb-16 lg:pt-24 xl:min-h-[min(760px,calc(100dvh-72px-110px))]">
+          {/* ─── Text ─────────────────────────────────────────────────────── */}
+          <div className="lg:col-span-7">
+            <a
+              href="https://www.google.com/search?q=Iris+Tours+Rental+Car+Lahore+reviews"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="iris-rise inline-flex items-center gap-2.5 rounded-full border border-white/15 bg-white/[0.07] py-1.5 pl-2 pr-4 text-sm text-white/85 backdrop-blur-md hover:bg-white/[0.12] transition-colors"
+              style={{ animationDelay: "0.05s" }}
+            >
+              <span className="flex items-center gap-0.5 rounded-full bg-white px-2 py-0.5 text-xs font-bold text-brand-ink">
+                4.8 <Star size={12} className="fill-brand-orange text-brand-orange" aria-hidden="true" />
+              </span>
+              Rated by 200+ customers on Google
+            </a>
 
-            <h1 className="iris-rise text-[2.7rem] sm:text-6xl lg:text-[4.2rem] xl:text-[5.2rem] text-white mb-6" style={{ animationDelay: "0.15s" }}>
-              Rent a car in Lahore. Driver included.
+            <h1
+              className="iris-rise mt-6 text-[2.9rem] sm:text-[4rem] lg:text-[4.6rem] xl:text-[5.6rem] text-white"
+              style={{ animationDelay: "0.15s" }}
+            >
+              Rent a car in Lahore
+              <span className="block">with your own chauffeur.</span>
             </h1>
 
-            <p className="iris-rise text-base md:text-lg text-white/75 leading-relaxed max-w-xl mb-9" style={{ animationDelay: "0.28s" }}>
-              Sedans, SUVs and vans with a professional chauffeur, delivered to your door in DHA,
-              Gulberg, the airport or anywhere in the city. Clear daily rates and no hidden charges.
+            <p className="iris-rise mt-6 max-w-xl text-base leading-relaxed text-white/75 md:text-lg" style={{ animationDelay: "0.28s" }}>
+              Sedans, SUVs, luxury cars and vans with a trained driver, at your door in DHA, Gulberg, Bahria Town or the airport.
+              Fixed daily rates, confirmed in writing before you travel.
             </p>
 
-            <div className="iris-rise flex flex-col sm:flex-row gap-3 sm:items-center" style={{ animationDelay: "0.4s" }}>
+            <ul className="iris-rise mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm text-white/80" style={{ animationDelay: "0.38s" }}>
+              <li className="flex items-center gap-2">
+                <Award size={17} className="text-brand-orange" aria-hidden="true" /> Background-checked drivers
+              </li>
+              <li className="flex items-center gap-2">
+                <Clock size={17} className="text-brand-orange" aria-hidden="true" /> Open 24 hours, 7 days
+              </li>
+              <li className="flex items-center gap-2">
+                <ShieldCheck size={17} className="text-brand-orange" aria-hidden="true" /> No hidden charges
+              </li>
+            </ul>
+
+            <div className="iris-rise mt-9 flex flex-col gap-3 sm:flex-row lg:hidden" style={{ animationDelay: "0.45s" }}>
               <Link
                 href="/fleet"
-                className="group inline-flex items-center justify-center gap-2 rounded-full bg-brand-orange px-8 py-4 text-base font-semibold text-brand-ink transition-colors hover:bg-white"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-orange px-7 py-4 font-semibold text-brand-ink"
               >
-                See cars and rates
-                <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+                See cars and rates <ArrowRight size={18} aria-hidden="true" />
               </Link>
               <a
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/25 px-8 py-4 text-base font-semibold text-white transition-colors hover:border-[#25D366] hover:bg-[#25D366]"
+                href={`tel:${PHONE.tel}`}
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/25 px-7 py-4 font-semibold text-white"
               >
-                <FaWhatsapp size={20} />
-                Book on WhatsApp
+                <Phone size={17} className="text-brand-orange" aria-hidden="true" /> Call {PHONE.display}
               </a>
             </div>
-
-            <a
-              href={PHONE.href}
-              className="iris-rise mt-6 inline-flex items-center gap-2 text-sm text-white/70 hover:text-white transition-colors"
-              style={{ animationDelay: "0.5s" }}
-            >
-              <Phone size={15} className="text-brand-orange" />
-              Or call {PHONE.label}, open 24 hours
-            </a>
           </div>
 
-          {/* ─── Car inside the logo's iris ring ────────────────────────────── */}
-          <div className="lg:col-span-6 xl:col-span-6 relative">
-            <div className="relative mx-auto w-full max-w-[640px] aspect-[16/11]">
-              <div
-                aria-hidden="true"
-                className="iris-ring absolute left-1/2 top-1/2 h-[92%] aspect-square -translate-x-1/2 -translate-y-1/2"
-              >
-                <div className="absolute inset-0 rounded-full border-[3px] border-brand-orange" />
-                <div className="absolute inset-[9%] rounded-full border border-white/15" />
-                <div className="absolute inset-[9%] rounded-full bg-white/[0.04]" />
+          {/* ─── Booking card ─────────────────────────────────────────────── */}
+          <div className="iris-rise lg:col-span-5 xl:pl-6" style={{ animationDelay: "0.35s" }}>
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                window.open(whatsappLink(message), "_blank", "noopener,noreferrer");
+              }}
+              className="shadow-float rounded-[1.75rem] bg-white p-5 text-text-primary sm:p-7"
+              aria-labelledby="quick-book-title"
+            >
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <h2 id="quick-book-title" className="text-2xl">
+                    Get a price in minutes
+                  </h2>
+                  <p className="mt-1 text-sm text-text-secondary">We reply on WhatsApp with availability and the final rate.</p>
+                </div>
+                <span aria-hidden="true" className="iris-mark mt-1 h-9 w-9 flex-shrink-0" />
               </div>
 
-              <div className="iris-drive-in absolute inset-x-0 bottom-[6%]">
-                <Image
-                  src={HERO_CAR.src}
-                  alt={HERO_CAR.alt}
-                  width={HERO_CAR.width}
-                  height={HERO_CAR.height}
-                  priority
-                  sizes="(max-width: 1024px) 92vw, 46vw"
-                  className="w-full h-auto drop-shadow-[0_30px_30px_rgba(0,0,0,0.55)]"
-                />
+              <div className="mt-6 grid gap-3.5">
+                <label className="block">
+                  <span className="mb-1.5 block text-sm font-semibold">Car</span>
+                  <select value={car} onChange={(e) => setCar(e.target.value)} className={field}>
+                    {CAR_TYPES.map((c) => (
+                      <option key={c}>{c}</option>
+                    ))}
+                  </select>
+                </label>
+                <label className="block">
+                  <span className="mb-1.5 block text-sm font-semibold">Pickup</span>
+                  <select value={pickup} onChange={(e) => setPickup(e.target.value)} className={field}>
+                    {PICKUPS.map((c) => (
+                      <option key={c}>{c}</option>
+                    ))}
+                  </select>
+                </label>
+                <div className="grid grid-cols-[1.5fr_1fr] gap-3">
+                  <label className="block min-w-0">
+                    <span className="mb-1.5 block text-sm font-semibold">Date</span>
+                    <input type="date" value={date} onChange={(e) => setDate(e.target.value)} className={field} />
+                  </label>
+                  <label className="block min-w-0">
+                    <span className="mb-1.5 block text-sm font-semibold">Days</span>
+                    <select value={days} onChange={(e) => setDays(e.target.value)} className={field}>
+                      {["1", "2", "3", "4", "5", "6", "7", "10", "15", "30"].map((d) => (
+                        <option key={d}>{d}</option>
+                      ))}
+                    </select>
+                  </label>
+                </div>
               </div>
-            </div>
+
+              <button
+                type="submit"
+                className="mt-6 flex w-full items-center justify-center gap-2.5 rounded-full bg-[#25D366] py-4 text-base font-semibold text-white transition-colors hover:bg-[#1eb85a]"
+              >
+                <FaWhatsapp size={21} aria-hidden="true" />
+                Send on WhatsApp
+              </button>
+              <p className="mt-3 text-center text-sm text-text-secondary">
+                Prefer to talk?{" "}
+                <a href={`tel:${PHONE.tel}`} className="font-semibold text-text-primary underline decoration-brand-orange decoration-2 underline-offset-4">
+                  Call {PHONE.display}
+                </a>
+              </p>
+            </form>
           </div>
         </div>
       </div>
 
-      {/* ─── Real starting rates ────────────────────────────────────────────── */}
-      <div className="relative z-10 border-t border-white/10">
+      {/* ─── Real starting rates ───────────────────────────────────────────── */}
+      <div className="border-t border-white/10 bg-brand-ink/70 backdrop-blur-md">
         <div className="container mx-auto px-5 md:px-12">
-          <ul className="grid grid-cols-1 sm:grid-cols-3 sm:divide-x divide-white/10">
+          <ul className="-mx-5 flex snap-x overflow-x-auto px-5 scrollbar-hide md:mx-0 md:grid md:grid-cols-4 md:overflow-visible md:px-0 md:divide-x md:divide-white/10">
             {rateStrip.map((vehicle) => (
-              <li key={vehicle.slug} className="border-b border-white/10 last:border-b-0 sm:border-b-0 sm:px-6 sm:first:pl-0 sm:last:pr-0">
-                <Link
-                  href={`/fleet/${vehicle.slug}`}
-                  className="group flex items-center justify-between gap-4 py-5"
-                >
-                  <span>
-                    <span className="block text-sm text-white/60">{vehicle.category}</span>
-                    <span className="block text-base md:text-lg font-semibold leading-snug text-white group-hover:text-brand-orange transition-colors">
-                      {vehicle.name}
-                    </span>
+              <li key={vehicle.slug} className="w-[62%] flex-shrink-0 snap-start sm:w-[40%] md:w-auto md:px-6 md:first:pl-0 md:last:pr-0">
+                <Link href={`/fleet/${vehicle.slug}`} className="group flex items-center gap-4 py-5 pr-4">
+                  <span className="relative h-12 w-20 flex-shrink-0">
+                    <Image src={vehicle.images.thumbnail} alt="" fill sizes="80px" className="object-contain" />
                   </span>
-                  <span className="text-right">
-                    <span className="block text-sm text-white/60">from</span>
-                    <span className="block whitespace-nowrap text-base md:text-lg font-semibold text-white">
-                      {convertAndFormatPrice(vehicle.rent.local, currency)}
-                      <span className="text-white/60 font-normal text-sm"> / day</span>
+                  <span className="min-w-0">
+                    <span className="block truncate font-semibold text-white group-hover:text-brand-orange transition-colors">{vehicle.name}</span>
+                    <span className="block whitespace-nowrap text-sm text-white/60">
+                      from <span className="font-semibold text-white">{convertAndFormatPrice(vehicle.rent.local, currency)}</span> / day
                     </span>
                   </span>
                 </Link>

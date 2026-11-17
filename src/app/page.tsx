@@ -6,13 +6,14 @@ import PopularDestinations from "@/components/home/PopularDestinations";
 import AirportTransferSection from "@/components/home/AirportTransferSection";
 import CustomerReviews from "@/components/home/CustomerReviews";
 import HomeFAQ from "@/components/home/HomeFAQ";
+import HomeSeoContent from "@/components/home/HomeSeoContent";
 import BankDetailsSection from "@/components/home/BankDetailsSection";
 
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Rent a Car in Lahore | Best Luxury Car Rental Service - Iris Tours",
-  description: "Looking to rent a car in Lahore? Iris Tours offers verified chauffeur-driven cars, luxury SUVs (Prado, Fortuner, Land Cruiser V8), executive sedans, and wedding car rentals at transparent daily rates. Book 24/7!",
+  title: { absolute: "Rent a Car in Lahore with Driver from Rs. 7,000/day | Iris Tours" },
+  description: "Rent a car in Lahore with a professional driver. Yaris, Corolla, Civic, Fortuner, Prado, V8, luxury cars and vans for airport, wedding and tours. Book 24/7.",
   alternates: {
     canonical: "https://iristours.net",
   },
@@ -50,6 +51,7 @@ export default function Home() {
       <AirportTransferSection />
       <CustomerReviews />
       <PopularDestinations />
+      <HomeSeoContent />
       <HomeFAQ />
       <BankDetailsSection />
     </>

@@ -44,6 +44,7 @@ export default function ContactClient() {
   return (
     <>
       <PageHeader
+        image="/blog/chauffeur-rental.jpg"
         title="Contact us"
         intro="The quickest way to book is WhatsApp. We are available every day, around the clock."
         crumbs={[{ label: "Contact" }]}
@@ -69,7 +70,7 @@ export default function ContactClient() {
       <Section>
         <div className="grid gap-10 lg:grid-cols-12 lg:gap-12">
           <div className="space-y-6 lg:col-span-5">
-            <ul className="divide-y divide-border-primary rounded-3xl border border-border-primary bg-white">
+            <ul className="divide-y divide-border-primary shadow-lift rounded-[1.6rem] bg-white ring-1 ring-slate-200/80">
               {contacts.map(({ icon: Icon, label, value, href }) => (
                 <li key={label} className="flex items-center gap-4 p-5">
                   <span className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-brand-orange/15 text-accent-primary">
@@ -94,7 +95,7 @@ export default function ContactClient() {
                 { title: "Lahore head office", text: ADDRESS.lahore },
                 { title: "Islamabad office", text: ADDRESS.islamabad },
               ].map((o) => (
-                <div key={o.title} className="flex gap-4 rounded-3xl border border-border-primary bg-white p-5">
+                <div key={o.title} className="flex gap-4 shadow-lift rounded-[1.6rem] bg-white ring-1 ring-slate-200/80 p-5">
                   <MapPin size={20} className="mt-0.5 flex-shrink-0 text-accent-primary" aria-hidden="true" />
                   <div>
                     <p className="font-semibold text-text-primary">{o.title}</p>
@@ -106,7 +107,7 @@ export default function ContactClient() {
           </div>
 
           <div className="lg:col-span-7">
-            <form onSubmit={handleSubmit} className="rounded-3xl border border-border-primary bg-white p-6 md:p-8">
+            <form onSubmit={handleSubmit} className="shadow-lift rounded-[1.6rem] bg-white ring-1 ring-slate-200/80 p-6 md:p-8">
               <h2 className="text-3xl">Send a message</h2>
               <p className="mt-2 text-text-secondary">This opens WhatsApp with your message ready to send.</p>
 
@@ -145,7 +146,7 @@ export default function ContactClient() {
       <Section tone="white">
         <div className="grid gap-8 lg:grid-cols-12 lg:gap-12">
           <div className="lg:col-span-5">
-            <h2 className="text-3xl md:text-[2.6rem]">Bank transfer</h2>
+            <h2 className="text-[2.1rem] md:text-5xl">Bank transfer</h2>
             <p className="mt-3 text-base md:text-lg leading-relaxed text-text-secondary">
               For advance bookings. After paying, send the receipt on WhatsApp to {SECOND_PHONE.display} with your booking details.
             </p>

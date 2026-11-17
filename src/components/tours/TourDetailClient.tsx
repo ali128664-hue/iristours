@@ -15,7 +15,7 @@ export default function TourDetailClient({ tour }: { tour: { title: string } }) 
 
   return (
     <>
-      <div className="rounded-3xl border border-border-primary bg-white p-6 lg:sticky lg:top-24">
+      <div className="shadow-lift rounded-[1.6rem] bg-white ring-1 ring-slate-200/80 p-6 lg:sticky lg:top-24">
         <h2 className="text-2xl">Book this tour</h2>
         <p className="mt-3 leading-relaxed text-text-secondary">
           Prices depend on dates, group size and the car. Send your details and we will reply with a full quote. Days, stops and the car can all be changed.

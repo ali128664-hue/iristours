@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import ServicePage from "@/components/services/ServicePage";
 
 export const metadata: Metadata = {
-  title: "Wedding Car Rental in Lahore | Decorated Luxury Cars - Iris Tours",
+  title: "Wedding Car Rental in Lahore: Decorated Prado, V8 & Mercedes",
   description: "Rent luxury wedding cars in Lahore. Mercedes, Audi, Prado, Land Cruiser V8, and limousines with professional uniformed drivers and custom floral decorations. Book 24/7!",
   alternates: {
     canonical: "https://iristours.net/services/wedding-cars",
@@ -33,6 +33,7 @@ export const metadata: Metadata = {
 export default function WeddingCarsPage() {
   return (
     <ServicePage
+      image="/categories/wedding.jpg"
       crumb="Wedding cars"
       title="Wedding cars in Lahore"
       intro="Decorated Prado, Land Cruiser V8, Mercedes and Audi for the barat, mehndi and valima, with a smartly dressed driver who knows the venue routes."

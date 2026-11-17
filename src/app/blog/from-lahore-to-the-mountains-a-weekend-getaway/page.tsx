@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 
 export const metadata: Metadata = {
-  title: "From Lahore to the Mountains: Toyota Fortuner Weekend Getaway - Iris Tours",
+  title: "From Lahore to the Mountains: Toyota Fortuner Weekend Getaway",
   description: "Read the story of a road trip from Lahore to Northern Areas in a chauffeur-driven Toyota Fortuner. Mountain driving tips, comfort, and SUV rental rates.",
   alternates: {
     canonical: "https://iristours.net/blog/from-lahore-to-the-mountains-a-weekend-getaway",

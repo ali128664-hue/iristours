@@ -35,7 +35,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const dieselPrice = fuelData.pakistan.diesel.price.toFixed(2);
   const effectiveDate = fuelData.meta.effectiveFrom;
 
-  const title = `Pakistan Petrol Price Today | Rs. ${petrolPrice}/L | Iris Tours Fuel Cost Calculator`;
+  const title = `Petrol Price in Pakistan Today: Rs. ${petrolPrice}/L & Fuel Cost Calculator`;
   const description = `Current Pakistan fuel prices today (w.e.f. ${effectiveDate}): Petrol at Rs. ${petrolPrice}/L, High-Speed Diesel at Rs. ${dieselPrice}/L. Calculate trip fuel consumption and travel costs across 17 luxury Iris Tours rental vehicles.`;
   const url = "https://iristours.net/fuel-prices-pakistan";
 
@@ -196,6 +196,7 @@ export default async function FuelPricesPage({ searchParams }: PageProps) {
 
       <div className="bg-bg-primary min-h-screen pb-0">
         <PageHeader
+          breadcrumbSchema={false}
           title="Petrol and diesel prices in Pakistan today"
           intro={`Official rates effective ${effectiveDate}, checked automatically twice a day. Use the calculator below to work out the fuel cost of any trip in our cars.`}
           crumbs={[{ label: "Fuel prices" }]}

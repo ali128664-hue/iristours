@@ -57,9 +57,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     ? vehicle.images.thumbnail
     : `${baseUrl}${vehicle.images.thumbnail}`;
 
+  // Short, specific title and description built from the car's own data
+  // (the site name is added automatically by the title template in layout.tsx).
+  const rate = `Rs. ${vehicle.rent.local.toLocaleString("en-US")}`;
+  const seoTitle = `${vehicle.name} for Rent in Lahore | ${rate}/day`;
+  const seoDescription = `Rent a ${vehicle.name} in Lahore with a professional driver from ${rate} per day. ${vehicle.seats} seats, ${vehicle.transmission.toLowerCase()}, ${vehicle.fuel.toLowerCase()}. City, airport, wedding and outstation trips. Book 24/7.`;
+
   return {
-    title: vehicle.seo.title,
-    description: vehicle.seo.description,
+    title: seoTitle,
+    description: seoDescription,
     keywords: [
       `${vehicle.name} rent a car Lahore`,
       `${vehicle.name} rental Pakistan`,
@@ -72,16 +78,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       canonical: `${baseUrl}/fleet/${vehicle.slug}`,
     },
     openGraph: {
-      title: vehicle.seo.title,
-      description: vehicle.seo.description,
+      title: `${seoTitle} | Iris Tours`,
+      description: seoDescription,
       url: `${baseUrl}/fleet/${vehicle.slug}`,
       images: [{ url: thumbnail, width: 1200, height: 630, alt: vehicle.name }],
       type: "website",
     },
     twitter: {
       card: "summary_large_image",
-      title: vehicle.seo.title,
-      description: vehicle.seo.description,
+      title: `${seoTitle} | Iris Tours`,
+      description: seoDescription,
       images: [thumbnail],
     },
   };
@@ -187,8 +193,8 @@ export default async function VehicleDetailPage({ params }: Props) {
           <div className="grid gap-8 lg:grid-cols-12 lg:gap-12">
             {/* Photos */}
             <div className="lg:col-span-7">
-              <div className="relative aspect-[16/10] overflow-hidden rounded-3xl border border-border-primary bg-white">
-                <Image src={gallery[0]} alt={vehicle.name} fill priority sizes="(max-width: 1024px) 100vw, 58vw" className="object-contain p-4 md:p-8" />
+              <div className={`relative aspect-[16/10] overflow-hidden rounded-[1.8rem] ${/\.png$/i.test(gallery[0]) ? "car-stage" : "bg-slate-100"}`}>
+                <Image src={gallery[0]} alt={vehicle.name} fill priority sizes="(max-width: 1024px) 100vw, 58vw" className={/\.png$/i.test(gallery[0]) ? "object-contain px-6 pb-4 pt-10 md:px-12" : "object-cover"} />
               </div>
               {gallery.length > 1 && (
                 <div className="mt-3">
@@ -200,7 +206,7 @@ export default async function VehicleDetailPage({ params }: Props) {
             {/* Name, specs and price */}
             <div className="lg:col-span-5">
               <p className="text-slate-500">{vehicle.brand} &middot; {vehicle.category}</p>
-              <h1 className="mt-1 text-4xl md:text-5xl">{vehicle.name}</h1>
+              <h1 className="mt-1 text-[2.6rem] md:text-6xl">{vehicle.name}</h1>
               <ul className="mt-5 flex flex-wrap gap-2">
                 {specs.slice(0, 4).map(({ icon: Icon, label, value }) => (
                   <li key={label} className="flex items-center gap-2 rounded-full border border-border-primary px-3.5 py-2 text-sm text-text-primary">
@@ -226,7 +232,7 @@ export default async function VehicleDetailPage({ params }: Props) {
           </div>
 
           <div className="space-y-6 lg:col-span-5">
-            <div className="rounded-3xl border border-border-primary bg-white p-6">
+            <div className="shadow-lift rounded-[1.6rem] bg-white ring-1 ring-slate-200/80 p-6">
               <h2 className="text-2xl">Specifications</h2>
               <dl className="mt-4 divide-y divide-border-primary">
                 {specs.map(({ label, value }) => (
@@ -239,7 +245,7 @@ export default async function VehicleDetailPage({ params }: Props) {
             </div>
 
             {vehicle.features?.length > 0 && (
-              <div className="rounded-3xl border border-border-primary bg-white p-6">
+              <div className="shadow-lift rounded-[1.6rem] bg-white ring-1 ring-slate-200/80 p-6">
                 <h2 className="text-2xl">Features</h2>
                 <ul className="mt-4 grid gap-2.5 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
                   {vehicle.features.map((f: string) => (
@@ -253,7 +259,7 @@ export default async function VehicleDetailPage({ params }: Props) {
             )}
 
             {policies.length > 0 && (
-              <div className="rounded-3xl border border-border-primary bg-white p-6">
+              <div className="shadow-lift rounded-[1.6rem] bg-white ring-1 ring-slate-200/80 p-6">
                 <h2 className="text-2xl">Rental rules</h2>
                 <dl className="mt-4 space-y-4">
                   {policies.map(({ icon: Icon, label, value }) => (

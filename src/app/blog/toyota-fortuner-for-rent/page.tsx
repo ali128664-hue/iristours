@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 
 export const metadata: Metadata = {
-  title: "Toyota Fortuner for Rent in Lahore | Best SUV with Driver - Iris Tours",
+  title: "Toyota Fortuner for Rent in Lahore | Best SUV with Driver",
   description: "Looking for a Toyota Fortuner for rent in Lahore? Iris Tours offers latest Sigma 4 and Legender Fortuner SUVs with professional drivers for weddings, corporate events, and Northern tour trips.",
   alternates: {
     canonical: "https://iristours.net/blog/toyota-fortuner-for-rent",

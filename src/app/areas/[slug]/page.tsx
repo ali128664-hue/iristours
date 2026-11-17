@@ -24,16 +24,19 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!area) return { title: 'Area Not Found' };
 
   const baseUrl = "https://iristours.net";
+  const place = area.name;
+  const seoTitle = `Rent a Car in ${place} with Driver`;
+  const seoDescription = `Car rental with driver in ${place}: doorstep pickup, sedans from Rs. 7,000/day, SUVs, luxury cars and vans for city, airport and outstation trips. Book 24/7.`;
 
   return {
-    title: area.metaTitle,
-    description: area.metaDescription,
+    title: seoTitle,
+    description: seoDescription,
     alternates: {
       canonical: `${baseUrl}/areas/${area.slug}`,
     },
     openGraph: {
-      title: area.metaTitle,
-      description: area.metaDescription,
+      title: `${seoTitle} | Iris Tours`,
+      description: seoDescription,
       url: `${baseUrl}/areas/${area.slug}`,
       siteName: "Iris Tours",
       images: [
@@ -41,15 +44,15 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
           url: `${baseUrl}/opengraph-image.jpg`,
           width: 1200,
           height: 630,
-          alt: area.metaTitle,
+          alt: seoTitle,
         },
       ],
       type: "website",
     },
     twitter: {
       card: "summary_large_image",
-      title: area.metaTitle,
-      description: area.metaDescription,
+      title: `${seoTitle} | Iris Tours`,
+      description: seoDescription,
       images: [`${baseUrl}/opengraph-image.jpg`],
     }
   };
@@ -160,6 +163,8 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
 
       <PageHeader
+        breadcrumbSchema={false}
+        image="/blog/bahria-dha.jpg"
         title={`Rent a car in ${area.name}`}
         intro={`Chauffeur-driven cars delivered to your door in ${area.name.split(",")[0]}, any time of day.`}
         crumbs={[{ label: "Areas", href: "/areas" }, { label: area.name.split(",")[0] }]}
@@ -201,7 +206,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
 
       <Section>
         <div className="grid gap-8 lg:grid-cols-12 lg:gap-12">
-          <h2 className="text-3xl md:text-[2.6rem] lg:col-span-4">Questions about {area.name.split(",")[0]}</h2>
+          <h2 className="text-[2.1rem] md:text-5xl lg:col-span-4">Questions about {area.name.split(",")[0]}</h2>
           <div className="divide-y divide-border-primary border-y border-border-primary lg:col-span-8">
             {localFaqs.map((faq) => (
               <details key={faq.q} className="group py-1">

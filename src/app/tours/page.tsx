@@ -7,7 +7,7 @@ import { PHONE, whatsappLink } from "@/lib/site";
 import toursData from "@/data/tours.json";
 
 export const metadata: Metadata = {
-  title: "Northern Pakistan Tours & 4x4 SUV Rental from Lahore | Iris Tours",
+  title: "Northern Pakistan Tours from Lahore: Hunza, Skardu & Swat",
   description: "Explore Hunza, Skardu, Swat, and Northern Pakistan with luxury 4x4 SUVs (Prado, Fortuner, V8) and mountain-expert chauffeurs from Lahore. Custom tour packages.",
   alternates: {
     canonical: "https://iristours.net/tours",
@@ -39,6 +39,7 @@ export default function ToursPage() {
   return (
     <>
       <PageHeader
+        image="/tours/hunza.jpg"
         title="Northern Pakistan tours with a driver"
         intro="Private trips to Hunza, Skardu and Swat in a 4x4 or van. Mountain-trained drivers, fuel and tolls included. Every itinerary can be changed to suit you."
         crumbs={[{ label: "Tours" }]}

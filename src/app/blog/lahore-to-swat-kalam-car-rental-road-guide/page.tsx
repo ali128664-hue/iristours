@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 
 export const metadata: Metadata = {
-  title: "Lahore to Swat & Kalam Road Trip Guide: Road Conditions & 4x4 Car Rental",
+  title: "Lahore to Swat & Kalam by Car: Road Guide & 4x4 Rental",
   description: "Planning a road trip from Lahore to Swat Valley & Kalam? Read our 2026 travel advisory on Swat Expressway, road blockages, off-road stretches & hire 4x4 Prado or Fortuner from Lahore.",
   alternates: {
     canonical: "https://iristours.net/blog/lahore-to-swat-kalam-car-rental-road-guide",

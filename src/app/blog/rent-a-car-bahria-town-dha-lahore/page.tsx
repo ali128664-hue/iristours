@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 
 export const metadata: Metadata = {
-  title: "Rent a Car in Bahria Town & DHA Lahore | Fast Doorstep Delivery - Iris Tours",
+  title: "Rent a Car in Bahria Town & DHA Lahore | Fast Doorstep Delivery",
   description: "Need a premium car rental in Bahria Town, DHA Lahore, Lake City, or Johar Town? Iris Tours offers fast doorstep delivery with professional chauffeurs. Book instantly.",
   alternates: {
     canonical: "https://iristours.net/blog/rent-a-car-bahria-town-dha-lahore",

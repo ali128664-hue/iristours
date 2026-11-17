@@ -28,6 +28,7 @@ export default function AboutClient() {
   return (
     <>
       <PageHeader
+        image="/categories/about_fleet.jpg"
         title="About Iris Tours"
         intro="A Lahore car rental company built on one idea: the trip should be as comfortable as the destination."
         crumbs={[{ label: "About" }]}
@@ -39,7 +40,7 @@ export default function AboutClient() {
             <Image src="/categories/about_fleet.jpg" alt="Iris Tours cars lined up" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
           </div>
           <div>
-            <h2 className="text-3xl md:text-[2.6rem]">Our story</h2>
+            <h2 className="text-[2.1rem] md:text-5xl">Our story</h2>
             <div className="mt-5 space-y-4 text-[17px] leading-relaxed text-text-secondary">
               <p>
                 Iris Tours is founded and led by <strong className="text-text-primary">Munir Hussain</strong>. For more than a decade we have driven executives, families and visitors from abroad across Pakistan.
@@ -56,7 +57,7 @@ export default function AboutClient() {
 
         <dl className="mt-12 grid grid-cols-2 gap-4 md:mt-16 lg:grid-cols-4 md:gap-6">
           {STATS.map((s) => (
-            <div key={s.label} className="rounded-3xl border border-border-primary bg-white p-5 md:p-6">
+            <div key={s.label} className="shadow-lift rounded-[1.6rem] bg-white ring-1 ring-slate-200/80 p-5 md:p-6">
               <dt className="sr-only">{s.label}</dt>
               <dd>
                 <span className="font-display block text-4xl font-semibold text-text-primary md:text-5xl">

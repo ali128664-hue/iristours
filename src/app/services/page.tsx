@@ -8,8 +8,8 @@ import CtaBand from "@/components/ui/CtaBand";
 import { PHONE, whatsappLink } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Car Rental & Chauffeur Services in Lahore | Iris Tours",
-  description: "Explore our range of premium car rental services in Lahore: 24/7 Airport transfers, luxury wedding cars, corporate monthly rentals, and inter-city chauffeur tours across Pakistan.",
+  title: "Car Rental Services in Lahore: Airport, Wedding & Corporate",
+  description: "Chauffeur-driven car rental services in Lahore: airport pickup and drop, decorated wedding cars, corporate transport and northern tours. Fixed rates, 24/7.",
   alternates: {
     canonical: "https://iristours.net/services",
   },
@@ -120,6 +120,7 @@ export default function ServicesPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <PageHeader
+        image="/categories/about_fleet.jpg"
         title="Car rental services"
         intro="Every service comes with a professional driver. Choose what you need the car for and we will suggest the right one."
         crumbs={[{ label: "Services" }]}
@@ -130,7 +131,7 @@ export default function ServicesPage() {
         <ul className="grid gap-5 md:grid-cols-2 lg:gap-6">
           {services.map((s) => (
             <li key={s.href}>
-              <Link href={s.href} className="group grid h-full overflow-hidden rounded-3xl border border-border-primary bg-white sm:grid-cols-5">
+              <Link href={s.href} className="group grid h-full overflow-hidden shadow-lift rounded-[1.6rem] bg-white ring-1 ring-slate-200/80 sm:grid-cols-5">
                 <span className="relative block aspect-[16/9] sm:col-span-2 sm:aspect-auto sm:min-h-[200px]">
                   <Image src={s.image} alt="" fill sizes="(max-width: 640px) 100vw, 20vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
                 </span>

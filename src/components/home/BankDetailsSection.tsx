@@ -15,7 +15,7 @@ export default function BankDetailsSection() {
     <Section>
       <div className="grid gap-8 lg:grid-cols-12 lg:gap-12">
         <div className="lg:col-span-5">
-          <h2 className="text-3xl md:text-[2.6rem]">Pay an advance by bank transfer</h2>
+          <h2 className="text-[2.1rem] md:text-5xl">Pay an advance by bank transfer</h2>
           <p className="mt-3 text-base md:text-lg leading-relaxed text-text-secondary">
             For advance bookings and corporate accounts. After paying, send the receipt on WhatsApp with your booking details and we confirm the car straight away.
           </p>

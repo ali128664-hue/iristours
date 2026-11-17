@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 
 export const metadata: Metadata = {
-  title: "Luxury Car Rental Lahore | Rent VIP Sedans & Limousines - Iris Tours",
+  title: "Luxury Car Rental Lahore | Rent VIP Sedans & Limousines",
   description: "Elevate your journey with Iris Tours' luxury car rental in Lahore. Rent premium vehicles like Mercedes, Audi, Prado, and limousines with professional VIP chauffeurs.",
   alternates: {
     canonical: "https://iristours.net/blog/luxury-car-rental-lahore",
