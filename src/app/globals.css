@@ -3,7 +3,7 @@
 /*
  * ─── IRIS TOURS DESIGN SYSTEM ───────────────────────────────────────────────
  * Brand = the logo: signal orange + true charcoal on clean warm white.
- *  - Fonts are loaded with <link> tags in src/app/layout.tsx (faster than @import).
+ *  - The font (Archivo) is loaded with next/font in src/app/layout.tsx.
  *  - To change the brand colours, edit the values in :root below.
  *  - The neutral "slate" scale used across the site is re-tuned here to a
  *    warm charcoal so every page matches the logo without editing each file.
@@ -45,9 +45,9 @@
 
   --color-border-primary: var(--border-color);
 
-  --font-sans: 'General Sans', 'Inter', system-ui, sans-serif;
-  --font-display: 'Clash Display', 'General Sans', system-ui, sans-serif;
-  --font-inter: 'General Sans', 'Inter', system-ui, sans-serif;
+  --font-sans: var(--font-archivo), system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: var(--font-archivo), system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-inter: var(--font-archivo), system-ui, sans-serif;
 }
 
 /* Warm charcoal neutrals (replaces Tailwind's blue-tinted slate site-wide) */
@@ -82,10 +82,11 @@ body {
 }
 
 /* ─── Typography: confident display face for headings ───────────────────── */
-h1, h2, h3 {
+h1, h2, h3, .font-display {
   font-family: var(--font-display);
-  font-weight: 600;
-  letter-spacing: -0.02em;
+  font-weight: 650;
+  font-stretch: 112%;
+  letter-spacing: -0.015em;
   text-wrap: balance;
 }
 

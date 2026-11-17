@@ -109,7 +109,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop menu */}
-        <nav aria-label="Main" className="hidden lg:flex items-center gap-7">
+        <nav aria-label="Main" className="hidden lg:flex items-center gap-5 xl:gap-7 whitespace-nowrap">
           <Dropdown label="Fleet" links={FLEET_LINKS} active={isActive("/fleet")} />
           <Dropdown label="Services" links={SERVICE_LINKS} active={isActive("/services") || isActive("/tours")} />
           {MAIN_LINKS.map((l) => (
@@ -137,7 +137,7 @@ export default function Navbar() {
           >
             {currency}
           </button>
-          <a href={`tel:${PHONE.tel}`} className="hidden xl:inline-flex items-center gap-2 rounded-full px-3 py-2 text-sm font-semibold text-text-primary hover:bg-slate-100 transition-colors">
+          <a href={`tel:${PHONE.tel}`} className="hidden 2xl:inline-flex items-center gap-2 whitespace-nowrap rounded-full px-3 py-2 text-sm font-semibold text-text-primary hover:bg-slate-100 transition-colors">
             <Phone size={15} className="text-accent-primary" />
             {PHONE.display}
           </a>
@@ -145,7 +145,7 @@ export default function Navbar() {
             href={BOOK_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-brand-ink px-5 py-2.5 text-sm font-semibold text-white hover:bg-brand-orange hover:text-brand-ink transition-colors"
+            className="inline-flex items-center gap-2 whitespace-nowrap rounded-full bg-brand-ink px-5 py-2.5 text-sm font-semibold text-white hover:bg-brand-orange hover:text-brand-ink transition-colors"
           >
             <FaWhatsapp size={17} />
             Book on WhatsApp

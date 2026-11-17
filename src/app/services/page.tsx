@@ -135,7 +135,7 @@ export default function ServicesPage() {
                   <Image src={s.image} alt="" fill sizes="(max-width: 640px) 100vw, 20vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
                 </span>
                 <span className="flex flex-col p-5 sm:col-span-3 md:p-6">
-                  <span className="text-xl font-semibold text-text-primary" style={{ fontFamily: "var(--font-display)" }}>{s.title}</span>
+                  <span className="font-display text-xl font-semibold text-text-primary">{s.title}</span>
                   <span className="mt-2 flex-1 leading-relaxed text-text-secondary">{s.desc}</span>
                   <span className="mt-4 inline-flex items-center gap-2 font-semibold text-text-primary group-hover:text-accent-primary">
                     View details

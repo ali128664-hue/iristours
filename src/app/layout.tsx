@@ -16,6 +16,7 @@
  */
 
 import type { Metadata } from "next";
+import { Archivo } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/layout/SmoothScroll";
 import Navbar from "@/components/layout/Navbar";
@@ -29,6 +30,15 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 // ─── SITE-WIDE SEO METADATA ───────────────────────────────────────────────────
 // These values appear in Google search results and social media link previews.
 // Update title, description, and keywords to match your current offerings.
+// Brand typeface (self-hosted by Next.js at build time — no external font request).
+// One variable family: normal width for text, wider cut for headings (see globals.css).
+const archivo = Archivo({
+  subsets: ["latin"],
+  axes: ["wdth"],
+  display: "swap",
+  variable: "--font-archivo",
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://iristours.net"),
   title: {
@@ -79,15 +89,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className={archivo.variable} suppressHydrationWarning>
       <head>
-        {/* Brand fonts — preconnected and loaded here (faster than CSS @import) */}
-        <link rel="preconnect" href="https://api.fontshare.com" />
-        <link rel="preconnect" href="https://cdn.fontshare.com" crossOrigin="anonymous" />
-        <link
-          rel="stylesheet"
-          href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=general-sans@400,500,600,700&display=swap"
-        />
         {/* ─── SCHEMA.ORG STRUCTURED DATA ───────────────────────────────────────
             This JSON-LD block tells Google about your business details.
             It powers Google's rich result features (business panel, maps, etc.)

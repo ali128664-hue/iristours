@@ -35,7 +35,7 @@ export default function QuickCategories() {
               />
               <span className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent" />
               <span className="absolute inset-x-0 bottom-0 p-3.5 md:p-6">
-                <span className="block text-lg md:text-2xl font-semibold leading-tight text-white" style={{ fontFamily: "var(--font-display)" }}>
+                <span className="font-display block text-lg md:text-2xl font-semibold leading-tight text-white">
                   {s.title}
                 </span>
                 <span className="mt-1 hidden text-sm text-white/80 sm:block">{s.line}</span>

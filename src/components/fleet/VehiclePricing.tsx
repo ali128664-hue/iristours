@@ -36,7 +36,7 @@ export default function VehiclePricing({ rent, whatsappUrl, vehicleName = "this 
     <div className="rounded-3xl border border-border-primary bg-bg-primary p-5 md:p-6">
       <p className="text-sm text-text-secondary">Within the city, with driver</p>
       <p className="mt-1">
-        <span className="text-4xl font-semibold text-text-primary" style={{ fontFamily: "var(--font-display)" }}>
+        <span className="font-display text-4xl font-semibold text-text-primary">
           {convertAndFormatPrice(local, currency)}
         </span>
         <span className="text-text-secondary"> / day</span>

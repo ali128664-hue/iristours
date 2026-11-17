@@ -59,7 +59,7 @@ export default function AboutClient() {
             <div key={s.label} className="rounded-3xl border border-border-primary bg-white p-5 md:p-6">
               <dt className="sr-only">{s.label}</dt>
               <dd>
-                <span className="block text-4xl font-semibold text-text-primary md:text-5xl" style={{ fontFamily: "var(--font-display)" }}>
+                <span className="font-display block text-4xl font-semibold text-text-primary md:text-5xl">
                   {s.value}
                 </span>
                 <span className="mt-1 block text-text-secondary">{s.label}</span>

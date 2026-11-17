@@ -51,7 +51,7 @@ export default function BlogIndex() {
             </span>
             <span className="flex flex-col justify-center p-6 md:p-10">
               <span className="text-sm text-text-secondary">{first.readingTime || "5 min read"}</span>
-              <span className="mt-2 text-2xl font-semibold leading-tight text-text-primary group-hover:text-accent-primary md:text-3xl" style={{ fontFamily: "var(--font-display)" }}>
+              <span className="font-display mt-2 text-2xl font-semibold leading-tight text-text-primary group-hover:text-accent-primary md:text-3xl">
                 {first.title}
               </span>
               <span className="mt-3 leading-relaxed text-text-secondary">{first.desc}</span>
@@ -68,7 +68,7 @@ export default function BlogIndex() {
                 </span>
                 <span className="flex flex-1 flex-col p-5 md:p-6">
                   <span className="text-sm text-text-secondary">{blog.readingTime || "5 min read"}</span>
-                  <span className="mt-1.5 text-xl font-semibold leading-snug text-text-primary group-hover:text-accent-primary" style={{ fontFamily: "var(--font-display)" }}>
+                  <span className="font-display mt-1.5 text-xl font-semibold leading-snug text-text-primary group-hover:text-accent-primary">
                     {blog.title}
                   </span>
                   <span className="mt-2 line-clamp-3 text-[15px] leading-relaxed text-text-secondary">{blog.desc}</span>

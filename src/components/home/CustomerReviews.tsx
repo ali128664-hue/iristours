@@ -123,7 +123,7 @@ export default function GoogleReviews() {
             <GoogleIcon className="h-9 w-9 flex-shrink-0" />
             <div>
               <p className="flex items-center gap-2">
-                <span className="text-3xl font-semibold" style={{ fontFamily: "var(--font-display)" }}>
+                <span className="font-display text-3xl font-semibold">
                   {OVERALL_RATING.toFixed(1)}
                 </span>
                 <Stars rating={Math.round(OVERALL_RATING)} size={17} />

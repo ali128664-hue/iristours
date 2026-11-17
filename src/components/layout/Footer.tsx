@@ -73,7 +73,7 @@ export default function Footer() {
       <div className="border-b border-white/10">
         <div className="container mx-auto px-5 md:px-12 py-10 md:py-12 flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
           <div>
-            <p className="text-2xl md:text-3xl font-semibold text-white" style={{ fontFamily: "var(--font-display)" }}>
+            <p className="font-display text-2xl md:text-3xl font-semibold text-white">
               Need a car today?
             </p>
             <p className="mt-2 text-white/65">Message us with your dates and pickup point. We are available 24 hours a day.</p>
