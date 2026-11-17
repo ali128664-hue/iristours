@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 
 export const metadata: Metadata = {
-  title: "Lahore to Islamabad Car Rental with Driver | Intercity Rates - Iris Tours",
+  title: "Lahore to Islamabad Car Rental with Driver | Intercity Rates",
   description: "Book door-to-door Lahore to Islamabad car rental via M2 Motorway. Premium sedans, Toyota Prado, Fortuner, and Hiace Grand Cabin with professional chauffeurs.",
   alternates: {
     canonical: "https://iristours.net/blog/lahore-to-islamabad-car-rental",

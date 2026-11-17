@@ -25,8 +25,8 @@ export function Section({
     <section
       id={id}
       className={clsx(
-        "py-14 md:py-20 scroll-mt-24",
-        tone === "white" && "bg-white border-y border-border-primary",
+        "py-16 md:py-24 scroll-mt-24",
+        tone === "white" && "bg-white",
         tone === "ink" && "bg-brand-ink text-white",
         tone === "plain" && "bg-bg-primary",
         className
@@ -51,9 +51,9 @@ export function SectionHeading({
   as?: "h1" | "h2";
 }) {
   return (
-    <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between mb-8 md:mb-10">
+    <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between mb-9 md:mb-12">
       <div className="max-w-2xl">
-        <Tag className={clsx("text-3xl md:text-[2.6rem]", tone === "dark" ? "text-white" : "text-text-primary")}>{title}</Tag>
+        <Tag className={clsx("text-[2.1rem] md:text-5xl", tone === "dark" ? "text-white" : "text-text-primary")}>{title}</Tag>
         {intro && (
           <p className={clsx("mt-3 text-base md:text-lg leading-relaxed", tone === "dark" ? "text-white/70" : "text-text-secondary")}>
             {intro}
@@ -64,8 +64,8 @@ export function SectionHeading({
         <Link
           href={action.href}
           className={clsx(
-            "group inline-flex items-center gap-2 self-start md:self-auto whitespace-nowrap font-semibold",
-            tone === "dark" ? "text-brand-orange hover:text-white" : "text-text-primary hover:text-accent-primary"
+            "group inline-flex items-center gap-2 self-start md:self-auto whitespace-nowrap rounded-full border px-5 py-2.5 font-semibold transition-colors",
+            tone === "dark" ? "border-white/20 text-white hover:border-brand-orange hover:text-brand-orange" : "border-slate-300 bg-white text-text-primary hover:border-brand-ink"
           )}
         >
           {action.label}

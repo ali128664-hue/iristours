@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 
 export const metadata: Metadata = {
-  title: "Rent a Limousine in Lahore | Luxury Wedding Limos - Iris Tours",
+  title: "Rent a Limousine in Lahore | Luxury Wedding Limos",
   description: "Make your grand entrance unforgettable. Rent a luxurious stretch limousine in Lahore with driver for weddings, VIP corporate events, and red-carpet arrivals.",
   alternates: {
     canonical: "https://iristours.net/blog/limousine-rental-lahore",

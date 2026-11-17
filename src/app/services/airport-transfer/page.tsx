@@ -3,7 +3,7 @@ import ServicePage from "@/components/services/ServicePage";
 import { Section, SectionHeading } from "@/components/ui/Section";
 
 export const metadata: Metadata = {
-  title: "Airport Transfer Lahore | 24/7 Allama Iqbal Airport Car Rental - Iris Tours",
+  title: "Lahore Airport Transfer: 24/7 Pickup & Drop with Driver",
   description: "Book 24/7 Allama Iqbal International Airport (LHE) Lahore transfer car rental with driver. Flight tracking, terminal meet & greet, and transparent rates. Book now!",
   alternates: {
     canonical: "https://iristours.net/services/airport-transfer",
@@ -43,6 +43,7 @@ const AIRPORTS = [
 export default function AirportTransferPage() {
   return (
     <ServicePage
+      image="/categories/airport.jpg"
       crumb="Airport transfer"
       title="Airport pickup and drop in Lahore and Islamabad"
       intro="Your driver waits at arrivals with your name on a board, tracks your flight and helps with luggage. Available 24 hours, for one-way or return trips."

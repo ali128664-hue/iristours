@@ -12,10 +12,14 @@
  */
 
 import Link from "next/link";
+import Image from "next/image";
+import { SITE_URL } from "@/lib/site";
 import { ChevronRight, Phone } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 
 type Crumb = { label: string; href?: string };
+
+const DEFAULT_IMAGE = "/categories/luxury.jpg";
 
 export default function PageHeader({
   title,
@@ -23,21 +27,42 @@ export default function PageHeader({
   crumbs = [],
   actions,
   children,
+  image = DEFAULT_IMAGE,
+  breadcrumbSchema = true,
 }: {
   title: string;
   intro?: React.ReactNode;
   crumbs?: Crumb[];
   actions?: React.ReactNode;
   children?: React.ReactNode;
+  /** Background photo (path in /public). */
+  image?: string;
+  /** Set false on pages that already output their own BreadcrumbList schema. */
+  breadcrumbSchema?: boolean;
 }) {
+  const schema =
+    breadcrumbSchema && crumbs.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [{ label: "Home", href: "/" }, ...crumbs].map((c, i) => ({
+            "@type": "ListItem",
+            position: i + 1,
+            name: c.label,
+            ...(c.href ? { item: `${SITE_URL}${c.href === "/" ? "" : c.href}` } : {}),
+          })),
+        }
+      : null;
+
   return (
-    <header className="relative overflow-hidden bg-brand-ink text-white">
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 pointer-events-none"
-        style={{ backgroundImage: "radial-gradient(50% 90% at 90% 0%, rgba(247,147,30,0.18) 0%, rgba(247,147,30,0) 70%)" }}
-      />
-      <div className="container mx-auto px-5 md:px-12 relative py-10 md:py-16">
+    <header className="relative isolate overflow-hidden bg-brand-ink text-white">
+      {schema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />}
+      <div aria-hidden="true" className="absolute inset-0 -z-10 photo-grain">
+        <Image src={image} alt="" fill priority sizes="100vw" className="iris-zoom object-cover object-center" />
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-ink via-brand-ink/85 to-brand-ink/35" />
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-ink/90 via-transparent to-brand-ink/30" />
+      </div>
+      <div className="container mx-auto px-5 md:px-12 relative pt-10 pb-12 md:pt-16 md:pb-20">
         {crumbs.length > 0 && (
           <nav aria-label="Breadcrumb" className="mb-5 text-sm text-white/60">
             <ol className="flex flex-wrap items-center gap-1.5">
@@ -64,9 +89,9 @@ export default function PageHeader({
           </nav>
         )}
 
-        <h1 className="text-[2.2rem] leading-[1.08] sm:text-5xl lg:text-6xl text-white max-w-4xl">{title}</h1>
-        {intro && <p className="mt-4 text-base md:text-lg text-white/75 leading-relaxed max-w-2xl">{intro}</p>}
-        {actions && <div className="mt-7 flex flex-col sm:flex-row gap-3">{actions}</div>}
+        <h1 className="text-[2.5rem] sm:text-6xl lg:text-7xl text-white max-w-4xl">{title}</h1>
+        {intro && <p className="mt-5 text-base md:text-lg text-white/80 leading-relaxed max-w-2xl">{intro}</p>}
+        {actions && <div className="mt-8 flex flex-col sm:flex-row gap-3">{actions}</div>}
         {children}
       </div>
     </header>

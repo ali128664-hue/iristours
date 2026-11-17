@@ -6,8 +6,8 @@ import CtaBand from "@/components/ui/CtaBand";
 import fleetData from "@/data/fleet.json";
 
 export const metadata: Metadata = {
-  title: "Rent a Car Fleet in Lahore | Luxury SUVs, Sedans & Vans - Iris Tours",
-  description: "Browse verified rental cars in Lahore with daily rates. Toyota Fortuner, Prado, Land Cruiser V8, Mercedes, Civic, and Hiace Grand Cabin with professional chauffeurs. Book 24/7!",
+  title: "Cars for Rent in Lahore with Driver: Rates for 17 Cars",
+  description: "Compare daily rates for 17 cars with driver in Lahore: Toyota Yaris from Rs. 7,000, Corolla, Civic, Fortuner, Prado, Land Cruiser V8, Mercedes, Audi and vans.",
   alternates: {
     canonical: "https://iristours.net/fleet",
   },
@@ -38,6 +38,7 @@ export default function FleetPage() {
   return (
     <>
       <PageHeader
+        image="/blog/rent-a-car-lahore-fleet-lineup.jpg"
         title="Cars for rent with a driver"
         intro={`${fleetData.length} cars, from an economy Yaris to a Land Cruiser V8. Rates below are per day within the city, driver included.`}
         crumbs={[{ label: "Fleet" }]}

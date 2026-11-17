@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 
 export const metadata: Metadata = {
-  title: "A Day in the Walled City: Exploring Lahore With a Private Driver - Iris Tours",
+  title: "A Day in the Walled City: Exploring Lahore With a Private Driver",
   description: "Experience the magic of Badshahi Mosque and Lahore Fort without traffic stress. Read our travel diary on using a premium chauffeur car service in Lahore.",
   alternates: {
     canonical: "https://iristours.net/blog/a-day-in-the-walled-city-lahore",

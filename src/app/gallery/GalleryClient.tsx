@@ -22,7 +22,8 @@ const IMAGES = [
 export default function GalleryClient() {
   return (
     <>
-      <PageHeader title="Gallery" intro="Our cars, our drivers and the places we take people." crumbs={[{ label: "Gallery" }]} />
+      <PageHeader
+        image="/categories/suv.jpg" title="Gallery" intro="Our cars, our drivers and the places we take people." crumbs={[{ label: "Gallery" }]} />
       <Section>
         <ul className="grid grid-cols-2 gap-3 md:gap-5 lg:grid-cols-3">
           {IMAGES.map((img, i) => (

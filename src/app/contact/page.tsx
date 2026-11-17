@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import ContactClient from "./ContactClient";
 
 export const metadata: Metadata = {
-  title: "Contact Iris Tours | Rent a Car in Lahore 24/7 Bookings",
+  title: "Contact Us: Rent a Car in Lahore 24/7",
   description: "Contact Iris Tours 24/7 for car rental bookings, airport transfers, and wedding cars in Lahore. Call or WhatsApp +92 315 4973906.",
   alternates: {
     canonical: "https://iristours.net/contact",

@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import FaqClient, { FaqItem } from "./FaqClient";
 
 export const metadata: Metadata = {
-  title: "Frequently Asked Questions | Iris Tours Car Rental Lahore",
+  title: "Car Rental FAQ: Prices, Documents & Booking in Lahore",
   description: "Find answers about car rental booking, chauffeur policies, pricing, fuel regulations, and wedding car packages at Iris Tours Pakistan.",
   alternates: {
     canonical: "https://iristours.net/faq",

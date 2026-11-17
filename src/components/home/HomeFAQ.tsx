@@ -8,6 +8,14 @@ import { ChevronDown } from "lucide-react";
 import { Section } from "@/components/ui/Section";
 
 const faqs = [
+  {
+    question: "How much does it cost to rent a car in Lahore?",
+    answer: "A full day inside Lahore with a driver starts at Rs. 7,000 for a Toyota Yaris and Rs. 8,000 for a Corolla. SUVs like the Toyota Fortuner start at Rs. 18,000 and the Land Cruiser V8 at Rs. 40,000. Out-of-city trips are quoted separately, and you get the final price in writing before you book."
+  },
+  {
+    question: "Can I book a car from Lahore to Islamabad or other cities?",
+    answer: "Yes. We run one-way and return trips from Lahore to Islamabad, Rawalpindi, Faisalabad, Multan, Sialkot, Murree and the northern areas. Inter-city rates start at Rs. 9,000 per day, and the driver's food and overnight stay are paid by the customer on outstation trips."
+  },
   // Booking & Requirements
   {
     question: "How do I book a vehicle?",
@@ -63,7 +71,7 @@ export default function HomeFAQ() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <div className="grid gap-8 lg:grid-cols-12 lg:gap-12">
         <div className="lg:col-span-4">
-          <h2 className="text-3xl md:text-[2.6rem]">Questions people ask</h2>
+          <h2 className="text-[2.1rem] md:text-5xl">Questions people ask</h2>
           <p className="mt-3 text-base md:text-lg leading-relaxed text-text-secondary">
             Can&apos;t find your answer? Message us on WhatsApp and we will reply right away.
           </p>

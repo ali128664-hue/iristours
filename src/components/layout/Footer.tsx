@@ -70,13 +70,15 @@ export default function Footer() {
   return (
     <footer className="bg-brand-ink text-white/70">
       {/* Booking strip */}
-      <div className="border-b border-white/10">
-        <div className="container mx-auto px-5 md:px-12 py-10 md:py-12 flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-          <div>
-            <p className="font-display text-2xl md:text-3xl font-semibold text-white">
+      <div className="relative isolate overflow-hidden border-b border-white/10">
+        <span aria-hidden="true" className="absolute -left-20 top-1/2 -z-10 h-72 w-72 -translate-y-1/2 rounded-full border-[3px] border-brand-orange/70 md:h-96 md:w-96" />
+        <span aria-hidden="true" className="absolute -left-6 top-1/2 -z-10 h-44 w-44 -translate-y-1/2 rounded-full border border-white/10 md:h-64 md:w-64" />
+        <div className="container mx-auto px-5 md:px-12 py-14 md:py-20 flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
+          <div className="md:pl-24 lg:pl-40">
+            <p className="font-display text-4xl md:text-6xl font-bold tracking-tight text-white">
               Need a car today?
             </p>
-            <p className="mt-2 text-white/65">Message us with your dates and pickup point. We are available 24 hours a day.</p>
+            <p className="mt-3 max-w-lg text-white/65 md:text-lg">Message us with your dates and pickup point. We are available 24 hours a day.</p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3">
             <a

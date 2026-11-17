@@ -10,7 +10,7 @@
  */
 
 :root {
-  --background-primary: #FAFAF7;
+  --background-primary: #F6F7F9;
   --background-secondary: #FFFFFF;
   --background-card: rgba(255, 255, 255, 0.94);
   --glass-surface: rgba(255, 255, 255, 0.86);
@@ -18,12 +18,13 @@
   --accent-primary: #D97706;
   --accent-secondary: #B45309;
   --brand-orange: #F7931E;
-  --brand-ink: #15161A;
+  --brand-ink: #0B1324;
+  --brand-navy: #14203A;
 
-  --text-primary: #15161A;
-  --text-secondary: #55575E;
+  --text-primary: #0B1324;
+  --text-secondary: #4A5468;
 
-  --border-color: rgba(228, 227, 222, 0.95);
+  --border-color: #DFE3EA;
 
   --color-success: #059669;
   --color-warning: #D97706;
@@ -39,6 +40,7 @@
   --color-accent-secondary: var(--accent-secondary);
   --color-brand-orange: var(--brand-orange);
   --color-brand-ink: var(--brand-ink);
+  --color-brand-navy: var(--brand-navy);
 
   --color-text-primary: var(--text-primary);
   --color-text-secondary: var(--text-secondary);
@@ -46,23 +48,23 @@
   --color-border-primary: var(--border-color);
 
   --font-sans: var(--font-archivo), system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-display: var(--font-archivo), system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: var(--font-bricolage), var(--font-archivo), system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-inter: var(--font-archivo), system-ui, sans-serif;
 }
 
-/* Warm charcoal neutrals (replaces Tailwind's blue-tinted slate site-wide) */
+/* Midnight-navy neutrals, tuned to the brand ink (used site-wide as "slate") */
 @theme {
-  --color-slate-50: #FAFAF7;
-  --color-slate-100: #F3F2EE;
-  --color-slate-200: #E6E5E0;
-  --color-slate-300: #D0CFC9;
-  --color-slate-400: #9B9A95;
-  --color-slate-500: #6C6C68;
-  --color-slate-600: #4C4C4A;
-  --color-slate-700: #343436;
-  --color-slate-800: #212226;
-  --color-slate-900: #15161A;
-  --color-slate-950: #0B0C0E;
+  --color-slate-50: #F6F7F9;
+  --color-slate-100: #EDF0F4;
+  --color-slate-200: #DFE3EA;
+  --color-slate-300: #C5CCD8;
+  --color-slate-400: #8E98AB;
+  --color-slate-500: #667086;
+  --color-slate-600: #4A5468;
+  --color-slate-700: #333C50;
+  --color-slate-800: #1C2539;
+  --color-slate-900: #0B1324;
+  --color-slate-950: #060B16;
 }
 
 html {
@@ -84,20 +86,50 @@ body {
 /* ─── Typography: confident display face for headings ───────────────────── */
 h1, h2, h3, .font-display {
   font-family: var(--font-display);
-  font-weight: 650;
-  font-stretch: 112%;
-  letter-spacing: -0.015em;
+  font-weight: 700;
+  letter-spacing: -0.025em;
   text-wrap: balance;
 }
 
-h1 { line-height: 1.04; }
-h2 { line-height: 1.12; }
+h1 { line-height: 0.98; letter-spacing: -0.035em; }
+h2 { line-height: 1.06; letter-spacing: -0.03em; }
+h3 { font-weight: 650; letter-spacing: -0.015em; }
+
+/* ─── Premium surfaces ──────────────────────────────────────────────────── */
+/* Layered shadow used on cards that should feel lifted */
+@utility shadow-lift {
+  box-shadow: 0 1px 2px rgba(11, 19, 36, 0.04), 0 8px 24px -12px rgba(11, 19, 36, 0.18);
+}
+@utility shadow-float {
+  box-shadow: 0 2px 6px rgba(11, 19, 36, 0.06), 0 30px 60px -24px rgba(11, 19, 36, 0.35);
+}
+/* Studio floor behind cut-out car photos */
+.car-stage {
+  background:
+    radial-gradient(70% 40% at 50% 92%, rgba(11, 19, 36, 0.14) 0%, rgba(11, 19, 36, 0) 70%),
+    linear-gradient(180deg, #F1F3F7 0%, #E6EAF1 100%);
+}
+/* The orange "iris" ring from the logo, used as a quiet brand mark */
+.iris-mark {
+  border-radius: 9999px;
+  border: 2px solid var(--brand-orange);
+}
+/* Fine grain over photos so dark overlays don't band */
+.photo-grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.18;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
+  mix-blend-mode: overlay;
+}
 
 p { text-wrap: pretty; }
 
 ::selection {
   background: var(--brand-orange);
-  color: #15161A;
+  color: #0B1324;
 }
 
 /* Clear keyboard focus everywhere (accessibility) */
@@ -124,6 +156,15 @@ input, select, textarea {
 @keyframes iris-drive-in {
   from { opacity: 0; transform: translateX(70px) scale(0.97); }
   to { opacity: 1; transform: translateX(0) scale(1); }
+}
+
+@keyframes iris-zoom {
+  from { transform: scale(1.08); }
+  to { transform: scale(1); }
+}
+
+.iris-zoom {
+  animation: iris-zoom 2.4s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 @keyframes iris-ring {
@@ -211,11 +252,11 @@ input, select, textarea {
 }
 
 ::-webkit-scrollbar-track {
-  background: #F3F2EE;
+  background: #EDF0F4;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(21, 22, 26, 0.28);
+  background: rgba(11, 19, 36, 0.28);
   border-radius: 4px;
 }
 

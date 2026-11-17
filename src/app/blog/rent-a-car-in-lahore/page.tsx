@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 
 export const metadata: Metadata = {
-  title: "Rent a Car in Lahore (2026): Best Rates, Verified Fleet & Booking Guide",
+  title: "Rent a Car in Lahore: Rates, Cars & Booking Guide",
   description: "Looking to rent a car in Lahore? Compare 2026 daily rates for sedans, luxury SUVs & chauffeur-driven cars across DHA, Gulberg & Airport. Book 24/7 with Iris Tours!",
   alternates: {
     canonical: "https://iristours.net/blog/rent-a-car-in-lahore",

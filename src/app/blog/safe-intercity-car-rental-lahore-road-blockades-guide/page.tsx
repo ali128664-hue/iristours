@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 
 export const metadata: Metadata = {
-  title: "Safe Intercity Car Rental from Lahore: Road Blockades, Fog & Detours",
+  title: "Safe Intercity Travel from Lahore: Fog, Blockades & Detours",
   description: "Need to travel from Lahore during motorway fog, political sit-ins, or road blockades? Learn how Iris Tours guarantees safe intercity car rental with driver across Punjab, KPK & Islamabad.",
   alternates: {
     canonical: "https://iristours.net/blog/safe-intercity-car-rental-lahore-road-blockades-guide",

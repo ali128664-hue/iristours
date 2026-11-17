@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 
 export const metadata: Metadata = {
-  title: "Rent a Car in Lahore for Northern Areas & KPK: 4x4 Fleet & Route Advisory",
+  title: "Rent a 4x4 in Lahore for Northern Areas & KPK",
   description: "Planning a road expedition from Lahore to Hunza, Skardu, or Naran? Explore Karakoram Highway & Babusar Pass road advisories, landslide guidance & book 4x4 Prado or Fortuner from Lahore.",
   alternates: {
     canonical: "https://iristours.net/blog/rent-a-car-lahore-northern-areas-kpk-guide",

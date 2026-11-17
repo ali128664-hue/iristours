@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import ServicePage from "@/components/services/ServicePage";
 
 export const metadata: Metadata = {
-  title: "Corporate Car Rental in Lahore | Executive Fleet Solutions - Iris Tours",
+  title: "Corporate Car Rental in Lahore with Driver",
   description: "Monthly and daily corporate car rentals in Lahore. Premium executive sedans, Hiace vans, and luxury SUVs for businesses with verified professional chauffeurs.",
   alternates: {
     canonical: "https://iristours.net/services/corporate-rentals",
@@ -33,6 +33,7 @@ export const metadata: Metadata = {
 export default function CorporateRentalsPage() {
   return (
     <ServicePage
+      image="/categories/corporate.jpg"
       crumb="Corporate rentals"
       title="Corporate car rental with drivers"
       intro="Daily staff transport, executive cars for visiting guests and monthly contracts for companies in Lahore and Islamabad."
