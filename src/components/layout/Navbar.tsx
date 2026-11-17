@@ -102,6 +102,7 @@ export default function Navbar() {
   const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href));
 
   return (
+    <>
     <header className="fixed inset-x-0 top-0 z-50 h-[72px] border-b border-border-primary bg-white/95 backdrop-blur-md">
       <div className="container mx-auto flex h-full items-center justify-between gap-6 px-5 md:px-12">
         <Link href="/" aria-label="Iris Tours home" className="flex-shrink-0">
@@ -169,10 +170,12 @@ export default function Navbar() {
           </button>
         </div>
       </div>
+    </header>
 
-      {/* Mobile menu */}
+      {/* Mobile menu — kept outside <header>: the header's blur effect would
+          otherwise trap this fixed panel inside the 72px header (height 0). */}
       {open && (
-        <div id="mobile-menu" className="lg:hidden fixed inset-x-0 top-[72px] bottom-0 overflow-y-auto bg-white" data-lenis-prevent>
+        <div id="mobile-menu" className="lg:hidden fixed inset-x-0 top-[72px] bottom-0 z-[45] overflow-y-auto overscroll-contain bg-white" data-lenis-prevent>
           <nav aria-label="Mobile" className="container mx-auto px-5 pt-4 pb-32">
             <p className="px-1 pb-2 pt-2 text-sm font-semibold text-slate-500">Cars</p>
             <div className="grid grid-cols-2 gap-2">
@@ -228,6 +231,6 @@ export default function Navbar() {
           </nav>
         </div>
       )}
-    </header>
+    </>
   );
 }
