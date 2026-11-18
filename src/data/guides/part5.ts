@@ -16,8 +16,8 @@ const part5: Guide[] = [
     keywords: ["lahore to kartarpur by car", "lahore to kartarpur distance", "kartarpur trip from lahore", "gurdwara darbar sahib kartarpur", "kartarpur car rental"],
     category: "Routes",
     date: "2026-11-07",
-    image: "/blog/lahore-cultural-tour.jpg",
-    imageAlt: "Pilgrims and visitors on a day trip from Lahore",
+    image: "/blog/intercity-safe-car-rental-lahore.jpg",
+    imageAlt: "Car with driver ready for a day trip from Lahore",
     intro: `[Gurdwara Darbar Sahib Kartarpur](https://en.wikipedia.org/wiki/Gurdwara_Darbar_Sahib_Kartarpur), where Guru Nanak spent the last years of his life, is one of the most visited places in Punjab. It sits near the Indian border in Narowal district, and a **Lahore to Kartarpur trip by car** is an easy and meaningful day out.`,
     sections: [
       {
@@ -26,7 +26,9 @@ const part5: Guide[] = [
 
 - **Driving time:** about 2.5 to 3 hours each way
 - **Best departure:** early morning, to reach before the midday crowds
-- **Fog season:** in December and January, leave a little later in the morning when fog has lifted. See our [fog guide](/blog/lahore-smog-fog-travel-guide).`,
+- **Fog season:** in December and January, leave a little later in the morning when fog has lifted. See our [fog guide](/blog/lahore-smog-fog-travel-guide).
+
+::route Lahore > (via Narowal, 2.5–3 h) > Gurdwara Darbar Sahib, Kartarpur`,
       },
       {
         h: "Documents and entry",
@@ -52,7 +54,9 @@ Indian pilgrims use the separate visa-free [Kartarpur Corridor](https://en.wikip
 | [Toyota Hiace Grand Cabin](/fleet/toyota-hiace-grand-cabin) | 15 | {{city:toyota-hiace-grand-cabin}} |
 | [Toyota Coaster](/fleet/toyota-coaster-saloon) | 30 | {{city:toyota-coaster-saloon}} |
 
-Pilgrim groups usually book a [Hiace or Coaster](/blog/coaster-on-rent-lahore). Combine the trip with the [Wagah border ceremony](/blog/wagah-border-ceremony-from-lahore) on another day for a full Punjab heritage visit.`,
+Pilgrim groups usually book a [Hiace or Coaster](/blog/coaster-on-rent-lahore). Combine the trip with the [Wagah border ceremony](/blog/wagah-border-ceremony-from-lahore) on another day for a full Punjab heritage visit.
+
+::cars toyota-corolla-altis-1-6, honda-br-v, toyota-coaster-saloon`,
       },
     ],
     faqs: [
@@ -73,8 +77,8 @@ Pilgrim groups usually book a [Hiace or Coaster](/blog/coaster-on-rent-lahore). 
     keywords: ["wagah border ceremony", "wagah border timing", "lahore to wagah border distance", "wagah border parade", "wagah border car hire"],
     category: "Lahore",
     date: "2026-11-06",
-    image: "/blog/lahore-cultural-tour.jpg",
-    imageAlt: "Crowds heading to the Wagah border flag ceremony near Lahore",
+    image: "/blog/hiace-rental.jpg",
+    imageAlt: "Family with a van ready for an evening trip from Lahore",
     intro: `The daily flag-lowering ceremony at **Wagah** on the Pakistan–India border is one of the most energetic spectacles in South Asia: marching soldiers, high kicks and a crowd chanting in the stands. It is about 30 km from central Lahore, so a car with driver makes the evening easy.`,
     sections: [
       {
@@ -83,7 +87,9 @@ Pilgrim groups usually book a [Hiace or Coaster](/blog/coaster-on-rent-lahore). 
 - **Driving time:** 40–60 minutes, more on weekends and holidays
 - **Ceremony time:** just before sunset, so the start time shifts through the year, earlier in winter and later in summer
 
-Plan to **arrive 1.5 to 2 hours early**, especially on Fridays, Sundays and national days, when the stands fill up.`,
+Plan to **arrive 1.5 to 2 hours early**, especially on Fridays, Sundays and national days, when the stands fill up.
+
+::route Central Lahore > (GT Road, 40–60 min) > Wagah border`,
       },
       {
         h: "What to carry and expect",
@@ -97,7 +103,9 @@ Background on the ceremony: [Wagah](https://en.wikipedia.org/wiki/Wagah).`,
       },
       {
         h: "Car options for the evening",
-        body: `A half-day or evening booking is enough. For families, a [Corolla](/fleet/toyota-corolla-altis-1-6) ({{rate:toyota-corolla-altis-1-6}} per day) or [BR-V](/fleet/honda-br-v) ({{rate:honda-br-v}}) works well; schools and groups use a [Hiace](/fleet/toyota-hiace-grand-cabin) or [Coaster](/blog/coaster-on-rent-lahore). The driver waits in the car park and brings you straight back.`,
+        body: `A half-day or evening booking is enough. For families, a [Corolla](/fleet/toyota-corolla-altis-1-6) ({{rate:toyota-corolla-altis-1-6}} per day) or [BR-V](/fleet/honda-br-v) ({{rate:honda-br-v}}) works well; schools and groups use a [Hiace](/fleet/toyota-hiace-grand-cabin) or [Coaster](/blog/coaster-on-rent-lahore). The driver waits in the car park and brings you straight back.
+
+::cars toyota-corolla-altis-1-6, honda-br-v, toyota-hiace-grand-cabin`,
       },
       {
         h: "Make a day of it",
@@ -123,7 +131,7 @@ Background on the ceremony: [Wagah](https://en.wikipedia.org/wiki/Wagah).`,
     category: "Lahore",
     date: "2026-11-05",
     image: "/blog/lahore-cultural-tour.jpg",
-    imageAlt: "Badshahi Mosque and Lahore Fort area on a city tour",
+    imageAlt: "Family beside a car outside the Badshahi Mosque, Lahore",
     intro: `Lahore rewards a full day of exploring, but the sights are spread across the city and parking near the old town is difficult. A **Lahore city tour by car with a driver** lets you see the highlights in one comfortable day. Here is a route that works.`,
     sections: [
       {
@@ -137,7 +145,9 @@ Background on the ceremony: [Wagah](https://en.wikipedia.org/wiki/Wagah).`,
 | 14:30 | Shalimar Gardens |
 | 16:00 | Leave for the [Wagah border ceremony](/blog/wagah-border-ceremony-from-lahore) |
 
-On days without Wagah, swap in Minar-e-Pakistan in Greater Iqbal Park and the Lahore Museum on Mall Road.`,
+On days without Wagah, swap in Minar-e-Pakistan in Greater Iqbal Park and the Lahore Museum on Mall Road.
+
+::route Lahore Fort > (walk) > Badshahi Mosque > (walk) > Walled City > (25 min) > Shalimar Gardens > (40 min) > Wagah`,
       },
       {
         h: "The Walled City on foot",
@@ -149,7 +159,9 @@ On days without Wagah, swap in Minar-e-Pakistan in Greater Iqbal Park and the La
 - **Business visitors:** [Honda Civic](/fleet/honda-civic) or [Prado](/fleet/toyota-land-cruiser-prado)
 - **Groups:** [Hiace Grand Cabin](/fleet/toyota-hiace-grand-cabin) at {{rate:toyota-hiace-grand-cabin}}
 
-Visiting from abroad? Read [car rental in Lahore for foreigners](/blog/car-rental-lahore-for-foreigners).`,
+Visiting from abroad? Read [car rental in Lahore for foreigners](/blog/car-rental-lahore-for-foreigners).
+
+::cars toyota-corolla-altis-1-6, honda-civic, toyota-hiace-grand-cabin`,
       },
       {
         h: "Tips",
@@ -187,7 +199,9 @@ If Basant is held again, here is what we learned about getting around the city d
 - Thousands of police were deployed across the city.
 - Celebrations went late into the night, especially in the old city and on rooftops.
 
-The festival also had a serious side: incidents during the celebrations led to deaths and injuries, and the revival came under court scrutiny afterwards. Any future Basant will depend on government decisions, so follow official announcements. Background: [Basant (festival)](https://en.wikipedia.org/wiki/Basant_%28festival%29).`,
+The festival also had a serious side: incidents during the celebrations led to deaths and injuries, and the revival came under court scrutiny afterwards. Any future Basant will depend on government decisions, so follow official announcements. Background: [Basant (festival)](https://en.wikipedia.org/wiki/Basant_%28festival%29).
+
+![Badshahi Mosque lit at dusk with visitors outside](/blog/lahore-cultural-tour.jpg "The old city around the Badshahi Mosque was the heart of the celebrations.")`,
       },
       {
         h: "Road safety during kite flying",
@@ -206,7 +220,9 @@ The festival also had a serious side: incidents during the celebrations led to d
 - **Groups of friends:** [Hiace Grand Cabin](/fleet/toyota-hiace-grand-cabin)
 - **Visitors from other cities:** combine with an [airport pickup](/blog/rent-a-car-lahore-airport) or an [intercity trip](/blog/intercity-car-rental-from-lahore)
 
-See the full [price list](/blog/rent-a-car-lahore-price-list).`,
+See the full [price list](/blog/rent-a-car-lahore-price-list).
+
+::cars honda-br-v, toyota-fortuner, toyota-hiace-grand-cabin`,
       },
       {
         h: "Things to do around the festival",
@@ -247,7 +263,9 @@ See the full [price list](/blog/rent-a-car-lahore-price-list).`,
 | Gujranwala | GT Road | 1.5–2 hours |
 | Sargodha | M-2 motorway | 2.5–3 hours |
 
-Times are for normal daytime conditions. In fog season, sections of the M-2, M-3, M-4 and M-11 can close overnight; see our [smog and fog guide](/blog/lahore-smog-fog-travel-guide).`,
+Times are for normal daytime conditions. In fog season, sections of the M-2, M-3, M-4 and M-11 can close overnight; see our [smog and fog guide](/blog/lahore-smog-fog-travel-guide).
+
+::stats 4.5 h = Islamabad | 2–2.5 h = Faisalabad | 4–4.5 h = Multan | 1.5–2 h = Sialkot`,
       },
       {
         h: "Intercity rates",
@@ -260,7 +278,11 @@ Times are for normal daytime conditions. In fog season, sections of the M-2, M-3
 | [Toyota Fortuner](/fleet/toyota-fortuner) | 7 | {{city:toyota-fortuner}} |
 | [Toyota Hiace Grand Cabin](/fleet/toyota-hiace-grand-cabin) | 15 | {{city:toyota-hiace-grand-cabin}} |
 
-Tolls and fuel on long trips are agreed in advance; see the latest petrol price on our [fuel prices page](/fuel-prices-pakistan). For a single traveller, a Yaris is the most economical choice; for families, a BR-V or Hiace splits the cost across more seats.`,
+Tolls and fuel on long trips are agreed in advance; see the latest petrol price on our [fuel prices page](/fuel-prices-pakistan). For a single traveller, a Yaris is the most economical choice; for families, a BR-V or Hiace splits the cost across more seats.
+
+::cars toyota-yaris, toyota-corolla-altis-1-6, honda-br-v
+
+![Motorway through the Salt Range hills](/blog/lahore-islamabad-motorway-salt-range.jpg "Punjab's motorways make day trips to most cities easy.")`,
       },
       {
         h: "One-way or return?",
@@ -309,7 +331,9 @@ Our detailed [Lahore to Islamabad guide](/blog/lahore-to-islamabad-car-rental) c
 - **Khewra to Katas Raj:** about 45 minutes
 - **Katas Raj back to Lahore:** about 3.5 hours via Kallar Kahar and the M-2
 
-Leave Lahore by 7–8 am (later on foggy winter mornings) to fit everything in comfortably.`,
+Leave Lahore by 7–8 am (later on foggy winter mornings) to fit everything in comfortably.
+
+::route Lahore > (M-2, about 2.5 h) > Lillah > (30 min) > Khewra > (45 min) > Katas Raj > (about 3.5 h) > Lahore`,
       },
       {
         h: "What to see",
@@ -328,7 +352,9 @@ Children love the mine; carry a light jacket because the tunnels are cool.`,
 | Big family | [Toyota Hiace Grand Cabin](/fleet/toyota-hiace-grand-cabin) | {{city:toyota-hiace-grand-cabin}} |
 | School or office trip | [Toyota Coaster](/fleet/toyota-coaster-saloon) | {{city:toyota-coaster-saloon}} |
 
-Schools often book a [Coaster](/blog/coaster-on-rent-lahore) for this trip. The motorway section through the Salt Range is also part of the [Lahore to Islamabad route](/blog/lahore-to-islamabad-car-rental).`,
+Schools often book a [Coaster](/blog/coaster-on-rent-lahore) for this trip. The motorway section through the Salt Range is also part of the [Lahore to Islamabad route](/blog/lahore-to-islamabad-car-rental).
+
+::cars toyota-corolla-altis-1-6, honda-br-v, toyota-coaster-saloon`,
       },
     ],
     faqs: [

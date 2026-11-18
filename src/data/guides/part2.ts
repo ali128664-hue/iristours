@@ -26,7 +26,9 @@ const part2: Guide[] = [
     imageAlt: "Sedans, SUVs and vans from the Iris Tours rental fleet in Lahore",
     intro: `How much does it cost to **rent a car in Lahore per day**? The honest answer depends on the car, where you are going and for how long. This page lists our current rates for every car in the fleet, explains what is included, and shows how to pay less for longer bookings.
 
-All prices below are read directly from our live fleet list, so they are always up to date.`,
+All prices below are read directly from our live fleet list, so they are always up to date.
+
+::stats 17 = Cars in the fleet | {{rate:toyota-yaris}} = Lowest day rate | 30 = Seats in our largest coach | 24/7 = Booking on WhatsApp`,
     sections: [
       {
         h: "Economy and sedan rates",
@@ -35,7 +37,9 @@ All prices below are read directly from our live fleet list, so they are always 
 | [Toyota Yaris](/fleet/toyota-yaris) | {{rate:toyota-yaris}} | {{city:toyota-yaris}} | {{week:toyota-yaris}} | {{month:toyota-yaris}} |
 | [Toyota Corolla Altis 1.6](/fleet/toyota-corolla-altis-1-6) | {{rate:toyota-corolla-altis-1-6}} | {{city:toyota-corolla-altis-1-6}} | {{week:toyota-corolla-altis-1-6}} | {{month:toyota-corolla-altis-1-6}} |
 | [Toyota Corolla Grande 1.8](/fleet/toyota-corolla-grande-1-8) | {{rate:toyota-corolla-grande-1-8}} | {{city:toyota-corolla-grande-1-8}} | {{week:toyota-corolla-grande-1-8}} | {{month:toyota-corolla-grande-1-8}} |
-| [Honda Civic](/fleet/honda-civic) | {{rate:honda-civic}} | {{city:honda-civic}} | {{week:honda-civic}} | {{month:honda-civic}} |`,
+| [Honda Civic](/fleet/honda-civic) | {{rate:honda-civic}} | {{city:honda-civic}} | {{week:honda-civic}} | {{month:honda-civic}} |
+
+::cars toyota-yaris, toyota-corolla-altis-1-6, honda-civic`,
       },
       {
         h: "SUV and 7-seater rates",
@@ -49,7 +53,9 @@ All prices below are read directly from our live fleet list, so they are always 
 | [Toyota Prado](/fleet/toyota-land-cruiser-prado) | {{rate:toyota-land-cruiser-prado}} | {{city:toyota-land-cruiser-prado}} | {{week:toyota-land-cruiser-prado}} | {{month:toyota-land-cruiser-prado}} |
 | [Land Cruiser V8](/fleet/toyota-land-cruiser-v8) | {{rate:toyota-land-cruiser-v8}} | {{city:toyota-land-cruiser-v8}} | {{week:toyota-land-cruiser-v8}} | {{month:toyota-land-cruiser-v8}} |
 
-Not sure which SUV to pick? Compare them in our [Prado on rent](/blog/prado-on-rent-lahore) and [V8 on rent](/blog/land-cruiser-v8-on-rent-lahore) guides.`,
+Not sure which SUV to pick? Compare them in our [Prado on rent](/blog/prado-on-rent-lahore) and [V8 on rent](/blog/land-cruiser-v8-on-rent-lahore) guides.
+
+::cars toyota-fortuner, toyota-land-cruiser-prado, toyota-land-cruiser-v8`,
       },
       {
         h: "Van and coaster rates",
@@ -58,7 +64,9 @@ Not sure which SUV to pick? Compare them in our [Prado on rent](/blog/prado-on-r
 | [Toyota Hiace Grand Cabin](/fleet/toyota-hiace-grand-cabin) | 15 | {{rate:toyota-hiace-grand-cabin}} | {{city:toyota-hiace-grand-cabin}} |
 | [Toyota Coaster Saloon](/fleet/toyota-coaster-saloon) | 30 | {{rate:toyota-coaster-saloon}} | {{city:toyota-coaster-saloon}} |
 
-For school trips, staff transport and wedding guests, see [Coaster on rent in Lahore](/blog/coaster-on-rent-lahore).`,
+For school trips, staff transport and wedding guests, see [Coaster on rent in Lahore](/blog/coaster-on-rent-lahore).
+
+::cars toyota-hiace-grand-cabin, toyota-coaster-saloon`,
       },
       {
         h: "Luxury car rates",
@@ -69,7 +77,9 @@ For school trips, staff transport and wedding guests, see [Coaster on rent in La
 | [Range Rover](/fleet/range-rover) | {{rate:range-rover}} | {{city:range-rover}} |
 | [Mercedes G-Wagon](/fleet/mercedes-benz-g-wagon) | {{rate:mercedes-benz-g-wagon}} | {{city:mercedes-benz-g-wagon}} |
 
-Luxury cars are popular for weddings; see [Mercedes on rent](/blog/mercedes-on-rent-lahore) and our [wedding cars](/services/wedding-cars) page.`,
+Luxury cars are popular for weddings; see [Mercedes on rent](/blog/mercedes-on-rent-lahore) and our [wedding cars](/services/wedding-cars) page.
+
+::cars mercedes-benz-c-class-c180, audi-a6, range-rover`,
       },
       {
         h: "What is included, and what is extra",
@@ -136,7 +146,9 @@ Here is what our monthly and weekly packages cost and how they work.`,
 | [Toyota Fortuner](/fleet/toyota-fortuner) | 7 | {{week:toyota-fortuner}} | {{month:toyota-fortuner}} |
 | [Toyota Hiace Grand Cabin](/fleet/toyota-hiace-grand-cabin) | 15 | {{week:toyota-hiace-grand-cabin}} | {{month:toyota-hiace-grand-cabin}} |
 
-Rates for luxury cars and the Prado are on our [price list](/blog/rent-a-car-lahore-price-list).`,
+Rates for luxury cars and the Prado are on our [price list](/blog/rent-a-car-lahore-price-list).
+
+::cars toyota-yaris, toyota-corolla-altis-1-6, honda-br-v`,
       },
       {
         h: "Who books monthly",
@@ -147,7 +159,9 @@ Families who come home for weddings or the winter holidays often stay four to ei
 Offices use monthly cars for managers, visiting engineers and pick-and-drop of staff. Our [corporate rentals](/services/corporate-rentals) team handles monthly invoicing.
 
 ### Between cars
-If your own car is in the workshop or waiting for delivery, a monthly Yaris or Corolla keeps you moving without a long contract.`,
+If your own car is in the workshop or waiting for delivery, a monthly Yaris or Corolla keeps you moving without a long contract.
+
+![Iris Tours cars lined up and ready for customers](/categories/about_fleet.jpg "Monthly cars are serviced and cleaned by our team.")`,
       },
       {
         h: "What a monthly package includes",
@@ -184,7 +198,7 @@ Fuel is usually paid by the customer on monthly packages. Keep an eye on the lat
     category: "Rent a car",
     date: "2026-11-11",
     image: "/blog/lahore-airport-car-rental-service.jpg",
-    imageAlt: "Family loading luggage into an SUV at Lahore airport",
+    imageAlt: "Chauffeur meeting travellers outside Allama Iqbal International Airport, Lahore",
     intro: `December and January are when many overseas Pakistanis come home: the wedding season is at its peak, schools abroad are on winter break, and families gather in Lahore. If you are planning a visit, booking **car rental before you land** saves a lot of stress.
 
 This guide covers airport pickup, the best cars for big families, monthly pricing, and the trips most visitors take.`,
@@ -196,7 +210,9 @@ This guide covers airport pickup, the best cars for big families, monthly pricin
 - Two adults with luggage: [Toyota Fortuner](/fleet/toyota-fortuner) or [Prado](/fleet/toyota-land-cruiser-prado)
 - Big families: [Toyota Hiace Grand Cabin](/fleet/toyota-hiace-grand-cabin)
 
-The driver tracks your flight and waits at arrivals. Details in our [Lahore airport guide](/blog/rent-a-car-lahore-airport).`,
+The driver tracks your flight and waits at arrivals. Details in our [Lahore airport guide](/blog/rent-a-car-lahore-airport).
+
+::cars toyota-fortuner, toyota-land-cruiser-prado, toyota-hiace-grand-cabin`,
       },
       {
         h: "A car for your whole stay",
@@ -218,7 +234,9 @@ A driver who knows Lahore is especially useful if you have been away for years: 
 - **For guests:** [Hiace](/fleet/toyota-hiace-grand-cabin) or [Coaster](/blog/coaster-on-rent-lahore) shuttles between home and the venue
 - **For baraat:** a matching convoy of SUVs
 
-Our [wedding season guide](/blog/wedding-car-rental-lahore-shaadi-season) has a full checklist.`,
+Our [wedding season guide](/blog/wedding-car-rental-lahore-shaadi-season) has a full checklist.
+
+![White wedding car decorated with red roses outside a lit-up venue](/categories/wedding.jpg "Book the couple's car first; December weekends sell out early.")`,
       },
       {
         h: "Trips worth adding to your visit",
@@ -253,7 +271,7 @@ Our [wedding season guide](/blog/wedding-car-rental-lahore-shaadi-season) has a 
     category: "Rent a car",
     date: "2026-11-10",
     image: "/blog/lahore-cultural-tour.jpg",
-    imageAlt: "Visitor being driven past Mughal monuments in Lahore",
+    imageAlt: "Visitors with a chauffeur-driven car outside the Badshahi Mosque, Lahore",
     intro: `Lahore is one of South Asia's great historic cities, but its traffic can be overwhelming for a first-time visitor. Most foreign visitors, business travellers and tourists alike, find that **hiring a car with a driver in Lahore** is the safest and most relaxed way to get around.
 
 This guide answers the questions visitors ask us most often.`,
@@ -269,7 +287,9 @@ Self-drive is possible with an International Driving Permit, but we recommend it
       },
       {
         h: "What it costs",
-        body: `A full day with driver in Lahore starts at {{rate:toyota-corolla-altis-1-6}} for a Corolla and {{rate:honda-civic}} for a Civic. Business visitors often prefer a [Toyota Prado](/fleet/toyota-land-cruiser-prado) at {{rate:toyota-land-cruiser-prado}}. All prices are in Pakistani rupees; switch the site to USD with the currency button at the top of the page. Full list: [price list](/blog/rent-a-car-lahore-price-list).`,
+        body: `A full day with driver in Lahore starts at {{rate:toyota-corolla-altis-1-6}} for a Corolla and {{rate:honda-civic}} for a Civic. Business visitors often prefer a [Toyota Prado](/fleet/toyota-land-cruiser-prado) at {{rate:toyota-land-cruiser-prado}}. All prices are in Pakistani rupees; switch the site to USD with the currency button at the top of the page. Full list: [price list](/blog/rent-a-car-lahore-price-list).
+
+::cars toyota-corolla-altis-1-6, honda-civic, toyota-land-cruiser-prado`,
       },
       {
         h: "Places to see in Lahore",
@@ -280,7 +300,9 @@ Self-drive is possible with an International Driving Permit, but we recommend it
 - Shalimar Gardens, Lahore Museum and Minar-e-Pakistan
 - The [Wagah border ceremony](/blog/wagah-border-ceremony-from-lahore) at sunset
 
-Our [Lahore city tour by car](/blog/lahore-city-tour-by-car) lays out a full-day plan.`,
+Our [Lahore city tour by car](/blog/lahore-city-tour-by-car) lays out a full-day plan.
+
+::route Lahore Fort > (5 min walk) > Badshahi Mosque > (walk) > Walled City > (40–60 min) > Wagah border`,
       },
       {
         h: "Beyond Lahore",
@@ -315,7 +337,7 @@ Our [Lahore city tour by car](/blog/lahore-city-tour-by-car) lays out a full-day
     category: "Rent a car",
     date: "2026-11-09",
     image: "/blog/lahore-islamabad.jpg",
-    imageAlt: "Rental car on a road in Islamabad with the Margalla Hills behind",
+    imageAlt: "Black SUV on the motorway with green hills behind",
     intro: `Iris Tours is based in Lahore, but we also **rent cars with drivers in Islamabad and Rawalpindi**. Whether you need an airport pickup, a car for a week of meetings in Blue Area, or a family trip to Murree, the same fixed rates and written quotes apply.`,
     sections: [
       {
@@ -332,7 +354,9 @@ Our [Lahore city tour by car](/blog/lahore-city-tour-by-car) lays out a full-day
 | [Toyota Prado](/fleet/toyota-land-cruiser-prado) | {{rate:toyota-land-cruiser-prado}} | {{city:toyota-land-cruiser-prado}} |
 | [Toyota Hiace Grand Cabin](/fleet/toyota-hiace-grand-cabin) | {{rate:toyota-hiace-grand-cabin}} | {{city:toyota-hiace-grand-cabin}} |
 
-Availability in Islamabad is best with a day's notice, especially for SUVs.`,
+Availability in Islamabad is best with a day's notice, especially for SUVs.
+
+::cars toyota-corolla-altis-1-6, toyota-fortuner, toyota-land-cruiser-prado`,
       },
       {
         h: "Islamabad airport pickup",
@@ -343,7 +367,9 @@ Availability in Islamabad is best with a day's notice, especially for SUVs.`,
         body: `- **Murree and the Galiyat:** about 1.5–2 hours by the Murree Expressway. Snow season advice is in our [Murree guide](/blog/lahore-to-murree-by-car-snowfall).
 - **Naran and Kaghan:** via the Hazara Motorway. See [Lahore to Naran Kaghan by car](/blog/lahore-to-naran-kaghan-by-car).
 - **Khewra Salt Mine:** about two hours down the M-2. See the [Khewra and Katas Raj day trip](/blog/khewra-salt-mine-katas-raj-day-trip).
-- **Back to Lahore:** one-way rides on the M-2 motorway. See [Lahore to Islamabad car rental](/blog/lahore-to-islamabad-car-rental).`,
+- **Back to Lahore:** one-way rides on the M-2 motorway. See [Lahore to Islamabad car rental](/blog/lahore-to-islamabad-car-rental).
+
+::route Lahore > (M-2, about 4.5 h) > Islamabad > (Murree Expressway, 1.5–2 h) > Murree`,
       },
     ],
     faqs: [
@@ -379,13 +405,17 @@ Availability in Islamabad is best with a day's notice, especially for SUVs.`,
 | [Toyota Corolla Altis](/fleet/toyota-corolla-altis-1-6) | {{rate:toyota-corolla-altis-1-6}} | {{city:toyota-corolla-altis-1-6}} |
 | [Honda BR-V](/fleet/honda-br-v) | {{rate:honda-br-v}} | {{city:honda-br-v}} |
 | [Toyota Fortuner](/fleet/toyota-fortuner) | {{rate:toyota-fortuner}} | {{city:toyota-fortuner}} |
-| [Toyota Hiace Grand Cabin](/fleet/toyota-hiace-grand-cabin) | {{rate:toyota-hiace-grand-cabin}} | {{city:toyota-hiace-grand-cabin}} |`,
+| [Toyota Hiace Grand Cabin](/fleet/toyota-hiace-grand-cabin) | {{rate:toyota-hiace-grand-cabin}} | {{city:toyota-hiace-grand-cabin}} |
+
+::cars toyota-corolla-altis-1-6, toyota-fortuner, toyota-hiace-grand-cabin`,
       },
       {
         h: "Murree from Rawalpindi in winter",
         body: `Rawalpindi is the closest big city to Murree, so it is the natural base for snow trips. In heavy snowfall the district administration sometimes stops tourist entry for safety, as happened in January 2026. For the 2026–27 season, Rawalpindi's administration has announced a winter safety plan with the main tourist season from 15 December to 15 February ([Express Tribune report](https://tribune.com.pk/story/2638187/murree-rolls-out-winter-safety-plan-for-tourists)).
 
-For snow, book a 4x4 such as a [Fortuner](/fleet/toyota-fortuner) or [Prado](/fleet/toyota-land-cruiser-prado) with a driver who has driven in snow. Full advice: [Lahore to Murree by car in snowfall season](/blog/lahore-to-murree-by-car-snowfall).`,
+For snow, book a 4x4 such as a [Fortuner](/fleet/toyota-fortuner) or [Prado](/fleet/toyota-land-cruiser-prado) with a driver who has driven in snow. Full advice: [Lahore to Murree by car in snowfall season](/blog/lahore-to-murree-by-car-snowfall).
+
+![White SUV on a winding mountain road with snowy peaks](/blog/northern-areas-fortuner.jpg "A 4x4 with a hill-experienced driver is the safe choice for Murree.")`,
       },
       {
         h: "One-way to Lahore",

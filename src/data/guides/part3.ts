@@ -36,7 +36,9 @@ See the full [Prado details and photos](/fleet/toyota-land-cruiser-prado).`,
         body: `- **Seven seats** in leather, with room for five or more bags
 - **4x4 terrain system** for mountain roads, gravel and snow
 - **Sunroof and rear entertainment** on most of our Prados
-- **A driver** experienced with highways and hill roads`,
+- **A driver** experienced with highways and hill roads
+
+::cars toyota-land-cruiser-prado, toyota-fortuner, toyota-land-cruiser-v8`,
       },
       {
         h: "Prado vs Fortuner vs V8",
@@ -54,7 +56,9 @@ If budget matters most, the Fortuner does almost everything the Prado does. If y
         body: `- **Northern areas:** the Prado is ideal for [Naran and Kaghan](/blog/lahore-to-naran-kaghan-by-car), [Hunza](/blog/lahore-to-hunza-by-road) and [Skardu](/blog/lahore-to-skardu-by-road).
 - **Snow in Murree:** a 4x4 with a snow-experienced driver is the safe choice in winter. See [Lahore to Murree](/blog/lahore-to-murree-by-car-snowfall).
 - **Weddings:** a white or black Prado is a classic choice for the groom's family. See [wedding cars](/services/wedding-cars).
-- **Business delegations:** pair a Prado with an [airport pickup](/blog/rent-a-car-lahore-airport).`,
+- **Business delegations:** pair a Prado with an [airport pickup](/blog/rent-a-car-lahore-airport).
+
+![White Land Cruiser on a mountain road beside a river](/blog/swat-kalam-mountain-road-4x4.jpg "Mountain roads are where the Prado's 4x4 system earns its keep.")`,
       },
     ],
     faqs: [
@@ -76,7 +80,7 @@ If budget matters most, the Fortuner does almost everything the Prado does. If y
     category: "Cars",
     date: "2026-11-16",
     image: "/categories/luxury.jpg",
-    imageAlt: "Black Toyota Land Cruiser V8 outside a luxury hotel in Lahore",
+    imageAlt: "Luxury SUV with chauffeur in Lahore",
     intro: `In Pakistan, the **Toyota Land Cruiser V8** is the car of VIP convoys, big weddings and serious long-distance comfort. If you are looking for a **V8 on rent in Lahore**, this guide covers prices, what you get, and how to book it during the busy wedding season.`,
     sections: [
       {
@@ -95,7 +99,9 @@ View photos and specifications on the [Land Cruiser V8 page](/fleet/toyota-land-
         body: `- **Presence:** nothing arrives at a wedding or event quite like a V8.
 - **Space:** eight seats and room for six or more bags.
 - **Comfort:** the softest ride in our SUV range, ideal for long motorway trips.
-- **Capability:** full 4x4 for the [Karakoram Highway](https://en.wikipedia.org/wiki/Karakoram_Highway) and snow.`,
+- **Capability:** full 4x4 for the [Karakoram Highway](https://en.wikipedia.org/wiki/Karakoram_Highway) and snow.
+
+::cars toyota-land-cruiser-v8, toyota-land-cruiser-prado, range-rover`,
       },
       {
         h: "V8 for weddings",
@@ -103,7 +109,9 @@ View photos and specifications on the [Land Cruiser V8 page](/fleet/toyota-land-
 
 > From November to February, V8s are usually booked for every Friday, Saturday and Sunday. Reserve two to four weeks ahead.
 
-Decoration with fresh flowers can be arranged on request. Read the full [wedding season guide](/blog/wedding-car-rental-lahore-shaadi-season).`,
+Decoration with fresh flowers can be arranged on request. Read the full [wedding season guide](/blog/wedding-car-rental-lahore-shaadi-season).
+
+![Decorated white wedding car outside a grand venue](/categories/wedding.jpg "Wedding cars can be decorated with fresh flowers on request.")`,
       },
       {
         h: "V8 for corporate and protocol",
@@ -129,7 +137,7 @@ Decoration with fresh flowers can be arranged on request. Read the full [wedding
     category: "Cars",
     date: "2026-11-15",
     image: "/blog/rent-a-car-in-lahore-featured.jpg",
-    imageAlt: "Sedan with driver on a Lahore boulevard at sunset",
+    imageAlt: "Rental cars on a Lahore boulevard at sunset",
     intro: `The **Honda Civic** is Pakistan's favourite executive sedan: turbocharged, quiet and smart enough for a client meeting. If you need a **Civic on rent in Lahore**, here are our rates and the trips it suits best.`,
     sections: [
       {
@@ -151,7 +159,9 @@ More photos and features: [Honda Civic](/fleet/honda-civic).`,
 | Feel | Practical | Comfortable, leather | Sporty, modern |
 | Best for | Families, value | Long trips | Business, younger customers |
 
-For a pure budget choice, the [Corolla](/blog/corolla-on-rent-lahore) wins. For a modern look and a smoother motorway drive, the Civic.`,
+For a pure budget choice, the [Corolla](/blog/corolla-on-rent-lahore) wins. For a modern look and a smoother motorway drive, the Civic.
+
+::cars honda-civic, toyota-corolla-altis-1-6, toyota-corolla-grande-1-8`,
       },
       {
         h: "Best trips for a Civic",
@@ -160,7 +170,9 @@ For a pure budget choice, the [Corolla](/blog/corolla-on-rent-lahore) wins. For 
 - **Business days in [Gulberg](/blog/rent-a-car-gulberg-lahore)** with the driver waiting between meetings.
 - **Intercity to Faisalabad, Sialkot or Multan.** See [intercity car rental](/blog/intercity-car-rental-from-lahore).
 
-For mountain roads, choose an SUV instead.`,
+For mountain roads, choose an SUV instead.
+
+::route Lahore > (M-2, about 4.5 h) > Islamabad`,
       },
     ],
     faqs: [
@@ -180,8 +192,8 @@ For mountain roads, choose an SUV instead.`,
     keywords: ["corolla on rent lahore", "corolla for rent lahore", "grande on rent lahore", "rent a corolla with driver", "corolla rent per day lahore"],
     category: "Cars",
     date: "2026-11-14",
-    image: "/blog/lahore-islamabad.jpg",
-    imageAlt: "White Toyota Corolla on the Lahore–Islamabad motorway",
+    image: "/blog/intercity-safe-car-rental-lahore.jpg",
+    imageAlt: "White Toyota Corolla with a uniformed driver on a Lahore road",
     intro: `The **Toyota Corolla** is the most booked rental car in Pakistan for good reason: reliable, spacious enough for a family, easy on fuel and welcome everywhere. Here is how to get a **Corolla on rent in Lahore**, Altis or Grande.`,
     sections: [
       {
@@ -198,7 +210,9 @@ For mountain roads, choose an SUV instead.`,
         body: `- **Altis 1.6:** the value choice for city use, airport runs and family errands.
 - **Grande 1.8:** leather seats, sunroof and cruise control; better for long motorway days and guests you want to impress.
 
-Both seat four passengers comfortably with three to four bags.`,
+Both seat four passengers comfortably with three to four bags.
+
+::cars toyota-corolla-altis-1-6, toyota-corolla-grande-1-8`,
       },
       {
         h: "What people rent a Corolla for",
@@ -207,7 +221,9 @@ Both seat four passengers comfortably with three to four bags.`,
 - **Day trips** to [Kartarpur](/blog/lahore-to-kartarpur-by-car) and the [Khewra Salt Mine](/blog/khewra-salt-mine-katas-raj-day-trip)
 - **Wedding guest cars** alongside a decorated [luxury car](/blog/mercedes-on-rent-lahore) for the couple
 
-Fuel efficiency matters with today's prices; check the latest rates on our [fuel prices page](/fuel-prices-pakistan).`,
+Fuel efficiency matters with today's prices; check the latest rates on our [fuel prices page](/fuel-prices-pakistan).
+
+![Corolla and Prado on a motorway at sunset](/blog/lahore-to-kpk-motorway-travel.jpg "The Corolla is our most booked car for intercity trips.")`,
       },
     ],
     faqs: [
@@ -228,7 +244,7 @@ Fuel efficiency matters with today's prices; check the latest rates on our [fuel
     category: "Cars",
     date: "2026-11-13",
     image: "/blog/hiace-rental.jpg",
-    imageAlt: "Passenger van ready for a group trip from Lahore",
+    imageAlt: "Family beside a white van outside a Mughal monument in Lahore",
     intro: `When a group is too big for cars, a **Toyota Coaster** keeps everyone together. Families book it to move wedding guests, schools and universities use it for trips, and companies use it for staff transport. Here is what a **Coaster on rent in Lahore** costs and when a Hiace is enough.`,
     sections: [
       {
@@ -238,7 +254,9 @@ Fuel efficiency matters with today's prices; check the latest rates on our [fuel
 | [Toyota Coaster Saloon](/fleet/toyota-coaster-saloon) | 30 | {{rate:toyota-coaster-saloon}} | {{city:toyota-coaster-saloon}} |
 | [Toyota Hiace Grand Cabin](/fleet/toyota-hiace-grand-cabin) | 15 | {{rate:toyota-hiace-grand-cabin}} | {{city:toyota-hiace-grand-cabin}} |
 
-Seat counts include the driver. Our [Hiace rental guide](/blog/toyota-hiace-grand-cabin-rental) covers the van in more detail.`,
+Seat counts include the driver. Our [Hiace rental guide](/blog/toyota-hiace-grand-cabin-rental) covers the van in more detail.
+
+::cars toyota-coaster-saloon, toyota-hiace-grand-cabin`,
       },
       {
         h: "Coaster or Hiace?",
@@ -253,7 +271,9 @@ Seat counts include the driver. Our [Hiace rental guide](/blog/toyota-hiace-gran
 - **School and university trips** to the [Khewra Salt Mine](/blog/khewra-salt-mine-katas-raj-day-trip), [Wagah border](/blog/wagah-border-ceremony-from-lahore) or [Lahore's monuments](/blog/lahore-city-tour-by-car).
 - **Pilgrim groups** to [Kartarpur](/blog/lahore-to-kartarpur-by-car).
 - **Staff transport** on monthly contracts through [corporate rentals](/services/corporate-rentals).
-- **Group tours** to Murree and the north. In winter, check road status first; see [Lahore to Murree](/blog/lahore-to-murree-by-car-snowfall).`,
+- **Group tours** to Murree and the north. In winter, check road status first; see [Lahore to Murree](/blog/lahore-to-murree-by-car-snowfall).
+
+![Family and car outside the Badshahi Mosque at sunset](/blog/lahore-cultural-tour.jpg "Group trips to Lahore's monuments are easiest with one vehicle.")`,
       },
     ],
     faqs: [
@@ -294,7 +314,9 @@ Seat counts include the driver. Our [Hiace rental guide](/blog/toyota-hiace-gran
 - **Range Rover:** a statement SUV for VIP arrivals and photo shoots.
 - **G-Wagon:** the most eye-catching car in Lahore, for grand entrances.
 
-Want an SUV with presence at a lower price? See the [Land Cruiser V8](/blog/land-cruiser-v8-on-rent-lahore).`,
+Want an SUV with presence at a lower price? See the [Land Cruiser V8](/blog/land-cruiser-v8-on-rent-lahore).
+
+::cars mercedes-benz-c-class-c180, audi-a6, range-rover, mercedes-benz-g-wagon`,
       },
       {
         h: "Luxury cars for weddings",
@@ -304,7 +326,9 @@ Want an SUV with presence at a lower price? See the [Land Cruiser V8](/blog/land
 2. **Rukhsati:** the decorated car carries the couple from the venue.
 3. **Walima:** the same car, or a different one for variety in photos.
 
-Book December dates early: the [wedding season guide](/blog/wedding-car-rental-lahore-shaadi-season) and our [limousine guide](/blog/limousine-rental-lahore) have more ideas. All options are on the [wedding cars](/services/wedding-cars) page.`,
+Book December dates early: the [wedding season guide](/blog/wedding-car-rental-lahore-shaadi-season) and our [limousine guide](/blog/limousine-rental-lahore) have more ideas. All options are on the [wedding cars](/services/wedding-cars) page.
+
+![White stretch limousine outside a decorated wedding venue at night](/blog/limousine-wedding.jpg "For the grandest entrance, ask about our limousine as well.")`,
       },
       {
         h: "Booking terms",

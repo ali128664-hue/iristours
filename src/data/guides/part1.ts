@@ -36,7 +36,9 @@ This guide explains how airport pickups and drops work, what they cost, and how 
 4. **Meet at arrivals.** The driver waits outside the arrivals hall with a name board and helps with your luggage.
 5. **Door to door.** You are driven straight to your home, hotel or office in Lahore, or onward to another city.
 
-> Waiting time is free for the first 60 minutes after landing, which is usually enough for immigration and baggage.`,
+> Waiting time is free for the first 60 minutes after landing, which is usually enough for immigration and baggage.
+
+::stats 60 min = Free waiting after landing | 24/7 = Pickups and drops | LHE = Allama Iqbal International | 15–25 min = Airport to DHA Phase 5`,
       },
       {
         h: "Airport car rental rates in Lahore",
@@ -60,7 +62,9 @@ A one-way airport drop or pickup inside the city is quoted separately and costs 
 - **One or two people with two suitcases:** a [Corolla](/fleet/toyota-corolla-altis-1-6) or [Civic](/fleet/honda-civic) is comfortable and economical.
 - **A family with four or more large bags:** book an SUV such as the [Fortuner](/fleet/toyota-fortuner) or [Prado](/fleet/toyota-land-cruiser-prado). Sedan boots fill up quickly with overseas luggage.
 - **Groups and wedding guests:** a [Hiace Grand Cabin](/fleet/toyota-hiace-grand-cabin) takes up to 14 passengers, or book a [Coaster](/fleet/toyota-coaster-saloon) for larger groups.
-- **VIP arrivals:** a [Land Cruiser V8](/fleet/toyota-land-cruiser-v8) or [Mercedes C-Class](/fleet/mercedes-benz-c-class-c180) makes the right impression for business guests.`,
+- **VIP arrivals:** a [Land Cruiser V8](/fleet/toyota-land-cruiser-v8) or [Mercedes C-Class](/fleet/mercedes-benz-c-class-c180) makes the right impression for business guests.
+
+::cars toyota-corolla-altis-1-6, toyota-fortuner, toyota-hiace-grand-cabin`,
       },
       {
         h: "Travel times from Lahore airport",
@@ -72,7 +76,9 @@ A one-way airport drop or pickup inside the city is quoted separately and costs 
 - [Johar Town](/areas/johar-town-block-a-lahore) and [Model Town](/areas/model-town-block-c-lahore): 35–50 minutes
 - [Bahria Town](/areas/bahria-town-sector-c-lahore): 50–70 minutes
 
-During smog and fog season, early-morning flights are often delayed, so allow extra time for drops and check your flight status before leaving. Our [smog and fog travel guide](/blog/lahore-smog-fog-travel-guide) explains what to expect.`,
+During smog and fog season, early-morning flights are often delayed, so allow extra time for drops and check your flight status before leaving. Our [smog and fog travel guide](/blog/lahore-smog-fog-travel-guide) explains what to expect.
+
+![Chauffeur opening the car door for a traveller at Lahore airport](/blog/lahore-airport-car-rental-service.jpg "Our driver waits outside arrivals at Allama Iqbal International Airport.")`,
       },
       {
         h: "Airport to another city",
@@ -112,8 +118,8 @@ For background on the airport itself, including terminals and airlines, see the 
     keywords: ["rent a car dha lahore", "car rental dha lahore", "rent a car dha phase 6", "rent a car dha phase 5", "dha lahore car with driver"],
     category: "Rent a car",
     date: "2026-11-17",
-    image: "/blog/bahria-dha.jpg",
-    imageAlt: "Car with driver on a tree-lined boulevard in DHA Lahore",
+    image: "/blog/fortuner-rental.jpg",
+    imageAlt: "White Toyota Fortuner outside a modern house in DHA Lahore",
     intro: `DHA is where much of Lahore's business, shopping and social life now happens, and it is also where most of our bookings start. If you need to **rent a car in DHA Lahore**, we deliver the car and driver to your gate in any phase, from Phase 1 near Cantt to Phase 9 Prism on the ring road.
 
 Here is what DHA residents and visitors usually book, what it costs, and how to get the best value.`,
@@ -128,7 +134,9 @@ Here is what DHA residents and visitors usually book, what it costs, and how to 
 - [DHA Phase 8](/areas/dha-phase-8-lahore), the closest phase to the airport
 - [DHA Phase 9](/areas/dha-phase-9-lahore) and the Prism area
 
-Because DHA is next to [Allama Iqbal International Airport](/blog/rent-a-car-lahore-airport), airport pickups from most phases take under half an hour.`,
+Because DHA is next to [Allama Iqbal International Airport](/blog/rent-a-car-lahore-airport), airport pickups from most phases take under half an hour.
+
+![Toyota Prado and Mercedes on a wide boulevard at sunset](/blog/rent-a-car-in-lahore-featured.jpg "Wide DHA boulevards make for quick pickups from any phase.")`,
       },
       {
         h: "Car rental rates in DHA Lahore",
@@ -154,7 +162,9 @@ DHA hosts a large share of Lahore's wedding functions in marquees and farmhouses
 Overseas Pakistanis staying in DHA for a few weeks usually take a sedan on a weekly or monthly package. Read the [overseas Pakistanis guide](/blog/car-rental-overseas-pakistanis-lahore).
 
 ### Business travel
-Companies with offices on the DHA commercial boulevards book executive sedans by the day or month through our [corporate rentals](/services/corporate-rentals) service.`,
+Companies with offices on the DHA commercial boulevards book executive sedans by the day or month through our [corporate rentals](/services/corporate-rentals) service.
+
+::cars mercedes-benz-c-class-c180, toyota-land-cruiser-prado, toyota-corolla-grande-1-8`,
       },
       {
         h: "Tips for booking in DHA",
@@ -211,7 +221,9 @@ This guide covers rates, the most popular cars for Johar Town families, and trav
 | [Toyota Fortuner](/fleet/toyota-fortuner) | Families, northern trips | {{rate:toyota-fortuner}} |
 | [Toyota Hiace Grand Cabin](/fleet/toyota-hiace-grand-cabin) | Groups up to 14 | {{rate:toyota-hiace-grand-cabin}} |
 
-The [Honda BR-V](/fleet/honda-br-v) is a favourite in Johar Town: seven seats at sedan prices, ideal for a family day out or a trip to the airport with relatives.`,
+The [Honda BR-V](/fleet/honda-br-v) is a favourite in Johar Town: seven seats at sedan prices, ideal for a family day out or a trip to the airport with relatives.
+
+::cars honda-br-v, toyota-yaris, toyota-hiace-grand-cabin`,
       },
       {
         h: "Common trips from Johar Town",
@@ -219,7 +231,11 @@ The [Honda BR-V](/fleet/honda-br-v) is a favourite in Johar Town: seven seats at
 - **Hospitals:** for appointments at Shaukat Khanum, Jinnah or the hospitals on Ferozepur Road, a car with driver waits while you are inside.
 - **Airport:** 35–50 minutes depending on traffic. See [Lahore airport pickup and drop](/blog/rent-a-car-lahore-airport).
 - **Motorway to Islamabad:** Johar Town is close to the M-2 entry at Thokar Niaz Baig, so you can be on the motorway in minutes. Read the [Lahore to Islamabad guide](/blog/lahore-to-islamabad-car-rental).
-- **Day trips:** the [Khewra Salt Mine and Katas Raj](/blog/khewra-salt-mine-katas-raj-day-trip) are an easy day out via the motorway.`,
+- **Day trips:** the [Khewra Salt Mine and Katas Raj](/blog/khewra-salt-mine-katas-raj-day-trip) are an easy day out via the motorway.
+
+::route Johar Town > (10 min) > Thokar Niaz Baig > (M-2, about 4.5 h) > Islamabad
+
+![Motorway winding through the Salt Range hills](/blog/lahore-islamabad-motorway-salt-range.jpg "The M-2 motorway through the Salt Range, on the way to Islamabad.")`,
       },
       {
         h: "How to book",
@@ -273,14 +289,18 @@ Here is how executive car rental works in Gulberg and what it costs.`,
 | [Audi A6](/fleet/audi-a6) | Luxury sedan | {{rate:audi-a6}} |
 | [Mercedes C-Class](/fleet/mercedes-benz-c-class-c180) | Luxury sedan | {{rate:mercedes-benz-c-class-c180}} |
 
-Companies with regular needs can open a monthly account through [corporate rentals](/services/corporate-rentals), with one invoice at the end of the month.`,
+Companies with regular needs can open a monthly account through [corporate rentals](/services/corporate-rentals), with one invoice at the end of the month.
+
+::cars honda-civic, audi-a6, toyota-land-cruiser-prado`,
       },
       {
         h: "Good to know for Gulberg bookings",
         body: `- **Evening traffic:** Main Boulevard and MM Alam Road slow down sharply after 7 pm and on weekends. Leave 15 extra minutes for dinners and events.
 - **Smog advisories:** in November, the Punjab government has at times ordered markets and restaurants to close early during severe smog. Check the latest notice before planning a late evening. More in our [smog travel guide](/blog/lahore-smog-fog-travel-guide).
 - **Hotel guests:** if you are hosting visitors, we can meet them at the [airport](/blog/rent-a-car-lahore-airport) and stay with them for the whole visit.
-- **Sightseeing between meetings:** the Walled City and Badshahi Mosque are 20–30 minutes away. See our [Lahore city tour by car](/blog/lahore-city-tour-by-car).`,
+- **Sightseeing between meetings:** the Walled City and Badshahi Mosque are 20–30 minutes away. See our [Lahore city tour by car](/blog/lahore-city-tour-by-car).
+
+![Uniformed chauffeur opening the door of a black Mercedes](/blog/chauffeur-rental.jpg "A chauffeur-driven car removes the parking problem on MM Alam Road.")`,
       },
     ],
     faqs: [
@@ -310,8 +330,8 @@ Companies with regular needs can open a monthly account through [corporate renta
     keywords: ["rent a car model town lahore", "car rental model town", "rent a car model town extension", "rent a car faisal town lahore"],
     category: "Rent a car",
     date: "2026-11-14",
-    image: "/blog/lahore-cultural-tour.jpg",
-    imageAlt: "Tree-lined road in Lahore with a rental car",
+    image: "/categories/about_fleet.jpg",
+    imageAlt: "Iris Tours cars ready for pickup in Lahore",
     intro: `Model Town is one of Lahore's oldest planned neighbourhoods, with wide green blocks, Model Town Park and quick access to Ferozepur Road. To **rent a car in Model Town**, send us your block and date and a car with driver will reach your gate.
 
 Below are rates, the cars Model Town families book most, and the trips people make from here.`,
@@ -330,14 +350,18 @@ Below are rates, the cars Model Town families book most, and the trips people ma
 | [Toyota Fortuner](/fleet/toyota-fortuner) | 7 | {{rate:toyota-fortuner}} | {{city:toyota-fortuner}} |
 | [Toyota Hiace Grand Cabin](/fleet/toyota-hiace-grand-cabin) | 15 | {{rate:toyota-hiace-grand-cabin}} | {{city:toyota-hiace-grand-cabin}} |
 
-The intercity rate applies when you travel to another city such as Islamabad, Faisalabad or Sialkot.`,
+The intercity rate applies when you travel to another city such as Islamabad, Faisalabad or Sialkot.
+
+::cars honda-br-v, toyota-corolla-altis-1-6, toyota-hiace-grand-cabin`,
       },
       {
         h: "Popular trips from Model Town",
         body: `- **Family functions:** a [Hiace](/fleet/toyota-hiace-grand-cabin) moves the whole family to a wedding or dinner in one trip, with no parking stress.
 - **Kartarpur:** Model Town is a good starting point for the 2.5-hour drive to Gurdwara Darbar Sahib. See [Lahore to Kartarpur by car](/blog/lahore-to-kartarpur-by-car).
 - **Wagah border:** the flag ceremony is an easy evening trip. See [Wagah border ceremony from Lahore](/blog/wagah-border-ceremony-from-lahore).
-- **Weekend in the hills:** the [Lahore to Murree guide](/blog/lahore-to-murree-by-car-snowfall) covers the snowfall season.`,
+- **Weekend in the hills:** the [Lahore to Murree guide](/blog/lahore-to-murree-by-car-snowfall) covers the snowfall season.
+
+![Family beside a white van outside a Mughal monument](/blog/hiace-rental.jpg "A van keeps the whole family together for functions and day trips.")`,
       },
     ],
     faqs: [
@@ -357,8 +381,8 @@ The intercity rate applies when you travel to another city such as Islamabad, Fa
     keywords: ["self drive car rental lahore", "rent a car without driver lahore", "self drive rent a car", "car rental lahore without driver", "security deposit car rental"],
     category: "Rent a car",
     date: "2026-11-13",
-    image: "/blog/intercity-safe-car-rental-lahore.jpg",
-    imageAlt: "Rental car on a Lahore road ready for a self-drive trip",
+    image: "/blog/lahore-to-kpk-motorway-travel.jpg",
+    imageAlt: "Corolla and Prado on a Punjab motorway at sunset",
     intro: `Many people search for a **self drive car rental in Lahore** because they want privacy and freedom. We offer self-drive on standard cars, but it comes with rules, a refundable deposit and responsibility for the car. This guide explains exactly what is needed, and when booking a car **with a driver** actually works out better.`,
     sections: [
       {
@@ -380,7 +404,9 @@ We may also ask for a utility bill or a reference for first-time customers.`,
 | [Toyota Corolla Altis](/fleet/toyota-corolla-altis-1-6) | {{rate:toyota-corolla-altis-1-6}} | {{deposit:toyota-corolla-altis-1-6}} |
 | [Honda Civic](/fleet/honda-civic) | {{rate:honda-civic}} | {{deposit:honda-civic}} |
 
-Rates shown are our standard daily rates; self-drive pricing is confirmed with your booking. The deposit is returned when the car comes back in the same condition, with the same fuel level.`,
+Rates shown are our standard daily rates; self-drive pricing is confirmed with your booking. The deposit is returned when the car comes back in the same condition, with the same fuel level.
+
+::cars toyota-yaris, toyota-corolla-altis-1-6, honda-civic`,
       },
       {
         h: "Rules for self-drive",
@@ -400,7 +426,9 @@ Rates shown are our standard daily rates; self-drive pricing is confirmed with y
 - **Safer in fog and smog season**, when visibility on the motorway drops suddenly. See our [smog and fog guide](/blog/lahore-smog-fog-travel-guide).
 - **Essential on mountain roads** to [Naran](/blog/lahore-to-naran-kaghan-by-car), [Hunza](/blog/lahore-to-hunza-by-road) or [Skardu](/blog/lahore-to-skardu-by-road).
 
-If you are visiting from abroad and don't know Lahore's traffic, we strongly suggest a driver for at least the first few days.`,
+If you are visiting from abroad and don't know Lahore's traffic, we strongly suggest a driver for at least the first few days.
+
+![Car driving with headlights on through fog on a Punjab highway](/blog/intercity-highway-fog-safe-driving.jpg "Winter fog is one of the best reasons to let an experienced driver take the wheel.")`,
       },
     ],
     faqs: [

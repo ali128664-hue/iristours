@@ -14,10 +14,12 @@ import part2 from "./part2";
 import part3 from "./part3";
 import part4 from "./part4";
 import part5 from "./part5";
+import part6 from "./part6";
+import part7 from "./part7";
 
 export type { Guide } from "./types";
 
-export const guides: Guide[] = [...part1, ...part2, ...part3, ...part4, ...part5];
+export const guides: Guide[] = [...part1, ...part2, ...part3, ...part4, ...part5, ...part6, ...part7];
 
 export function getGuide(slug: string): Guide | undefined {
   return guides.find((g) => g.slug === slug);
@@ -71,7 +73,9 @@ export function relatedPosts(g: Guide, n = 3): PostCard[] {
 /** Guides that link to a given internal path, e.g. "/fleet/toyota-fortuner" */
 export function guidesLinkingTo(path: string, n = 3): Guide[] {
   const needle = `](${path})`;
+  const car = path.startsWith("/fleet/") ? path.slice(7) : null;
+  const carRe = car ? new RegExp(`^::cars .*\\b${car}\\b`, "m") : null;
   return guides
-    .filter((g) => [g.intro, ...g.sections.map((s) => s.body)].some((t) => t.includes(needle)))
+    .filter((g) => [g.intro, ...g.sections.map((s) => s.body)].some((t) => t.includes(needle) || (carRe ? carRe.test(t) : false)))
     .slice(0, n);
 }
