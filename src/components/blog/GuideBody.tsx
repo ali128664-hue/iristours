@@ -21,6 +21,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import fleetData from "@/data/fleet.json";
+import fuelData from "@/data/fuelPrices.json";
 
 const FIELD: Record<string, "local" | "interCity" | "weekly" | "monthly" | "securityDeposit"> = {
   rate: "local",
@@ -30,8 +31,25 @@ const FIELD: Record<string, "local" | "interCity" | "weekly" | "monthly" | "secu
   deposit: "securityDeposit",
 };
 
-/** Replace {{rate:slug}}-style tokens with "Rs. 7,000" */
+const PETROL = fuelData.pakistan.petrol.price;
+const DIESEL = fuelData.pakistan.diesel.price;
+const rs = (n: number) => `Rs. ${Math.round(n).toLocaleString("en-US")}`;
+
+/**
+ * Replace live tokens:
+ *  {{rate:slug}} {{city:slug}} {{week:slug}} {{month:slug}} {{deposit:slug}} → car prices
+ *  {{petrol}} / {{diesel}} → today's price per litre (src/data/fuelPrices.json)
+ *  {{fuel:KM:KMPL}} / {{dfuel:KM:KMPL}} → petrol / diesel cost for KM at KMPL km per litre
+ */
 export function fillPrices(text: string): string {
+  text = text
+    .replace(/\{\{petrol\}\}/g, `${rs(PETROL)} per litre`)
+    .replace(/\{\{diesel\}\}/g, `${rs(DIESEL)} per litre`)
+    .replace(/\{\{(fuel|dfuel):(\d+):(\d+(?:\.\d+)?)\}\}/g, (_, kind: string, km: string, kmpl: string) => {
+      const litres = Number(km) / Number(kmpl);
+      const cost = litres * (kind === "fuel" ? PETROL : DIESEL);
+      return rs(Math.round(cost / 100) * 100); // rounded to the nearest Rs. 100
+    });
   return text.replace(/\{\{(rate|city|week|month|deposit):([a-z0-9-]+)\}\}/g, (_, kind: string, slug: string) => {
     const car = fleetData.find((v) => v.slug === slug);
     const value = car ? (car.rent as Record<string, number | string | undefined>)[FIELD[kind]] : undefined;

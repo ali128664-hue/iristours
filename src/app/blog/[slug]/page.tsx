@@ -16,6 +16,8 @@ import { FaWhatsapp } from "react-icons/fa";
 import PageHeader from "@/components/ui/PageHeader";
 import CtaBand from "@/components/ui/CtaBand";
 import GuideBody, { plainText } from "@/components/blog/GuideBody";
+import { ReadingProgress, ShareButtons } from "@/components/blog/ArticleTools";
+import Logo from "@/components/ui/Logo";
 import { guides, getGuide, readingMinutes, relatedPosts } from "@/data/guides";
 import fleetData from "@/data/fleet.json";
 import { SITE_URL, PHONE, whatsappLink } from "@/lib/site";
@@ -119,6 +121,7 @@ export default async function GuidePage({ params }: Props) {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       {faqSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />}
+      <ReadingProgress />
 
       <PageHeader
         image={g.image}
@@ -137,10 +140,23 @@ export default async function GuidePage({ params }: Props) {
       <div className="container mx-auto px-5 md:px-12 py-12 md:py-16">
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-14">
           {/* ─── Article ─────────────────────────────────────────────────── */}
-          <article className="min-w-0 lg:col-span-8">
+          <article id="article" className="min-w-0 lg:col-span-8">
             <figure className="relative mb-8 aspect-[16/9] overflow-hidden rounded-[1.6rem] bg-slate-200">
               <Image src={g.image} alt={g.imageAlt} fill priority sizes="(max-width: 1024px) 100vw, 60vw" className="object-cover" />
             </figure>
+
+            <div className="mb-8 flex flex-wrap items-center justify-between gap-4 border-b border-slate-200 pb-6">
+              <div className="flex items-center gap-3">
+                <span className="flex h-11 w-11 items-center justify-center overflow-hidden rounded-full bg-white ring-1 ring-slate-200">
+                  <Logo width={40} height={14} />
+                </span>
+                <span className="leading-tight">
+                  <span className="block font-semibold text-text-primary">Iris Tours team</span>
+                  <span className="block text-sm text-text-secondary">Reviewed {formatDate(g.updated || g.date)}</span>
+                </span>
+              </div>
+              <ShareButtons url={url} title={g.title} />
+            </div>
 
             <div className="article-body max-w-[70ch]">
               <div className="text-lg leading-relaxed text-text-primary/85">
@@ -195,6 +211,23 @@ export default async function GuidePage({ params }: Props) {
                   </div>
                 </section>
               )}
+            </div>
+
+            <div className="mt-12 flex flex-col gap-5 rounded-[1.6rem] bg-white p-6 ring-1 ring-slate-200 sm:flex-row sm:items-center">
+              <span className="flex h-16 w-16 flex-shrink-0 items-center justify-center overflow-hidden rounded-2xl bg-slate-50 ring-1 ring-slate-200">
+                <Logo width={56} height={20} />
+              </span>
+              <div className="flex-1">
+                <p className="font-semibold text-text-primary">Written by the Iris Tours team</p>
+                <p className="mt-1 text-[15px] leading-relaxed text-text-secondary">
+                  We run chauffeur-driven car rental in Lahore and Islamabad, and our drivers cover these roads every week. Prices on this page
+                  come straight from our live rate list. <Link href="/about" className="font-semibold text-accent-secondary hover:underline">About us</Link>
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-6 flex justify-end">
+              <ShareButtons url={url} title={g.title} />
             </div>
           </article>
 
