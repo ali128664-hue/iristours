@@ -29,6 +29,7 @@ import VehicleCard from "@/components/fleet/VehicleCard";
 import VehicleFuelEstimator from "@/components/fuel/VehicleFuelEstimator";
 import VehicleThumbStrip from "@/components/fleet/VehicleThumbStrip";
 import RichText, { stripMarkdown } from "@/components/ui/RichText";
+import { guidesLinkingTo } from "@/data/guides";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -100,6 +101,9 @@ export default async function VehicleDetailPage({ params }: Props) {
   if (!vehicle) {
     notFound();
   }
+
+  // Blog guides that mention this car (internal links back from the blog)
+  const carGuides = guidesLinkingTo(`/fleet/${vehicle.slug}`, 3);
 
   // Find related vehicles by matching slugs listed in the vehicle's relatedVehicles array
   const relatedVehicles = fleetData.filter((v) =>
@@ -292,6 +296,27 @@ export default async function VehicleDetailPage({ params }: Props) {
               </div>
             ))}
           </div>
+        </Section>
+      )}
+
+      {carGuides.length > 0 && (
+        <Section tone="white">
+          <SectionHeading title={`Guides for renting the ${vehicle.name}`} action={{ href: "/blog", label: "All guides" }} />
+          <ul className="grid gap-5 md:grid-cols-3">
+            {carGuides.map((g) => (
+              <li key={g.slug}>
+                <Link href={`/blog/${g.slug}`} className="group flex h-full flex-col overflow-hidden rounded-[1.4rem] bg-white shadow-lift ring-1 ring-slate-200/80">
+                  <span className="relative block aspect-[16/10] overflow-hidden bg-slate-200">
+                    <Image src={g.image} alt="" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
+                  </span>
+                  <span className="flex flex-1 flex-col p-5">
+                    <span className="font-display text-lg font-semibold leading-snug text-text-primary group-hover:text-accent-primary">{g.title}</span>
+                    <span className="mt-2 line-clamp-2 text-[15px] text-text-secondary">{g.description}</span>
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
         </Section>
       )}
     </>

@@ -25,19 +25,19 @@ export default function CtaBand({
           <h2 className="text-[2.1rem] md:text-5xl text-brand-ink">{title}</h2>
           <p className="mt-3 text-base md:text-lg text-brand-ink/80">{text}</p>
         </div>
-        <div className="flex flex-col gap-3 sm:flex-row">
+        <div className="flex flex-shrink-0 flex-col gap-3 sm:flex-row">
           <a
             href={whatsappLink(message)}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-ink px-7 py-4 font-semibold text-white hover:bg-white hover:text-brand-ink transition-colors shadow-lg"
+            className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full bg-brand-ink px-7 py-4 font-semibold text-white hover:bg-white hover:text-brand-ink transition-colors shadow-lg"
           >
             <FaWhatsapp size={19} />
             Book on WhatsApp
           </a>
           <a
             href={`tel:${PHONE.tel}`}
-            className="inline-flex items-center justify-center gap-2 rounded-full border border-brand-ink/30 bg-white/30 px-7 py-4 font-semibold text-brand-ink hover:border-brand-ink transition-colors"
+            className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full border border-brand-ink/30 bg-white/30 px-7 py-4 font-semibold text-brand-ink hover:border-brand-ink transition-colors"
           >
             <Phone size={17} />
             Call {PHONE.display}

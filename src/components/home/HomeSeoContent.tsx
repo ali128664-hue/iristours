@@ -46,9 +46,11 @@ const AREA_LINKS = [
 
 const ROUTE_LINKS = [
   { label: "Lahore to Islamabad by car", href: "/blog/lahore-to-islamabad-car-rental" },
-  { label: "Lahore to Swat and Kalam", href: "/blog/lahore-to-swat-kalam-car-rental-road-guide" },
-  { label: "Lahore to northern areas and KPK", href: "/blog/rent-a-car-lahore-northern-areas-kpk-guide" },
-  { label: "Hunza, Skardu and Swat tours", href: "/tours" },
+  { label: "Lahore to Murree in snowfall season", href: "/blog/lahore-to-murree-by-car-snowfall" },
+  { label: "Lahore to Naran and Kaghan", href: "/blog/lahore-to-naran-kaghan-by-car" },
+  { label: "Lahore to Hunza by road", href: "/blog/lahore-to-hunza-by-road" },
+  { label: "Lahore to Kartarpur day trip", href: "/blog/lahore-to-kartarpur-by-car" },
+  { label: "Faisalabad, Multan and Sialkot", href: "/blog/intercity-car-rental-from-lahore" },
 ];
 
 export default function HomeSeoContent() {
@@ -63,11 +65,13 @@ export default function HomeSeoContent() {
             <p>
               Iris Tours is a <strong>rent a car service in Lahore</strong> that supplies every car with a professional
               driver. You tell us where and when, and a clean, air-conditioned car arrives at your home, office, hotel or
-              Allama Iqbal International Airport. The same service runs in Islamabad and Rawalpindi, and for trips to any
+              <Link href="/blog/rent-a-car-lahore-airport">Allama Iqbal International Airport</Link>. The same service runs in Islamabad and Rawalpindi, and for trips to any
               city in Pakistan.
             </p>
 
-            <h3>How much does it cost to rent a car in Lahore?</h3>
+            <h3>
+              How much does it cost to <Link href="/blog/rent-a-car-lahore-price-list">rent a car in Lahore</Link>?
+            </h3>
             <p>
               A day with driver inside Lahore starts at {rate("toyota-yaris")} for a Toyota Yaris and
               {" "}{rate("toyota-corolla-altis-1-6")} for a Corolla. SUVs such as the Toyota Fortuner start at{" "}

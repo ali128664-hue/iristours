@@ -10,12 +10,27 @@ import fleetData from "@/data/fleet.json";
 import VehicleCard from "@/components/fleet/VehicleCard";
 import Link from "next/link";
 import RichText from "@/components/ui/RichText";
+import { getGuide, guidesLinkingTo, type Guide } from "@/data/guides";
 
 // Generate static params so Next.js pre-builds all 200+ area pages for lightning-fast SEO
 export function generateStaticParams() {
   return serviceAreas.map((area) => ({
     slug: area.slug,
   }));
+}
+
+// Helpful blog guides for each city (shown at the bottom of area pages)
+const CITY_GUIDES: Record<string, string[]> = {
+  Lahore: ["rent-a-car-lahore-price-list", "rent-a-car-lahore-airport", "wedding-car-rental-lahore-shaadi-season"],
+  Islamabad: ["rent-a-car-islamabad", "lahore-to-murree-by-car-snowfall", "lahore-to-islamabad-car-rental"],
+  Rawalpindi: ["rent-a-car-rawalpindi", "lahore-to-murree-by-car-snowfall", "lahore-to-naran-kaghan-by-car"],
+};
+const DEFAULT_GUIDES = ["intercity-car-rental-from-lahore", "rent-a-car-lahore-price-list", "lahore-smog-fog-travel-guide"];
+
+function areaGuides(slug: string, city: string): Guide[] {
+  const linked = guidesLinkingTo(`/areas/${slug}`, 3);
+  const extra = (CITY_GUIDES[city] || DEFAULT_GUIDES).map((s) => getGuide(s)).filter((g): g is Guide => Boolean(g));
+  return [...linked, ...extra.filter((g) => !linked.includes(g))].slice(0, 3);
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
@@ -235,6 +250,20 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
           </ul>
         </Section>
       )}
+
+      <Section>
+        <h2 className="text-3xl md:text-4xl">Helpful guides</h2>
+        <ul className="mt-6 grid gap-4 md:grid-cols-3">
+          {areaGuides(area.slug, area.city).map((g) => (
+            <li key={g.slug}>
+              <Link href={`/blog/${g.slug}`} className="group block h-full rounded-[1.4rem] bg-white p-5 ring-1 ring-slate-200 hover:ring-slate-400 transition-colors">
+                <span className="text-sm text-text-secondary">{g.category}</span>
+                <span className="font-display mt-1 block text-lg font-semibold leading-snug text-text-primary group-hover:text-accent-primary">{g.title}</span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </Section>
 
       <Section>
         <CtaBand title={`Need a car in ${area.name.split(",")[0]}?`} text="Send your pickup time and destination on WhatsApp and we will confirm the car and price." message={`Hi Iris Tours! I need a car in ${area.name}.`} />

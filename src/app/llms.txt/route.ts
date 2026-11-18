@@ -18,6 +18,7 @@
 
 import { NextResponse } from "next/server";
 import fleetData from "@/data/fleet.json";
+import { allPostCards } from "@/data/guides";
 
 export async function GET() {
   // Change this to your actual domain when deploying to production
@@ -31,6 +32,9 @@ export async function GET() {
         `- [${v.name}](${baseUrl}/fleet/${v.slug}) — ${v.brand} ${v.category}, ${v.seats} seats, PKR ${(v.rent?.daily || v.rent?.local || v.rent?.withDriver?.local || 0).toLocaleString()}/day`
     )
     .join("\n");
+
+  // Every blog guide, newest first
+  const guideList = allPostCards.map((p) => `- [${p.title}](${baseUrl}/blog/${p.slug}) — ${p.desc}`).join("\n");
 
   // The full llms.txt content — AI crawlers read this to understand your business
   const content = `# Iris Tours — Rent a Car Lahore | llms.txt
@@ -81,12 +85,18 @@ Lahore, DHA, Gulberg, Model Town, Johar Town, Bahria Town, Islamabad, Rawalpindi
 - All vehicles fully insured
 - Registered car rental operator in Lahore
 
+## Guides and Travel Articles
+${guideList}
+
 ## Sitemap
 - Home: ${baseUrl}/
 - Fleet: ${baseUrl}/fleet
 - About: ${baseUrl}/about
 - Services: ${baseUrl}/services
 - Tours: ${baseUrl}/tours
+- Blog: ${baseUrl}/blog
+- Areas: ${baseUrl}/areas
+- Fuel prices: ${baseUrl}/fuel-prices-pakistan
 - llms.txt (this file): ${baseUrl}/llms.txt
 `;
   // Update contact details here — replace +92-315-497-3906 in "Company Information"
