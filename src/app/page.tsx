@@ -7,6 +7,7 @@ import AirportTransferSection from "@/components/home/AirportTransferSection";
 import CustomerReviews from "@/components/home/CustomerReviews";
 import HomeFAQ from "@/components/home/HomeFAQ";
 import HomeSeoContent from "@/components/home/HomeSeoContent";
+import LatestGuides from "@/components/home/LatestGuides";
 import BankDetailsSection from "@/components/home/BankDetailsSection";
 
 import { Metadata } from "next";
@@ -52,8 +53,9 @@ export default function Home() {
       <CustomerReviews />
       <PopularDestinations />
       <HomeSeoContent />
-      <HomeFAQ />
+      <LatestGuides />
       <BankDetailsSection />
+      <HomeFAQ />
     </>
   );
 }

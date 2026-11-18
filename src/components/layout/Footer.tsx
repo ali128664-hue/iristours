@@ -47,6 +47,17 @@ const LINK_GROUPS = [
       { name: "Privacy policy", href: "/privacy-policy" },
     ],
   },
+  {
+    title: "Popular guides",
+    links: [
+      { name: "Lahore rent a car prices", href: "/blog/rent-a-car-lahore-price-list" },
+      { name: "Lahore airport pickup", href: "/blog/rent-a-car-lahore-airport" },
+      { name: "Rent a car in DHA", href: "/blog/rent-a-car-dha-lahore" },
+      { name: "Prado on rent", href: "/blog/prado-on-rent-lahore" },
+      { name: "Lahore to Murree by car", href: "/blog/lahore-to-murree-by-car-snowfall" },
+      { name: "Smog and motorway fog", href: "/blog/lahore-smog-fog-travel-guide" },
+    ],
+  },
 ];
 
 const POPULAR_AREAS = [
@@ -102,7 +113,7 @@ export default function Footer() {
       </div>
 
       <div className="container mx-auto px-5 md:px-12 py-12 md:py-14">
-        <div className="grid grid-cols-2 gap-x-6 gap-y-10 lg:grid-cols-12">
+        <div className="grid grid-cols-2 gap-x-6 gap-y-10 lg:grid-cols-14">
           {/* Brand + contact */}
           <div className="col-span-2 lg:col-span-4">
             <Link href="/" aria-label="Iris Tours home" className="inline-block rounded-xl bg-white px-3 py-1.5">
