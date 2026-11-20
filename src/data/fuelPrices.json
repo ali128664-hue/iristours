@@ -2,19 +2,19 @@
   "pakistan": {
     "petrol": {
       "name": "Petrol (Premier Euro 5)",
-      "price": 323,
-      "previousPrice": 322,
-      "change": 1,
-      "changePercent": 0.31,
+      "price": 322,
+      "previousPrice": 323,
+      "change": -1,
+      "changePercent": -0.31,
       "unit": "L",
       "status": "verified"
     },
     "diesel": {
       "name": "High-Speed Diesel (Hi-Cetane Euro 5)",
-      "price": 355,
+      "price": 357,
       "previousPrice": 355,
-      "change": 0,
-      "changePercent": 0,
+      "change": 2,
+      "changePercent": 0.56,
       "unit": "L",
       "status": "verified"
     },
@@ -38,10 +38,10 @@
     },
     "kerosene": {
       "name": "Kerosene Oil (SKO)",
-      "price": 283.64,
-      "previousPrice": 308.52,
-      "change": -24.88,
-      "changePercent": -8.06,
+      "price": 273.22,
+      "previousPrice": 283.64,
+      "change": -10.42,
+      "changePercent": -3.67,
       "unit": "L",
       "status": "verified"
     },
@@ -56,15 +56,15 @@
     }
   },
   "meta": {
-    "effectiveFrom": "2026-11-20",
+    "effectiveFrom": "2026-11-21",
     "nextExpectedRevision": "December 01, 2026",
-    "lastChecked": "2026-11-20T00:32:02.624Z",
+    "lastChecked": "2026-11-20T23:54:48.760Z",
     "source": "OilPrices.pk (Live OGRA Notified Feed)",
     "isLiveVerified": true
   },
   "exchangeRates": {
     "base": "USD",
-    "lastUpdated": "2026-11-20T00:32:01.869Z",
+    "lastUpdated": "2026-11-20T23:54:48.491Z",
     "rates": {
       "USD": 1,
       "PKR": 276.460596,
@@ -88,10 +88,10 @@
       "code": "PK",
       "currency": "PKR",
       "flag": "🇵🇰",
-      "petrolLocal": 323,
-      "dieselLocal": 355,
-      "petrolUsd": 1.168,
-      "dieselUsd": 1.284
+      "petrolLocal": 322,
+      "dieselLocal": 357,
+      "petrolUsd": 1.165,
+      "dieselUsd": 1.291
     },
     {
       "country": "United Arab Emirates",
@@ -226,6 +226,14 @@
   ],
   "history": [
     {
+      "date": "Nov 21, 2026",
+      "petrolPrice": 322,
+      "petrolChange": -1,
+      "dieselPrice": 357,
+      "dieselChange": 2,
+      "notes": "Rate revision recorded from the live price feed."
+    },
+    {
       "date": "Nov 20, 2026",
       "petrolPrice": 323,
       "petrolChange": 1,
@@ -335,14 +343,6 @@
       "petrolChange": 0,
       "dieselPrice": 402.96,
       "dieselChange": 2.29,
-      "notes": "Rate revision recorded from the live price feed."
-    },
-    {
-      "date": "Oct 30, 2026",
-      "petrolPrice": 377.91,
-      "petrolChange": 0,
-      "dieselPrice": 400.67,
-      "dieselChange": 0.85,
       "notes": "Rate revision recorded from the live price feed."
     }
   ],
