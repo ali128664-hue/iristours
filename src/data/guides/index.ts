@@ -19,10 +19,11 @@ import part7 from "./part7";
 import part8 from "./part8";
 import part9 from "./part9";
 import part10 from "./part10";
+import part11 from "./part11";
 
 export type { Guide } from "./types";
 
-export const guides: Guide[] = [...part1, ...part2, ...part3, ...part4, ...part5, ...part6, ...part7, ...part8, ...part9, ...part10];
+export const guides: Guide[] = [...part1, ...part2, ...part3, ...part4, ...part5, ...part6, ...part7, ...part8, ...part9, ...part10, ...part11];
 
 export function getGuide(slug: string): Guide | undefined {
   return guides.find((g) => g.slug === slug);
