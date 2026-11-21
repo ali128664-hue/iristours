@@ -44,6 +44,7 @@ const LINK_GROUPS = [
       { name: "FAQ", href: "/faq" },
       { name: "Blog", href: "/blog" },
       { name: "Gallery", href: "/gallery" },
+      { name: "Sitemap", href: "/sitemap" },
       { name: "Privacy policy", href: "/privacy-policy" },
     ],
   },
