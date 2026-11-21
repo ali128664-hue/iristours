@@ -122,19 +122,20 @@ export function getGroup(key: SitemapGroup["key"]): SitemapGroup {
 
 const esc = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
-/** XML for one sitemap (plain XML for search engines; people use the /sitemap page) */
+/** XML for one sitemap; /sitemap.css styles it in browsers (search engines ignore CSS) */
 export function urlsetXml(entries: SitemapEntry[]): string {
   const rows = entries
     .map(
       (x) => `  <url>
     <loc>${esc(x.url)}</loc>
-    <lastmod>${x.lastModified.toISOString()}</lastmod>
+    <lastmod>${x.lastModified.toISOString().slice(0, 10)}</lastmod>
     <changefreq>${x.changeFrequency}</changefreq>
     <priority>${x.priority.toFixed(2)}</priority>${x.image ? `\n    <image:image><image:loc>${esc(x.image)}</image:loc></image:image>` : ""}
   </url>`
     )
     .join("\n");
   return `<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="/sitemap.css"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 ${rows}
 </urlset>
@@ -143,7 +144,7 @@ ${rows}
 
 /** Sitemap index XML listing every group sitemap */
 export function indexXml(): string {
-  const today = new Date().toISOString();
+  const today = new Date().toISOString().slice(0, 10);
   const items = SITEMAP_GROUPS.map(
     (g) => `  <sitemap>
     <loc>${SITE}/${g.key}-sitemap/sitemap.xml</loc>
@@ -151,6 +152,7 @@ export function indexXml(): string {
   </sitemap>`
   ).join("\n");
   return `<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="/sitemap.css"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${items}
 </sitemapindex>

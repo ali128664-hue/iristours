@@ -1,0 +1,106 @@
+/*
+ * sitemap.css — styles the XML sitemaps when opened in a browser.
+ * (Plain CSS for XML works in every browser; search engines ignore it.)
+ */
+@namespace url("http://www.sitemaps.org/schemas/sitemap/0.9");
+@namespace image url("http://www.google.com/schemas/sitemap-image/1.1");
+
+urlset, sitemapindex {
+  display: block;
+  margin: 0;
+  padding: 0 0 60px;
+  background: #F6F7F9;
+  color: #0B1324;
+  font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  counter-reset: row;
+  min-height: 100vh;
+}
+
+/* Header banner */
+urlset::before, sitemapindex::before {
+  display: block;
+  padding: 40px max(20px, calc(50% - 540px)) 36px;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(247,147,30,.35) 0, rgba(247,147,30,0) 260px),
+    #0B1324;
+  color: #fff;
+  font-size: clamp(28px, 4.5vw, 42px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 28px;
+}
+sitemapindex::before { content: "Iris Tours  ·  XML Sitemap"; }
+urlset::before { content: "Iris Tours  ·  Sitemap section"; }
+
+/* Footer line with the total count */
+urlset::after, sitemapindex::after {
+  display: block;
+  max-width: 1080px;
+  margin: 24px auto 0;
+  padding: 0 20px;
+  color: #667086;
+  font-size: 14px;
+  text-align: center;
+}
+urlset::after { content: counter(row) " pages in this section. For clickable links, open iristours.net/sitemap"; }
+sitemapindex::after { content: counter(row) " sitemap sections, updated daily. For clickable links, open iristours.net/sitemap"; }
+
+/* Row cards */
+url, sitemap {
+  display: grid;
+  grid-template-columns: 52px 1fr auto auto;
+  align-items: center;
+  gap: 12px;
+  max-width: 1080px;
+  margin: 0 auto 10px;
+  padding: 14px 18px;
+  background: #fff;
+  border: 1px solid #DFE3EA;
+  border-radius: 16px;
+  counter-increment: row;
+  width: calc(100% - 40px);
+  box-sizing: border-box;
+}
+url::before, sitemap::before {
+  content: counter(row);
+  font-weight: 800;
+  color: #F7931E;
+  font-size: 18px;
+}
+sitemap { grid-template-columns: 52px 1fr auto; padding: 20px 22px; }
+
+loc {
+  display: block;
+  font-weight: 600;
+  word-break: break-all;
+  color: #0B1324;
+}
+sitemap loc { font-size: 18px; }
+
+lastmod {
+  display: block;
+  font-size: 13px;
+  color: #667086;
+  white-space: nowrap;
+}
+lastmod::before { content: "Updated  "; }
+
+priority {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: rgba(247,147,30,.16);
+  color: #8A4B00;
+  white-space: nowrap;
+}
+priority::before { content: "Priority "; }
+
+changefreq, image|image { display: none; }
+
+@media (max-width: 700px) {
+  url { grid-template-columns: 36px 1fr; }
+  lastmod, priority { grid-column: 2; justify-self: start; }
+}
