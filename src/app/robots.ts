@@ -1,41 +1,44 @@
 /**
- * robots.ts — robots.txt Generator (سرچ انجن کرالرز کے لیے ہدایات)
+ * robots.ts — generates /robots.txt (instructions for search engine crawlers)
  *
- * This generates /robots.txt — the file that tells search engine crawlers
- * (Googlebot, Bingbot, etc.) which pages they are allowed to index.
+ * Rules:
+ *  - Everything is open to crawl, including /_next/ (CSS, JS and optimised
+ *    images). Google needs these to render pages and index images, so they
+ *    must NOT be blocked.
+ *  - Only /api/ (server endpoints, not pages) is blocked.
+ *  - AI search crawlers (ChatGPT, Claude, Perplexity, Gemini, Copilot) are
+ *    explicitly welcome, so the business can appear in AI answers.
+ *  - One sitemap index lists every section sitemap (see src/lib/sitemaps.ts).
  *
- * Current rules:
- *  - All pages are allowed to be indexed ("allow /")
- *  - API routes (/api/) and Next.js internal files (/_next/) are blocked
- *  - The sitemap URL is provided so Google can find all pages
- *
- * HOW TO CHANGE:
- *  - Domain → update the `sitemap` and `host` URLs below when deploying
- *  - Block additional paths → add them to the `disallow` array
+ * HOW TO CHANGE: add a path to DISALLOW to hide it from all crawlers.
  */
 
 import { MetadataRoute } from "next";
+import { SITE } from "@/lib/sitemaps";
+
+const DISALLOW = ["/api/"];
+
+// AI assistants and AI search engines we want to be found by
+const AI_CRAWLERS = [
+  "GPTBot",
+  "OAI-SearchBot",
+  "ChatGPT-User",
+  "ClaudeBot",
+  "Claude-SearchBot",
+  "Claude-User",
+  "PerplexityBot",
+  "Perplexity-User",
+  "Google-Extended",
+  "Applebot-Extended",
+  "Bingbot",
+];
 
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
-      {
-        // Allow all search engine bots to crawl the site
-        userAgent: "*",
-        allow: "/",
-        // Block these internal paths — they should not appear in Google results
-        disallow: ["/api/", "/_next/"],
-      },
+      { userAgent: "*", allow: "/", disallow: DISALLOW },
+      { userAgent: AI_CRAWLERS, allow: "/", disallow: DISALLOW },
     ],
-    sitemap: [
-      "https://iristours.net/sitemap.xml",
-      "https://iristours.net/pages-sitemap/sitemap.xml",
-      "https://iristours.net/fleet-sitemap/sitemap.xml",
-      "https://iristours.net/services-sitemap/sitemap.xml",
-      "https://iristours.net/blog-sitemap/sitemap.xml",
-      "https://iristours.net/tours-sitemap/sitemap.xml",
-      "https://iristours.net/areas-sitemap/sitemap.xml",
-    ],
-    host: "https://iristours.net",
+    sitemap: `${SITE}/sitemap.xml`,
   };
 }
