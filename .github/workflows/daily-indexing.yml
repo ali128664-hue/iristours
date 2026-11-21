@@ -1,0 +1,31 @@
+name: Daily Indexing (IndexNow)
+
+# Submits every URL from the sitemaps to IndexNow (Bing, Yandex and others)
+# once a day, and again shortly after each push to master so new blog posts
+# are discovered quickly. Google reads the sitemap from Search Console.
+
+on:
+  schedule:
+    - cron: '30 2 * * *'   # every day, 07:30 Pakistan time
+  push:
+    branches: [master]
+    paths:
+      - 'src/data/guides/**'
+      - 'src/app/blog/**'
+      - 'src/data/fleet.json'
+      - 'src/data/serviceAreas.json'
+  workflow_dispatch:
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24.x"
+      - name: Wait for the new version to go live (push only)
+        if: github.event_name == 'push'
+        run: sleep 900
+      - name: Submit URLs to IndexNow
+        run: node scripts/indexnow.mjs

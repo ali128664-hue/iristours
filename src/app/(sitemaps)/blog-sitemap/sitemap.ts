@@ -1,6 +1,9 @@
 import { MetadataRoute } from "next";
 import { allPostCards, guides } from "@/data/guides";
 
+// Rebuild this sitemap once a day so lastmod dates stay fresh for search engines.
+export const revalidate = 86400;
+
 /** Every blog post: older hand-written posts plus the guides in src/data/guides */
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://iristours.net";
@@ -9,7 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       return {
         url: `${baseUrl}/blog/${post.slug}`,
         lastModified: new Date(guide?.updated || post.date || Date.now()),
-        changeFrequency: "weekly" as const,
+        changeFrequency: "daily" as const,
         priority: guide?.category === "Rent a car" ? 0.9 : 0.8,
         images: [`${baseUrl}${post.img}`],
       };
