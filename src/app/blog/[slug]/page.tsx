@@ -18,14 +18,17 @@ import CtaBand from "@/components/ui/CtaBand";
 import GuideBody, { plainText } from "@/components/blog/GuideBody";
 import { ReadingProgress, ShareButtons } from "@/components/blog/ArticleTools";
 import Logo from "@/components/ui/Logo";
-import { guides, getGuide, readingMinutes, relatedPosts } from "@/data/guides";
+import { getGuides, getGuide, readingMinutes, relatedPosts } from "@/data/guides";
 import fleetData from "@/data/fleet.json";
 import { SITE_URL, PHONE, whatsappLink } from "@/lib/site";
 
-export const dynamicParams = false;
+// Published guides are built ahead of time; scheduled ones render (and are
+// cached) on first visit after their date. Pages refresh hourly.
+export const dynamicParams = true;
+export const revalidate = 3600;
 
 export function generateStaticParams() {
-  return guides.map((g) => ({ slug: g.slug }));
+  return getGuides().map((g) => ({ slug: g.slug }));
 }
 
 type Props = { params: Promise<{ slug: string }> };

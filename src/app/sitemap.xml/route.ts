@@ -5,8 +5,8 @@
 
 import { indexXml, xmlResponse } from "@/lib/sitemaps";
 
-// Regenerated once a day so lastmod dates stay fresh for search engines.
-export const revalidate = 86400;
+// Regenerated hourly so scheduled blog posts appear on their date.
+export const revalidate = 3600;
 
 export function GET() {
   return xmlResponse(indexXml());

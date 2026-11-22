@@ -18,7 +18,10 @@
 
 import { NextResponse } from "next/server";
 import fleetData from "@/data/fleet.json";
-import { allPostCards } from "@/data/guides";
+import { getPostCards } from "@/data/guides";
+
+// Refresh hourly so scheduled blog posts appear on their date
+export const revalidate = 3600;
 
 export async function GET() {
   // Change this to your actual domain when deploying to production
@@ -34,7 +37,7 @@ export async function GET() {
     .join("\n");
 
   // Every blog guide, newest first
-  const guideList = allPostCards.map((p) => `- [${p.title}](${baseUrl}/blog/${p.slug}) — ${p.desc}`).join("\n");
+  const guideList = getPostCards().map((p) => `- [${p.title}](${baseUrl}/blog/${p.slug}) — ${p.desc}`).join("\n");
 
   // The full llms.txt content — AI crawlers read this to understand your business
   const content = `# Iris Tours — Rent a Car Lahore | llms.txt

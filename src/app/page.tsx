@@ -12,6 +12,9 @@ import BankDetailsSection from "@/components/home/BankDetailsSection";
 
 import { Metadata } from "next";
 
+// Refresh hourly so newly scheduled blog posts appear without a deploy
+export const revalidate = 3600;
+
 export const metadata: Metadata = {
   title: { absolute: "Rent a Car in Lahore with Driver from Rs. 7,000/day | Iris Tours" },
   description: "Rent a car in Lahore with a professional driver. Yaris, Corolla, Civic, Fortuner, Prado, V8, luxury cars and vans for airport, wedding and tours. Book 24/7.",

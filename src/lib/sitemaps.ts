@@ -10,7 +10,7 @@
 import fleetData from "@/data/fleet.json";
 import toursData from "@/data/tours.json";
 import serviceAreas from "@/data/serviceAreas.json";
-import { allPostCards, guides } from "@/data/guides";
+import { getPostCards, getGuides } from "@/data/guides";
 
 export const SITE = "https://iristours.net";
 
@@ -97,15 +97,17 @@ export const SITEMAP_GROUPS: SitemapGroup[] = [
     key: "blog",
     title: "Blog and guides",
     description: "Rent a car guides, routes and travel news",
-    entries: () =>
-      allPostCards.map((p) => {
+    entries: () => {
+      const guides = getGuides();
+      return getPostCards().map((p) => {
         const g = guides.find((x) => x.slug === p.slug);
         return e(`/blog/${p.slug}`, p.title, g?.category === "Rent a car" ? 0.9 : 0.8, {
           lastModified: new Date(g?.updated || p.date || Date.now()),
           image: `${SITE}${p.img}`,
           group: p.category === "Guides" ? "More guides" : p.category,
         });
-      }),
+      });
+    },
   },
   {
     key: "areas",

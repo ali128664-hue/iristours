@@ -12,6 +12,9 @@ import PageHeader from "@/components/ui/PageHeader";
 import { Section } from "@/components/ui/Section";
 import { SITEMAP_GROUPS, SITE, type SitemapEntry } from "@/lib/sitemaps";
 
+// Refresh hourly so scheduled blog posts appear on their date
+export const revalidate = 3600;
+
 export const metadata: Metadata = {
   title: "Sitemap: Every Page on Iris Tours",
   description:

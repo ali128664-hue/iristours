@@ -3,9 +3,12 @@ import Link from "next/link";
 import Image from "next/image";
 import PageHeader from "@/components/ui/PageHeader";
 import { Section } from "@/components/ui/Section";
-import { allPostCards, type PostCard } from "@/data/guides";
+import { getPostCards, type PostCard } from "@/data/guides";
 import BlogExplorer from "@/components/blog/BlogExplorer";
 import CtaBand from "@/components/ui/CtaBand";
+
+// Refresh hourly so scheduled posts appear on their date
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: "Lahore Car Rental Blog: Rates, Routes & Travel Guides",
@@ -57,6 +60,7 @@ const START_HERE = [
 ];
 
 export default function BlogIndex() {
+  const allPostCards = getPostCards();
   const [first, second, third] = allPostCards;
   const startHere = START_HERE.map((s) => allPostCards.find((p) => p.slug === s)).filter((p): p is PostCard => Boolean(p));
 

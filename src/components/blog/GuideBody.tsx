@@ -22,6 +22,7 @@ import Link from "next/link";
 import Image from "next/image";
 import fleetData from "@/data/fleet.json";
 import fuelData from "@/data/fuelPrices.json";
+import { isBlogLinkLive } from "@/data/guides/registry";
 
 const FIELD: Record<string, "local" | "interCity" | "weekly" | "monthly" | "securityDeposit"> = {
   rate: "local",
@@ -169,7 +170,10 @@ function inline(text: string, key: string): React.ReactNode[] {
       const href = m[3];
       const label = m[2];
       out.push(
-        href.startsWith("/") || href.startsWith("#") ? (
+        href.startsWith("/blog/") && !isBlogLinkLive(href) ? (
+          // linked guide is scheduled for a later date: show plain text until it goes live
+          <span key={`${key}-${i++}`}>{label}</span>
+        ) : href.startsWith("/") || href.startsWith("#") ? (
           <Link key={`${key}-${i++}`} href={href}>
             {label}
           </Link>

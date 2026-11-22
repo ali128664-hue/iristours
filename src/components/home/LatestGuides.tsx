@@ -6,9 +6,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Section, SectionHeading } from "@/components/ui/Section";
-import { allPostCards } from "@/data/guides";
+import { getPostCards } from "@/data/guides";
 
 export default function LatestGuides() {
+  const allPostCards = getPostCards();
   const [first, ...rest] = allPostCards.slice(0, 7);
   if (!first) return null;
 
