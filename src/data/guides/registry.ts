@@ -24,11 +24,14 @@ import part13 from "./part13";
 import part14 from "./part14";
 import part15 from "./part15";
 import part16 from "./part16";
+import part17 from "./part17";
+import part18 from "./part18";
+import part19 from "./part19";
 
 /** Every guide, including ones scheduled for future dates */
 export const ALL_GUIDES: Guide[] = [
   ...part1, ...part2, ...part3, ...part4, ...part5, ...part6, ...part7, ...part8,
-  ...part9, ...part10, ...part11, ...part12, ...part13, ...part14, ...part15, ...part16,
+  ...part9, ...part10, ...part11, ...part12, ...part13, ...part14, ...part15, ...part16, ...part17, ...part18, ...part19,
 ];
 
 /** Today's date in Pakistan (UTC+5) as YYYY-MM-DD */
