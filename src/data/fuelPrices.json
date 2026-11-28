@@ -2,8 +2,8 @@
   "pakistan": {
     "petrol": {
       "name": "Petrol (Premier Euro 5)",
-      "price": 313,
-      "previousPrice": 314,
+      "price": 312,
+      "previousPrice": 313,
       "change": -1,
       "changePercent": -0.32,
       "unit": "L",
@@ -12,9 +12,9 @@
     "diesel": {
       "name": "High-Speed Diesel (Hi-Cetane Euro 5)",
       "price": 346,
-      "previousPrice": 348,
-      "change": -2,
-      "changePercent": -0.57,
+      "previousPrice": 346,
+      "change": 0,
+      "changePercent": 0,
       "unit": "L",
       "status": "verified"
     },
@@ -38,10 +38,10 @@
     },
     "kerosene": {
       "name": "Kerosene Oil (SKO)",
-      "price": 273.22,
-      "previousPrice": 283.64,
-      "change": -10.42,
-      "changePercent": -3.67,
+      "price": 257.67,
+      "previousPrice": 273.22,
+      "change": -15.55,
+      "changePercent": -5.69,
       "unit": "L",
       "status": "verified"
     },
@@ -56,23 +56,23 @@
     }
   },
   "meta": {
-    "effectiveFrom": "2026-11-27",
+    "effectiveFrom": "2026-11-28",
     "nextExpectedRevision": "December 01, 2026",
-    "lastChecked": "2026-11-27T01:38:53.733Z",
+    "lastChecked": "2026-11-28T01:19:17.616Z",
     "source": "OilPrices.pk (Live OGRA Notified Feed)",
     "isLiveVerified": true
   },
   "exchangeRates": {
     "base": "USD",
-    "lastUpdated": "2026-11-27T01:38:53.589Z",
+    "lastUpdated": "2026-11-28T01:19:17.193Z",
     "rates": {
       "USD": 1,
-      "PKR": 276.182472,
+      "PKR": 276.617044,
       "AED": 3.6725,
       "SAR": 3.75,
-      "GBP": 0.763031,
-      "CAD": 1.424068,
-      "EUR": 0.911313,
+      "GBP": 0.76304,
+      "CAD": 1.424385,
+      "EUR": 0.913612,
       "INR": 95.252751,
       "CNY": 6.706494,
       "AUD": 1.433021,
@@ -88,10 +88,10 @@
       "code": "PK",
       "currency": "PKR",
       "flag": "🇵🇰",
-      "petrolLocal": 313,
+      "petrolLocal": 312,
       "dieselLocal": 346,
-      "petrolUsd": 1.133,
-      "dieselUsd": 1.253
+      "petrolUsd": 1.128,
+      "dieselUsd": 1.251
     },
     {
       "country": "United Arab Emirates",
@@ -226,6 +226,14 @@
   ],
   "history": [
     {
+      "date": "Nov 28, 2026",
+      "petrolPrice": 312,
+      "petrolChange": -1,
+      "dieselPrice": 346,
+      "dieselChange": 0,
+      "notes": "Rate revision recorded from the live price feed."
+    },
+    {
       "date": "Nov 27, 2026",
       "petrolPrice": 313,
       "petrolChange": -1,
@@ -335,14 +343,6 @@
       "petrolChange": -9.41,
       "dieselPrice": 382.25,
       "dieselChange": -5.56,
-      "notes": "Rate revision recorded from the live price feed."
-    },
-    {
-      "date": "Nov 05, 2026",
-      "petrolPrice": 362,
-      "petrolChange": -7.06,
-      "dieselPrice": 387.81,
-      "dieselChange": -3.71,
       "notes": "Rate revision recorded from the live price feed."
     }
   ],
